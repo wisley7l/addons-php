@@ -7,9 +7,16 @@ E-Com Plus Addons marketplace implemented in PHP 7
 + [Twig](https://twig.symfony.com/) template engine
 
 # Setting up
+For security, we recommend to download and install the app as root,
+and let the scripts owned by `root:root` as default.
+
+```bash
+sudo git clone https://github.com/ecomclub/addons-php.git
+```
+
 Copy sample configuration file and edit to place the constants of your environment.
 
-```
-cp config/config-default.php config/config.php
-nano config/config.php
+```bash
+sudo cp config/config-default.php config/config.php
+sudo nano config/config.php
 ```
