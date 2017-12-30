@@ -1,6 +1,6 @@
 <?php
 // path to app root
-const PATH_APP = '/var/www';
+const PATH_APP = '/var/www/addons-php';
 // path to store app data
 // user that is running PHP scripts must have permissions to write at this directory
 const PATH_DATA = '/var/www/data';

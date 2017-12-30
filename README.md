@@ -12,6 +12,7 @@ and let the scripts owned by `root:root` as default.
 
 ```bash
 sudo git clone https://github.com/ecomclub/addons-php.git
+cd addons-php
 ```
 
 Copy sample configuration file and edit to place the constants of your environment.
