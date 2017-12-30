@@ -27,3 +27,7 @@ Run setup file as root.
 ```bash
 sudo php -f init.php
 ```
+
+# Web server
+You need to use a web server such as NGINX or Apache HTTP,
+web server root is on directory `app`, each _.php_ file there is one website URI.
