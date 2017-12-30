@@ -21,3 +21,9 @@ Copy sample configuration file and edit to place the constants of your environme
 sudo cp config/config-default.php config/config.php
 sudo nano config/config.php
 ```
+
+Run setup file as root.
+
+```bash
+sudo php -f init.php
+```
