@@ -1,4 +1,6 @@
 <?php
+namespace Addons;
+
 // path to app root
 const PATH_APP = '/var/www/addons-php';
 // path to store app data
@@ -6,7 +8,7 @@ const PATH_APP = '/var/www/addons-php';
 const PATH_DATA = '/var/www/data';
 
 // user and group running PHP scripts
-const APP_USER = 'apache';
+// const APP_USER = 'apache';
 const APP_GROUP = 'apache';
 
 // MySQL server credentials
