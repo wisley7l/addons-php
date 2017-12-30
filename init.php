@@ -11,7 +11,7 @@ if (file_exists(__DIR__ . '/config/config.php')) {
   // change config file permissions
   // read permission for file property and group only
   chmod($file, 0640);
-  chgrp($file, APP_GROUP);
+  chgrp($file, Addons\APP_GROUP);
 } else {
   require __DIR__ . '/config/config-default.php';
 }
