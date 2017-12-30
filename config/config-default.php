@@ -17,3 +17,8 @@ const MYSQL_USER = 'addons';
 // place MySQL user password here
 const MYSQL_PASS = '';
 const MYSQL_DB = 'ecomplus_addons';
+
+// Marketplace configuration
+const MKTP_TITLE = 'E-Com Plus Addons';
+const MKTP_SUBTITLE = 'Ecommerce apps and themes marketplace';
+const MKTP_SUBTITLE_PT = 'Marketplace de apps e temas para e-commerce';
