@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `themes` (
   `version` VARCHAR(8) NOT NULL DEFAULT '1.0.0',
   `version_date` DATE NULL,
   `liked` INT NOT NULL DEFAULT 0,
-  `not_liked` int NOT NULL DEFAULT 0,
+  `not_liked` INT NOT NULL DEFAULT 0,
   `link_video` VARCHAR(255) NULL,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `plans`(
   `date_init` DATE NOT NULL,
   `date_end` DATE NOT NULL,
   `type_plan` VARCHAR(15) NOT NULL DEFAULT 'trial',
-  `app_value` DECIMAL(5,2) NOT NULL DEFAULT 0.00,
+  `app_value` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
   `payment_status` VARCHAR(15) NOT NULL DEFAULT 'not_confirmed',
   PRIMARY KEY (`id`),
   FOREIGN KEY (`app_id`) REFERENCES `applications`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `buy_themes`(
   `date_init` DATE NOT NULL,
   `date_end` DATE NULL,
   `type_buy` VARCHAR(15) NOT NULL DEFAULT 'trial',
-  `theme_value` DECIMAL(5,2) NOT NULL DEFAULT 0.00,
+  `theme_value` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
   `payment_status` VARCHAR(15) NOT NULL DEFAULT 'not_confirmed',
   PRIMARY KEY(`id`)
   FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
