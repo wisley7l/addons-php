@@ -161,7 +161,7 @@ CREATE TABLE IF NOT EXISTS `relationship_category_apps`(
   `app_id` MEDIUMINT NOT NULL,
   `category_apps_id` MEDIUMINT NOT NULL,
   PRIMARY KEY (`app_id`,`category_apps_id`),
-  FOREIGN KEY (`app_id`) REFERENCES `applications`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`app_id`) REFERENCES `applications`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`category_apps_id`) REFERENCES `category_apps`(`id`) on DELETE CASCADE on UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
@@ -175,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `relationship_category_themes`(
   `theme_id` MEDIUMINT NOT NULL,
   `category_themes_id` MEDIUMINT NOT NULL,
   PRIMARY KEY (`theme_id`,`category_themes_id`),
-  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`category_themes_id`) REFERENCES `category_themes`(`id`) on DELETE CASCADE on UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
