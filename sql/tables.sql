@@ -120,21 +120,27 @@ CREATE TABLE IF NOT EXISTS `buy_themes` (
 
 CREATE TABLE IF NOT EXISTS `comment_apps` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `store_id` MEDIUMINT NOT NULL,
+  `store_id` MEDIUMINT NULL,
+  `partner_id` SMALLINT NULL,
   `app_id` MEDIUMINT NOT NULL,
   `date_comment` DATE NULL,
   `comment` TEXT NOT NULL DEFAULT '',
+  `response_comment_id` INT UNSIGNED NULL,
   PRIMARY KEY (`id`),
+  INDEX (`store_id`,`partner_id`),
   FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `comment_themes` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `store_id` MEDIUMINT NOT NULL,
+  `store_id` MEDIUMINT NULL,
+  `partner_id` SMALLINT NULL,
   `theme_id` MEDIUMINT NOT NULL,
   `date_comment` DATE NULL,
   `comment` TEXT NOT NULL DEFAULT '',
+  `response_comment_id` INT UNSIGNED NULL,
   PRIMARY KEY (`id`),
+  INDEX (`store_id`,`partner_id`),
   FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) EXISTING=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
@@ -144,7 +150,10 @@ CREATE TABLE IF NOT EXISTS `comment_partners` (
   `partner_id` SMALLINT NOT NULL,
   `date_comment` DATE NULL,
   `comment` TEXT NOT NULL DEFAULT '',
+  `is_partner` TINYINT UNSIGNED NOT NULL DEFAULT 0,
+  `response_comment_id` INT UNSIGNED NULL,
   PRIMARY KEY (`id`),
+  INDEX (`store_id`,`partner_id`),
   FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
@@ -153,8 +162,10 @@ CREATE TABLE IF NOT EXISTS `inbox` (
   `store_id` MEDIUMINT NOT NULL,
   `partner_id` SMALLINT NOT NULL,
   `date_msg` DATE NULL,
+  `subject` VARCHAR(255) NOT NULL DEFAULT '(no subject)',
   `msg` TEXT NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
+  INDEX (`store_id`,`partner_id`),
   FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
@@ -164,6 +175,7 @@ CREATE TABLE IF NOT EXISTS `image_apps` (
   `name` VARCHAR(50) NULL,
   `path_image` VARCHAR(255) NULL,
   PRIMARY KEY (`id`),
+  INDEX (`app_id`),
   FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
@@ -173,6 +185,7 @@ CREATE TABLE IF NOT EXISTS `image_themes` (
   `name` VARCHAR(50) NULL,
   `path_image` VARCHAR(255) NULL,
   PRIMARY KEY (`id`),
+  INDEX (`theme_id`),
   FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
@@ -182,6 +195,7 @@ CREATE TABLE IF NOT EXISTS `badges` (
   `name` VARCHAR(15) NULL,
   `path_image` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`),
+  INDEX (partner_id),
   FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
@@ -197,7 +211,7 @@ CREATE TABLE IF NOT EXISTS `relationship_category_apps` (
   PRIMARY KEY (`app_id`, `category_apps_id`),
   FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`category_apps_id`) REFERENCES `category_apps`(`id`) on DELETE CASCADE on UPDATE CASCADE
-) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `category_themes` (
   `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -211,7 +225,7 @@ CREATE TABLE IF NOT EXISTS `relationship_category_themes` (
   PRIMARY KEY (`theme_id`, `category_themes_id`),
   FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`category_themes_id`) REFERENCES `category_themes`(`id`) on DELETE CASCADE on UPDATE CASCADE
-) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `transaction_apps` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -238,3 +252,17 @@ CREATE TABLE IF NOT EXISTS `transaction_themes` (
   INDEX (`store_id`, `theme_id`),
   FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT =1;
+
+CREATE TABLE IF NOT EXISTS `favorites_apps` (
+  `store_id` MEDIUMINT UNSIGNED NOT NULL,
+  `app_id` MEDIUMINT UNSIGNED NOT NULL,
+  PRIMARY KEY (`app_id`,`store_id`),
+  FOREIGN KEY (app_id) REFERENCES `apps` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `favorites_themes` (
+  `store_id` MEDIUMINT NOT NULL,
+  `theme_id` MEDIUMINT NOT NULL,
+  PRIMARY KEY (`store_id`,`theme_id`),
+  FOREIGN KEY `theme_id` REFERENCES `themes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
