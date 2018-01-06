@@ -172,15 +172,11 @@ CREATE TABLE IF NOT EXISTS `image_themes` (
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `badges` (
-  `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` TINYINT NOT NULL DEFAULT 1,
   `partner_id` SMALLINT UNSIGNED NOT NULL,
-  `name` VARCHAR(15) NULL,
-  `blocked` TINYINT NOT NULL DEFAULT 1,
-  `notes` TEXT NULL,
-  PRIMARY KEY (`id`),
-  INDEX (`partner_id`),
+  PRIMARY KEY (`id`, `partner_id`),
   FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `category_apps` (
   `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -221,8 +217,8 @@ CREATE TABLE IF NOT EXISTS `transaction_apps` (
   `date_transaction` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   INDEX (`partner_id`, `store_id`, `app_id`),
-  FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`) ON DELETE SET NULL,
-  FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`) ON DELETE SET NULL
+  FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`),
+  FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`)
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `transaction_themes` (
@@ -236,8 +232,8 @@ CREATE TABLE IF NOT EXISTS `transaction_themes` (
   `date_transaction` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   INDEX (`partner_id`, `store_id`, `theme_id`),
-  FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`) ON DELETE SET NULL,
-  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE SET NULL
+  FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`),
+  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`)
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `favorites_apps` (
@@ -261,5 +257,5 @@ CREATE TABLE IF NOT EXISTS `historic_withdrawal` (
   `value_withdrawal` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   INDEX (`partner_id`),
-  FOREIGN KEY (`partner_id`) REFERENCES `partners` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`partner_id`) REFERENCES `partners` (`id`)
 ) ENGINE=InnoDB CHARACTER SET uft8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
