@@ -255,6 +255,8 @@ CREATE TABLE IF NOT EXISTS `historic_withdrawal` (
   `partner_id` SMALLINT UNSIGNED NOT NULL,
   `date_withdrawal` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `value_withdrawal` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
+  `transaction_code` VARCHAR(255) NULL,
+  `notes` TEXT NULL,
   PRIMARY KEY (`id`),
   INDEX (`partner_id`),
   FOREIGN KEY (`partner_id`) REFERENCES `partners` (`id`)
