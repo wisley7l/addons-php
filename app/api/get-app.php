@@ -29,5 +29,6 @@ if ($app_id > 0) {
       http_response_code(204);
     }
   }
+} else {
+  http_response_code(400);
 }
-
