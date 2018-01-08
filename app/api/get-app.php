@@ -1,4 +1,6 @@
 <?php
+require __DIR__ . '/../../main.php';
+
 // Search app by id
 $app_id = (int)$_GET['id'];
 if ($app_id > 0) {
