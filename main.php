@@ -1,11 +1,6 @@
 <?php
 function page_404 () {
   http_response_code(404);
-  // debug
-  echo $_SERVER['PATH_FILE'];
-  echo PHP_EOL;
-  echo $_SERVER['PATH_LANG'];
-  echo PHP_EOL;
   // @TODO: 404 html page
   exit();
 }
@@ -41,7 +36,7 @@ switch ($_SERVER['PATH_LANG']) {
 
 // check URL filename
 if ($_SERVER['PATH_FILE'] != null) {
-  $filename = __DIR__ . '/app/' + $_SERVER['PATH_FILE'] + '.php';
+  $filename = __DIR__ . '/app/' . $_SERVER['PATH_FILE'] . '.php';
   if (!file_exists($filename)) {
     page_404();
   }
