@@ -1,4 +1,10 @@
 <?php
+function page_404 () {
+  http_response_code(404);
+  // @TODO: 404 html page
+  exit();
+}
+
 // check server params
 if (!isset($_SERVER['PATH_FILE']) || !isset($_SERVER['PATH_LANG'])) {
   http_response_code(500);
@@ -15,13 +21,24 @@ if (!isset($_SERVER['PATH_FILE']) || !isset($_SERVER['PATH_LANG'])) {
   exit();
 }
 
+// available languages
+switch ($_SERVER['PATH_LANG']) {
+  case 'pt_br':
+  case 'en_us':
+    // continue
+    break;
+
+  default:
+    // no support
+    page_404();
+    break;
+}
+
 // check URL filename
 if ($_SERVER['PATH_FILE'] != null) {
   $filename = __DIR__ . '/app/' + $_SERVER['PATH_FILE'] + '.php';
   if (!file_exists($filename)) {
-    http_response_code(404);
-    // @TODO: 404 html page
-    exit();
+    page_404();
   }
 } else {
   $filename = __DIR__ . '/app/index.php';
