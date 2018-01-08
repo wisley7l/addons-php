@@ -1,6 +1,4 @@
 <?php
-require __DIR__ . '/../main.php';
-
 header('Content-Type: text/html; charset=utf-8');
 
 // sample only

@@ -1,7 +1,31 @@
 <?php
-/*
-  THIS FILE MUST BE INCLUDED AT THE START OF ALL APP SCRIPTS
-*/
+// check server params
+if (!isset($_SERVER['PATH_FILE']) || !isset($_SERVER['PATH_LANG'])) {
+  http_response_code(500);
+  echo 'Web server must set PATH_FILE and PATH_LANG';
+  echo PHP_EOL;
+  echo 'RegEx pattern to URI: ^\/(?<path_lang>[a-z]{2}_[a-z]{2})\/(?<path_file>[^.]+)$';
+  echo PHP_EOL;
+  echo 'Eg.: /pt_br/index';
+  echo PHP_EOL;
+  echo '$_SERVER[\'PATH_LANG\'] = \'pt_br\';';
+  echo PHP_EOL;
+  echo '$_SERVER[\'PATH_FILE\'] = \'index\';';
+  echo PHP_EOL;
+  exit();
+}
+
+// check URL filename
+if ($_SERVER['PATH_FILE'] != null) {
+  $filename = __DIR__ . '/app/' + $_SERVER['PATH_FILE'] + '.php';
+  if (!file_exists($filename)) {
+    http_response_code(404);
+    // @TODO: 404 html page
+    exit();
+  }
+} else {
+  $filename = __DIR__ . '/app/index.php';
+}
 
 // declare configuration constants
 if (file_exists(__DIR__ . '/config/config.php')) {
@@ -9,3 +33,5 @@ if (file_exists(__DIR__ . '/config/config.php')) {
 } else {
   require __DIR__ . '/config/config-default.php';
 }
+
+require $filename;
