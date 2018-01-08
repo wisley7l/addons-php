@@ -36,7 +36,7 @@ switch ($_SERVER['PATH_LANG']) {
 
 // check URL filename
 if ($_SERVER['PATH_FILE'] != null) {
-  $filename = __DIR__ . '/app/' + $_SERVER['PATH_FILE'] + '.php';
+  $filename = __DIR__ . '/app/' . $_SERVER['PATH_FILE'] . '.php';
   if (!file_exists($filename)) {
     page_404();
   }
