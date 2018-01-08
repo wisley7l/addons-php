@@ -1,5 +1,4 @@
 <?php
-
 // Search app by id
 $app_id = (int)$_GET['id'];
 if ($app_id > 0) {
@@ -14,7 +13,7 @@ if ($app_id > 0) {
   }
 
   // String for query
-  $query = 'SELECT `id` FROM `apps` FROM `id` = ' . $app_id;
+  $query = 'SELECT `id` FROM `apps` FROM `id` = ' . $app_id . ' LIMIT 1';
   // Send query for search
   if (!$result = mysqli_query($conn, $query)) {
     // if querry error
