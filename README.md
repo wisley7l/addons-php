@@ -27,6 +27,11 @@ Run setup file as root.
 ```bash
 sudo php -f init.php
 ```
+Install Composer 
+```bash
+cd composer/
+```
+Download and install Composer by following the [official instructions](https://getcomposer.org/download/).
 
 # Web server
 You need to use a web server such as NGINX or Apache HTTP,
