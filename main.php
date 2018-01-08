@@ -1,6 +1,11 @@
 <?php
 function page_404 () {
   http_response_code(404);
+  // debug
+  echo $_SERVER['PATH_FILE'];
+  echo PHP_EOL;
+  echo $_SERVER['PATH_LANG'];
+  echo PHP_EOL;
   // @TODO: 404 html page
   exit();
 }
