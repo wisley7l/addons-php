@@ -66,5 +66,5 @@ echo $twig->render('index.twig', array(
   'count_partners' => $count_partners,
   'all_category' => $all_category,
   'word_login' => 'Login ',
-  'implemeted' => false
+  'implemented' => false
 ));

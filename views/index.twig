@@ -1261,7 +1261,7 @@
 			<div class="product-showcase">
 				<!-- HEADLINE -->
 				<div class="headline primary">
-					<h4>Latest Online {{ word_app }}</h4>
+					<h4>Latest Online Products</h4>
 					<!-- SLIDE CONTROLS -->
 					<div class="slide-control-wrap">
 						<div class="slide-control left">
@@ -3754,7 +3754,7 @@
 			<div class="product-showcase">
 				<!-- HEADLINE -->
 				<div class="headline secondary">
-					<h4>Trending {{ word_theme }}</h4>
+					<h4>Trending Services</h4>
 					<!-- SLIDE CONTROLS -->
 					<div class="slide-control-wrap">
 						<div class="slide-control left">
@@ -3776,10 +3776,10 @@
 					<!-- /SLIDE CONTROLS -->
 				</div>
 				<!-- /HEADLINE -->
+
 				<!-- PRODUCT LIST -->
 				<div id="pl-4" class="product-list grid column4-wrap owl-carousel">
 					<!-- PRODUCT ITEM -->
-					{% if implemeted == true %}
 					<div class="product-item column">
 						<!-- PRODUCT PREVIEW ACTIONS -->
 						<div class="product-preview-actions">
@@ -4642,14 +4642,13 @@
 						<!-- /USER RATING -->
 					</div>
 					<!-- /PRODUCT ITEM -->
-					{% endif %}
 				</div>
 				<!-- /PRODUCT LIST -->
 			</div>
 			<!-- /PRODUCT SHOWCASE -->
 
+{% if implemented == true %}
 			<!-- PRODUCT SHOWCASE -->
-			{% if implemeted == true %}
 			<div class="product-showcase">
 				<!-- HEADLINE -->
 				<div class="headline">
@@ -5544,10 +5543,10 @@
 				</div>
 				<!-- PRODUCT LIST -->
 			</div>
+{% endif %}
 			<!-- PRODUCT SHOWCASE -->
 		</div>
 	</div>
-{% endif %}
 	<!-- /PRODUCTS SIDESHOW -->
 
 	<!-- SUBSCRIBE BANNER -->
