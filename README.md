@@ -33,6 +33,11 @@ cd composer/
 ```
 Download and install Composer by following the [official instructions](https://getcomposer.org/download/).
 
+After installing the composer, install twig using the composer
+```bash
+sudo ./composer.phar install
+```
+
 # Web server
 You need to use a web server such as NGINX or Apache HTTP,
 web server root is on directory `app`, each _.php_ file at this directory is one website URL.
