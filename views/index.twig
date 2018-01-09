@@ -3776,7 +3776,7 @@
 					<!-- /SLIDE CONTROLS -->
 				</div>
 				<!-- /HEADLINE -->
-
+{% if implemented == true %}
 				<!-- PRODUCT LIST -->
 				<div id="pl-4" class="product-list grid column4-wrap owl-carousel">
 					<!-- PRODUCT ITEM -->
@@ -4643,6 +4643,7 @@
 					</div>
 					<!-- /PRODUCT ITEM -->
 				</div>
+{% endif %}
 				<!-- /PRODUCT LIST -->
 			</div>
 			<!-- /PRODUCT SHOWCASE -->
@@ -5590,15 +5591,15 @@
 					<ul class="company-info-list">
 						<li class="company-info-item">
 							<span class="icon-present"></span>
-							<p><span>{{ total_apps_and_themes }} </span> {{  word_app }} {{ word_and }} {{word_theme}}</p>
+							<p><span>{{ total_apps_and_themes }} &amp; </span> {{  word_app }} {{ word_and }} {{word_theme}}</p>
 						</li>
 						<li class="company-info-item">
 							<span class="icon-energy"></span>
-							<p><span>{{ count_stores }} </span> {{ word_stores }}</p>
+							<p><span>{{ count_stores }} &amp; </span> {{ word_stores }}</p>
 						</li>
 						<li class="company-info-item">
 							<span class="icon-user"></span>
-							<p><span>{{ count_partners }} </span> {{ word_partner }}</p>
+							<p><span>{{ count_partners }} &amp; </span> {{ word_partner }}</p>
 						</li>
 					</ul>
 					<!-- SOCIAL LINKS -->
