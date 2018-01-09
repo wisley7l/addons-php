@@ -7,9 +7,12 @@ $subtitle = Addons\MKTP_SUBTITLE;
 // variable to check user login
 $login = false;
 // necessary variables for information
+// number of partners and stores, and total apps and themes
+// obs: query db for informations
 $total_apps_and_themes = 0;
 $count_stores = 0;
 $count_partners = 0;
+// obs: Search all categories in db
 // test all category
 $all_category = array(
   'All Category',
@@ -18,7 +21,6 @@ $all_category = array(
   'c3',
   'c4'
 );
-// number of partners and stores, and total apps and themes
 // obs: treat language
 switch ($_SERVER['PATH_LANG']) {
   case 'pt_br':

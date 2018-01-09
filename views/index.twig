@@ -1284,8 +1284,10 @@
 				</div>
 				<!-- /HEADLINE -->
 
+
 				<!-- PRODUCT LIST -->
 				<div id="pl-1" class="product-list grid column4-wrap owl-carousel">
+{% if implemented == true %}
 					<!-- PRODUCT ITEM -->
 					<div class="product-item column">
 						<!-- PRODUCT PREVIEW ACTIONS -->
@@ -3745,6 +3747,7 @@
 						<!-- /USER RATING -->
 					</div>
 					<!-- /PRODUCT ITEM -->
+{% endif %}
 				</div>
 				<!-- /PRODUCT LIST -->
 			</div>
@@ -5591,15 +5594,15 @@
 					<ul class="company-info-list">
 						<li class="company-info-item">
 							<span class="icon-present"></span>
-							<p><span>{{ total_apps_and_themes }} &amp; </span> {{  word_app }} {{ word_and }} {{word_theme}}</p>
+							<p><span>{{ total_apps_and_themes }} &nbsp; </span> {{  word_app }} {{ word_and }} {{word_theme}}</p>
 						</li>
 						<li class="company-info-item">
 							<span class="icon-energy"></span>
-							<p><span>{{ count_stores }} &amp; </span> {{ word_stores }}</p>
+							<p><span>{{ count_stores }} &nbsp; </span> {{ word_stores }}</p>
 						</li>
 						<li class="company-info-item">
 							<span class="icon-user"></span>
-							<p><span>{{ count_partners }} &amp; </span> {{ word_partner }}</p>
+							<p><span>{{ count_partners }} &nbsp; </span> {{ word_partner }}</p>
 						</li>
 					</ul>
 					<!-- SOCIAL LINKS -->
