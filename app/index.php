@@ -8,10 +8,10 @@ $subtitle = Addons\MKTP_SUBTITLE;
 $login = false;
 
 // intial twig
-$loader = new Twig_Loader_Filesystem(Addons\PATH_APP.'/views');
+$loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
-echo $twig->render('index.twig',array(
-        'title' => $title,
-        'subtitle' => $subtitle,
-        'login'=> $login
-      ));
+echo $twig->render('index.twig', array(
+  'title' => $title,
+  'subtitle' => $subtitle,
+  'login'=> $login
+));
