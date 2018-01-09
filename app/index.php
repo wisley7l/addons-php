@@ -10,7 +10,7 @@ $login = false;
 // intial twig
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP.'/views');
 $twig = new Twig_Environment($loader);
-echo $twig->render('index.twig',array(
+echo $twig->render('index.html',array(
         'title' => $title,
         'subtitle' => $subtitle,
         'login'=> $login
