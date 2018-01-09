@@ -1,6 +1,6 @@
 <?php
-require '../composer/vendor/autoload.php';
 header('Content-Type: text/html; charset=utf-8');
+
 // TODO: parse twig template
 $title = Addons\MKTP_TITLE;
 $subtitle = Addons\MKTP_SUBTITLE;

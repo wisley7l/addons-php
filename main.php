@@ -51,4 +51,7 @@ if (file_exists(__DIR__ . '/config/config.php')) {
   require __DIR__ . '/config/config-default.php';
 }
 
+// load composer packages
+require __DIR__ . '/composer/vendor/autoload.php';
+// app script
 require $filename;
