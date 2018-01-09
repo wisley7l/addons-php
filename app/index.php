@@ -14,4 +14,4 @@ $page = array(
 // intial twig
 $loader = new Twig_Loader_Filesystem('../views');
 $twig = new Twig_Environment($loader);
-$twig->render('index.twig',$page);
+echo $twig->render('index.twig',$page);
