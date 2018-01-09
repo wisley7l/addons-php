@@ -357,10 +357,12 @@
 			<div class="user-board">
 
 				<div class="account-actions no-space">
+					<!-- not implemented
 					<a href="forum.html" class="interesting-link">Our Forums</a>
 					<a href="#" class="interesting-link">Why Choose Emerald Dragon?</a>
-					<a href="#" class="button primary">Register</a>
-					<a href="#" class="button secondary">Login</a>
+					-->
+					<a href="#" class="button primary">{{ word_resgister }}</a>
+					<a href="#" class="button secondary">{{ word_login }}</a>
 				</div>
 
 			</div>
@@ -1259,7 +1261,7 @@
 			<div class="product-showcase">
 				<!-- HEADLINE -->
 				<div class="headline primary">
-					<h4>Latest Online Products</h4>
+					<h4>Latest Online {{ word_app }}</h4>
 					<!-- SLIDE CONTROLS -->
 					<div class="slide-control-wrap">
 						<div class="slide-control left">
@@ -1283,6 +1285,7 @@
 				<!-- /HEADLINE -->
 
 				<!-- PRODUCT LIST -->
+				{% if implemeted == true %}
 				<div id="pl-1" class="product-list grid column4-wrap owl-carousel">
 					<!-- PRODUCT ITEM -->
 					<div class="product-item column">
@@ -3744,6 +3747,7 @@
 					</div>
 					<!-- /PRODUCT ITEM -->
 				</div>
+				{% endif %}
 				<!-- /PRODUCT LIST -->
 			</div>
 			<!-- /PRODUCT SHOWCASE -->
@@ -3752,7 +3756,7 @@
 			<div class="product-showcase">
 				<!-- HEADLINE -->
 				<div class="headline secondary">
-					<h4>Trending Services</h4>
+					<h4>Trending {{ word_theme }}</h4>
 					<!-- SLIDE CONTROLS -->
 					<div class="slide-control-wrap">
 						<div class="slide-control left">
@@ -3774,7 +3778,7 @@
 					<!-- /SLIDE CONTROLS -->
 				</div>
 				<!-- /HEADLINE -->
-
+				{% if implemeted == true %}
 				<!-- PRODUCT LIST -->
 				<div id="pl-4" class="product-list grid column4-wrap owl-carousel">
 					<!-- PRODUCT ITEM -->
@@ -4641,11 +4645,13 @@
 					</div>
 					<!-- /PRODUCT ITEM -->
 				</div>
+				{% endif %}
 				<!-- /PRODUCT LIST -->
 			</div>
 			<!-- /PRODUCT SHOWCASE -->
 
 			<!-- PRODUCT SHOWCASE -->
+			{% if implemeted == true %}
 			<div class="product-showcase">
 				<!-- HEADLINE -->
 				<div class="headline">
@@ -5543,9 +5549,11 @@
 			<!-- PRODUCT SHOWCASE -->
 		</div>
 	</div>
+{% endif %}
 	<!-- /PRODUCTS SIDESHOW -->
 
 	<!-- SUBSCRIBE BANNER -->
+	{% if implemeted == true %}
 	<div id="subscribe-banner-wrap">
 		<div id="subscribe-banner">
 			<!-- SUBSCRIBE CONTENT -->
@@ -5570,6 +5578,7 @@
 			<!-- /SUBSCRIBE CONTENT -->
 		</div>
 	</div>
+	{% endif %}
 	<!-- /SUBSCRIBE BANNER -->
 
 	<!-- FOOTER -->
@@ -5586,15 +5595,15 @@
 					<ul class="company-info-list">
 						<li class="company-info-item">
 							<span class="icon-present"></span>
-							<p><span>{{ total_apps_and_themes }}</span> {{  word_app }} {{ word_and }} {{word_theme}}</p>
+							<p><span>{{ total_apps_and_themes }} </span> {{  word_app }} {{ word_and }} {{word_theme}}</p>
 						</li>
 						<li class="company-info-item">
 							<span class="icon-energy"></span>
-							<p><span>{{ count_stores }}</span> {{ word_stores }}</p>
+							<p><span>{{ count_stores }} </span> {{ word_stores }}</p>
 						</li>
 						<li class="company-info-item">
 							<span class="icon-user"></span>
-							<p><span>{{ count_partners }}</span> {{ word_partner }}</p>
+							<p><span>{{ count_partners }} </span> {{ word_partner }}</p>
 						</li>
 					</ul>
 					<!-- SOCIAL LINKS -->

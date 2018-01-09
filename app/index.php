@@ -12,6 +12,7 @@ $count_stores = 0;
 $count_partners = 0;
 // test all category
 $all_category = array(
+  'All Category',
   'c1',
   'c2',
   'c3',
@@ -28,6 +29,7 @@ switch ($_SERVER['PATH_LANG']) {
     $word_theme = 'Temas ';
     $word_and = 'e ';
     $description_mkp = 'é o melhor marketplace de apps e temas para ecommerce ';
+    $word_register = 'Registar-se ';
 
     break;
 
@@ -39,6 +41,7 @@ switch ($_SERVER['PATH_LANG']) {
     $word_theme = 'Themes ';
     $word_and = 'and ';
     $description_mkp = 'is the best app marketplace and themes for ecommerce ';
+    $word_register = 'Register ';
     break;
 }
 
@@ -61,5 +64,7 @@ echo $twig->render('index.twig', array(
   'total_apps_and_themes' => $total_apps_and_themes,
   'count_stores' => $count_stores,
   'count_partners' => $count_partners,
-  'all_category' => $all_category
+  'all_category' => $all_category,
+  'word_login' => 'Login ',
+  'implemeted' => false
 ));
