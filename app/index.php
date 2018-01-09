@@ -11,10 +11,12 @@ $login = false;
 switch ($_SERVER['PATH_LANG']) {
   case 'pt_br':
     $welcome = 'Bem vindo a ';
+    $placeholder_search = 'Procurar aplicativos ou temas ...';
     break;
 
   default:
     $welcome = 'Welcome to ';
+    $placeholder_search = 'Search For apps or themes ... ';
     break;
 }
 
@@ -26,6 +28,7 @@ echo $twig->render('index.twig', array(
   'subtitle' => $subtitle,
   'login' => $login,
   'welcome' => $welcome,
-  'e_com' => 'E-Com Plus',
-  'addons' => 'Adonns'
+  'e_com' => 'E-Com Plus ',
+  'addons' => 'Adonns ',
+  'placeholder_search' => $placeholder_search
 ));
