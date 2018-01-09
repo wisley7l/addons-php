@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+sta<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- favicon -->
 	<link rel="icon" href="favicon.ico">
-	<title>Emerald Dragon | Home</title>
+	<title>{{ title }} | Home</title>
 </head>
 <body>
 
@@ -44,6 +44,8 @@
 			</div>
 			<!-- /MOBILE ACCOUNT OPTIONS HANDLER -->
 
+<!--(wisley) check login  -->
+{% if login === true %}
 			<!-- USER BOARD -->
 			<div class="user-board">
 				<!-- USER QUICKVIEW -->
@@ -351,6 +353,20 @@
 				<!-- /ACCOUNT ACTIONS -->
 			</div>
 			<!-- /USER BOARD -->
+{% else %}
+			<div class="user-board">
+
+				<div class="account-actions no-space">
+					<a href="forum.html" class="interesting-link">Our Forums</a>
+					<a href="#" class="interesting-link">Why Choose Emerald Dragon?</a>
+					<a href="#" class="button primary">Register</a>
+					<a href="#" class="button secondary">Login</a>
+				</div>
+
+			</div>
+
+{% endif %}
+<!--(wisley) check login  -->
 		</header>
 	</div>
 	<!-- /HEADER -->
