@@ -41,7 +41,8 @@ switch ($_SERVER['PATH_LANG']) {
     $word_now = 'Agora ';
     $buy_now = 'Comprar Agora ';
     $word_buying = 'Comprar ';
-
+    $apps_trends = 'Tendências de Apps ';
+    $themes_trends = 'Tendências de Temas ';
     break;
 
   default:
@@ -62,6 +63,8 @@ switch ($_SERVER['PATH_LANG']) {
     $word_now = 'Now ';
     $buy_now = 'Buy Now ';
     $word_buying = 'Buying ';
+    $apps_trends = 'Apps Trends ';
+    $themes_trends = 'Themes Trends ';
     break;
 }
 
@@ -95,5 +98,7 @@ echo $twig->render('index.twig', array(
   'desc_promo_store' => $desc_promo_store,
   'word_start' => $word_start,
   'word_now' => $word_now,
-  'buy_now' => $buy_now
+  'buy_now' => $buy_now,
+  'apps_trends' => $apps_trends,
+  'themes_trends' => $themes_trends
 ));
