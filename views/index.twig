@@ -5553,7 +5553,6 @@
 	<!-- /PRODUCTS SIDESHOW -->
 
 	<!-- SUBSCRIBE BANNER -->
-	{% if implemeted == true %}
 	<div id="subscribe-banner-wrap">
 		<div id="subscribe-banner">
 			<!-- SUBSCRIBE CONTENT -->
@@ -5569,16 +5568,17 @@
 				<!-- /SUBSCRIBE HEADER -->
 
 				<!-- SUBSCRIBE FORM -->
+				{% if implemeted == true %}
 				<form class="subscribe-form">
 					<input type="text" name="subscribe_email" id="subscribe_email" placeholder="Enter your email here...">
 					<button class="button medium dark">Subscribe!</button>
 				</form>
+				{% endif %}
 				<!-- /SUBSCRIBE FORM -->
 			</div>
 			<!-- /SUBSCRIBE CONTENT -->
 		</div>
 	</div>
-	{% endif %}
 	<!-- /SUBSCRIBE BANNER -->
 
 	<!-- FOOTER -->
