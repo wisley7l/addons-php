@@ -6,12 +6,12 @@ $title = Addons\MKTP_TITLE;
 $subtitle = Addons\MKTP_SUBTITLE;
 // variable to check user login
 $login = false;
-$page = array(
-        'title' => $title,
-        'subtitle' => $subtitle,
-        'login'=> $login
-      );
+
 // intial twig
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP.'/views');
 $twig = new Twig_Environment($loader);
-echo $twig->render('index.html',$page);
+echo $twig->render('index.html',array(
+        'title' => $title,
+        'subtitle' => $subtitle,
+        'login'=> $login
+      ));
