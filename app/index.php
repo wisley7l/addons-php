@@ -10,6 +10,13 @@ $login = false;
 $total_apps_and_themes = 0;
 $count_stores = 0;
 $count_partners = 0;
+// test all category
+$all_category = array(
+  'c1',
+  'c2',
+  'c3',
+  'c4'
+);
 // number of partners and stores, and total apps and themes
 // obs: treat language
 switch ($_SERVER['PATH_LANG']) {
@@ -53,5 +60,6 @@ echo $twig->render('index.twig', array(
   'description_mkp' => $description_mkp,
   'total_apps_and_themes' => $total_apps_and_themes,
   'count_stores' => $count_stores,
-  'count_partners'=> $count_partners
+  'count_partners' => $count_partners,
+  'all_category' => $all_category
 ));

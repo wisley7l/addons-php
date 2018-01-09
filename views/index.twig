@@ -1144,6 +1144,7 @@
 					<input type="text" name="category_name" placeholder="Search For apps or themes ...">
 					<label for="categories" class="select-block">
 						<select name="categories" id="categories">
+							<!--
 							<option value="0">All Categories</option>
 							<option value="1">PSD Templates</option>
 							<option value="2">Hero Images</option>
@@ -1153,6 +1154,10 @@
 							<option value="6">Flyers</option>
 							<option value="7">Backgrounds</option>
 							<option value="8">Social Covers</option>
+							-->
+							{% for category in all_category%}
+							<option>{{ category }}</option>
+							{% endfor %}
 						</select>
 						<!-- SVG ARROW -->
 						<svg class="svg-arrow">
@@ -5600,7 +5605,7 @@
 						<li class="social-link twt">
 							<a href="#"></a>
 						</li>
-						<li class="social-link gplus">
+						<li class="social-link db">
 							<a href="#"></a>
 						</li>
 						<li class="social-link rss">
@@ -5724,7 +5729,7 @@
 		<!-- FOOTER BOTTOM -->
 		<div id="footer-bottom-wrap">
 			<div id="footer-bottom">
-				<p><span>&copy;</span><a href="index.html">Emerald Dragon</a> Template - All Rights Reserved 2015</p>
+				<p>2018 <span>&copy;</span><a href="index.html">{{ e_com }}</a> </p>
 			</div>
 		</div>
 		<!-- /FOOTER BOTTOM -->
