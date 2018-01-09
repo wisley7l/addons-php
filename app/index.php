@@ -32,6 +32,15 @@ switch ($_SERVER['PATH_LANG']) {
     $word_and = 'e ';
     $description_mkp = 'é o melhor marketplace de apps e temas para ecommerce ';
     $word_register = 'Registar-se ';
+    $word_search = 'Buscar ';
+    $word_go_item = 'ir até item';
+    $word_favorate = 'Add Favourito';
+    $desc_promo_partners = 'Divulgue sua APP ou tema aqui com ';
+    $desc_promo_store = 'Encontre os melhores apps e tema para sua ecommerce ';
+    $word_start = 'Começar ';
+    $word_now = 'Agora ';
+    $buy_now = 'Comprar Agora ';
+    $word_buying = 'Comprar ';
 
     break;
 
@@ -44,6 +53,15 @@ switch ($_SERVER['PATH_LANG']) {
     $word_and = 'and ';
     $description_mkp = 'is the best app marketplace and themes for ecommerce ';
     $word_register = 'Register ';
+    $word_search = 'Search ';
+    $word_go_item = 'Go to item';
+    $word_favorate = 'Favourites +';
+    $desc_promo_partners = 'Advertise your APP or theme here with ';
+    $desc_promo_store = 'Find the best apps and theme for your ecommerce ';
+    $word_start = 'Start ';
+    $word_now = 'Now ';
+    $buy_now = 'Buy Now ';
+    $word_buying = 'Buying ';
     break;
 }
 
@@ -68,5 +86,14 @@ echo $twig->render('index.twig', array(
   'count_partners' => $count_partners,
   'all_category' => $all_category,
   'word_login' => 'Login ',
-  'implemented' => false
+  'word_register' => $word_register,
+  'implemented' => false,
+  'word_search'=> $word_search,
+  'word_go_item' => $word_go_item,
+  'word_favorate' => $word_favorate,
+  'desc_promo_partners' => $desc_promo_partners,
+  'desc_promo_store' => $desc_promo_store,
+  'word_start' => $word_start,
+  'word_now' => $word_now,
+  'buy_now' => $buy_now
 ));
