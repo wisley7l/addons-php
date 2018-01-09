@@ -1285,7 +1285,6 @@
 				<!-- /HEADLINE -->
 
 				<!-- PRODUCT LIST -->
-				{% if implemeted == true %}
 				<div id="pl-1" class="product-list grid column4-wrap owl-carousel">
 					<!-- PRODUCT ITEM -->
 					<div class="product-item column">
@@ -3747,7 +3746,6 @@
 					</div>
 					<!-- /PRODUCT ITEM -->
 				</div>
-				{% endif %}
 				<!-- /PRODUCT LIST -->
 			</div>
 			<!-- /PRODUCT SHOWCASE -->
@@ -3778,10 +3776,10 @@
 					<!-- /SLIDE CONTROLS -->
 				</div>
 				<!-- /HEADLINE -->
-				{% if implemeted == true %}
 				<!-- PRODUCT LIST -->
 				<div id="pl-4" class="product-list grid column4-wrap owl-carousel">
 					<!-- PRODUCT ITEM -->
+					{% if implemeted == true %}
 					<div class="product-item column">
 						<!-- PRODUCT PREVIEW ACTIONS -->
 						<div class="product-preview-actions">
@@ -4644,8 +4642,8 @@
 						<!-- /USER RATING -->
 					</div>
 					<!-- /PRODUCT ITEM -->
+					{% endif %}
 				</div>
-				{% endif %}
 				<!-- /PRODUCT LIST -->
 			</div>
 			<!-- /PRODUCT SHOWCASE -->
@@ -5568,12 +5566,10 @@
 				<!-- /SUBSCRIBE HEADER -->
 
 				<!-- SUBSCRIBE FORM -->
-				{% if implemeted == true %}
 				<form class="subscribe-form">
 					<input type="text" name="subscribe_email" id="subscribe_email" placeholder="Enter your email here...">
 					<button class="button medium dark">Subscribe!</button>
 				</form>
-				{% endif %}
 				<!-- /SUBSCRIBE FORM -->
 			</div>
 			<!-- /SUBSCRIBE CONTENT -->
