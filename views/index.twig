@@ -1289,8 +1289,16 @@
 				<div id="pl-1" class="product-list grid column4-wrap owl-carousel">
 					<!-- PRODUCT ITEM -->
 					{% import 'macros.twig' as silexCasts %}
-					{{silexCasts.apps_themes(apps,0,4)}}
 					<!-- /PRODUCT ITEM -->
+					{{silexCasts.apps_themes(apps,1,4)}}
+				</div>
+				<!-- /PRODUCT LIST -->
+
+				<!-- PRODUCT LIST -->
+				<div id="pl-2" class="product-list grid column4-wrap owl-carousel">
+					{{silexCasts.apps_themes(apps,4,8)}}
+				</div>
+				<!-- /PRODUCT LIST -->
 
 {% if implemented == true %}
 					<!-- PRODUCT ITEM -->
