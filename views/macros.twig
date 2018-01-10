@@ -23,7 +23,7 @@
 {% endmacro %}
 
 <!-- use macro to print application or theme information -->
-{% macro apps_themes(apps, init, end)%}
+{% macro apps_themes(apps, init, end, word_favorate, word_go_item)%}
   {% for app in apps %}
     {% if loop.index0 >= init and loop.index0 < end %}
   					<div class="product-item column">
