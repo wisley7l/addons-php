@@ -1355,17 +1355,16 @@
 								<p class="text-header tiny">{{ app.name_partner }}</p>
 							</a>
 							<ul class="rating tooltip" title="Author's Reputation">
-								{% for i in 0..app.star_on %}
+								{% for i in 1..app.star_on %}
 								<li class="rating-item">
 									<!-- SVG STAR -->
-									<h5>{{ i }}</h5>
 									<svg class="svg-star">
 										<use xlink:href="#svg-star"></use>
 									</svg>
 									<!-- /SVG STAR -->
 								</li>
 								{% endfor %}
-								{% for i in 0..app.star_off %}
+								{% for i in 1..app.star_off %}
 								<li class="rating-item empty">
 									<!-- SVG STAR -->
 									{{ i }}
