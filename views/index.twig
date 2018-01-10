@@ -1287,7 +1287,7 @@
 
 				<!-- PRODUCT LIST -->
 				<div id="pl-1" class="product-list grid column4-wrap owl-carousel">
-
+{% for apps in app %}
 					<!-- PRODUCT ITEM -->
 					<div class="product-item column">
 						<!-- PRODUCT PREVIEW ACTIONS -->
@@ -1333,7 +1333,7 @@
 						<!-- PRODUCT INFO -->
 						<div class="product-info">
 							<a href="item-v1.html">
-								<p class="text-header">Westeros Custom Clothing</p>
+								<p class="text-header">{{ app.name }}</p>
 							</a>
 							<p class="product-description">Lorem ipsum dolor sit urarde...</p>
 							<a href="shop-gridview-v1.html">
@@ -1395,6 +1395,7 @@
 						<!-- /USER RATING -->
 					</div>
 					<!-- /PRODUCT ITEM -->
+{% endfor %}
 {% if implemented == true %}
 					<!-- PRODUCT ITEM -->
 					<div class="product-item column">
