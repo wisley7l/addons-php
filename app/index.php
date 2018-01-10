@@ -13,7 +13,7 @@ $total_apps_and_themes = 0;
 $count_stores = 0;
 $count_partners = 0;
 // obs: Search all categories in db
-// test all category
+// test all category  // Perform db query to obtain this information
 $all_category = array(
   'All Category',
   'c1',
@@ -21,7 +21,7 @@ $all_category = array(
   'c3',
   'c4'
 );
-// test apps
+// test apps  // Perform db query to obtain this information
 $apps = array(
   array('name' => 'APP1', 'name_partner' => 'Partner 1', 'value' => 12.03 ,'star_on' => 3, 'star_off' => 2 ),
   array('name' =>  'APP2', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1 )
