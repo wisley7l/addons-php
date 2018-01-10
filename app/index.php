@@ -21,10 +21,6 @@ $all_category = array(
   'c3',
   'c4'
 );
-// test itens
-$apps = array(
-  array('imagem_item' => '' ,'name' => 'App1', 'valor' => 12.50, 'description' => '', 'category' => 'c1', 'reputation' => 3, 'name_partner' => 'Wisley', 'image_partner' => ''  )
-);
 
 // obs: treat language
 switch ($_SERVER['PATH_LANG']) {
@@ -106,5 +102,8 @@ echo $twig->render('index.twig', array(
   'buy_now' => $buy_now,
   'apps_trends' => $apps_trends,
   'themes_trends' => $themes_trends,
-  'apps' => $apps
+  // test itens
+  'apps' => array(
+    array('imagem_item' => '' ,'name' => 'App1', 'valor' => 12.50, 'description' => '', 'category' => 'c1', 'reputation' => 3, 'name_partner' => 'Wisley', 'image_partner' => ''  )
+  )
 ));
