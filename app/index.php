@@ -23,8 +23,8 @@ $all_category = array(
 );
 // test apps
 $apps = array(
-  array('name' => 'Wis' ),
-  array('name' =>  'OK' )
+  array('name' => 'APP1', 'name_partner' => 'Partner 1' ),
+  array('name' =>  'APP2', 'name_partner' => 'Partner 1' )
 );
 
 // obs: treat language

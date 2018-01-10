@@ -1251,10 +1251,6 @@
 		<a href="#" class="button medium dark">{{ buy_now }}</a>
 	</div>
 	<!-- /PROMO -->
-	<h1> test </h1>
-	{% for app in apps %}
-	<h1> {{ app.name }}</h1>
-	{% endfor %}
 
 	<div class="clearfix"></div>
 
@@ -1292,6 +1288,7 @@
 				<!-- PRODUCT LIST -->
 				<div id="pl-1" class="product-list grid column4-wrap owl-carousel">
 					<!-- PRODUCT ITEM -->
+{% for app in apps %}
 					<div class="product-item column">
 						<!-- PRODUCT PREVIEW ACTIONS -->
 						<div class="product-preview-actions">
@@ -1355,7 +1352,7 @@
 								</figure>
 							</a>
 							<a href="author-profile.html">
-								<p class="text-header tiny">Johnny Fisher</p>
+								<p class="text-header tiny">{{ app.name_partner }}</p>
 							</a>
 							<ul class="rating tooltip" title="Author's Reputation">
 								<li class="rating-item">
@@ -1398,6 +1395,7 @@
 						<!-- /USER RATING -->
 					</div>
 					<!-- /PRODUCT ITEM -->
+{% endfor %}
 
 {% if implemented == true %}
 					<!-- PRODUCT ITEM -->
