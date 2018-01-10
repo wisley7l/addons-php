@@ -23,8 +23,8 @@
 {% endmacro %}
 
 <!-- use macro to print application or theme information -->
-{% macro apps_themes(apps)%}
-  {% for app in apps %}
+{% macro apps_themes(apps,end)%}
+  {% for app in apps if app < end %}
   					<div class="product-item column">
   						<!-- PRODUCT PREVIEW ACTIONS -->
   						<div class="product-preview-actions">
