@@ -23,8 +23,8 @@ $all_category = array(
 );
 // test apps
 $apps = array(
-  array('name' => 'APP1', 'name_partner' => 'Partner 1' ),
-  array('name' =>  'APP2', 'name_partner' => 'Partner 1' )
+  array('name' => 'APP1', 'name_partner' => 'Partner 1', 'star_on' => 3, 'star_off' => 2 ),
+  array('name' =>  'APP2', 'name_partner' => 'Partner 1', 'star_on' => 4, 'star_off' => 1 )
 );
 
 // obs: treat language
@@ -39,7 +39,7 @@ switch ($_SERVER['PATH_LANG']) {
     $description_mkp = 'é o melhor marketplace de apps e temas para ecommerce ';
     $word_register = 'Registar-se ';
     $word_search = 'Buscar ';
-    $word_go_item = 'ir até item';
+    $word_go_item = 'Ir até item';
     $word_favorate = 'Add Favourito';
     $desc_promo_partners = 'Divulgue sua APP ou tema aqui com ';
     $desc_promo_store = 'Encontre os melhores apps e tema para sua ecommerce ';
