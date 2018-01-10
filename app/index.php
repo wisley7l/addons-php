@@ -21,6 +21,8 @@ $all_category = array(
   'c3',
   'c4'
 );
+// test apps
+$apps = array('name' => ' WIS' );
 
 // obs: treat language
 switch ($_SERVER['PATH_LANG']) {
