@@ -23,11 +23,9 @@
 {% endmacro %}
 
 <!-- use macro to print application or theme information -->
-{% macro apps_themes(apps,end)%}
+{% macro apps_themes(apps, init, end)%}
   {% for app in apps %}
-  {% if loop.index == end %}
-  {{app.name}}
-  {% endif %}
+    {% if loop.index >= init and loop.index < end %}
   					<div class="product-item column">
   						<!-- PRODUCT PREVIEW ACTIONS -->
   						<div class="product-preview-actions">
@@ -102,5 +100,6 @@
   						</div>
   						<!-- /USER RATING -->
   					</div>
+    {% endif %}
   {% endfor %}
 {% endmacro %}
