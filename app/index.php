@@ -23,7 +23,7 @@ $all_category = array(
 );
 // test itens
 $apps = array(
-  array('imagem_item' => '' ,'name' => 'App1', 'valor' => 12.50, 'description' => '', 'category' => 'c1', 'reputation' => 3, 'name_partner' => 'Wisley', 'image_partner' => ''  ),
+  array('imagem_item' => '' ,'name' => 'App1', 'valor' => 12.50, 'description' => '', 'category' => 'c1', 'reputation' => 3, 'name_partner' => 'Wisley', 'image_partner' => ''  )
 );
 
 // obs: treat language
