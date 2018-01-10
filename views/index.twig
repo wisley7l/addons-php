@@ -1355,8 +1355,6 @@
 								<p class="text-header tiny">{{ app.name_partner }}</p>
 							</a>
 							<ul class="rating tooltip" title="Author's Reputation">
-<!-- stars actives-->
-			{% for app.star_on %}
 								<li class="rating-item">
 									<!-- SVG STAR -->
 									<svg class="svg-star">
@@ -1364,9 +1362,27 @@
 									</svg>
 									<!-- /SVG STAR -->
 								</li>
-			{% endfor %}
-			{% for app.star_of %}
-<!-- stars not active -->
+								<li class="rating-item">
+									<!-- SVG STAR -->
+									<svg class="svg-star">
+										<use xlink:href="#svg-star"></use>
+									</svg>
+									<!-- /SVG STAR -->
+								</li>
+								<li class="rating-item">
+									<!-- SVG STAR -->
+									<svg class="svg-star">
+										<use xlink:href="#svg-star"></use>
+									</svg>
+									<!-- /SVG STAR -->
+								</li>
+								<li class="rating-item">
+									<!-- SVG STAR -->
+									<svg class="svg-star">
+										<use xlink:href="#svg-star"></use>
+									</svg>
+									<!-- /SVG STAR -->
+								</li>
 								<li class="rating-item empty">
 									<!-- SVG STAR -->
 									<svg class="svg-star">
@@ -1374,7 +1390,6 @@
 									</svg>
 									<!-- /SVG STAR -->
 								</li>
-				{% endfor %}
 							</ul>
 						</div>
 						<!-- /USER RATING -->
