@@ -76,7 +76,7 @@
   							<a href="shop-gridview-v1.html">
   								<p class="category primary">{{ app.category }}</p>
   							</a>
-  							<p class="price"><span>$</span>{{ app.value }}</p>
+  							<p class="price"><span>R$</span>{{ app.value | number_format(2, '.', ',') }}</p>
   						</div>
   						<!-- /PRODUCT INFO -->
   						<hr class="line-separator">
