@@ -21,3 +21,81 @@
   </li>
   {% endfor %}
 {% endmacro %}
+
+{% macro apps_themes(apps)%}
+  {% for app in apps %}
+  					<div class="product-item column">
+  						<!-- PRODUCT PREVIEW ACTIONS -->
+  						<div class="product-preview-actions">
+  							<!-- PRODUCT PREVIEW IMAGE -->
+  							<figure class="product-preview-image">
+  								<img src="../images/items/westeros_m.jpg" alt="product-image">
+  							</figure>
+  							<!-- /PRODUCT PREVIEW IMAGE -->
+
+  							<!-- PREVIEW ACTIONS -->
+  							<div class="preview-actions">
+  								<!-- PREVIEW ACTION -->
+  								<div class="preview-action">
+  									<a href="item-v1.html">
+  										<div class="circle tiny primary">
+  											<span class="icon-tag"></span>
+  										</div>
+  									</a>
+  									<a href="item-v1.html">
+  										<p>{{ word_go_item }}</p>
+  									</a>
+  								</div>
+  								<!-- /PREVIEW ACTION -->
+
+  								<!-- PREVIEW ACTION -->
+  								<div class="preview-action">
+  									<a href="#">
+  										<div class="circle tiny secondary">
+  											<span class="icon-heart"></span>
+  										</div>
+  									</a>
+  									<a href="#">
+  										<p>{{ word_favorate }}</p>
+  									</a>
+  								</div>
+  								<!-- /PREVIEW ACTION -->
+  							</div>
+  							<!-- /PREVIEW ACTIONS -->
+  						</div>
+  						<!-- /PRODUCT PREVIEW ACTIONS -->
+
+  						<!-- PRODUCT INFO -->
+  						<div class="product-info">
+  							<a href="item-v1.html">
+  								<p class="text-header"> {{ app.name }} </p>
+  							</a>
+  							<p class="product-description">{{ app.description }}</p>
+  							<a href="shop-gridview-v1.html">
+  								<p class="category primary">{{ app.category }}</p>
+  							</a>
+  							<p class="price"><span>$</span>{{ app.value }}</p>
+  						</div>
+  						<!-- /PRODUCT INFO -->
+  						<hr class="line-separator">
+
+  						<!-- USER RATING -->
+  						<div class="user-rating">
+  							<a href="author-profile.html">
+  								<figure class="user-avatar small">
+  									<img src="../images/avatars/avatar_01.jpg" alt="user-avatar">
+  								</figure>
+  							</a>
+  							<a href="author-profile.html">
+  								<p class="text-header tiny">{{ app.name_partner }}</p>
+  							</a>
+  							<ul class="rating tooltip" title="Author's Reputation">
+  								{% import 'macros.twig' as silexCasts %}
+  								{{silexCasts.star_on(app.star_on)}}
+  								{{silexCasts.star_off(app.star_off)}}
+  							</ul>
+  						</div>
+  						<!-- /USER RATING -->
+  					</div>
+  {% endfor %}
+{% endmacro %}
