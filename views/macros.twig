@@ -9,3 +9,15 @@
   </li>
   {% endfor %}
 {% endmacro %}
+
+{% macro star_off(n)%}
+  {% for i in 1..n %}
+  <li class="rating-item empty">
+    <!-- SVG STAR -->
+    <svg class="svg-star">
+      <use xlink:href="#svg-star"></use>
+    </svg>
+    <!-- /SVG STAR -->
+  </li>
+  {% endfor %}
+{% endmacro %}
