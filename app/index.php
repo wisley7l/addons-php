@@ -103,7 +103,5 @@ echo $twig->render('index.twig', array(
   'apps_trends' => $apps_trends,
   'themes_trends' => $themes_trends,
   // test itens
-  'apps' => array(
-    array('imagem_item' => '' ,'name' => 'App1', 'valor' => 12.50, 'description' => '', 'category' => 'c1', 'reputation' => 3, 'name_partner' => 'Wisley', 'image_partner' => ''  )
-  )
+  'apps' => $apps
 ));

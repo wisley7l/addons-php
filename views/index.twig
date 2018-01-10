@@ -1251,6 +1251,10 @@
 		<a href="#" class="button medium dark">{{ buy_now }}</a>
 	</div>
 	<!-- /PROMO -->
+	<h1> test </h1>
+	{% for apps in app %}
+	<h1> {{ app.name }}</h1>
+	{% endfor %}
 
 	<div class="clearfix"></div>
 
@@ -1283,9 +1287,7 @@
 					<!-- /SLIDE CONTROLS -->
 				</div>
 				<!-- /HEADLINE -->
-{% for apps in app %}
-<h1> {{ app.name }}</h1>
-{% endfor %}
+
 
 				<!-- PRODUCT LIST -->
 				<div id="pl-1" class="product-list grid column4-wrap owl-carousel">
