@@ -1333,7 +1333,7 @@
 						<!-- PRODUCT INFO -->
 						<div class="product-info">
 							<a href="item-v1.html">
-								<p class="text-header"> sem </p>
+								<p class="text-header"> {{ app.name }} </p>
 							</a>
 							<p class="product-description">{{ app.description }}</p>
 							<a href="shop-gridview-v1.html">
@@ -1355,37 +1355,20 @@
 								<p class="text-header tiny">{{ app.name_partner }}</p>
 							</a>
 							<ul class="rating tooltip" title="Author's Reputation">
+								{% for i in app.star_on %}
 								<li class="rating-item">
 									<!-- SVG STAR -->
+									{{ i }}
 									<svg class="svg-star">
 										<use xlink:href="#svg-star"></use>
 									</svg>
 									<!-- /SVG STAR -->
 								</li>
-								<li class="rating-item">
-									<!-- SVG STAR -->
-									<svg class="svg-star">
-										<use xlink:href="#svg-star"></use>
-									</svg>
-									<!-- /SVG STAR -->
-								</li>
-								<li class="rating-item">
-									<!-- SVG STAR -->
-									<svg class="svg-star">
-										<use xlink:href="#svg-star"></use>
-									</svg>
-									<!-- /SVG STAR -->
-								</li>
-								<li class="rating-item">
-									<!-- SVG STAR -->
-									<svg class="svg-star">
-										<use xlink:href="#svg-star"></use>
-									</svg>
-									<!-- /SVG STAR -->
-								</li>
+								{% endfor %}
 								{% for i in app.star_off %}
 								<li class="rating-item empty">
 									<!-- SVG STAR -->
+									{{ i }}
 									<svg class="svg-star">
 										<use xlink:href="#svg-star"></use>
 									</svg>
