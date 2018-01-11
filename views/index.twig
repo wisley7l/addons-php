@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<!-- favicon -->
 	<link rel="icon" href="favicon.ico">
-	<title>{{ title }} | Home</title>
+	<title>{{ dicionary.title }} | Home</title>
 </head>
 <body>
 
@@ -362,7 +362,7 @@
 					<a href="forum.html" class="interesting-link">Our Forums</a>
 					<a href="#" class="interesting-link">Why Choose Emerald Dragon?</a>
 					-->
-					<a href="#" class="button primary">{{ dicionary.dicionary.word_register }}</a>
+					<a href="#" class="button primary">{{ dicionary.word_register }}</a>
 					<a href="#" class="button secondary">{{ dicionary.word_login }}</a>
 				</div>
 
@@ -1136,9 +1136,9 @@
 	<!-- BANNER -->
 	<div class="banner-wrap">
 		<section class="banner">
-			<h5>{{ welcome }}</h5>
-			<h1> {{ e_com }}<span>{{ addons }}</span></h1>
-			<p>{{  subtitle }}</p>
+			<h5>{{ dicionary.welcome }}</h5>
+			<h1> {{ dicionary.e_com }}<span>{{ dicionary.addons }}</span></h1>
+			<p>{{ dicionary.subtitle }}</p>
 			<img src="../images/top_items.png" alt="banner-img">
 
 			<!-- SEARCH WIDGET -->
@@ -1238,7 +1238,7 @@
 	<!-- PROMO -->
 	<div class="promo-banner dark left">
 		<span class="icon-wallet"></span>
-		<h5>{{ desc_promo_partners }} {{ title }}!</h5>
+		<h5>{{ dicionary.desc_promo_partners }} {{ dicionary.title }}!</h5>
 		<h1>{{ dicionary.word_start }} <span>{{ dicionary.word_now }}</span></h1>
 		<a href="#" class="button medium primary">{{ dicionary.word_register }}!</a>
 	</div>
@@ -1247,9 +1247,9 @@
 	<!-- PROMO -->
 	<div class="promo-banner secondary right">
 		<span class="icon-tag"></span>
-		<h5>{{ desc_promo_store }}</h5>
+		<h5>{{ dicionary.desc_promo_store }}</h5>
 		<h1>{{dicionary.word_start}} {{ dicionary.word_buying }}</h1>
-		<a href="#" class="button medium dark">{{ buy_now }}</a>
+		<a href="#" class="button medium dark">{{ dicionary.buy_now }}</a>
 	</div>
 	<!-- /PROMO -->
 
@@ -1262,7 +1262,7 @@
 			<div class="product-showcase">
 				<!-- HEADLINE -->
 				<div class="headline primary">
-					<h4>{{ apps_trends }}</h4>
+					<h4>{{ dicionary.apps_trends }}</h4>
 					<!-- SLIDE CONTROLS -->
 					<div class="slide-control-wrap">
 						<div class="slide-control left">
@@ -1310,7 +1310,7 @@
 			<div class="product-showcase">
 				<!-- HEADLINE -->
 				<div class="headline secondary">
-					<h4>{{ themes_trends }}</h4>
+					<h4>{{ dicionary.themes_trends }}</h4>
 					<!-- SLIDE CONTROLS -->
 					<div class="slide-control-wrap">
 						<div class="slide-control left">
