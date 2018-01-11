@@ -58,6 +58,8 @@ switch ($_SERVER['PATH_LANG']) {
     $word_reputation = 'Reputação do Desenvolvedor';
     $word_language = 'Selecionar Idioma';
     $word_search_apps_themes = 'Buscar por Apps ou Temas ...';
+    $word_buy_apps = 'Compre Apps facilmente';
+    $description_buy_apps = '********';
     break;
 
   default:
@@ -83,6 +85,8 @@ switch ($_SERVER['PATH_LANG']) {
     $word_reputation = 'Reputation of the Developer';
     $word_language = 'Select Language';
     $word_search_apps_themes = 'Search For apps or themes ...';
+    $word_buy_apps = 'Buy Apps Easily';
+    $description_buy_apps = '********';
     break;
 }
 // array dicionary
