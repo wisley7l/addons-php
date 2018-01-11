@@ -738,13 +738,14 @@
 
       <a href="#" class="button medium secondary">Logout</a>
       <a href="#" class="button medium primary">Become a Seller</a>
-    </div>
+
   {% else %}
       <div class="side-menu-header">
       </div>
       <a href="#" class="button primary">{{ dicionary.word_register }}</a>
       <a href="#" class="button secondary">{{ dicionary.word_login }}</a>
   {% endif %}
+  </div>
 {% endmacro %}
 
 {% macro menu_main(dicionary) %}
