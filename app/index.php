@@ -23,9 +23,9 @@ $all_category = array(
 );
 // test apps  // Perform db query to obtain this information
 $apps = array(
-  array('name' => 'APP1', 'name_partner' => 'Partner 1', 'value' => 12.03 ,'star_on' => 3, 'star_off' => 2 ),
-  array('name' => 'APP2', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1 ),
-  array('name' => 'APP3', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1 )
+  array('name' => 'APP1', 'name_partner' => 'Partner 1', 'value' => 12.03 ,'star_on' => 3, 'star_off' => 2, 'image' => 'texture.png' ),
+  array('name' => 'APP2', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1, 'image' => 'items/westeros_m.jpg' ),
+  array('name' => 'APP3', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1, 'image' => 'items/westeros_m.jpg' )
 );
 // test themes // Perform db query to obtain this information
 $themes = array(
