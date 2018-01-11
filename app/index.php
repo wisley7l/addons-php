@@ -23,15 +23,15 @@ $all_category = array(
 );
 // test apps  // Perform db query to obtain this information
 $apps = array(
-  array('name' => 'APP1', 'name_partner' => 'Partner 1', 'value' => 12.03 ,'star_on' => 3, 'star_off' => 2, 'image' => 'texture.png' ),
-  array('name' => 'APP2', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1, 'image' => 'items/westeros_m.jpg' ),
-  array('name' => 'APP3', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1, 'image' => 'items/westeros_m.jpg' )
+  array('name' => 'APP1', 'name_partner' => 'Partner 1', 'value' => 12.03 ,'star_on' => 3, 'star_off' => 2, 'image' => Addons\PATH_APP . '/views/e-com.png' ),
+  array('name' => 'APP2', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
+  array('name' => 'APP3', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' )
 );
 // test themes // Perform db query to obtain this information
 $themes = array(
-  array('name' => 'THEME1', 'name_partner' => 'Partner 4', 'value' => 12.03 ,'star_on' => 3, 'star_off' => 2 ),
-  array('name' => 'THEME2', 'name_partner' => 'Partner 5', 'value' => 15.50 ,'star_on' => 2, 'star_off' => 3 ),
-  array('name' => 'THEME3', 'name_partner' => 'Partner 6', 'value' => 15.50 ,'star_on' => 5, 'star_off' => 0 )
+  array('name' => 'THEME1', 'name_partner' => 'Partner 4', 'value' => 12.03 ,'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
+  array('name' => 'THEME2', 'name_partner' => 'Partner 5', 'value' => 15.50 ,'star_on' => 2, 'star_off' => 3, 'image' => '../images/items/westeros_m.jpg' ),
+  array('name' => 'THEME3', 'name_partner' => 'Partner 6', 'value' => 15.50 ,'star_on' => 5, 'star_off' => 0, 'image' => '../images/items/westeros_m.jpg' )
 );
 // obs: treat language
 switch ($_SERVER['PATH_LANG']) {
