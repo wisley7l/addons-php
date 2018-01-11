@@ -56,6 +56,7 @@ switch ($_SERVER['PATH_LANG']) {
     $apps_trends = 'Tendências de Apps ';
     $themes_trends = 'Tendências de Temas ';
     $word_reputation = 'Reputação do Desenvolvedor';
+    $word_language = 'Selecionar Idioma';
     break;
 
   default:
@@ -79,6 +80,7 @@ switch ($_SERVER['PATH_LANG']) {
     $apps_trends = 'Apps Trends ';
     $themes_trends = 'Themes Trends ';
     $word_reputation = 'Reputation of the Developer';
+    $word_language = 'Select Language';
     break;
 }
 // array dicionary
@@ -113,6 +115,7 @@ $dicionary = array(
   'apps_trends' => $apps_trends,
   'themes_trends' => $themes_trends,
   'word_reputation' => $word_reputation,
+  'word_language' => $word_language
 );
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
