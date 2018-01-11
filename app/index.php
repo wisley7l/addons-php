@@ -81,11 +81,8 @@ switch ($_SERVER['PATH_LANG']) {
     $word_reputation = 'Reputation of the Developer';
     break;
 }
-
-// intial twig and send varibles for template
-$loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
-$twig = new Twig_Environment($loader);
-echo $twig->render('index.twig', array(
+// array dicionary
+$dicionary = array(
   'title' => $title,
   'subtitle' => $subtitle,
   'login' => $login,
@@ -101,7 +98,6 @@ echo $twig->render('index.twig', array(
   'total_apps_and_themes' => $total_apps_and_themes,
   'count_stores' => $count_stores,
   'count_partners' => $count_partners,
-  'all_category' => $all_category,
   'word_login' => 'Login ',
   'word_register' => $word_register,
   'implemented' => false,
@@ -117,7 +113,14 @@ echo $twig->render('index.twig', array(
   'apps_trends' => $apps_trends,
   'themes_trends' => $themes_trends,
   'word_reputation' => $word_reputation,
-  // test itens
+);
+// intial twig and send varibles for template
+$loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
+$twig = new Twig_Environment($loader);
+echo $twig->render('index.twig', array(
+  'dicionary' => $dicionary,
+    // test itens
+  'all_category' => $all_category,
   'apps' => $apps,
   'themes' => $themes
 ));

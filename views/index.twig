@@ -362,8 +362,8 @@
 					<a href="forum.html" class="interesting-link">Our Forums</a>
 					<a href="#" class="interesting-link">Why Choose Emerald Dragon?</a>
 					-->
-					<a href="#" class="button primary">{{ word_register }}</a>
-					<a href="#" class="button secondary">{{ word_login }}</a>
+					<a href="#" class="button primary">{{ dicionary.dicionary.word_register }}</a>
+					<a href="#" class="button secondary">{{ dicionary.word_login }}</a>
 				</div>
 
 			</div>
@@ -410,13 +410,13 @@
 
 			<!-- DROPDOWN ITEM -->
 			<li class="dropdown-item">
-				<a href="products.html">{{ word_app }}</a>
+				<a href="products.html">{{ dicionary.word_app }}</a>
 			</li>
 			<!-- /DROPDOWN ITEM -->
 
 			<!-- DROPDOWN ITEM -->
 			<li class="dropdown-item">
-				<a href="services.html">{{  word_theme }}</a>
+				<a href="services.html">{{  dicionary.word_theme }}</a>
 			</li>
 			<!-- /DROPDOWN ITEM -->
 
@@ -831,13 +831,13 @@
 
 					<!-- MENU ITEM -->
 					<li class="menu-item">
-						<a href="products.html">{{ word_app }}</a>
+						<a href="products.html">{{ dicionary.word_app }}</a>
 					</li>
 					<!-- /MENU ITEM -->
 
 					<!-- MENU ITEM -->
 					<li class="menu-item">
-						<a href="services.html">{{ word_theme }}</a>
+						<a href="services.html">{{ dicionary.word_theme }}</a>
 					</li>
 					<!-- /MENU ITEM -->
 
@@ -1168,7 +1168,7 @@
 						</svg>
 						<!-- /SVG ARROW -->
 					</label>
-					<button class="button medium dark"> {{ word_search }} !</button>
+					<button class="button medium dark"> {{ dicionary.word_search }} !</button>
 				</form>
 			</div>
 			<!-- /SEARCH WIDGET -->
@@ -1239,8 +1239,8 @@
 	<div class="promo-banner dark left">
 		<span class="icon-wallet"></span>
 		<h5>{{ desc_promo_partners }} {{ title }}!</h5>
-		<h1>{{ word_start }} <span>{{ word_now }}</span></h1>
-		<a href="#" class="button medium primary">{{ word_register }}!</a>
+		<h1>{{ dicionary.word_start }} <span>{{ dicionary.word_now }}</span></h1>
+		<a href="#" class="button medium primary">{{ dicionary.word_register }}!</a>
 	</div>
 	<!-- /PROMO -->
 
@@ -1248,7 +1248,7 @@
 	<div class="promo-banner secondary right">
 		<span class="icon-tag"></span>
 		<h5>{{ desc_promo_store }}</h5>
-		<h1>{{word_start}} {{ word_buying }}</h1>
+		<h1>{{dicionary.word_start}} {{ dicionary.word_buying }}</h1>
 		<a href="#" class="button medium dark">{{ buy_now }}</a>
 	</div>
 	<!-- /PROMO -->
@@ -1290,17 +1290,17 @@
 					<!-- PRODUCT ITEM -->
 					{% import 'macros.twig' as silexCasts %}
 					<!-- /PRODUCT ITEM -->
-					{{silexCasts.apps_themes(apps,0,8,word_favorate,word_go_item,word_reputation)}}
+					{{silexCasts.apps_themes(apps,0,8,dicionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 				<!-- PRODUCT LIST -->
 				<div id="pl-2" class="product-list grid column4-wrap owl-carousel">
-					{{silexCasts.apps_themes(apps,8,16,word_favorate,word_go_item,word_reputation)}}
+					{{silexCasts.apps_themes(apps,8,16,dicionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 				<!-- PRODUCT LIST -->
 				<div id="pl-3" class="product-list grid column4-wrap owl-carousel">
-					{{silexCasts.apps_themes(apps,16,24,word_favorate,word_go_item,word_reputation)}}
+					{{silexCasts.apps_themes(apps,16,24,dicionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 			</div>
@@ -1335,7 +1335,7 @@
 
 				<!-- PRODUCT LIST -->
 				<div id="pl-4" class="product-list grid column4-wrap owl-carousel">
-					{{silexCasts.apps_themes(themes,0,12,word_favorate,word_go_item,word_reputation)}}
+					{{silexCasts.apps_themes(themes,0,12,dicionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 			</div>
@@ -1376,7 +1376,7 @@
 {% endif %}
 
 <!-- flotter -->
-{{silexCasts.footer()}}
+{{silexCasts.footer(dicionary)}}
 
 
 	<div class="shadow-film closed"></div>

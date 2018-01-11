@@ -23,7 +23,7 @@
 {% endmacro %}
 
 <!-- use macro to print application or theme information -->
-{% macro apps_themes(apps, init, end, word_favorate, word_go_item)%}
+{% macro apps_themes(apps, init, end, dicionary)%}
   {% for app in apps %}
     {% if loop.index0 >= init and loop.index0 < end %}
   					<div class="product-item column">
@@ -45,7 +45,7 @@
   										</div>
   									</a>
   									<a href="item-v1.html">
-  										<p>{{ word_go_item }}</p>
+  										<p>{{ dicionary.word_go_item }}</p>
   									</a>
   								</div>
   								<!-- /PREVIEW ACTION -->
@@ -58,7 +58,7 @@
   										</div>
   									</a>
   									<a href="#">
-  										<p>{{ word_favorate }}</p>
+  										<p>{{ dicionary.word_favorate }}</p>
   									</a>
   								</div>
   								<!-- /PREVIEW ACTION -->
@@ -91,7 +91,7 @@
   							<a href="author-profile.html">
   								<p class="text-header tiny">{{ app.name_partner }}</p>
   							</a>
-  							<ul class="rating tooltip" title="{{ word_reputation }}">
+  							<ul class="rating tooltip" title="{{ dicionary.word_reputation }}">
   								{% import 'macros.twig' as silexCasts %}
                   <!-- use macros to render stars -->
   								{{silexCasts.star_on(app.star_on)}}
@@ -119,15 +119,15 @@
           <ul class="company-info-list">
             <li class="company-info-item">
               <span class="icon-present"></span>
-              <p><span>{{ total_apps_and_themes }} &nbsp; </span> {{  word_app }} {{ word_and }} {{word_theme}}</p>
+              <p><span>{{ total_apps_and_themes }} &nbsp; </span> {{  dicionary.word_app }} {{ dicionary.word_and }} {{dicionary.word_theme}}</p>
             </li>
             <li class="company-info-item">
               <span class="icon-energy"></span>
-              <p><span>{{ count_stores }} &nbsp; </span> {{ word_stores }}</p>
+              <p><span>{{ count_stores }} &nbsp; </span> {{ dicionary.word_stores }}</p>
             </li>
             <li class="company-info-item">
               <span class="icon-user"></span>
-              <p><span>{{ count_partners }} &nbsp; </span> {{ word_partner }}</p>
+              <p><span>{{ count_partners }} &nbsp; </span> {{ dicionary.word_partner }}</p>
             </li>
           </ul>
           <!-- SOCIAL LINKS -->
