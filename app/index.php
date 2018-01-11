@@ -60,6 +60,8 @@ switch ($_SERVER['PATH_LANG']) {
     $word_search_apps_themes = 'Buscar por Apps ou Temas ...';
     $word_buy_apps = 'Compre Apps facilmente';
     $description_buy_apps = '********';
+    $word_secure_transation = 'Transação Segura';
+    $description_secure_transation = 'xxxxxxxxxxx';
     break;
 
   default:
@@ -87,6 +89,8 @@ switch ($_SERVER['PATH_LANG']) {
     $word_search_apps_themes = 'Search For apps or themes ...';
     $word_buy_apps = 'Buy Apps Easily';
     $description_buy_apps = '********';
+    $word_secure_transation = 'Secure Transaction';
+    $description_secure_transation = 'xxxxxxxxxxx';
     break;
 }
 // array dicionary
@@ -120,7 +124,11 @@ $dicionary = array(
   'themes_trends' => $themes_trends,
   'word_reputation' => $word_reputation,
   'word_language' => $word_language,
-  'word_search_apps_themes' => $word_search_apps_themes
+  'word_search_apps_themes' => $word_search_apps_themes,
+  'word_buy_apps' => $word_buy_apps,
+  'description_buy_apps' => $description_buy_apps,
+  'word_secure_transation' => $word_secure_transation,
+  'description_secure_transation' => $description_secure_transation
 );
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
