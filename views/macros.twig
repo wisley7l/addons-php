@@ -1,5 +1,5 @@
 {% macro star_on(n)%}
-  {% for i in 1..n %}
+  {% for i in 0..n-1 if n > 0 %}
   <li class="rating-item">
     <!-- SVG STAR -->
     <svg class="svg-star">
@@ -11,7 +11,7 @@
 {% endmacro %}
 
 {% macro star_off(n)%}
-  {% for i in 1..n %}
+  {% for i in 0..n-1 if n > 0 %}
   <li class="rating-item empty">
     <!-- SVG STAR -->
     <svg class="svg-star">
