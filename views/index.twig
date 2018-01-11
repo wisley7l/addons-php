@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../css/vendor/owl.carousel.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<!-- favicon -->
-	<link rel="icon" href="favicon.ico">
+	<link rel="icon" href="../favicon.ico">
 	<title>{{ dicionary.title }} | Home</title>
 </head>
 <body>
@@ -373,7 +373,7 @@
 		</header>
 	</div>
 	<!-- /HEADER -->
-
+{% if implemented == true %}
 	<!-- SIDE MENU -->
 	<div id="mobile-menu" class="side-menu left closed">
 		<!-- SVG PLUS -->
@@ -1132,6 +1132,7 @@
 		</div>
 	</div>
 	<!-- /MAIN MENU -->
+{% endif %}	
 
 	<!-- BANNER -->
 	<div class="banner-wrap">
@@ -1144,7 +1145,7 @@
 			<!-- SEARCH WIDGET -->
 			<div class="search-widget">
 				<form class="search-widget-form">
-					<input type="text" name="category_name" placeholder="{{dicionary.word_search_apps_themes}}">
+					<input type="text" name="category_name" placeholder="{{ dicionary.word_search_apps_themes }}">
 					<label for="categories" class="select-block">
 						<select name="categories" id="categories">
 							<!--

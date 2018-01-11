@@ -89,7 +89,6 @@ switch ($_SERVER['PATH_LANG']) {
 $dicionary = array(
   'title' => $title,
   'subtitle' => $subtitle,
-  'login' => $login,
   'welcome' => $welcome,
   'e_com' => 'E-Com Plus ',
   'addons' => 'Adonns ',
@@ -104,7 +103,6 @@ $dicionary = array(
   'count_partners' => $count_partners,
   'word_login' => 'Login ',
   'word_register' => $word_register,
-  'implemented' => false,
   'word_search'=> $word_search,
   'word_go_item' => $word_go_item,
   'word_favorate' => $word_favorate,
@@ -117,13 +115,16 @@ $dicionary = array(
   'apps_trends' => $apps_trends,
   'themes_trends' => $themes_trends,
   'word_reputation' => $word_reputation,
-  'word_language' => $word_language
+  'word_language' => $word_language,
+  'word_search_apps_themes' => $word_search_apps_themes
 );
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
 echo $twig->render('index.twig', array(
   'dicionary' => $dicionary,
+  'login' => $login,
+  'implemented' => false,
     // test itens
   'all_category' => $all_category,
   'apps' => $apps,
