@@ -64,6 +64,8 @@ switch ($_SERVER['PATH_LANG']) {
     $description_secure_transation = 'xxxxxxxxxxx';
     $word_apps_control = 'Controle de APPS e Temas';
     $description_apps_control = '- - - - - ';
+    $word_mkp_quality = 'Marketplace de Qualidade';
+    $description_mkp_quality = '_ _ _ _ _ ';
     break;
 
   default:
@@ -95,6 +97,8 @@ switch ($_SERVER['PATH_LANG']) {
     $description_secure_transation = 'xxxxxxxxxxx';
     $word_apps_control = 'APPS and Themes Control';
     $description_apps_control = '- - - - - ';
+    $word_mkp_quality = 'Quality Marketplace';
+    $description_mkp_quality = '_ _ _ _ _ ';
     break;
 }
 // array dicionary
@@ -134,7 +138,9 @@ $dicionary = array(
   'word_secure_transation' => $word_secure_transation,
   'description_secure_transation' => $description_secure_transation,
   'word_apps_control' => $word_apps_control,
-  'description_apps_control' => $description_apps_control
+  'description_apps_control' => $description_apps_control,
+  'description_mkp_quality' => $description_mkp_quality,
+  'word_mkp_quality' => $word_mkp_quality
 );
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
