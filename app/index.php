@@ -27,7 +27,7 @@ $apps = array(
   array('name' => 'APP2', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1 ),
   array('name' => 'APP3', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1 )
 );
-// test themes
+// test themes // Perform db query to obtain this information
 $themes = array(
   array('name' => 'THEME1', 'name_partner' => 'Partner 4', 'value' => 12.03 ,'star_on' => 3, 'star_off' => 2 ),
   array('name' => 'THEME2', 'name_partner' => 'Partner 5', 'value' => 15.50 ,'star_on' => 2, 'star_off' => 3 ),
