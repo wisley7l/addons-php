@@ -1,3 +1,5 @@
+<!-- These macros can be used on other page --> 
+<!-- macro to draw active star -->
 {% macro star_on(n)%}
   {% for i in 0..n-1 if n > 0 %}
   <li class="rating-item">
@@ -9,7 +11,7 @@
   </li>
   {% endfor %}
 {% endmacro %}
-
+<!-- macro to draw star not active -->
 {% macro star_off(n)%}
   {% for i in 0..n-1 if n > 0  %}
   <li class="rating-item empty">
@@ -21,7 +23,6 @@
   </li>
   {% endfor %}
 {% endmacro %}
-
 <!-- use macro to print application or theme information -->
 {% macro apps_themes(apps, init, end, dicionary)%}
   {% for app in apps %}
@@ -103,7 +104,7 @@
     {% endif %}
   {% endfor %}
 {% endmacro %}
-
+<!-- macro for mounting footer -->
 {% macro footer(dicionary) %}
   <!-- FOOTER -->
   <footer>
@@ -289,7 +290,7 @@
   </footer>
   <!-- /FOOTER -->
 {% endmacro %}
-
+<!-- macro to mount the main header -->
 {% macro header(login,dicionary) %}
   {% if login == true %}
         <!-- USER BOARD -->
@@ -615,7 +616,7 @@
 
   {% endif %}
 {% endmacro %}
-
+<!-- macro to mount the mobile header -->
 {% macro header_moblie(login,dicionary)%}
   <div id="account-options-menu" class="side-menu right closed">
     <!-- SVG PLUS -->
@@ -747,7 +748,7 @@
   {% endif %}
   </div>
 {% endmacro %}
-
+<!-- macro to mount the main menu -->
 {% macro menu_main(dicionary) %}
   <div class="main-menu-wrap">
   <div class="menu-bar">
@@ -1068,7 +1069,7 @@
   </div>
 </div>
 {% endmacro %}
-
+<!-- macro to mount the mobile menu -->
 {% macro menu_moblie(dicionary) %}
   <div id="mobile-menu" class="side-menu left closed">
   <!-- SVG PLUS -->
