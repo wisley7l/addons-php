@@ -1,6 +1,8 @@
 <?php
 function get_dictionary()
 {
+  $title = Addons\MKTP_TITLE;
+  $subtitle = Addons\MKTP_SUBTITLE;
   // obs: treat language
   switch ($_SERVER['PATH_LANG']) {
     case 'pt_br':
@@ -82,9 +84,6 @@ function get_dictionary()
     'word_theme' => $word_theme,
     'word_and' => $word_and,
     'description_mkp' => $description_mkp,
-    'total_apps_and_themes' => $total_apps_and_themes,
-    'count_stores' => $count_stores,
-    'count_partners' => $count_partners,
     'word_login' => 'Login ',
     'word_register' => $word_register,
     'word_search'=> $word_search,

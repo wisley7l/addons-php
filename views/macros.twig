@@ -1,4 +1,4 @@
-<!-- These macros can be used on other page --> 
+<!-- These macros can be used on other page -->
 <!-- macro to draw active star -->
 {% macro star_on(n)%}
   {% for i in 0..n-1 if n > 0 %}
@@ -105,7 +105,7 @@
   {% endfor %}
 {% endmacro %}
 <!-- macro for mounting footer -->
-{% macro footer(dictionary) %}
+{% macro footer(dictionary, total_apps_and_themes, count_store, count_partners) %}
   <!-- FOOTER -->
   <footer>
     <!-- FOOTER TOP -->
@@ -120,15 +120,15 @@
           <ul class="company-info-list">
             <li class="company-info-item">
               <span class="icon-present"></span>
-              <p><span>{{ dictionary.total_apps_and_themes }} &nbsp; </span> {{  dictionary.word_app }} {{ dictionary.word_and }} {{dictionary.word_theme}}</p>
+              <p><span>{{ total_apps_and_themes }} &nbsp; </span> {{  dictionary.word_app }} {{ dictionary.word_and }} {{dictionary.word_theme}}</p>
             </li>
             <li class="company-info-item">
               <span class="icon-energy"></span>
-              <p><span>{{ dictionary.count_stores }} &nbsp; </span> {{ dictionary.word_stores }}</p>
+              <p><span>{{ count_stores }} &nbsp; </span> {{ dictionary.word_stores }}</p>
             </li>
             <li class="company-info-item">
               <span class="icon-user"></span>
-              <p><span>{{ dictionary.count_partners }} &nbsp; </span> {{ dictionary.word_partner }}</p>
+              <p><span>{{ count_partners }} &nbsp; </span> {{ dictionary.word_partner }}</p>
             </li>
           </ul>
           <!-- SOCIAL LINKS -->

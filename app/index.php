@@ -2,8 +2,6 @@
 header('Content-Type: text/html; charset=utf-8');
 
 // TODO: parse twig template
-$title = Addons\MKTP_TITLE;
-$subtitle = Addons\MKTP_SUBTITLE;
 // variable to check user login
 $login = false;
 // necessary variables for information
@@ -41,6 +39,9 @@ echo $twig->render('index.twig', array(
   'dictionary' => $dictionary,
   'login' => $login,
   'implemented' => false,
+  'total_apps_and_themes' => $total_apps_and_themes,
+  'count_stores' => $count_stores,
+  'count_partners' => $count_partners,
     // test itens
   'all_category' => $all_category,
   'apps' => $apps,
