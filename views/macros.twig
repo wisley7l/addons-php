@@ -104,7 +104,7 @@
   {% endfor %}
 {% endmacro %}
 
-{% macro footer() %}
+{% macro footer(dicionary) %}
   <!-- FOOTER -->
   <footer>
     <!-- FOOTER TOP -->
@@ -115,7 +115,7 @@
           <figure class="logo small">
             <img src="../images/logo_small.png" alt="logo-small">
           </figure>
-          <p> {{ e_com }} {{ addons }} {{ description_mkp }}.</p>
+          <p> {{ dicionary.e_com }} {{ dicionary.addons }} {{ dicionary.description_mkp }}.</p>
           <ul class="company-info-list">
             <li class="company-info-item">
               <span class="icon-present"></span>
@@ -262,7 +262,7 @@
     <!-- FOOTER BOTTOM -->
     <div id="footer-bottom-wrap">
       <div id="footer-bottom">
-        <p>2018 <span>&copy;</span><a href="index">{{ e_com }}</a> </p>
+        <p>2018 <span>&copy;</span><a href="index">{{ dicionary.e_com }}</a> </p>
       </div>
     </div>
     <!-- /FOOTER BOTTOM -->
