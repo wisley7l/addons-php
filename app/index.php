@@ -111,6 +111,7 @@ echo $twig->render('index.twig', array(
   'word_start' => $word_start,
   'word_now' => $word_now,
   'buy_now' => $buy_now,
+  'word_buying' => $word_buying,
   'apps_trends' => $apps_trends,
   'themes_trends' => $themes_trends,
   // test itens
