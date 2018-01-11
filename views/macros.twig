@@ -24,7 +24,7 @@
   {% endfor %}
 {% endmacro %}
 <!-- use macro to print application or theme information -->
-{% macro apps_themes(apps, init, end, dicionary)%}
+{% macro apps_themes(apps, init, end, dictionary)%}
   {% for app in apps %}
     {% if loop.index0 >= init and loop.index0 < end %}
   					<div class="product-item column">
@@ -46,7 +46,7 @@
   										</div>
   									</a>
   									<a href="item-v1.html">
-  										<p>{{ dicionary.word_go_item }}</p>
+  										<p>{{ dictionary.word_go_item }}</p>
   									</a>
   								</div>
   								<!-- /PREVIEW ACTION -->
@@ -59,7 +59,7 @@
   										</div>
   									</a>
   									<a href="#">
-  										<p>{{ dicionary.word_favorate }}</p>
+  										<p>{{ dictionary.word_favorate }}</p>
   									</a>
   								</div>
   								<!-- /PREVIEW ACTION -->
@@ -92,7 +92,7 @@
   							<a href="author-profile.html">
   								<p class="text-header tiny">{{ app.name_partner }}</p>
   							</a>
-  							<ul class="rating tooltip" title="{{ dicionary.word_reputation }}">
+  							<ul class="rating tooltip" title="{{ dictionary.word_reputation }}">
   								{% import 'macros.twig' as silexCasts %}
                   <!-- use macros to render stars -->
   								{{silexCasts.star_on(app.star_on)}}
@@ -105,7 +105,7 @@
   {% endfor %}
 {% endmacro %}
 <!-- macro for mounting footer -->
-{% macro footer(dicionary) %}
+{% macro footer(dictionary) %}
   <!-- FOOTER -->
   <footer>
     <!-- FOOTER TOP -->
@@ -116,19 +116,19 @@
           <figure class="logo small">
             <img src="../images/logo_small.png" alt="logo-small">
           </figure>
-          <p> {{ dicionary.e_com }} {{ dicionary.addons }} {{ dicionary.description_mkp }}.</p>
+          <p> {{ dictionary.e_com }} {{ dictionary.addons }} {{ dictionary.description_mkp }}.</p>
           <ul class="company-info-list">
             <li class="company-info-item">
               <span class="icon-present"></span>
-              <p><span>{{ dicionary.total_apps_and_themes }} &nbsp; </span> {{  dicionary.word_app }} {{ dicionary.word_and }} {{dicionary.word_theme}}</p>
+              <p><span>{{ dictionary.total_apps_and_themes }} &nbsp; </span> {{  dictionary.word_app }} {{ dictionary.word_and }} {{dictionary.word_theme}}</p>
             </li>
             <li class="company-info-item">
               <span class="icon-energy"></span>
-              <p><span>{{ dicionary.count_stores }} &nbsp; </span> {{ dicionary.word_stores }}</p>
+              <p><span>{{ dictionary.count_stores }} &nbsp; </span> {{ dictionary.word_stores }}</p>
             </li>
             <li class="company-info-item">
               <span class="icon-user"></span>
-              <p><span>{{ dicionary.count_partners }} &nbsp; </span> {{ dicionary.word_partner }}</p>
+              <p><span>{{ dictionary.count_partners }} &nbsp; </span> {{ dictionary.word_partner }}</p>
             </li>
           </ul>
           <!-- SOCIAL LINKS -->
@@ -250,7 +250,7 @@
 
         <!-- language -->
         <div class="link-info">
-          <p class="footer-title">{{ dicionary.word_language }}</p>
+          <p class="footer-title">{{ dictionary.word_language }}</p>
           <!-- language LIST -->
           <ul class="link-list">
             <li class="link-item">
@@ -283,7 +283,7 @@
     <!-- FOOTER BOTTOM -->
     <div id="footer-bottom-wrap">
       <div id="footer-bottom">
-        <p>2018 <span>&copy;</span><a href="index">{{ dicionary.e_com }}</a> </p>
+        <p>2018 <span>&copy;</span><a href="index">{{ dictionary.e_com }}</a> </p>
       </div>
     </div>
     <!-- /FOOTER BOTTOM -->
@@ -291,7 +291,7 @@
   <!-- /FOOTER -->
 {% endmacro %}
 <!-- macro to mount the main header -->
-{% macro header(login,dicionary) %}
+{% macro header(login,dictionary) %}
   {% if login == true %}
         <!-- USER BOARD -->
         <div class="user-board">
@@ -608,8 +608,8 @@
             <a href="forum.html" class="interesting-link">Our Forums</a>
             <a href="#" class="interesting-link">Why Choose Emerald Dragon?</a>
             -->
-            <a href="#" class="button primary">{{ dicionary.word_register }}</a>
-            <a href="#" class="button secondary">{{ dicionary.word_login }}</a>
+            <a href="#" class="button primary">{{ dictionary.word_register }}</a>
+            <a href="#" class="button secondary">{{ dictionary.word_login }}</a>
           </div>
 
         </div>
@@ -617,7 +617,7 @@
   {% endif %}
 {% endmacro %}
 <!-- macro to mount the mobile header -->
-{% macro header_moblie(login,dicionary)%}
+{% macro header_moblie(login,dictionary)%}
   <div id="account-options-menu" class="side-menu right closed">
     <!-- SVG PLUS -->
     <svg class="svg-plus">
@@ -743,13 +743,13 @@
   {% else %}
       <div class="side-menu-header">
       </div>
-      <a href="#" class="button primary">{{ dicionary.word_register }}</a>
-      <a href="#" class="button secondary">{{ dicionary.word_login }}</a>
+      <a href="#" class="button primary">{{ dictionary.word_register }}</a>
+      <a href="#" class="button secondary">{{ dictionary.word_login }}</a>
   {% endif %}
   </div>
 {% endmacro %}
 <!-- macro to mount the main menu -->
-{% macro menu_main(dicionary) %}
+{% macro menu_main(dictionary) %}
   <div class="main-menu-wrap">
   <div class="menu-bar">
     <nav>
@@ -768,13 +768,13 @@
 
         <!-- MENU ITEM -->
         <li class="menu-item">
-          <a href="products.html">{{ dicionary.word_app }}</a>
+          <a href="products.html">{{ dictionary.word_app }}</a>
         </li>
         <!-- /MENU ITEM -->
 
         <!-- MENU ITEM -->
         <li class="menu-item">
-          <a href="services.html">{{ dicionary.word_theme }}</a>
+          <a href="services.html">{{ dictionary.word_theme }}</a>
         </li>
         <!-- /MENU ITEM -->
 
@@ -1070,7 +1070,7 @@
 </div>
 {% endmacro %}
 <!-- macro to mount the mobile menu -->
-{% macro menu_moblie(dicionary) %}
+{% macro menu_moblie(dictionary) %}
   <div id="mobile-menu" class="side-menu left closed">
   <!-- SVG PLUS -->
   <svg class="svg-plus">
@@ -1106,13 +1106,13 @@
 
     <!-- DROPDOWN ITEM -->
     <li class="dropdown-item">
-      <a href="products.html">{{ dicionary.word_app }}</a>
+      <a href="products.html">{{ dictionary.word_app }}</a>
     </li>
     <!-- /DROPDOWN ITEM -->
 
     <!-- DROPDOWN ITEM -->
     <li class="dropdown-item">
-      <a href="services.html">{{  dicionary.word_theme }}</a>
+      <a href="services.html">{{  dictionary.word_theme }}</a>
     </li>
     <!-- /DROPDOWN ITEM -->
 

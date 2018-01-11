@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<!-- favicon -->
 	<link rel="icon" href="../favicon.ico">
-	<title>{{ dicionary.title }} | Home</title>
+	<title>{{ dictionary.title }} | Home</title>
 </head>
 <body>
 {% import 'macros.twig' as silexCasts %}
@@ -46,37 +46,37 @@
 
 
 <!--(wisley) check login  -->
-	{{silexCasts.header(login,dicionary)}}
+	{{silexCasts.header(login,dictionary)}}
 <!--(wisley) check login  -->
 		</header>
 	</div>
 	<!-- /HEADER -->
 
 	<!-- SIDE MENU -->
-	{{silexCasts.menu_moblie(dicionary)}}
+	{{silexCasts.menu_moblie(dictionary)}}
 	<!-- /SIDE MENU -->
 
 	<!-- SIDE MENU -->
-	{{silexCasts.header_moblie(login,dicionary)}}
+	{{silexCasts.header_moblie(login,dictionary)}}
 	<!-- /SIDE MENU -->
 
 	<!-- MAIN MENU -->
-	{{silexCasts.menu_main(dicionary)}}
+	{{silexCasts.menu_main(dictionary)}}
 	<!-- /MAIN MENU -->
 
 
 	<!-- BANNER -->
 	<div class="banner-wrap">
 		<section class="banner">
-			<h5>{{ dicionary.welcome }}</h5>
-			<h1> {{ dicionary.e_com }}<span>{{ dicionary.addons }}</span></h1>
-			<p>{{ dicionary.subtitle }}</p>
+			<h5>{{ dictionary.welcome }}</h5>
+			<h1> {{ dictionary.e_com }}<span>{{ dictionary.addons }}</span></h1>
+			<p>{{ dictionary.subtitle }}</p>
 			<img src="../images/top_items.png" alt="banner-img">
 
 			<!-- SEARCH WIDGET -->
 			<div class="search-widget">
 				<form class="search-widget-form">
-					<input type="text" name="category_name" placeholder="{{ dicionary.word_search_apps_themes }}">
+					<input type="text" name="category_name" placeholder="{{ dictionary.word_search_apps_themes }}">
 					<label for="categories" class="select-block">
 						<select name="categories" id="categories">
 							<!--
@@ -100,7 +100,7 @@
 						</svg>
 						<!-- /SVG ARROW -->
 					</label>
-					<button class="button medium dark"> {{ dicionary.word_search }} !</button>
+					<button class="button medium dark"> {{ dictionary.word_search }} !</button>
 				</form>
 			</div>
 			<!-- /SEARCH WIDGET -->
@@ -120,8 +120,8 @@
 					<div class="circle dark">
 						<span class="icon-present"></span>
 					</div>
-					<h3>{{ dicionary.word_buy_apps }}</h3>
-					<p>{{ dicionary.description_buy_apps}}.</p>
+					<h3>{{ dictionary.word_buy_apps }}</h3>
+					<p>{{ dictionary.description_buy_apps}}.</p>
 				</div>
 				<!-- /SERVICE ITEM -->
 
@@ -132,8 +132,8 @@
 					<div class="circle dark">
 						<span class="icon-lock"></span>
 					</div>
-					<h3>{{ dicionary.word_secure_transation }}</h3>
-					<p>{{ dicionary.description_secure_transation }}.</p>
+					<h3>{{ dictionary.word_secure_transation }}</h3>
+					<p>{{ dictionary.description_secure_transation }}.</p>
 				</div>
 				<!-- /SERVICE ITEM -->
 
@@ -144,8 +144,8 @@
 					<div class="circle dark">
 						<span class="icon-like"></span>
 					</div>
-					<h3>{{ dicionary.word_apps_control}}</h3>
-					<p>{{ dicionary.description_apps_control }}.</p>
+					<h3>{{ dictionary.word_apps_control}}</h3>
+					<p>{{ dictionary.description_apps_control }}.</p>
 				</div>
 				<!-- /SERVICE ITEM -->
 
@@ -156,8 +156,8 @@
 					<div class="circle dark">
 						<span class="icon-diamond"></span>
 					</div>
-					<h3>{{ dicionary.word_mkp_quality }}</h3>
-					<p>{{ dicionary.description_mkp_quality }}</p>
+					<h3>{{ dictionary.word_mkp_quality }}</h3>
+					<p>{{ dictionary.description_mkp_quality }}</p>
 				</div>
 				<!-- /SERVICE ITEM -->
 			</div>
@@ -170,18 +170,18 @@
 	<!-- PROMO -->
 	<div class="promo-banner dark left">
 		<span class="icon-wallet"></span>
-		<h5>{{ dicionary.desc_promo_partners }} {{ dicionary.title }}!</h5>
-		<h1>{{ dicionary.word_start }} <span>{{ dicionary.word_now }}</span></h1>
-		<a href="#" class="button medium primary">{{ dicionary.word_register }}!</a>
+		<h5>{{ dictionary.desc_promo_partners }} {{ dictionary.title }}!</h5>
+		<h1>{{ dictionary.word_start }} <span>{{ dictionary.word_now }}</span></h1>
+		<a href="#" class="button medium primary">{{ dictionary.word_register }}!</a>
 	</div>
 	<!-- /PROMO -->
 
 	<!-- PROMO -->
 	<div class="promo-banner secondary right">
 		<span class="icon-tag"></span>
-		<h5>{{ dicionary.desc_promo_store }}</h5>
-		<h1>{{dicionary.word_start}} {{ dicionary.word_buying }}</h1>
-		<a href="#" class="button medium dark">{{ dicionary.buy_now }}</a>
+		<h5>{{ dictionary.desc_promo_store }}</h5>
+		<h1>{{dictionary.word_start}} {{ dictionary.word_buying }}</h1>
+		<a href="#" class="button medium dark">{{ dictionary.buy_now }}</a>
 	</div>
 	<!-- /PROMO -->
 
@@ -194,7 +194,7 @@
 			<div class="product-showcase">
 				<!-- HEADLINE -->
 				<div class="headline primary">
-					<h4>{{ dicionary.apps_trends }}</h4>
+					<h4>{{ dictionary.apps_trends }}</h4>
 					<!-- SLIDE CONTROLS -->
 					<div class="slide-control-wrap">
 						<div class="slide-control left">
@@ -221,17 +221,17 @@
 				<div id="pl-1" class="product-list grid column4-wrap owl-carousel">
 					<!-- PRODUCT ITEM -->
 					<!-- /PRODUCT ITEM -->
-					{{silexCasts.apps_themes(apps,0,8,dicionary)}}
+					{{silexCasts.apps_themes(apps,0,8,dictionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 				<!-- PRODUCT LIST -->
 				<div id="pl-2" class="product-list grid column4-wrap owl-carousel">
-					{{silexCasts.apps_themes(apps,8,16,dicionary)}}
+					{{silexCasts.apps_themes(apps,8,16,dictionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 				<!-- PRODUCT LIST -->
 				<div id="pl-3" class="product-list grid column4-wrap owl-carousel">
-					{{silexCasts.apps_themes(apps,16,24,dicionary)}}
+					{{silexCasts.apps_themes(apps,16,24,dictionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 			</div>
@@ -241,7 +241,7 @@
 			<div class="product-showcase">
 				<!-- HEADLINE -->
 				<div class="headline secondary">
-					<h4>{{ dicionary.themes_trends }}</h4>
+					<h4>{{ dictionary.themes_trends }}</h4>
 					<!-- SLIDE CONTROLS -->
 					<div class="slide-control-wrap">
 						<div class="slide-control left">
@@ -266,7 +266,7 @@
 
 				<!-- PRODUCT LIST -->
 				<div id="pl-4" class="product-list grid column4-wrap owl-carousel">
-					{{silexCasts.apps_themes(themes,0,12,dicionary)}}
+					{{silexCasts.apps_themes(themes,0,12,dictionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 			</div>
@@ -307,7 +307,7 @@
 {% endif %}
 
 <!-- footer -->
-{{silexCasts.footer(dicionary)}}
+{{silexCasts.footer(dictionary)}}
 <!-- /footer -->
 
 
