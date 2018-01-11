@@ -23,7 +23,7 @@ $all_category = array(
 );
 // test apps  // Perform db query to obtain this information
 $apps = array(
-  array('name' => 'APP1', 'name_partner' => 'Partner 1', 'value' => 12.03 ,'star_on' => 3, 'star_off' => 2, 'image' => Addons\PATH_APP . '/views/e-com.png' ),
+  array('name' => 'APP1', 'name_partner' => 'Partner 1', 'value' => 12.03 ,'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
   array('name' => 'APP2', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
   array('name' => 'APP3', 'name_partner' => 'Partner 2', 'value' => 15.50 ,'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' )
 );
@@ -55,6 +55,7 @@ switch ($_SERVER['PATH_LANG']) {
     $word_buying = 'Comprar ';
     $apps_trends = 'Tendências de Apps ';
     $themes_trends = 'Tendências de Temas ';
+    $word_reputation = 'Reputação do Desenvolvedor';
     break;
 
   default:
@@ -77,6 +78,7 @@ switch ($_SERVER['PATH_LANG']) {
     $word_buying = 'Buying ';
     $apps_trends = 'Apps Trends ';
     $themes_trends = 'Themes Trends ';
+    $word_reputation = 'Reputation of the Developer';
     break;
 }
 
@@ -114,6 +116,7 @@ echo $twig->render('index.twig', array(
   'word_buying' => $word_buying,
   'apps_trends' => $apps_trends,
   'themes_trends' => $themes_trends,
+  'word_reputation' => $word_reputation,
   // test itens
   'apps' => $apps,
   'themes' => $themes

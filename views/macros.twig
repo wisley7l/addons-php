@@ -91,7 +91,7 @@
   							<a href="author-profile.html">
   								<p class="text-header tiny">{{ app.name_partner }}</p>
   							</a>
-  							<ul class="rating tooltip" title="Author's Reputation">
+  							<ul class="rating tooltip" title="{{ word_reputation }}">
   								{% import 'macros.twig' as silexCasts %}
                   <!-- use macros to render stars -->
   								{{silexCasts.star_on(app.star_on)}}
