@@ -23,6 +23,8 @@
   </li>
   {% endfor %}
 {% endmacro %}
+
+{% import 'macros.twig' as silexCasts %}
 <!-- use macro to print application or theme information -->
 {% macro apps_themes(apps, init, end, dictionary)%}
   {% for app in apps %}
@@ -93,7 +95,7 @@
   								<p class="text-header tiny">{{ app.name_partner }}</p>
   							</a>
   							<ul class="rating tooltip" title="{{ dictionary.word_reputation }}">
-  								{% import 'macros.twig' as silexCasts %}
+
                   <!-- use macros to render stars -->
   								{{silexCasts.star_on(app.star_on)}}
   								{{silexCasts.star_off(app.star_off)}}
