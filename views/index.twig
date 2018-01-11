@@ -12,7 +12,7 @@
 	<title>{{ dicionary.title }} | Home</title>
 </head>
 <body>
-
+{% import 'macros.twig' as silexCasts %}
 	<!-- HEADER -->
 	<div class="header-wrap">
 		<header>
@@ -1289,7 +1289,6 @@
 				<!-- PRODUCT LIST -->
 				<div id="pl-1" class="product-list grid column4-wrap owl-carousel">
 					<!-- PRODUCT ITEM -->
-					{% import 'macros.twig' as silexCasts %}
 					<!-- /PRODUCT ITEM -->
 					{{silexCasts.apps_themes(apps,0,8,dicionary)}}
 				</div>
