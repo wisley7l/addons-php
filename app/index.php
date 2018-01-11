@@ -57,6 +57,7 @@ switch ($_SERVER['PATH_LANG']) {
     $themes_trends = 'Tendências de Temas ';
     $word_reputation = 'Reputação do Desenvolvedor';
     $word_language = 'Selecionar Idioma';
+    $word_search_apps_themes = 'Buscar por Apps ou Temas ...';
     break;
 
   default:
@@ -81,6 +82,7 @@ switch ($_SERVER['PATH_LANG']) {
     $themes_trends = 'Themes Trends ';
     $word_reputation = 'Reputation of the Developer';
     $word_language = 'Select Language';
+    $word_search_apps_themes = 'Search For apps or themes ...';
     break;
 }
 // array dicionary
