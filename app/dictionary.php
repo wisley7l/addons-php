@@ -12,7 +12,7 @@ function get_dictionary()
       $word_app = 'Apps ';
       $word_theme = 'Temas ';
       $word_and = 'e ';
-      $description_mkp = 'é o melhor marketplace de apps e temas para e-commerce, criado para possibilitar que lojistas que não tem grande capacidade de investimento tenham acesso a um layout personalizado de qualidade pelo melhor preço. ';
+      $description_mkp = 'é o melhor marketplace de apps e temas para e-commerce, criado para possibilitar que lojistas que não tem grande capacidade de investimento tenham acesso a um layout personalizado de qualidade pelo melhor preço ';
       $word_register = 'Registar-se ';
       $word_search = 'Buscar ';
       $word_go_item = 'Ir até item';
@@ -36,6 +36,7 @@ function get_dictionary()
       $description_community = 'Confira a avaliação de outros lojistas sobre os apps ou temas comprados. ';
       $word_mkp_quality = 'Personalize ';
       $description_mkp_quality = 'De forma prática e com um preço acessível, deixe sua loja com sua cara! ';
+      $word_how_works = 'Como funciona ';
       break;
 
     default:
@@ -69,6 +70,7 @@ function get_dictionary()
       $description_community = 'Check the evaluation of other shopkeepers about the products purchased ';
       $word_mkp_quality = 'Customize ';
       $description_mkp_quality = 'Practically and affordably, leave your store with your face! ';
+      $word_how_works = 'How it works';
       break;
   }
   // array dictionary
@@ -107,7 +109,8 @@ function get_dictionary()
     'word_community' => $word_community,
     'description_community' => $description_community,
     'description_mkp_quality' => $description_mkp_quality,
-    'word_mkp_quality' => $word_mkp_quality
+    'word_mkp_quality' => $word_mkp_quality,
+    'word_how_works' => $word_how_works
   );
   return $dictionary;
 }
