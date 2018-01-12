@@ -37,6 +37,8 @@ function get_dictionary()
       $word_mkp_quality = 'Personalize ';
       $description_mkp_quality = 'De forma prática e com um preço acessível, deixe sua loja com sua cara! ';
       $word_how_works = 'Como funciona ';
+      $coin = 'R';
+      $mult_coin = 1;
       break;
 
     default:
@@ -71,6 +73,8 @@ function get_dictionary()
       $word_mkp_quality = 'Customize ';
       $description_mkp_quality = 'Practically and affordably, leave your store with your face! ';
       $word_how_works = 'How it works';
+      $coin = 'US';
+      $mult_coin = 3;
       break;
   }
   // array dictionary
@@ -111,7 +115,9 @@ function get_dictionary()
     'description_mkp_quality' => $description_mkp_quality,
     'word_mkp_quality' => $word_mkp_quality,
     'word_how_works' => $word_how_works,
-    'path_images' => $path_images
+    'path_images' => $path_images,
+    'coin' => $coin,
+    'mult_coin' => $mult_coin
   );
   return $dictionary;
 }
