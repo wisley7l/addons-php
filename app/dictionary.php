@@ -28,14 +28,14 @@ function get_dictionary()
       $word_reputation = 'Reputação do Desenvolvedor';
       $word_language = 'Selecionar Idioma';
       $word_search_apps_themes = 'Buscar por Apps ou Temas ...';
-      $word_buy_apps = 'Compre Apps facilmente';
-      $description_buy_apps = '********';
+      $word_buy_apps = 'Compre & Venda facilmente';
+      $description_buy_apps = 'Marketplace para lojistas e desenvolvedores para e-commerce ';
       $word_secure_transation = 'Transação Segura';
-      $description_secure_transation = 'xxxxxxxxxxx';
-      $word_community = 'Community';
+      $description_secure_transation = 'A intermediação do lojista com os desenvolvedores é feita pela ' . $title;
+      $word_community = 'Comunidade';
       $description_community = 'Confira a avaliação de outros lojistas sobre os apps ou temas comprados. ';
-      $word_mkp_quality = 'Marketplace de Qualidade';
-      $description_mkp_quality = '_ _ _ _ _ ';
+      $word_mkp_quality = 'Personalize ';
+      $description_mkp_quality = 'De forma prática e com um preço acessível, deixe sua loja com sua cara! ';
       break;
 
     default:
@@ -61,14 +61,14 @@ function get_dictionary()
       $word_reputation = 'Reputation of the Developer';
       $word_language = 'Select Language';
       $word_search_apps_themes = 'Search For apps or themes ...';
-      $word_buy_apps = 'Buy Apps Easily';
-      $description_buy_apps = '********';
+      $word_buy_apps = 'Buy & Sell easily Apps Easily';
+      $description_buy_apps = 'Marketplace for shopkeepers and developers for e-commerce ';
       $word_secure_transation = 'Secure Transaction';
-      $description_secure_transation = 'xxxxxxxxxxx';
+      $description_secure_transation = 'The intermediation of the shopkeeper with the developers is done by the ' . $title;
       $word_community = 'Community ';
       $description_community = 'Check the evaluation of other shopkeepers about the products purchased ';
-      $word_mkp_quality = 'Quality Marketplace';
-      $description_mkp_quality = '_ _ _ _ _ ';
+      $word_mkp_quality = 'Customize ';
+      $description_mkp_quality = 'Practically and affordably, leave your store with your face! ';
       break;
   }
   // array dictionary
