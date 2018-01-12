@@ -5,5 +5,4 @@ $dictionary = get_dictionary();
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
 echo $twig->render('apps_page.twig', array(
-  'dictionary' => $dictionary
 ));
