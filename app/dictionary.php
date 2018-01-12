@@ -3,7 +3,7 @@ function get_dictionary()
 {
   $title = Addons\MKTP_TITLE;
   $subtitle = Addons\MKTP_SUBTITLE;
-  $path_images = Addons\PATH_DATA . '/views/images/';
+  $path_images = Addons\PATH_DATA . '/views/images/logotipo.png';
   // obs: treat language
   switch ($_SERVER['PATH_LANG']) {
     case 'pt_br':
