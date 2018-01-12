@@ -12,7 +12,7 @@ function get_dictionary()
       $word_app = 'Apps ';
       $word_theme = 'Temas ';
       $word_and = 'e ';
-      $description_mkp = 'é o melhor marketplace de apps e temas para ecommerce ';
+      $description_mkp = 'é o melhor marketplace de apps e temas para e-commerce, criado para possibilitar que lojistas que não tem grande capacidade de investimento tenham acesso a um layout personalizado de qualidade pelo melhor preço. ';
       $word_register = 'Registar-se ';
       $word_search = 'Buscar ';
       $word_go_item = 'Ir até item';
@@ -32,8 +32,8 @@ function get_dictionary()
       $description_buy_apps = '********';
       $word_secure_transation = 'Transação Segura';
       $description_secure_transation = 'xxxxxxxxxxx';
-      $word_apps_control = 'Controle de APPS e Temas';
-      $description_apps_control = '- - - - - ';
+      $word_community = 'Community';
+      $description_community = 'Confira a avaliação de outros lojistas sobre os apps ou temas comprados. ';
       $word_mkp_quality = 'Marketplace de Qualidade';
       $description_mkp_quality = '_ _ _ _ _ ';
       break;
@@ -45,7 +45,7 @@ function get_dictionary()
       $word_app = 'Apps ';
       $word_theme = 'Themes ';
       $word_and = 'and ';
-      $description_mkp = 'is the best app marketplace and themes for ecommerce ';
+      $description_mkp = 'is the best e-commerce theme and app marketplace designed to enable retailers who do not have large investment capacity to access a customized quality layout at the best price. ';
       $word_register = 'Register ';
       $word_search = 'Search ';
       $word_go_item = 'Go to item';
@@ -65,8 +65,8 @@ function get_dictionary()
       $description_buy_apps = '********';
       $word_secure_transation = 'Secure Transaction';
       $description_secure_transation = 'xxxxxxxxxxx';
-      $word_apps_control = 'APPS and Themes Control';
-      $description_apps_control = '- - - - - ';
+      $word_community = 'Community ';
+      $description_community = 'Check the evaluation of other shopkeepers about the products purchased ';
       $word_mkp_quality = 'Quality Marketplace';
       $description_mkp_quality = '_ _ _ _ _ ';
       break;
@@ -104,8 +104,8 @@ function get_dictionary()
     'description_buy_apps' => $description_buy_apps,
     'word_secure_transation' => $word_secure_transation,
     'description_secure_transation' => $description_secure_transation,
-    'word_apps_control' => $word_apps_control,
-    'description_apps_control' => $description_apps_control,
+    'word_community' => $word_community,
+    'description_community' => $description_community,
     'description_mkp_quality' => $description_mkp_quality,
     'word_mkp_quality' => $word_mkp_quality
   );
