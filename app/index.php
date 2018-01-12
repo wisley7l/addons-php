@@ -23,15 +23,15 @@ $all_category = array(
 $dictionary = get_dictionary();
 // test apps  // Perform db query to obtain this information
 $apps = array(
-  array('name' => 'APP1', 'name_partner' => 'Partner 1', 'value' => $dictionary['mult_coin'] / 12.03 ,'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'APP2', 'name_partner' => 'Partner 2', 'value' => $dictionary['mult_coin'] / 15.50 ,'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'APP3', 'name_partner' => 'Partner 2', 'value' => $dictionary['mult_coin'] / 15.50 ,'star_on' => 0, 'star_off' => 0, 'image' => '../images/items/westeros_m.jpg' )
+  array('name' => 'APP1', 'name_partner' => 'Partner 1', 'value' => 12.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
+  array('name' => 'APP2', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
+  array('name' => 'APP3', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 0, 'star_off' => 0, 'image' => '../images/items/westeros_m.jpg' )
 );
 // test themes // Perform db query to obtain this information
 $themes = array(
-  array('name' => 'THEME1', 'name_partner' => 'Partner 4', 'value' => $dictionary['mult_coin'] / 12.03 ,'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME2', 'name_partner' => 'Partner 5', 'value' => $dictionary['mult_coin'] / 15.50 ,'star_on' => 0, 'star_off' => 5, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME3', 'name_partner' => 'Partner 6', 'value' => $dictionary['mult_coin'] / 15.50 ,'star_on' => 5, 'star_off' => 0, 'image' => '../images/items/westeros_m.jpg' )
+  array('name' => 'THEME1', 'name_partner' => 'Partner 4', 'value' => 12.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
+  array('name' => 'THEME2', 'name_partner' => 'Partner 5', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 0, 'star_off' => 5, 'image' => '../images/items/westeros_m.jpg' ),
+  array('name' => 'THEME3', 'name_partner' => 'Partner 6', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 5, 'star_off' => 0, 'image' => '../images/items/westeros_m.jpg' )
 );
 
 // intial twig and send varibles for template
