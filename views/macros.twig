@@ -1403,11 +1403,64 @@
   <!-- /DROPDOWN -->
 </div>
 {% endmacro %}
-<!-- -->
+<!-- macro image logo moblie -->
 {% macro logo_moblie() %}
   <img src="../images/logo_mobile.png" alt="logo-mobile">
 {% endmacro %}
-<!-- -->
+<!-- macro image logo -->
 {% macro logo_main() %}
   <img src="../images/logo.png" alt="logo">
+{% endmacro %}
+
+{% macro all_header(login,dictionary) %}
+  {% import 'macros.twig' as silexCasts %}
+  	<!-- HEADER -->
+  	<div class="header-wrap">
+  		<header>
+  			<!-- LOGO -->
+  			<a href="index">
+  				<figure class="logo">
+  					{{silexCasts.logo_main(dictionary)}}
+  				</figure>
+  			</a>
+  			<!-- /LOGO -->
+
+  			<!-- MOBILE MENU HANDLER -->
+  			<div class="mobile-menu-handler left primary">
+  				<img src="../images/pull-icon.png" alt="pull-icon">
+  			</div>
+  			<!-- /MOBILE MENU HANDLER -->
+
+  			<!-- LOGO MOBILE -->
+  			<a href="index">
+  				<figure class="logo-mobile">
+  					{{ silexCasts.logo_moblie() }}
+  				</figure>
+  			</a>
+  			<!-- /LOGO MOBILE -->
+
+  			<!-- MOBILE ACCOUNT OPTIONS HANDLER -->
+  			<div class="mobile-account-options-handler right secondary">
+  				<span class="icon-user"></span>
+  			</div>
+  			<!-- /MOBILE ACCOUNT OPTIONS HANDLER -->
+
+  <!--(wisley) check login  -->
+  	{{silexCasts.header(login,dictionary)}}
+  <!--(wisley) check login  -->
+  		</header>
+  	</div>
+  	<!-- /HEADER -->
+
+  	<!-- SIDE MENU -->
+  	{{silexCasts.menu_moblie(dictionary)}}
+  	<!-- /SIDE MENU -->
+
+  	<!-- SIDE MENU -->
+  	{{silexCasts.header_moblie(login,dictionary)}}
+  	<!-- /SIDE MENU -->
+
+  	<!-- MAIN MENU -->
+  	{{silexCasts.menu_main(dictionary)}}
+  	<!-- /MAIN MENU -->
 {% endmacro %}
