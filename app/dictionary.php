@@ -83,7 +83,7 @@ function get_dictionary()
     'subtitle' => $subtitle,
     'welcome' => $welcome,
     'e_com' => 'E-Com Plus ',
-    'addons' => 'Adonns ',
+    'addons' => 'Addons ',
     'word_partner' => $Word_partner,
     'word_stores' => $word_stores,
     'word_app' => $word_app,
