@@ -41,6 +41,11 @@ function get_dictionary()
       $mult_coin = 1;
       $word_apps_store = 'Loja de Apps';
       $word_items_found = 'Items encontrados';
+      $word_12_per_page = '12 itens por página';
+      $word_6_per_page = '6 itens por página';
+      $word_price_low_high  = 'Preço (Menor para Maior)';
+      $word_price_high_low = 'Preço (Maior para Menor)';
+
       break;
 
     default:
@@ -79,6 +84,10 @@ function get_dictionary()
       $mult_coin = 3;
       $word_apps_store = 'Apps Stores';
       $word_items_found = 'Items found';
+      $word_12_per_page = '12 Items Per Page';
+      $word_6_per_page = '6 Items Per Page';
+      $word_price_low_high  = 'Price (Low to High)';
+      $word_price_high_low = 'Price (High to Low)';
       break;
   }
   // array dictionary
@@ -123,7 +132,11 @@ function get_dictionary()
     'coin' => $coin,
     'mult_coin' => $mult_coin,
     'word_apps_store' => $word_apps_store,
-    'word_items_found' => $word_items_found
+    'word_items_found' => $word_items_found,
+    'word_12_per_page' => $word_12_per_page,
+    'word_6_per_page' => $word_6_per_page,
+    'word_price_low_high' => $word_price_low_high,
+    'word_price_high_low' => $word_price_high_low
   );
   return $dictionary;
 }
