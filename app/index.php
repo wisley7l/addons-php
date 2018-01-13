@@ -10,6 +10,12 @@ $login = false;
 $total_apps_and_themes = 0;
 $count_stores = 0;
 $count_partners = 0;
+$info_footer = array(
+  'total_apps_and_themes' => $total_apps_and_themes,
+  'count_stores' => $count_stores,
+  'count_partners' => $count_partners,
+  'path_file' => $_SERVER['PATH_FILE']
+);
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
 $all_category = array(
@@ -41,9 +47,7 @@ echo $twig->render('index.twig', array(
   'dictionary' => $dictionary,
   'login' => $login,
   'implemented' => false,
-  'total_apps_and_themes' => $total_apps_and_themes,
-  'count_stores' => $count_stores,
-  'count_partners' => $count_partners,
+  'info_footer' => $info_footer,
     // test itens
   'all_category' => $all_category,
   'apps' => $apps,

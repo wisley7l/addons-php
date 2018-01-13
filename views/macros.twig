@@ -643,7 +643,7 @@
   {% endfor %}
 {% endmacro %}
 <!-- macro for mounting footer -->
-{% macro footer(dictionary, total_apps_and_themes, count_stores, count_partners) %}
+{% macro footer(dictionary, info_footer) %}
   <!-- FOOTER -->
   <footer>
     <!-- FOOTER TOP -->
@@ -658,15 +658,15 @@
           <ul class="company-info-list">
             <li class="company-info-item">
               <span class="icon-present"></span>
-              <p><span>{{ total_apps_and_themes }} &nbsp; </span> {{  dictionary.word_app }} {{ dictionary.word_and }} {{dictionary.word_theme}}</p>
+              <p><span>{{ info_footer.total_apps_and_themes }} &nbsp; </span> {{  dictionary.word_app }} {{ dictionary.word_and }} {{dictionary.word_theme}}</p>
             </li>
             <li class="company-info-item">
               <span class="icon-energy"></span>
-              <p><span>{{ count_stores }} &nbsp; </span> {{ dictionary.word_stores }}</p>
+              <p><span>{{ info_footer.count_stores }} &nbsp; </span> {{ dictionary.word_stores }}</p>
             </li>
             <li class="company-info-item">
               <span class="icon-user"></span>
-              <p><span>{{ count_partners }} &nbsp; </span> {{ dictionary.word_partner }}</p>
+              <p><span>{{ info_footer.count_partners }} &nbsp; </span> {{ dictionary.word_partner }}</p>
             </li>
           </ul>
           <!-- SOCIAL LINKS -->
@@ -793,7 +793,7 @@
           <ul class="link-list">
             <li class="link-item">
               <div class="bullet"></div>
-              <a href="/">English (USA)</a>
+              <a href="/{{info_footer.path_file}}">English (USA)</a>
             </li>
             <li class="link-item">
               <div class="bullet"></div>
