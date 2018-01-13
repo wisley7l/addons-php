@@ -40,6 +40,7 @@ function get_dictionary()
       $coin = 'R';
       $mult_coin = 1;
       $word_apps_store = 'Loja de Apps';
+      $word_items_found = 'Items encontrados';
       break;
 
     default:
@@ -77,6 +78,7 @@ function get_dictionary()
       $coin = 'US';
       $mult_coin = 3;
       $word_apps_store = 'Apps Stores';
+      $word_items_found = 'Items found';
       break;
   }
   // array dictionary
@@ -120,7 +122,8 @@ function get_dictionary()
     'path_images' => $path_images,
     'coin' => $coin,
     'mult_coin' => $mult_coin,
-    'word_apps_store' => $word_apps_store
+    'word_apps_store' => $word_apps_store,
+    'word_items_found' => $word_items_found
   );
   return $dictionary;
 }

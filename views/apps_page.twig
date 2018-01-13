@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<!-- favicon -->
 	<link rel="icon" href="favicon.ico">
-	<title>Emerald Dragon | {{ dictionary.word_apps_store }}</title>
+	<title>{{dictionary.title}} | {{ dictionary.word_apps_store }}</title>
 </head>
 <body>
   {% import 'macros.twig' as silexCasts %}
@@ -33,11 +33,11 @@
 			<div class="content">
 				<!-- HEADLINE -->
 				<div class="headline primary">
-					<h4>12.580 Products Found</h4>
+					<h4>{{ info_page.number_found }} {{ dictionary.word_items_found }}</h4>
 					<!-- VIEW SELECTORS -->
 					<div class="view-selectors">
-						<a href="shop-gridview-v1.html" class="view-selector grid active"></a>
-						<a href="shop-listview-v1.html" class="view-selector list"></a>
+						<!-- a href="shop-gridview-v1.html" class="view-selector grid active"></a>
+						<a href="shop-listview-v1.html" class="view-selector list"></a-->
 					</div>
 					<!-- /VIEW SELECTORS -->
 					<form id="shop_filter_form" name="shop_filter_form">
