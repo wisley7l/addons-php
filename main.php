@@ -1,6 +1,7 @@
 <?php
 function page_404 () {
   http_response_code(404);
+  $_SERVER['PATH_FILE'] = '404_page';
   // @TODO: 404 html page
   exit();
 }
