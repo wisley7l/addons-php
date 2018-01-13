@@ -3,7 +3,7 @@ header('Content-Type: text/html; charset=utf-8');
 
 // TODO: parse twig template
 // variable to check user login
-$login = false;
+$login = true;
 // necessary variables for information
 // number of partners and stores, and total apps and themes
 // obs: query db for informations
