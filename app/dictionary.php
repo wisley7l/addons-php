@@ -39,6 +39,7 @@ function get_dictionary()
       $word_how_works = 'Como funciona ';
       $coin = 'R';
       $mult_coin = 1;
+      $word_apps_store = 'Loja de Apps';
       break;
 
     default:
@@ -75,6 +76,7 @@ function get_dictionary()
       $word_how_works = 'How it works';
       $coin = 'US';
       $mult_coin = 3;
+      $word_apps_store = 'Apps Stores';
       break;
   }
   // array dictionary
@@ -117,7 +119,8 @@ function get_dictionary()
     'word_how_works' => $word_how_works,
     'path_images' => $path_images,
     'coin' => $coin,
-    'mult_coin' => $mult_coin
+    'mult_coin' => $mult_coin,
+    'word_apps_store' => $word_apps_store
   );
   return $dictionary;
 }
