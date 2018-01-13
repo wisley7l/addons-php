@@ -19,11 +19,9 @@ $info_footer = array(
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
 $all_category = array(
-  'All Category',
-  'c1',
-  'c2',
-  'c3',
-  'c4'
+  array('name' => 'All category' , 'value' => '0' ),
+  array('name' => 'Category 1' , 'value' => '1' ),
+  array('name' => 'Category 2' , 'value' => '2' )  
 );
 // get dictionary
 $dictionary = get_dictionary();

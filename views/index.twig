@@ -42,7 +42,7 @@
 							<option value="8">Social Covers</option>
 							-->
 							{% for category in all_category %}
-							<option>{{ category }}</option>
+							<option value = "{{category.value}}">{{ category.name }}</option>
 							{% endfor %}
 						</select>
 						<!-- SVG ARROW -->
