@@ -20,8 +20,12 @@
 	<!-- SECTION HEADLINE -->
 	<div class="section-headline-wrap">
 		<div class="section-headline">
+			{% if info_page.app_store == true %}
 			<h2>{{ dictionary.word_apps_store }}</h2>
 			<!--p>Home<span class="separator">/</span>Shop V1<span class="separator">/</span><span class="current-section">Illustration</span></p-->
+			{% else %}
+			<h2>{{ dictionary.word_themes_store }}</h2>
+			{% endif %}
 		</div>
 	</div>
 	<!-- /SECTION HEADLINE -->
@@ -73,7 +77,7 @@
 					<!-- PRODUCT LIST -->
 					<div class="product-list grid column3-4-wrap">
 						<!-- PRODUCT ITEM -->
-						{{silexCasts.apps_themes(apps,0,12,dictionary)}}
+						{{silexCasts.apps_themes(apps_themes,0,12,dictionary)}}
 						<!-- /PRODUCT ITEM -->
 
 					</div>

@@ -17,6 +17,7 @@ $info_footer = array(
 $number_found = 0;
 //info search
 $info_page = array(
+  'app_store' => false,
   'number_found' => $number_found
 );
 // query apps in db
@@ -52,5 +53,5 @@ echo $twig->render('apps-themes-page.twig', array(
   'info_footer' => $info_footer,
   'info_page' => $info_page,
   // test apps
-  'apps' => $apps
+  'apps_themes' => $apps
 ));

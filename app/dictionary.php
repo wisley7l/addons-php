@@ -45,6 +45,7 @@ function get_dictionary()
       $word_6_per_page = '6 itens por página';
       $word_price_low_high  = 'Preço (Menor para Maior)';
       $word_price_high_low = 'Preço (Maior para Menor)';
+      $word_themes_store = 'Loja de Temas';
 
       break;
 
@@ -88,6 +89,7 @@ function get_dictionary()
       $word_6_per_page = '6 Items Per Page';
       $word_price_low_high  = 'Price (Low to High)';
       $word_price_high_low = 'Price (High to Low)';
+      $word_themes_store = 'Themes Store';
       break;
   }
   // array dictionary
@@ -136,7 +138,8 @@ function get_dictionary()
     'word_12_per_page' => $word_12_per_page,
     'word_6_per_page' => $word_6_per_page,
     'word_price_low_high' => $word_price_low_high,
-    'word_price_high_low' => $word_price_high_low
+    'word_price_high_low' => $word_price_high_low,
+    'word_themes_store' => $word_themes_store
   );
   return $dictionary;
 }
