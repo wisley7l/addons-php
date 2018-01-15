@@ -1,7 +1,7 @@
 {% macro filter_segment(dictionary,segment) %}
   <ul class="dropdown hover-effect">
     {% for segments in segment %}
-    <li class="dropdown-item" '{{segments.active}}'> <!-- is need treat active -->
+    <li class="dropdown-item {{segments.active}}" > <!-- is need treat active -->
       <a href="{{segments.href}}">{{segments.name}}</a>
     </li>
     {% endfor %}
