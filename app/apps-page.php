@@ -17,7 +17,7 @@ $info_footer = array(
 $number_found = 0;
 //info search
 $info_page = array(
-  'app_store' => false,
+  'app_store' => true,
   'number_found' => $number_found
 );
 // query apps in db
