@@ -1089,7 +1089,7 @@
   <!-- /USER AVATAR -->
 
   <!-- USER INFORMATION -->
-  <p class="user-name">{{ user.name_user }} - {{ user.id_user }}</p>
+  <p class="user-name">{{ user.id_user }} - {{ user.name_user }} </p>
   <!-- SVG ARROW -->
   <svg class="svg-arrow">
     <use xlink:href="#svg-arrow"></use>
@@ -1138,7 +1138,7 @@
   <!-- /USER AVATAR -->
 
   <!-- USER INFORMATION -->
-  <p class="user-name">{{user.name}}</p>
+  <p class="user-name">{{ user.id_user }} - {{ user.name_user }} </p>
   <p class="user-money">{{dictionary.coin}}$ {{ user.credits | number_format(2, '.', ',') }}</p>
   <!-- /USER INFORMATION -->
 </div>

@@ -1,5 +1,7 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
+// get dictionary
+$dictionary = get_dictionary();
 
 // TODO: parse twig template
 // variable to check user login
@@ -31,8 +33,7 @@ $all_category = array(
   array('name' => 'Category 1' , 'value' => '1' ),
   array('name' => 'Category 2' , 'value' => '2' )
 );
-// get dictionary
-$dictionary = get_dictionary();
+
 // test apps  // Perform db query to obtain this information
 $apps = array(
   array('name' => 'APP1', 'name_partner' => 'Partner 1', 'value' => 12.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
