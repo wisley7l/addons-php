@@ -19,7 +19,7 @@ $info_footer = array(
 //query user
 //test user
 $user_login = array(
-  'name' => 'E-com User ',
+  'name' => 'Wisley ',
   'credits' => 10.0 / $dictionary['mult_coin'] ,
   'id' => 1
 );
