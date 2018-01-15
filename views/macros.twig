@@ -868,6 +868,7 @@
 {% endmacro %}
 <!-- macro to mount the mobile header -->
 {% macro header_moblie(login,dictionary)%}
+{% import 'macros.twig' as silexCasts %}
   <div id="account-options-menu" class="side-menu right closed">
     <!-- SVG PLUS -->
     <svg class="svg-plus">
@@ -878,114 +879,11 @@
       <!-- SIDE MENU HEADER -->
       <div class="side-menu-header">
         <!-- USER QUICKVIEW -->
-        <div class="user-quickview">
-          <!-- USER AVATAR -->
-          <a href="author-profile.html">
-          <div class="outer-ring">
-            <div class="inner-ring"></div>
-            <figure class="user-avatar">
-              <img src="../images/avatars/avatar_01.jpg" alt="avatar">
-            </figure>
-          </div>
-          </a>
-          <!-- /USER AVATAR -->
-
-          <!-- USER INFORMATION -->
-          <p class="user-name">Johnny Fisher</p>
-          <p class="user-money">$745.00</p>
-          <!-- /USER INFORMATION -->
-        </div>
+          {{silexCasts.user_quickview_moblie(dictionary,user)}}
         <!-- /USER QUICKVIEW -->
       </div>
       <!-- /SIDE MENU HEADER -->
-
-      <!-- SIDE MENU TITLE -->
-      <p class="side-menu-title">Your Account</p>
-      <!-- /SIDE MENU TITLE -->
-
-      <!-- DROPDOWN -->
-      <ul class="dropdown dark hover-effect">
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="dashboard-notifications.html">Notifications</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="dashboard-inbox.html">Messages</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="cart.html">Your Cart</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="favourites.html">Favourites</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-      </ul>
-      <!-- /DROPDOWN -->
-
-      <!-- SIDE MENU TITLE -->
-      <p class="side-menu-title">Dashboard</p>
-      <!-- /SIDE MENU TITLE -->
-
-      <!-- DROPDOWN -->
-      <ul class="dropdown dark hover-effect">
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="author-profile.html">Profile Page</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="dashboard-settings.html">Account Settings</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="dashboard-purchases.html">Your Purchases</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="dashboard-statement.html">Sales Statement</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="dashboard-buycredits.html">Buy Credits</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="dashboard-withdrawals.html">Withdrawals</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="dashboard-uploaditem.html">Upload Item</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-
-        <!-- DROPDOWN ITEM -->
-        <li class="dropdown-item">
-          <a href="dashboard-manageitems.html">Manage Items</a>
-        </li>
-        <!-- /DROPDOWN ITEM -->
-      </ul>
-      <!-- /DROPDOWN -->
+      {{silexCasts.account_info_moblie(dictionary,user)}}
 
       <a href="#" class="button medium secondary">Logout</a>
       <a href="#" class="button medium primary">Become a Seller</a>
@@ -1231,6 +1129,25 @@
   <!-- /DROPDOWN -->
 </div>
 {% endmacro %}
+{% macro user_quickview_moblie(dictionary,user) %}
+  <div class="user-quickview">
+  <!-- USER AVATAR -->
+  <a href="author-profile.html">
+  <div class="outer-ring">
+    <div class="inner-ring"></div>
+    <figure class="user-avatar">
+      <img src="../images/avatars/avatar_01.jpg" alt="avatar">
+    </figure>
+  </div>
+  </a>
+  <!-- /USER AVATAR -->
+
+  <!-- USER INFORMATION -->
+  <p class="user-name">Johnny Fisher</p>
+  <p class="user-money">$745.00</p>
+  <!-- /USER INFORMATION -->
+</div>
+{% endmacro %}
 
 {% macro account_info(dictionary,user) %}
   <div class="account-information">
@@ -1472,4 +1389,94 @@
     <!-- /DROPDOWN NOTIFICATIONS -->
   </div>
 </div>
+{% endmacro %}
+
+{% macro account_info_moblie(dictionary,user) %}
+  <!-- SIDE MENU TITLE -->
+  <p class="side-menu-title">Your Account</p>
+  <!-- /SIDE MENU TITLE -->
+
+  <!-- DROPDOWN -->
+  <ul class="dropdown dark hover-effect">
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="dashboard-notifications.html">Notifications</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="dashboard-inbox.html">Messages</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="cart.html">Your Cart</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="favourites.html">Favourites</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+  </ul>
+  <!-- /DROPDOWN -->
+
+  <!-- SIDE MENU TITLE -->
+  <p class="side-menu-title">Dashboard</p>
+  <!-- /SIDE MENU TITLE -->
+
+  <!-- DROPDOWN -->
+  <ul class="dropdown dark hover-effect">
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="author-profile.html">Profile Page</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="dashboard-settings.html">Account Settings</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="dashboard-purchases.html">Your Purchases</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="dashboard-statement.html">Sales Statement</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="dashboard-buycredits.html">Buy Credits</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="dashboard-withdrawals.html">Withdrawals</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="dashboard-uploaditem.html">Upload Item</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a href="dashboard-manageitems.html">Manage Items</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+  </ul>
+  <!-- /DROPDOWN -->
 {% endmacro %}
