@@ -46,7 +46,12 @@ function get_dictionary()
       $word_price_low_high  = 'Preço (Menor para Maior)';
       $word_price_high_low = 'Preço (Maior para Menor)';
       $word_themes_store = 'Loja de Temas';
-
+      $word_profile_page = 'Perfil ';
+      $word_account_settings = 'Configurações de conta';
+      $Word_sales_statment = 'Histórico de vendas';
+      $word_withdrawals = 'Hitórico de Saques ';
+      $word_manage_itens = 'Gerenciar itens';
+      $word_upload_item = 'Envio de item ';
       break;
 
     default:
@@ -90,6 +95,12 @@ function get_dictionary()
       $word_price_low_high  = 'Price (Low to High)';
       $word_price_high_low = 'Price (High to Low)';
       $word_themes_store = 'Themes Store';
+      $word_profile_page = 'Profile page ';
+      $word_account_settings = 'Account Settings';
+      $Word_sales_statment = 'Sales Statment ';
+      $word_withdrawals = 'Withdrawls ';
+      $word_manage_itens = 'Manage itens';
+      $word_upload_item = 'Upload item';
       break;
   }
   // array dictionary
@@ -139,7 +150,13 @@ function get_dictionary()
     'word_6_per_page' => $word_6_per_page,
     'word_price_low_high' => $word_price_low_high,
     'word_price_high_low' => $word_price_high_low,
-    'word_themes_store' => $word_themes_store
+    'word_themes_store' => $word_themes_store,
+    'word_profile_page' => $word_profile_page,
+    'word_account_settings' => $word_account_settings,
+    'Word_sales_statment' => $Word_sales_statment,
+    'word_withdrawals' => $word_withdrawals,
+    'word_manage_itens' => $word_manage_itens,
+    'word_upload_item' => $word_upload_item
   );
   return $dictionary;
 }

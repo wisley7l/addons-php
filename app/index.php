@@ -16,12 +16,20 @@ $info_footer = array(
   'count_partners' => $count_partners,
   'path_file' => $_SERVER['PATH_FILE']
 );
+//query user
+//test user
+$user_login = array(
+  'name' => 'E-com User ',
+  'credits' => 0.0 / $dictionary['mult_coin'] ,
+  'id' => 1
+);
+
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
 $all_category = array(
   array('name' => 'All category' , 'value' => '0' ),
   array('name' => 'Category 1' , 'value' => '1' ),
-  array('name' => 'Category 2' , 'value' => '2' )  
+  array('name' => 'Category 2' , 'value' => '2' )
 );
 // get dictionary
 $dictionary = get_dictionary();
@@ -49,5 +57,6 @@ echo $twig->render('index.twig', array(
     // test itens
   'all_category' => $all_category,
   'apps' => $apps,
-  'themes' => $themes
+  'themes' => $themes,
+  'user' => $user_login
 ));
