@@ -22,8 +22,8 @@ $info_page = array(
 );
 // query filter itens
 $filter_segment = array(
-  array('name' => 'Test 1', 'href' => '#s1', 'active' => 'active'),
-  array('name' => 'Test 2', 'href' => '#s2', 'active' => '' )
+  array('name' => 'Test 1', 'href' => '#', 'active' => 'active'),
+  array('name' => 'Test 2', 'href' => '#', 'active' => '' )
 );
 // query apps in db
 $apps = array(
