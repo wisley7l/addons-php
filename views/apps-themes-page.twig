@@ -13,6 +13,7 @@
 </head>
 <body>
   {% import 'macros.twig' as silexCasts %}
+	{% import 'macro-app-theme-page.twig' as silexCasts1 %}
 	<!-- HEADER -->
   {{silexCasts.all_header(login,dictionary)}}
 	<!-- /HEADER -->
@@ -101,23 +102,7 @@
 			<!-- SIDEBAR -->
 			<div class="sidebar">
 				<!-- DROPDOWN -->
-				<ul class="dropdown hover-effect">
-					<li class="dropdown-item">
-						<a href="#">Digital Graphics</a>
-					</li>
-					<li class="dropdown-item active">
-						<a href="#">Illustration</a>
-					</li>
-					<li class="dropdown-item">
-						<a href="#">Web Design</a>
-					</li>
-					<li class="dropdown-item">
-						<a href="#">Stock Photography</a>
-					</li>
-					<li class="dropdown-item">
-						<a href="#">Code and Plugins</a>
-					</li>
-				</ul>
+				{{silexCasts1.filter_type(dictionary)}}
 				<!-- /DROPDOWN -->
 
 				<!-- SIDEBAR ITEM -->
