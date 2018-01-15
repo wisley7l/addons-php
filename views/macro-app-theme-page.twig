@@ -1,21 +1,11 @@
-{% macro filter_segment(dictionary) %}
+{% macro filter_segment(dictionary,segment) %}
   <ul class="dropdown hover-effect">
-  <li class="dropdown-item">
-    <a href="#">Teste 1</a>
-  </li>
-  <li class="dropdown-item active">
-    <a href="#">Teste 2</a>
-  </li>
-  <li class="dropdown-item">
-    <a href="#">Teste 3</a>
-  </li>
-  <li class="dropdown-item">
-    <a href="#">Teste 4</a>
-  </li>
-  <li class="dropdown-item">
-    <a href="#">Teste 5</a>
-  </li>
-</ul>
+    {% for segments in segment %}
+    <li class="dropdown-item">
+      <a href="{{segments.href}}">{{segments.name}}</a>
+    </li>
+    {% endfor %}
+  </ul>
 {% endmacro %}
 
 {% macro filter_item(dictionary) %}
@@ -80,7 +70,7 @@
 </div>
 {% endmacro %}
 
-{% macro filter_type(dictionary) %}
+{% macro filter_category(dictionary,all_category) %}
   <div class="sidebar-item">
   <h4>File Types</h4>
   <hr class="line-separator">

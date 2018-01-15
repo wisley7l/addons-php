@@ -20,6 +20,11 @@ $info_page = array(
   'app_store' => true,
   'number_found' => $number_found
 );
+// query filter itens
+$filter_segment = array(
+  array('name' => 'test 1', 'href' => '#' ),
+  array('name' => 'test 2', 'href' => '#' )
+);
 // query apps in db
 $apps = array(
   array('name' => 'APP1', 'name_partner' => 'Partner 1', 'value' => 12.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
@@ -52,6 +57,7 @@ echo $twig->render('apps-themes-page.twig', array(
   'login' => $login,
   'info_footer' => $info_footer,
   'info_page' => $info_page,
+  'segment' => $filter_segment,
   // test apps
   'apps_themes' => $apps
 ));
