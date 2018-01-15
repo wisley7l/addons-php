@@ -19,9 +19,9 @@ $info_footer = array(
 //query user
 //test user
 $user_login = array(
-  'name' => 'Wisley ',
+  'name_user' => 'Wisley ',
   'credits' => 10.0 / $dictionary['mult_coin'] ,
-  'id' => 1
+  'id_user' => 1
 );
 
 // obs: Search all categories in db

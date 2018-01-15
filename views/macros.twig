@@ -829,7 +829,7 @@
   <!-- /FOOTER -->
 {% endmacro %}
 <!-- macro to mount the main header -->
-{% macro header(login,dictionary) %}
+{% macro header(login,dictionary,user) %}
   {% import 'macros.twig' as silexCasts %}
   {% if login == true %}
         <!-- USER BOARD -->
@@ -867,7 +867,7 @@
   {% endif %}
 {% endmacro %}
 <!-- macro to mount the mobile header -->
-{% macro header_moblie(login,dictionary)%}
+{% macro header_moblie(login,dictionary,user)%}
   {% import 'macros.twig' as silexCasts %}
   <div id="account-options-menu" class="side-menu right closed">
     <!-- SVG PLUS -->
@@ -1022,7 +1022,7 @@
   <img src="../images/logo.png" alt="logo">
 {% endmacro %}
 <!-- macro image logo -->
-{% macro all_header(login,dictionary) %}
+{% macro all_header(login,dictionary,user) %}
   {% import 'macros.twig' as silexCasts %}
   	<!-- HEADER -->
   	<div class="header-wrap">
@@ -1089,7 +1089,7 @@
   <!-- /USER AVATAR -->
 
   <!-- USER INFORMATION -->
-  <p class="user-name">{{ user.name }} - {{ user.id }}</p>
+  <p class="user-name">{{ user.name_user }} - {{ user.id_user }}</p>
   <!-- SVG ARROW -->
   <svg class="svg-arrow">
     <use xlink:href="#svg-arrow"></use>
