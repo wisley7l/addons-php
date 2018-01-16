@@ -24,7 +24,7 @@ $user_login = array(
   'name_user' => 'Wisley ',
   'credits' => 10.0 / $dictionary['mult_coin'] ,
   'id_user' => 1,
-  'is_store' => false
+  'is_store' => true
 );
 
 // obs: Search all categories in db
