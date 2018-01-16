@@ -5,7 +5,7 @@ $dictionary = get_dictionary();
 
 // TODO: parse twig template
 // variable to check user login
-$login = true;
+$login = false;
 // necessary variables for information
 // number of partners and stores, and total apps and themes
 // obs: query db for informations
@@ -23,7 +23,8 @@ $info_footer = array(
 $user_login = array(
   'name_user' => 'Wisley ',
   'credits' => 10.0 / $dictionary['mult_coin'] ,
-  'id_user' => 1
+  'id_user' => 1,
+  'is_store' => false
 );
 
 // obs: Search all categories in db
