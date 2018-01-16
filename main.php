@@ -54,6 +54,6 @@ if (file_exists(__DIR__ . '/config/config.php')) {
 // load composer packages
 require __DIR__ . '/composer/vendor/autoload.php';
 // load dictionary
-require __DIR__ . '/app/dictionary.php';
+require __DIR__ . '/lib/dictionary.php';
 // app script
 require $filename;
