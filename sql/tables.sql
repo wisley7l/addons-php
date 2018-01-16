@@ -206,34 +206,22 @@ CREATE TABLE IF NOT EXISTS `relationship_category_themes` (
   FOREIGN KEY (`category_themes_id`) REFERENCES `category_themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `transaction_apps` (
+CREATE TABLE IF NOT EXISTS `historic_transaction` (
   `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `partner_id` SMALLINT UNSIGNED NOT NULL,
+  `partner_id` SMALLINT UNSIGNED NULL,
   `store_id` MEDIUMINT UNSIGNED NULL,
-  `app_id` MEDIUMINT UNSIGNED NOT NULL,
+  `app_id` MEDIUMINT UNSIGNED NULL,
+  `theme_id` MEDIUMINT UNSIGNED NULL,
   `transaction_code` VARCHAR(255) NULL,
   `notes` TEXT NULL,
+  `description` VARCHAR (255) NULL,
   `payment_value` MEDIUMINT NOT NULL DEFAULT 0,
   `date_transaction` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  INDEX (`partner_id`, `store_id`, `app_id`),
+  INDEX (`partner_id`, `store_id`, `app_id`, `theme_id`),
   FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`),
+  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`),
   FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`)
-) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
-
-CREATE TABLE IF NOT EXISTS `transaction_themes` (
-  `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `partner_id` SMALLINT UNSIGNED NOT NULL,
-  `store_id` MEDIUMINT UNSIGNED NOT NULL,
-  `theme_id` MEDIUMINT UNSIGNED NOT NULL,
-  `transaction_code` VARCHAR(255) NULL,
-  `notes` TEXT NULL,
-  `payment_value` MEDIUMINT NOT NULL DEFAULT 0,
-  `date_transaction` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  INDEX (`partner_id`, `store_id`, `theme_id`),
-  FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`),
-  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`)
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `favorites_apps` (
@@ -260,4 +248,9 @@ CREATE TABLE IF NOT EXISTS `historic_withdrawal` (
   PRIMARY KEY (`id`),
   INDEX (`partner_id`),
   FOREIGN KEY (`partner_id`) REFERENCES `partners` (`id`)
-) ENGINE=InnoDB CHARACTER SET uft8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
+
+CREATE TABLE IF NOT EXISTS `store` (
+  `store_id` MEDIUMINT UNSIGNED NOT NULL,
+  `credits` MEDIUMINT NOT NULL DEFAULT 0,
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;

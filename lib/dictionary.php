@@ -14,6 +14,7 @@ function get_dictionary () {
   $description_community = 'Confira a avaliação de outros lojistas sobre os apps ou temas comprados. ';
   $word_mkp_quality = 'Personalize ';
   $description_mkp_quality = 'De forma prática e com um preço acessível, deixe sua loja com sua cara! ';
+  $mult_coin = 1;
   */
   // obs: treat language
   switch ($_SERVER['PATH_LANG']) {
