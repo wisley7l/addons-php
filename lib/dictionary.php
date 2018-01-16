@@ -1,6 +1,5 @@
 <?php
-function get_dictionary()
-{
+function get_dictionary () {
   $title = Addons\MKTP_TITLE;
   $subtitle = Addons\MKTP_SUBTITLE;
   // obs: treat language
