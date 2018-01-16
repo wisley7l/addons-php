@@ -62,3 +62,7 @@ echo $twig->render('index.twig', array(
   'themes' => $themes,
   'user' => $user_login
 ));
+if (empty($_POST)) {
+   header("Location: test-server.php"); 
+   exit;
+}
