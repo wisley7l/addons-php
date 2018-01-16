@@ -1166,13 +1166,6 @@
     <!-- DROPDOWN -->
     <ul class="dropdown small hover-effect closed">
       <li class="dropdown-item">
-        <div class="dropdown-triangle"></div>
-        <a href="author-profile.html">{{dictionary.word_profile_page}}</a>
-      </li>
-      <li class="dropdown-item">
-        <a href="account-settings-store">{{dictionary.word_account_settings}}</a>
-      </li>
-      <li class="dropdown-item">
         <a href="#favorite">{{dictionary.word_favorate}}</a>
       </li>
       <li class="dropdown-item">
@@ -1446,82 +1439,105 @@
 {% endmacro %}
 <!-- macro account info for moblie  -->
 {% macro account_info_moblie(dictionary,user) %}
- {#comments
-  <!-- SIDE MENU TITLE -->
-  <p class="side-menu-title">Your Account</p>
-  <!-- /SIDE MENU TITLE -->
+  {% if user.is_store == false %}
+   {#comments
+    <!-- SIDE MENU TITLE -->
+    <p class="side-menu-title">Your Account</p>
+    <!-- /SIDE MENU TITLE -->
 
-  <!-- DROPDOWN -->
-  <ul class="dropdown dark hover-effect">
-    <!-- DROPDOWN ITEM -->
-    <li class="dropdown-item">
-      <a href="dashboard-notifications.html">Notifications</a>
-    </li>
-    <!-- /DROPDOWN ITEM -->
+    <!-- DROPDOWN -->
+    <ul class="dropdown dark hover-effect">
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="dashboard-notifications.html">Notifications</a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
 
-    <!-- DROPDOWN ITEM -->
-    <li class="dropdown-item">
-      <a href="dashboard-inbox.html">Messages</a>
-    </li>
-    <!-- /DROPDOWN ITEM -->
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="dashboard-inbox.html">Messages</a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
 
-    <!-- DROPDOWN ITEM -->
-    <li class="dropdown-item">
-      <a href="cart.html">Your Cart</a>
-    </li>
-    <!-- /DROPDOWN ITEM -->
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="cart.html">Your Cart</a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
 
-    <!-- DROPDOWN ITEM -->
-    <li class="dropdown-item">
-      <a href="favourites.html">Favourites</a>
-    </li>
-    <!-- /DROPDOWN ITEM -->
-  </ul>
-  <!-- /DROPDOWN -->
-  end comments #}
-  <!-- SIDE MENU TITLE -->
-  <p class="side-menu-title">Dashboard</p>
-  <!-- /SIDE MENU TITLE -->
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="favourites.html">Favourites</a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
+    </ul>
+    <!-- /DROPDOWN -->
+    end comments #}
+    <!-- SIDE MENU TITLE -->
+    <p class="side-menu-title">Dashboard</p>
+    <!-- /SIDE MENU TITLE -->
 
-  <!-- DROPDOWN -->
-  <ul class="dropdown dark hover-effect">
-    <!-- DROPDOWN ITEM -->
-    <li class="dropdown-item">
-      <a href="author-profile.html">{{dictionary.word_profile_page}}</a>
-    </li>
-    <!-- /DROPDOWN ITEM -->
+    <!-- DROPDOWN -->
+    <ul class="dropdown dark hover-effect">
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="author-profile.html">{{dictionary.word_profile_page}}</a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
 
-    <!-- DROPDOWN ITEM -->
-    <li class="dropdown-item">
-      <a href="dashboard-settings.html">{{dictionary.word_account_settings}}</a>
-    </li>
-    <!-- /DROPDOWN ITEM -->
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="dashboard-settings.html">{{dictionary.word_account_settings}}</a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
 
-    <!-- DROPDOWN ITEM -->
-    <li class="dropdown-item">
-      <a href="dashboard-statement.html">{{dictionary.Word_sales_statment}}</a>
-    </li>
-    <!-- /DROPDOWN ITEM -->
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="dashboard-statement.html">{{dictionary.Word_sales_statment}}</a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
 
-    <!-- DROPDOWN ITEM -->
-    <li class="dropdown-item">
-      <a href="dashboard-withdrawals.html">{{dictionary.word_withdrawals}}</a>
-    </li>
-    <!-- /DROPDOWN ITEM -->
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="dashboard-withdrawals.html">{{dictionary.word_withdrawals}}</a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
 
-    <!-- DROPDOWN ITEM -->
-    <li class="dropdown-item">
-      <a href="dashboard-uploaditem.html">{{dictionary.word_upload_item}}</a>
-    </li>
-    <!-- /DROPDOWN ITEM -->
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="dashboard-uploaditem.html">{{dictionary.word_upload_item}}</a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
+
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="dashboard-manageitems.html">{{dictionary.word_manage_itens}}</a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
+    </ul>
+    <!-- /DROPDOWN -->
+  {% else %}
+    <!-- SIDE MENU TITLE -->
+    <p class="side-menu-title">Dashboard</p>
+    <!-- /SIDE MENU TITLE -->
+
+    <!-- DROPDOWN -->
+    <ul class="dropdown dark hover-effect">
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="author-profile.html">{{dictionary.word_profile_page}}</a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
 
     <!-- DROPDOWN ITEM -->
     <li class="dropdown-item">
       <a href="dashboard-manageitems.html">{{dictionary.word_manage_itens}}</a>
     </li>
     <!-- /DROPDOWN ITEM -->
-  </ul>
-  <!-- /DROPDOWN -->
+    </ul>
+    <!-- /DROPDOWN -->
+
+  {% endif %}
 {% endmacro %}
 <!-- macro login -->
 {% macro login(dictionary) %}

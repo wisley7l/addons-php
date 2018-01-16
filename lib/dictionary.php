@@ -92,7 +92,7 @@ function get_dictionary () {
       $buy_now = 'Buy Now ';
       $word_buying = 'Buying ';
       $apps_trends = 'Apps Trends ';
-      $themes_trends = 'Themes Trends ';
+      $themes_trends = 'Themes Trends ';  
       $word_reputation = 'Reputation of the Developer';
       $word_language = 'Select Language';
       $word_search_apps_themes = 'Search For apps or themes ...';
@@ -126,7 +126,7 @@ function get_dictionary () {
       $word_forgot_pssw = 'Forgot your password?';
       $word_remember_user = 'Remember username and password';
       $word_click_here = 'Click here!';
-      $word_transaction_history = 'transaction history';
+      $word_transaction_history = 'Transaction History';
       $word_favorate = 'Favorites';
       break;
   }
