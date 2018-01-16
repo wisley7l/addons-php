@@ -3,6 +3,18 @@ function get_dictionary () {
   $title = Addons\MKTP_TITLE;
   $subtitle = Addons\MKTP_SUBTITLE;
   $description_mkp = Addons\MKTP_DESC_FOOTER;
+  /* to move config.php
+  $desc_promo_partners = 'Divulgue sua APP ou tema aqui com ';
+  $desc_promo_store = 'Encontre os melhores apps e tema para sua ecommerce ';
+  $word_buy_apps = 'Compre & Venda facilmente';
+  $description_buy_apps = 'Marketplace para lojistas e desenvolvedores para e-commerce ';
+  $word_secure_transation = 'Transação Segura';
+  $description_secure_transation = 'A intermediação do lojista com os desenvolvedores é feita pela ' . $title;
+  $word_community = 'Comunidade';
+  $description_community = 'Confira a avaliação de outros lojistas sobre os apps ou temas comprados. ';
+  $word_mkp_quality = 'Personalize ';
+  $description_mkp_quality = 'De forma prática e com um preço acessível, deixe sua loja com sua cara! ';
+  */
   // obs: treat language
   switch ($_SERVER['PATH_LANG']) {
     case 'pt_br':
@@ -51,6 +63,12 @@ function get_dictionary () {
       $word_withdrawals = 'Hitórico de Saques ';
       $word_manage_itens = 'Gerenciar itens';
       $word_upload_item = 'Envio de item ';
+      $word_login_account = 'Faça login na sua conta';
+      $description_login = 'Entre agora para sua conta e comece a divulgar seus APP e Temas!';
+      $word_password = 'Senha ';
+      $word_forgot_pssw = 'Esqueceu sua senha?';
+      $word_remember_user = ' Lembre-se de nome de usuário e senha';
+      $word_click_here = 'Clique aqui!';
       break;
 
     default:
@@ -99,6 +117,12 @@ function get_dictionary () {
       $word_withdrawals = 'Withdrawls ';
       $word_manage_itens = 'Manage itens';
       $word_upload_item = 'Upload item';
+      $word_login_account = 'Login to your Account';
+      $description_login = 'Log in now to your account and start releasing your APP and Themes!';
+      $word_password = 'Password';
+      $word_forgot_pssw = 'Forgot your password?';
+      $word_remember_user = 'Remember username and password';
+      $word_click_here = 'Click here!';
       break;
   }
   // array dictionary
@@ -154,7 +178,12 @@ function get_dictionary () {
     'Word_sales_statment' => $Word_sales_statment,
     'word_withdrawals' => $word_withdrawals,
     'word_manage_itens' => $word_manage_itens,
-    'word_upload_item' => $word_upload_item
+    'word_upload_item' => $word_upload_item,
+    'word_login_account' => $word_login_account,
+    'description_login' => $description_login,
+    'word_password' => $word_password,
+    'word_forgot_pssw' => $word_forgot_pssw,
+    'word_remember_user' => $word_remember_user
   );
   return $dictionary;
 }

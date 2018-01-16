@@ -1480,8 +1480,8 @@
 
   <!-- FORM POPUP HEADLINE -->
   <div class="form-popup-headline secondary">
-    <h2>Login to your Account</h2>
-    <p>Enter now to your account and start buying and selling!</p>
+    <h2>{{dictionary.word_login_account}}</h2>
+    <p>{{dictionary.description_login}}</p>
   </div>
   <!-- /FORM POPUP HEADLINE -->
 
@@ -1490,17 +1490,17 @@
     <form id="login-form2">
       <label for="username5" class="rl-label">Username</label>
       <input type="text" id="username5" name="username5" placeholder="Enter your username here...">
-      <label for="password5" class="rl-label">Password</label>
+      <label for="password5" class="rl-label">{{dictionary.word_password}}</label>
       <input type="password" id="password5" name="password5" placeholder="Enter your password here...">
       <!-- CHECKBOX -->
       <input type="checkbox" id="remember2" name="remember2" checked>
       <label for="remember2" class="label-check">
         <span class="checkbox primary primary"><span></span></span>
-        Remember username and password
+        {{dictionary.word_remember_user}}
       </label>
       <!-- /CHECKBOX -->
-      <p>Forgot your password? <a href="#" class="primary">Click here!</a></p>
-      <button class="button mid dark">Login <span class="primary">Now!</span></button>
+      <p>{{dictionary.word_forgot_pssw}} <a href="#" class="primary">{{dictionary.word_click_here}}</a></p>
+      <button class="button mid dark">{{dictionary.word_login}} <span class="primary">{{dictionary.word_now}}!</span></button>
     </form>
     <!-- LINE SEPARATOR -->
     <hr class="line-separator double">
