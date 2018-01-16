@@ -1094,52 +1094,54 @@
 {% endmacro %}
 <!-- macro user quickview main -->
 {% macro user_quickview(dictionary,user) %}
-  <div class="user-quickview">
-  <!-- USER AVATAR -->
-  <a href="author-profile.html">
-  <div class="outer-ring">
-    <div class="inner-ring"></div>
-    <figure class="user-avatar">
-      <img src="../images/avatars/avatar_01.jpg" alt="avatar">
-    </figure>
-  </div>
-  </a>
-  <!-- /USER AVATAR -->
+  {% if user.is_store == false %}
+    <div class="user-quickview">
+      <!-- USER AVATAR -->
+      <a href="author-profile.html">
+      <div class="outer-ring">
+        <div class="inner-ring"></div>
+        <figure class="user-avatar">
+          <img src="../images/avatars/avatar_01.jpg" alt="avatar">
+        </figure>
+      </div>
+      </a>
+      <!-- /USER AVATAR -->
 
-  <!-- USER INFORMATION -->
-  <p class="user-name">{{ user.id_user }} - {{ user.name_user }} </p>
-  <!-- SVG ARROW -->
-  <svg class="svg-arrow">
-    <use xlink:href="#svg-arrow"></use>
-  </svg>
-  <!-- /SVG ARROW -->
-  <p class="user-money">{{dictionary.coin}}$ {{ user.credits | number_format(2, '.', ',') }}</p>
-  <!-- /USER INFORMATION -->
+      <!-- USER INFORMATION -->
+      <p class="user-name">{{ user.id_user }} - {{ user.name_user }} </p>
+      <!-- SVG ARROW -->
+      <svg class="svg-arrow">
+        <use xlink:href="#svg-arrow"></use>
+      </svg>
+      <!-- /SVG ARROW -->
+      <p class="user-money">{{dictionary.coin}}$ {{ user.credits | number_format(2, '.', ',') }}</p>
+      <!-- /USER INFORMATION -->
 
-  <!-- DROPDOWN -->
-  <ul class="dropdown small hover-effect closed">
-    <li class="dropdown-item">
-      <div class="dropdown-triangle"></div>
-      <a href="author-profile.html">{{dictionary.word_profile_page}}</a>
-    </li>
-    <li class="dropdown-item">
-      <a href="dashboard-settings.html">{{dictionary.word_account_settings}}</a>
-    </li>
-    <li class="dropdown-item">
-      <a href="dashboard-statement.html">{{dictionary.Word_sales_statment}}</a>
-    </li>
-    <li class="dropdown-item">
-      <a href="dashboard-withdrawals.html">{{dictionary.word_withdrawals}}</a>
-    </li>
-    <li class="dropdown-item">
-      <a href="dashboard-uploaditem.html">{{dictionary.word_upload_item}}</a>
-    </li>
-    <li class="dropdown-item">
-      <a href="dashboard-manageitems.html">{{dictionary.word_manage_itens}}</a>
-    </li>
-  </ul>
-  <!-- /DROPDOWN -->
-</div>
+      <!-- DROPDOWN -->
+      <ul class="dropdown small hover-effect closed">
+        <li class="dropdown-item">
+          <div class="dropdown-triangle"></div>
+          <a href="author-profile.html">{{dictionary.word_profile_page}}</a>
+        </li>
+        <li class="dropdown-item">
+          <a href="dashboard-settings.html">{{dictionary.word_account_settings}}</a>
+        </li>
+        <li class="dropdown-item">
+          <a href="dashboard-statement.html">{{dictionary.Word_sales_statment}}</a>
+        </li>
+        <li class="dropdown-item">
+          <a href="dashboard-withdrawals.html">{{dictionary.word_withdrawals}}</a>
+        </li>
+        <li class="dropdown-item">
+          <a href="dashboard-uploaditem.html">{{dictionary.word_upload_item}}</a>
+        </li>
+        <li class="dropdown-item">
+          <a href="dashboard-manageitems.html">{{dictionary.word_manage_itens}}</a>
+        </li>
+      </ul>
+      <!-- /DROPDOWN -->
+    </div>
+  {% endif %}
 {% endmacro %}
 <!-- macro user quivkview for moblie -->
 {% macro user_quickview_moblie(dictionary,user) %}
