@@ -903,7 +903,15 @@
       <div class="side-menu-header">
       </div>
       <a href="#" class="button primary">{{ dictionary.word_register }}</a>
+      <a href="#login-popup" class="button promo-popup">
+        {{dictionary.word_login}} <span class="primary">{{dictionary.word_partner}}</span>
+      </a>
       <a href="#" class="button secondary">{{ dictionary.word_login }}</a>
+  <!-- FORM POPUP -->
+  <div id="login-popup" class="form-popup mfp-hide">
+    {{silexCasts.login(dictionary)}}
+  </div>
+  <!-- /FORM POPUP -->
   {% endif %}
   </div>
 {% endmacro %}
@@ -1477,37 +1485,34 @@
 {% endmacro %}
 <!-- macro login -->
 {% macro login(dictionary) %}
-
-  <!-- FORM POPUP HEADLINE -->
-  <div class="form-popup-headline secondary">
-    <h2>{{dictionary.word_login_account}}</h2>
-    <p>{{dictionary.description_login}}</p>
-  </div>
-  <!-- /FORM POPUP HEADLINE -->
-
-  <!-- FORM POPUP CONTENT -->
-  <div class="form-popup-content">
-    <form id="login-form2">
-      <label for="username5" class="rl-label">Username</label>
-      <input type="text" id="username5" name="username5" placeholder="Enter your username here...">
-      <label for="password5" class="rl-label">{{dictionary.word_password}}</label>
-      <input type="password" id="password5" name="password5" placeholder="Enter your password here...">
-      <!-- CHECKBOX -->
-      <input type="checkbox" id="remember2" name="remember2" checked>
-      <label for="remember2" class="label-check">
-        <span class="checkbox primary primary"><span></span></span>
-        {{dictionary.word_remember_user}}
-      </label>
-      <!-- /CHECKBOX -->
-      <p>{{dictionary.word_forgot_pssw}} <a href="#" class="primary">{{dictionary.word_click_here}}</a></p>
-      <button class="button mid dark">{{dictionary.word_login}} <span class="primary">{{dictionary.word_now}}!</span></button>
-    </form>
-    <!-- LINE SEPARATOR -->
-    <hr class="line-separator double">
-    <!-- /LINE SEPARATOR -->
-    <!-- a href="#" class="button mid fb half">Login with Facebook</a-->
-    <!-- a href="#" class="button mid twt half">Login with Twitter</a-->
-  </div>
-  <!-- /FORM POPUP CONTENT -->
-
+    <!-- FORM POPUP HEADLINE -->
+    <div class="form-popup-headline secondary">
+      <h2>{{dictionary.word_login_account}}</h2>
+      <p>{{dictionary.description_login}}</p>
+    </div>
+    <!-- /FORM POPUP HEADLINE -->
+    <!-- FORM POPUP CONTENT -->
+    <div class="form-popup-content">
+      <form id="login-form2">
+        <label for="username5" class="rl-label">Username</label>
+        <input type="text" id="username5" name="username5" placeholder="Enter your username here...">
+        <label for="password5" class="rl-label">{{dictionary.word_password}}</label>
+        <input type="password" id="password5" name="password5" placeholder="Enter your password here...">
+        <!-- CHECKBOX -->
+        <input type="checkbox" id="remember2" name="remember2" checked>
+        <label for="remember2" class="label-check">
+          <span class="checkbox primary primary"><span></span></span>
+          {{dictionary.word_remember_user}}
+        </label>
+        <!-- /CHECKBOX -->
+        <p>{{dictionary.word_forgot_pssw}} <a href="#" class="primary">{{dictionary.word_click_here}}</a></p>
+        <button class="button mid dark">{{dictionary.word_login}} <span class="primary">{{dictionary.word_now}}!</span></button>
+      </form>
+      <!-- LINE SEPARATOR -->
+      <hr class="line-separator double">
+      <!-- /LINE SEPARATOR -->
+      <!-- a href="#" class="button mid fb half">Login with Facebook</a-->
+      <!-- a href="#" class="button mid twt half">Login with Twitter</a-->
+    </div>
+    <!-- /FORM POPUP CONTENT -->
 {% endmacro %}

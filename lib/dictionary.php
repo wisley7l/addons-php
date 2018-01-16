@@ -183,7 +183,8 @@ function get_dictionary () {
     'description_login' => $description_login,
     'word_password' => $word_password,
     'word_forgot_pssw' => $word_forgot_pssw,
-    'word_remember_user' => $word_remember_user
+    'word_remember_user' => $word_remember_user,
+    'word_click_here' => $word_click_here
   );
   return $dictionary;
 }
