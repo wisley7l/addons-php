@@ -862,16 +862,16 @@
             <a href="#" class="interesting-link">Why Choose Emerald Dragon?</a>
             -->
             <a href="#" class="button primary">{{ dictionary.word_register }}</a>
-            <a href="#" class="button secondary">{{ dictionary.word_login }} <span class="primary">{{dictionary.word_stores}}</span></a>
-            <a href="#login-popup" class="button secundary promo-popup">
+            <a href="#login-popup" class="button promo-popup">
               {{dictionary.word_login}} <span class="primary">{{dictionary.word_partner}}</span>
             </a>
+            <a href="#" class="button secondary">{{ dictionary.word_login }} <span class="primary">{{dictionary.word_stores}}</span></a>
           </div>
 
         </div>
         <!-- FORM POPUP -->
         <div id="login-popup" class="form-popup mfp-hide">
-          {{silexCasts.login()}}
+          {{silexCasts.login(dictionary)}}
         </div>
         <!-- /FORM POPUP -->
 
@@ -1476,7 +1476,7 @@
   <!-- /DROPDOWN -->
 {% endmacro %}
 <!-- macro login -->
-{% macro login() %}
+{% macro login(dictionary) %}
 
   <!-- FORM POPUP HEADLINE -->
   <div class="form-popup-headline secondary">
@@ -1505,8 +1505,8 @@
     <!-- LINE SEPARATOR -->
     <hr class="line-separator double">
     <!-- /LINE SEPARATOR -->
-    <a href="#" class="button mid fb half">Login with Facebook</a>
-    <a href="#" class="button mid twt half">Login with Twitter</a>
+    <!-- a href="#" class="button mid fb half">Login with Facebook</a-->
+    <!-- a href="#" class="button mid twt half">Login with Twitter</a-->
   </div>
   <!-- /FORM POPUP CONTENT -->
 
