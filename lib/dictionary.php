@@ -2,7 +2,7 @@
 function get_dictionary () {
   $title = Addons\MKTP_TITLE;
   $subtitle = Addons\MKTP_SUBTITLE;
-  //$description_mkp = Addons\MKTP_DESC_FOOTER;
+  $description_mkp = Addons\MKTP_DESC_FOOTER;
   // obs: treat language
   switch ($_SERVER['PATH_LANG']) {
     case 'pt_br':
@@ -12,7 +12,7 @@ function get_dictionary () {
       $word_app = 'Apps ';
       $word_theme = 'Temas ';
       $word_and = 'e ';
-      $description_mkp = 'é o melhor marketplace de apps e temas para e-commerce, criado para possibilitar que lojistas que não tem grande capacidade de investimento tenham acesso a um layout personalizado de qualidade pelo melhor preço ';
+      //$description_mkp = 'é o melhor marketplace de apps e temas para e-commerce, criado para possibilitar que lojistas que não tem grande capacidade de investimento tenham acesso a um layout personalizado de qualidade pelo melhor preço ';
       $word_register = 'Registar-se ';
       $word_search = 'Buscar ';
       $word_go_item = 'Ir até item';
@@ -61,7 +61,7 @@ function get_dictionary () {
       $word_app = 'Apps ';
       $word_theme = 'Themes ';
       $word_and = 'and ';
-      $description_mkp = 'is the best e-commerce theme and app marketplace designed to enable retailers who do not have large investment capacity to access a customized quality layout at the best price. ';
+      //$description_mkp = 'is the best e-commerce theme and app marketplace designed to enable retailers who do not have large investment capacity to access a customized quality layout at the best price. ';
       $word_register = 'Register ';
       $word_search = 'Search ';
       $word_go_item = 'Go to item';
