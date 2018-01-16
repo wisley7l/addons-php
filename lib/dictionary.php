@@ -28,7 +28,7 @@ function get_dictionary () {
       $word_register = 'Registar-se ';
       $word_search = 'Buscar ';
       $word_go_item = 'Ir até item';
-      $word_favorate = 'Add Favourito';
+      $word_favorate_add = 'Add Favoritos';
       $desc_promo_partners = 'Divulgue sua APP ou tema aqui com ';
       $desc_promo_store = 'Encontre os melhores apps e tema para sua ecommerce ';
       $word_start = 'Começar ';
@@ -70,6 +70,8 @@ function get_dictionary () {
       $word_forgot_pssw = 'Esqueceu sua senha?';
       $word_remember_user = ' Lembre-se de nome de usuário e senha';
       $word_click_here = 'Clique aqui!';
+      $word_transaction_history = 'Histórico de transações ';
+      $word_favorate = 'Favoritos';
       break;
 
     default:
@@ -82,7 +84,7 @@ function get_dictionary () {
       $word_register = 'Register ';
       $word_search = 'Search ';
       $word_go_item = 'Go to item';
-      $word_favorate = 'Favourites +';
+      $word_favorate_add = 'Favorites +';
       $desc_promo_partners = 'Advertise your APP or theme here with ';
       $desc_promo_store = 'Find the best apps and theme for your ecommerce ';
       $word_start = 'Start ';
@@ -124,6 +126,8 @@ function get_dictionary () {
       $word_forgot_pssw = 'Forgot your password?';
       $word_remember_user = 'Remember username and password';
       $word_click_here = 'Click here!';
+      $word_transaction_history = 'transaction history';
+      $word_favorate = 'Favorites';
       break;
   }
   // array dictionary
@@ -143,7 +147,7 @@ function get_dictionary () {
     'word_register' => $word_register,
     'word_search'=> $word_search,
     'word_go_item' => $word_go_item,
-    'word_favorate' => $word_favorate,
+    'word_favorate_add' => $word_favorate_add,
     'desc_promo_partners' => $desc_promo_partners,
     'desc_promo_store' => $desc_promo_store,
     'word_start' => $word_start,
@@ -185,7 +189,9 @@ function get_dictionary () {
     'word_password' => $word_password,
     'word_forgot_pssw' => $word_forgot_pssw,
     'word_remember_user' => $word_remember_user,
-    'word_click_here' => $word_click_here
+    'word_click_here' => $word_click_here,
+    'word_transaction_history' => $word_transaction_history,
+    'word_favorate' => $word_favorate
   );
   return $dictionary;
 }
