@@ -848,7 +848,7 @@
           <div class="account-actions">
             <!--(not implemented) a href="#" class="button primary">Become a Seller</a -->
             <!--a href="login-page" class="button secondary">Logout</a -->
-            <a href="#promo-popup" class="button mid dark promo-popup">
+            <a href="#promo-popup" class="button secundary promo-popup">
               Preview <span class="primary">Big Promo Box (Popup)</span>
             </a>
 
@@ -856,6 +856,10 @@
           <!-- /ACCOUNT ACTIONS -->
         </div>
         <!-- /USER BOARD -->
+        <!-- FORM POPUP -->
+        <div id="promo-popup" class="form-popup promo mfp-hide">
+        </div>
+        <!-- /FORM POPUP -->
   {% else %}
         <div class="user-board">
 
@@ -1472,8 +1476,7 @@
 {% endmacro %}
 <!-- macro login -->
 {% macro login() %}
-  <!-- FORM POPUP -->
-  <div id="promo-popup" class="form-popup promo mfp-hide">
+
     <!-- CLOSE BTN -->
     <div class="close-btn">
       <!-- SVG PLUS -->
@@ -1502,6 +1505,5 @@
       </div>
     </div>
     <!-- /FORM POPUP CONTENT -->
-  </div>
-  <!-- /FORM POPUP -->
+
 {% endmacro %}
