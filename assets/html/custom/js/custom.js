@@ -1,3 +1,4 @@
+console.log("Carregado...");
 $("form.addons-partner-login").submit(function(event) {
   console.log("estou aqui");
   let username = $(this).find("input.addons-login-user").val();
