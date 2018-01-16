@@ -2,6 +2,7 @@
 function get_dictionary () {
   $title = Addons\MKTP_TITLE;
   $subtitle = Addons\MKTP_SUBTITLE;
+  $description_mkp = Addons\MKTP_DESC_FOOTER;
   // obs: treat language
   switch ($_SERVER['PATH_LANG']) {
     case 'pt_br':
