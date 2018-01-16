@@ -5,7 +5,7 @@ $dictionary = get_dictionary();
 
 // TODO: parse twig template
 // variable to check user login
-$login = true;
+$login = false;
 // necessary variables for information
 // number of partners and stores, and total apps and themes
 // obs: query db for informations
