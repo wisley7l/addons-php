@@ -1,7 +1,6 @@
 <?php
 // check if user and password are null, if null, redirect to index
 if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
-  echo "test";
   header("Location: ../?EROORLOGIN");
   exit;
 }
