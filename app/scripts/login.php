@@ -3,7 +3,7 @@
 if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
   $Message = "Wisley OK";
   header("Location: ../index?EROORLOGIN");
-  //exit;
+  exit;
 }
 // if they are not null, treat variables and query the database
 else {
