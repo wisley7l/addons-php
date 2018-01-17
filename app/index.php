@@ -21,9 +21,7 @@ if (!isset($_SESSION['login'])) {
     // Redireciona o visitante de volta pro login
     //header("Location: /#login-popup"); exit;
 }
-else {
-  header("Location: /test-server"); exit;
-}
+
 
 // TODO: parse twig template
 
