@@ -72,6 +72,8 @@ function get_dictionary () {
       $word_click_here = 'Clique aqui!';
       $word_transaction_history = 'Histórico de transações ';
       $word_favorate = 'Favoritos';
+      $word_enter_username = 'Digite seu Login aqui ...';
+      $word_enter_pass = 'Digite sua Senha aqui ...';
       break;
 
     default:
@@ -92,7 +94,7 @@ function get_dictionary () {
       $buy_now = 'Buy Now ';
       $word_buying = 'Buying ';
       $apps_trends = 'Apps Trends ';
-      $themes_trends = 'Themes Trends ';  
+      $themes_trends = 'Themes Trends ';
       $word_reputation = 'Reputation of the Developer';
       $word_language = 'Select Language';
       $word_search_apps_themes = 'Search For apps or themes ...';
@@ -128,6 +130,8 @@ function get_dictionary () {
       $word_click_here = 'Click here!';
       $word_transaction_history = 'Transaction History';
       $word_favorate = 'Favorites';
+      $word_enter_username ='Enter your Login here...';
+      $word_enter_pass = 'Enter your Password here...';
       break;
   }
   // array dictionary
@@ -191,7 +195,9 @@ function get_dictionary () {
     'word_remember_user' => $word_remember_user,
     'word_click_here' => $word_click_here,
     'word_transaction_history' => $word_transaction_history,
-    'word_favorate' => $word_favorate
+    'word_favorate' => $word_favorate,
+    'word_enter_username' => $word_enter_username,
+    'word_enter_pass' => $word_enter_pass
   );
   return $dictionary;
 }
