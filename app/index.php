@@ -3,20 +3,8 @@ header('Content-Type: text/html; charset=utf-8');
 // get dictionary
 $dictionary = get_dictionary();
 // test alert
-$errorLogin = "$('body').xmalert({
-	x: 'right',
-	y: 'top',
-	xOffset: 30,
-	yOffset: 30,
-	alertSpacing: 40,
-	lifetime: 6000,
-	fadeDelay: 0.3,
-	template: 'messageError',
-	title: 'ERROR LOGIN',
-	paragraph: 'USUER OR PASSWORD INVALID',
-});";
 if (isset($_GET['EROORLOGIN'])) {
-    print '<script type="text/javascript">' . $errorLogin . '</script>';
+    print '<div class="wis"> </div>';
 }
 // TODO: parse twig template
 // variable to check user login

@@ -6,3 +6,9 @@ $("form.addons-partner-login").submit(function(event) {
   $("#addons-login").submit();
   event.preventDefault();
 });
+
+$( document ).ready(function() {
+  if ($(this).find("div.wis").length > 0) {
+    alert("OK");
+  }
+});
