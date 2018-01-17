@@ -9,6 +9,6 @@ $("form.addons-partner-login").submit(function(event) {
 
 $( document ).ready(function() {
   if ($(this).find("div.wis").length > 0) {
-    alert("OK");
+    alert($(this).find("div.wis").val());
   }
 });

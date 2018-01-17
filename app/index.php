@@ -4,7 +4,7 @@ header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 // test alert
 if (isset($_GET['EROORLOGIN'])) {
-    print '<div class="wis"> </div>';
+    print '<div class="wis">wisLEY</div>';
 }
 // TODO: parse twig template
 // variable to check user login
