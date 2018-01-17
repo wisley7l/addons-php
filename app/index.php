@@ -3,8 +3,8 @@ header('Content-Type: text/html; charset=utf-8');
 // get dictionary
 $dictionary = get_dictionary();
 // test alert
-if (isset($_GET['nada'])) {
-    print '<script type="text/javascript">alert("TEST");</script>';
+if (isset($_GET['EROORLOGIN'])) {
+    print '<script type="text/javascript">alert("Erro de LOGIN");</script>';
 }
 // TODO: parse twig template
 // variable to check user login
