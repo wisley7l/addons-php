@@ -9,7 +9,18 @@ $("form.addons-partner-login").submit(function(event) {
 
 $( document ).ready(function() {
   if ($(this).find("div.wis").length > 0) {
-    //alert();
-    console.log($(this).find("div.wis").text());
+    $('body').xmalert({
+    	x: 'right',
+    	y: 'top',
+    	xOffset: 30,
+    	yOffset: 30,
+    	alertSpacing: 40,
+    	lifetime: 6000,
+    	fadeDelay: 0.3,
+    	template: 'messageError',
+    	title: 'ERROR LOGIN',
+    	paragraph: $(this).find("div.wis").text(),
+    });
+    //alert($(this).find("div.wis").text());
   }
 });
