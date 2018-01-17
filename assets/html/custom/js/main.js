@@ -7,6 +7,6 @@ $("form.addons-partner-login").submit(function(event) {
   event.preventDefault();
 });
 
-$("div.wis").on(function() {
-  alert("OK");  
+$( document ).ready(function() {
+  alert("ok");
 });
