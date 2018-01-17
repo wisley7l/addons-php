@@ -2,16 +2,23 @@
 header('Content-Type: text/html; charset=utf-8');
 // get dictionary
 $dictionary = get_dictionary();
-// test alert
+// variable to check user login
+$login = false;
+// alert login
 if (isset($_GET['EROORLOGIN'])) {
     print '<div class="addons-error-login" style="display:none">' . $dictionary['word_invalid_login'] . '</div>';
 }
 if (isset($_GET['SUCESSLOGIN'])) {
     print '<div class="addons-sucess-login" style="display:none">' . $dictionary['word_sucess_login'] . '</div>';
 }
+if (!isset($_SESSION)) session_start();
+if (!isset($_SESSION['login'])) {
+}
+else {
+  $login = $_SESSION['login'];
+}
 // TODO: parse twig template
-// variable to check user login
-$login = false;
+
 // necessary variables for information
 // number of partners and stores, and total apps and themes
 // obs: query db for informations

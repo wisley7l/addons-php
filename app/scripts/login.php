@@ -9,6 +9,10 @@ else {
   $user = $_POST['user'];
   $pass = $_POST['pass'];
 // query DB find user
+  if (!isset($_SESSION)) session_start();
+  $_SESSION['user_id'] = 1;
+  $_SESSION['user_name'] = $user;
+  $_SESSION['login'] = true;
 header("Location: ../?SUCESSLOGIN");
 exit;
 }
