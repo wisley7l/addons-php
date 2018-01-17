@@ -1,5 +1,16 @@
 $("form.addons-partner-login").submit(function(event) {
-  alert("Test");
+  $('body').xmalert({
+	x: 'right',
+	y: 'top',
+	xOffset: 30,
+	yOffset: 30,
+	alertSpacing: 40,
+	lifetime: 6000,
+	fadeDelay: 0.3,
+	template: 'messageError',
+	title: 'Title',
+	paragraph: 'Lorem ipsum...',
+});
   let username = $(this).find("input.addons-login-user").val();
   let password = md5($(this).find("input.addons-login-password").val());
   $("#addons-login-user").val(username);
