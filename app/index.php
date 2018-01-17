@@ -4,7 +4,7 @@ header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 // test alert
 if (isset($_GET['EROORLOGIN'])) {
-    print '<div class="wis">{{dictionary.word_enter_pass}}</div>';
+    print '<div class="wis">' . $dictionary['word_enter_pass'] . '</div>';
 }
 // TODO: parse twig template
 // variable to check user login
