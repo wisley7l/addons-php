@@ -9,4 +9,6 @@ else {
   $user = $_POST['user'];
   $pass = $_POST['pass'];
 // query DB find user
+header("Location: ../?SUCESSLOGIN");
+exit;
 }

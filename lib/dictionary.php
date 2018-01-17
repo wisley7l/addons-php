@@ -75,6 +75,7 @@ function get_dictionary () {
       $word_enter_username = 'Digite seu Login aqui ...';
       $word_enter_pass = 'Digite sua Senha aqui ...';
       $word_invalid_login = 'Login ou Senha Inválidos';
+      $word_sucess_login = 'Login efetuado com Sucesso';
       break;
 
     default:
@@ -134,6 +135,7 @@ function get_dictionary () {
       $word_enter_username ='Enter your Login here...';
       $word_enter_pass = 'Enter your Password here...';
       $word_invalid_login = 'Login or password invalid';
+      $word_sucess_login = 'Login done successfully';
       break;
   }
   // array dictionary
@@ -200,7 +202,8 @@ function get_dictionary () {
     'word_favorate' => $word_favorate,
     'word_enter_username' => $word_enter_username,
     'word_enter_pass' => $word_enter_pass,
-    'word_invalid_login' => $word_invalid_login
+    'word_invalid_login' => $word_invalid_login,
+    'word_sucess_login' => $word_sucess_login
   );
   return $dictionary;
 }

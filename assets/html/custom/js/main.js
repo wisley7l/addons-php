@@ -33,7 +33,7 @@ $( document ).ready(function() {
     	fadeDelay: 0.3,
     	template: 'messageSuccess',
     	title: 'LOGIN SUCESS',
-    	paragraph: '',
+    	paragraph: $(this).find("div.addons-sucess-login").text(),
     });
   }
 });

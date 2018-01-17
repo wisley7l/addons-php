@@ -4,10 +4,10 @@ header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 // test alert
 if (isset($_GET['EROORLOGIN'])) {
-    print '<div class="addons-error-login" style="display:none">' . $dictionary['word_enter_pass'] . '</div>';
+    print '<div class="addons-error-login" style="display:none">' . $dictionary['word_invalid_login'] . '</div>';
 }
 if (isset($_GET['SUCESSLOGIN'])) {
-    print '<div class="addons-error-login">' . $dictionary['word_enter_pass'] . '</div>';
+    print '<div class="addons-sucess-login" style="display:none">' . $dictionary['word_sucess_login'] . '</div>';
 }
 // TODO: parse twig template
 // variable to check user login
