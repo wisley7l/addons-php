@@ -11,6 +11,16 @@ if (isset($_GET['EROORLOGIN'])) {
 if (isset($_GET['SUCESSLOGIN'])) {
     print '<div class="addons-sucess-login" style="display:none">' . $dictionary['word_sucess_login'] . '</div>';
 }
+// A sessão precisa ser iniciada em cada página diferente
+if (!isset($_SESSION)) session_start();
+
+// Verifica se não há a variável da sessão que identifica o usuário
+if (!isset($_SESSION['login'])) {
+    // Destrói a sessão por segurança
+    session_destroy();
+    // Redireciona o visitante de volta pro login
+    header("Location: index"); exit;
+}
 
 // TODO: parse twig template
 
