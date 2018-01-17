@@ -13,7 +13,7 @@ if (isset($_GET['SUCESSLOGIN'])) {
 }
 if (!isset($_SESSION)) session_start();
 if (!isset($_SESSION['login'])) {
-  header("Location: ../test_server");
+  header("Location: ../test-server");
 }
 else {
   $login = $_SESSION['login'];
