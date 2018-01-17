@@ -1,8 +1,8 @@
 <?php
 // check if user and password are null, if null, redirect to index
 if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
-  echo "<script type='text/javascript'>alert('It worked!')</script>";
-  //header("Location: ../index");
+
+  header("Location: ../index?foi");
   //exit;
 }
 // if they are not null, treat variables and query the database
