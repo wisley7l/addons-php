@@ -11,15 +11,7 @@ if (isset($_GET['EROORLOGIN'])) {
 if (isset($_GET['SUCESSLOGIN'])) {
     print '<div class="addons-sucess-login" style="display:none">' . $dictionary['word_sucess_login'] . '</div>';
 }
-if (!isset($_SESSION)) session_start();
-if (!isset($_SESSION['login'])) {
-  session_destroy();
-  header("Location: ../index");
-}
-else {
-  $login = $_SESSION['login'];
-  header("Location: ../test-server");
-}
+
 // TODO: parse twig template
 
 // necessary variables for information
