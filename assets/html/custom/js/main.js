@@ -8,7 +8,7 @@ $("form.addons-partner-login").submit(function(event) {
 });
 
 $( document ).ready(function() {
-  if ($(this).find("div.wis2")) {
+  if ($(this).find("div.wis2").length > 0) {
     alert("OK");
   }
 });
