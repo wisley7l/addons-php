@@ -13,10 +13,11 @@ if (isset($_GET['SUCESSLOGIN'])) {
 }
 if (!isset($_SESSION)) session_start();
 if (!isset($_SESSION['login'])) {
-  header("Location: ../test-server");
+  header("Location: ../index");
 }
 else {
   $login = $_SESSION['login'];
+  header("Location: ../test-server");
 }
 // TODO: parse twig template
 
