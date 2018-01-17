@@ -13,6 +13,7 @@ else {
   $_SESSION['user_id'] = 1;
   $_SESSION['user_name'] = $user;
   $_SESSION['login'] = true;
-header("Location: ../?SUCESSLOGIN");
-exit;
+  var_dump($_SESSION);
+  //header("Location: ../?SUCESSLOGIN");
+  //exit;
 }
