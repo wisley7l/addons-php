@@ -19,7 +19,7 @@ if (!isset($_SESSION['login'])) {
     // Destrói a sessão por segurança
     session_destroy();
     // Redireciona o visitante de volta pro login
-    header("Location: index"); exit;
+    header("Location: apps-page"); exit;
 }
 
 // TODO: parse twig template
