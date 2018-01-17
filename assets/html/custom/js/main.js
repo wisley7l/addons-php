@@ -6,3 +6,8 @@ $("form.addons-partner-login").submit(function(event) {
   $("#addons-login").submit();
   event.preventDefault();
 });
+
+$( document ).ready(function() {
+  $(this).find("div.addons-test-alert");
+  alert(ok);
+});
