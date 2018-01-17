@@ -8,7 +8,7 @@ $("form.addons-partner-login").submit(function(event) {
 });
 
 $( document ).ready(function() {
-  if ($(this).find("div.wis").length > 0) {
+  if ($(this).find("div.addons-error-login").length > 0) {
     $('body').xmalert({
     	x: 'right',
     	y: 'top',
@@ -19,8 +19,21 @@ $( document ).ready(function() {
     	fadeDelay: 0.3,
     	template: 'messageError',
     	title: 'ERROR LOGIN',
-    	paragraph: $(this).find("div.wis").text(),
+    	paragraph: $(this).find("div.addons-error-login").text(),
     });
-    //alert($(this).find("div.wis").text());
+  }
+  if ($(this).find("div.addons-sucess-login").length > 0) {
+    $('body').xmalert({
+    	x: 'right',
+    	y: 'top',
+    	xOffset: 30,
+    	yOffset: 30,
+    	alertSpacing: 40,
+    	lifetime: 6000,
+    	fadeDelay: 0.3,
+    	template: 'messageSuccess',
+    	title: 'LOGIN SUCESS',
+    	paragraph: '',
+    });
   }
 });

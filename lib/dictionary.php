@@ -74,6 +74,7 @@ function get_dictionary () {
       $word_favorate = 'Favoritos';
       $word_enter_username = 'Digite seu Login aqui ...';
       $word_enter_pass = 'Digite sua Senha aqui ...';
+      $word_invalid_login = 'Login ou Senha Inválidos';
       break;
 
     default:
@@ -132,6 +133,7 @@ function get_dictionary () {
       $word_favorate = 'Favorites';
       $word_enter_username ='Enter your Login here...';
       $word_enter_pass = 'Enter your Password here...';
+      $word_invalid_login = 'Login or password invalid';
       break;
   }
   // array dictionary
@@ -197,7 +199,8 @@ function get_dictionary () {
     'word_transaction_history' => $word_transaction_history,
     'word_favorate' => $word_favorate,
     'word_enter_username' => $word_enter_username,
-    'word_enter_pass' => $word_enter_pass
+    'word_enter_pass' => $word_enter_pass,
+    'word_invalid_login' => $word_invalid_login
   );
   return $dictionary;
 }
