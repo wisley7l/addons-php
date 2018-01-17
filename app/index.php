@@ -4,7 +4,7 @@ header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 // test alert
 if (isset($_GET['EROORLOGIN'])) {
-    print '<div class="addons-error-login">' . $dictionary['word_enter_pass'] . '</div>';
+    print '<div class="addons-error-login" style="display:none">' . $dictionary['word_enter_pass'] . '</div>';
 }
 if (isset($_GET['SUCESSLOGIN'])) {
     print '<div class="addons-error-login">' . $dictionary['word_enter_pass'] . '</div>';
