@@ -15,6 +15,7 @@ session_write_close();
 session_start();
 
 if (isset($_SESSION)) {
+  var_dump($_SESSION);
   $login = $_SESSION['login'];
 }
 
