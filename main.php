@@ -51,6 +51,7 @@ if (file_exists(__DIR__ . '/config/config.php')) {
   require __DIR__ . '/config/config-default.php';
 }
 // define path to sessions
+chmod (Addons\PATH_APP.'/app/scripts/sessions', 0777);
 session_save_path(Addons\PATH_APP.'/app/scripts/sessions');
 ini_set('session.gc_probability', 1);
 // load composer packages
