@@ -23,7 +23,7 @@ else {
   $user = mysqli_real_escape_string($conn,$_POST['user']);
   $pass = $user = mysqli_real_escape_string($conn,$_POST['pass']);
   // then query the user in db
-  $sql = "SELECT `id`, `nome`, `nivel` FROM `usuarios` WHERE (`usuario` = '".$usuario ."') AND (`senha` = '". sha1($senha) ."')  LIMIT 1";
+  $query = "SELECT `id`, `username`, `path_image` FROM `partners` WHERE (`username` = '".$usero ."') AND (`password_hash` = '". $pass ."')  LIMIT 1";
 
   */
   if (!isset($_SESSION)){
@@ -34,9 +34,10 @@ else {
     $_SESSION['user_name'] = $user;
     $_SESSION['login'] = true;
     $_SESSION['is_store'] = false;
+    $SESSION['path_image'] = '';
     //var_dump($_SESSION);
     if (!is_writable(session_save_path())) {
-    echo 'Session path "'.session_save_path().'" is not writable for PHP!';
+    //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
     }
     else {
       header("Location: ../?SUCCESSLOGIN");
