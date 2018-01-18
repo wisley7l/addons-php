@@ -20,6 +20,7 @@ if (isset($_SESSION)) {
 
 if (isset($_GET['logout'])){
   echo "test";
+  session_destroy();
 }
 // TODO: parse twig template
 
