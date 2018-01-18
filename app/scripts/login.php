@@ -1,4 +1,5 @@
 <?php
+// Occurs after clicking the login button now
 // check if user and password are null, if null, redirect to index
 if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
   header("Location: ../?EROORLOGIN");
@@ -6,9 +7,25 @@ if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
 }
 // if they are not null, treat variables and query the database
 else {
+  // test user and password
   $user = $_POST['user'];
   $pass = $_POST['pass'];
-// query DB find user
+  // query DB find user
+  /*
+  $conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS,Addon\MYSQL_DB);
+  if (mysqli_connect_errno()) {
+    echo 'Connection failed: ';
+    echo mysqli_connect_error();
+    echo PHP_EOL;
+    exit();
+  }
+  // frist escape varables
+  $user = mysqli_real_escape_string($conn,$_POST['user']);
+  $pass = $user = mysqli_real_escape_string($conn,$_POST['pass']);
+  // then query the user in db
+  $sql = "SELECT `id`, `nome`, `nivel` FROM `usuarios` WHERE (`usuario` = '".$usuario ."') AND (`senha` = '". sha1($senha) ."')  LIMIT 1";
+
+  */
   if (!isset($_SESSION)){
     $id = 1;
     session_id($id);
@@ -22,7 +39,7 @@ else {
     echo 'Session path "'.session_save_path().'" is not writable for PHP!';
     }
     else {
-      header("Location: ../?SUCESSLOGIN");
+      header("Location: ../?SUCCESSLOGIN");
       exit;
     }
   }

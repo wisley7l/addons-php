@@ -2,33 +2,46 @@
 header('Content-Type: text/html; charset=utf-8');
 // get dictionary
 $dictionary = get_dictionary();
-// variable to check user login
+// variable to check the user login, because some options are only allowed for online users
 $login = false;
-// alert login
+// check if there was a login attempt and treats error and success attempts
 if (isset($_GET['EROORLOGIN'])) {
+  // create hidden div to handle login error attempt
     print '<div class="addons-error-login" style="display:none">' . $dictionary['word_invalid_login'] . '</div>';
 }
-if (isset($_GET['SUCESSLOGIN'])) {
+if (isset($_GET['SUCCESSLOGIN'])) {
+    // create hidden div to handle login success attempt
     print '<div class="addons-sucess-login" style="display:none">' . $dictionary['word_sucess_login'] . '</div>';
 }
+//(init) * Required on all pages *
+// close writing session, if it exists and intal session
 session_write_close();
 session_start();
-
+// if the session exists
 if (isset($_SESSION)) {
+  //modify the value of the login variable, by the value saved in the session
   var_dump($_SESSION);
   $login = $_SESSION['login'];
+  // set values for user, with the values saved in the session
+  // array used to set user panel parameters
+  $user_login = array(
+    'name_user' => $_SESSION['user_name'] ,
+    'credits' => 10.0 / $dictionary['mult_coin'] ,
+    'id_user' => $_SESSION['user_id'],
+    'is_store' => $_SESSION['is_store']
+  );
 }
-
+// check if logout attempt
 if (isset($_GET['logout'])){
-  echo "test";
+  // if attempt is true, destroy session values and redirect to index page
   session_destroy();
   header("Location: ../");
 }
-// TODO: parse twig template
+//(end) * Required on all pages *
 
 // necessary variables for information
 // number of partners and stores, and total apps and themes
-// obs: query db for informations
+// obs: query db for information or configure as static (avoid excessive queries)
 $total_apps_and_themes = 0;
 $count_stores = 0;
 $count_partners = 0;
@@ -37,14 +50,6 @@ $info_footer = array(
   'count_stores' => $count_stores,
   'count_partners' => $count_partners,
   'path_file' => $_SERVER['PATH_FILE']
-);
-//query user
-//test user
-$user_login = array(
-  'name_user' => $_SESSION['user_name'] ,
-  'credits' => 10.0 / $dictionary['mult_coin'] ,
-  'id_user' => $_SESSION['user_id'],
-  'is_store' => $_SESSION['is_store']
 );
 
 // obs: Search all categories in db
