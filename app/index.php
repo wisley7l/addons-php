@@ -40,10 +40,10 @@ $info_footer = array(
 //query user
 //test user
 $user_login = array(
-  'name_user' => 'Wisley ',
+  'name_user' => $_SESSION['user_name'] ,
   'credits' => 10.0 / $dictionary['mult_coin'] ,
-  'id_user' => 1,
-  'is_store' => false
+  'id_user' => $_SESSION['user_id'],
+  'is_store' => $_SESSION['is_store']
 );
 
 // obs: Search all categories in db

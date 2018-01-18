@@ -10,11 +10,12 @@ else {
   $pass = $_POST['pass'];
 // query DB find user
   if (!isset($_SESSION)){
-    session_id(1);
+    session_name('store'.$user);
     session_start();
     $_SESSION['user_id'] = 1;
     $_SESSION['user_name'] = $user;
     $_SESSION['login'] = true;
+    $_SESSION['is_store'] = false;
     //var_dump($_SESSION);
     if (!is_writable(session_save_path())) {
     echo 'Session path "'.session_save_path().'" is not writable for PHP!';
