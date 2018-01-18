@@ -14,7 +14,8 @@ if (isset($_GET['SUCESSLOGIN'])) {
 session_start();
 
 if (isset($_SESSION)) {
-  print '<div class=""> ok '. session_id(). ' - ' . $_SESSION['user_id'] . '</div>';
+  print '<div class=""> ok '. session_id(). ' - ' . $_SESSION . '</div>';
+  var_dump($_SESSION);
 }
 
 // TODO: parse twig template
