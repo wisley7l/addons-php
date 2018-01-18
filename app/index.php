@@ -11,7 +11,12 @@ if (isset($_GET['EROORLOGIN'])) {
 if (isset($_GET['SUCESSLOGIN'])) {
     print '<div class="addons-sucess-login" style="display:none">' . $dictionary['word_sucess_login'] . '</div>';
 }
-print '<div class=""> ok ' . $_SESSION . '</div>';
+session_start();
+
+if (isset($_SESSION)) {
+  print '<div class=""> ok '. $_SESSION . '</div>';
+}
+
 // TODO: parse twig template
 
 // necessary variables for information
