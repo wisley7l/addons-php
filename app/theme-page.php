@@ -53,7 +53,7 @@ $filter_segment = array(
   array('name' => 'Test 2', 'href' => '#', 'active' => '' )
 );
 // query apps in db
-$apps = array(
+$themes = array(
   array('name' => 'THEME1', 'name_partner' => 'Partner 1', 'value' => 12.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
   array('name' => 'THEME2', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
   array('name' => 'THEME3', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 0, 'star_off' => 0, 'image' => '../images/items/westeros_m.jpg' ),
@@ -86,5 +86,6 @@ echo $twig->render('apps-themes-page.twig', array(
   'info_page' => $info_page,
   'segment' => $filter_segment,
   // test apps
-  'apps_themes' => $apps
+  'apps_themes' => $themes,
+  'user' => $user_login
 ));

@@ -86,5 +86,6 @@ echo $twig->render('apps-themes-page.twig', array(
   'info_page' => $info_page,
   'segment' => $filter_segment,
   // test apps
-  'apps_themes' => $apps
+  'apps_themes' => $apps,
+  'user' => $user_login
 ));
