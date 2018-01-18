@@ -16,7 +16,7 @@ session_start();
 
 if (isset($_SESSION)) {
   print '<div class=""> ok '. session_id() . '</div>';
-  var_dump($_SESSION);
+  var_dump($_POST);
 }
 
 // TODO: parse twig template
