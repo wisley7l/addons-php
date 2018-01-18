@@ -50,8 +50,8 @@ if (file_exists(__DIR__ . '/config/config.php')) {
 } else {
   require __DIR__ . '/config/config-default.php';
 }
-//
-ini_set('session.save_path',realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../data'));
+// define path to sessions
+ini_set(session_save_path(realpath(dirname('/tmp/sessions'))));
 // load composer packages
 require __DIR__ . '/composer/vendor/autoload.php';
 // load dictionary
