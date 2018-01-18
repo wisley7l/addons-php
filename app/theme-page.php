@@ -25,7 +25,7 @@ if (isset($_SESSION)) {
 if (isset($_GET['logout'])){
   // if attempt is true, destroy session values and redirect to index page
   session_destroy();
-  header("Location: ../index");
+  header("Location: ".$_SERVER['PATH_FILE']);
 }
 //(end) * Required on all pages *
 
