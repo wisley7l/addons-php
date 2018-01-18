@@ -21,6 +21,7 @@ if (isset($_SESSION)) {
 if (isset($_GET['logout'])){
   echo "test";
   session_destroy();
+  header("Location: ../");
 }
 // TODO: parse twig template
 
