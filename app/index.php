@@ -15,9 +15,7 @@ session_write_close();
 session_start();
 
 if (isset($_SESSION)) {
-  print '<div class=""> ok '. session_id() . '</div>';
-  var_dump(session_save_path());
-  var_dump($_SESSION);
+  $login = $_SESSION['login'];
 }
 
 // TODO: parse twig template

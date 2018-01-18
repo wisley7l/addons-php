@@ -20,10 +20,10 @@ else {
     echo 'Session path "'.session_save_path().'" is not writable for PHP!';
     }
     else {
-      echo "YESSSS";
+      header("Location: ../?SUCESSLOGIN");
+      exit;
     }
   }
 
-  //header("Location: ../?SUCESSLOGIN");
-  //exit;
+
 }
