@@ -15,7 +15,13 @@ else {
     $_SESSION['user_id'] = 1;
     $_SESSION['user_name'] = $user;
     $_SESSION['login'] = true;
-    var_dump($_SESSION);
+    //var_dump($_SESSION);
+    if (!is_writable(session_save_path())) {
+    echo 'Session path "'.session_save_path().'" is not writable for PHP!';
+    }
+    else {
+      echo "YESSSS";
+    }
   }
 
   //header("Location: ../?SUCESSLOGIN");
