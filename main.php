@@ -50,9 +50,6 @@ if (file_exists(__DIR__ . '/config/config.php')) {
 } else {
   require __DIR__ . '/config/config-default.php';
 }
-// define path to sessions
-session_save_path('/tmp/sessions');
-ini_set('session.gc_probability', 1);
 // load composer packages
 require __DIR__ . '/composer/vendor/autoload.php';
 // load dictionary

@@ -16,6 +16,7 @@ else {
     $_SESSION['user_name'] = $user;
     $_SESSION['login'] = true;
     //var_dump($_SESSION);
+    //ini_set('session.save_path',realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
     if (!is_writable(session_save_path())) {
     echo 'Session path "'.session_save_path().'" is not writable for PHP!';
     }
