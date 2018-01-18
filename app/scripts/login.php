@@ -10,7 +10,8 @@ else {
   $pass = $_POST['pass'];
 // query DB find user
   if (!isset($_SESSION)){
-    session_name('store'.$user);
+    $id = 1;
+    session_id($id);
     session_start();
     $_SESSION['user_id'] = 1;
     $_SESSION['user_name'] = $user;
