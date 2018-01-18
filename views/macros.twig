@@ -904,8 +904,10 @@
       </div>
 
       <a href="#" class="button secondary">{{ dictionary.word_register }}</a>
-      <a href="#login-popup" class="button secondary promo-popup"> {{dictionary.word_login}} <span class="primary">{{dictionary.word_partner}}</span> </a>
-      <a href="#" class="button primary">{{ dictionary.word_login }}</a>
+      <a href="#login-popup" class="button secondary promo-popup">
+        {{dictionary.word_login}} <span class="primary">{{dictionary.word_partner}}</span>
+      </a>
+      <a href="#" class="button primary">{{ dictionary.word_login }} <span class="primary">{{dictionary.word_stores}}</span></a>
   <!-- FORM POPUP -->
   <div id="login-popup" class="form-popup mfp-hide">
     {{silexCasts.login(dictionary)}}
