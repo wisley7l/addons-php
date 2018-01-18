@@ -18,6 +18,9 @@ if (isset($_SESSION)) {
   $login = $_SESSION['login'];
 }
 
+if (isset($_GET['logout'])){
+  echo "test";
+}
 // TODO: parse twig template
 
 // necessary variables for information
