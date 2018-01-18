@@ -17,7 +17,7 @@ session_start();
 if (isset($_SESSION)) {
   print '<div class=""> ok '. session_id() . '</div>';
 
-  var_dump(Addons\PATH_APP);
+  var_dump(session_save_path());
 }
 
 // TODO: parse twig template
