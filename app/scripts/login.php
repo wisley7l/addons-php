@@ -9,11 +9,15 @@ else {
   $user = $_POST['user'];
   $pass = $_POST['pass'];
 // query DB find user
-  if (!isset($_SESSION)) session_start();
-  $_SESSION['user_id'] = 1;
-  $_SESSION['user_name'] = $user;
-  $_SESSION['login'] = true;
-  var_dump($_SESSION);
+  if (!isset($_SESSION)){
+    session_id(1);
+    session_start();
+    $_SESSION['user_id'] = 1;
+    $_SESSION['user_name'] = $user;
+    $_SESSION['login'] = true;
+    var_dump($_SESSION);
+  }
+
   //header("Location: ../?SUCESSLOGIN");
   //exit;
 }
