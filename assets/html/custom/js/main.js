@@ -6,7 +6,12 @@ $("form.addons-partner-login").submit(function(event) {
   $("#addons-login").submit();
   event.preventDefault();
 });
+// treat logout
+$("a#logout").submit(function(){
+  alert("Logout");
+});
 
+// alert login sucess or error
 $( document ).ready(function() {
   if ($(this).find("div.addons-error-login").length > 0) {
     $('body').xmalert({
