@@ -51,7 +51,7 @@ if (file_exists(__DIR__ . '/config/config.php')) {
   require __DIR__ . '/config/config-default.php';
 }
 // define path to sessions
-session_save_path(Addons\PATH_APP.'assets/html/custom/sessions');
+session_save_path('/tmp/sessions');
 ini_set('session.gc_probability', 1);
 // load composer packages
 require __DIR__ . '/composer/vendor/autoload.php';
