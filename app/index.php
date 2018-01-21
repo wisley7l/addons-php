@@ -20,7 +20,7 @@ session_start();
 // if the session exists
 if (isset($_SESSION)) {
   //modify the value of the login variable, by the value saved in the session
-  var_dump($_SESSION);
+  //var_dump($_SESSION);
   $login = $_SESSION['login'];
   // set values for user, with the values saved in the session
   // array used to set user panel parameters
