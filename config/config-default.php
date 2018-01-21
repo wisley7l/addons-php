@@ -22,13 +22,13 @@ const MYSQL_DB = 'ecomplus_addons';
 const MKTP_TITLE = 'E-Com Plus Addons';
 
 switch ($_SERVER['PATH_LANG']) {
-  case 'pt_br':
-    define('Addons\MKTP_SUBTITLE', 'Marketplace de apps e temas para e-commerce');
-    define('Addons\MKTP_DESC_FOOTER','é o melhor marketplace de apps e temas para e-commerce, criado para possibilitar que lojistas que não tem grande capacidade de investimento tenham acesso a um layout personalizado de qualidade pelo melhor preço.');
+  case 'en_us':
+    define('Addons\MKTP_SUBTITLE', 'Ecommerce apps and themes marketplace');
+    define('Addons\MKTP_DESC_FOOTER','is the best e-commerce theme and app marketplace designed to enable retailers who do not have large investment capacity to access a customized quality layout at the best price.');
     break;
 
   default:
-    define('Addons\MKTP_SUBTITLE', 'Ecommerce apps and themes marketplace');
-    define('Addons\MKTP_DESC_FOOTER','is the best e-commerce theme and app marketplace designed to enable retailers who do not have large investment capacity to access a customized quality layout at the best price.');
+    define('Addons\MKTP_SUBTITLE', 'Marketplace de apps e temas para e-commerce');
+    define('Addons\MKTP_DESC_FOOTER','é o melhor marketplace de apps e temas para e-commerce, criado para possibilitar que lojistas que não tem grande capacidade de investimento tenham acesso a um layout personalizado de qualidade pelo melhor preço.');
     break;
 }

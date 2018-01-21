@@ -18,67 +18,7 @@ function get_dictionary () {
   */
   // obs: treat language
   switch ($_SERVER['PATH_LANG']) {
-    case 'pt_br':
-      $welcome = 'Bem vindo a ';
-      $Word_partner = 'Parceiros ';
-      $word_stores = 'Lojas ';
-      $word_app = 'Apps ';
-      $word_theme = 'Temas ';
-      $word_and = 'e ';
-      $word_register = 'Registar-se ';
-      $word_search = 'Buscar ';
-      $word_go_item = 'Ir até item';
-      $word_favorate_add = 'Add Favoritos';
-      $desc_promo_partners = 'Divulgue sua APP ou tema aqui com ';
-      $desc_promo_store = 'Encontre os melhores apps e tema para sua ecommerce ';
-      $word_start = 'Começar ';
-      $word_now = 'Agora ';
-      $buy_now = 'Comprar Agora ';
-      $word_buying = 'Comprar ';
-      $apps_trends = 'Tendências de Apps ';
-      $themes_trends = 'Tendências de Temas ';
-      $word_reputation = 'Reputação do Desenvolvedor';
-      $word_language = 'Selecionar Idioma';
-      $word_search_apps_themes = 'Buscar por Apps ou Temas ...';
-      $word_buy_apps = 'Compre & Venda facilmente';
-      $description_buy_apps = 'Marketplace para lojistas e desenvolvedores para e-commerce ';
-      $word_secure_transation = 'Transação Segura';
-      $description_secure_transation = 'A intermediação do lojista com os desenvolvedores é feita pela ' . $title;
-      $word_community = 'Comunidade';
-      $description_community = 'Confira a avaliação de outros lojistas sobre os apps ou temas comprados. ';
-      $word_mkp_quality = 'Personalize ';
-      $description_mkp_quality = 'De forma prática e com um preço acessível, deixe sua loja com sua cara! ';
-      $word_how_works = 'Como funciona ';
-      $coin = 'R';
-      $mult_coin = 1;
-      $word_apps_store = 'Loja de Apps';
-      $word_items_found = 'Items encontrados';
-      $word_12_per_page = '12 itens por página';
-      $word_6_per_page = '6 itens por página';
-      $word_price_low_high  = 'Preço (Menor para Maior)';
-      $word_price_high_low = 'Preço (Maior para Menor)';
-      $word_themes_store = 'Loja de Temas';
-      $word_profile_page = 'Perfil ';
-      $word_account_settings = 'Configurações de conta';
-      $Word_sales_statment = 'Histórico de vendas';
-      $word_withdrawals = 'Hitórico de Saques ';
-      $word_manage_itens = 'Gerenciar itens';
-      $word_upload_item = 'Envio de item ';
-      $word_login_account = 'Faça login na sua conta';
-      $description_login = 'Entre agora para sua conta e comece a divulgar seus APP e Temas!';
-      $word_password = 'Senha ';
-      $word_forgot_pssw = 'Esqueceu sua senha?';
-      $word_remember_user = ' Lembre-se de nome de usuário e senha';
-      $word_click_here = 'Clique aqui!';
-      $word_transaction_history = 'Histórico de transações ';
-      $word_favorate = 'Favoritos';
-      $word_enter_username = 'Digite seu Login aqui ...';
-      $word_enter_pass = 'Digite sua Senha aqui ...';
-      $word_invalid_login = 'Login ou Senha Inválidos';
-      $word_sucess_login = 'Login efetuado com Sucesso';
-      break;
-
-    default:
+    case 'en_us':
       $welcome = 'Welcome to ';
       $Word_partner = 'Partners ';
       $word_stores = 'Stores ';
@@ -137,6 +77,66 @@ function get_dictionary () {
       $word_invalid_login = 'Login or password invalid';
       $word_sucess_login = 'Login done successfully';
       break;
+      
+      default:
+        $welcome = 'Bem vindo a ';
+        $Word_partner = 'Parceiros ';
+        $word_stores = 'Lojas ';
+        $word_app = 'Apps ';
+        $word_theme = 'Temas ';
+        $word_and = 'e ';
+        $word_register = 'Registar-se ';
+        $word_search = 'Buscar ';
+        $word_go_item = 'Ir até item';
+        $word_favorate_add = 'Add Favoritos';
+        $desc_promo_partners = 'Divulgue sua APP ou tema aqui com ';
+        $desc_promo_store = 'Encontre os melhores apps e tema para sua ecommerce ';
+        $word_start = 'Começar ';
+        $word_now = 'Agora ';
+        $buy_now = 'Comprar Agora ';
+        $word_buying = 'Comprar ';
+        $apps_trends = 'Tendências de Apps ';
+        $themes_trends = 'Tendências de Temas ';
+        $word_reputation = 'Reputação do Desenvolvedor';
+        $word_language = 'Selecionar Idioma';
+        $word_search_apps_themes = 'Buscar por Apps ou Temas ...';
+        $word_buy_apps = 'Compre & Venda facilmente';
+        $description_buy_apps = 'Marketplace para lojistas e desenvolvedores para e-commerce ';
+        $word_secure_transation = 'Transação Segura';
+        $description_secure_transation = 'A intermediação do lojista com os desenvolvedores é feita pela ' . $title;
+        $word_community = 'Comunidade';
+        $description_community = 'Confira a avaliação de outros lojistas sobre os apps ou temas comprados. ';
+        $word_mkp_quality = 'Personalize ';
+        $description_mkp_quality = 'De forma prática e com um preço acessível, deixe sua loja com sua cara! ';
+        $word_how_works = 'Como funciona ';
+        $coin = 'R';
+        $mult_coin = 1;
+        $word_apps_store = 'Loja de Apps';
+        $word_items_found = 'Items encontrados';
+        $word_12_per_page = '12 itens por página';
+        $word_6_per_page = '6 itens por página';
+        $word_price_low_high  = 'Preço (Menor para Maior)';
+        $word_price_high_low = 'Preço (Maior para Menor)';
+        $word_themes_store = 'Loja de Temas';
+        $word_profile_page = 'Perfil ';
+        $word_account_settings = 'Configurações de conta';
+        $Word_sales_statment = 'Histórico de vendas';
+        $word_withdrawals = 'Hitórico de Saques ';
+        $word_manage_itens = 'Gerenciar itens';
+        $word_upload_item = 'Envio de item ';
+        $word_login_account = 'Faça login na sua conta';
+        $description_login = 'Entre agora para sua conta e comece a divulgar seus APP e Temas!';
+        $word_password = 'Senha ';
+        $word_forgot_pssw = 'Esqueceu sua senha?';
+        $word_remember_user = ' Lembre-se de nome de usuário e senha';
+        $word_click_here = 'Clique aqui!';
+        $word_transaction_history = 'Histórico de transações ';
+        $word_favorate = 'Favoritos';
+        $word_enter_username = 'Digite seu Login aqui ...';
+        $word_enter_pass = 'Digite sua Senha aqui ...';
+        $word_invalid_login = 'Login ou Senha Inválidos';
+        $word_sucess_login = 'Login efetuado com Sucesso';
+        break;
   }
   // array dictionary
   $dictionary = array(
