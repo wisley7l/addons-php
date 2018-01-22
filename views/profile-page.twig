@@ -19,18 +19,18 @@
   {% import 'macro-profile.twig' as silexCasts1 %}
   {{silexCasts.all_header(login,dictionary,user)}}
 	<!-- /HEADER -->
-  {{silexCasts1.autor_header()}}
+  {{silexCasts1.autor_header(dictionary,info_author)}}
 	<!-- SECTION -->
 	<div class="section-wrap">
 		<div class="section overflowable">
 			<!-- SIDEBAR -->
 			<div class="sidebar left author-profile">
 				<!-- SIDEBAR ITEM -->
-				{{silexCasts1.bio_author()}}
+				{{silexCasts1.bio_author(dictionary,info_author)}}
 				<!-- /SIDEBAR ITEM -->
 
 				<!-- DROPDOWN -->
-				{{silexCasts1.profile_board()}}
+				{{silexCasts1.profile_board(dictionary,info_author)}}
 				<!-- /DROPDOWN -->
 
 				<!-- SIDEBAR ITEM -->

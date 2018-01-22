@@ -27,22 +27,24 @@
 
 				<!-- AUTHOR PROFILE INFO ITEM -->
 				<div class="author-profile-info-item">
-					<p class="text-header">Total Sales:</p>
-					<p>820</p>
+					<p class="text-header">{{dictionary.word_total_sales}}</p>
+					<p>{{info_author.total_sales}}</p>
 				</div>
 				<!-- /AUTHOR PROFILE INFO ITEM -->
 
 				<!-- AUTHOR PROFILE INFO ITEM -->
+        {#comments
 				<div class="author-profile-info-item">
 					<p class="text-header">Freelance Work:</p>
 					<p>Available</p>
 				</div>
+        #}
 				<!-- /AUTHOR PROFILE INFO ITEM -->
 
 				<!-- AUTHOR PROFILE INFO ITEM -->
 				<div class="author-profile-info-item">
 					<p class="text-header">Website:</p>
-					<p><a href="http://www.odindesign-themes.com/" class="primary">www.odindesign-themes.com</a></p>
+					<p><a href="http://{{info_author.web_site}}" class="primary">{{info_author.web_site}}</a></p>
 				</div>
 				<!-- /AUTHOR PROFILE INFO ITEM -->
 			</div>
