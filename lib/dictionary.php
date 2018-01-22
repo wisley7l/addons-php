@@ -37,7 +37,7 @@ function get_dictionary () {
       $word_buying = 'Buying ';
       $apps_trends = 'Apps Trends ';
       $themes_trends = 'Themes Trends ';
-      $word_reputation = 'Reputation of the Developer';
+      $word_reputation = "Author's Reputation";
       $word_language = 'Select Language';
       $word_search_apps_themes = 'Search For apps or themes ...';
       $word_buy_apps = 'Buy & Sell easily Apps Easily';
@@ -103,7 +103,7 @@ function get_dictionary () {
       $word_buying = 'Comprar ';
       $apps_trends = 'Tendências de Apps ';
       $themes_trends = 'Tendências de Temas ';
-      $word_reputation = 'Reputação do Desenvolvedor';
+      $word_reputation = 'Reputação do Author';
       $word_language = 'Selecionar Idioma';
       $word_search_apps_themes = 'Buscar por Apps ou Temas ...';
       $word_buy_apps = 'Compre & Venda facilmente';

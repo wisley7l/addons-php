@@ -105,10 +105,10 @@
   </ul>
 {% endmacro %}
 
-{% macro board_reputation() %}
+{% macro board_reputation(dictionary,info_author) %}
   {% import 'macros.twig' as silexCasts %}
   <div class="sidebar-item author-reputation full">
-    <h4>Author's Reputation</h4>
+    <h4>{{dictionary.word_reputation}}</h4>
     <hr class="line-separator">
     <!-- PIE CHART -->
     <div class="pie-chart pie-chart1">
@@ -116,7 +116,7 @@
       <p class="text-header percent-info">{{dictionary.word_recommended}}</p>
       <!-- RATING -->
       <ul class="rating">
-      
+        {{silexCasts.star_on(4)}}
       </ul>
       <!-- /RATING -->
     </div>
