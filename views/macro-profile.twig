@@ -116,7 +116,8 @@
       <p class="text-header percent-info">{{dictionary.word_recommended}}</p>
       <!-- RATING -->
       <ul class="rating">
-        {{silexCasts.star_on(4)}}
+        {{silexCasts.star_on( {{info_author.stars}} )}}
+        {{silexCasts.star_off( 5 - 4 )}}
       </ul>
       <!-- /RATING -->
     </div>
