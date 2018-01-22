@@ -126,7 +126,7 @@
   </div>
 {% endmacro %}
 <!-- -->
-{% macro commets_user(dictionary,name,date,comment) %}
+{% macro commets_user(dictionary,name,date,comment,is_buyer) %}
   <!-- COMMENT -->
   <div class="comment-wrap">
     <!-- USER AVATAR -->
@@ -139,7 +139,9 @@
     <div class="comment">
       <p class="text-header">{{name}}</p>
       <!-- PIN -->
-      <span class="pin greyed">-</span>
+      {% if is_buyer == true %}
+      <span class="pin greyed"></span>
+      {% endif %}
       <!-- /PIN -->
       <p class="timestamp">{{date}}</p>
       <a href="#" class="report">Report</a>

@@ -70,7 +70,7 @@
 				<div class="comment-list">
 
           {% for comment in comments  %}
-          {{silexCasts1.commets_user(dictionary,comment.name)}}
+          {{silexCasts1.commets_user(dictionary,comment.name,comment.date,comment.comment,comment.is_buyer)}}
           {% endfor %}
 
 					<!-- COMMENT -->
