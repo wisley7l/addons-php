@@ -50,7 +50,15 @@ $info_footer = array(
   'count_partners' => $count_partners,
   'path_file' => $_SERVER['PATH_FILE']
 );
-
+//obs: query athor in db
+$info_author = array(
+  'id' => 001,
+  'name' => 'Author',
+  'location' => 'Brazil',
+  'member_since' => '',
+  'total_sales' => 100,
+  'web_site' => ''
+);
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
@@ -60,7 +68,7 @@ echo $twig->render('profile-page.twig', array(
   'login' => $login,
   'implemented' => false,
   'info_footer' => $info_footer,
-    // test itens
-  'user' => $user_login
-
+    // test 
+  'user' => $user_login,
+  'info_author' => $info_author
 ));
