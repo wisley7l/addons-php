@@ -79,18 +79,18 @@
 <!-- -->
 {% macro profile_board(dictionary,info_author) %}
   <ul class="dropdown hover-effect">
-    <li class="dropdown-item active">
+    <li class="dropdown-item active" id="board-profile-page">
       <a href="profile-page">{{dictionary.word_profile_author}}</a>
     </li>
-    <li class="dropdown-item">
+    <li class="dropdown-item" id="board-author-itens-page">
       <a href="author-profile-items.html">{{dictionary.word_author_items}} ({{info_author.number_apps_themes}})</a>
+    </li>
+    <li class="dropdown-item" id="board-profile-reviws-page">
+      <a href="author-profile-reviews.html">Customer Reviews (42)</a>
     </li>
     {# comments
     <li class="dropdown-item">
       <a href="author-profile-messages.html">Message Board</a>
-    </li>
-    <li class="dropdown-item">
-      <a href="author-profile-reviews.html">Customer Reviews (42)</a>
     </li>
     <li class="dropdown-item">
       <a href="author-profile-followers.html">Followers (5)</a>

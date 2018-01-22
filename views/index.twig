@@ -121,12 +121,13 @@
 	</div>
 	<!-- /SERVICES -->
 
+	{% if login == false %}
 	<!-- PROMO -->
 	<div class="promo-banner dark left">
 		<span class="icon-wallet"></span>
 		<h5>{{ dictionary.desc_promo_partners }} {{ dictionary.title }}!</h5>
 		<h1>{{ dictionary.word_start }} <span>{{ dictionary.word_now }}</span></h1>
-		<a href="#" class="button medium primary">{{ dictionary.word_register }}!</a>
+		<a href="register-page" class="button medium primary">{{ dictionary.word_register }}!</a>
 	</div>
 	<!-- /PROMO -->
 
@@ -138,7 +139,7 @@
 		<a href="#" class="button medium dark">{{ dictionary.buy_now }}</a>
 	</div>
 	<!-- /PROMO -->
-
+	{% endif %}
 	<div class="clearfix"></div>
 
 	<!-- PRODUCT SIDESHOW -->
