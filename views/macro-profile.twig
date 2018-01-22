@@ -83,7 +83,7 @@
       <a href="profile-page">{{dictionary.word_profile_author}}</a>
     </li>
     <li class="dropdown-item" id="board-author-itens-page">
-      <a href="author-profile-items.html">{{dictionary.word_author_items}} ({{info_author.number_apps_themes}})</a>
+      <a href="author-items-page">{{dictionary.word_author_items}} ({{info_author.number_apps_themes}})</a>
     </li>
     <li class="dropdown-item" id="board-profile-reviws-page">
       <a href="author-profile-reviews.html">Customer Reviews (42)</a>
@@ -128,7 +128,7 @@
   <!-- SIDEBAR ITEM -->
 {% endmacro %}
 <!-- -->
-{% macro commets_user(dictionary,name,date,comment,is_buyer) %}
+{% macro comments_user(dictionary,name,date,comment,is_buyer) %}
   <!-- COMMENT -->
   <div class="comment-wrap">
     <!-- USER AVATAR -->
