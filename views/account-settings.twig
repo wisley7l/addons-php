@@ -9,6 +9,7 @@
 	<link rel="icon" href="favicon.ico">
 	<title>Emerald Dragon | Dashboard</title>
 </head>
+{% if login == true %}
 <body>
 
 	<!-- SIDE MENU -->
@@ -746,4 +747,9 @@
 <!-- Dashboard Header -->
 <script src="js/dashboard-header.js"></script>
 </body>
+{% else %}
+<body>
+  <h1> ERROR LOGIN </h1>
+</body>
+{% endif %}
 </html>
