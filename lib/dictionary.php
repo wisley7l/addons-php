@@ -21,7 +21,7 @@ function get_dictionary () {
     case 'en_us':
       $welcome = 'Welcome to ';
       $Word_partner = 'Partners ';
-      $word_stores = 'Stores ';
+      $word_shopkeeper = 'Shopkeeper ';
       $word_app = 'Apps ';
       $word_theme = 'Themes ';
       $word_and = 'and ';
@@ -93,7 +93,7 @@ function get_dictionary () {
     default:
       $welcome = 'Bem vindo a ';
       $Word_partner = 'Parceiros ';
-      $word_stores = 'Lojas ';
+      $word_shopkeeper = 'Lojistas ';
       $word_app = 'Apps ';
       $word_theme = 'Temas ';
       $word_and = 'e ';
@@ -109,7 +109,7 @@ function get_dictionary () {
       $word_buying = 'Comprar ';
       $apps_trends = 'Tendências de Apps ';
       $themes_trends = 'Tendências de Temas ';
-      $word_reputation = 'Reputação do Author';
+      $word_reputation = 'Reputação do Autor';
       $word_language = 'Selecionar Idioma';
       $word_search_apps_themes = 'Buscar por Apps ou Temas ...';
       $word_buy_apps = 'Compre & Venda facilmente';
@@ -170,7 +170,7 @@ function get_dictionary () {
     'e_com' => 'E-Com Plus ',
     'addons' => 'Addons ',
     'word_partner' => $Word_partner,
-    'word_stores' => $word_stores,
+    'word_shopkeeper' => $word_stores,
     'word_app' => $word_app,
     'word_theme' => $word_theme,
     'word_and' => $word_and,
