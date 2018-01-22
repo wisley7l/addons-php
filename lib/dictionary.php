@@ -141,7 +141,7 @@ function get_dictionary () {
       $word_sucess_login = 'Login efetuado com Sucesso';
       $word_profile_author = 'Perfil do Autor';
       $word_member_since = 'Member Since:';
-      $total_sales = 'Total Sales:';
+      $word_total_sales = 'Total Sales:';
       break;
   }
   // array dictionary
@@ -212,7 +212,7 @@ function get_dictionary () {
     'word_sucess_login' => $word_sucess_login,
     'word_profile_author' => $word_profile_author,
     'word_member_since' => $word_member_since,
-    'total_sales' => $total_sales
+    'word_total_sales' => $word_total_sales
   );
   return $dictionary;
 }

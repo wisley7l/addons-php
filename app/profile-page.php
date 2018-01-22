@@ -55,6 +55,7 @@ $info_author = array(
   'id' => 001,
   'name' => 'Author',
   'location' => 'Brazil',
+  'description' => 'dev',
   'member_since' => '',
   'total_sales' => 100,
   'web_site' => ''
@@ -68,7 +69,7 @@ echo $twig->render('profile-page.twig', array(
   'login' => $login,
   'implemented' => false,
   'info_footer' => $info_footer,
-    // test 
+    // test
   'user' => $user_login,
   'info_author' => $info_author
 ));
