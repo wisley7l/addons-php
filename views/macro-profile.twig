@@ -125,3 +125,30 @@
     <a href="#" class="button mid dark-light">Read all the Customer Reviews</a>
   </div>
 {% endmacro %}
+<!-- -->
+{% macro commets_user(dictionary,name,date,comment) %}
+  <!-- COMMENT -->
+  <div class="comment-wrap">
+    <!-- USER AVATAR -->
+    <a href="user-profile.html">
+      <figure class="user-avatar medium">
+        <img src="../images/avatars/avatar_02.jpg" alt="">
+      </figure>
+    </a>
+    <!-- /USER AVATAR -->
+    <div class="comment">
+      <p class="text-header">{{name}}</p>
+      <!-- PIN -->
+      <span class="pin greyed">Purchased</span>
+      <!-- /PIN -->
+      <p class="timestamp">{{date}}</p>
+      <a href="#" class="report">Report</a>
+      <p>{{comment}}</p>
+    </div>
+  </div>
+  <!-- /COMMENT -->
+
+  <!-- LINE SEPARATOR -->
+  <hr class="line-separator">
+  <!-- /LINE SEPARATOR -->
+{% endmacro %}
