@@ -218,7 +218,7 @@ function get_dictionary () {
     'word_member_since' => $word_member_since,
     'word_total_sales' => $word_total_sales,
     'word_author_items' => $word_author_itens,
-    'author_badges' => $word_author_badges
+    'word_author_badges' => $word_author_badges
   );
   return $dictionary;
 }
