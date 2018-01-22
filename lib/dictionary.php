@@ -87,6 +87,7 @@ function get_dictionary () {
       $word_see_all_message = 'See all the Messages';
       $word_lastes_message = 'Latest Messages';
       $word_buyer = 'PURCHASED';
+      $Word_read_all_reviews = 'Read all the Customer Reviews ';
       break;
 
     default:
@@ -158,6 +159,7 @@ function get_dictionary () {
       $word_see_all_message = 'Ver todas as Mensagens';
       $word_lastes_message = 'Últimas Mensagens';
       $word_buyer = 'COMPRADOR';
+      $Word_read_all_reviews = 'Ler Todos os comentários dos Clientes';
       break;
   }
   // array dictionary
@@ -236,7 +238,8 @@ function get_dictionary () {
     'word_lastes_items' => $word_lastes_items,
     'word_see_all_message' => $word_see_all_message,
     'word_lastes_message' => $word_lastes_message,
-    'word_buyer' => $word_buyer 
+    'word_buyer' => $word_buyer,
+    'word_read_all_reviews' => $word_read_all_reviews
   );
   return $dictionary;
 }
