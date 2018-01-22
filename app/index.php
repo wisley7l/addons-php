@@ -36,7 +36,7 @@ if (isset($_GET['logout'])){
   // if attempt is true, destroy session values and redirect to index page
   session_destroy();
   // obs. check redirection on all pages
-  header("Location: ");
+  header("Location: index");
 }
 //(end) * Required on all pages *
 
