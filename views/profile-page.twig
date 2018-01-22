@@ -16,12 +16,37 @@
 
 	<!-- HEADER -->
   {% import 'macros.twig' as silexCasts %}
-  {% import 'macro-profile.twig' as silexCasts1 %}
   {{silexCasts.all_header(login,dictionary,user)}}
 	<!-- /HEADER -->
-  <!-- header author -->
-  {{silexCasts1.autor_header()}}
-  <!-- /header author -->
+
+	<!-- SECTION -->
+	<div class="section-wrap">
+		<div class="section overflowable">
+			<!-- SIDEBAR -->
+			<div class="sidebar left author-profile">
+				<!-- SIDEBAR ITEM -->
+				<div class="sidebar-item author-bio">
+					<!-- USER AVATAR -->
+					<a href="user-profile.html" class="user-avatar-wrap medium">
+						<figure class="user-avatar medium">
+							<img src="../images/avatars/avatar_09.jpg" alt="">
+						</figure>
+					</a>
+					<!-- /USER AVATAR -->
+					<p class="text-header">Odin_Design</p>
+					<p class="text-oneline">Super Samurai Developers<br>Los Angeles, Usa</p>
+					<!-- SHARE LINKS -->
+					<ul class="share-links">
+						<li><a href="#" class="fb"></a></li>
+						<li><a href="#" class="twt"></a></li>
+						<!--(not implemented)li><a href="#" class="db"></a></li-->
+					</ul>
+					<!-- /SHARE LINKS -->
+					<!-- (not implemented)a href="#" class="button mid dark spaced">Add to <span class="primary">Followers</span></a -->
+					<!--(not implemented)a href="#" class="button mid dark-light">Send a Private Message</a-->
+				</div>
+				<!-- /SIDEBAR ITEM -->
+
 				<!-- DROPDOWN -->
 				<ul class="dropdown hover-effect">
 					<li class="dropdown-item active">
