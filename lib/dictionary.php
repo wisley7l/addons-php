@@ -82,6 +82,8 @@ function get_dictionary () {
       $word_author_itens = "Author's Items";
       $word_author_badges = 'Author Badges';
       $word_recommended = 'Recommended';
+      $word_see_all_items = 'See all the items ';
+      $word_lastes_items = 'Latest Items';
       break;
 
     default:
@@ -148,6 +150,8 @@ function get_dictionary () {
       $word_author_itens = 'Itens do Autor';
       $word_author_badges = 'Badges do Autor';
       $word_recommended = 'Recomendado';
+      $word_see_all_items = 'Ver Todos os itens ';
+      $word_lastes_items = 'Itens Recentes';
       break;
   }
   // array dictionary
@@ -221,7 +225,9 @@ function get_dictionary () {
     'word_total_sales' => $word_total_sales,
     'word_author_items' => $word_author_itens,
     'word_author_badges' => $word_author_badges,
-    'word_recommended' => $word_recommended
+    'word_recommended' => $word_recommended,
+    'word_see_all_items' => $word_see_all_items,
+    'word_lastes_items' => $word_lastes_items
   );
   return $dictionary;
 }
