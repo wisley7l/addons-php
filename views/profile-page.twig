@@ -68,9 +68,11 @@
 
 				<!-- COMMENTS -->
 				<div class="comment-list">
-          {% for commnet in commnets  %}
-          {{silexCasts1.commets_user(dictionary,commnet.name,comment.date,commnet.comment)}}
+
+          {% for commnet in comments  %}
+          {{silexCasts1.commets_user(dictionary)}}
           {% endfor %}
+
 					<!-- COMMENT -->
 					<div class="comment-wrap">
 						<!-- USER AVATAR -->
