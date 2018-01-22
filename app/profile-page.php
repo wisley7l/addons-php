@@ -58,7 +58,10 @@ $info_author = array(
   'description' => 'dev',
   'member_since' => '',
   'total_sales' => 100,
-  'web_site' => ''
+  'web_site' => '',
+  'path_image' => '../images/avatars/avatar_09.jpg',
+  'number_apps_themes' => 3,
+  'number_badges' => 1
 );
 
 // intial twig and send varibles for template

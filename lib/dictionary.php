@@ -77,8 +77,10 @@ function get_dictionary () {
       $word_invalid_login = 'Login or password invalid';
       $word_sucess_login = 'Login done successfully';
       $word_profile_author = "Author's Profile";
-      $word_member_since = 'Membro desde:';
-      $total_sales = 'Total de Vendas';
+      $word_member_since = 'Member Since:';
+      $word_total_sales = 'Total Sales:';
+      $word_author_itens = "Author's Items";
+      $word_author_badges = 'Author Badges';
       break;
 
     default:
@@ -140,8 +142,10 @@ function get_dictionary () {
       $word_invalid_login = 'Login ou Senha Inválidos';
       $word_sucess_login = 'Login efetuado com Sucesso';
       $word_profile_author = 'Perfil do Autor';
-      $word_member_since = 'Member Since:';
-      $word_total_sales = 'Total Sales:';
+      $word_member_since = 'Membro desde:';
+      $word_total_sales = 'Total de Vendas';
+      $word_author_itens = 'Itens do Autor';
+      $word_author_badges = 'Badges do Autor';
       break;
   }
   // array dictionary
@@ -212,7 +216,9 @@ function get_dictionary () {
     'word_sucess_login' => $word_sucess_login,
     'word_profile_author' => $word_profile_author,
     'word_member_since' => $word_member_since,
-    'word_total_sales' => $word_total_sales
+    'word_total_sales' => $word_total_sales,
+    'word_author_items' => $word_author_itens,
+    'author_badges' => $word_author_badges
   );
   return $dictionary;
 }

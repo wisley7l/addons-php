@@ -59,7 +59,7 @@
     <!-- USER AVATAR -->
     <a href="user-profile.html" class="user-avatar-wrap medium">
       <figure class="user-avatar medium">
-        <img src="../images/avatars/avatar_09.jpg" alt="">
+        <img src="{{info_author.path_image}}" alt="">
       </figure>
     </a>
     <!-- /USER AVATAR -->
@@ -80,11 +80,12 @@
 {% macro profile_board(dictionary,info_author) %}
   <ul class="dropdown hover-effect">
     <li class="dropdown-item active">
-      <a href="author-profile.html">Profile Page</a>
+      <a href="author-profile.html">{{dictionary.word_profile_page}}</a>
     </li>
     <li class="dropdown-item">
-      <a href="author-profile-items.html">Author's Items (103)</a>
+      <a href="author-profile-items.html">{{dictionary.word_author_itens}} ({{info_author.number_apps_themes}})</a>
     </li>
+    {# comments
     <li class="dropdown-item">
       <a href="author-profile-messages.html">Message Board</a>
     </li>
@@ -97,8 +98,9 @@
     <li class="dropdown-item">
       <a href="author-profile-following.html">Following (2)</a>
     </li>
+    #}
     <li class="dropdown-item">
-      <a href="author-badges.html">Author Badges (16)</a>
+      <a href="author-badges.html">{{dictionary.word_author_badges}} ({{info_author.number_badges}})</a>
     </li>
   </ul>
 {% endmacro %}
