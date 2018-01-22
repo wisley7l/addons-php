@@ -159,7 +159,7 @@ function get_dictionary () {
       $word_see_all_message = 'Ver todas as Mensagens';
       $word_lastes_message = 'Últimas Mensagens';
       $word_buyer = 'COMPRADOR';
-      $word_read_all_reviews = 'Ler Todos os comentários dos Clientes';
+      $word_read_all_reviews = 'Ler Todos os Comentários';
       break;
   }
   // array dictionary
