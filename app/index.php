@@ -36,19 +36,17 @@ if (isset($_GET['logout'])){
   // if attempt is true, destroy session values and redirect to index page
   session_destroy();
   // obs. check redirection on all pages
-  header("Location: ".$_SERVER['PATH_FILE']);
+  header("Location: ");
 }
 //(end) * Required on all pages *
 
 // necessary variables for information
 // number of partners and stores, and total apps and themes
 // obs: query db for information or configure as static (avoid excessive queries)
-$total_apps_and_themes = 0;
-$count_stores = 0;
-$count_partners = 0;
+$total_apps_and_themes = 0; // not implemented in the first moment
+$count_partners = 0; // not implemented in the first moment
 $info_footer = array(
   'total_apps_and_themes' => $total_apps_and_themes,
-  'count_stores' => $count_stores,
   'count_partners' => $count_partners,
   'path_file' => $_SERVER['PATH_FILE']
 );
