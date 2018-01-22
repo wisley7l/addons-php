@@ -56,12 +56,14 @@ $info_author = array(
   'name' => 'Author',
   'location' => 'Brazil',
   'description' => 'dev',
-  'member_since' => '',
+  'member_since' => '1 Janary 2018',
   'total_sales' => 100,
-  'web_site' => '',
+  'web_site' => 'www.example.com',
   'path_image' => '../images/avatars/avatar_09.jpg',
   'number_apps_themes' => 3,
-  'number_badges' => 1
+  'number_badges' => 1,
+  'stars' => 4,
+  'evaluations' => 5
 );
 
 // intial twig and send varibles for template

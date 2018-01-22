@@ -81,6 +81,7 @@ function get_dictionary () {
       $word_total_sales = 'Total Sales:';
       $word_author_itens = "Author's Items";
       $word_author_badges = 'Author Badges';
+      $word_recommended = 'Recommended';
       break;
 
     default:
@@ -146,6 +147,7 @@ function get_dictionary () {
       $word_total_sales = 'Total de Vendas';
       $word_author_itens = 'Itens do Autor';
       $word_author_badges = 'Badges do Autor';
+      $word_recommended = 'Recomendado';
       break;
   }
   // array dictionary
@@ -218,7 +220,8 @@ function get_dictionary () {
     'word_member_since' => $word_member_since,
     'word_total_sales' => $word_total_sales,
     'word_author_items' => $word_author_itens,
-    'word_author_badges' => $word_author_badges
+    'word_author_badges' => $word_author_badges,
+    'word_recommended' => $word_recommended
   );
   return $dictionary;
 }
