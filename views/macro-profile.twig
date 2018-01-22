@@ -1,5 +1,5 @@
 <!-- header autor -->
-{% macro autor_header() %}
+{% macro autor_header(dictionary,info_author) %}
 	<!-- SECTION HEADLINE -->
 	<div class="section-headline-wrap">
 		<div class="section-headline">
@@ -20,8 +20,8 @@
 			<div class="author-profile-info">
 				<!-- AUTHOR PROFILE INFO ITEM -->
 				<div class="author-profile-info-item">
-					<p class="text-header">Member Since:</p>
-					<p>December 26th, 2013</p>
+					<p class="text-header">{{dictionary.word_member_since}}</p>
+					<p>{{info_author.member_since}}</p>
 				</div>
 				<!-- /AUTHOR PROFILE INFO ITEM -->
 
@@ -52,7 +52,7 @@
 	<!-- /AUTHOR PROFILE META -->
 {% endmacro %}
 <!-- bio author -->
-{% macro bio_author() %}
+{% macro bio_author(dictionary,info_author) %}
   <div class="sidebar-item author-bio">
     <!-- USER AVATAR -->
     <a href="user-profile.html" class="user-avatar-wrap medium">
@@ -75,7 +75,7 @@
   </div>
 {% endmacro %}
 <!-- -->
-{% macro profile_board() %}
+{% macro profile_board(dictionary,info_author) %}
   <ul class="dropdown hover-effect">
     <li class="dropdown-item active">
       <a href="author-profile.html">Profile Page</a>

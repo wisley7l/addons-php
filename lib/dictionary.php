@@ -77,6 +77,7 @@ function get_dictionary () {
       $word_invalid_login = 'Login or password invalid';
       $word_sucess_login = 'Login done successfully';
       $word_profile_author = "Author's Profile";
+      $word_member_since = 'Membro desde:';
       break;
 
       default:
@@ -138,6 +139,7 @@ function get_dictionary () {
         $word_invalid_login = 'Login ou Senha Inválidos';
         $word_sucess_login = 'Login efetuado com Sucesso';
         $word_profile_author = 'Perfil do Autor';
+        $word_member_since = 'Member Since:';
         break;
   }
   // array dictionary
@@ -206,7 +208,8 @@ function get_dictionary () {
     'word_enter_pass' => $word_enter_pass,
     'word_invalid_login' => $word_invalid_login,
     'word_sucess_login' => $word_sucess_login,
-    'word_profile_author' => $word_profile_author
+    'word_profile_author' => $word_profile_author,
+    'word_member_since' => $word_member_since
   );
   return $dictionary;
 }
