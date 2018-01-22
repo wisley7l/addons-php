@@ -16,9 +16,10 @@
 
 	<!-- HEADER -->
   {% import 'macros.twig' as silexCasts %}
+  {% import 'macro-profile.twig' as silexCasts1 %}
   {{silexCasts.all_header(login,dictionary,user)}}
 	<!-- /HEADER -->
-
+  {{silexCasts1.autor_header()}}
 	<!-- SECTION -->
 	<div class="section-wrap">
 		<div class="section overflowable">
