@@ -170,7 +170,7 @@ function get_dictionary () {
     'e_com' => 'E-Com Plus ',
     'addons' => 'Addons ',
     'word_partner' => $Word_partner,
-    'word_shopkeeper' => $word_stores,
+    'word_shopkeeper' => $word_shopkeeper,
     'word_app' => $word_app,
     'word_theme' => $word_theme,
     'word_and' => $word_and,
