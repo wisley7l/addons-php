@@ -69,8 +69,8 @@
 				<!-- COMMENTS -->
 				<div class="comment-list">
 
-          {% for commnet in comments  %}
-          {{silexCasts1.commets_user(dictionary)}}
+          {% for comment in comments  %}
+          {{silexCasts1.commets_user(dictionary,comment.name)}}
           {% endfor %}
 
 					<!-- COMMENT -->
