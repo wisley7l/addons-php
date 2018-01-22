@@ -62,7 +62,7 @@ $info_author = array(
   'path_image' => '../images/avatars/avatar_09.jpg',
   'number_apps_themes' => 3,
   'number_badges' => 1,
-  'stars' => 4,
+  'stars' => 3,
   'evaluations' => 5
 );
 
