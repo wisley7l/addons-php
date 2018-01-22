@@ -65,11 +65,15 @@ $info_author = array(
   'stars' => 3,
   'evaluations' => 5
 );
-// test apps  // Perform db query to obtain this information limit 3
+// test apps  // Perform db query to obtain this information limit 2
 $apps = array(
   array('name' => 'APP1', 'name_partner' => 'Author', 'value' => 12.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
   array('name' => 'APP2', 'name_partner' => 'Author', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'APP3', 'name_partner' => 'Author', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' )
+);
+// test themes  // Perform db query to obtain this information limit 2
+$themes = array(
+  array('name' => 'THEME1', 'name_partner' => 'Author', 'value' => 10.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
+  array('name' => 'THEME2', 'name_partner' => 'Author', 'value' => 18.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
 );
 
 // intial twig and send varibles for template
@@ -83,5 +87,6 @@ echo $twig->render('profile-page.twig', array(
     // test
   'user' => $user_login,
   'info_author' => $info_author,
-  'apps' => $apps
+  'apps' => $apps,
+  'themes' => $themes
 ));
