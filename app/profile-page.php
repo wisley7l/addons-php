@@ -69,12 +69,18 @@ $info_author = array(
 $apps = array(
   array('name' => 'APP1', 'name_partner' => 'Author', 'value' => 12.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
   array('name' => 'APP2', 'name_partner' => 'Author', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
+  array('name' => 'APP3', 'name_partner' => 'Author', 'value' => 5.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
 );
 // test themes  // Perform db query to obtain this information limit 2
 $themes = array(
   array('name' => 'THEME1', 'name_partner' => 'Author', 'value' => 10.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
   array('name' => 'THEME2', 'name_partner' => 'Author', 'value' => 18.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
+  array('name' => 'THEME3', 'name_partner' => 'Author', 'value' => 28.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
 );
+// test comments
+// query comments in db
+
+
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');

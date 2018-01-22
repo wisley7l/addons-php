@@ -84,6 +84,9 @@ function get_dictionary () {
       $word_recommended = 'Recommended';
       $word_see_all_items = 'See all the items ';
       $word_lastes_items = 'Latest Items';
+      $word_see_all_message = 'See all the Messages';
+      $word_lastes_message = 'Latest Messages';
+
       break;
 
     default:
@@ -152,6 +155,8 @@ function get_dictionary () {
       $word_recommended = 'Recomendado';
       $word_see_all_items = 'Ver Todos os itens ';
       $word_lastes_items = 'Itens Recentes';
+      $word_see_all_message = 'Ver todas as Mensagens';
+      $word_lastes_message = 'Últimas Mensagens';
       break;
   }
   // array dictionary
@@ -227,7 +232,9 @@ function get_dictionary () {
     'word_author_badges' => $word_author_badges,
     'word_recommended' => $word_recommended,
     'word_see_all_items' => $word_see_all_items,
-    'word_lastes_items' => $word_lastes_items
+    'word_lastes_items' => $word_lastes_items,
+    'word_see_all_message' => $word_see_all_message,
+    'word_lastes_message' => $word_lastes_message
   );
   return $dictionary;
 }
