@@ -51,35 +51,30 @@
 	</div>
 	<!-- /AUTHOR PROFILE META -->
 {% endmacro %}
-
-
+<!-- bio author -->
+{% macro bio_author() %}
+  <div class="sidebar-item author-bio">
+    <!-- USER AVATAR -->
+    <a href="user-profile.html" class="user-avatar-wrap medium">
+      <figure class="user-avatar medium">
+        <img src="../images/avatars/avatar_09.jpg" alt="">
+      </figure>
+    </a>
+    <!-- /USER AVATAR -->
+    <p class="text-header">Odin_Design</p>
+    <p class="text-oneline">Super Samurai Developers<br>Los Angeles, Usa</p>
+    <!-- SHARE LINKS -->
+    <ul class="share-links">
+      <li><a href="#" class="fb"></a></li>
+      <li><a href="#" class="twt"></a></li>
+      <!--(not implemented)li><a href="#" class="db"></a></li-->
+    </ul>
+    <!-- /SHARE LINKS -->
+    <!-- (not implemented)a href="#" class="button mid dark spaced">Add to <span class="primary">Followers</span></a -->
+    <!--(not implemented)a href="#" class="button mid dark-light">Send a Private Message</a-->
+  </div>
+{% endmacro %}
 <!-- -->
 {% macro profile_board() %}
-<!-- DROPDOWN -->
-<ul class="dropdown hover-effect">
-  <li class="dropdown-item active">
-    <a href="author-profile.html">Profile Page</a>
-  </li>
-  <li class="dropdown-item">
-    <a href="author-profile-items.html">Author's Items (103)</a>
-  </li>
-  {#comments
-  <li class="dropdown-item">
-    <a href="author-profile-messages.html">Message Board</a>
-  </li>
-  <li class="dropdown-item">
-    <a href="author-profile-reviews.html">Customer Reviews (42)</a>
-  </li>
-  <li class="dropdown-item">
-    <a href="author-profile-followers.html">Followers (5)</a>
-  </li>
-  <li class="dropdown-item">
-    <a href="author-profile-following.html">Following (2)</a>
-  </li>
-  #}
-  <li class="dropdown-item">
-    <a href="author-badges.html">Author Badges (16)</a>
-  </li>
-</ul>
-<!-- /DROPDOWN -->
+
 {% endmacro %}
