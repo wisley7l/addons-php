@@ -60,9 +60,9 @@ function get_dictionary () {
       $word_themes_store = 'Themes Store';
       $word_profile_page = 'Profile page ';
       $word_account_settings = 'Account Settings';
-      $Word_sales_statment = 'Sales Statment ';
+      $word_sales_statment = 'Sales Statment ';
       $word_withdrawals = 'Withdrawls ';
-      $word_manage_itens = 'Manage itens';
+      $word_manage_items = 'Manage items';
       $word_upload_item = 'Upload item';
       $word_login_account = 'Login to your Account';
       $description_login = 'Log in now to your account and start releasing your APP and Themes!';
@@ -88,6 +88,10 @@ function get_dictionary () {
       $word_lastes_message = 'Latest Messages';
       $word_buyer = 'PURCHASED';
       $word_read_all_reviews = 'Read all the Customer Reviews ';
+      $word_your_account = 'Your Account';
+      $word_info_account = 'Account information';
+      $word_tool_acoount = 'Account Tools';
+      $word_your_dashboard = 'Your Dashboard';
       break;
 
     default:
@@ -132,9 +136,9 @@ function get_dictionary () {
       $word_themes_store = 'Loja de Temas';
       $word_profile_page = 'Perfil ';
       $word_account_settings = 'Configurações de conta';
-      $Word_sales_statment = 'Histórico de vendas';
+      $word_sales_statment = 'Histórico de vendas';
       $word_withdrawals = 'Hitórico de Saques ';
-      $word_manage_itens = 'Gerenciar itens';
+      $word_manage_items = 'Gerenciar itens';
       $word_upload_item = 'Envio de item ';
       $word_login_account = 'Faça login na sua conta';
       $description_login = 'Entre agora para sua conta e comece a divulgar seus APP e Temas!';
@@ -160,6 +164,10 @@ function get_dictionary () {
       $word_lastes_message = 'Últimas Mensagens';
       $word_buyer = 'COMPRADOR';
       $word_read_all_reviews = 'Ler Todos os Comentários';
+      $word_your_account = 'Sua Conta';
+      $word_info_account = 'Informações da Conta';
+      $word_tool_acoount = 'Ferramentas da Conta';
+      $word_your_dashboard = 'Seu Painel';
       break;
   }
   // array dictionary
@@ -212,9 +220,9 @@ function get_dictionary () {
     'word_themes_store' => $word_themes_store,
     'word_profile_page' => $word_profile_page,
     'word_account_settings' => $word_account_settings,
-    'Word_sales_statment' => $Word_sales_statment,
+    'word_sales_statment' => $word_sales_statment,
     'word_withdrawals' => $word_withdrawals,
-    'word_manage_itens' => $word_manage_itens,
+    'word_manage_items' => $word_manage_items,
     'word_upload_item' => $word_upload_item,
     'word_login_account' => $word_login_account,
     'description_login' => $description_login,
@@ -239,7 +247,11 @@ function get_dictionary () {
     'word_see_all_message' => $word_see_all_message,
     'word_lastes_message' => $word_lastes_message,
     'word_buyer' => $word_buyer,
-    'word_read_all_reviews' => $word_read_all_reviews
+    'word_read_all_reviews' => $word_read_all_reviews,
+    'word_your_account' => $word_your_account,
+    'word_info_account' => $word_info_account,
+    'word_tool_acoount' => $word_tool_acoount,
+    'word_your_dashboard' => $word_your_dashboard
   );
   return $dictionary;
 }

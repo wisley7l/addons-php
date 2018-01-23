@@ -22,7 +22,7 @@
         <!-- /USER AVATAR -->
 
         <!-- USER INFORMATION -->
-        <p class="user-name">{{user.name}}</p>
+        <p class="user-name">{{user.name_user}}</p>
         <p class="user-money">{{dictionary.coin}}${{user.credits}}</p>
         <!-- /USER INFORMATION -->
       </div>
@@ -31,16 +31,16 @@
     <!-- /SIDE MENU HEADER -->
 
     <!-- SIDE MENU TITLE -->
-    <p class="side-menu-title">Your Account</p>
+    <p class="side-menu-title">{{dictionary.word_your_account}}</p>
     <!-- /SIDE MENU TITLE -->
 
     <!-- DROPDOWN -->
     <ul class="dropdown dark hover-effect interactive">
       <!-- DROPDOWN ITEM -->
       <li class="dropdown-item active">
-        <a href="dashboard-settings.html">
+        <a href="dashboard-settings">
                     <span class="sl-icon icon-settings"></span>
-                    Account Settings
+                    {{dictionary.word_account_settings}}
                 </a>
       </li>
       <!-- /DROPDOWN ITEM -->
@@ -134,7 +134,7 @@
     <!-- /DROPDOWN -->
 
         <!-- SIDE MENU TITLE -->
-    <p class="side-menu-title">Info &amp; Statistics</p>
+    <p class="side-menu-title">{{dictionary.word_info_account}}</p>
     <!-- /SIDE MENU TITLE -->
 
     <!-- DROPDOWN -->
@@ -143,7 +143,7 @@
       <li class="dropdown-item">
         <a href="dashboard-statement.html">
                     <span class="sl-icon icon-layers"></span>
-                    Sales Statement
+                  {{dictionary.word_sales_statment}}
                 </a>
       </li>
       <!-- /DROPDOWN ITEM -->
@@ -161,7 +161,7 @@
     <!-- /DROPDOWN -->
 
          <!-- SIDE MENU TITLE -->
-    <p class="side-menu-title">Author Tools</p>
+    <p class="side-menu-title">{{dictionary.word_tool_acoount}}</p>
     <!-- /SIDE MENU TITLE -->
 
     <!-- DROPDOWN -->
@@ -170,7 +170,7 @@
       <li class="dropdown-item">
         <a href="dashboard-uploaditem.html">
                     <span class="sl-icon icon-arrow-up-circle"></span>
-                    Upload Item
+                    {{dictionary.word_upload_item}}
                 </a>
       </li>
       <!-- /DROPDOWN ITEM -->
@@ -179,7 +179,7 @@
       <li class="dropdown-item">
         <a href="dashboard-manageitems.html">
                     <span class="sl-icon icon-folder-alt"></span>
-                    Manage Items
+                    {{dictionary.word_manage_itens}}
                 </a>
       </li>
       <!-- /DROPDOWN ITEM -->
@@ -188,7 +188,7 @@
       <li class="dropdown-item">
         <a href="dashboard-withdrawals.html">
                     <span class="sl-icon icon-wallet"></span>
-                    Withdrawals
+                    {{dictionary.word_withdrawals}}
                 </a>
       </li>
       <!-- /DROPDOWN ITEM -->
