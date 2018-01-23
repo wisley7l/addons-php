@@ -40,7 +40,7 @@ $( document ).ready(function() {
 });
 //
 $("#addons-button-save").click(function(event){
-  let div = "div#form-box-item";
+  let div = "div.form-box-item";
   console.log("OK");
   let id = $(div).find("input.addons-up-id").val();
   let name = $(div).find("input.addons-up-name").val();
