@@ -308,8 +308,13 @@
 {% macro form_profile_info(dictionary,user) %}
   <div class="form-box-item">
     <form id="addons-up-partner" action="scripts/up-partner" method="post">
-      <input type="hidden" id="addons-login-user" name="user" />
-      <input type="hidden" id="addons-login-pass" name="pass" />
+      <input type="hidden" id="addons-up-id" name="id" />
+      <input type="hidden" id="addons-up-name" name="name" />
+      <input type="hidden" id="addons-up-pass" name="pass" />
+      <input type="hidden" id="addons-up-rp-pass" name="rp-pass" />
+      <input type="hidden" id="addons-up-email" name="email" />
+      <input type="hidden" id="addons-up-website" name="website" />
+      <input type="hidden" id="addons-up-about" name="about" />
     </form>
 
     <h4>{{dictionary.word_profile_info}}</h4>

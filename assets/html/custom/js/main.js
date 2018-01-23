@@ -48,15 +48,24 @@ $("#addons-button-save").click(function(event){
   let rp_pass = $(div).find("input.addons-up-rp-pass").val();
   let email = $(div).find("input.addons-up-email").val();
   let website = $(div).find("input.addons-up-website").val();
-  let country_val = $(div).find("select.addons-up-country").val();
+  //let country_val = $(div).find("select.addons-up-country").val();
+  let about = $(div).find("select.addons-up-about").val();
   console.log(id);
   console.log(name);
   console.log(pass);
   console.log(rp_pass);
   console.log(email);
   console.log(website);
-  console.log(country_val);
-  $("#addons-up-partner").submit();
-  //addons-up-partner
+  //console.log(country_val);
+  console.log(about);
+  $("#addons-up-id").val(id);
+  $("#addons-up-name").val(name);
+  $("#addons-up-pass").val(pass);
+  $("#addons-up-rp-pass").val(rp_pass);
+  $("#addons-up-email").val(email);
+  $("#addons-up-website").val(website);
+  $("#addons-up-about").val(about);
+  //$("#addons-up-partner").submit();
+
   event.preventDefault();
 });
