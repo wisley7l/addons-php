@@ -43,7 +43,7 @@ $("#addons-button-save").click(function(event){
   console.log("OK");
   let name = $("form#profile-info-form").find("input.addons-up-name").val();
   let pass = $("form#profile-info-form").find("input.addons-up-name").val();
-  let coutry $("form#profile-info-form").find("input.addons-up-coutry").val();
+  let country $("form#profile-info-form").find("input.addons-up-country").val();
   console.log(country);
   event.preventDefault();
 });
