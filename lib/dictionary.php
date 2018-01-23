@@ -100,6 +100,11 @@ function get_dictionary () {
       $word_new_password = 'New Password';
       $word_repeat_password = 'Repeat Password';
       $word_select_country = 'Select your Country...';
+      $word_enter_repeat_pss = 'Repeat your password here ...';
+      $word_enter_email = 'Enter your email address here...';
+      $word_enter_website = 'Enter your website link here...';
+      $word_about_you = 'About you';
+      $word_describe_you = 'Describe about you (max 140 characters)';
       break;
 
     default:
@@ -184,8 +189,11 @@ function get_dictionary () {
       $word_new_password = 'Nova Senha';
       $word_repeat_password = 'Repita a Senha';
       $word_select_country = 'Selecione seu País...';
-
-
+      $word_enter_repeat_pss = 'Repita sua Senha aqui ...';
+      $word_enter_email = 'Insira seu endereço de email aqui ...';
+      $word_enter_website = 'Insira o link do seu website aqui ...';
+      $word_about_you = 'Sobre Você';
+      $word_describe_you = 'Descreva sobre você (max 140 caracteres)';
       break;
   }
   // array dictionary
@@ -277,7 +285,12 @@ function get_dictionary () {
     'word_enter_name' => $word_enter_name,
     'word_new_password' => $word_new_password,
     'word_repeat_password' => $word_repeat_password,
-    'word_select_country' => $word_select_country
+    'word_select_country' => $word_select_country,
+    'word_enter_repeat_pss' => $word_enter_repeat_pss,
+    'word_enter_email' => $word_enter_email,
+    'word_enter_website' => $word_enter_website,
+    'word_about_you' => $word_about_you,
+    'word_describe_you' => $word_describe_you
   );
   return $dictionary;
 }

@@ -305,7 +305,7 @@
   <!-- DASHBOARD HEADER -->
 {% endmacro %}
 
-{% macro form_profile_info(dictionary) %}
+{% macro form_profile_info(dictionary,user) %}
   <div class="form-box-item">
     <h4>{{dictionary.word_profile_info}}</h4>
     <hr class="line-separator">
@@ -326,7 +326,7 @@
       <!-- INPUT CONTAINER -->
       <div class="input-container">
         <label for="acc_name" class="rl-label required">{{dictionary.word_account_name}}</label>
-        <input type="text" id="acc_name" name="acc_name" value="Johnny Fisher" placeholder="{{dictionary.word_enter_name}}">
+        <input type="text" id="acc_name" name="acc_name" value="{{user.name_user}}" placeholder="{{dictionary.word_enter_name}}">
       </div>
       <!-- /INPUT CONTAINER -->
 
@@ -347,14 +347,14 @@
       <!-- INPUT CONTAINER -->
       <div class="input-container">
         <label for="new_email" class="rl-label">Email</label>
-        <input type="email" id="new_email" name="new_email" placeholder="Enter your email address here...">
+        <input type="email" id="new_email" name="new_email" placeholder="{{dictionary.word_enter_email}}">
       </div>
       <!-- /INPUT CONTAINER -->
 
       <!-- INPUT CONTAINER -->
       <div class="input-container half">
         <label for="website_url" class="rl-label">Website</label>
-        <input type="text" id="website_url" name="website_url" placeholder="Enter your website link here...">
+        <input type="text" id="website_url" name="website_url" placeholder="{{dictionary.word_enter_website}}">
       </div>
       <!-- /INPUT CONTAINER -->
 
