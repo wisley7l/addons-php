@@ -39,6 +39,7 @@ $( document ).ready(function() {
   }
 });
 //
-$("#addons-button-save").click(function(){
+$("#addons-button-save").click(function(event){
   console.log("OK");
+  event.preventDefault();
 });
