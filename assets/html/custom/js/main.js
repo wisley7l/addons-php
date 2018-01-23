@@ -1,3 +1,4 @@
+//
 $("form.addons-partner-login").submit(function(event) {
   let username = $(this).find("input.addons-login-user").val();
   let password = md5($(this).find("input.addons-login-password").val());
@@ -36,4 +37,8 @@ $( document ).ready(function() {
     	paragraph: $(this).find("div.addons-sucess-login").text(),
     });
   }
+});
+//
+$("button#addons-button-save").submit(function(){
+  console.log("OK");
 });
