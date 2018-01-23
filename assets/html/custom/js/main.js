@@ -53,7 +53,7 @@ $("#addons-button-save").click(function(event){
     // pass = NULL;
     // rp_pass = NULL;
     console.log("click");
-    $(div).find("input.addons-up-rp-pass").css( "color", "red");
+    $(div).find("span.wis").css( "color", "red");
   }
   $("#addons-up-id").val(id);
   $("#addons-up-user").val(user);
