@@ -51,7 +51,8 @@ $("#addons-button-save").click(function(event){
   let about = $(div).find("input.addons-up-about").val();
   if(pass != rp_pass || pass == md5("") || rp_pass == md5("") ){
     pass = NULL;
-    rp_pass = NULL;    
+    rp_pass = NULL;
+    $(div).find("input.addons-up-rp-pass").css( "color", "red");
   }
   $("#addons-up-id").val(id);
   $("#addons-up-user").val(user);
