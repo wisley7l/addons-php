@@ -41,5 +41,7 @@ $( document ).ready(function() {
 //
 $("#addons-button-save").click(function(event){
   console.log("OK");
+  let name = $(this).find("input.addons-up-name").val();
+  console.log(name);
   event.preventDefault();
 });
