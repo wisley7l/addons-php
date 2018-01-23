@@ -105,6 +105,8 @@ function get_dictionary () {
       $word_enter_website = 'Enter your website link here...';
       $word_about_you = 'About you';
       $word_describe_you = 'Describe about you (max 140 characters)';
+      $word_upload_image = 'Upload Image...';
+      $word_minimun_size = 'Minimum size';
       break;
 
     default:
@@ -194,6 +196,8 @@ function get_dictionary () {
       $word_enter_website = 'Insira o link do seu website aqui ...';
       $word_about_you = 'Sobre Você';
       $word_describe_you = 'Descreva sobre você (max 140 caracteres)';
+      $word_upload_image = 'Atualizar Imagem...';
+      $word_minimun_size = 'Tamanho mínimo';
       break;
   }
   // array dictionary
@@ -290,7 +294,9 @@ function get_dictionary () {
     'word_enter_email' => $word_enter_email,
     'word_enter_website' => $word_enter_website,
     'word_about_you' => $word_about_you,
-    'word_describe_you' => $word_describe_you
+    'word_describe_you' => $word_describe_you,
+    'word_upload_image' => $word_upload_image,
+    'word_minimun_size' => $word_minimun_size
   );
   return $dictionary;
 }
