@@ -56,5 +56,7 @@ $("#addons-button-save").click(function(event){
   console.log(email);
   console.log(website);
   console.log(country_val);
+  $("#addons-up-partner").submit();
+  //addons-up-partner
   event.preventDefault();
 });
