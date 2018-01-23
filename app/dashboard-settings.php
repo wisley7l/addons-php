@@ -22,7 +22,7 @@ if (isset($_SESSION)) {
     'credits' => 10.0 / $dictionary['mult_coin'] ,
     'id_user' => $_SESSION['user_id'],
     'is_store' => $_SESSION['is_store'],
-    'image' => 'https://www.gcfaprendelivre.org/files/personage/image/11/R_p.png'
+    'image' => 'https://scontent.fplu1-1.fna.fbcdn.net/v/t1.0-9/22007860_1669412349777235_4400272234535034649_n.jpg?oh=e40ca78eb8dea885a958637b201503bd&oe=5ADF48F2'
     //'image' => '../images/dashboard/profile-default-image.png'
   );
   // query the user in db for more information to update
