@@ -44,7 +44,7 @@ $("#addons-button-save").click(function(event){
   console.log("OK");
   let id = $(div).find("input.addons-up-id").val();
   let name = $(div).find("input.addons-up-name").val();
-  let pass = $(div).find("input.addons-up-pass").val();
+  let pass = md5($(div).find("input.addons-up-pass").val());
   let rp_pass = $(div).find("input.addons-up-rp-pass").val();
   let email = $(div).find("input.addons-up-email").val();
   let website = $(div).find("input.addons-up-website").val();
