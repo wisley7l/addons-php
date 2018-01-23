@@ -7,7 +7,8 @@ if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
 }
 // if they are not null, treat variables and query the database
 else if(empty($_POST)) {
-        echo "login";
+  header("Location: ../?EROORLOGIN");
+  exit;
 }
 else {
   // test user and password
