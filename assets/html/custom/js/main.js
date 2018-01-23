@@ -44,7 +44,7 @@ $("#addons-button-save").click(function(event){
   let name = $("form#profile-info-form").find("input.addons-up-name").val();
   let pass = $("form#profile-info-form").find("input.addons-up-pass").val();
   let country_val = $("form#profile-info-form").find("select.addons-up-country").val();
-  let country_name = $("form#profile-info-form").find("option[value=" + country_val + "]");
+  let country_name = $("form#profile-info-form").find("option[value=" + country_val + "]").text;
   console.log(name);
   console.log(pass);
   console.log(country_val);
