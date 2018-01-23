@@ -1,4 +1,4 @@
-{% macro all_menu(dictionary)%}
+{% macro all_menu(dictionary,user)%}
   <div id="dashboard-options-menu" class="side-menu dashboard left closed">
         <!-- SVG PLUS -->
     <svg class="svg-plus">
@@ -22,8 +22,8 @@
         <!-- /USER AVATAR -->
 
         <!-- USER INFORMATION -->
-        <p class="user-name">Johnny Fisher</p>
-        <p class="user-money">$745.00</p>
+        <p class="user-name">{{user.name}}</p>
+        <p class="user-money">{{dictionary.coin}}${{user.credits}}</p>
         <!-- /USER INFORMATION -->
       </div>
       <!-- /USER QUICKVIEW -->
