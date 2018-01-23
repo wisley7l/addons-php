@@ -92,6 +92,14 @@ function get_dictionary () {
       $word_info_account = 'Account information';
       $word_tool_acoount = 'Account Tools';
       $word_your_dashboard = 'Your Dashboard';
+      $word_profile_info = 'Profile Infomation';
+      $word_profile_image = 'Profile Photo';
+      $word_country = 'Country';
+      $word_account_name = 'Account Name';
+      $word_enter_name= 'Enter your name';
+      $word_new_password = 'New Password';
+      $word_repeat_password = 'Repeat Password';
+      $word_select_country = 'Select your Country...';
       break;
 
     default:
@@ -168,6 +176,16 @@ function get_dictionary () {
       $word_info_account = 'Informações da Conta';
       $word_tool_acoount = 'Ferramentas da Conta';
       $word_your_dashboard = 'Seu Painel';
+      $word_profile_info = 'Informações de Perfil';
+      $word_profile_image = 'Foto de Perfil';
+      $word_country = 'País';
+      $word_account_name = 'Nome da Conta';
+      $word_enter_name = 'Informe seu nome';
+      $word_new_password = 'Nova Senha';
+      $word_repeat_password = 'Repita a Senha';
+      $word_select_country = 'Selecione seu País...';
+
+
       break;
   }
   // array dictionary
@@ -251,7 +269,15 @@ function get_dictionary () {
     'word_your_account' => $word_your_account,
     'word_info_account' => $word_info_account,
     'word_tool_acoount' => $word_tool_acoount,
-    'word_your_dashboard' => $word_your_dashboard
+    'word_your_dashboard' => $word_your_dashboard,
+    'word_profile_info' => $word_profile_info,
+    'word_profile_image' => $word_profile_image,
+    'word_country' => $word_country,
+    'word_account_name' => $word_account_name,
+    'word_enter_name' => $word_enter_name,
+    'word_new_password' => $word_new_password,
+    'word_repeat_password' => $word_repeat_password,
+    'word_select_country' => $word_select_country
   );
   return $dictionary;
 }
