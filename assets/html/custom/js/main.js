@@ -46,15 +46,15 @@ $("#addons-button-save").click(function(event){
   let name = $(div).find("input.addons-up-name").val();
   let pass = md5($(div).find("input.addons-up-pass").val());
   let rp_pass = md5($(div).find("input.addons-up-rp-pass").val());
-  let email = $(div).find("input.addons-up-email").val();
   let website = $(div).find("input.addons-up-website").val();
   let about = $(div).find("input.addons-up-about").val();
   if(pass != rp_pass ){
+    //If the confirmation password and password are different, activate "span"
     $(div).find("span.pass").css( "color", "red");
     $(div).find("span.rp-pass").css( "color", "red");
   }
   if(pass == md5("")){
-    console.log("VAZIO");
+    // If the password is empty, do not change the current password, send the word "empty" to be treated from the other side
     pass = rp_pass = "empty";
   }
   $("#addons-up-id").val(id);
@@ -62,10 +62,10 @@ $("#addons-button-save").click(function(event){
   $("#addons-up-name").val(name);
   $("#addons-up-pass").val(pass);
   $("#addons-up-rp-pass").val(rp_pass);
-  $("#addons-up-email").val(email);
   $("#addons-up-website").val(website);
   $("#addons-up-about").val(about);
-  if(pass == rp_pass ){
+  // just accept "submit" if the passwords and the name are "ok"
+  if(pass == rp_pass && name != ""){
   $("#addons-up-partner").submit();
   }
   event.preventDefault();
