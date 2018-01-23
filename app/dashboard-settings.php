@@ -35,7 +35,7 @@ if (isset($_GET['logout'])){
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
-echo $twig->render('account-settings.twig', array(
+echo $twig->render('dashboard-settings.twig', array(
   'dictionary' => $dictionary,
   'login' => $login,
   'implemented' => false,
