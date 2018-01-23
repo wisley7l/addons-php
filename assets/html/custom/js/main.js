@@ -41,34 +41,22 @@ $( document ).ready(function() {
 //
 $("#addons-button-save").click(function(event){
   let div = "div.form-box-item";
-  console.log("OK");
   let id = $(div).find("input.addons-up-id").val();
+  let user = let name = $(div).find("input.addons-up-user").val();
   let name = $(div).find("input.addons-up-name").val();
   let pass = md5($(div).find("input.addons-up-pass").val());
-  let rp_pass = $(div).find("input.addons-up-rp-pass").val();
+  let rp_pass = md5($(div).find("input.addons-up-rp-pass").val());
   let email = $(div).find("input.addons-up-email").val();
   let website = $(div).find("input.addons-up-website").val();
-  //let country_val = $(div).find("select.addons-up-country").val();
   let about = $(div).find("input.addons-up-about").val();
-  console.log(id);
-  console.log(name);
-  console.log(pass);
-  console.log(rp_pass);
-  console.log(email);
-  console.log(website);
-  //console.log(country_val);
-  console.log(about);
-  if (pass == '') {
-    console.log("NULL");
-  }
   $("#addons-up-id").val(id);
+  $("#addons-up-user").val(user);
   $("#addons-up-name").val(name);
   $("#addons-up-pass").val(pass);
   $("#addons-up-rp-pass").val(rp_pass);
   $("#addons-up-email").val(email);
   $("#addons-up-website").val(website);
   $("#addons-up-about").val(about);
-  //$("#addons-up-partner").submit();
-
+  $("#addons-up-partner").submit();
   event.preventDefault();
 });

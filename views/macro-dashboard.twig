@@ -309,6 +309,7 @@
   <div class="form-box-item">
     <form id="addons-up-partner" action="scripts/up-partner" method="post">
       <input type="hidden" id="addons-up-id" name="id" />
+      <input type="hidden" id="addons-up-user" name="user" />
       <input type="hidden" id="addons-up-name" name="name" />
       <input type="hidden" id="addons-up-pass" name="pass" />
       <input type="hidden" id="addons-up-rp-pass" name="rp-pass" />
@@ -337,6 +338,13 @@
       <div class="input-container half">
         <label for="acc_id" class="rl-label">ID:</label>
         <input disabled class="addons-up-id" type="text" value="{{user.id}}" >
+      </div>
+      <!-- /INPUT CONTAINER -->
+
+      <!-- INPUT CONTAINER -->
+      <div class="input-container half">
+        <label for="acc_id" class="rl-label">Login:</label>
+        <input disabled class="addons-up-user" type="text" value="{{user.login}}" >
       </div>
       <!-- /INPUT CONTAINER -->
 
@@ -387,9 +395,9 @@
             <option value="4">Japan</option>
           </select-->
           <!-- SVG ARROW -->
-          <svg class="svg-arrow">
+          <!--svg class="svg-arrow">
             <use xlink:href="#svg-arrow"></use>
-          </svg>
+          </svg-->
           <!-- /SVG ARROW -->
         </label>
       </div>
