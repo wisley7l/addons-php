@@ -44,7 +44,7 @@ else {
       exit;
     }
   }
-  else {
+if (isset($_SESSION)) {
     echo "login";
   }
 
