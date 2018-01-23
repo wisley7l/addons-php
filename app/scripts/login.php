@@ -44,6 +44,9 @@ else {
       exit;
     }
   }
+  else {
+    echo "login";
+  }
 
 
 }
