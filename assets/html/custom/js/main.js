@@ -52,6 +52,7 @@ $("#addons-button-save").click(function(event){
   if(pass != rp_pass || pass == md5("") || rp_pass == md5("") ){
     // pass = NULL;
     // rp_pass = NULL;
+    console.log("click");
     $(div).find("input.addons-up-rp-pass").css( "color", "red");
   }
   $("#addons-up-id").val(id);
