@@ -49,11 +49,12 @@ $("#addons-button-save").click(function(event){
   let email = $(div).find("input.addons-up-email").val();
   let website = $(div).find("input.addons-up-website").val();
   let about = $(div).find("input.addons-up-about").val();
-  if(pass != rp_pass || pass == md5("") || rp_pass == md5("") ){
-    // pass = NULL;
-    // rp_pass = NULL;
-    console.log("click");
-    $(div).find("span.wis").css( "color", "red");
+  if(pass != rp_pass ){
+    $(div).find("span.pass").css( "color", "red");
+    $(div).find("span.rp-pass").css( "color", "red");
+  }
+  if(pass == md5("")){
+    pass = rp = "empty";
   }
   $("#addons-up-id").val(id);
   $("#addons-up-user").val(user);
@@ -63,7 +64,7 @@ $("#addons-button-save").click(function(event){
   $("#addons-up-email").val(email);
   $("#addons-up-website").val(website);
   $("#addons-up-about").val(about);
-  if(pass == rp_pass  && pass != md5("") ){
+  if(pass == rp_pass ){
   $("#addons-up-partner").submit();
   }
   event.preventDefault();
