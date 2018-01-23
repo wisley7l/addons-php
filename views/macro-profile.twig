@@ -85,10 +85,12 @@
     <li class="dropdown-item" id="board-author-itens-page">
       <a href="author-items-page">{{dictionary.word_author_items}} ({{info_author.number_apps_themes}})</a>
     </li>
+		{# comments
     <li class="dropdown-item" id="board-profile-reviws-page">
       <a href="author-profile-reviews.html">Customer Reviews (42)</a>
     </li>
-    {# comments
+
+    <!-- not implemented -->
     <li class="dropdown-item">
       <a href="author-profile-messages.html">Message Board</a>
     </li>
@@ -98,14 +100,17 @@
     <li class="dropdown-item">
       <a href="author-profile-following.html">Following (2)</a>
     </li>
-    #}
+		<!-- not implemented -->
+
     <li class="dropdown-item">
       <a href="author-badges.html">{{dictionary.word_author_badges}} ({{info_author.number_badges}})</a>
     </li>
+		#}
   </ul>
 {% endmacro %}
 <!-- -->
 {% macro board_reputation(dictionary,info_author) %}
+{# not implemented in moment
   {% import 'macros.twig' as macro_main %}
   <div class="sidebar-item author-reputation full">
     <h4>{{dictionary.word_reputation}}</h4>
@@ -126,9 +131,11 @@
     <a href="#" class="button mid dark-light">{{dictionary.word_read_all_reviews}}</a>
   </div>
   <!-- SIDEBAR ITEM -->
+	#}
 {% endmacro %}
 <!-- -->
 {% macro comments_user(dictionary,name,date,comment,is_buyer) %}
+{# not implemented in moment
   <!-- COMMENT -->
   <div class="comment-wrap">
     <!-- USER AVATAR -->
@@ -155,4 +162,5 @@
   <!-- LINE SEPARATOR -->
   <hr class="line-separator">
   <!-- /LINE SEPARATOR -->
+	#}
 {% endmacro %}
