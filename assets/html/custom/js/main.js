@@ -41,13 +41,12 @@ $( document ).ready(function() {
 //
 $("#addons-button-save").click(function(event){
   console.log("OK");
+  let id = $("form#profile-info-form").find("input.addons-up-id").val();
   let name = $("form#profile-info-form").find("input.addons-up-name").val();
   let pass = $("form#profile-info-form").find("input.addons-up-pass").val();
   let country_val = $("form#profile-info-form").find("select.addons-up-country").val();
-  let country_name = $("form#profile-info-form").find("option[value=" + country_val + "]").text;
   console.log(name);
   console.log(pass);
   console.log(country_val);
-  console.log(country_name);
   event.preventDefault();
 });

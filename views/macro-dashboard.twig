@@ -325,6 +325,13 @@
     <form id="profile-info-form">
       <!-- INPUT CONTAINER -->
       <div class="input-container">
+        <label for="acc_name" class="rl-label required">ID:</label>
+        <input disabled class="addons-up-id" type="text" value="{{user.id}}" >
+      </div>
+      <!-- /INPUT CONTAINER -->
+      
+      <!-- INPUT CONTAINER -->
+      <div class="input-container">
         <label for="acc_name" class="rl-label required">{{dictionary.word_account_name}}</label>
         <input class="addons-up-name" type="text" id="acc_name" name="acc_name" value="{{user.name_user}}" placeholder="{{dictionary.word_enter_name}}">
       </div>
