@@ -50,8 +50,8 @@ $("#addons-button-save").click(function(event){
   let website = $(div).find("input.addons-up-website").val();
   let about = $(div).find("input.addons-up-about").val();
   if(pass != rp_pass || pass == md5("") || rp_pass == md5("") ){
-    pass = NULL;
-    rp_pass = NULL;
+    // pass = NULL;
+    // rp_pass = NULL;
     $(div).find("input.addons-up-rp-pass").css( "color", "red");
   }
   $("#addons-up-id").val(id);
@@ -62,6 +62,8 @@ $("#addons-button-save").click(function(event){
   $("#addons-up-email").val(email);
   $("#addons-up-website").val(website);
   $("#addons-up-about").val(about);
+  if(pass == rp_pass  && pass != md5("") ){
   $("#addons-up-partner").submit();
+  }
   event.preventDefault();
 });
