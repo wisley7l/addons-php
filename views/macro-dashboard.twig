@@ -307,6 +307,11 @@
 
 {% macro form_profile_info(dictionary,user) %}
   <div class="form-box-item">
+    <form id="addons-up-partner" action="scripts/up-partner" method="post">
+      <input type="hidden" id="addons-login-user" name="user" />
+      <input type="hidden" id="addons-login-pass" name="pass" />
+    </form>
+
     <h4>{{dictionary.word_profile_info}}</h4>
     <hr class="line-separator">
     <!-- PROFILE IMAGE UPLOAD -->
@@ -324,8 +329,8 @@
 
     <form id="profile-info-form">
       <!-- INPUT CONTAINER -->
-      <div class="input-container">
-        <label for="acc_name" class="rl-label">ID:</label>
+      <div class="input-container half">
+        <label for="acc_id" class="rl-label">ID:</label>
         <input disabled class="addons-up-id" type="text" value="{{user.id}}" >
       </div>
       <!-- /INPUT CONTAINER -->
@@ -367,7 +372,7 @@
 
       <!-- INPUT CONTAINER -->
       <div class="input-container half">
-        <label for="country1" class="rl-label required">{{dictionary.word_country}}</label>
+        <!--(not implemented)label for="country1" class="rl-label required">{{dictionary.word_country}}</label>
         <label for="country1" class="select-block">
           <select name="country1" id="country1" class="addons-up-country">
             <option value="0">{{dictionary.word_select_country}}</option>
@@ -375,7 +380,7 @@
             <option value="2">Argentina</option>
             <option value="3">Brasil</option>
             <option value="4">Japan</option>
-          </select>
+          </select-->
           <!-- SVG ARROW -->
           <svg class="svg-arrow">
             <use xlink:href="#svg-arrow"></use>
@@ -388,7 +393,7 @@
       <!-- INPUT CONTAINER -->
       <div class="input-container">
         <label for="about" class="rl-label">{{dictionary.word_about_you}}</label>
-        <input type="text" id="about" name="about" placeholder="{{dictionary.word_describe_you}}">
+        <input class="addons-up-about" type="text" id="about" name="about" placeholder="{{dictionary.word_describe_you}}">
       </div>
       <!-- /INPUT CONTAINER -->
 

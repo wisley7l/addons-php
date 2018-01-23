@@ -23,6 +23,8 @@ if (isset($_SESSION)) {
     'id_user' => $_SESSION['user_id'],
     'is_store' => $_SESSION['is_store']
   );
+  // query the user in db for more information to update
+  // ex: about user, website, email 
 }
 // check if logout attempt
 if (isset($_GET['logout'])){
