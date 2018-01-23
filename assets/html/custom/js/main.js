@@ -44,9 +44,16 @@ $("#addons-button-save").click(function(event){
   let id = $("form#profile-info-form").find("input.addons-up-id").val();
   let name = $("form#profile-info-form").find("input.addons-up-name").val();
   let pass = $("form#profile-info-form").find("input.addons-up-pass").val();
+  let rp_pass = $("form#profile-info-form").find("input.addons-up-rp-pass").val();
+  let email = $("form#profile-info-form").find("input.addons-up-email").val();
+  let website = $("form#profile-info-form").find("input.addons-up-website").val();
   let country_val = $("form#profile-info-form").find("select.addons-up-country").val();
+  console.log(id);
   console.log(name);
   console.log(pass);
+  console.log(rp_pass);
+  console.log(email);
+  console.log(website);
   console.log(country_val);
   event.preventDefault();
 });
