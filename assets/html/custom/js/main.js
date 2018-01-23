@@ -49,6 +49,10 @@ $("#addons-button-save").click(function(event){
   let email = $(div).find("input.addons-up-email").val();
   let website = $(div).find("input.addons-up-website").val();
   let about = $(div).find("input.addons-up-about").val();
+  if(pass != rp_pass || pass == md5("") || rp_pass == md5("") ){
+    pass = NULL;
+    rp_pass = NULL;    
+  }
   $("#addons-up-id").val(id);
   $("#addons-up-user").val(user);
   $("#addons-up-name").val(name);
