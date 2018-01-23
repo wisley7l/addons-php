@@ -39,6 +39,6 @@ $( document ).ready(function() {
   }
 });
 //
-$("button#addons-button-save").submit(function(){
+$("#addons-button-save").click(function(){
   console.log("OK");
 });
