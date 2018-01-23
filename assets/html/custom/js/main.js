@@ -49,7 +49,7 @@ $("#addons-button-save").click(function(event){
   let email = $(div).find("input.addons-up-email").val();
   let website = $(div).find("input.addons-up-website").val();
   //let country_val = $(div).find("select.addons-up-country").val();
-  let about = $(div).find("select.addons-up-about").val();
+  let about = $(div).find("input.addons-up-about").val();
   console.log(id);
   console.log(name);
   console.log(pass);
@@ -58,6 +58,9 @@ $("#addons-button-save").click(function(event){
   console.log(website);
   //console.log(country_val);
   console.log(about);
+  if (pass == '') {
+    console.log("NULL");
+  }
   $("#addons-up-id").val(id);
   $("#addons-up-name").val(name);
   $("#addons-up-pass").val(pass);
