@@ -6,6 +6,9 @@ if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
   exit;
 }
 // if they are not null, treat variables and query the database
+else if(empty($_POST)) {
+        echo "login";
+}
 else {
   // test user and password
   $user = $_POST['user'];
@@ -44,9 +47,5 @@ else {
       exit;
     }
   }
-if (isset($_SESSION)) {
-    echo "login";
-  }
-
 
 }
