@@ -107,6 +107,7 @@ function get_dictionary () {
       $word_describe_you = 'Describe about you (max 140 characters)';
       $word_upload_image = 'Upload Image...';
       $word_minimun_size = 'Minimum size';
+      $word_save = 'Save';
       break;
 
     default:
@@ -198,6 +199,7 @@ function get_dictionary () {
       $word_describe_you = 'Descreva sobre você (max 140 caracteres)';
       $word_upload_image = 'Atualizar Imagem...';
       $word_minimun_size = 'Tamanho mínimo';
+      $word_save = 'Salvar';
       break;
   }
   // array dictionary
@@ -296,7 +298,8 @@ function get_dictionary () {
     'word_about_you' => $word_about_you,
     'word_describe_you' => $word_describe_you,
     'word_upload_image' => $word_upload_image,
-    'word_minimun_size' => $word_minimun_size
+    'word_minimun_size' => $word_minimun_size,
+    'word_save' => $word_save
   );
   return $dictionary;
 }

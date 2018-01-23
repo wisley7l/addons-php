@@ -11,15 +11,16 @@
 </head>
 {% if login == true %}
 <body>
-  {% import 'macro-dashboard.twig' as silexCasts %}
+	{% import 'macros.twig' as macro_main %}
+  {% import 'macro-dashboard.twig' as macro_dashboad %}
 	<!-- SIDE MENU -->
-	{{silexCasts.all_menu(dictionary,user)}}
+	{{macro_dashboad.all_menu(dictionary,user)}}
 	<!-- /SIDE MENU -->
 
     <!-- DASHBOARD BODY -->
     <div class="dashboard-body">
         <!-- DASHBOARD HEADER -->
-				{{silexCasts.dashboard_header(dictionary)}}
+				{{macro_dashboad.dashboard_header(dictionary)}}
         <!-- DASHBOARD HEADER -->
 
         <!-- DASHBOARD CONTENT -->
@@ -27,28 +28,28 @@
             <!-- HEADLINE -->
             <div class="headline buttons primary">
                 <h4>{{dictionary.word_account_settings}}</h4>
-				<button form="profile-info-form" class="button mid-short primary">Save Changes</button>
+				<button form="profile-info-form" class="button mid-short primary">{{dictionary.word_save}}</button>
             </div>
             <!-- /HEADLINE -->
 
 			<!-- FORM BOX ITEMS -->
 			<div class="form-box-items">
 				<!-- FORM BOX ITEM -->
-				{{silexCasts.form_profile_info(dictionary)}}
+				{{macro_dashboad.form_profile_info(dictionary)}}
 				<!-- /FORM BOX ITEM -->
 
 				<!-- FORM BOX ITEM -->
 				{# In moment not implemented
-				{{silexCasts.form_social_info(dictionary)}}
+				{{macro_dashboad.form_social_info(dictionary)}}
 				#}
 				<!-- /FORM BOX ITEM -->
 
 				<!-- FORM BOX ITEM -->
-				{# not used {silexCasts.form_billing_info(dictionary)}#}
+				{# not used {macro_dashboad.form_billing_info(dictionary)}#}
 				<!-- /FORM BOX ITEM -->
 
 				<!-- FORM BOX ITEM -->
-				{#not used {silexCasts.form_shipping_info()}#}
+				{#not used {macro_dashboad.form_shipping_info()}#}
 				<!-- /FORM BOX ITEM -->
 			</div>
 			<!-- /FORM BOX -->
@@ -93,6 +94,7 @@
 <script src="js/side-menu.js"></script>
 <!-- Dashboard Header -->
 <script src="js/dashboard-header.js"></script>
+{{macro_main.scripts()}}
 </body>
 {% else %}
 <body>
