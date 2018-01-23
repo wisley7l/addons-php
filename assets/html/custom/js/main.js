@@ -42,7 +42,7 @@ $( document ).ready(function() {
 $("#addons-button-save").click(function(event){
   let div = "div.form-box-item";
   let id = $(div).find("input.addons-up-id").val();
-  let user = let name = $(div).find("input.addons-up-user").val();
+  let user = $(div).find("input.addons-up-user").val();
   let name = $(div).find("input.addons-up-name").val();
   let pass = md5($(div).find("input.addons-up-pass").val());
   let rp_pass = md5($(div).find("input.addons-up-rp-pass").val());
