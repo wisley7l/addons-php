@@ -53,6 +53,10 @@ $("#addons-button-save").click(function(event){
     $(div).find("span.pass").css( "color", "red");
     $(div).find("span.rp-pass").css( "color", "red");
   }
+  if(name == ""){
+    // If the name is empty, activate "span"
+    $(div).find("span.name").css( "color", "red");
+  }
   if(pass == md5("")){
     // If the password is empty, do not change the current password, send the word "empty" to be treated from the other side
     pass = rp_pass = "empty";
