@@ -54,7 +54,8 @@ $("#addons-button-save").click(function(event){
     $(div).find("span.rp-pass").css( "color", "red");
   }
   if(pass == md5("")){
-    pass = rp = "empty";
+    console.log("VAZIO");
+    pass = rp_pass = "empty";
   }
   $("#addons-up-id").val(id);
   $("#addons-up-user").val(user);
