@@ -644,10 +644,10 @@
   								<p class="text-header tiny">{{ app.name_partner }}</p>
   							</a>
   							<ul class="rating tooltip" title="{{ dictionary.word_reputation }}">
-  								{% import 'macros.twig' as silexCasts %}
+  								{% import 'macros.twig' as macro_main %}
                   <!-- use macros to render stars -->
-  								{{silexCasts.star_on(app.star_on)}}
-  								{{silexCasts.star_off(app.star_off)}}
+  								{{macro_main.star_on(app.star_on)}}
+  								{{macro_main.star_off(app.star_off)}}
   							</ul>
   						</div>
   						<!-- /USER RATING -->
@@ -852,17 +852,17 @@
 {% endmacro %}
 <!-- macro to mount the main header -->
 {% macro header(login,dictionary,user) %}
-  {% import 'macros.twig' as silexCasts %}
+  {% import 'macros.twig' as macro_main %}
   {% if login == true %}
         <!-- USER BOARD -->
         <div class="user-board">
           <!-- USER QUICKVIEW -->
-          {{silexCasts.user_quickview(dictionary,user)}}
+          {{macro_main.user_quickview(dictionary,user)}}
           <!-- /USER QUICKVIEW -->
 
           <!-- ACCOUNT INFORMATION -->
           {# comments
-          {{silexCasts.account_info(dictionary,user)}}
+          {{macro_main.account_info(dictionary,user)}}
           end comments #}
           <!-- /ACCOUNT INFORMATION -->
 
@@ -893,7 +893,7 @@
         </div>
         <!-- FORM POPUP -->
         <div id="login-popup" class="form-popup mfp-hide">
-          {{silexCasts.login(dictionary)}}
+          {{macro_main.login(dictionary)}}
         </div>
         <!-- /FORM POPUP -->
 
@@ -901,7 +901,7 @@
 {% endmacro %}
 <!-- macro to mount the mobile header -->
 {% macro header_moblie(login,dictionary,user)%}
-  {% import 'macros.twig' as silexCasts %}
+  {% import 'macros.twig' as macro_main %}
   <div id="account-options-menu" class="side-menu right closed">
     <!-- SVG PLUS -->
     <svg class="svg-plus">
@@ -912,11 +912,11 @@
       <!-- SIDE MENU HEADER -->
       <div class="side-menu-header">
         <!-- USER QUICKVIEW -->
-          {{silexCasts.user_quickview_moblie(dictionary,user)}}
+          {{macro_main.user_quickview_moblie(dictionary,user)}}
         <!-- /USER QUICKVIEW -->
       </div>
       <!-- /SIDE MENU HEADER -->
-      {{silexCasts.account_info_moblie(dictionary,user)}}
+      {{macro_main.account_info_moblie(dictionary,user)}}
 
       <a href="?logout"  class="button medium secondary">Logout</a>
       <!--(not implemented) a href="#" class="button medium primary">Become a Seller</a -->
@@ -932,7 +932,7 @@
       <a href="#" class="button primary">{{ dictionary.word_login }} <span class="primary">{{dictionary.word_shopkeeper}}</span></a>
   <!-- FORM POPUP -->
   <div id="login-popup" class="form-popup mfp-hide">
-    {{silexCasts.login(dictionary)}}
+    {{macro_main.login(dictionary)}}
   </div>
   <!-- /FORM POPUP -->
   {% endif %}
@@ -979,8 +979,8 @@
         <!-- /MENU ITEM -->
         <!-- MENU ITEM -->
         {# comments
-        {% import 'macros.twig' as silexCasts %}
-        {{silexCasts.feature_menu()}}
+        {% import 'macros.twig' as macro_main %}
+        {{macro_main.feature_menu()}}
         <!-- /MENU ITEM -->
         #}
 
@@ -1054,8 +1054,8 @@
 
     <!-- DROPDOWN ITEM -->
     {# commments
-    {% import 'macros.twig' as silexCasts %}
-    {{silexCasts.feature_moblie()}}
+    {% import 'macros.twig' as macro_main %}
+    {{macro_main.feature_moblie()}}
     <!-- /DROPDOWN ITEM -->
     #}
 
@@ -1073,14 +1073,14 @@
 {% endmacro %}
 <!-- macro image logo -->
 {% macro all_header(login,dictionary,user) %}
-  {% import 'macros.twig' as silexCasts %}
+  {% import 'macros.twig' as macro_main %}
   	<!-- HEADER -->
   	<div class="header-wrap">
   		<header>
   			<!-- LOGO -->
   			<a href="index">
   				<figure class="logo">
-  					{{silexCasts.logo_main(dictionary)}}
+  					{{macro_main.logo_main(dictionary)}}
   				</figure>
   			</a>
   			<!-- /LOGO -->
@@ -1094,7 +1094,7 @@
   			<!-- LOGO MOBILE -->
   			<a href="index">
   				<figure class="logo-mobile">
-  					{{ silexCasts.logo_moblie() }}
+  					{{ macro_main.logo_moblie() }}
   				</figure>
   			</a>
   			<!-- /LOGO MOBILE -->
@@ -1106,22 +1106,22 @@
   			<!-- /MOBILE ACCOUNT OPTIONS HANDLER -->
 
   <!--(wisley) check login  -->
-  	{{silexCasts.header(login,dictionary,user)}}
+  	{{macro_main.header(login,dictionary,user)}}
   <!--(wisley) check login  -->
   		</header>
   	</div>
   	<!-- /HEADER -->
 
   	<!-- SIDE MENU -->
-  	{{silexCasts.menu_moblie(dictionary)}}
+  	{{macro_main.menu_moblie(dictionary)}}
   	<!-- /SIDE MENU -->
 
   	<!-- SIDE MENU -->
-  	{{silexCasts.header_moblie(login,dictionary,user)}}
+  	{{macro_main.header_moblie(login,dictionary,user)}}
   	<!-- /SIDE MENU -->
 
   	<!-- MAIN MENU -->
-  	{{silexCasts.menu_main(dictionary)}}
+  	{{macro_main.menu_main(dictionary)}}
   	<!-- /MAIN MENU -->
 {% endmacro %}
 <!-- macro user quickview main -->

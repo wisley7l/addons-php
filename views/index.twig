@@ -15,9 +15,9 @@
 
 </head>
 <body>
-{% import 'macros.twig' as silexCasts %}
+{% import 'macros.twig' as macro_main %}
 <!-- header -->
-	{{silexCasts.all_header(login,dictionary,user)}}
+	{{macro_main.all_header(login,dictionary,user)}}
 <!-- /header -->
 	<!-- BANNER -->
 	<div class="banner-wrap">
@@ -176,17 +176,17 @@
 				<div id="pl-1" class="product-list grid column4-wrap owl-carousel">
 					<!-- PRODUCT ITEM -->
 					<!-- /PRODUCT ITEM -->
-					{{silexCasts.apps_themes(apps,0,8,dictionary)}}
+					{{macro_main.apps_themes(apps,0,8,dictionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 				<!-- PRODUCT LIST -->
 				<div id="pl-2" class="product-list grid column4-wrap owl-carousel">
-					{{silexCasts.apps_themes(apps,8,16,dictionary)}}
+					{{macro_main.apps_themes(apps,8,16,dictionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 				<!-- PRODUCT LIST -->
 				<div id="pl-3" class="product-list grid column4-wrap owl-carousel">
-					{{silexCasts.apps_themes(apps,16,24,dictionary)}}
+					{{macro_main.apps_themes(apps,16,24,dictionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 			</div>
@@ -221,7 +221,7 @@
 
 				<!-- PRODUCT LIST -->
 				<div id="pl-4" class="product-list grid column4-wrap owl-carousel">
-					{{silexCasts.apps_themes(themes,0,12,dictionary)}}
+					{{macro_main.apps_themes(themes,0,12,dictionary)}}
 				</div>
 				<!-- /PRODUCT LIST -->
 			</div>
@@ -262,7 +262,7 @@
 {% endif %}
 
 <!-- footer -->
-{{silexCasts.footer(dictionary,info_footer)}}
+{{macro_main.footer(dictionary,info_footer)}}
 <!-- /footer -->
 
 
@@ -318,7 +318,7 @@
 <!-- Footer -->
 <script src="../js/footer.js"></script>
 
-{{silexCasts.scripts()}}
+{{macro_main.scripts()}}
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+macro_app_theme<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -14,10 +14,10 @@
 	<title>{{dictionary.title}} | {{ dictionary.word_apps_store }}</title>
 </head>
 <body>
-  {% import 'macros.twig' as silexCasts %}
-	{% import 'macro-app-theme-page.twig' as silexCasts1 %}
+  {% import 'macros.twig' as macro_main %}
+	{% import 'macro-app-theme-page.twig' as macro_app_theme %}
 	<!-- HEADER -->
-  {{silexCasts.all_header(login,dictionary,user)}}
+  {{macro_main.all_header(login,dictionary,user)}}
 	<!-- /HEADER -->
 
 	<!-- SECTION HEADLINE -->
@@ -81,7 +81,7 @@
 					<!-- PRODUCT LIST -->
 					<div class="product-list grid column3-4-wrap">
 						<!-- PRODUCT ITEM -->
-						{{silexCasts.apps_themes(apps_themes,0,12,dictionary)}}
+						{{macro_main.apps_themes(apps_themes,0,12,dictionary)}}
 						<!-- /PRODUCT ITEM -->
 
 					</div>
@@ -104,21 +104,21 @@
 			<!-- SIDEBAR -->
 			<div class="sidebar">
 				<!-- DROPDOWN -->
-				{{silexCasts1.filter_segment(dictionary,segment)}}
+				{{macro_app_theme.filter_segment(dictionary,segment)}}
 				<!-- /DROPDOWN -->
 
 				<!-- SIDEBAR ITEM -->
 				{# comments
-				{{silexCasts1.filter_item(dictionary)}}
+				{{macro_app_theme.filter_item(dictionary)}}
 
 				<!-- /SIDEBAR ITEM -->
 
 				<!-- SIDEBAR ITEM -->
-				{{silexCasts1.filter_category(dictionary,all_category)}}
+				{{macro_app_theme.filter_category(dictionary,all_category)}}
 				<!-- /SIDEBAR ITEM -->
 				end comments #}
 				<!-- SIDEBAR ITEM -->
-				{{silexCasts1.filter_price_range(dictionary)}}
+				{{macro_app_theme.filter_price_range(dictionary)}}
 				<!-- /SIDEBAR ITEM -->
 			</div>
 			<!-- /SIDEBAR -->
@@ -127,7 +127,7 @@
 	<!-- /SECTION -->
 
 	<!-- FOOTER -->
-	{{silexCasts.footer(dictionary,info_footer)}}
+	{{macro_main.footer(dictionary,info_footer)}}
 	<!-- /FOOTER -->
 
 	<div class="shadow-film closed"></div>
@@ -178,7 +178,7 @@
 <!-- Footer -->
 <script src="../js/footer.js"></script>
 
-{{silexCasts.scripts()}}
+{{macro_main.scripts()}}
 
 </body>
 </html>

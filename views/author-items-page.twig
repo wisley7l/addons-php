@@ -14,11 +14,11 @@
 </head>
 <body>
 	<!-- HEADER -->
-  {% import 'macros.twig' as silexCasts %}
-  {% import 'macro-profile.twig' as silexCasts1 %}
-  {{silexCasts.all_header(login,dictionary,user)}}
+  {% import 'macros.twig' as macro_main %}
+  {% import 'macro-profile.twig' as macro_profile %}
+  {{macro_main.all_header(login,dictionary,user)}}
 	<!-- /HEADER -->
-  {{silexCasts1.autor_header(dictionary,info_author)}}
+  {{macro_profile.autor_header(dictionary,info_author)}}
 
 	<!-- SECTION -->
 	<div class="section-wrap">
@@ -26,15 +26,15 @@
 			<!-- SIDEBAR -->
 			<div class="sidebar left author-profile">
 				<!-- SIDEBAR ITEM -->
-				{{silexCasts1.bio_author(dictionary,info_author)}}
+				{{macro_profile.bio_author(dictionary,info_author)}}
 				<!-- /SIDEBAR ITEM -->
 
 				<!-- DROPDOWN -->
-				{{silexCasts1.profile_board(dictionary,info_author)}}
+				{{macro_profile.profile_board(dictionary,info_author)}}
 				<!-- /DROPDOWN -->
 
 				<!-- SIDEBAR ITEM -->
-				{{silexCasts1.board_reputation(dictionary,info_author)}}
+				{{macro_profile.board_reputation(dictionary,info_author)}}
 				<!-- /SIDEBAR ITEM -->
 			</div>
 			<!-- /SIDEBAR -->
@@ -84,7 +84,7 @@
 					<!-- PRODUCT LIST -->
 					<div class="product-list grid column3-4-wrap">
 						<!-- PRODUCT ITEM -->
-						{{silexCasts.apps_themes(apps,0,6,dictionary)}}
+						{{macro_main.apps_themes(apps,0,6,dictionary)}}
 						<!-- /PRODUCT ITEM -->
 
 					</div>
@@ -99,7 +99,7 @@
 					<!-- PRODUCT LIST -->
 					<div class="product-list grid column3-4-wrap">
 						<!-- PRODUCT ITEM -->
-						{{silexCasts.apps_themes(themes,0,6,dictionary)}}
+						{{macro_main.apps_themes(themes,0,6,dictionary)}}
 						<!-- /PRODUCT ITEM -->
 
 					</div>
@@ -126,7 +126,7 @@
 	<!-- /SECTION -->
 
 	<!-- FOOTER -->
-	{{silexCasts.footer(dictionary,info_footer)}}
+	{{macro_main.footer(dictionary,info_footer)}}
 	<!-- /FOOTER -->
 
 	<div class="shadow-film closed"></div>
@@ -177,6 +177,6 @@
 <!-- Footer -->
 <script src="../js/footer.js"></script>
 
-{{silexCasts.scripts()}}
+{{macro_main.scripts()}}
 </body>
 </html>
