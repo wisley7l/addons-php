@@ -21,10 +21,12 @@ if (isset($_SESSION)) {
     'name_user' => $_SESSION['user_name'] ,
     'credits' => 10.0 / $dictionary['mult_coin'] ,
     'id_user' => $_SESSION['user_id'],
-    'is_store' => $_SESSION['is_store']
+    'is_store' => $_SESSION['is_store'],
+    'image' => 'https://www.gcfaprendelivre.org/files/personage/image/11/R_p.png'
+    //'image' => '../images/dashboard/profile-default-image.png'
   );
   // query the user in db for more information to update
-  // ex: about user, website, email 
+  // ex: about user, website, email
 }
 // check if logout attempt
 if (isset($_GET['logout'])){

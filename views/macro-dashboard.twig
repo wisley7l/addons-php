@@ -324,7 +324,7 @@
     <div class="profile-image">
       <div class="profile-image-data">
         <figure class="user-avatar medium">
-          <img src="../images/dashboard/profile-default-image.png" alt="profile-default-image">
+          <img src="{{user.image}}" alt="profile-default-image">
         </figure>
         <p class="text-header">{{dictionary.word_profile_image}}o</p>
         <p class="upload-details">{{dictionary.word_minimun_size}} 70x70px</p>
@@ -377,7 +377,7 @@
       <!-- /INPUT CONTAINER -->
 
       <!-- INPUT CONTAINER -->
-      <div class="input-container half">
+      <div class="input-container">
         <label for="website_url" class="rl-label">Website</label>
         <input class="addons-up-website" type="text" id="website_url" name="website_url" placeholder="{{dictionary.word_enter_website}}">
       </div>
