@@ -86,6 +86,7 @@ $("#addons-button-save").click(function(event){
 //click item
 $("a.addons-click-item").click(function(){
   let item = $("a.addons-click-item")
-  console.log("OK item " + item );
+  console.log("OK item ");
+  console.log(item);
 
 });
