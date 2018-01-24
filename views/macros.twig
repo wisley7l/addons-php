@@ -621,7 +621,7 @@
 
   						<!-- PRODUCT INFO -->
   						<div class="product-info">
-  							<a onclick="" class="addons-click-item">
+  							<a href class="addons-click-item">
   								<p class="text-header"> {{ app.name }} </p>
   							</a>
   							<p class="product-description">{{ app.description }}</p>
@@ -652,6 +652,7 @@
   						</div>
   						<!-- /USER RATING -->
               <input id="addons-id-item" style="display:none" value="{{app.id_app}}"></input>
+              <input id="addons-id-partner" style="display:none" value="{{app.id_partner}}"></input>
   					</div>
     {% endif %}
   {% endfor %}
