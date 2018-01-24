@@ -85,6 +85,7 @@ $("#addons-button-save").click(function(event){
 });
 //click item
 $("a.addons-click-item").click(function(){
-  console.log("OK item");
+  let item = $("a.addons-click-item").val()
+  console.log("OK item " + item );
 
 });
