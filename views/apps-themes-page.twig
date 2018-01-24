@@ -104,13 +104,14 @@
 			<!-- CONTENT -->
 
 			<!-- SIDEBAR -->
+			{#not implemented in moment
 			<div class="sidebar">
 				<!-- DROPDOWN -->
 				{{macro_app_theme.filter_segment(dictionary,segment)}}
 				<!-- /DROPDOWN -->
 
 				<!-- SIDEBAR ITEM -->
-				{# comments
+
 				{{macro_app_theme.filter_item(dictionary)}}
 
 				<!-- /SIDEBAR ITEM -->
@@ -118,11 +119,12 @@
 				<!-- SIDEBAR ITEM -->
 				{{macro_app_theme.filter_category(dictionary,all_category)}}
 				<!-- /SIDEBAR ITEM -->
-				end comments #}
+
 				<!-- SIDEBAR ITEM -->
 				{{macro_app_theme.filter_price_range(dictionary)}}
 				<!-- /SIDEBAR ITEM -->
 			</div>
+			#}
 			<!-- /SIDEBAR -->
 		</div>
 	</div>
