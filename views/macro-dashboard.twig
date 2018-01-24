@@ -15,7 +15,7 @@
         <div class="outer-ring">
           <div class="inner-ring"></div>
           <figure class="user-avatar">
-            <img src="../images/avatars/avatar_01.jpg" alt="avatar">
+            <img src="{{user.path_image}}" alt="avatar">
           </figure>
         </div>
         </a>
@@ -323,7 +323,7 @@
     <div class="profile-image">
       <div class="profile-image-data">
         <figure class="user-avatar medium">
-          <img src="{{user.image}}" alt="profile-default-image">
+          <img src="{{user.path_image}}" alt="profile-default-image">
         </figure>
         <p class="text-header">{{dictionary.word_profile_image}}</p>
         <p class="upload-details">{{dictionary.word_minimun_size}} 70x70px</p>
@@ -336,7 +336,7 @@
       <!-- INPUT CONTAINER -->
       <div class="input-container half">
         <label for="acc_id" class="rl-label">ID:</label>
-        <input disabled class="addons-up-id" type="text" value="{{user.id}}" >
+        <input disabled class="addons-up-id" type="text" value="{{user.id_user}}" >
       </div>
       <!-- /INPUT CONTAINER -->
 

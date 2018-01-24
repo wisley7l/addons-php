@@ -17,12 +17,12 @@ if (isset($_SESSION)) {
   // set values for user, with the values saved in the session
   // array used to set user panel parameters
   $user_login = array(
-    'id' => $_SESSION['user_id'],
-    'name_login' => $_SESSION['user_name'] ,
-    'credits' => 10.0 / $dictionary['mult_coin'] ,
     'id_user' => $_SESSION['user_id'],
+    'name_login' => $_SESSION['user_name'] ,
+    'name' => $_SESSION['name'],
+    'credits' => $_SESSION['credits'] / $dictionary['mult_coin'] ,
     'is_store' => $_SESSION['is_store'],
-    'image' => '../images/dashboard/profile-default-image.png'
+    'path_image' => $_SESSION['path_image']
   );
   // query the user in db for more information to update
   // ex: about user, website, email
