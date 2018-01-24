@@ -27,10 +27,12 @@ if (isset($_SESSION)) {
   // set values for user, with the values saved in the session
   // array used to set user panel parameters
   $user_login = array(
-    'name_user' => $_SESSION['user_name'] ,
-    'credits' => 10.0 / $dictionary['mult_coin'] ,
     'id_user' => $_SESSION['user_id'],
-    'is_store' => $_SESSION['is_store']
+    'name_user' => $_SESSION['user_name'] ,
+    'name' => $_SESSION['name'],
+    'credits' => $_SESSION['credits'] / $dictionary['mult_coin'] ,
+    'is_store' => $_SESSION['is_store'],
+    'path_image' => $_SESSION['path_image']
   );
 }
 // check if logout attempt
