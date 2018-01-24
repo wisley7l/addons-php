@@ -86,8 +86,8 @@ $("#addons-button-save").click(function(event){
 //click item
 $("a.addons-click-item").click(function(){
   console.log("OK item ");
-  let div = "addons-div-item"
-  let id = $(div).find("div#addons-id-item").val();
+  let div = "div#addons-div-item"
+  let id = $(div).find("#addons-id-item").val();
   // addons-id-item
   console.log(id);
 });
