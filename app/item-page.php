@@ -4,3 +4,6 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
   echo PHP_EOL;
   echo $_GET['app'];
 }
+else {
+  # code...
+}
