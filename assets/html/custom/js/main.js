@@ -84,6 +84,7 @@ $("#addons-button-save").click(function(event){
   event.preventDefault();
 });
 //click item
+/*
 $("a.addons-click-item").click(function(){
   console.log("OK item ");
   let div = "div#addons-div-item"
@@ -91,3 +92,4 @@ $("a.addons-click-item").click(function(){
   // addons-id-item
   console.log(id);
 });
+*/

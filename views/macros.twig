@@ -578,7 +578,7 @@
 {% macro apps_themes(apps, init, end, dictionary)%}
   {% for app in apps %}
     {% if loop.index0 >= init and loop.index0 < end %}
-  					<div class="product-item column" id="addons-div-item">
+  					<div class="product-item column">
   						<!-- PRODUCT PREVIEW ACTIONS -->
   						<div class="product-preview-actions">
   							<!-- PRODUCT PREVIEW IMAGE -->
@@ -591,12 +591,12 @@
   							<div class="preview-actions">
   								<!-- PREVIEW ACTION -->
   								<div class="preview-action">
-  									<a class="addons-click-item">
+  									<a href="item-page?id={{app.id_app}}">
   										<div class="circle tiny primary">
   											<span class="icon-tag"></span>
   										</div>
   									</a>
-  									<a class="addons-click-item">
+  									<a href="item-page?id={{app.id_app}}">
   										<p>{{ dictionary.word_go_item }}</p>
   									</a>
   								</div>
@@ -621,7 +621,7 @@
 
   						<!-- PRODUCT INFO -->
   						<div class="product-info">
-  							<a href class="addons-click-item">
+  							<a href="item-page?id={{app.id_app}}">
   								<p class="text-header"> {{ app.name }} </p>
   							</a>
   							<p class="product-description">{{ app.description }}</p>
@@ -651,8 +651,6 @@
   							</ul>
   						</div>
   						<!-- /USER RATING -->
-              <input id="addons-id-item" style="display:none" value="{{app.id_app}}"></input>
-              <input id="addons-id-partner" style="display:none" value="{{app.id_partner}}"></input>
   					</div>
     {% endif %}
   {% endfor %}
