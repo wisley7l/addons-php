@@ -22,7 +22,7 @@
         <!-- /USER AVATAR -->
 
         <!-- USER INFORMATION -->
-        <p class="user-name">{{user.name_user}}</p>
+        <p class="user-name">{{user.name}}</p>
         <p class="user-money">{{dictionary.coin}}${{user.credits}}</p>
         <!-- /USER INFORMATION -->
       </div>
@@ -343,14 +343,14 @@
       <!-- INPUT CONTAINER -->
       <div class="input-container half">
         <label for="acc_id" class="rl-label">Login:</label>
-        <input disabled class="addons-up-user" type="text" value="{{user.login}}" >
+        <input disabled class="addons-up-user" type="text" value="{{user.name_login}}" >
       </div>
       <!-- /INPUT CONTAINER -->
 
       <!-- INPUT CONTAINER -->
       <div class="input-container">
         <label for="acc_name" class="rl-label required"><span class="name">{{dictionary.word_account_name}}</span></label>
-        <input class="addons-up-name" type="text" id="acc_name" name="acc_name" value="{{user.name_user}}" placeholder="{{dictionary.word_enter_name}}">
+        <input class="addons-up-name" type="text" id="acc_name" name="acc_name" value="{{user.name}}" placeholder="{{dictionary.word_enter_name}}">
       </div>
       <!-- /INPUT CONTAINER -->
 

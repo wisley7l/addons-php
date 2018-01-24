@@ -18,7 +18,7 @@ if (isset($_SESSION)) {
   // array used to set user panel parameters
   $user_login = array(
     'id' => $_SESSION['user_id'],
-    'name_user' => $_SESSION['user_name'] ,
+    'name_login' => $_SESSION['user_name'] ,
     'credits' => 10.0 / $dictionary['mult_coin'] ,
     'id_user' => $_SESSION['user_id'],
     'is_store' => $_SESSION['is_store'],
