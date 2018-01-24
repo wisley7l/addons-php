@@ -63,7 +63,9 @@ $item = array(
   'value' => 12.03 / $dictionary['mult_coin'],
   'star_on' => 3,
   'star_off' => 2,
-  'image' => '../images/items/westeros_m.jpg'
+  'image' => '../images/items/westeros_m.jpg',
+  'image_partner' => '',
+  'is_app'=> true
 );
 // query apps in db
 $apps = array();

@@ -591,12 +591,12 @@
   							<div class="preview-actions">
   								<!-- PREVIEW ACTION -->
   								<div class="preview-action">
-  									<a href="item-page?id={{app.id_app}}">
+  									<a href="item-page?id={{app.id_app}}&app={{app.is_app}}">
   										<div class="circle tiny primary">
   											<span class="icon-tag"></span>
   										</div>
   									</a>
-  									<a href="item-page?id={{app.id_app}}">
+  									<a href="item-page?id={{app.id_app}}&app={{app.is_app}}">
   										<p>{{ dictionary.word_go_item }}</p>
   									</a>
   								</div>
@@ -621,7 +621,7 @@
 
   						<!-- PRODUCT INFO -->
   						<div class="product-info">
-  							<a href="item-page?id={{app.id_app}}">
+  							<a href="item-page?id={{app.id_app}}&app={{app.is_app}}">
   								<p class="text-header"> {{ app.name }} </p>
   							</a>
   							<p class="product-description">{{ app.description }}</p>

@@ -83,13 +83,3 @@ $("#addons-button-save").click(function(event){
   }
   event.preventDefault();
 });
-//click item
-/*
-$("a.addons-click-item").click(function(){
-  console.log("OK item ");
-  let div = "div#addons-div-item"
-  let id = $(div).find("input#addons-id-item").val();
-  // addons-id-item
-  console.log(id);
-});
-*/
