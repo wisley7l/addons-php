@@ -45,7 +45,7 @@ $number_found = 0;
 //info search
 $info_page = array(
   'app_store' => true,
-  'number_found' => $number_found
+  //'number_found' => $number_found
 );
 // query filter itens
 $filter_segment = array(
