@@ -83,3 +83,8 @@ $("#addons-button-save").click(function(event){
   }
   event.preventDefault();
 });
+//click item
+$("a.addons-click-item").click(function(){
+  console.log("OK item");
+
+});
