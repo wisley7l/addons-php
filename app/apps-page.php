@@ -56,7 +56,9 @@ $filter_segment = array(
 );
 // query apps in db
 $item = array(
+  'id_app' => 1000,
   'name' => 'APP1',
+  'id_partner' => 2,
   'name_partner' => 'Partner 1',
   'value' => 12.03 / $dictionary['mult_coin'],
   'star_on' => 3, 'star_off' => 2,
