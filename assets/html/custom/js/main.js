@@ -1,4 +1,4 @@
-//
+// login
 $("form.addons-partner-login").submit(function(event) {
   let username = $(this).find("input.addons-login-user").val();
   let password = md5($(this).find("input.addons-login-password").val());
@@ -38,7 +38,7 @@ $( document ).ready(function() {
     });
   }
 });
-//
+// update partners
 $("#addons-button-save").click(function(event){
   let div = "div.form-box-item";
   let id = $(div).find("input.addons-up-id").val();
@@ -65,7 +65,7 @@ $("#addons-button-save").click(function(event){
   else {
     $(div).find("span.name").css( "color", "black");
   }
-  
+
   if(pass == md5("")){
     // If the password is empty, do not change the current password, send the word "empty" to be treated from the other side
     pass = rp_pass = "empty";
