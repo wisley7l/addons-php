@@ -124,7 +124,6 @@ echo $twig->render('profile-page.twig', array(
   'login' => $login,
   'implemented' => false,
   'info_footer' => $info_footer,
-  'info_board' => $_SERVER['PATH_FILE'],
     // test
   'user' => $user_login,
   'info_author' => $info_author,
