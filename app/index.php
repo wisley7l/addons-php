@@ -26,7 +26,7 @@ if (isset($_SESSION)) {
   $login = $_SESSION['login'];
   // set values for user, with the values saved in the session
   // array used to set user panel parameters
-  $user_login = getUserLogin();
+  $user_login = getUserLogin($dictionary);
 }
 // check if logout attempt
 if (isset($_GET['logout'])){

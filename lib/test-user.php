@@ -1,6 +1,6 @@
 <?php
 // necessary index
-function getUserLogin()
+function getUserLogin($dictionay)
 {
   return array(
     'id_user' => $_SESSION['user_id'],
