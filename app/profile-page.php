@@ -56,7 +56,7 @@ $count_partners = 0; // not implemented in the first moment
 $info_footer = array(
   'total_apps_and_themes' => $total_apps_and_themes,
   'count_partners' => $count_partners,
-  'path_file' => $_SERVER['PATH_FILE']
+  'path_file' => $_SERVER['PATH_FILE'] . "?id=" . $_GET['id']
 );
 //obs: query athor in db
 $info_author = array(
