@@ -56,5 +56,9 @@ ini_set(session_save_path(realpath(dirname('/tmp/sessions/'))));
 require __DIR__ . '/composer/vendor/autoload.php';
 // load dictionary
 require __DIR__ . '/lib/dictionary.php';
+// load categories
+require __DIR__ . '/lib/categories.php';
+//load test query php
+require __DIR__ . '/lib/test-user.php';
 // app script
 require $filename;
