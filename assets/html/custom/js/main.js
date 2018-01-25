@@ -101,6 +101,6 @@ $("#board-profile-page").click(function(){
   console.log(l);
 });
 $(document).ready(function(){
-  let l = window.locatin;
+  let l = window.location;
   console.log(l);
 });
