@@ -38,7 +38,7 @@ else {
     $_SESSION['user_name'] = $user;
     $_SESSION['name'] = 'User-Login';
     $_SESSION['login'] = true;
-    $_SESSION['is_store'] = true;
+    $_SESSION['is_store'] = false;
     $_SESSION['credits'] = 9;
     $_SESSION['path_image'] = 'http://pic.68ps.com/jc/UploadFile1466/20130521/jc1305211_12.jpg';
     //var_dump($_SESSION);
