@@ -58,7 +58,7 @@ $filter_segment = array(
 // query apps in db
 $item = getAppTheme(1112,1,$dictionary,0);
 $item2 = getAppTheme(1110,1,$dictionary,0);
-$apps = array();
+$themes = array();
 // add element in array
 array_push($themes, $item);
 array_push($themes, $item2);
