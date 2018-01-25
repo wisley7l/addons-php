@@ -40,7 +40,7 @@ else {
     $_SESSION['login'] = true;
     $_SESSION['is_store'] = false;
     $_SESSION['credits'] = 9;
-    $_SESSION['path_image'] = 'https://i.pinimg.com/originals/78/e5/c1/78e5c11a97dbc41a150d45f78ca86acf.jpg';
+    $_SESSION['path_image'] = 'https://allwallpapers.info/wp-content/uploads/2016/05/49463-iron-man-red-contour-1920x1080-movie-wallpaper-418x313.jpeg';
     //var_dump($_SESSION);
     if (!is_writable(session_save_path())) {
     //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
