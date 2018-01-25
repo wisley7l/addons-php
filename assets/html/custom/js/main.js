@@ -88,12 +88,15 @@ $("#board-author-itens-page").click(function(){
   let ul = "ul#addons-board-profile"
   $(ul).find("#board-profile-page").attr('class', 'dropdown-item'); // "dropdown-item";
   $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item active'); // "dropdown-item active";
-  console.log("certooo");
+  let l = $(location);
+  console.log(l);
+
 })
 //click
 $("#board-profile-page").click(function(){
   let ul = "ul#addons-board-profile"
   $(ul).find("#board-profile-page").attr('class', 'dropdown-item active');
   $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item');
-  console.log("certooo denovo");
+  let l = $(location);
+  console.log(l);
 })
