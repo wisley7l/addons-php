@@ -102,7 +102,7 @@ $("#board-profile-page").click(function(){
 });
 $(document).ready(function(){
   let l = window.location.pathname;
-  l.replace('/pt_br/','');
-  l.replace('/en_us/','');
+  l.replace(/pt_br/g,'');
+  l.replace(/en_us/g,'');
   console.log(l);
 });
