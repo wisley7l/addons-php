@@ -5,5 +5,5 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
   echo $_GET['app'];
 }
 else {
-  # code...
+  echo "error";
 }
