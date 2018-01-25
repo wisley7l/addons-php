@@ -72,17 +72,40 @@ $info_author = array(
   'evaluations' => 5
 );
 // test apps  // Perform db query to obtain this information limit 3
-$apps = array(
-  array('name' => 'APP1', 'name_partner' => 'Author', 'value' => 12.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'APP2', 'name_partner' => 'Author', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'APP3', 'name_partner' => 'Author', 'value' => 5.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
+// query apps in db
+$item2 = array(
+  'id_app' => 1100,
+  'name' => 'APP2',
+  'id_partner' => 1,
+  'name_partner' => 'Partner 2',
+  'value' => 20.03 / $dictionary['mult_coin'],
+  'star_on' => 3,
+  'star_off' => 2,
+  'image' => '../images/items/westeros_m.jpg',
+  'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
+  'is_app'=> true
 );
+// query apps in db
+$apps = array();
+// add element in array
+array_push($apps, $item2);
 // test themes  // Perform db query to obtain this information limit 3
-$themes = array(
-  array('name' => 'THEME1', 'name_partner' => 'Author', 'value' => 10.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME2', 'name_partner' => 'Author', 'value' => 18.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME3', 'name_partner' => 'Author', 'value' => 28.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
+// query apps in db
+$item = array(
+  'id_app' => 1000,
+  'name' => 'APP1',
+  'id_partner' => 2,
+  'name_partner' => 'Partner 1',
+  'value' => 12.03 / $dictionary['mult_coin'],
+  'star_on' => 3,
+  'star_off' => 2,
+  'image' => '../images/items/westeros_m.jpg',
+  'image_partner' => 'http://2.bp.blogspot.com/-7tydAWF_j7o/VbI736K_lTI/AAAAAAAADs4/vM0V-5nFTKw/s1600/boteco%2Bde%2Boa%2B%25285%2529.jpg',
+  'is_app'=> true
 );
+$themes = array();
+// add element in array
+array_push($themes, $item);
 // test comments
 // query comments in db limit in 2
 $comments = array(
