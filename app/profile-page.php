@@ -75,36 +75,14 @@ $info_author = array(
 );
 // test apps  // Perform db query to obtain this information limit 3
 // query apps in db
-$item2 = array(
-  'id_app' => 1100,
-  'name' => 'APP2',
-  'id_partner' => 1,
-  'name_partner' => 'Partner 2',
-  'value' => 20.03 / $dictionary['mult_coin'],
-  'star_on' => 3,
-  'star_off' => 2,
-  'image' => '../images/items/westeros_m.jpg',
-  'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
-  'is_app'=> 1
-);
+$item2 = getAppTheme(1000,1,$dictionary,1);
 // query apps in db
 $apps = array();
 // add element in array
 array_push($apps, $item2);
 // test themes  // Perform db query to obtain this information limit 3
 // query apps in db
-$item = array(
-  'id_app' => 1000,
-  'name' => 'THEME2',
-  'id_partner' => 1,
-  'name_partner' => 'Partner 2',
-  'value' => 20.03 / $dictionary['mult_coin'],
-  'star_on' => 3,
-  'star_off' => 2,
-  'image' => '../images/items/westeros_m.jpg',
-  'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
-  'is_app'=> 0
-);
+$item = getAppTheme(1111,1,$dictionary,0);
 $themes = array();
 // add element in array
 array_push($themes, $item);
@@ -114,8 +92,6 @@ $comments = array(
   array('name' => 'C 1', 'path_image' => '', 'date' => '22 January  2018', 'is_buyer' => true, 'comment' => 'Este é um comentário de teste '),
   array('name' => 'C 2', 'path_image' => '', 'date' => '25 January  2018', 'is_buyer' => false, 'comment' => 'Este é outro comentário de teste '),
 );
-
-
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
