@@ -80,12 +80,12 @@
 {% endmacro %}
 <!-- -->
 {% macro profile_board(dictionary,info_author) %}
-  <ul class="dropdown hover-effect">
+  <ul class="dropdown hover-effect" id="addons-board-profile">
     <li class="dropdown-item active" id="board-profile-page">
-      <a href="profile-page">{{dictionary.word_profile_author}}</a>
+      <a >{{dictionary.word_profile_author}}</a> <!-- add href profile-page with id partner -->
     </li>
     <li class="dropdown-item" id="board-author-itens-page">
-      <a href="author-items-page">{{dictionary.word_author_items}} ({{info_author.number_apps_themes}})</a>
+      <a >{{dictionary.word_author_items}} ({{info_author.number_apps_themes}})</a> <!-- add href  -->
     </li>
 		{# comments
     <li class="dropdown-item" id="board-profile-reviws-page">
