@@ -83,3 +83,23 @@ $("#addons-button-save").click(function(event){
   }
   event.preventDefault();
 });
+// click
+$("#board-author-itens-page").click(function(){
+  let ul = "ul#addons-board-profile"
+  $(ul).find("#board-profile-page").attr('class', 'dropdown-item'); // "dropdown-item";
+  $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item active'); // "dropdown-item active";
+  let l = $(location);
+  console.log(l);
+
+});
+//click
+$("#board-profile-page").click(function(){
+  let ul = "ul#addons-board-profile"
+  $(ul).find("#board-profile-page").attr('class', 'dropdown-item active');
+  $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item');
+  let l = $(location);
+  console.log(l);
+});
+$(location).on(function(){
+console.log("test");
+});
