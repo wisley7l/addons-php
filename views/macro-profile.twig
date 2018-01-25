@@ -79,14 +79,23 @@
   </div>
 {% endmacro %}
 <!-- -->
-{% macro profile_board(dictionary,info_author) %}
+{% macro profile_board(dictionary,info_author,info_board) %}
   <ul class="dropdown hover-effect" id="addons-board-profile">
+		{% if info_board == "profile-page" %}
     <li class="dropdown-item active" id="board-profile-page">
       <a >{{dictionary.word_profile_author}}</a> <!-- add href profile-page with id partner -->
     </li>
     <li class="dropdown-item" id="board-author-itens-page">
       <a >{{dictionary.word_author_items}} ({{info_author.number_apps_themes}})</a> <!-- add href  -->
     </li>
+		{% else if info_board = "author-items-page" %}
+		<li class="dropdown-item" id="board-profile-page">
+      <a >{{dictionary.word_profile_author}}</a> <!-- add href profile-page with id partner -->
+    </li>
+    <li class="dropdown-item active" id="board-author-itens-page">
+      <a >{{dictionary.word_author_items}} ({{info_author.number_apps_themes}})</a> <!-- add href  -->
+    </li>
+		{% endif %}
 		{# comments
     <li class="dropdown-item" id="board-profile-reviws-page">
       <a href="author-profile-reviews.html">Customer Reviews (42)</a>
