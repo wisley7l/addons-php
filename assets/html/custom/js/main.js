@@ -93,7 +93,7 @@ $(document).ready(function(){
     $(ul).find("#board-profile-page").attr('class', 'dropdown-item active');
     $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item');
   }
-  if(item_page != -1){
+  if(items_page != -1){
     let ul = "ul#addons-board-profile"
     $(ul).find("#board-profile-page").attr('class', 'dropdown-item'); // "dropdown-item";
     $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item active'); // "dropdown-item active";
