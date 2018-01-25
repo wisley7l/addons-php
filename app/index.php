@@ -12,6 +12,7 @@ if (isset($_GET['EROORLOGIN'])) {
 if (isset($_GET['SUCCESSLOGIN'])) {
     // create hidden div to handle login success attempt
     print '<div class="addons-sucess-login" style="display:none">' . $dictionary['word_sucess_login'] . '</div>';
+    sleep ( 5);
     header("Location: index");
     exit;
 }
