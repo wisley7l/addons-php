@@ -83,11 +83,11 @@ $("#addons-button-save").click(function(event){
   }
   event.preventDefault();
 });
-//
+// treat all 
 $(document).ready(function(){
-  let l = window.location.pathname;
-  let profile_page = l.indexOf("profile-page");
-  let items_page = l.indexOf("author-items-page");
+  let page = window.location.pathname;
+  let profile_page = page.indexOf("profile-page");
+  let items_page = page.indexOf("author-items-page");
   if(profile_page != -1){
     let ul = "ul#addons-board-profile"
     $(ul).find("#board-profile-page").attr('class', 'dropdown-item active');
@@ -95,7 +95,7 @@ $(document).ready(function(){
   }
   if(items_page != -1){
     let ul = "ul#addons-board-profile"
-    $(ul).find("#board-profile-page").attr('class', 'dropdown-item'); // "dropdown-item";
-    $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item active'); // "dropdown-item active";
+    $(ul).find("#board-profile-page").attr('class', 'dropdown-item');
+    $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item active');
   }
 });

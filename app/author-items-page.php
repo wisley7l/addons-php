@@ -50,35 +50,59 @@ $count_partners = 0; // not implemented in the first moment
 $info_footer = array(
   'total_apps_and_themes' => $total_apps_and_themes,
   'count_partners' => $count_partners,
-  'path_file' => $_SERVER['PATH_FILE']
+  'path_file' => $_SERVER['PATH_FILE'] . "?id=" . $_GET['id']
 );
 //obs: query athor in db
 $info_author = array(
-  'id' => 001,
-  'name' => 'Author',
+  'id' => 1,
+  'name' => 'Partner 2',
   'location' => 'Brazil',
   'description' => 'dev',
   'member_since' => '1 Janary 2018',
-  'total_sales' => 100,
+  'total_sales' => 100, // sales quantity query
   'web_site' => 'www.example.com',
-  'path_image' => '../images/avatars/avatar_09.jpg',
-  'number_apps_themes' => 3,
-  'number_badges' => 1,
-  'stars' => 1,
-  'evaluations' => 5
+  'path_image' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
+  'number_apps_themes' => 3, // quantity of items found
+  'number_badges' => 1, //not implemented
+  'stars' => 1, // not implemented
+  'evaluations' => 5 // not implemented
 );
 // test apps  // Perform db query to obtain this information limit 3
-$apps = array(
-  array('name' => 'APP1', 'name_partner' => 'Author', 'value' => 12.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'APP2', 'name_partner' => 'Author', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'APP3', 'name_partner' => 'Author', 'value' => 5.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
+// query apps in db
+$item2 = array(
+  'id_app' => 1100,
+  'name' => 'APP2',
+  'id_partner' => 1,
+  'name_partner' => 'Partner 2',
+  'value' => 20.03 / $dictionary['mult_coin'],
+  'star_on' => 3,
+  'star_off' => 2,
+  'image' => '../images/items/westeros_m.jpg',
+  'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
+  'is_app'=> 1
 );
+// query apps in db
+$apps = array();
+// add element in array
+array_push($apps, $item2);
 // test themes  // Perform db query to obtain this information limit 3
-$themes = array(
-  array('name' => 'THEME1', 'name_partner' => 'Author', 'value' => 10.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME2', 'name_partner' => 'Author', 'value' => 18.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME3', 'name_partner' => 'Author', 'value' => 28.50 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
+// query apps in db
+$item = array(
+  'id_app' => 1000,
+  'name' => 'THEME2',
+  'id_partner' => 1,
+  'name_partner' => 'Partner 2',
+  'value' => 20.03 / $dictionary['mult_coin'],
+  'star_on' => 3,
+  'star_off' => 2,
+  'image' => '../images/items/westeros_m.jpg',
+  'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
+  'is_app'=> 0
 );
+$themes = array();
+// add element in array
+array_push($themes, $item);
+// test comments
 // test comments
 
 // intial twig and send varibles for template
