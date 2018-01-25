@@ -60,14 +60,14 @@ $info_footer = array(
 );
 //obs: query athor in db
 $info_author = array(
-  'id' => 001,
-  'name' => 'Author',
+  'id' => 1,
+  'name' => 'Partner 2',
   'location' => 'Brazil',
   'description' => 'dev',
   'member_since' => '1 Janary 2018',
   'total_sales' => 100, // sales quantity query
   'web_site' => 'www.example.com',
-  'path_image' => '../images/avatars/avatar_09.jpg',
+  'path_image' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
   'number_apps_themes' => 3, // quantity of items found
   'number_badges' => 1, //not implemented
   'stars' => 1, // not implemented
