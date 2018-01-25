@@ -86,7 +86,7 @@ $("#addons-button-save").click(function(event){
 // click
 $("#board-author-itens-page").click(function(){
   let ul = "ul#addons-board-profile"
-  $(ul).find("#board-profile-page").class = "dropdown-item";
-  $(ul).find("#board-author-itens-page").class = "dropdown-item active";
+  $(ul).find("#board-profile-page").attr('class', 'dropdown-item'); // "dropdown-item";
+  $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item active'); // "dropdown-item active";
   console.log("certooo");
 })
