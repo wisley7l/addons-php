@@ -208,7 +208,7 @@ function get_dictionary () {
     'subtitle' => $subtitle,
     'welcome' => $welcome,
     'e_com' => 'E-Com Plus ',
-    'addons' => 'Addons ',
+    'addons' => 'Market',
     'word_partner' => $Word_partner,
     'word_shopkeeper' => $word_shopkeeper,
     'word_app' => $word_app,
