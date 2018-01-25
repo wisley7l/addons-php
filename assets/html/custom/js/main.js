@@ -100,6 +100,6 @@ $("#board-profile-page").click(function(){
   let l = $(location);
   console.log(l);
 });
-$(location).on(function(){
-console.log("test");
+$(document).ready(function(){
+  console.log("teste");
 });
