@@ -46,58 +46,21 @@ $info_footer = array(
   'path_file' => $_SERVER['PATH_FILE'] . "?id=" . $_GET['id']
 );
 //obs: query athor in db
-$info_author = array(
-  'id' => 1,
-  'name' => 'Partner 2',
-  'location' => 'Brazil',
-  'description' => 'dev',
-  'member_since' => '1 Janary 2018',
-  'total_sales' => 100, // sales quantity query
-  'web_site' => 'www.example.com',
-  'path_image' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
-  'number_apps_themes' => 3, // quantity of items found
-  'number_badges' => 1, //not implemented
-  'stars' => 1, // not implemented
-  'evaluations' => 5 // not implemented
-);
+$info_author = getInfoUser($_GET['id']);
 // test apps  // Perform db query to obtain this information limit 3
 // query apps in db
-$item2 = array(
-  'id_app' => 1100,
-  'name' => 'APP2',
-  'id_partner' => 1,
-  'name_partner' => 'Partner 2',
-  'value' => 20.03 / $dictionary['mult_coin'],
-  'star_on' => 3,
-  'star_off' => 2,
-  'image' => '../images/items/westeros_m.jpg',
-  'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
-  'is_app'=> 1
-);
+$item2 = getAppTheme(1000,$_GET['id'],$dictionary,1);
 // query apps in db
 $apps = array();
 // add element in array
 array_push($apps, $item2);
 // test themes  // Perform db query to obtain this information limit 3
 // query apps in db
-$item = array(
-  'id_app' => 1000,
-  'name' => 'THEME2',
-  'id_partner' => 1,
-  'name_partner' => 'Partner 2',
-  'value' => 20.03 / $dictionary['mult_coin'],
-  'star_on' => 3,
-  'star_off' => 2,
-  'image' => '../images/items/westeros_m.jpg',
-  'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
-  'is_app'=> 0
-);
+$item = getAppTheme(1111,$_GET['id'],$dictionary,0);
 $themes = array();
 // add element in array
 array_push($themes, $item);
 // test comments
-// test comments
-
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
