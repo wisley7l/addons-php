@@ -54,33 +54,11 @@ $filter_segment = array(
   array('name' => 'Test 1'),
   array('name' => 'Test 2')
 );
+// test apps  // Perform db query to obtain this information limit 3
 // query apps in db
-$item = array(
-  'id_app' => 1000,
-  'name' => 'THEME1',
-  'id_partner' => 2,
-  'name_partner' => 'Partner 1',
-  'value' => 12.03 / $dictionary['mult_coin'],
-  'star_on' => 3,
-  'star_off' => 2,
-  'image' => '../images/items/westeros_m.jpg',
-  'image_partner' => 'http://2.bp.blogspot.com/-7tydAWF_j7o/VbI736K_lTI/AAAAAAAADs4/vM0V-5nFTKw/s1600/boteco%2Bde%2Boa%2B%25285%2529.jpg',
-  'is_app'=> 0
-);
-$item2 = array(
-  'id_app' => 1100,
-  'name' => 'THEME2',
-  'id_partner' => 1,
-  'name_partner' => 'Partner 2',
-  'value' => 20.03 / $dictionary['mult_coin'],
-  'star_on' => 3,
-  'star_off' => 2,
-  'image' => '../images/items/westeros_m.jpg',
-  'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
-  'is_app'=> 0
-);
-// query apps in db
-$themes = array();
+$item = getAppTheme(1112,1,$dictionary,0);
+$item2 = getAppTheme(1110,1,$dictionary,0);
+$apps = array();
 // add element in array
 array_push($themes, $item);
 array_push($themes, $item2);
