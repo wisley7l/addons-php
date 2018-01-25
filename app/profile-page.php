@@ -43,7 +43,9 @@ if (isset($_GET['logout'])){
 //(end) * Required on all pages *
 
 if (isset($_GET['id'])){
-  echo $_GET['id'];
+  //echo $_GET['id'];
+  // query partner items by id
+  // and  info author
 }
 
 // necessary variables for information
@@ -63,13 +65,13 @@ $info_author = array(
   'location' => 'Brazil',
   'description' => 'dev',
   'member_since' => '1 Janary 2018',
-  'total_sales' => 100,
+  'total_sales' => 100, // sales quantity query
   'web_site' => 'www.example.com',
   'path_image' => '../images/avatars/avatar_09.jpg',
-  'number_apps_themes' => 3,
-  'number_badges' => 1,
-  'stars' => 1,
-  'evaluations' => 5
+  'number_apps_themes' => 3, // quantity of items found
+  'number_badges' => 1, //not implemented
+  'stars' => 1, // not implemented
+  'evaluations' => 5 // not implemented
 );
 // test apps  // Perform db query to obtain this information limit 3
 // query apps in db

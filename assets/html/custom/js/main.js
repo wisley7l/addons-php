@@ -83,3 +83,9 @@ $("#addons-button-save").click(function(event){
   }
   event.preventDefault();
 });
+// click
+$("#board-author-itens-page").click(function(){
+  let ul = "ul#addons-board-profile"
+  $(ul).find("#board-profile-page").class = "dropdown-item";
+  $(ul).find("#board-author-itens-page").class = "dropdown-item active";
+})
