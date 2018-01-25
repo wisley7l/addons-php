@@ -97,6 +97,6 @@ $("#board-profile-page").click(function(){
   let ul = "ul#addons-board-profile"
   $(ul).find("#board-profile-page").attr('class', 'dropdown-item active');
   $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item');
-  let l = $(location).pathname;
+  let l = $(location).pathname();
   console.log(l);
 })
