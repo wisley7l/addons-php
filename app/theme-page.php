@@ -65,7 +65,7 @@ $item = array(
   'star_off' => 2,
   'image' => '../images/items/westeros_m.jpg',
   'image_partner' => 'http://2.bp.blogspot.com/-7tydAWF_j7o/VbI736K_lTI/AAAAAAAADs4/vM0V-5nFTKw/s1600/boteco%2Bde%2Boa%2B%25285%2529.jpg',
-  'is_app'=> false
+  'is_app'=> 0
 );
 $item2 = array(
   'id_app' => 1100,
@@ -77,7 +77,7 @@ $item2 = array(
   'star_off' => 2,
   'image' => '../images/items/westeros_m.jpg',
   'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
-  'is_app'=> false
+  'is_app'=> 0
 );
 // query apps in db
 $themes = array();

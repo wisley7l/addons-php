@@ -83,7 +83,7 @@ $item2 = array(
   'star_off' => 2,
   'image' => '../images/items/westeros_m.jpg',
   'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
-  'is_app'=> true
+  'is_app'=> 1
 );
 // query apps in db
 $apps = array();
@@ -101,7 +101,7 @@ $item = array(
   'star_off' => 2,
   'image' => '../images/items/westeros_m.jpg',
   'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
-  'is_app'=> false
+  'is_app'=> 0
 );
 $themes = array();
 // add element in array
