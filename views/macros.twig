@@ -1129,7 +1129,7 @@
   {% if user.is_store == false %}
     <div class="user-quickview">
       <!-- USER AVATAR -->
-      <a href="profile-page">
+      <a href="profile-page?id={{user.id_user}}">
       <div class="outer-ring">
         <div class="inner-ring"></div>
         <figure class="user-avatar">
@@ -1153,7 +1153,7 @@
       <ul class="dropdown small hover-effect closed">
         <li class="dropdown-item">
           <div class="dropdown-triangle"></div>
-          <a href="profile-page">{{dictionary.word_profile_page}}</a>
+          <a href="profile-page?id={{user.id_user}}">{{dictionary.word_profile_page}}</a>
         </li>
         <li class="dropdown-item">
           <a href="dashboard-settings">{{dictionary.word_account_settings}}</a>
@@ -1176,7 +1176,7 @@
   {% else %}
   <div class="user-quickview">
     <!-- USER AVATAR -->
-    <a href="profile-page">
+    <a href="profile-page?id={{user.id_user}}">
     <div class="outer-ring">
       <div class="inner-ring"></div>
       <figure class="user-avatar">
@@ -1211,7 +1211,7 @@
 {% macro user_quickview_moblie(dictionary,user) %}
   <div class="user-quickview">
   <!-- USER AVATAR -->
-  <a href="profile-page">
+  <a href="profile-page?id={{user.id_user}}">
   <div class="outer-ring">
     <div class="inner-ring"></div>
     <figure class="user-avatar">
@@ -1513,7 +1513,7 @@
     <ul class="dropdown dark hover-effect">
       <!-- DROPDOWN ITEM -->
       <li class="dropdown-item">
-        <a href="profile-page">{{dictionary.word_profile_page}}</a>
+        <a href="profile-page?id={{user.id_user}}">{{dictionary.word_profile_page}}</a>
       </li>
       <!-- /DROPDOWN ITEM -->
 
