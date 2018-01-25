@@ -51,33 +51,39 @@ $info_page = array(
 );
 // query filter itens
 $filter_segment = array(
-  array('name' => 'Test 1', 'href' => '#', 'active' => 'active'),
-  array('name' => 'Test 2', 'href' => '#', 'active' => '' )
+  array('name' => 'Test 1'),
+  array('name' => 'Test 2')
 );
 // query apps in db
-$themes = array(
-  array('name' => 'THEME1', 'name_partner' => 'Partner 1', 'value' => 12.03 / $dictionary['mult_coin'], 'star_on' => 3, 'star_off' => 2, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME2', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME3', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 0, 'star_off' => 0, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME4', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME5', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME6', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME7', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME8', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME9', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME10', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME11', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME12', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME13', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME14', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME15', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME16', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME17', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME18', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME19', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME20', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' ),
-  array('name' => 'THEME21', 'name_partner' => 'Partner 2', 'value' => 15.50 / $dictionary['mult_coin'], 'star_on' => 4, 'star_off' => 1, 'image' => '../images/items/westeros_m.jpg' )
+$item = array(
+  'id_app' => 1000,
+  'name' => 'THEME1',
+  'id_partner' => 2,
+  'name_partner' => 'Partner 1',
+  'value' => 12.03 / $dictionary['mult_coin'],
+  'star_on' => 3,
+  'star_off' => 2,
+  'image' => '../images/items/westeros_m.jpg',
+  'image_partner' => 'http://2.bp.blogspot.com/-7tydAWF_j7o/VbI736K_lTI/AAAAAAAADs4/vM0V-5nFTKw/s1600/boteco%2Bde%2Boa%2B%25285%2529.jpg',
+  'is_app'=> true
 );
+$item2 = array(
+  'id_app' => 1100,
+  'name' => 'THEME2',
+  'id_partner' => 1,
+  'name_partner' => 'Partner 2',
+  'value' => 20.03 / $dictionary['mult_coin'],
+  'star_on' => 3,
+  'star_off' => 2,
+  'image' => '../images/items/westeros_m.jpg',
+  'image_partner' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
+  'is_app'=> true
+);
+// query apps in db
+$themes = array();
+// add element in array
+array_push($themes, $item);
+array_push($themes, $item2);
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
