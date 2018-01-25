@@ -27,3 +27,21 @@ function getAppTheme($id_app,$id_partner,$dictionary,$app)
     'is_app'=> $app
   );
 }
+// info partner for profile page
+function getInfoUser($id)
+{
+  return array(
+    'id' => $id,
+    'name' => 'Partner 2',
+    'location' => 'Brazil',
+    'description' => 'dev',
+    'member_since' => '1 Janary 2018',
+    'total_sales' => 100, // sales quantity query
+    'web_site' => 'www.example.com',
+    'path_image' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
+    'number_apps_themes' => 3, // quantity of items found
+    'number_badges' => 1, //not implemented
+    'stars' => 1, // not implemented
+    'evaluations' => 5 // not implemented
+  );
+}

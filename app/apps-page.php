@@ -49,8 +49,8 @@ $filter_segment = array(
 );
 // test apps  // Perform db query to obtain this information limit 3
 // query apps in db
-$item = getAppTheme(1001,1,$dictionary,1);
-$item2 = getAppTheme(1000,1,$dictionary,1);
+$item = getAppTheme(1001,2,$dictionary,1);
+$item2 = getAppTheme(1000,2,$dictionary,1);
 $apps = array();
 // add element in array
 array_push($apps, $item);
