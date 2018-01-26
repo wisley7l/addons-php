@@ -11,6 +11,11 @@
 	<title>Emerald Dragon | Dashboard</title>
 </head>
 <body>
+  {% import 'macros.twig' as macro_main %}
+  {% import 'macro-dashboard.twig' as macro_dashboad %}
+	<!-- SIDE MENU -->
+	{{macro_dashboad.all_menu(dictionary,user)}}
+	<!-- /SIDE MENU -->
 
 	<!-- SIDE MENU -->
 	<div id="dashboard-options-menu" class="side-menu dashboard left closed">
@@ -941,5 +946,6 @@
 <script src="js/dashboard-header.js"></script>
 <!-- Dashboard Statement -->
 <script src="js/dashboard-statement.js"></script>
+{{macro_main.scripts()}}
 </body>
 </html>
