@@ -25,38 +25,40 @@
         <!-- DASHBOARD CONTENT -->
         <div class="dashboard-content">
             <!-- HEADLINE -->
+            {# not implemented
             <div class="headline statement primary">
                 <h4>Sales Statement</h4>
-				<a href="#" class="button primary">Download File</a>
-				<button form="statement_filter_form" class="button dark-light">Refine Search</button>
-				<form id="statement_filter_form" name="statement_filter_form" class="statement-form">
-					<!-- DATEPICKER -->
-					<div class="datepicker-wrap">
-						<input type="text" id="date_from" name="date_from" class="datepicker" value="02/22/2016">
-						<span class="icon-calendar"></span>
-					</div>
-					<!-- /DATEPICKER -->
-					<label>to:</label>
-					<!-- DATEPICKER -->
-					<div class="datepicker-wrap">
-						<input type="text" id="date_to" name="date_to" class="datepicker" value="02/22/2017">
-						<span class="icon-calendar"></span>
-					</div>
-					<!-- /DATEPICKER -->
-					<label for="ss_filter" class="select-block">
-						<select name="ss_filter" id="ss_filter">
-							<option value="0">Sales and Purchases</option>
-							<option value="1">Sales</option>
-							<option value="2">Purchases</option>
-						</select>
-						<!-- SVG ARROW -->
-						<svg class="svg-arrow">
-							<use xlink:href="#svg-arrow"></use>
-						</svg>
-						<!-- /SVG ARROW -->
-					</label>
-				</form>
+      				<a href="#" class="button primary">Download File</a>
+      				<button form="statement_filter_form" class="button dark-light">Refine Search</button>
+      				<form id="statement_filter_form" name="statement_filter_form" class="statement-form">
+      					<!-- DATEPICKER -->
+      					<div class="datepicker-wrap">
+      						<input type="text" id="date_from" name="date_from" class="datepicker" value="02/22/2016">
+      						<span class="icon-calendar"></span>
+      					</div>
+      					<!-- /DATEPICKER -->
+      					<label>to:</label>
+      					<!-- DATEPICKER -->
+      					<div class="datepicker-wrap">
+      						<input type="text" id="date_to" name="date_to" class="datepicker" value="02/22/2017">
+      						<span class="icon-calendar"></span>
+      					</div>
+      					<!-- /DATEPICKER -->
+      					<label for="ss_filter" class="select-block">
+      						<select name="ss_filter" id="ss_filter">
+      							<option value="0">Sales and Purchases</option>
+      							<option value="1">Sales</option>
+      							<option value="2">Purchases</option>
+      						</select>
+      						<!-- SVG ARROW -->
+      						<svg class="svg-arrow">
+      							<use xlink:href="#svg-arrow"></use>
+      						</svg>
+      						<!-- /SVG ARROW -->
+      					</label>
+      				</form>
             </div>
+            #}
             <!-- /HEADLINE -->
 
 			<!-- SALE DATA -->
@@ -110,33 +112,7 @@
 			<!-- TRANSACTION LIST -->
 			<div class="transaction-list">
 				<!-- TRANSACTION LIST HEADER -->
-				<div class="transaction-list-header">
-					<div class="transaction-list-header-date">
-						<p class="text-header small">Date</p>
-					</div>
-					<div class="transaction-list-header-author">
-						<p class="text-header small">Author</p>
-					</div>
-					<div class="transaction-list-header-item">
-						<p class="text-header small">Item</p>
-					</div>
-					<div class="transaction-list-header-detail">
-						<p class="text-header small">Detail</p>
-					</div>
-					<div class="transaction-list-header-code">
-						<p class="text-header small">Code</p>
-					</div>
-					<div class="transaction-list-header-price">
-						<p class="text-header small">Price</p>
-					</div>
-					<div class="transaction-list-header-cut">
-						<p class="text-header small">Your Cut</p>
-					</div>
-					<div class="transaction-list-header-earnings">
-						<p class="text-header small">Earnings</p>
-					</div>
-					<div class="transaction-list-header-icon"></div>
-				</div>
+				{{macro_dashboad.header_table(dictionary)}}
 				<!-- /TRANSACTION LIST HEADER -->
 
 				<!-- TRANSACTION LIST ITEM -->

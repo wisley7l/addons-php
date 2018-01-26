@@ -716,3 +716,34 @@
       <!-- /INPUT CONTAINER -->
     </div>
 {% endmacro %}
+
+{# macros for dashboard Statement #}
+{% macro header_table(dictionary) %}
+<div class="transaction-list-header">
+  <div class="transaction-list-header-date">
+    <p class="text-header small">Date</p>
+  </div>
+  <div class="transaction-list-header-author">
+    <p class="text-header small">Author</p>
+  </div>
+  <div class="transaction-list-header-item">
+    <p class="text-header small">Item</p>
+  </div>
+  <div class="transaction-list-header-detail">
+    <p class="text-header small">Detail</p>
+  </div>
+  <div class="transaction-list-header-code">
+    <p class="text-header small">Code</p>
+  </div>
+  <div class="transaction-list-header-price">
+    <p class="text-header small">Price</p>
+  </div>
+  <div class="transaction-list-header-cut">
+    <p class="text-header small">Your Cut</p>
+  </div>
+  <div class="transaction-list-header-earnings">
+    <p class="text-header small">Earnings</p>
+  </div>
+  <div class="transaction-list-header-icon"></div>
+</div>
+{% endmacro %}
