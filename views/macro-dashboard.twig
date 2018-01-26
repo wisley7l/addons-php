@@ -719,31 +719,69 @@
 
 {# macros for dashboard Statement #}
 {% macro header_table(dictionary) %}
-<div class="transaction-list-header">
-  <div class="transaction-list-header-date">
-    <p class="text-header small">Date</p>
+  <div class="transaction-list-header">
+    <div class="transaction-list-header-date">
+      <p class="text-header small">Date</p>
+    </div>
+    <div class="transaction-list-header-author">
+      <p class="text-header small">Author</p>
+    </div>
+    <div class="transaction-list-header-item">
+      <p class="text-header small">Item</p>
+    </div>
+    <div class="transaction-list-header-detail">
+      <p class="text-header small">Detail</p>
+    </div>
+    <div class="transaction-list-header-code">
+      <p class="text-header small">Code</p>
+    </div>
+    <div class="transaction-list-header-price">
+      <p class="text-header small">Price</p>
+    </div>
+    <div class="transaction-list-header-cut">
+      <p class="text-header small">Your Cut</p>
+    </div>
+    <div class="transaction-list-header-earnings">
+      <p class="text-header small">Earnings</p>
+    </div>
+    <div class="transaction-list-header-icon"></div>
   </div>
-  <div class="transaction-list-header-author">
-    <p class="text-header small">Author</p>
+{% endmacro %}
+
+{% macro item_list(dictionary) %}
+  <div class="transaction-list-item">
+    <div class="transaction-list-item-date">
+      <p>Dec 12th, 2014</p>
+    </div>
+    <div class="transaction-list-item-author">
+      <p class="text-header"><a href="">Sarah-Imaginarium</a></p>
+    </div>
+    <div class="transaction-list-item-item">
+      <p class="category primary"><a href="">Westeros Custom Clothing</a></p>
+    </div>
+    <div class="transaction-list-item-detail">
+      <p>Sale</p>
+    </div>
+    <div class="transaction-list-item-code">
+      <p><span class="light">ED3546</span></p>
+    </div>
+    <div class="transaction-list-item-price">
+      <p>$ 12</p>
+    </div>
+    <div class="transaction-list-item-cut">
+      <p><span class="light">50%</span></p>
+    </div>
+    <div class="transaction-list-item-earnings">
+      <p class="text-header">$ 6</p>
+    </div>
+    <div class="transaction-list-item-icon">
+      <div class="transaction-icon primary">
+        <!-- SVG PLUS -->
+        <svg class="svg-plus">
+          <use xlink:href="#svg-plus"></use>
+        </svg>
+        <!-- /SVG PLUS -->
+      </div>
+    </div>
   </div>
-  <div class="transaction-list-header-item">
-    <p class="text-header small">Item</p>
-  </div>
-  <div class="transaction-list-header-detail">
-    <p class="text-header small">Detail</p>
-  </div>
-  <div class="transaction-list-header-code">
-    <p class="text-header small">Code</p>
-  </div>
-  <div class="transaction-list-header-price">
-    <p class="text-header small">Price</p>
-  </div>
-  <div class="transaction-list-header-cut">
-    <p class="text-header small">Your Cut</p>
-  </div>
-  <div class="transaction-list-header-earnings">
-    <p class="text-header small">Earnings</p>
-  </div>
-  <div class="transaction-list-header-icon"></div>
-</div>
 {% endmacro %}
