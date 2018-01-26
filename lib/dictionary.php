@@ -108,6 +108,8 @@ function get_dictionary () {
       $word_upload_image = 'Upload Image...';
       $word_minimun_size = 'Minimum size';
       $word_save = 'Save';
+      $word_dashboard_statement = 'Statement';
+      $word_dashboard = 'Settings';
       break;
 
     default:
@@ -200,6 +202,8 @@ function get_dictionary () {
       $word_upload_image = 'Atualizar Imagem...';
       $word_minimun_size = 'Tamanho mínimo';
       $word_save = 'Salvar';
+      $word_dashboard_statement = 'Histórico';
+      $word_dashboard = 'Configuração';
       break;
   }
   // array dictionary
@@ -299,7 +303,9 @@ function get_dictionary () {
     'word_describe_you' => $word_describe_you,
     'word_upload_image' => $word_upload_image,
     'word_minimun_size' => $word_minimun_size,
-    'word_save' => $word_save
+    'word_save' => $word_save,
+    'word_dashboard_statement' => $word_dashboard_statement,
+    'word_dashboard' => $word_dashboard
   );
   return $dictionary;
 }
