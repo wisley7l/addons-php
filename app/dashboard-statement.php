@@ -29,6 +29,10 @@ if (isset($_GET['logout'])){
 }
 //(end) * Required on all pages *
 
+// obtain the total number of items sold and the total amount collected from the user's sales
+
+
+
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);

@@ -110,6 +110,9 @@ function get_dictionary () {
       $word_save = 'Save';
       $word_dashboard_statement = 'Statement';
       $word_dashboard = 'Settings';
+      $word_items_sold = 'Items Sold';
+      $word_total_earnings = 'Total earnings';
+      $word_from_sales = 'from sales';
       break;
 
     default:
@@ -204,6 +207,10 @@ function get_dictionary () {
       $word_save = 'Salvar';
       $word_dashboard_statement = 'Histórico';
       $word_dashboard = 'Configuração';
+      $word_items_sold = 'Itens Vendidos';
+      $word_total_earnings = 'Ganos Totais';
+      $word_from_sales = 'com vendas';
+
       break;
   }
   // array dictionary
@@ -305,7 +312,10 @@ function get_dictionary () {
     'word_minimun_size' => $word_minimun_size,
     'word_save' => $word_save,
     'word_dashboard_statement' => $word_dashboard_statement,
-    'word_dashboard' => $word_dashboard
+    'word_dashboard' => $word_dashboard,
+    'word_items_sold' => $word_items_sold,
+    'word_total_earnings' => $word_total_earnings,
+    'word_from_sales' => $word_from_sales
   );
   return $dictionary;
 }

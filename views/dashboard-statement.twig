@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<!-- favicon -->
 	<link rel="icon" href="favicon.ico">
-	<title>Emerald Dragon | Dashboard</title>
+	<title>{{dictionary.title}} | {{dictionary.word_dashboard_statement}}</title>
 </head>
 <body>
   {% import 'macros.twig' as macro_main %}
@@ -69,8 +69,8 @@
 					<span class="sl-icon icon-present"></span>
 					<p class="text-header big">8.530</p>
 					<div class="sale-data-item-info">
-						<p class="text-header">Products Sold</p>
-						<p>In all Time</p>
+						<p class="text-header">{{dictionary.word_items_sold}}</p>
+						<p></p>
 					</div>
 				</div>
 				<!-- /SALE DATA ITEM-->
@@ -106,10 +106,10 @@
 				<!-- SALE DATA ITEM -->
 				<div class="sale-data-item">
 					<span class="sl-icon icon-wallet"></span>
-					<p class="price big"><span>$</span>10.630</p>
+					<p class="price big"><span>{{dictionary.coin}}$</span>10.630</p>
 					<div class="sale-data-item-info">
-						<p class="text-header">Total Earnings</p>
-						<p>In all Time</p>
+						<p class="text-header">{{dictionary.word_total_earnings}}</p>
+						<p>{{dictionary.word_from_sales}}</p>
 					</div>
 				</div>
 				<!-- /SALE DATA ITEM-->
@@ -121,6 +121,8 @@
 				<!-- TRANSACTION LIST HEADER -->
           {{macro_dashboad.header_table(dictionary)}}
 				<!-- /TRANSACTION LIST HEADER -->
+
+        {# use foreach to list items #}
 
 				<!-- TRANSACTION LIST ITEM -->
           {{macro_dashboad.item_list(dictionary)}}
