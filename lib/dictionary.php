@@ -113,6 +113,7 @@ function get_dictionary () {
       $word_items_sold = 'Items Sold';
       $word_total_earnings = 'Total earnings';
       $word_from_sales = 'from sales';
+      $word_up_to_now = 'up to now';
       break;
 
     default:
@@ -210,6 +211,7 @@ function get_dictionary () {
       $word_items_sold = 'Itens Vendidos';
       $word_total_earnings = 'Ganos Totais';
       $word_from_sales = 'com vendas';
+      $word_up_to_now = 'até agora';
 
       break;
   }
@@ -315,7 +317,8 @@ function get_dictionary () {
     'word_dashboard' => $word_dashboard,
     'word_items_sold' => $word_items_sold,
     'word_total_earnings' => $word_total_earnings,
-    'word_from_sales' => $word_from_sales
+    'word_from_sales' => $word_from_sales,
+    'word_up_to_now' => $word_up_to_now
   );
   return $dictionary;
 }

@@ -30,7 +30,10 @@ if (isset($_GET['logout'])){
 //(end) * Required on all pages *
 
 // obtain the total number of items sold and the total amount collected from the user's sales
-
+$sales_user = array(
+  'total_items' => 100 ,
+  'total_earnings' => 2000 / $dictionary['mult_coin']
+);
 
 
 // intial twig and send varibles for template
@@ -42,4 +45,5 @@ echo $twig->render('dashboard-statement.twig', array(
   'implemented' => false,
     // test
   'user' => $user_login,
+  'sales_user' => $sales_user
 ));

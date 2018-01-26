@@ -67,10 +67,10 @@
 				<!-- SALE DATA ITEM -->
 				<div class="sale-data-item">
 					<span class="sl-icon icon-present"></span>
-					<p class="text-header big">8.530</p>
+					<p class="text-header big">{{sales_user.total_items}}</p>
 					<div class="sale-data-item-info">
 						<p class="text-header">{{dictionary.word_items_sold}}</p>
-						<p></p>
+						<p>{{dictionary.word_up_to_now}}</p>
 					</div>
 				</div>
 				<!-- /SALE DATA ITEM-->
@@ -106,7 +106,7 @@
 				<!-- SALE DATA ITEM -->
 				<div class="sale-data-item">
 					<span class="sl-icon icon-wallet"></span>
-					<p class="price big"><span>{{dictionary.coin}}$</span>10.630</p>
+					<p class="price big"><span>{{dictionary.coin}}$</span>{{sales_user.total_earnings}}</p>
 					<div class="sale-data-item-info">
 						<p class="text-header">{{dictionary.word_total_earnings}}</p>
 						<p>{{dictionary.word_from_sales}}</p>
