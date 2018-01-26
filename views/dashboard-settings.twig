@@ -9,7 +9,7 @@
 	<link rel="icon" href="https://e-com.club/mass/ftp/tutoriais/favicon.png">
 	<title>{{dictionary.title}} | {{dictionary.word_dashboard}}</title>
 </head>
-{% if login == true %}
+{% if login == true and user.is_store == false %}
 <body>
 	{% import 'macros.twig' as macro_main %}
   {% import 'macro-dashboard.twig' as macro_dashboad %}
