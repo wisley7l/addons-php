@@ -209,7 +209,7 @@ function get_dictionary () {
       $word_dashboard_statement = 'Histórico';
       $word_dashboard = 'Configuração';
       $word_items_sold = 'Itens Vendidos';
-      $word_total_earnings = 'Ganos Totais';
+      $word_total_earnings = 'Ganhos Totais';
       $word_from_sales = 'com vendas';
       $word_up_to_now = 'até agora';
 
