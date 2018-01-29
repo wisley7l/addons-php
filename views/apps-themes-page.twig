@@ -52,8 +52,21 @@
 						<!-- /SVG ARROW -->
 					</label>
 				</form>
-				<!-- VIEW SELECTORS -->
-					<!--a href="" class="button mid-short dark-light"></a-->
+
+				<form id="shop_filter_form" name="shop_filter_form">
+					<label for="price_filter" class="select-block">
+						<select name="price_filter" id="price_filter" onchange="location = this.value;">
+							<option value="?filter=free">Free</option>
+							<option value="?filter=All">All</option>
+						</select>
+						<!-- SVG ARROW -->
+						<svg class="svg-arrow">
+							<use xlink:href="#svg-arrow"></use>
+						</svg>
+						<!-- /SVG ARROW -->
+					</label>
+				</form>
+				
 			</div>
 
 			<!-- CONTENT -->
