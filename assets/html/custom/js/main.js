@@ -53,7 +53,10 @@ $( document ).ready(function() {
     $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item active');
   }
   // treat buttons on the panel
-  
+  if (dashboard_statement != -1) {
+    console.log("OK");
+
+  }
 
 });
 // update partners
