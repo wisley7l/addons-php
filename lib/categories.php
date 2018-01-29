@@ -86,7 +86,7 @@ $categories_themes = array(
   // Categories Themes
   array('id' => 11 ,
    'name' => $dictionary['word_all_categories'],
-   'page' => 'themes-page'
+   'page' => 'theme-page'
 ),
   array('id' => 12 ,
   'name' => $dictionary['word_art_photography'],
