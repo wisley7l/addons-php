@@ -30,8 +30,7 @@ if (isset($_GET['filter'])){
     exit;
   }
   if ($_GET['filter'] == 'free') {
-    header("Location: index");
-    exit;
+    
   }
 
 }
