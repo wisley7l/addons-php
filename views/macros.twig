@@ -37,7 +37,7 @@
   {% endfor %}
 {% endmacro %}
 <!-- macro to use features main -->
-{% macro feature_menu(dictionary) %}
+{% macro feature_menu(dictionary,all_category) %}
   <!-- MENU ITEM -->
   <li class="menu-item sub">
     <a href="">
@@ -51,14 +51,16 @@
     <div class="content-dropdown">
       <!-- FEATURE LIST BLOCK -->
       <div class="feature-list-block">
-        <h6 class="feature-list-title">Emerald Dragon</h6>
+        <h6 class="feature-list-title">{{dictionary.word_app}}</h6>
         <hr class="line-separator">
         <!-- FEATURE LIST -->
         <ul class="feature-list">
           <!-- FEATURE LIST ITEM -->
+          {% for category in all_category %}
           <li class="feature-list-item">
-            <a href="index">Homepage V1</a>
+            <a href="{{category.page}}">{{category.name}}</a>
           </li>
+          {% endfor %}
           <!-- /FEATURE LIST ITEM -->
 
           <!-- FEATURE LIST ITEM -->
@@ -983,7 +985,7 @@
         <!-- MENU ITEM -->
 
         {% import 'macros.twig' as macro_main %}
-        {{macro_main.feature_menu(dictionary)}}
+        {{macro_main.feature_menu(dictionary,all_category)}}
         <!-- /MENU ITEM -->
 
 
@@ -1055,11 +1057,11 @@
     <!-- /DROPDOWN ITEM -->
 
     <!-- DROPDOWN ITEM -->
-    {# commments
+
     {% import 'macros.twig' as macro_main %}
     {{macro_main.feature_moblie(dictionary)}}
     <!-- /DROPDOWN ITEM -->
-    #}
+
 
   </ul>
   <!-- /DROPDOWN -->
