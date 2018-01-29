@@ -35,6 +35,11 @@ if (isset($_GET['logout'])){
 }
 //(end) * Required on all pages *
 
+if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
+    header("Location: search-item");
+}
+
+
 // necessary variables for information
 // number of partners and stores, and total apps and themes
 // obs: query db for information or configure as static (avoid excessive queries)
