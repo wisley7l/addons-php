@@ -39,7 +39,6 @@
 		<div class="section">
 			<div class="headline primary">
 				<form id="shop_filter_form" name="shop_filter_form">
-						<label>
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
 							{% for category in all_category %}
@@ -52,9 +51,10 @@
 						</svg>
 						<!-- /SVG ARROW -->
 					</label>
-					Category: 
-						</label>
 				</form>
+				<label>
+					Category:
+				</label>
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block"> Price:
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
