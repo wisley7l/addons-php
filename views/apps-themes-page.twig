@@ -40,6 +40,9 @@
 			<div class="headline primary">
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
+						<label>
+							category
+						</label>
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
 							{% for category in all_category %}
 							<option value="{{category.page}}">{{category.name}}</option>
@@ -50,9 +53,6 @@
 							<use xlink:href="#svg-arrow"></use>
 						</svg>
 						<!-- /SVG ARROW -->
-					</label>
-					<label>
-						category
 					</label>
 				</form>
 				<form id="shop_filter_form" name="shop_filter_form">
