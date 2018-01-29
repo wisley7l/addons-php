@@ -40,10 +40,8 @@
 			<div class="headline primary">
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label>
+						category
 					<label for="price_filter" class="select-block">
-
-							category
-
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
 							{% for category in all_category %}
 							<option value="{{category.page}}">{{category.name}}</option>
