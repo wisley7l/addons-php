@@ -316,11 +316,11 @@
   <!-- /MENU ITEM -->
 {% endmacro %}
 <!-- macro to use features moblie -->
-{% macro feature_moblie() %}
+{% macro feature_moblie(dictionary) %}
   <!-- DROPDOWN ITEM -->
   <li class="dropdown-item interactive">
     <a href="#">
-      Features
+      {{dictionary.word_categories}}
       <!-- SVG ARROW -->
       <svg class="svg-arrow">
         <use xlink:href="#svg-arrow"></use>
@@ -983,7 +983,7 @@
         <!-- MENU ITEM -->
 
         {% import 'macros.twig' as macro_main %}
-        {{macro_main.feature_menu()}}
+        {{macro_main.feature_menu(dictionary)}}
         <!-- /MENU ITEM -->
 
 
@@ -1057,7 +1057,7 @@
     <!-- DROPDOWN ITEM -->
     {# commments
     {% import 'macros.twig' as macro_main %}
-    {{macro_main.feature_moblie()}}
+    {{macro_main.feature_moblie(dictionary)}}
     <!-- /DROPDOWN ITEM -->
     #}
 
