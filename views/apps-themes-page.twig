@@ -39,15 +39,16 @@
 		<div class="section">
 			<div class="headline primary">
 				<form id="shop_filter_form" name="shop_filter_form">
-					<label for="price_filter" class="select-block">
-						<select name="price_filter" id="price_filter">
-							<option value="0" href="index">{{all_category name}}</option>
+					<label for="filter_category" class="select-block">
+						<select name="filter_category" id="filter_category">
+							{% for category in all_category if category.id < 11 %}
+								<option>
+									<a href="{{category.page}}">
+										{{category.name}}
+									</a>
+								</option>
+								{% endfor %}
 						</select>
-						<!-- SVG ARROW -->
-						<svg class="svg-arrow">
-							<use xlink:href="#svg-arrow"></use>
-						</svg>
-						<!-- /SVG ARROW -->
 					</label>
 				</form>
 			</div>
