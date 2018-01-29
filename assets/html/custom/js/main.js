@@ -43,6 +43,7 @@ $( document ).ready(function() {
   let items_page = page.indexOf("author-items-page");
   let dashboard_statement = page.indexOf("dashboard-statement");
   let dashboard_settings = page.indexOf("dashboard-settings");
+  let dashboard_uploaditem = page.indexOf("dashboard-uploaditem");
   if(profile_page != -1){
     let ul = "ul#addons-board-profile"
     $(ul).find("#board-profile-page").attr('class', 'dropdown-item active');
