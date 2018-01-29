@@ -129,7 +129,7 @@ $categories_themes = array(
   'page' => ''
 ),
 array('id' => 22,
-  'name' => $dictionary['word_game'],
+  'name' => $dictionary['word_games'],
   'page' => ''
 ),
 array('id' => 23,
