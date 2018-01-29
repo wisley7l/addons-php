@@ -156,8 +156,8 @@ function get_dictionary () {
       $word_now = 'Agora ';
       $buy_now = 'Comprar Agora ';
       $word_buying = 'Comprar ';
-      $apps_trends = 'Tendências de Apps ';
-      $themes_trends = 'Tendências de Temas ';
+      $apps_trends = 'Apps em Destaques';
+      $themes_trends = 'Temas em Destaques';
       $word_reputation = 'Reputação do Autor';
       $word_language = 'Selecionar Idioma';
       $word_search_apps_themes = 'Buscar por Apps ou Temas ...';
