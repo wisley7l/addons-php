@@ -27,7 +27,7 @@ Other = Outros
 */
 $dictionary = get_dictionary();
 $categories = array(
-  array('id' => 0 , name => $dictionary['word_all_categories'] ),
+  array('id' => 0 , name => $dictionary['word_all_categories'] . ($dictionary['word_app']) ),
   array('id' => 1 , name => $dictionary['word_product_sourcing']),
   array('id' => 2 , name => $dictionary['word_marketing']),
   array('id' => 3 , name => $dictionary['word_sales']),
