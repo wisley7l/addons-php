@@ -114,6 +114,29 @@ function get_dictionary () {
       $word_total_earnings = 'Total earnings';
       $word_from_sales = 'from sales';
       $word_up_to_now = 'up to now';
+      $word_all_categories = 'all categories ';
+      $word_product_sourcing = 'product sourcing';
+      $word_marketing = 'marketing';
+      $word_sales = 'sales';
+      $word_social_media = 'social media';
+      $word_shipping = 'shipping';
+      $word_inventory = 'inventory';
+      $word_customer_service = 'customer service';
+      $word_accounting = 'accounting';
+      $word_tools = 'tools';
+      $word_reporting = 'reporting';
+      $word_sales_channels = 'sales channels';
+      $word_art_photography = 'Art & Photography';
+      $word_clothing_fashion = 'Clothing & Fashion';
+      $word_jewelry_accessories = 'Jewelry & Accessories';
+      $word_electronics = 'Electronics';
+      $word_food_drinks = 'Food & Drinks';
+      $word_home_garden = 'Home & Garden';
+      $word_furniture = 'Furniture ';
+      $word_health_beauty = 'Health & Beauty ';
+      $word_sports_recreation = 'Sports & Recreation';
+      $word_toys_games = 'Toys & Games';
+      $word_other = 'Other';
       break;
 
     default:
@@ -212,7 +235,29 @@ function get_dictionary () {
       $word_total_earnings = 'Ganhos Totais';
       $word_from_sales = 'com vendas';
       $word_up_to_now = 'até agora';
-
+      $word_all_categories = 'Todas as Categorias';
+      $word_product_sourcing = 'produto sourcing';
+      $word_marketing = 'marketing';
+      $word_sales = 'Vendas';
+      $word_social_media = 'mídia social';
+      $word_shipping = 'Remessa';
+      $word_inventory = 'Inventário';
+      $word_customer_service = 'Serviço ao cliente';
+      $word_accounting = 'Contabilidade';
+      $word_tools = 'Ferramentas';
+      $word_reporting = 'Relatórios';
+      $word_sales_channels = 'Canal de Vendas';
+      $word_art_photography = 'Arte & fotografia';
+      $word_clothing_fashion = 'Roupas & Moda';
+      $word_jewelry_accessories = 'Jóias & Acessórios';
+      $word_electronics = 'Eletrônicos';
+      $word_food_drinks = 'Bebidas Alimentos';
+      $word_home_garden = 'Casa e Jardim';
+      $word_furniture = 'Mobília';
+      $word_health_beauty = 'Saúde & Beleza';
+      $word_sports_recreation = 'Esportes e recreação';
+      $word_toys_games = 'Brinquedos e Jogos';
+      $word_other = 'Outros';
       break;
   }
   // array dictionary
@@ -318,7 +363,30 @@ function get_dictionary () {
     'word_items_sold' => $word_items_sold,
     'word_total_earnings' => $word_total_earnings,
     'word_from_sales' => $word_from_sales,
-    'word_up_to_now' => $word_up_to_now
+    'word_up_to_now' => $word_up_to_now,
+    'word_all_categories' => $word_all_categories,
+    'word_product_sourcing' => $word_product_sourcing,
+    'word_marketing' => $word_marketing,
+    'word_sales' => $word_sales,
+    'word_social_media' => $word_social_media,
+    'word_shipping' => $word_shipping,
+    'word_inventory' => $word_inventory,
+    'word_customer_service' => $word_customer_service,
+    'word_accounting' => $word_accounting,
+    'word_tools' => $word_tools,
+    'word_reporting' => $word_reporting,
+    'word_sales_channels' => $word_sales_channels,
+    'word_art_photography' => $word_art_photography,
+    'word_clothing_fashion' => $word_clothing_fashion,
+    'word_jewelry_accessories' => $word_jewelry_accessories,
+    'word_electronics' => $word_electronics,
+    'word_food_drinks' => $word_food_drinks,
+    'word_home_garden' => $word_home_garden,
+    'word_furniture' => $word_furniture,
+    'word_health_beauty' => $word_health_beauty,
+    'word_sports_recreation' => $word_sports_recreation,
+    'word_toys_games' => $word_toys_games,
+    'word_other' => $word_other,
   );
   return $dictionary;
 }

@@ -25,8 +25,9 @@ Sports & Recreation = Esportes e recreação
 Toys & Games = Brinquedos e Jogos
 Other = Outros
 */
+$dictionary = get_dictionary();
 $categories = array(
-  array('id' => 0 , name => 'All Categories' ),
+  array('id' => 0 , name => $dictionary['word_all_categories'] ),
   array('id' => 1 , name => 'Product Sourcing' ),
   array('id' => 2 , name => 'Marketing'),
   array('id' => 3 , name => 'Sales'),
@@ -39,7 +40,6 @@ $categories = array(
   array('id' => 10 , name => 'Reporting'),
   array('id' => 11 , name => 'Sales Channels'),
   // Categories Themes
-  array(name => 'Categories Themes'),
   array('id' => 12 , name => 'Art & Photography'),
   array('id' => 13 , name => 'Clothing & Fashion'),
   array('id' => 14 , name => 'Jewelry & Accessories'),
