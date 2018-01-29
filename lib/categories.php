@@ -39,6 +39,7 @@ $categories = array(
   array('id' => 10 , name => 'Reporting'),
   array('id' => 11 , name => 'Sales Channels'),
   // Categories Themes
+  array(name => 'Categories Themes'),
   array('id' => 12 , name => 'Art & Photography'),
   array('id' => 13 , name => 'Clothing & Fashion'),
   array('id' => 14 , name => 'Jewelry & Accessories'),
