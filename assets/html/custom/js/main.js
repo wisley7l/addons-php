@@ -41,6 +41,7 @@ $( document ).ready(function() {
   let page = window.location.pathname;
   let profile_page = page.indexOf("profile-page");
   let items_page = page.indexOf("author-items-page");
+  let dashboard_statement = page.indexOf("dashboard-statement");
   if(profile_page != -1){
     let ul = "ul#addons-board-profile"
     $(ul).find("#board-profile-page").attr('class', 'dropdown-item active');
@@ -52,7 +53,7 @@ $( document ).ready(function() {
     $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item active');
   }
   // treat buttons on the panel
-  if (dashboard-statement != -1) {
+  if (dashboard_statement != -1) {
     let div = "div#dashboard-options-menu";
     $(div).find("#addons-li-dashboard-settings").attr('class', 'dropdown-item');
     $(div).find("#addons-li-dashboard-statement")..attr('class', 'dropdown-item active');
