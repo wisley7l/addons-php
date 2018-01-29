@@ -37,6 +37,30 @@ $( document ).ready(function() {
     	paragraph: $(this).find("div.addons-sucess-login").text(),
     });
   }
+  // treat buttons on profile page
+  let page = window.location.pathname;
+  let profile_page = page.indexOf("profile-page");
+  let items_page = page.indexOf("author-items-page");
+  if(profile_page != -1){
+    let ul = "ul#addons-board-profile"
+    $(ul).find("#board-profile-page").attr('class', 'dropdown-item active');
+    $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item');
+  }
+  if(items_page != -1){
+    let ul = "ul#addons-board-profile"
+    $(ul).find("#board-profile-page").attr('class', 'dropdown-item');
+    $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item active');
+  }
+  // treat buttons on the panel
+  if (dashboard-statement !=-1) {
+    let div = "div#dashboard-options-menu";
+    $(div).find("#addons-li-dashboard-settings").attr('class', 'dropdown-item');
+    $(div).find("#addons-li-dashboard-statement")..attr('class', 'dropdown-item active');
+    $(div).find("#addons-li-dashboard-upitem").attr('class', 'dropdown-item');
+    $(div).find("#addons-li-dashboard-manageitem").attr('class', 'dropdown-item');
+    $(div).find("#addons-li-dashboard-withdrawals").attr('class', 'dropdown-item');
+  }
+
 });
 // update partners
 $("#addons-button-save").click(function(event){
@@ -82,20 +106,4 @@ $("#addons-button-save").click(function(event){
   $("#addons-up-partner").submit();
   }
   event.preventDefault();
-});
-// treat all 
-$(document).ready(function(){
-  let page = window.location.pathname;
-  let profile_page = page.indexOf("profile-page");
-  let items_page = page.indexOf("author-items-page");
-  if(profile_page != -1){
-    let ul = "ul#addons-board-profile"
-    $(ul).find("#board-profile-page").attr('class', 'dropdown-item active');
-    $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item');
-  }
-  if(items_page != -1){
-    let ul = "ul#addons-board-profile"
-    $(ul).find("#board-profile-page").attr('class', 'dropdown-item');
-    $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item active');
-  }
 });
