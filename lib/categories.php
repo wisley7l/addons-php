@@ -1,29 +1,38 @@
 <?php
 /*
-all categories app = todas as categorias de aplicativos
-product sourcing = produto sourcing
-marketing = marketing
-sales = vendas
-social media = mídia social
-shipping = Remessa
-inventory = inventário
-customer service = serviço ao cliente
-accounting = contabilidade
-tools = Ferramentas
-reporting = relatórios
-sales channels = Canal de Vendas
+Matheus [3:33 PM]
+https://apps.shopify.com
 
-Art & Photography = Arte e fotografia
-Clothing & Fashion = Roupas e Moda
-Jewelry & Accessories = Jóias e acessórios
-Electronics = Eletrônicos
-Food & Drinks = Bebidas Alimentos
-Home & Garden = Casa e Jardim
-Furniture = Mobília
-Health & Beauty = Saúde & Beleza
-Sports & Recreation = Esportes e recreação
-Toys & Games = Brinquedos e Jogos
-Other = Outros
+All- Todos
+Product sourcing - Dropshipping/Revenda de produtos
+Marketing - Marketing
+Sales - Otimização de vendas
+Social Media - Mídias sociais
+Shipping - Soluções de Envio
+Inventory - Inventário
+Customer Service - Serviço ao cliente
+Tools -  Ferramentas e personalizações
+Reporting - Relatórios e Análises
+Sales Channels - Canais de venda
+
+https://themes.shopify.com
+
+Art & Photography - Arte e fotografia
+Clothes & Fashion - Modas e acessórios
+Joalherias e Acessórios
+Eletrônicos
+Alimentos e bebidas
+Casa e jardim
+Móveis e mobília
+Saúde, beleza e perfumaria
+Esportes e lazer
+Infantil e Brinquedos
+Games
+Serviços
+Sexshop
+Petshop
+Fitness
+Outros
 */
 $dictionary = get_dictionary();
 $categories_apps = array(
@@ -60,18 +69,14 @@ $categories_apps = array(
   'page' => ''
 ),
   array('id' => 8 ,
-  'name' => $dictionary['word_accounting'],
-  'page' => ''
-),
-  array('id' => 9 ,
   'name' => $dictionary['word_tools'],
   'page' => ''
 ),
-  array('id' => 10 ,
+  array('id' => 9 ,
   'name' => $dictionary['word_reporting'],
   'page' => ''
 ),
-  array('id' => 11 ,
+  array('id' => 10 ,
   'name' => $dictionary['word_sales_channels'],
   'page' => ''
 ),
@@ -79,52 +84,68 @@ $categories_apps = array(
 
 $categories_themes = array(
   // Categories Themes
-  array('id' => 12 ,
+  array('id' => 11 ,
    'name' => $dictionary['word_all_categories'],
    'page' => 'themes-page'
 ),
-  array('id' => 13 ,
+  array('id' => 12 ,
   'name' => $dictionary['word_art_photography'],
   'page' => ''
 ),
-  array('id' => 14 ,
+  array('id' => 13 ,
   'name' => $dictionary ['word_clothing_fashion'],
   'page' => ''
 ),
-  array('id' => 15 ,
+  array('id' => 14 ,
   'name' => $dictionary ['word_jewelry_accessories'],
   'page' => ''
 ),
-  array('id' => 16 ,
+  array('id' => 15 ,
   'name' => $dictionary ['word_electronics'],
   'page' => ''
 ),
-  array('id' => 17 ,
+  array('id' => 16 ,
   'name' => $dictionary ['word_food_drinks'],
   'page' => ''
 ),
-  array('id' => 18 ,
+  array('id' => 17 ,
   'name' => $dictionary ['word_home_garden'],
   'page' => ''
 ),
-  array('id' => 19 ,
+  array('id' => 18 ,
   'name' => $dictionary ['word_furniture'],
   'page' => ''
 ),
-  array('id' => 20 ,
+  array('id' => 19 ,
   'name' => $dictionary ['word_health_beauty'],
   'page' => ''
 ),
-  array('id' => 21 ,
+  array('id' => 20 ,
   'name' => $dictionary ['word_sports_recreation'],
   'page' => ''
 ),
-  array('id' => 22 ,
+  array('id' => 21 ,
   'name' => $dictionary ['word_toys_games'],
   'page' => ''
 ),
-  array('id' => 23 ,
+  array('id' => 22 ,
   'name' => $dictionary ['word_other'],
+  'page' => ''
+),
+array('id' => 23,
+  'name' => $dictionary['word_game'],
+  'page' => ''
+),
+array('id' => 24,
+  'name' => $dictionary['word_sexshot'],
+  'page' => ''
+),
+array('id' => 25,
+  'name' => $dictionary['word_petshop'],
+  'page' => ''
+),
+array('id' => 26,
+  'name' => $dictionary['word_service'], 
   'page' => ''
 ),
 );

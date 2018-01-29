@@ -122,7 +122,6 @@ function get_dictionary () {
       $word_shipping = 'Shipping';
       $word_inventory = 'Inventory';
       $word_customer_service = 'Customer Service';
-      $word_accounting = 'Accounting';
       $word_tools = 'Tools';
       $word_reporting = 'Reporting';
       $word_sales_channels = 'Sales Channels';
@@ -136,6 +135,7 @@ function get_dictionary () {
       $word_health_beauty = 'Health & Beauty ';
       $word_sports_recreation = 'Sports & Recreation';
       $word_toys_games = 'Toys & Games';
+      $word_service = 'Service';
       $word_other = 'Other';
       $word_categories = 'Categories';
       break;
@@ -237,27 +237,27 @@ function get_dictionary () {
       $word_from_sales = 'com vendas';
       $word_up_to_now = 'até agora';
       $word_all_categories = 'Todas as Categorias';
-      $word_product_sourcing = 'Produto de Abastecimento';
+      $word_product_sourcing = ' Dropshipping/Revenda de produtos';
       $word_marketing = 'Marketing';
-      $word_sales = 'Vendas';
-      $word_social_media = 'Mídia Social';
-      $word_shipping = 'Remessa';
+      $word_sales = 'Otimização de Vendas';
+      $word_social_media = 'Mídias Sociais';
+      $word_shipping = 'Soluções de Envio';
       $word_inventory = 'Inventário';
-      $word_customer_service = 'Serviço ao cliente';
-      $word_accounting = 'Contabilidade';
-      $word_tools = 'Ferramentas';
-      $word_reporting = 'Relatórios';
-      $word_sales_channels = 'Canal de Vendas';
-      $word_art_photography = 'Arte e fotografia';
-      $word_clothing_fashion = 'Roupas e Moda';
-      $word_jewelry_accessories = 'Jóias e Acessórios';
+      $word_customer_service = 'Serviço ao Cliente';
+      $word_tools = 'Ferramentas e Personalizações';
+      $word_reporting = 'Relatórios e Análises';
+      $word_sales_channels = 'Canais de Venda';
+      $word_art_photography = 'Arte e Fotografia';
+      $word_clothing_fashion = 'Modas e Acessórios';
+      $word_jewelry_accessories = 'Joalherias e Acessórios';
       $word_electronics = 'Eletrônicos';
-      $word_food_drinks = 'Bebidas Alimentos';
+      $word_food_drinks = 'Alimentos e Bebidas';
       $word_home_garden = 'Casa e Jardim';
-      $word_furniture = 'Mobília';
-      $word_health_beauty = 'Saúde e Beleza';
-      $word_sports_recreation = 'Esportes e recreação';
-      $word_toys_games = 'Brinquedos e Jogos';
+      $word_furniture = 'Móveis e Mobília';
+      $word_health_beauty = 'Saúde, Beleza e Perfumaria';
+      $word_sports_recreation = 'Esportes e Laser';
+      $word_service = 'Serviços';
+      $word_toys_games = 'Infantil e Brinquedos';
       $word_other = 'Outros';
       $word_categories = 'Categorias';
       break;
@@ -388,6 +388,11 @@ function get_dictionary () {
     'word_health_beauty' => $word_health_beauty,
     'word_sports_recreation' => $word_sports_recreation,
     'word_toys_games' => $word_toys_games,
+    'word_service' => $word_service,
+    'word_games' => 'Games',
+    'word_sex_shop' => 'Sexshop',
+    'word_petshop' => 'Petshop',
+    'word_fitness' => 'Fitness',
     'word_other' => $word_other,
     'word_categories' => $word_categories
   );
