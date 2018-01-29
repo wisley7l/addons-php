@@ -38,6 +38,7 @@
 	<div class="section-wrap">
 		<div class="section">
 			<div class="headline primary">
+				Category: 
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
@@ -52,12 +53,12 @@
 						<!-- /SVG ARROW -->
 					</label>
 				</form>
-
+				Price:
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
+							<option value="">All</option>
 							<option value="?filter=free">Free</option>
-							<option value="?filter=All">All</option>
 						</select>
 						<!-- SVG ARROW -->
 						<svg class="svg-arrow">
@@ -66,7 +67,7 @@
 						<!-- /SVG ARROW -->
 					</label>
 				</form>
-				
+
 			</div>
 
 			<!-- CONTENT -->
