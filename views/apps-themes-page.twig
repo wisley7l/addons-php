@@ -41,7 +41,7 @@
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
-							<option >Category</option>
+							<option >{{dictionary.categories}}</option>
 							{% for category in all_category %}
 							<option value="{{category.page}}">{{category.name}}</option>
 							{% endfor %}
@@ -56,7 +56,7 @@
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
-							<option >Price</option>
+							<option >{{dictionary.word_price}}</option>
 							<option value="?filter=all">All</option>
 							<option value="?filter=free">Free</option>
 						</select>

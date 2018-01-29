@@ -53,10 +53,7 @@ function get_dictionary () {
       $mult_coin = 3;
       $word_apps_store = 'Apps Stores';
       $word_items_found = 'Items found';
-      $word_12_per_page = '12 Items Per Page';
-      $word_6_per_page = '6 Items Per Page';
-      $word_price_low_high  = 'Price (Low to High)';
-      $word_price_high_low = 'Price (High to Low)';
+      $word_price  = 'Price';
       $word_themes_store = 'Themes Store';
       $word_profile_page = 'Profile page ';
       $word_account_settings = 'Account Settings';
@@ -174,10 +171,7 @@ function get_dictionary () {
       $mult_coin = 1;
       $word_apps_store = 'Loja de Apps';
       $word_items_found = 'Items encontrados';
-      $word_12_per_page = '12 itens por página';
-      $word_6_per_page = '6 itens por página';
-      $word_price_low_high  = 'Preço (Menor para Maior)';
-      $word_price_high_low = 'Preço (Maior para Menor)';
+      $word_price  = 'Preço';
       $word_themes_store = 'Loja de Temas';
       $word_profile_page = 'Perfil ';
       $word_account_settings = 'Configurações de conta';
@@ -258,6 +252,7 @@ function get_dictionary () {
       $word_toys_games = 'Infantil e Brinquedos';
       $word_other = 'Outros';
       $word_categories = 'Categorias';
+
       break;
   }
   // array dictionary
@@ -303,10 +298,7 @@ function get_dictionary () {
     'mult_coin' => $mult_coin,
     'word_apps_store' => $word_apps_store,
     'word_items_found' => $word_items_found,
-    'word_12_per_page' => $word_12_per_page,
-    'word_6_per_page' => $word_6_per_page,
-    'word_price_low_high' => $word_price_low_high,
-    'word_price_high_low' => $word_price_high_low,
+    'word_price' => $word_price,
     'word_themes_store' => $word_themes_store,
     'word_profile_page' => $word_profile_page,
     'word_account_settings' => $word_account_settings,
@@ -391,7 +383,7 @@ function get_dictionary () {
     'word_petshop' => 'Petshop',
     'word_fitness' => 'Fitness',
     'word_other' => $word_other,
-    'word_categories' => $word_categories
+    'word_categories' => $word_categories,
   );
   return $dictionary;
 }
