@@ -390,7 +390,7 @@ function get_dictionary () {
     'word_toys_games' => $word_toys_games,
     'word_service' => $word_service,
     'word_games' => 'Games',
-    'word_sex_shop' => 'Sexshop',
+    'word_sexshop' => 'Sexshop',
     'word_petshop' => 'Petshop',
     'word_fitness' => 'Fitness',
     'word_other' => $word_other,
