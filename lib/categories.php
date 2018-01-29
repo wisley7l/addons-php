@@ -24,10 +24,10 @@ $categories_app = array(
   array('id' => 8 , name => 'accounting'),
   array('id' => 9 , name => 'tools'),
   array('id' => 10 , name => 'reporting'),
-  array('id' => 11 , name => 'sales channels'),
-
+  array('id' => 11 , name => 'sales channels')
 );
 function get_categories()
 {
-  return $categories_app;
+  $categories = $GLOBALS['categories_app'];
+  return $categories;
 }
