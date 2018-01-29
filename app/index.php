@@ -52,9 +52,6 @@ $info_footer = array(
   'path_file' => $_SERVER['PATH_FILE']
 );
 
-// obs: Search all categories in db
-// test all category  // Perform db query to obtain this information
-$all_category = get_categories();
 // search item for name
 $search_item = array(
   array('id' => 0 , name => $dictionary['word_app'] ),
@@ -83,7 +80,6 @@ echo $twig->render('index.twig', array(
   'implemented' => false,
   'info_footer' => $info_footer,
     // test itens
-  'all_category' => $all_category,
   'apps' => $apps,
   'themes' => $themes,
   'user' => $user_login,

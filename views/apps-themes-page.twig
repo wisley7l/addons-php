@@ -41,7 +41,13 @@
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="filter_category" class="select-block">
 						<select name="filter_category" id="filter_category">
-							
+							{% for category in all_category %}
+								<option>
+									<a>
+										{{category.name}}
+									</a>
+								</option>
+								{% endfor %}
 						</select>
 					</label>
 				</form>
