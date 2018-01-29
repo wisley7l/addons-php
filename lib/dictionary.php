@@ -20,7 +20,7 @@ function get_dictionary () {
   switch ($_SERVER['PATH_LANG']) {
     case 'en_us':
       $welcome = 'Welcome to ';
-      $Word_partner = 'Partners ';
+      $word_partner = 'Partners ';
       $word_shopkeeper = 'Shopkeeper ';
       $word_app = 'Apps ';
       $word_theme = 'Themes ';
@@ -137,11 +137,12 @@ function get_dictionary () {
       $word_sports_recreation = 'Sports & Recreation';
       $word_toys_games = 'Toys & Games';
       $word_other = 'Other';
+      $word_categories = 'Categories';
       break;
 
     default:
       $welcome = 'Bem vindo a ';
-      $Word_partner = 'Parceiros ';
+      $word_partner = 'Parceiros ';
       $word_shopkeeper = 'Lojistas ';
       $word_app = 'Apps ';
       $word_theme = 'Temas ';
@@ -258,6 +259,7 @@ function get_dictionary () {
       $word_sports_recreation = 'Esportes e recreação';
       $word_toys_games = 'Brinquedos e Jogos';
       $word_other = 'Outros';
+      $word_categories = 'Categorias';
       break;
   }
   // array dictionary
@@ -267,7 +269,7 @@ function get_dictionary () {
     'welcome' => $welcome,
     'e_com' => 'E-Com Plus ',
     'addons' => 'Market',
-    'word_partner' => $Word_partner,
+    'word_partner' => $word_partner,
     'word_shopkeeper' => $word_shopkeeper,
     'word_app' => $word_app,
     'word_theme' => $word_theme,
@@ -387,6 +389,7 @@ function get_dictionary () {
     'word_sports_recreation' => $word_sports_recreation,
     'word_toys_games' => $word_toys_games,
     'word_other' => $word_other,
+    'word_categories' => $word_categories
   );
   return $dictionary;
 }
