@@ -33,7 +33,7 @@ $categories_apps = array(
 ),
   array('id' => 1 ,
    'name' => $dictionary['word_product_sourcing'],
-   'page' => ''
+   'page' => 'index'
 ),
   array('id' => 2 ,
   'name' => $dictionary['word_marketing'],
