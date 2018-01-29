@@ -12,6 +12,20 @@
   <!-- script convert to md5 -->
   <script type="text/javascript" src="../custom/js/md5.min.js"></script>
 {% endmacro %}
+<!-- These macros can be used on other page -->
+{% macro scripts_above() %}
+  <!-- xmAlert -->
+  <script src="../../js/vendor/jquery.xmalert.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="../../js/vendor/jquery.magnific-popup.min.js"></script>
+  <!-- Alerts Demo -->
+  <script src="../../js/alerts-demo.js"></script>
+  <!-- -->
+
+  <script type="text/javascript" src="../../custom/js/main.js"></script>
+  <!-- script convert to md5 -->
+  <script type="text/javascript" src="../../custom/js/md5.min.js"></script>
+{% endmacro %}
 <!-- macro to draw active star -->
 {% macro star_on(n)%}
   {% for i in 0..n-1 if n > 0 %}
