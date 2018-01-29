@@ -41,8 +41,9 @@
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter">
-							<option value="0">{{ dictionary.word_price_high_low }}</option>
-							<option value="1">{{ dictionary.word_price_low_high }}</option>
+							{% for category in all_category if category.id < 12 %}
+							<option value="{{category.id}}">{{category.name}}</option>
+							{% endfor %}
 						</select>
 						<!-- SVG ARROW -->
 						<svg class="svg-arrow">
