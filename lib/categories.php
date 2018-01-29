@@ -29,7 +29,7 @@ $dictionary = get_dictionary();
 $categories = array(
   array('id' => 0 ,
    'name' => $dictionary['word_all_categories'],
-   'page' => ''
+   'page' => 'apps-page'
 ),
   array('id' => 1 ,
    'name' => $dictionary['word_product_sourcing'],
