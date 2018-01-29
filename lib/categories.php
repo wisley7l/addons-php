@@ -26,7 +26,7 @@ Toys & Games = Brinquedos e Jogos
 Other = Outros
 */
 $dictionary = get_dictionary();
-$categories = array(
+$categories_apps = array(
   array('id' => 0 ,
    'name' => $dictionary['word_all_categories'],
    'page' => 'apps-page'
@@ -75,6 +75,9 @@ $categories = array(
   'name' => $dictionary['word_sales_channels'],
   'page' => ''
 ),
+);
+
+$categories_themes = array(
   // Categories Themes
   array('id' => 12 ,
   'name' => $dictionary['word_art_photography'],
@@ -122,8 +125,14 @@ $categories = array(
 ),
 );
 //
-function get_categories()
+function get_categories_app()
 {
-  $categories = $GLOBALS['categories'];
+  $categories = $GLOBALS['categories_apps'];
+  return $categories;
+}
+//
+function get_categories_theme()
+{
+  $categories = $GLOBALS['cateries_themes'];
   return $categories;
 }
