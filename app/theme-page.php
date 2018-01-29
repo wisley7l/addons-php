@@ -35,6 +35,9 @@ $info_footer = array(
   'path_file' => $_SERVER['PATH_FILE']
 );
 
+// obs: Search all categories in db
+// test all category  // Perform db query to obtain this information
+$all_category = get_categories_theme();
 // query for apps
 $number_found = 0;
 //info search
@@ -66,5 +69,6 @@ echo $twig->render('apps-themes-page.twig', array(
   'segment' => $filter_segment,
   // test apps
   'apps_themes' => $themes,
-  'user' => $user_login
+  'user' => $user_login,
+  'all_category' => $all_category
 ));
