@@ -22,6 +22,19 @@ if (isset($_GET['logout'])){
   session_destroy();
   header("Location: index");
 }
+
+// filter categories and price
+if (isset($_GET['filter'])){
+  if($_GET['filter'] == 'all'){
+    header("Location: theme-page");
+    exit;
+  }
+  if ($_GET['filter'] == 'free') {
+    header("Location: index");
+    exit;
+  }
+
+}
 //(end) * Required on all pages *
 
 // obs: query db for informations
