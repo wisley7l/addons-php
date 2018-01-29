@@ -80,46 +80,50 @@ $categories_apps = array(
 $categories_themes = array(
   // Categories Themes
   array('id' => 12 ,
+   'name' => $dictionary['word_all_categories'],
+   'page' => 'themes-page'
+),
+  array('id' => 13 ,
   'name' => $dictionary['word_art_photography'],
   'page' => ''
 ),
-  array('id' => 13 ,
+  array('id' => 14 ,
   'name' => $dictionary ['word_clothing_fashion'],
   'page' => ''
 ),
-  array('id' => 14 ,
+  array('id' => 15 ,
   'name' => $dictionary ['word_jewelry_accessories'],
   'page' => ''
 ),
-  array('id' => 15 ,
+  array('id' => 16 ,
   'name' => $dictionary ['word_electronics'],
   'page' => ''
 ),
-  array('id' => 16 ,
+  array('id' => 17 ,
   'name' => $dictionary ['word_food_drinks'],
   'page' => ''
 ),
-  array('id' => 17 ,
+  array('id' => 18 ,
   'name' => $dictionary ['word_home_garden'],
   'page' => ''
 ),
-  array('id' => 18 ,
+  array('id' => 19 ,
   'name' => $dictionary ['word_furniture'],
   'page' => ''
 ),
-  array('id' => 19 ,
+  array('id' => 20 ,
   'name' => $dictionary ['word_health_beauty'],
   'page' => ''
 ),
-  array('id' => 20 ,
+  array('id' => 21 ,
   'name' => $dictionary ['word_sports_recreation'],
   'page' => ''
 ),
-  array('id' => 21 ,
+  array('id' => 22 ,
   'name' => $dictionary ['word_toys_games'],
   'page' => ''
 ),
-  array('id' => 22 ,
+  array('id' => 23 ,
   'name' => $dictionary ['word_other'],
   'page' => ''
 ),
@@ -133,6 +137,6 @@ function get_categories_app()
 //
 function get_categories_theme()
 {
-  $categories = $GLOBALS['cateries_themes'];
+  $categories = $GLOBALS['categories_themes'];
   return $categories;
 }
