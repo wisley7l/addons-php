@@ -49,6 +49,7 @@ $info_footer = array(
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
 $all_category = get_categories();
+var_dump($all_category);
 
 // test apps  // Perform db query to obtain this information
 // query apps in db
