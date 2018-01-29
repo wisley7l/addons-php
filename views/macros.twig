@@ -75,62 +75,17 @@
         <!-- FEATURE LIST -->
         <ul class="feature-list">
           <!-- FEATURE LIST ITEM -->
+          {% for category in all_category if category.id > 11 %}
           <li class="feature-list-item">
-            <a href="item-v1.html">Item Page V1</a>
+            <a href="{{category.page}}">{{category.name}}</a>
           </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="item-v2.html">
-              Item Page V2
-              <!-- PIN -->
-              <span class="pin secondary">new</span>
-              <!-- /PIN -->
-            </a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="product-page.html">Product Page</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="auction-page.html">Auction Page</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="service-page.html">Service Page</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="favourites.html">Favourite Products Grid View</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="favourites-listview.html">Favourite Products List View</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="alerts-notifications.html">Alerts &amp; Notifications</a>
-          </li>
+          {% endfor %}
           <!-- /FEATURE LIST ITEM -->
         </ul>
         <!-- /FEATURE LIST -->
       </div>
       <!-- /FEATURE LIST BLOCK -->
-
+      {# not implemented
       <!-- FEATURE LIST BLOCK -->
       <div class="feature-list-block">
         <h6 class="feature-list-title">Dashboard</h6>
@@ -216,6 +171,7 @@
         <!-- /FEATURE LIST -->
       </div>
       <!-- /FEATURE LIST BLOCK -->
+      #}
     </div>
   </li>
   <!-- /MENU ITEM -->
