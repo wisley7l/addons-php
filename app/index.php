@@ -36,7 +36,7 @@ if (isset($_GET['logout'])){
 //(end) * Required on all pages *
 
 if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
-  // obs: treat search 
+  // obs: treat search
     header("Location: search-item");
 }
 
@@ -55,6 +55,11 @@ $info_footer = array(
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
 $all_category = get_categories();
+// search item for name
+$search_item = array(
+  array('id' => 0 , name => $dictionary['word_app'] ),
+  array('id' => 1 , name => $dictionary['word_theme'] )
+);
 
 // test apps  // Perform db query to obtain this information
 // query apps in db
@@ -81,5 +86,6 @@ echo $twig->render('index.twig', array(
   'all_category' => $all_category,
   'apps' => $apps,
   'themes' => $themes,
-  'user' => $user_login
+  'user' => $user_login,
+  'search' => $search_item
 ));

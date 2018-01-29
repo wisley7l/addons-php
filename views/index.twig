@@ -44,8 +44,8 @@
 							<option value="7">Backgrounds</option>
 							<option value="8">Social Covers</option>
 							-->
-							{% for category in all_category %}
-							<option value = "{{category.id}}">{{ category.name }}</option>
+							{% for feature in search %}
+							<option value = "{{feature.id}}">{{ feature.name }}</option>
 							{% endfor %}
 						</select>
 						<!-- SVG ARROW -->
