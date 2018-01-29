@@ -56,7 +56,18 @@
         <!-- FEATURE LIST -->
         <ul class="feature-list">
           <!-- FEATURE LIST ITEM -->
-          {% for category in all_category if category.id > 0 and category.id < 12 %}
+          {% for category in all_category if category.id > 0 and category.id < 5 %}
+          <li class="feature-list-item">
+            <a href="{{category.page}}">{{category.name}}</a>
+          </li>
+          {% endfor %}
+          <!-- /FEATURE LIST ITEM -->
+        </ul>
+        <!-- /FEATURE LIST -->
+        <!-- FEATURE LIST -->
+        <ul class="feature-list">
+          <!-- FEATURE LIST ITEM -->
+          {% for category in all_category if category.id >= 5 and category.id < 12 %}
           <li class="feature-list-item">
             <a href="{{category.page}}">{{category.name}}</a>
           </li>
@@ -75,7 +86,18 @@
         <!-- FEATURE LIST -->
         <ul class="feature-list">
           <!-- FEATURE LIST ITEM -->
-          {% for category in all_category if category.id > 11 %}
+          {% for category in all_category if category.id > 11 and category.id < 15 %}
+          <li class="feature-list-item">
+            <a href="{{category.page}}">{{category.name}}</a>
+          </li>
+          {% endfor %}
+          <!-- /FEATURE LIST ITEM -->
+        </ul>
+        <!-- /FEATURE LIST -->
+        <!-- FEATURE LIST -->
+        <ul class="feature-list">
+          <!-- FEATURE LIST ITEM -->
+          {% for category in all_category if category.id >= 15 %}
           <li class="feature-list-item">
             <a href="{{category.page}}">{{category.name}}</a>
           </li>
