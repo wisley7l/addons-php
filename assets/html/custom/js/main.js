@@ -42,6 +42,7 @@ $( document ).ready(function() {
   let profile_page = page.indexOf("profile-page");
   let items_page = page.indexOf("author-items-page");
   let dashboard_statement = page.indexOf("dashboard-statement");
+  let dashboard_settings = page.indexOf("dashboard-settings");
   if(profile_page != -1){
     let ul = "ul#addons-board-profile"
     $(ul).find("#board-profile-page").attr('class', 'dropdown-item active');
@@ -54,10 +55,19 @@ $( document ).ready(function() {
   }
   // treat buttons on the panel
   if (dashboard_statement != -1) {
-    console.log("OK");
+    // page dashboard_statement
     let div = "div#dashboard-options-menu";
     $(div).find("#addons-li-dashboard-settings").attr('class', 'dropdown-item');
     $(div).find("#addons-li-dashboard-statement").attr('class', 'dropdown-item active');
+    $(div).find("#addons-li-dashboard-upitem").attr('class', 'dropdown-item');
+    $(div).find("#addons-li-dashboard-manageitem").attr('class', 'dropdown-item');
+    $(div).find("#addons-li-dashboard-withdrawals").attr('class', 'dropdown-item');
+  }
+  if (dashboard_settings != -1) {
+    //page dashboard_settings
+    let div = "div#dashboard-options-menu";
+    $(div).find("#addons-li-dashboard-settings").attr('class', 'dropdown-item active');
+    $(div).find("#addons-li-dashboard-statement").attr('class', 'dropdown-item');
     $(div).find("#addons-li-dashboard-upitem").attr('class', 'dropdown-item');
     $(div).find("#addons-li-dashboard-manageitem").attr('class', 'dropdown-item');
     $(div).find("#addons-li-dashboard-withdrawals").attr('class', 'dropdown-item');
