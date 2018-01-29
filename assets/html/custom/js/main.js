@@ -53,15 +53,7 @@ $( document ).ready(function() {
     $(ul).find("#board-author-itens-page").attr('class', 'dropdown-item active');
   }
   // treat buttons on the panel
-  if (dashboard_statement != -1) {
-    let div = "div#dashboard-options-menu";
-    $(div).find("#addons-li-dashboard-settings").attr('class', 'dropdown-item');
-    $(div).find("#addons-li-dashboard-statement")..attr('class', 'dropdown-item active');
-    $(div).find("#addons-li-dashboard-upitem").attr('class', 'dropdown-item');
-    $(div).find("#addons-li-dashboard-manageitem").attr('class', 'dropdown-item');
-    $(div).find("#addons-li-dashboard-withdrawals").attr('class', 'dropdown-item');
-    console.log("test");
-  }
+  
 
 });
 // update partners
