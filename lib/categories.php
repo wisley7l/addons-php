@@ -128,26 +128,34 @@ $categories_themes = array(
   'name' => $dictionary ['word_toys_games'],
   'page' => ''
 ),
-  array('id' => 22 ,
-  'name' => $dictionary ['word_other'],
-  'page' => ''
-),
-array('id' => 23,
+array('id' => 22,
   'name' => $dictionary['word_game'],
   'page' => ''
 ),
-array('id' => 24,
-  'name' => $dictionary['word_sexshot'],
+array('id' => 23,
+  'name' => $dictionary['word_sexshop'],
   'page' => ''
 ),
-array('id' => 25,
+array('id' => 24,
   'name' => $dictionary['word_petshop'],
   'page' => ''
 ),
-array('id' => 26,
-  'name' => $dictionary['word_service'], 
+array('id' => 25,
+  'name' => $dictionary['word_service'],
   'page' => ''
 ),
+
+array('id' => 26,
+  'name' => $dictionary['word_fitness'],
+  'page' => ''
+),
+
+// last from the list
+  array('id' => 27 ,
+  'name' => $dictionary ['word_other'],
+  'page' => ''
+),
+
 );
 //
 function get_categories_app()
