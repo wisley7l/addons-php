@@ -42,7 +42,7 @@
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter">
 							{% for category in all_category %}
-							<option value="{{category.id}}">{{category.name}}</option>
+							<option value="{{category.page}}">{{category.name}}</option>
 							{% endfor %}
 						</select>
 						<!-- SVG ARROW -->
@@ -53,7 +53,7 @@
 					</label>
 				</form>
 				<!-- VIEW SELECTORS -->
-					<a href="author-profile-items.html" class="button mid-short dark-light">{{dictionary.word_see_all_items}}</a>
+					<!--a href="" class="button mid-short dark-light"></a-->
 			</div>
 
 			<!-- CONTENT -->
