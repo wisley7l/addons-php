@@ -73,7 +73,7 @@ $( document ).ready(function() {
     $(div).find("#addons-li-dashboard-manageitem").attr('class', 'dropdown-item');
     $(div).find("#addons-li-dashboard-withdrawals").attr('class', 'dropdown-item');
   }
-  if (dashboard_settings != -1) {
+  if (dashboard_uploaditem != -1) {
     //page dashboard_uploaditem
     let div = "div#dashboard-options-menu";
     $(div).find("#addons-li-dashboard-settings").attr('class', 'dropdown-item');
