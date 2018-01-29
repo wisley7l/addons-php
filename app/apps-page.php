@@ -22,6 +22,17 @@ if (isset($_GET['logout'])){
   session_destroy();
   header("Location: index");
 }
+// filter categories and price
+if (isset($_GET['filter'])){
+  if($_GET['filter'] == 'all'){
+    header("Location: theme-page");
+    exit;
+  }
+  if ($_GET['filter'] == 'free') {
+
+  }
+
+}
 //(end) * Required on all pages *
 
 // obs: query db for informations
@@ -59,6 +70,11 @@ $apps = array();
 // add element in array
 array_push($apps, $item);
 array_push($apps, $item2);
+
+
+
+
+
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
