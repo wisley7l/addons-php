@@ -944,7 +944,7 @@
   </div>
 {% endmacro %}
 <!-- macro to mount the main menu -->
-{% macro menu_main(dictionary) %}
+{% macro menu_main(dictionary,all_category) %}
   <div class="main-menu-wrap">
   <div class="menu-bar">
     <nav>
@@ -1000,7 +1000,7 @@
 </div>
 {% endmacro %}
 <!-- macro to mount the mobile menu -->
-{% macro menu_moblie(dictionary) %}
+{% macro menu_moblie(dictionary,all_category) %}
   <div id="mobile-menu" class="side-menu left closed">
   <!-- SVG PLUS -->
   <svg class="svg-plus">
@@ -1076,7 +1076,7 @@
   <img src="../images/logo.png" alt="logo">
 {% endmacro %}
 <!-- macro image logo -->
-{% macro all_header(login,dictionary,user) %}
+{% macro all_header(login,dictionary,user,all_category) %}
   {% import 'macros.twig' as macro_main %}
   	<!-- HEADER -->
   	<div class="header-wrap">
@@ -1117,7 +1117,7 @@
   	<!-- /HEADER -->
 
   	<!-- SIDE MENU -->
-  	{{macro_main.menu_moblie(dictionary)}}
+  	{{macro_main.menu_moblie(dictionary,all_category)}}
   	<!-- /SIDE MENU -->
 
   	<!-- SIDE MENU -->
@@ -1125,7 +1125,7 @@
   	<!-- /SIDE MENU -->
 
   	<!-- MAIN MENU -->
-  	{{macro_main.menu_main(dictionary)}}
+  	{{macro_main.menu_main(dictionary,all_category)}}
   	<!-- /MAIN MENU -->
 {% endmacro %}
 <!-- macro user quickview main -->
