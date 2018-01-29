@@ -55,8 +55,8 @@ $( document ).ready(function() {
   // treat buttons on the panel
   if (dashboard_statement != -1) {
     console.log("OK");
-    let li = "div#dashboard-options-menu";
-    //$(div).find("#addons-li-dashboard-settings").attr('class', 'dropdown-item');
+    let div = "div#dashboard-options-menu";
+    $(div).find("#addons-li-dashboard-settings").attr('class', 'dropdown-item');
     //$(div).find("#addons-li-dashboard-statement")..attr('class', 'dropdown-item active');
     //$(div).find("#addons-li-dashboard-upitem").attr('class', 'dropdown-item');
     //$(div).find("#addons-li-dashboard-manageitem").attr('class', 'dropdown-item');
