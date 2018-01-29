@@ -14,6 +14,7 @@ reporting = relatórios
 sales channels = Canal de Vendas
 */
 $categories_app = array(
+  array('id' => 0 , name => 'All Categories' ),
   array('id' => 1 , name => 'product sourcing' ),
   array('id' => 2 , name => 'marketing'),
   array('id' => 3 , name => 'sales'),
