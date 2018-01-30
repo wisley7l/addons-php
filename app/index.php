@@ -35,10 +35,10 @@ if (isset($_GET['logout'])){
 }
 //(end) * Required on all pages *
 
-if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
+//if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
   // obs: treat search
-    header("Location: search-item");
-}
+  //  echo $_GET['category_name'];
+//}
 
 
 // necessary variables for information
