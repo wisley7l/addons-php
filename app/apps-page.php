@@ -35,8 +35,27 @@ if (isset($_GET['filter'])){
 }
 
 if (isset($_GET['term']) and isset($_GET['x']) ){
-  header("Location: search-item?term=" . $_GET['term'] . "&app=1");
+  header("Location: ?term=" . $_GET['term'] . "&app=1");
   exit;
+}
+
+if (isset($_GET['term']) and isset($_GET['app'])){
+  echo $_GET['term'];
+  echo PHP_EOL;
+  echo $_GET['app'];
+  // create query for search item by term
+  // if app == 1 is app else theme
+} else {
+  // query all items
+
+  // test apps  // Perform db query to obtain this information limit 3
+  // query apps in db
+  $item = getAppTheme(1001,2,$dictionary,1);
+  $item2 = getAppTheme(1000,2,$dictionary,1);
+  $apps = array();
+  // add element in array
+  array_push($apps, $item);
+  array_push($apps, $item2);
 }
 
 //(end) * Required on all pages *
@@ -68,18 +87,6 @@ $filter_segment = array(
   array('name' => 'Test 1'),
   array('name' => 'Test 2' )
 );
-// test apps  // Perform db query to obtain this information limit 3
-// query apps in db
-$item = getAppTheme(1001,2,$dictionary,1);
-$item2 = getAppTheme(1000,2,$dictionary,1);
-$apps = array();
-// add element in array
-array_push($apps, $item);
-array_push($apps, $item2);
-
-
-
-
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
