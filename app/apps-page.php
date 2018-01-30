@@ -88,7 +88,7 @@ $all_category = get_categories_app();
 //info search
 $info_page = array(
   'app_store' => true,
-  //'number_found' => $number_found
+  'number_found' => $number_found
 );
 // query filter itens
 $filter_segment = array(
