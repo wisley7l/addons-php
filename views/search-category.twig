@@ -38,14 +38,14 @@
 	<div class="section-wrap">
 		<div class="section">
 			<div class="headline primary">
-				{% for category in all_category %}
+
 				<h4> </h4>
 				<h5>{{dictionary.word_items_found}} ({{info_page.number_found}})</h5>
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
 							<option >{{dictionary.word_categories}}</option>
-
+              {% for category in all_category %}
 							{% set selected = '' %}
 							{% if category.id == 1 %}
 								{% set selected = 'selected' %}
