@@ -22,7 +22,9 @@ if (isset($_GET['logout'])){
   session_destroy();
   header("Location: index");
 }
-
+// varible select filter
+$filter = array('all' => 'selected',
+ 'free' => '');
 // filter categories and price
 if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
@@ -32,6 +34,8 @@ if (isset($_GET['filter'])){
   if ($_GET['filter'] == 'free') {
     // search items free
     // count the number of items found
+    $filter['all'] = '';
+    $filter['free'] = 'selected';
     $number_found = 0;
     var_dump($themes);
   }
@@ -102,6 +106,7 @@ echo $twig->render('apps-themes-page.twig', array(
   'info_footer' => $info_footer,
   'info_page' => $info_page,
   'segment' => $filter_segment,
+  'filter' => $filter,
   // test apps
   'apps_themes' => $themes,
   'user' => $user_login,
