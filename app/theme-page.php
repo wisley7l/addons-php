@@ -84,6 +84,7 @@ $all_category = get_categories_theme();
 //info search
 $info_page = array(
   'app_store' => false,
+  'search_id' => 11,
   'number_found' => $number_found
 );
 // query filter itens

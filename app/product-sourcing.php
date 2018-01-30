@@ -37,15 +37,14 @@ if (isset($_GET['filter'])){
 }
 else if (isset($_GET['term']) and isset($_GET['x']) ){
   // fix search
-  header("Location: ?term=" . $_GET['term'] . "&app=1");
+  header("Location: ?term=" . $_GET['term']);
   exit;
 }
 else if (isset($_GET['term']) and isset($_GET['app'])){
   echo $_GET['term'];
   echo PHP_EOL;
-  echo $_GET['app'];
+  // in this case fetch only app with term = GET in the specified category
   // create query for search item by term
-  // if app == 1 is app else theme
 
   // count the number of items found
   $number_found = 0;
