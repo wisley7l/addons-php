@@ -83,7 +83,7 @@ $info_footer = array(
 $all_category = get_categories_app();
 //var_dump($all_category);
 foreach ($all_category as $key) {
-  echo ".";
+  var_dump($all_category[$key]);
   if($all_category[$key]['id'] == 1) {
       echo 'encontrei';
   }
