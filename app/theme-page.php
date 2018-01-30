@@ -30,13 +30,13 @@ if (isset($_GET['filter'])){
     exit;
   }
   if ($_GET['filter'] == 'free') {
-
+    // search items free
   }
 
 }
 
-
 if (isset($_GET['term']) and isset($_GET['x']) ){
+  // fix search
   header("Location: ?term=" . $_GET['term'] . "&app=0");
   exit;
 }

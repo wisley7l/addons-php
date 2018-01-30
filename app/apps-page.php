@@ -30,7 +30,9 @@ if (isset($_GET['filter'])){
     exit;
   }
   if ($_GET['filter'] == 'free') {
-
+    // filter items free
+    // count the number of items found
+    $number_found = 0;
   }
 }
 
@@ -45,7 +47,13 @@ if (isset($_GET['term']) and isset($_GET['app'])){
   echo $_GET['app'];
   // create query for search item by term
   // if app == 1 is app else theme
+
+  // count the number of items found
+  $number_found = 0;
+
 } else {
+  // count the number of items found
+  $number_found = 2;
   // query all items
 
   // test apps  // Perform db query to obtain this information limit 3
@@ -75,8 +83,7 @@ $info_footer = array(
 // test all category  // Perform db query to obtain this information
 $all_category = get_categories_app();
 
-// query for apps
-$number_found = 0;
+
 //info search
 $info_page = array(
   'app_store' => true,
