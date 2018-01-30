@@ -35,7 +35,7 @@ if (isset($_GET['filter'])){
 }
 
 if (isset($_GET['term']) and isset($_GET['x']) ){
-  header("Location: &term=" . $_GET['term']);
+  header("Location: search-item?term=" . $_GET['term']);
   exit;
 }
 
