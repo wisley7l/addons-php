@@ -3,19 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="stylesheet" href="../../css/vendor/simple-line-icons.css">
-	<link rel="stylesheet" href="../../css/vendor/tooltipster.css">
-	<link rel="stylesheet" href="../../css/vendor/jquery.range.css">
-	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../css/vendor/simple-line-icons.css">
+	<link rel="stylesheet" href="../css/vendor/tooltipster.css">
+	<link rel="stylesheet" href="../css/vendor/jquery.range.css">
+	<link rel="stylesheet" href="../css/style.css">
 
-	<link rel="stylesheet" href="../../css/vendor/magnific-popup.css">
+	<link rel="stylesheet" href="../css/vendor/magnific-popup.css">
 	<!-- favicon -->
 	<link rel="icon" href="https://e-com.club/mass/ftp/tutoriais/favicon.png">
 	<title>{{dictionary.title}} | {{ dictionary.word_apps_store }}</title>
 </head>
 <body>
-  {% import 'macros-categories.twig' as macro_main %}
-	{% import 'macro-app-theme-page-categories.twig' as macro_app_theme %}
+  {% import 'macros.twig' as macro_main %}
+	{% import 'macro-app-theme-page.twig' as macro_app_theme %}
 	<!-- HEADER -->
   {{macro_main.all_header(login,dictionary,user,all_category)}}
 	<!-- /HEADER -->
@@ -206,23 +206,23 @@
 <!-- /SVG PLUS -->
 
 <!-- jQuery -->
-<script src="../../js/vendor/jquery-3.1.0.min.js"></script>
+<script src="../js/vendor/jquery-3.1.0.min.js"></script>
 <!-- JRange -->
-<script src="../../js/vendor/jquery.range.min.js"></script>
+<script src="../js/vendor/jquery.range.min.js"></script>
 <!-- Tooltipster -->
-<script src="../../js/vendor/jquery.tooltipster.min.js"></script>
+<script src="../js/vendor/jquery.tooltipster.min.js"></script>
 <!-- Tweet -->
-<script src="../../js/vendor/twitter/jquery.tweet.min.js"></script>
+<script src="../js/vendor/twitter/jquery.tweet.min.js"></script>
 <!-- Side Menu -->
-<script src="../../js/side-menu.js"></script>
+<script src="../js/side-menu.js"></script>
 <!-- Tooltip -->
-<script src="../../js/tooltip.js"></script>
+<script src="../js/tooltip.js"></script>
 <!-- User Quickview Dropdown -->
-<script src="../../js/user-board.js"></script>
+<script src="../js/user-board.js"></script>
 <!-- Shop -->
-<script src="../../js/shop.js"></script>
+<script src="../js/shop.js"></script>
 <!-- Footer -->
-<script src="../../js/footer.js"></script>
+<script src="../js/footer.js"></script>
 
 {{macro_main.scripts()}}
 
