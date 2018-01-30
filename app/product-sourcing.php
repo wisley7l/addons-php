@@ -81,11 +81,14 @@ $info_footer = array(
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
 $all_category = get_categories_app();
+if($all_category['id'] == 1) {
+    echo 'encontrei';
+}
 
 
 //info search
 $info_page = array(
-  'app_store' => true,
+  'name' => '',
   'number_found' => $number_found
 );
 // query filter itens
@@ -106,5 +109,6 @@ echo $twig->render('search-category.twig', array(
   'all_category' => $all_category,
   // test apps
   'apps_themes' => $apps,
-  'user' => $user_login
+  'user' => $user_login,
+  'search_id' => 1
 ));

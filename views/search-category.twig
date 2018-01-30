@@ -23,13 +23,8 @@
 	<!-- SECTION HEADLINE -->
 	<div class="section-headline-wrap">
 		<div class="section-headline">
-			{% if info_page.app_store == true %}
-			<h2>{{ dictionary.word_apps_store }}</h2>
+			<h2>{{info_page.name}}</h2>
 			<!--p>Home<span class="separator">/</span>Shop V1<span class="separator">/</span><span class="current-section">Illustration</span></p-->
-			{% else %}
-			<h2>{{ dictionary.word_themes_store }}</h2>
-			<!--p>Home<span class="separator">/</span>Shop V1<span class="separator">/</span><span class="current-section">Illustration</span></p-->
-			{% endif %}
 		</div>
 	</div>
 	<!-- /SECTION HEADLINE -->
@@ -45,10 +40,10 @@
 							<option >{{dictionary.word_categories}}</option>
               {% for category in all_category %}
 							{% set selected = '' %}
-							{% if category.id == 1 %}
+							{% if category.id == search_id %}
 								{% set selected = 'selected' %}
 							{% endif %}
-							<option value="{{category.page}}" {{ selected }}>{{category.id}}-{{category.name}}</option>
+							<option value="{{category.page}}" {{ selected }}>{{category.name}}</option>
             {% endfor %}
 						</select>
 						<!-- SVG ARROW -->
