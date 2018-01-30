@@ -43,9 +43,10 @@
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
 							<option >{{dictionary.word_categories}}</option>
+							{% set selected = '' %}
 							{% for category in all_category %}
 							{% if category.id == 1 %}
-							sadasd
+								{% set selected = 'selected' %}
 							{% endif %}
 							<option value="{{category.page}}">{{category.name}}</option>
 							{% endfor %}
