@@ -35,10 +35,40 @@ if (isset($_GET['logout'])){
 }
 //(end) * Required on all pages *
 
-//if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
+if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
+  echo $_GET['category_name'];
+  echo PHP_EOL;
+  echo $_GET['categories'];
   // obs: treat search
-  //  echo $_GET['category_name'];
-//}
+  //  category_name=&categories=0
+}
+else if (isset($_GET['term']) and isset($_GET['x']) ){
+  // fix search
+  header("Location: ?term=" . $_GET['term']);
+  exit;
+}
+else if (isset($_GET['term']) ){
+  echo $_GET['term'];
+  echo PHP_EOL;
+  echo $_GET['app'];
+  // create query for search item by term
+  // search app and theme with term
+
+} else {
+  //
+  // test apps  // Perform db query to obtain this information
+  // query apps in db
+  $item2 = getAppTheme(1000,1,$dictionary,1);
+  // query apps in db
+  $apps = array();
+  // add element in array
+  array_push($apps, $item2);
+  // test themes // Perform db query to obtain this information
+  $item = getAppTheme(1111,1,$dictionary,0);
+  $themes = array();
+  // add element in array
+  array_push($themes, $item);
+}
 
 
 // necessary variables for information
@@ -54,22 +84,10 @@ $info_footer = array(
 
 // search item for name
 $search_item = array(
-  array('id' => 0 , name => $dictionary['word_app'] ),
-  array('id' => 1 , name => $dictionary['word_theme'] )
+  array('id' => 1 , name => $dictionary['word_app'] ),
+  array('id' => 0 , name => $dictionary['word_theme'] )
 );
 
-// test apps  // Perform db query to obtain this information
-// query apps in db
-$item2 = getAppTheme(1000,1,$dictionary,1);
-// query apps in db
-$apps = array();
-// add element in array
-array_push($apps, $item2);
-// test themes // Perform db query to obtain this information
-$item = getAppTheme(1111,1,$dictionary,0);
-$themes = array();
-// add element in array
-array_push($themes, $item);
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
