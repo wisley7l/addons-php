@@ -22,7 +22,7 @@ function getAppTheme($id_app,$id_partner,$dictionary,$app)
     'value' => 20.03 / $dictionary['mult_coin'],
     'star_on' => 3,
     'star_off' => 2,
-    'image' => '../images/items/westeros_m.jpg',
+    'image' => Addons\PATH_APP . 'assets/html/images/items/westeros_m.jpg',
     'image_partner' => 'http://2.bp.blogspot.com/-7tydAWF_j7o/VbI736K_lTI/AAAAAAAADs4/vM0V-5nFTKw/s1600/boteco%2Bde%2Boa%2B%25285%2529.jpg',
     'is_app'=> $app
   );
