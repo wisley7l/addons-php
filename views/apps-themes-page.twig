@@ -48,7 +48,7 @@
 							{% if category.id == 1 %}
 								{% set selected = 'selected' %}
 							{% endif %}
-							<option value="{{category.page}}">{{category.name}}</option>
+							<option value="{{category.page}}" {{ selected }}>{{category.name}}</option>
 							{% endfor %}
 						</select>
 						<!-- SVG ARROW -->
