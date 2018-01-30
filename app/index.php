@@ -38,19 +38,25 @@ if (isset($_GET['logout'])){
 if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
   if ($_GET['category_name'] == '') {
     echo "category_name is empty";
+    echo PHP_EOL;
   }else {
-    echo $_GET['category_name'];    
+    echo $_GET['category_name'];
+    echo PHP_EOL;
   }
+  //
   if ($_GET['categories'] == 1) {
     echo "category is APP";
+    echo PHP_EOL;
   }
   else {
     echo "category is THEME";
+    echo PHP_EOL;
   }
 
   echo $_GET['category_name'];
   echo PHP_EOL;
   echo $_GET['categories'];
+  echo PHP_EOL;
   // obs: treat search
   //  category_name=&categories=0
 }
