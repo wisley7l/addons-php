@@ -81,6 +81,8 @@ $info_footer = array(
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
 $all_category = get_categories_app();
+var_dump($all_category);
+
 if($all_category['id'] == 1) {
     echo 'encontrei';
 }
