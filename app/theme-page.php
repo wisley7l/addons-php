@@ -36,14 +36,12 @@ if (isset($_GET['filter'])){
   }
 
 }
-
-if (isset($_GET['term']) and isset($_GET['x']) ){
+elseif (isset($_GET['term']) and isset($_GET['x']) ){
   // fix search
   header("Location: ?term=" . $_GET['term'] . "&app=0");
   exit;
 }
-
-if (isset($_GET['term']) and isset($_GET['app'])){
+elseif (isset($_GET['term']) and isset($_GET['app'])){
   echo $_GET['term'];
   echo PHP_EOL;
   echo $_GET['app'];

@@ -35,14 +35,12 @@ if (isset($_GET['filter'])){
     $number_found = 0;
   }
 }
-
-if (isset($_GET['term']) and isset($_GET['x']) ){
+else if (isset($_GET['term']) and isset($_GET['x']) ){
   // fix search
   header("Location: ?term=" . $_GET['term'] . "&app=1");
   exit;
 }
-
-if (isset($_GET['term']) and isset($_GET['app'])){
+else if (isset($_GET['term']) and isset($_GET['app'])){
   echo $_GET['term'];
   echo PHP_EOL;
   echo $_GET['app'];
@@ -51,7 +49,6 @@ if (isset($_GET['term']) and isset($_GET['app'])){
 
   // count the number of items found
   $number_found = 0;
-  $apps = array();
 
 } else {
   // count the number of items found
