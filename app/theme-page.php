@@ -81,8 +81,7 @@ $info_footer = array(
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
 $all_category = get_categories_theme();
-// query for apps
-$number_found = 0;
+
 //info search
 $info_page = array(
   'app_store' => false,
