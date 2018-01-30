@@ -31,6 +31,8 @@ if (isset($_GET['filter'])){
   }
   if ($_GET['filter'] == 'free') {
     // search items free
+    // count the number of items found
+    $number_found = 0;
   }
 
 }
@@ -47,7 +49,11 @@ if (isset($_GET['term']) and isset($_GET['app'])){
   echo $_GET['app'];
   // create query for search item by term
   // if app == 1 is app else theme
+  // count the number of items found
+  $number_found = 0;
 } else {
+  // count the number of items found
+  $number_found = 2;
   // query all items
 
   // test apps  // Perform db query to obtain this information limit 3

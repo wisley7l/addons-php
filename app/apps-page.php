@@ -37,6 +37,7 @@ if (isset($_GET['filter'])){
 }
 
 if (isset($_GET['term']) and isset($_GET['x']) ){
+  // fix search
   header("Location: ?term=" . $_GET['term'] . "&app=1");
   exit;
 }
