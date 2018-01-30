@@ -22,14 +22,20 @@ if (isset($_GET['logout'])){
   session_destroy();
   header("Location: index");
 }
-
-// filter price , filter categories redirect page category
+// varible select filter
+$filter = array('all' => 'selected',
+ 'free' => '');
+// filter categories and price
 if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
     header("Location: theme-page");
     exit;
   }
   if ($_GET['filter'] == 'free') {
+    // search items free
+    // count the number of items found
+    $filter['all'] = '';
+    $filter['free'] = 'selected';
     // filter items free
     // count the number of items found
     $number_found = 0;
