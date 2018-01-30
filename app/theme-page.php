@@ -33,6 +33,7 @@ if (isset($_GET['filter'])){
     // search items free
     // count the number of items found
     $number_found = 0;
+    var_dump($themes);
   }
 
 }
