@@ -51,6 +51,7 @@ if (isset($_GET['term']) and isset($_GET['app'])){
 
   // count the number of items found
   $number_found = 0;
+  $apps = array();
 
 } else {
   // count the number of items found
