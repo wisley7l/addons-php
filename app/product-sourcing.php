@@ -82,8 +82,10 @@ $info_footer = array(
 // test all category  // Perform db query to obtain this information
 $all_category = get_categories_app();
 //var_dump($all_category);
-foreach ($all_category as $key) {
-  echo $all_category[$key];
+foreach ($all_category as $v1) {
+    foreach ($v1 as $v2) {
+        echo "$v2\n";
+    }
 }
 
 
