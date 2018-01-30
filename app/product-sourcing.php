@@ -28,7 +28,7 @@ $filter = array('all' => 'selected',
 // filter categories and price
 if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
-    header("Location: theme-page");
+    header("Location: product-sourcing");
     exit;
   }
   if ($_GET['filter'] == 'free') {
@@ -117,6 +117,7 @@ echo $twig->render('search-category.twig', array(
   'info_page' => $info_page,
   'segment' => $filter_segment,
   'all_category' => $all_category,
+  'filter' => $filter,
   // test apps
   'apps_themes' => $apps,
   'user' => $user_login,
