@@ -28,7 +28,7 @@ $filter = array('all' => 'selected',
 // filter categories and price
 if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
-    header("Location: theme-page");
+    header("Location: apps-page");
     exit;
   }
   if ($_GET['filter'] == 'free') {
