@@ -81,13 +81,11 @@ $info_footer = array(
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
 $all_category = get_categories_app();
-//var_dump($all_category);
+// difine page
+$id_category = 1;
 foreach ($all_category as $category) {
-    echo "(";
-    echo $category['id'];
-    echo ")**";
-    if ($category['id'] == 1) {
-      echo $category['name'];
+    if ($category['id'] == $id_category) {
+      $name_page = $category['name'];
     }
 }
 
@@ -95,7 +93,7 @@ foreach ($all_category as $category) {
 
 //info search
 $info_page = array(
-  'name' => '',
+  'name' => $name_page,
   'number_found' => $number_found
 );
 // query filter itens
@@ -117,5 +115,5 @@ echo $twig->render('search-category.twig', array(
   // test apps
   'apps_themes' => $apps,
   'user' => $user_login,
-  'search_id' => 1
+  'search_id' => $id_category
 ));
