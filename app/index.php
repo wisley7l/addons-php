@@ -36,6 +36,18 @@ if (isset($_GET['logout'])){
 //(end) * Required on all pages *
 
 if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
+  if ($_GET['category_name'] == '') {
+    echo "category_name is empty";
+  }else {
+    echo $_GET['category_name'];    
+  }
+  if ($_GET['categories'] == 1) {
+    echo "category is APP";
+  }
+  else {
+    echo "category is THEME";
+  }
+
   echo $_GET['category_name'];
   echo PHP_EOL;
   echo $_GET['categories'];
