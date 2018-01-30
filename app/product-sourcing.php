@@ -83,6 +83,7 @@ $info_footer = array(
 $all_category = get_categories_app();
 //var_dump($all_category);
 foreach ($all_category as $v1) {
+    echo "($v1)**";
     foreach ($v1 as $v2) {
         echo "$v2-";
     }
