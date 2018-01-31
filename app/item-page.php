@@ -2,6 +2,31 @@
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
+//(init) * Required on all pages *
+// close writing session, if it exists and intal session
+session_write_close();
+session_start();
+// if the session exists
+if (isset($_SESSION)) {
+  //modify the value of the login variable, by the value saved in the session
+  //var_dump($_SESSION);
+  $login = $_SESSION['login'];
+  // set values for user, with the values saved in the session
+  // array used to set user panel parameters
+  $user_login = getUserLogin($dictionary);
+}
+// check if logout attempt
+if (isset($_GET['logout'])){
+  // if attempt is true, destroy session values and redirect to index page
+  session_destroy();
+  // obs. check redirection on all pages
+  header("Location: index");
+}
+//(end) * Required on all pages *
+
+
+
+
 
 if (isset($_GET['id']) AND isset($_GET['app'])){
   echo $_GET['id'];
@@ -11,7 +36,6 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 else {
   echo "error";
 }
-
 
 // necessary variables for information
 // number of partners and stores, and total apps and themes
@@ -31,8 +55,6 @@ echo $twig->render('item-page.twig', array(
   'dictionary' => $dictionary,
   'login' => $login,
   'info_footer' => $info_footer,
-  'info_page' => $info_page,
-  'segment' => $filter_segment,
   'all_category' => $all_category,
   'filter' => $filter,
   // test apps
