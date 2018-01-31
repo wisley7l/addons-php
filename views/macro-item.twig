@@ -570,3 +570,98 @@
     <!-- IMAGE SLIDES -->
   </div>
 {% endmacro %}
+
+{% macro item_description() %}
+  <div class="post-paragraph">
+    <h3 class="post-title">The Pack Contains:</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+{% endmacro %}
+
+{% macro item_small_description() %}
+  <div class="post-paragraph">
+    <h3 class="post-title small">Westeros HTML Instructions</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+{% endmacro %}
+
+{% macro list_unordered() %}
+  <div class="post-paragraph half">
+    <h3 class="post-title small">List Items (Unordered)</h3>
+    <!-- POST ITEM LIST -->
+    <ul class="post-item-list">
+      <li>
+        <!-- SVG CHECK -->
+        <svg class="svg-check bullet-icon">
+          <use xlink:href="#svg-check"></use>
+        </svg>
+        <!-- /SVG CHECK -->
+        <p>Lorem ipsum dolor sit amet</p>
+      </li>
+      <li>
+        <!-- SVG CHECK -->
+        <svg class="svg-check bullet-icon">
+          <use xlink:href="#svg-check"></use>
+        </svg>
+        <!-- /SVG CHECK -->
+        <p>Nostrud Exertation</p>
+      </li>
+      <li>
+        <!-- SVG CHECK -->
+        <svg class="svg-check bullet-icon">
+          <use xlink:href="#svg-check"></use>
+        </svg>
+        <!-- /SVG CHECK -->
+        <p>Laborum: Lorem ipsum dolor sit </p>
+      </li>
+      <li>
+        <!-- SVG CHECK -->
+        <svg class="svg-check bullet-icon">
+          <use xlink:href="#svg-check"></use>
+        </svg>
+        <!-- /SVG CHECK -->
+        <p>Lorem ipsum dolor sit amet</p>
+      </li>
+      <li>
+        <!-- SVG CHECK -->
+        <svg class="svg-check bullet-icon">
+          <use xlink:href="#svg-check"></use>
+        </svg>
+        <!-- /SVG CHECK -->
+        <p>Nostrud Exertation</p>
+      </li>
+    </ul>
+    <!-- POST ITEM LIST -->
+  </div>
+{% endmacro %}
+
+{% macro list_ordered() %}
+  <div class="post-paragraph half">
+    <h3 class="post-title small">List Items (Ordered)</h3>
+    <!-- POST ITEM LIST -->
+    <ul class="post-item-list">
+      <li>
+        <p class="bullet-icon">1-</p>
+        <p>Lorem ipsum dolor sit amet</p>
+      </li>
+      <li>
+        <p class="bullet-icon">2-</p>
+        <p>Nostrud Exertation</p>
+      </li>
+      <li>
+        <p class="bullet-icon">3-</p>
+        <p>Laborum: Lorem ipsum dolor sit </p>
+      </li>
+      <li>
+        <p class="bullet-icon">4-</p>
+        <p>Lorem ipsum dolor sit amet</p>
+      </li>
+      <li>
+        <p class="bullet-icon">5-</p>
+        <p>Nostrud Exertation</p>
+      </li>
+    </ul>
+    <!-- POST ITEM LIST -->
+  </div>
+{% endmacro %}
