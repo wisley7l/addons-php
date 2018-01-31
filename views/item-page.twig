@@ -82,16 +82,6 @@
 			</div>
 			<!-- /SIDEBAR -->
 
-      <hr class="line-separator">
-
-      <div  class="content left">
-        {% for i in 1..5 %}
-        <a href="#" class="button primary half" >Add to Cart {{i}}</a>
-        {% endfor %}
-      </div>
-      <p> <hr class="line-separator"> </p>
-
-
 			<!-- CONTENT -->
 			<div class="content left">
 				<!-- POST -->
@@ -109,6 +99,9 @@
 					<!-- /POST IMAGE SLIDES -->
 
 					<hr class="line-separator">
+          {% for i in 1..10 %}
+          <a href="#" class="button mid primary half">Go to Live Demo {{i}} </a>
+          {% endfor %}
 
 					<!-- POST CONTENT -->
 					<div class="post-content">
