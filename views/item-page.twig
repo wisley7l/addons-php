@@ -85,8 +85,9 @@
       <hr class="line-separator">
 
       <div  class="content left">
-        <a href="#" class="button primary half" >Add to Cart</a>
-        <a href="#" class="button primary half">nothing</a>
+        {% for i in 1..10 %}
+        <a href="#" class="button primary half" >Add to Cart {{i}}</a>
+        {% endfor %}
       </div>
 
 
