@@ -91,3 +91,28 @@
     <!-- /ITEM-FAQ -->
   </div>
 {% endmacro %}
+
+{% macro author_bio() %}
+  <div class="sidebar-item author-bio">
+    <h4>Product Author</h4>
+    <hr class="line-separator">
+    <!-- USER AVATAR -->
+    <a href="user-profile.html" class="user-avatar-wrap medium">
+      <figure class="user-avatar medium">
+        <img src="../images/avatars/avatar_09.jpg" alt="">
+      </figure>
+    </a>
+    <!-- /USER AVATAR -->
+    <p class="text-header">Odin_Design</p>
+    <p class="text-oneline">Super Samurai Developers<br>Los Angeles, Usa</p>
+    <!-- SHARE LINKS -->
+    <ul class="share-links">
+      <li><a href="#" class="fb"></a></li>
+      <li><a href="#" class="twt"></a></li>
+      <li><a href="#" class="db"></a></li>
+    </ul>
+    <!-- /SHARE LINKS -->
+    <a href="#" class="button mid dark spaced">Go to <span class="primary">Profile Page</span></a>
+    <a href="#" class="button mid dark-light">Send a Private Message</a>
+  </div>
+{% endmacro %}
