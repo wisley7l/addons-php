@@ -11,9 +11,8 @@
 	<title>Emerald Dragon | Item Page V1</title>
 </head>
 <body>
-
-  {% import 'macros.twig' as macro_main %}
-  {% import 'macro-item.twig' as macro_item %}
+  {#% import 'macros.twig' as macro_main %#}
+  {#% import 'macro-item.twig' as macro_item %#}
   <!-- header -->
   	{#{macro_main.all_header(login,dictionary,user)}#}
   <!-- /header -->
@@ -2373,7 +2372,7 @@
 	<!-- /SECTION -->
 
 	<!-- FOOTER -->
-  {{macro_main.footer(dictionary,)}}
+  {#{macro_main.footer(dictionary)}#}
 	<!-- /FOOTER -->
 
 	<div class="shadow-film closed"></div>
