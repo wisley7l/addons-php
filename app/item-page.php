@@ -1,4 +1,8 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
+$dictionary = get_dictionary();
+$login = false;
+
 if (isset($_GET['id']) AND isset($_GET['app'])){
   echo $_GET['id'];
   echo PHP_EOL;
