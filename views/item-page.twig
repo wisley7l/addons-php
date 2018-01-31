@@ -87,124 +87,13 @@
 				<!-- POST -->
 				<article class="post">
 					<!-- POST IMAGE -->
-					<div class="post-image">
-						<figure class="product-preview-image large liquid">
-							<img src="../images/items/westeroshtml_b01.jpg" alt="">
-						</figure>
-						<!-- SLIDE CONTROLS -->
-						<div class="slide-control-wrap">
-							<div class="slide-control rounded left">
-								<!-- SVG ARROW -->
-								<svg class="svg-arrow">
-									<use xlink:href="#svg-arrow"></use>
-								</svg>
-								<!-- /SVG ARROW -->
-							</div>
-
-							<div class="slide-control rounded right">
-								<!-- SVG ARROW -->
-								<svg class="svg-arrow">
-									<use xlink:href="#svg-arrow"></use>
-								</svg>
-								<!-- /SVG ARROW -->
-							</div>
-						</div>
-						<!-- /SLIDE CONTROLS -->
-						<a href="#" class="button mid primary">Go to Live Demo</a>
-					</div>
+					{{macro_item.image_main()}}
 					<!-- /POST IMAGE -->
 
 					<!-- POST IMAGE SLIDES -->
 					<div class="post-image-slides">
 						<!-- IMAGE SLIDES WRAP -->
-						<div class="image-slides-wrap full">
-							<!-- IMAGE SLIDES -->
-							<div class="image-slides" data-slide-visible-full="8"
-													  data-slide-visible-small="2"
-													  data-slide-count="9">
-								<!-- IMAGE SLIDE -->
-								<div class="image-slide selected">
-									<div class="overlay"></div>
-									<figure class="product-preview-image thumbnail liquid">
-										<img src="../images/items/westeroshtml_b01.jpg" alt="">
-									</figure>
-								</div>
-								<!-- /IMAGE SLIDE -->
-
-								<!-- IMAGE SLIDE -->
-								<div class="image-slide">
-									<div class="overlay"></div>
-									<figure class="product-preview-image thumbnail liquid">
-										<img src="../images/items/westeroshtml_b02.jpg" alt="">
-									</figure>
-								</div>
-								<!-- /IMAGE SLIDE -->
-
-								<!-- IMAGE SLIDE -->
-								<div class="image-slide">
-									<div class="overlay"></div>
-									<figure class="product-preview-image thumbnail liquid">
-										<img src="../images/items/westeroshtml_b03.jpg" alt="">
-									</figure>
-								</div>
-								<!-- /IMAGE SLIDE -->
-
-								<!-- IMAGE SLIDE -->
-								<div class="image-slide">
-									<div class="overlay"></div>
-									<figure class="product-preview-image thumbnail liquid">
-										<img src="../images/items/westeroshtml_b04.jpg" alt="">
-									</figure>
-								</div>
-								<!-- /IMAGE SLIDE -->
-
-								<!-- IMAGE SLIDE -->
-								<div class="image-slide">
-									<div class="overlay"></div>
-									<figure class="product-preview-image thumbnail liquid">
-										<img src="../images/items/westeroshtml_b05.jpg" alt="">
-									</figure>
-								</div>
-								<!-- /IMAGE SLIDE -->
-
-								<!-- IMAGE SLIDE -->
-								<div class="image-slide">
-									<div class="overlay"></div>
-									<figure class="product-preview-image thumbnail liquid">
-										<img src="../images/items/westeroshtml_b06.jpg" alt="">
-									</figure>
-								</div>
-								<!-- /IMAGE SLIDE -->
-
-								<!-- IMAGE SLIDE -->
-								<div class="image-slide">
-									<div class="overlay"></div>
-									<figure class="product-preview-image thumbnail liquid">
-										<img src="../images/items/westeroshtml_b07.jpg" alt="">
-									</figure>
-								</div>
-								<!-- /IMAGE SLIDE -->
-
-								<!-- IMAGE SLIDE -->
-								<div class="image-slide">
-									<div class="overlay"></div>
-									<figure class="product-preview-image thumbnail liquid">
-										<img src="../images/items/westeroshtml_b08.jpg" alt="">
-									</figure>
-								</div>
-								<!-- /IMAGE SLIDE -->
-
-								<!-- IMAGE SLIDE -->
-								<div class="image-slide">
-									<div class="overlay"></div>
-									<figure class="product-preview-image thumbnail liquid">
-										<img src="../images/items/westeroshtml_b09.jpg" alt="">
-									</figure>
-								</div>
-								<!-- /IMAGE SLIDE -->
-							</div>
-							<!-- IMAGE SLIDES -->
-						</div>
+						{#{macro_item.outer_images_item()}#}
 						<!-- IMAGE SLIDES WRAP -->
 					</div>
 					<!-- /POST IMAGE SLIDES -->
