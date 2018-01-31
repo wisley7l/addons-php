@@ -43,7 +43,7 @@ else {
   echo "error";
 }
 
-$info_page = array('app' => $app, 
+$info_page = array('app' => $app,
 );
 
 // necessary variables for information
@@ -66,7 +66,7 @@ echo $twig->render('item-page.twig', array(
   'info_footer' => $info_footer,
   'all_category' => $all_category,
   'filter' => $filter,
-  'info_page' => $info_page
+  'info_page' => $info_page,
   // test apps
   'apps_themes' => $apps,
   'user' => $user_login,
