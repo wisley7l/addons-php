@@ -13,7 +13,16 @@ else {
 }
 
 
-
+// necessary variables for information
+// number of partners and stores, and total apps and themes
+// obs: query db for information or configure as static (avoid excessive queries)
+$total_apps_and_themes = 0; // not implemented in the first moment
+$count_partners = 0; // not implemented in the first moment
+$info_footer = array(
+  'total_apps_and_themes' => $total_apps_and_themes,
+  'count_partners' => $count_partners,
+  'path_file' => $_SERVER['PATH_FILE']
+);
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
