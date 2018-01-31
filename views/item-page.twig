@@ -84,6 +84,11 @@
 
 			<!-- CONTENT -->
 			<div class="content left">
+        <div>
+        {% for i in 1..10 %}
+        <a href="#" class="button mid primary half">Go to Live Demo {{i}} </a>
+        {% endfor %}
+        </div>
 				<!-- POST -->
 				<article class="post">
 					<!-- POST IMAGE -->
@@ -99,11 +104,7 @@
 					<!-- /POST IMAGE SLIDES -->
 
 					<hr class="line-separator">
-          <div>
-          {% for i in 1..10 %}
-          <a href="#" class="button mid primary half">Go to Live Demo {{i}} </a>
-          {% endfor %}
-        </div>
+
 					<!-- POST CONTENT -->
 					<div class="post-content">
 						<!-- POST PARAGRAPH -->
