@@ -55,6 +55,7 @@
 					{% for plan in plans %}
 					<!-- CHECKBOX -->
 					<input type="radio" id="{{plan.id}}" name="{{plan.id}}" form="aux_form" {{plan.checked}}>
+					<span>{{plan.price}} </span>
 					<label class="b-label linked-check" for="{{plan.id}}">
 						<span class="checkbox primary"><span></span></span>
 						{{plan.name}}
