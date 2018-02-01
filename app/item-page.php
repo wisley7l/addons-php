@@ -43,6 +43,11 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
   else{
     $app = 0;
     //search item in themes
+    $app_info = array('id' => $id_app,
+      'name' => 'THEME',
+      'description' => 'kljdasklkdakdasslasdlsadljaksdasdalkkdasdjakldklasklasffkasfsaklçaskldaskhfajskasdfhasdjkdsaasdfjkjdsfld',
+      'json' => 'treat json'
+    );
   }
 }
 else {
@@ -60,26 +65,9 @@ $plan1 = array('id' => 'licence-regular',
   'diplay' => 'display: block;'
 );
 
-$plan2 = array('id' => 'extended-license',
-  'name' => 'Extend Regular',
-  'price' => 56.00 / $dictionary['mult_coin'],
-  'description' => 'Test description Extend',
-  'checked' => '',
-  'diplay' => ''
-);
-
-$plan3 = array('id' => 'wis',
-  'name' => 'wis',
-  'price' => 156.00 / $dictionary['mult_coin'],
-  'description' => 'Test description Extend',
-  'checked' => '',
-  'diplay' => ''
-);
-
 $plans = array();
 array_push($plans, $plan1);
-array_push($plans, $plan2);
-array_push($plans, $plan3);
+
 
 
 // necessary variables for information
