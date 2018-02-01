@@ -18,6 +18,7 @@
 				var $this = $(this),
 					checkboxID = $this.prop('for'),
 					checkboxStatus = $("#"+checkboxID).prop('checked');
+          console.log("-: "+checkboxID);
 
 				if( checkboxID != selectedCheckboxID ) {
 					deselect($("#"+checkboxID))
