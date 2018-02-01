@@ -69,7 +69,7 @@ $plans = array();
 array_push($plans, $plan1);
 
 //$array_images = getImagensApp();
-$imagem_main = 'https://lh3.googleusercontent.com/wIcl3tehFmOUpq-Jl3hlVbZVFrLHePRtIDWV5lZwBVDr7kEAgLTChyvXUclMVQDRHDEcDhY=w640-h400-e365';
+$image_main = 'https://lh3.googleusercontent.com/wIcl3tehFmOUpq-Jl3hlVbZVFrLHePRtIDWV5lZwBVDr7kEAgLTChyvXUclMVQDRHDEcDhY=w640-h400-e365';
 //var_dump($array_images[0]);
 
 // necessary variables for information
@@ -96,6 +96,6 @@ echo $twig->render('item-page.twig', array(
   'user' => $user_login,
   'app_info' => $app_info,
   'array_images' => $array_images,
-  'imagem_main' => $imagem_main,
+  'image_main' => $image_main,
 
 ));
