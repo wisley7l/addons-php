@@ -13,6 +13,7 @@
 				var $this = $(this),
 					checkboxID = $this.prop('for'),
 					checkboxStatus = $("#"+checkboxID).prop('checked');
+          console.log("checkboxID: ");
           console.log(checkboxID);
           console.log("\n selecionado: ");
           console.log(selectedCheckboxID);
