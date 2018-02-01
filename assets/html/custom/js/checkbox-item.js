@@ -1,8 +1,8 @@
 (function($) {
   var $checkbox = $('.linked-check');
 
-  let t = $checkbox.prop('for');
-  let v = $checkbox.find('span#'+t);
+  let id = $checkbox.prop('for');
+  let v = $checkbox.find('input#'+id);
   console.log(v);
 
 	$checkbox.on( 'click', deselectLinked );
