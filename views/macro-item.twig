@@ -481,7 +481,7 @@
   </div>
 {% endmacro %}
 
-{% macro outher_images_item(image_main,array_image) %}
+{% macro outher_images_item(image_main,array_images) %}
   <div class="image-slides-wrap full">
     <!-- IMAGE SLIDES -->
     <div class="image-slides" data-slide-visible-full="8"
@@ -498,7 +498,7 @@
       </div>
       <!-- /IMAGE SLIDE -->
 
-      {% for image in array_image %}
+      {% for image in array_images %}
       <!-- IMAGE SLIDE -->
       <div class="image-slide">
         <div class="overlay"></div>
