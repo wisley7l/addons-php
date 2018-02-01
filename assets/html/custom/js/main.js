@@ -129,3 +129,6 @@ $("#addons-button-save").click(function(event){
   }
   event.preventDefault();
 });
+$("#buy-item")..click(function(event){
+  console.log("ok");
+});

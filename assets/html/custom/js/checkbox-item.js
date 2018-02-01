@@ -48,7 +48,3 @@
 		$('.sidebar-item .price.large').html(price);
 	}
 })(jQuery);
-
-$("a#buy-item").click(function(event){
-  console.log("ok");
-}
