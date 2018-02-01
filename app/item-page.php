@@ -52,8 +52,15 @@ $plan1 = array('id' => 'licence-regular',
   'description' => 'Test description'
 );
 
+$plan2 = array('id' => 'extend-regular',
+  'name' => 'Extend Regular',
+  'price' => 56,
+  'description' => 'Test description Extend'
+);
+
 $plans = array();
 array_push($plans, $plan1);
+array_push($plans, $plan2);
 
 // necessary variables for information
 // number of partners and stores, and total apps and themes
