@@ -116,13 +116,16 @@
 					{{macro_item.image_main()}}
 					<!-- /POST IMAGE -->
 
+					{# themes not outher images #}
+					{% if info_page.app == 1 %}
 					<!-- POST IMAGE SLIDES -->
 					<div class="post-image-slides">
 						<!-- IMAGE SLIDES WRAP -->
-						{{macro_item.outher_images_item()}}
+						{{macro_item.outher_images_item(imagem_main,array_image)}}
 						<!-- IMAGE SLIDES WRAP -->
 					</div>
 					<!-- /POST IMAGE SLIDES -->
+					{% endif %}
 
 					<hr class="line-separator">
 
