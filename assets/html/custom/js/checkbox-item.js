@@ -3,6 +3,7 @@
   //wisley edit
   let id = $checkbox.prop('for');
   let price1 = parseInt($checkbox.find('input#'+id).val());
+  changePrice("<span>{{dictionary.coin}}$</span>"+price1);
   //console.log(v);
   //
 
@@ -26,7 +27,7 @@
 					hideDescription(checkboxID);
 					//changePrice("<span>$</span>28.00");
 				} else {
-					changePrice("<span>$</span>"+price2);
+					changePrice("<span>{{dictionary.coin}}$</span>"+price2);
 				}
 			});
 	}
