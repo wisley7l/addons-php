@@ -70,7 +70,7 @@ array_push($plans, $plan1);
 
 $array_images = getImagensApp();
 $imagem_main = $array_images[0];
-var_dump($array_images);
+var_dump($array_images[0]);
 
 // necessary variables for information
 // number of partners and stores, and total apps and themes
