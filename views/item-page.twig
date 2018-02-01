@@ -53,15 +53,17 @@
 					<hr class="line-separator">
 					<form id="aux_form" name="aux_form"></form>
 
+					{% for plan as plans %}
 					<!-- CHECKBOX -->
-					<input type="radio" id="regular-license" name="regular-license" form="aux_form" checked>
+					<input type="radio" id="{{plan.#id}}" name="regular-license" form="aux_form" checked>
 					<label class="b-label linked-check" for="regular-license">
 						<span class="checkbox primary"><span></span></span>
-						Regular License
+						{{plan.#name}}
 					</label>
 					<!-- /CHECKBOX -->
 					<p class="license-text" data-license="regular-license" style="display: block;">Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod tempor cididunt ut labore.</p>
-
+					{% endfor %}
+					{# not implemented
 					<!-- CHECKBOX -->
 					<input type="radio" id="extended-license" name="extended-license" form="aux_form">
 					<label class="b-label linked-check" for="extended-license">
@@ -70,6 +72,7 @@
 					</label>
 					<!-- /CHECKBOX -->
 					<p class="license-text" data-license="extended-license">Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod tempor cididunt ut labore.</p>
+					#}
           <a href="#" class="button mid dark spaced"><span class="primary">Purchase Now!</span></a>
 					<!--a href="#" class="button mid primary half">Add to Cart</a>
 					<a href="#" class="button mid secondary wicon half"><span class="icon-heart"></span>652</a-->
@@ -723,7 +726,7 @@
 <!-- Liquid -->
 <script src="../js/liquid.js"></script>
 <!-- Checkbox Link -->
-<!--script src="../js/checkbox-link.js"></script-->
+<!--(not used)script src="../js/checkbox-link.js"></script-->
 <!-- Image Slides -->
 <script src="../js/image-slides.js"></script>
 <!-- Post Tab -->

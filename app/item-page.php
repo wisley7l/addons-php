@@ -46,6 +46,15 @@ else {
 $info_page = array('app' => $app,
 );
 
+$plan1 = array('#id' => 'licence-regular',
+  '#name' => 'License Regular',
+  '#price' => 16,
+  '#description' => 'Test description'
+);
+
+$plans = array();
+array_push($plans, $plan1);
+
 // necessary variables for information
 // number of partners and stores, and total apps and themes
 // obs: query db for information or configure as static (avoid excessive queries)
@@ -67,6 +76,7 @@ echo $twig->render('item-page.twig', array(
   'all_category' => $all_category,
   'filter' => $filter,
   'info_page' => $info_page,
+  'plans' => $plans,
   // test apps
   'apps_themes' => $apps,
   'user' => $user_login,
