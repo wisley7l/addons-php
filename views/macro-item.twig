@@ -498,24 +498,16 @@
       </div>
       <!-- /IMAGE SLIDE -->
 
+      {% for image in array_image %}
       <!-- IMAGE SLIDE -->
       <div class="image-slide">
         <div class="overlay"></div>
         <figure class="product-preview-image thumbnail liquid">
-          <img src="https://kaksimedia.com/kaxi/wp-content/uploads/2015/11/hacker-1024x480.jpg" alt="">
+          <img src="{{array_image}}" alt="">
         </figure>
       </div>
       <!-- /IMAGE SLIDE -->
-      {#% for image in array_image %}
-      <!-- IMAGE SLIDE -->
-      <div class="image-slide">
-        <div class="overlay"></div>
-        <figure class="product-preview-image thumbnail liquid">
-          <img src="../images/items/westeroshtml_b04.jpg" alt="">
-        </figure>
-      </div>
-      <!-- /IMAGE SLIDE -->
-      {% endfor %#}
+      {% endfor %}
     </div>
     <!-- IMAGE SLIDES -->
   </div>
