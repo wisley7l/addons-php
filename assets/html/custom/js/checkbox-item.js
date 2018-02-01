@@ -54,7 +54,7 @@ $("#buy-item").click(function(event){
   let input = $(div).find('input.checkbox-plan');
   for (var i = 0; i < input.length; i++) {
     if (input[i].checked == true) {
-      console.log(input[i]);
+      //console.log(input[i]);
       id = input[i].id;
     }
   }
