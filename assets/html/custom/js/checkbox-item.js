@@ -3,7 +3,7 @@
   //wisley edit
   let id = $checkbox.prop('for');
   let price1 = parseInt($checkbox.find('input#'+id).val());
-  let coin = $("p.price large").find("span#coin");
+  let coin = $("p.price large");
   console.log(coin);
   //changePrice("<span>{{dictionary.coin}}$</span>"+price1);
   //console.log(v);
