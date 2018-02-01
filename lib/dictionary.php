@@ -247,7 +247,7 @@ function get_dictionary () {
       $word_home_garden = 'Casa e Jardim';
       $word_furniture = 'Móveis e Mobília';
       $word_health_beauty = 'Saúde, Beleza e Perfumaria';
-      $word_sports_recreation = 'Esportes e Laser';
+      $word_sports_recreation = 'Esportes e Lazer';
       $word_service = 'Serviços';
       $word_toys_games = 'Infantil e Brinquedos';
       $word_other = 'Outros';
