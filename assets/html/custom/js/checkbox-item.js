@@ -55,7 +55,8 @@ $("#buy-item").click(function(event){
   for (var i = 0; i < input.length; i++) {
     if (input[i].checked == true) {
       console.log(input[i]);
+      id = input[i].id;
     }
   }
-  console.log(input);
+  console.log(id);
 });
