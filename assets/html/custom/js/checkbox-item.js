@@ -20,7 +20,7 @@
 					hideDescription(checkboxID);
 					changePrice("<span>$</span>28.00");
 				} else {
-					changePrice("<span>$</span>56.00");
+					changePrice("<span>$</span>66.00");
 				}
 			});
 	}
