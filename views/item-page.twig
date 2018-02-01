@@ -56,12 +56,12 @@
 					{% for plan in plans %}
 					<!-- CHECKBOX -->
 					<input type="radio" id="{{plan.id}}" name="regular-license" form="aux_form" checked>
-					<label class="b-label linked-check" for="regular-license">
+					<label class="b-label linked-check" for="{{plan.id}}">
 						<span class="checkbox primary"><span></span></span>
 						{{plan.name}}
 					</label>
 					<!-- /CHECKBOX -->
-					<p class="license-text" data-license="regular-license" style="display: block;">Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod tempor cididunt ut labore.</p>
+					<p class="license-text" data-license="regular-license" style="display: block;">{{plan.discription}}.</p>
 					{% endfor %}
 					{# not implemented
 					<!-- CHECKBOX -->
