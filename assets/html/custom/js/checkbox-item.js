@@ -49,7 +49,6 @@
 	}
 })(jQuery);
 
-$("a#buy-item").submit(function(event){
-  console.log("item");
-
-})
+$("a#buy-item").click(function(event){
+  console.log("ok");
+}
