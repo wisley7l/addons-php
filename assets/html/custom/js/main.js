@@ -131,6 +131,6 @@ $("#addons-button-save").click(function(event){
 });
 $("#buy-item").click(function(event){
   let div = 'div#item-page';
-  let span = $(div).find('span#coin');
+  let span = $(div).find('input#checkbox-plan');
   console.log(span);
 });
