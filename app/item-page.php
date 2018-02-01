@@ -49,13 +49,15 @@ $info_page = array('app' => $app,
 $plan1 = array('id' => 'licence-regular',
   'name' => 'License Regular',
   'price' => 16,
-  'description' => 'Test description'
+  'description' => 'Test description',
+  'checked' => 'checked'
 );
 
 $plan2 = array('id' => 'extended-license',
   'name' => 'Extend Regular',
   'price' => 56,
-  'description' => 'Test description Extend'
+  'description' => 'Test description Extend',
+  'checked' => ''
 );
 
 $plans = array();
