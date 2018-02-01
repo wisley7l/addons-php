@@ -46,10 +46,10 @@ else {
 $info_page = array('app' => $app,
 );
 
-$plan1 = array('#id' => 'licence-regular',
-  '#name' => 'License Regular',
-  '#price' => 16,
-  '#description' => 'Test description'
+$plan1 = array('id' => 'licence-regular',
+  'name' => 'License Regular',
+  'price' => 16,
+  'description' => 'Test description'
 );
 
 $plans = array();
