@@ -57,5 +57,5 @@ $("#buy-item").click(function(event){
       console.log(input[i]);
     }
   }
-
+  console.log(input);
 });
