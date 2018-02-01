@@ -498,7 +498,7 @@
       </div>
       <!-- /IMAGE SLIDE -->
 
-      {% for image in array_images %}
+      {% for image in array_images  if loop.index0 > 0 %}
       <!-- IMAGE SLIDE -->
       <div class="image-slide">
         <div class="overlay"></div>
