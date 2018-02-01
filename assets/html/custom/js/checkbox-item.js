@@ -8,7 +8,7 @@
 			selectedCheckboxID = $this.prop('for'),
 			selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
 			showDescription(selectedCheckboxID);
-    let v = $checkbox.find('#'+selectedCheckboxID);
+    let v = $checkbox.find('span#'+selectedCheckboxID);
     console.log("Price: ");
     console.log(v);
 
