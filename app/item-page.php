@@ -68,7 +68,8 @@ $plan1 = array('id' => 'licence-regular',
 $plans = array();
 array_push($plans, $plan1);
 
-
+$array_images = getImagensApp();
+$imagem_main = $array_images[0];
 
 // necessary variables for information
 // number of partners and stores, and total apps and themes
@@ -93,5 +94,7 @@ echo $twig->render('item-page.twig', array(
   // test apps
   'user' => $user_login,
   'app_info' => $app_info,
+  'array_images' => $array_images,
+  'imagem_main' => $imagem_main,
 
 ));

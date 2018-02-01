@@ -452,10 +452,11 @@
 {% endmacro %}
 
 
-{% macro image_main()%}
+{% macro image_main(image_main)%}
   <div class="post-image">
     <figure class="product-preview-image large liquid">
-      <img src="https://lh3.googleusercontent.com/wIcl3tehFmOUpq-Jl3hlVbZVFrLHePRtIDWV5lZwBVDr7kEAgLTChyvXUclMVQDRHDEcDhY=w640-h400-e365" alt="">
+      <!--img src="https://lh3.googleusercontent.com/wIcl3tehFmOUpq-Jl3hlVbZVFrLHePRtIDWV5lZwBVDr7kEAgLTChyvXUclMVQDRHDEcDhY=w640-h400-e365" alt=""-->
+      <img src="{{imagem_main}}" alt="">
     </figure>
     <!-- SLIDE CONTROLS -->
     <div class="slide-control-wrap">
@@ -491,8 +492,8 @@
       <div class="image-slide selected">
         <div class="overlay"></div>
         <figure class="product-preview-image thumbnail liquid">
-          <img src="https://lh3.googleusercontent.com/wIcl3tehFmOUpq-Jl3hlVbZVFrLHePRtIDWV5lZwBVDr7kEAgLTChyvXUclMVQDRHDEcDhY=w640-h400-e365" alt="">
-          <!--img src="{{imagem_main}}" alt=""-->
+          <!--img src="https://lh3.googleusercontent.com/wIcl3tehFmOUpq-Jl3hlVbZVFrLHePRtIDWV5lZwBVDr7kEAgLTChyvXUclMVQDRHDEcDhY=w640-h400-e365" alt=""-->
+          <img src="{{imagem_main}}" alt="">
         </figure>
       </div>
       <!-- /IMAGE SLIDE -->
