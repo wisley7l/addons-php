@@ -51,8 +51,6 @@
 
 $("#buy-item").click(function(event){
   let div = 'div#item-page';
-  let span = $(div).find('input.checkbox-plan');
-  let $checkbox = $('.checkbox-plan');
-  id = $checkbox.prop('checked'),
-  console.log(id);
+  let input = $(div).find('input.checkbox-plan');
+  console.log(input);
 });
