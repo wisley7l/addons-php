@@ -52,8 +52,7 @@
 $("#buy-item").click(function(event){
   let div = 'div#item-page';
   let span = $(div).find('input.checkbox-plan');
-  let $checkbox = $('.linked-check');
-  selectedCheckboxID = $checkbox.prop('for'),
-  selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
-  console.log(selectedCheckboxStatus);
+  let $checkbox = $('.checkbox-plan');
+  id = $checkbox.prop('checked'),
+  console.log(id);
 });
