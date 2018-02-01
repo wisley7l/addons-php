@@ -24,7 +24,8 @@
 			});
 	}
 
-	/*function deselect(checkbox) {
+	//*
+  function deselect(checkbox) {
 		checkbox.prop('checked', false);
 	}
 
@@ -38,5 +39,6 @@
 
 	function changePrice(price) {
 		$('.sidebar-item .price.large').html(price);
-	}*/
+	}
+  //*/
 })(jQuery);
