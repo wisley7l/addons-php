@@ -48,15 +48,21 @@
 	}
 })(jQuery);
 
-
+// buy item click buy
 $("#buy-item").click(function(event){
   let div = 'div#item-page';
   let input = $(div).find('input.checkbox-plan');
   for (var i = 0; i < input.length; i++) {
     if (input[i].checked == true) {
       //console.log(input[i]);
-      id = input[i].id;
+      id_license = input[i].id;
     }
   }
-  console.log(id);
+  /*  capture item id
+      License ID
+      value
+      shopkeeper id
+      if it's app or theme
+  */
+
 });
