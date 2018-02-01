@@ -48,3 +48,10 @@
 		$('.sidebar-item .price.large').html(price);
 	}
 })(jQuery);
+
+
+$("#buy-item").click(function(event){
+  let div = 'div#item-page';
+  let span = $(div).find('input#checkbox-plan');
+  console.log(span);
+});

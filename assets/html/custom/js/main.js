@@ -129,8 +129,3 @@ $("#addons-button-save").click(function(event){
   }
   event.preventDefault();
 });
-$("#buy-item").click(function(event){
-  let div = 'div#item-page';
-  let span = $(div).find('input#checkbox-plan');
-  console.log(span);
-});
