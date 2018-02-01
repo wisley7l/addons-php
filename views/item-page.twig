@@ -23,7 +23,8 @@
 	<!-- SECTION HEADLINE -->
 	<div class="section-headline-wrap">
 		<div class="section-headline">
-			<h2>NAME Item</h2>
+			<h2>{{app_info.name}}</h2>
+			<input id="id-item" style="display:none" value="{{app_info.id}}"></input>
 			<!--p>Home<span class="separator">/</span>Web Design<span class="separator">/</span><span class="current-section">HTML Templates</span></p-->
 		</div>
 	</div>
@@ -36,14 +37,14 @@
 			<div class="sidebar right">
 
         <!-- SIDEBAR ITEM -->
-        {% if info_page.app == 0 %}
+        {#% if info_page.app == 0 %}
 				<div class="sidebar-item">
           {% for i in 1..10 %}
 					<a href="#" class="button mid dark spaced"><span class="primary">Type {{i}}</span></a>
           {% endfor %}
 					<div class="clearfix"></div>
 				</div>
-        {% endif %}
+        {% endif %#}
 				<!-- /SIDEBAR ITEM -->
 
 
@@ -82,7 +83,7 @@
 					<!-- /CHECKBOX -->
 					<p class="license-text" data-license="extended-license">Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod tempor cididunt ut labore.</p>
 					#}
-          <a class="button mid dark spaced" id="buy-item"><span class="primary">Purchase Now!</span></a>
+          <a href="" class="button mid dark spaced" id="buy-item"><span class="primary">Purchase Now!</span></a>
 					<!--a href="#" class="button mid primary half">Add to Cart</a>
 					<a href="#" class="button mid secondary wicon half"><span class="icon-heart"></span>652</a-->
 					<div class="clearfix"></div>
@@ -128,7 +129,7 @@
 					<!-- POST CONTENT -->
 					<div class="post-content">
 						<!-- POST PARAGRAPH -->
-						{{macro_item.item_description()}}
+						{{macro_item.item_description(dictionary,app_info.description)}}
 						<!-- /POST PARAGRAPH -->
 
 						<!-- POST PARAGRAPH -->

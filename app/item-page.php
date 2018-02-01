@@ -25,22 +25,28 @@ if (isset($_GET['logout'])){
 //(end) * Required on all pages *
 
 
-
-
-
 if (isset($_GET['id']) AND isset($_GET['app'])){
   echo $_GET['id'];
   echo PHP_EOL;
   echo $_GET['app'];
   if ( $_GET['app'] == 1) {
     $app = 1;
+    //search item in app
+    $id_app = (int) $_GET['id'];
+
+    $app_info = array('id' => $id_app,
+      'name' => 'APP',
+      'description' => 'kljdasklkdakdasslasdlsadljaksdasdalkkdasdjakldklasklasffkasfsaklçaskldaskhfajskasdfhasdjkdsaasdfjkjdsfld',
+      'json' => 'treat json'
+    );
   }
   else{
     $app = 0;
+    //search item in themes
   }
 }
 else {
-  echo "<h1> error </h1>";
+  // redirect page error
 }
 
 $info_page = array('app' => $app,
@@ -75,6 +81,7 @@ array_push($plans, $plan1);
 array_push($plans, $plan2);
 array_push($plans, $plan3);
 
+
 // necessary variables for information
 // number of partners and stores, and total apps and themes
 // obs: query db for information or configure as static (avoid excessive queries)
@@ -93,12 +100,10 @@ echo $twig->render('item-page.twig', array(
   'dictionary' => $dictionary,
   'login' => $login,
   'info_footer' => $info_footer,
-  'all_category' => $all_category,
-  'filter' => $filter,
   'info_page' => $info_page,
   'plans' => $plans,
   // test apps
-  'apps_themes' => $apps,
   'user' => $user_login,
-  'search_id' => $id_category
+  'app_info' => $app_info,
+
 ));
