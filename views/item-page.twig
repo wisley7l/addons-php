@@ -53,7 +53,7 @@
 					<hr class="line-separator">
 					<form id="aux_form" name="aux_form"></form>
 
-					{% for plan as plans %}
+					{% for plan in plans %}
 					<!-- CHECKBOX -->
 					<input type="radio" id="{{plan.id}}" name="regular-license" form="aux_form" checked>
 					<label class="b-label linked-check" for="regular-license">
