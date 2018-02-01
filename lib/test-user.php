@@ -22,7 +22,7 @@ function getAppTheme($id_app,$id_partner,$dictionary,$app)
     'value' => 20.03 / $dictionary['mult_coin'],
     'star_on' => 3,
     'star_off' => 2,
-    'image' => 'https://addons.e-com.plus/assets/html/images/items/westeros_m.jpg',
+    'image' => 'http://soucatequista.com.br/wp-content/uploads/2016/12/Christmas_night-250x150.jpg',
     'image_partner' => 'http://2.bp.blogspot.com/-7tydAWF_j7o/VbI736K_lTI/AAAAAAAADs4/vM0V-5nFTKw/s1600/boteco%2Bde%2Boa%2B%25285%2529.jpg',
     'is_app'=> $app
   );
