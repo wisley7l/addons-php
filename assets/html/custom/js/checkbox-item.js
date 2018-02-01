@@ -1,4 +1,3 @@
-let selectedID;
 (function($) {
   var $checkbox = $('.linked-check');
   // edit
@@ -15,7 +14,6 @@ let selectedID;
 			selectedCheckboxID = $this.prop('for'),
 			selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
 			showDescription(selectedCheckboxID);
-      selectedID = selectedCheckboxID;
       let price2 = parseFloat($checkbox.find('input#'+selectedCheckboxID).val());
 
 			$checkbox.each(function() {
@@ -55,6 +53,7 @@ $("#buy-item").click(function(event){
   let div = 'div#item-page';
   let span = $(div).find('input.checkbox-plan');
   let $checkbox = $('.linked-check');
-  let id = selectedID;
-  console.log(id);
+  selectedCheckboxID = $checkbox.prop('for'),
+  selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
+  console.log(selectedCheckboxID);
 });
