@@ -2,7 +2,8 @@
   var $checkbox = $('.linked-check');
 
   let id = $checkbox.prop('for');
-  let v = $checkbox.find('input#'+id);
+  let v = parseInt($checkbox.find('input#'+id).val());
+
   console.log(v);
 
 	$checkbox.on( 'click', deselectLinked );
