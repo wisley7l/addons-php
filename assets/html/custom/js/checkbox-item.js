@@ -49,7 +49,7 @@
 	}
 })(jQuery);
 
-$("div.item-page").submit(function(event){
+$("a#buy-item").submit(function(event){
   console.log("item");
 
 })
