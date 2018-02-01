@@ -5,7 +5,7 @@
   let price1 = parseInt($checkbox.find('input#'+id).val());
   let coin = $("p#coin").find('span#coin')[0].innerText;
   console.log(coin);
-  changePrice("<span>{{dictionary.coin}}$</span>"+price1);
+  changePrice("<span>"+coin+"</span>"+price1);
   //console.log(v);
   //
 
@@ -29,7 +29,7 @@
 					hideDescription(checkboxID);
 					//changePrice("<span>$</span>28.00");
 				} else {
-					changePrice("<span>{{dictionary.coin}}$</span>"+price2);
+					changePrice("<span>"+coin+"</span>"+price2);
 				}
 			});
 	}
