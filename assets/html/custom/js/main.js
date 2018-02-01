@@ -130,5 +130,7 @@ $("#addons-button-save").click(function(event){
   event.preventDefault();
 });
 $("#buy-item").click(function(event){
-  console.log("ok");
+  let div = 'div#item-page';
+  let span = $(div).find('span#coin');
+  console.log(span);
 });
