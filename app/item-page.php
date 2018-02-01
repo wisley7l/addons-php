@@ -40,7 +40,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
   }
 }
 else {
-  echo "error";
+  echo "<h1> error </h1>";
 }
 
 $info_page = array('app' => $app,
