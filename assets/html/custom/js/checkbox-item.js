@@ -1,6 +1,11 @@
 (function($) {
   var $checkbox = $('.linked-check');
 
+  let t = selectedCheckboxID = $checkbox.prop('for');
+  console.log(t);
+
+
+
 	$checkbox.on( 'click', deselectLinked );
 
 	function deselectLinked() {
@@ -8,18 +13,11 @@
 			selectedCheckboxID = $this.prop('for'),
 			selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
 			showDescription(selectedCheckboxID);
-    let v = $checkbox.find('span#'+selectedCheckboxID).innerText;
-    console.log("Price: ");
-    console.log(v);
 
 			$checkbox.each(function() {
 				var $this = $(this),
 					checkboxID = $this.prop('for'),
 					checkboxStatus = $("#"+checkboxID).prop('checked');
-          console.log("checkboxID: ");
-          console.log(checkboxID);
-          console.log("\n selecionado: ");
-          console.log(selectedCheckboxID);
 
 				if( checkboxID != selectedCheckboxID ) {
 					deselect($("#"+checkboxID))
