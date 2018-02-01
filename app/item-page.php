@@ -52,7 +52,7 @@ $plan1 = array('id' => 'licence-regular',
   'description' => 'Test description'
 );
 
-$plan2 = array('id' => 'extend-regular',
+$plan2 = array('id' => 'extended-license',
   'name' => 'Extend Regular',
   'price' => 56,
   'description' => 'Test description Extend'
