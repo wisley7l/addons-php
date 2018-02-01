@@ -52,7 +52,17 @@
 					<p class="price large"><span>$</span>28.00</p>
 					<hr class="line-separator">
 					<form id="aux_form" name="aux_form"></form>
-
+					{% for plan in plans %}
+					<!-- CHECKBOX -->
+					<input type="radio" id="{{plan.id}}" name="{{plan.id}}" form="aux_form" checked>
+					<label class="b-label linked-check" for="{{plan.id}}">
+						<span class="checkbox primary"><span></span></span>
+						{{plan.name}}
+					</label>
+					<!-- /CHECKBOX -->
+					<p class="license-text" data-license="regular-license" style="display: block;">{{plan.description}}</p>
+					{% endfor %}
+					{# not implemented
 					<!-- CHECKBOX -->
 					<input type="radio" id="regular-license" name="regular-license" form="aux_form" checked>
 					<label class="b-label linked-check" for="regular-license">
@@ -70,6 +80,7 @@
 					</label>
 					<!-- /CHECKBOX -->
 					<p class="license-text" data-license="extended-license">Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod tempor cididunt ut labore.</p>
+					#}
           <a href="#" class="button mid dark spaced"><span class="primary">Purchase Now!</span></a>
 					<!--a href="#" class="button mid primary half">Add to Cart</a>
 					<a href="#" class="button mid secondary wicon half"><span class="icon-heart"></span>652</a-->

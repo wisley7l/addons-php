@@ -1,6 +1,5 @@
 (function($) {
-  console.log("execute");
-	var $checkbox = $('.linked-check');
+  var $checkbox = $('.linked-check');
 
 	$checkbox.on( 'click', deselectLinked );
 
