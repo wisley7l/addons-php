@@ -13,13 +13,16 @@
 				var $this = $(this),
 					checkboxID = $this.prop('for'),
 					checkboxStatus = $("#"+checkboxID).prop('checked');
+          console.log(checkboxID);
+          console.log("\n selecionado: ");
+          console.log(selectedCheckboxID);
 
 				if( checkboxID != selectedCheckboxID ) {
 					deselect($("#"+checkboxID))
 					hideDescription(checkboxID);
-					changePrice("<span>$</span>28.00");
+					//changePrice("<span>$</span>28.00");
 				} else {
-					changePrice("<span>$</span>66.00");
+					//changePrice("<span>$</span>66.00");
 				}
 			});
 	}

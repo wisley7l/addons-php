@@ -64,7 +64,7 @@ $plan2 = array('id' => 'extended-license',
 
 $plan3 = array('id' => 'wis',
   'name' => 'wis',
-  'price' => 56,
+  'price' => 156,
   'description' => 'Test description Extend',
   'checked' => '',
   'diplay' => ''
