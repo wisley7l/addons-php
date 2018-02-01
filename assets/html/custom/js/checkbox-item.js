@@ -1,10 +1,10 @@
 (function($) {
   var $checkbox = $('.linked-check');
-
+  //wisley edit
   let id = $checkbox.prop('for');
-  let v = parseInt($checkbox.find('input#'+id).val());
-
+  let price = parseInt($checkbox.find('input#'+id).val());
   console.log(v);
+  //
 
 	$checkbox.on( 'click', deselectLinked );
 
@@ -13,19 +13,20 @@
 			selectedCheckboxID = $this.prop('for'),
 			selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
 			showDescription(selectedCheckboxID);
-
+      // wisley edit
+      let priceV = parseInt($checkbox.find('input#'+selectedCheckboxID).val());
+      //
 			$checkbox.each(function() {
 				var $this = $(this),
 					checkboxID = $this.prop('for'),
 					checkboxStatus = $("#"+checkboxID).prop('checked');
-          console.log("-: "+checkboxID);
 
 				if( checkboxID != selectedCheckboxID ) {
 					deselect($("#"+checkboxID))
 					hideDescription(checkboxID);
 					//changePrice("<span>$</span>28.00");
 				} else {
-					//changePrice("<span>$</span>66.00");
+					changePrice("<span>$</span>"+priceV);
 				}
 			});
 	}
