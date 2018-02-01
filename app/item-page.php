@@ -50,14 +50,16 @@ $plan1 = array('id' => 'licence-regular',
   'name' => 'License Regular',
   'price' => 16,
   'description' => 'Test description',
-  'checked' => 'checked'
+  'checked' => 'checked',
+  'diplay' => 'display: block;'
 );
 
 $plan2 = array('id' => 'extended-license',
   'name' => 'Extend Regular',
   'price' => 56,
   'description' => 'Test description Extend',
-  'checked' => ''
+  'checked' => '',
+  'diplay' => ''
 );
 
 $plans = array();

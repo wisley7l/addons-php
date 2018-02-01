@@ -60,7 +60,7 @@
 						{{plan.name}}
 					</label>
 					<!-- /CHECKBOX -->
-					<p class="license-text" data-license="regular-license" style="display: block;">{{plan.description}}</p>
+					<p class="license-text" data-license="{{plan.id}}" style="{{plan.display}}">{{plan.description}}</p>
 					{% endfor %}
 					{# not implemented
 					<!-- CHECKBOX -->
