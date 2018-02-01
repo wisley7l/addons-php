@@ -48,3 +48,8 @@
 		$('.sidebar-item .price.large').html(price);
 	}
 })(jQuery);
+
+$("div.item-page").submit(function(event){
+  console.log("item");
+
+})
