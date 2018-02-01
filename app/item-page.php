@@ -68,9 +68,9 @@ $plan1 = array('id' => 'licence-regular',
 $plans = array();
 array_push($plans, $plan1);
 
-$array_images = getImagensApp();
-$imagem_main = $array_images[0];
-var_dump($array_images[0]);
+//$array_images = getImagensApp();
+$imagem_main = 'https://lh3.googleusercontent.com/wIcl3tehFmOUpq-Jl3hlVbZVFrLHePRtIDWV5lZwBVDr7kEAgLTChyvXUclMVQDRHDEcDhY=w640-h400-e365';
+//var_dump($array_images[0]);
 
 // necessary variables for information
 // number of partners and stores, and total apps and themes
