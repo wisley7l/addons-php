@@ -7,8 +7,8 @@
 
   function select(event) {
     let target = $(event.target);
-    console.log(target);
-    // 
+    console.log(target[0].id);
+    //
     // var $this = $(this),
 		// 	selectedCheckboxID = $this.prop('for');
     //   console.log($this);
