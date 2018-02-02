@@ -13,8 +13,9 @@
     let view = $(div).find('div#image-' + id_template);
     console.log('Template: ');
     console.log(view);
-    $(div).find('div#image-' + id_template).attr('sytle', 'display:block;');
-    // .attr('sytle', 'display:block;');
+    $(div).find('div#image-' + id_template).attr('style', '' );
+    
+
 
   }
 
