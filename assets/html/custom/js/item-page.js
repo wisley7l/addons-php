@@ -22,6 +22,8 @@
       for (var i = 0; i < buttonID.length; i++) {
         if (buttonID[i]== button[0]) {
             console.log(buttonID[i]);
+        }else {
+          console.log('Certo');
         }
 
       }
