@@ -1,7 +1,7 @@
 (function($) {
   var $div = $('#template');
   console.log('ok');
-  console.log($div);
+  //console.log($div);
 
   $div.on( 'click', select );
 
@@ -13,7 +13,8 @@
     let view = $(div).find('div#image-' + id_template);
     console.log('Template: ');
     console.log(view);
-
+    $(div).find('div#image-' + id_template).attr('sytle', 'display:block;');
+    // .attr('sytle', 'display:block;');
 
   }
 
