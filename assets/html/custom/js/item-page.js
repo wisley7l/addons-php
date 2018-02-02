@@ -5,7 +5,10 @@
 
   $div.on( 'click', select );
 
-  function select() {
+  function select(event) {
+    let target = $(event.target);
+    console.log(target);
+
     var $this = $(this),
 			selectedCheckboxID = $this.prop('for');
       console.log($this);
