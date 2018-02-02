@@ -109,7 +109,7 @@
 			<!-- /SIDEBAR -->
       <div class="content left">
 			<!-- CONTENT -->
-			<div class="content left">
+			<div class="content left" id="addons-items">
       				<!-- POST -->
 				<article class="post">
 					{%if info_page.app == 1%}
@@ -118,7 +118,7 @@
 					<!-- /POST IMAGE -->
 					{% else %}
 						{% for i in array_images %}
-						<div id="" style="display:none;">
+						<div id="image-{{i.id}}" style="display:none;">
 							{{macro_item.image_main(i,info_page)}}
 						</div>
 						{% endfor %}
