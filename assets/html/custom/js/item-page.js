@@ -8,11 +8,11 @@
   function select(event) {
     let target = $(event.target);
     console.log(target);
-
-    var $this = $(this),
-			selectedCheckboxID = $this.prop('for');
-      console.log($this);
-      console.log(selectedCheckboxID);
+    // 
+    // var $this = $(this),
+		// 	selectedCheckboxID = $this.prop('for');
+    //   console.log($this);
+    //   console.log(selectedCheckboxID);
   }
 
 })(jQuery);
