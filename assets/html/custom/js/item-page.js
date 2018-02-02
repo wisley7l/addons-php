@@ -22,7 +22,7 @@
         if( buttonID != button ) {
           console.log(button[0].id);
         }else {
-
+          console.log('VAII');
         }
       });
   }
