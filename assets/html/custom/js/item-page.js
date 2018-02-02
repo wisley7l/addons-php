@@ -2,7 +2,8 @@
   var $div = $('#template');
   let page = window.location.hash;
   //let profile_page = page.indexOf("profile-page");
-  console.log(page);
+  var res = page.split("template");
+  console.log(res);
 
   $div.on( 'click', select );
 
