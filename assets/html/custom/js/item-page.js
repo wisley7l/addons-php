@@ -21,7 +21,9 @@
     //console.log('Template: ');
     //console.log(button);
     //$(div).find('div#image-' + id_template).attr('style', '' );
-
+    showImage(button);
+  }
+  function showImage(button){
     $div_button.each(function() {
       var $this = $(this),
         buttonID = $this.find('a');
@@ -32,10 +34,7 @@
         }else {
           $div_item.find('div#image-' + buttonID[i].id).attr('style', 'display:none;' );
         }
-
       }
-
-      });
+    });
   }
-
 })(jQuery);
