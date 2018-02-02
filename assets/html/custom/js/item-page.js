@@ -13,11 +13,12 @@
     //console.log(view);
     $(div).find('div#image-' + id_template).attr('style', '' );
 
-    // $checkbox.each(function() {
-    //   var $this = $(this),
-    //     checkboxID = $this.prop('for'),
-    //     checkboxStatus = $("#"+checkboxID).prop('checked');
-    //   }
+    div.each(function() {
+      var $this = $(this),
+        checkboxID = $this.prop('id');
+        console.log(checkbox);
+
+      }
   }
 
 })(jQuery);
