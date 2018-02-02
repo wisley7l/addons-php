@@ -3,7 +3,7 @@
   let page = window.location.hash;
   //let profile_page = page.indexOf("profile-page");
   var res = page.split("#template");
-  console.log(parserInt(res[1]));
+  console.log(parseInt(res[1]));
 
   $div.on( 'click', select );
 
