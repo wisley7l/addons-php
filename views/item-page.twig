@@ -37,14 +37,14 @@
 			<div class="sidebar right">
 
         <!-- SIDEBAR ITEM -->
-        {#% if info_page.app == 0 %}
+        {% if info_page.app == 0 %}
 				<div class="sidebar-item">
-          {% for i in 1..10 %}
-					<a href="#" class="button mid dark spaced"><span class="primary">Type {{i}}</span></a>
+          {% for i in array_images %}
+					<a href="#{{i.id}}" class="button mid dark spaced"><span class="primary">Type {{i.id}}</span></a>
           {% endfor %}
 					<div class="clearfix"></div>
 				</div>
-        {% endif %#}
+        {% endif %}
 				<!-- /SIDEBAR ITEM -->
 
 

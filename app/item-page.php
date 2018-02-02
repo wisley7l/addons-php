@@ -39,6 +39,13 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       'description' => 'kljdasklkdakdasslasdlsadljaksdasdalkkdasdjakldklasklasffkasfsaklçaskldaskhfajskasdfhasdjkdsaasdfjkjdsfld',
       'json' => 'treat json'
     );
+
+    //images app
+    $array_images = getImagesApp();
+    $image_main = $array_images[0];
+
+    // complement for url
+    $compl = '';
   }
   else{
     $app = 0;
@@ -49,6 +56,16 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       'json' => 'treat json'
     );
   }
+
+  //images theme
+  $array_images = getImagesTheme();
+  if (isset($_GET['imgem'])) {
+    $image_main = $array_images[(int)$_GET['imgem']];
+  } else {
+    $image_main = $array_images[0];
+  }
+
+
 }
 else {
   // redirect page error
@@ -68,8 +85,7 @@ $plan1 = array('id' => 'licence-regular',
 $plans = array();
 array_push($plans, $plan1);
 
-$array_images = getImagensApp();
-$image_main = $array_images[0];
+
 //var_dump($array_images[0]);
 
 // necessary variables for information
@@ -80,7 +96,7 @@ $count_partners = 0; // not implemented in the first moment
 $info_footer = array(
   'total_apps_and_themes' => $total_apps_and_themes,
   'count_partners' => $count_partners,
-  'path_file' => $_SERVER['PATH_FILE'] . '?id=' . $_GET['id'] . '&app=' . $_GET['app']
+  'path_file' => $_SERVER['PATH_FILE'] . '?id=' . $_GET['id'] . '&app=' . $_GET['app'] . $compl
 );
 
 // intial twig and send varibles for template

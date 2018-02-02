@@ -46,7 +46,7 @@ function getInfoUser($id)
   );
 }
 
-function getImagensApp()
+function getImagesApp()
 {
   $images = array();
   $i1 = 'https://lh3.googleusercontent.com/wIcl3tehFmOUpq-Jl3hlVbZVFrLHePRtIDWV5lZwBVDr7kEAgLTChyvXUclMVQDRHDEcDhY=w640-h400-e365';
@@ -54,4 +54,18 @@ function getImagensApp()
   array_push($images,$i1);
   array_push($images,$i2);
   return $images;
+}
+
+function getImagesTheme($value='')
+{
+  $themes = array();
+  $i1 = array('id' => 1,
+    'image' => 'https://kaksimedia.com/kaxi/wp-content/uploads/2015/11/hacker-1024x480.jpg',
+  );
+  $i2 = array('id' => 2,
+    'image' => 'https://lh3.googleusercontent.com/wIcl3tehFmOUpq-Jl3hlVbZVFrLHePRtIDWV5lZwBVDr7kEAgLTChyvXUclMVQDRHDEcDhY=w640-h400-e365',
+  );
+  array_push($themes,$i1);
+  array_push($themes,$i2);
+  return $themes;
 }
