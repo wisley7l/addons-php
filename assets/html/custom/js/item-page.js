@@ -1,6 +1,6 @@
 (function($,event) {
   var $div = $('#template');
-  let page = window.location.pathname;
+  let page = window.location;
   //let profile_page = page.indexOf("profile-page");
   console.log(page);
 
