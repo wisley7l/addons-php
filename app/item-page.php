@@ -65,6 +65,9 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
           $image_main = $key;
       }
     }
+    // complement for url
+    $compl = '&template=' . $_GET['template'];
+    
   } else {
     $image_main = $array_images[0];
   }
