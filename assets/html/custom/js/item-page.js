@@ -1,4 +1,4 @@
-(function($) {
+(function($,event) {
   var $div = $('#template');
   let target1 = $(event.target);
   console.log(target1);
