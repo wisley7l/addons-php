@@ -6,8 +6,9 @@
   var res = page.split("#template");
   console.log(parseInt(res[1]));
   let id = parseInt(res[1]);
+  let button =$div_button.find('a#' + id_template);
+  console.log(button);
 
-  $div_item.find('div#image-' + id).attr('style', '' );
 
   $div_button.on( 'click', select );
 
@@ -15,8 +16,6 @@
     let target = $(event.target);
     //console.log(target[0].id);
     id_template = target[0].id;
-
-
     let view = $div_item.find('div#image-' + id_template);
     let button =$div_button.find('a#' + id_template);
     //console.log('Template: ');
