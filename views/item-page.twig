@@ -118,9 +118,15 @@
 					<!-- /POST IMAGE -->
 					{% else %}
 						{% for i in array_images %}
-						<div id="image-{{i.id}}" style="display:none;">
-							{{macro_item.image_main(i,info_page)}}
-						</div>
+							{% if loop.index0 > 0 %}
+							<div id="image-{{i.id}}" style="display:none;">
+								{{macro_item.image_main(i,info_page)}}
+							</div>
+							{% else %}
+								<div id="image-{{i.id}}" style="">
+									{{macro_item.image_main(i,info_page)}}
+								</div>
+							{% endif %}
 						{% endfor %}
 					{% endif %}
 					{# themes not outher images #}
