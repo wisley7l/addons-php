@@ -15,7 +15,7 @@
 
     $div.each(function() {
       var $this = $(this),
-        checkboxID = $this.find('a').id;
+        checkboxID = $this.find('a');
         console.log(checkboxID);
       });
   }
