@@ -118,7 +118,9 @@
 					<!-- /POST IMAGE -->
 					{% else %}
 						{% for i in array_images %}
-						{{macro_item.image_main(i,info_page)}}
+						<div id="" class="mfp-hide">
+							{{macro_item.image_main(i,info_page)}}
+						</div>
 						{% endfor %}
 					{% endif %}
 					{# themes not outher images #}
