@@ -59,11 +59,11 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
   //images theme
   $array_images = getImagesTheme();
-  if (isset($_GET['imgem'])) {
-    $image_main = $array_images[(int)$_GET['imgem']];
-  } else {
+  //if (isset($_GET['imgem'])) {
+    //$image_main = $array_images[(int)$_GET['imgem']];
+  //} else {
     $image_main = $array_images[0];
-  }
+  //}
 
 
 }
