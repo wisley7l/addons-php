@@ -7,7 +7,7 @@
   console.log(parseInt(res[1]));
   let id = parseInt(res[1]);
 
-  //$div_item.find('div#image-' + id).attr('style', '' );
+  $div_item.find('div#image-' + id).attr('style', '' );
 
   $div_button.on( 'click', select );
 
