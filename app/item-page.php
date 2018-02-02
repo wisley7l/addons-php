@@ -60,8 +60,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
   //images theme
   $array_images = getImagesTheme();
   if (isset($_GET['template'])) {
-    echo (int)$_GET['template'];
-    //$image_main = $array_images[(int)$_GET['template']];
+    $image_main = $array_images[(int)$_GET['template']];
   } else {
     $image_main = $array_images[0];
   }
