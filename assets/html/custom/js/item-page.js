@@ -8,6 +8,7 @@
   let id = parseInt(res[1]);
   let button =$div_button.find('a#' + id);
   console.log(button);
+  showImage(button);
 
 
   $div_button.on( 'click', select );
