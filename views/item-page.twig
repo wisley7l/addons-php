@@ -112,11 +112,13 @@
 			<div class="content left">
       				<!-- POST -->
 				<article class="post">
-
+					{%if info_page.app == 1%}
 					<!-- POST IMAGE -->
 					{{macro_item.image_main(image_main,info_page)}}
 					<!-- /POST IMAGE -->
+					{% else %}
 
+					{% endif %}
 					{# themes not outher images #}
 					{% if info_page.app == 1 %}
 					<!-- POST IMAGE SLIDES -->
