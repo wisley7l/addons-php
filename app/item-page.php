@@ -62,7 +62,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
   if (isset($_GET['template'])) {
     foreach ( $array_images as $key ) {
 
-        var_dump($key);
+      var_dump($key['id']);
 
     }
   } else {
