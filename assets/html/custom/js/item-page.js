@@ -4,17 +4,12 @@
   let page = window.location.hash;
 
   if (page != '') {
-    console.log(page);
-
+    var res = page.split("#template");
+    let id = parseInt(res[1]);
+    let button =$div_button.find('a#' + id);
+    showImage(button);
   }
-  else {
-    console.log('vazio');
-  }
-  var res = page.split("#template");
-  let id = parseInt(res[1]);
-  let button =$div_button.find('a#' + id);
-  showImage(button);
-
+  
   $div_button.on( 'click', select );
 
   function select(event) {
