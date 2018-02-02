@@ -20,9 +20,9 @@
         buttonID = $this.find('a');
         console.log(buttonID);
         if( buttonID != button ) {
-          console.log('sim');
+          console.log(button[0].id);
         }else {
-          console.log('nao');
+
         }
       });
   }
