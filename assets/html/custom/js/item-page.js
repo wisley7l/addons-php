@@ -2,7 +2,14 @@
   var $div_button = $('#template');
   let $div_item = $('div#addons-items');
   let page = window.location.hash;
-  console.log(page);
+
+  if (page != '') {
+    console.log(page);
+
+  }
+  else {
+    console.log('vazio');
+  }
   var res = page.split("#template");
   let id = parseInt(res[1]);
   let button =$div_button.find('a#' + id);
