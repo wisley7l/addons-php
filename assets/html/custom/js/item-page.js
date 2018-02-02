@@ -21,9 +21,9 @@
       //  console.log(buttonID);
       for (var i = 0; i < buttonID.length; i++) {
         if (buttonID[i]== button[0]) {
-            $(div).find('div#image-' + id_template).attr('style', '' );
+          $(div).find('div#image-' + buttonID[i].id).attr('style', '' );
         }else {
-          $(div).find('div#image-' + id_template).attr('style', 'display:none;' );
+          $(div).find('div#image-' + buttonID[i].id).attr('style', 'display:none;' );
         }
 
       }
