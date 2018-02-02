@@ -62,6 +62,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
   if (isset($_GET['template'])) {
     foreach ( $array_images as $key ) {
       foreach ($key as $i) {
+        var_dump($i);
         echo $i['id'];
       }
     }
