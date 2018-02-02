@@ -43,9 +43,6 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     //images app
     $array_images = getImagesApp();
     $image_main = $array_images[0];
-
-    // complement for url
-    $compl = '';
   }
   else{
     $app = 0;
@@ -65,9 +62,6 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
           $image_main = $key;
       }
     }
-    // complement for url
-    $compl = '&template=' . $_GET['template'];
-    
   } else {
     $image_main = $array_images[0];
   }
@@ -103,7 +97,7 @@ $count_partners = 0; // not implemented in the first moment
 $info_footer = array(
   'total_apps_and_themes' => $total_apps_and_themes,
   'count_partners' => $count_partners,
-  'path_file' => $_SERVER['PATH_FILE'] . '?id=' . $_GET['id'] . '&app=' . $_GET['app'] . $compl
+  'path_file' => $_SERVER['PATH_FILE'] . '?id=' . $_GET['id'] . '&app=' . $_GET['app']
 );
 
 // intial twig and send varibles for template
