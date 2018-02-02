@@ -12,18 +12,17 @@
     let view = $(div).find('div#image-' + id_template);
     let button =$div.find('a#' + id_template);
     //console.log('Template: ');
-    console.log(button);
+    //console.log(button);
     $(div).find('div#image-' + id_template).attr('style', '' );
 
     $div.each(function() {
       var $this = $(this),
         buttonID = $this.find('a');
-        console.log(buttonID);
-        if( buttonID != button ) {
-          console.log(button[0].id);
-        }else {
-          console.log('VAII');
-        }
+      //  console.log(buttonID);
+      for (var i = 0; i < buttonID.length; i++) {
+        console.log(buttonID[i]);
+      }
+
       });
   }
 
