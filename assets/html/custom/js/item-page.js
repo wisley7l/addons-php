@@ -17,8 +17,7 @@
       var $this = $(this),
         checkboxID = $this.prop('id');
         console.log(checkbox);
-
-      }
+      });
   }
 
 })(jQuery);
