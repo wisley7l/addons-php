@@ -118,7 +118,7 @@
 					<!-- /POST IMAGE -->
 					{% else %}
 						{% for i in array_images %}
-						<div id="image-{{i.id}}" style="display:none;">
+						<div id="image-{{i.id}}" style="">
 							{{macro_item.image_main(i,info_page)}}
 						</div>
 						{% endfor %}
