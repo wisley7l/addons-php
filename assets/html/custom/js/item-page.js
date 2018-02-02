@@ -4,9 +4,11 @@
   console.log($div);
 
   $div.on( 'click', select );
-	function select() {
-    let $this = $(this),
-			selectedCheckboxID = $this.prop('id')
+
+  function select() {
+    var $this = $(this),
+			selectedCheckboxID = $this.prop('for'),
+      console.log($this);
       console.log(selectedCheckboxID);
   }
 
