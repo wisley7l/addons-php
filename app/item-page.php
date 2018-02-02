@@ -56,17 +56,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
   //images theme
   $array_images = getImagesTheme();
-  if (isset($_GET['template'])) {
-    foreach ( $array_images as $key ) {
-      if ($key['id'] == (int)$_GET['template']) {
-          $image_main = $key;
-      }
-    }
-  } else {
-    $image_main = $array_images[0];
-  }
-
-
+  $image_main = $array_images[0];
 }
 else {
   // redirect page error
