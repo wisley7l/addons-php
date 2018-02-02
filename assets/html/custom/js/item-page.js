@@ -13,7 +13,7 @@
     let button =$div.find('a#' + id_template);
     //console.log('Template: ');
     //console.log(button);
-    $(div).find('div#image-' + id_template).attr('style', '' );
+    //$(div).find('div#image-' + id_template).attr('style', '' );
 
     $div.each(function() {
       var $this = $(this),
@@ -21,9 +21,9 @@
       //  console.log(buttonID);
       for (var i = 0; i < buttonID.length; i++) {
         if (buttonID[i]== button[0]) {
-            console.log(buttonID[i].id);
+            $(div).find('div#image-' + id_template).attr('style', '' );
         }else {
-          console.log('Certo');
+          $(div).find('div#image-' + id_template).attr('style', 'display:none;' );
         }
 
       }
