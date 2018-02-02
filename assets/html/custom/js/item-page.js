@@ -10,7 +10,7 @@
     let div = 'div#addons-items';
 
     let view = $(div).find('div#image-' + id_template);
-    let button =$(div).find('a#' + id_template);
+    let button =$div.find('a#' + id_template);
     //console.log('Template: ');
     console.log(button);
     $(div).find('div#image-' + id_template).attr('style', '' );
