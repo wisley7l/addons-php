@@ -117,10 +117,9 @@
 					{{macro_item.image_main(image_main,info_page)}}
 					<!-- /POST IMAGE -->
 					{% else %}
-						{%for i as array_images %}
+						{% for i in array_images %}
 						{{macro_item.image_main(i,info_page)}}
 						{% endfor %}
-
 					{% endif %}
 					{# themes not outher images #}
 					{% if info_page.app == 1 %}
