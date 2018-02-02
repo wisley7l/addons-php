@@ -6,7 +6,7 @@
   var res = page.split("#template");
   console.log(parseInt(res[1]));
   let id = parseInt(res[1]);
-  let button =$div_button.find('a#' + id_template);
+  let button =$div_button.find('a#' + id);
   console.log(button);
 
 
