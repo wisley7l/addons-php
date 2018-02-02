@@ -1,5 +1,8 @@
 (function($,event) {
   var $div = $('#template');
+  let page = window.location.pathname;
+  //let profile_page = page.indexOf("profile-page");
+  console.log(page);
 
   $div.on( 'click', select );
 
