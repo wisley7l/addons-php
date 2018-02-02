@@ -13,7 +13,7 @@
     //console.log(view);
     $(div).find('div#image-' + id_template).attr('style', '' );
 
-    $(div).each(function() {
+    $div.each(function() {
       var $this = $(this),
         checkboxID = $this.find('a');
         console.log(checkboxID);
