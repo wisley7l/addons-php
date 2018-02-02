@@ -17,8 +17,13 @@
 
     $div.each(function() {
       var $this = $(this),
-        checkboxID = $this.find('a');
+        buttonID = $this.find('a');
         console.log(checkboxID);
+        if( buttonID != button ) {
+          console.log('sim');
+        }else {
+          console.log('nao');
+        }
       });
   }
 
