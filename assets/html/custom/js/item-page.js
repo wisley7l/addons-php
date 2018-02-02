@@ -1,7 +1,5 @@
 (function($,event) {
   var $div = $('#template');
-  let target1 = $(event.target);
-  console.log(target1);
 
   $div.on( 'click', select );
 
