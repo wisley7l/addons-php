@@ -7,7 +7,7 @@
 
   function select() {
     var $this = $(this),
-			selectedCheckboxID = $this.prop('for'),
+			selectedCheckboxID = $this.prop('for');
       console.log($this);
       console.log(selectedCheckboxID);
   }
