@@ -49,8 +49,14 @@ function getInfoUser($id)
 function getImagesApp()
 {
   $images = array();
-  $i1 = 'https://lh3.googleusercontent.com/wIcl3tehFmOUpq-Jl3hlVbZVFrLHePRtIDWV5lZwBVDr7kEAgLTChyvXUclMVQDRHDEcDhY=w640-h400-e365';
-  $i2 = 'https://kaksimedia.com/kaxi/wp-content/uploads/2015/11/hacker-1024x480.jpg';
+  $i1 = array('id' => 1,
+    'image' => 'https://lh3.googleusercontent.com/wIcl3tehFmOUpq-Jl3hlVbZVFrLHePRtIDWV5lZwBVDr7kEAgLTChyvXUclMVQDRHDEcDhY=w640-h400-e365',
+
+  );
+
+  $i2 = array('id' => 2,
+    'image' => 'https://kaksimedia.com/kaxi/wp-content/uploads/2015/11/hacker-1024x480.jpg',
+  );
   array_push($images,$i1);
   array_push($images,$i2);
   return $images;
