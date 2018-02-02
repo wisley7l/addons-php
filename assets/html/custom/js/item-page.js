@@ -20,7 +20,10 @@
         buttonID = $this.find('a');
       //  console.log(buttonID);
       for (var i = 0; i < buttonID.length; i++) {
-        console.log(buttonID[i]);
+        if (buttonID[i]== button[0]) {
+            console.log(buttonID[i]);
+        }
+
       }
 
       });
