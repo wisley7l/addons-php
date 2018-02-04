@@ -40,5 +40,7 @@ $('#buy-item').click(function(){
   console.log('test');
   let div_id = 'div#addons-buy';
   let id_app = $(div_id).find('input#id-item').val();
+  let is_app = $(div_id).find('input#item-is-app').val();
+  console.log(is_app);
   console.log(id_app);
 });
