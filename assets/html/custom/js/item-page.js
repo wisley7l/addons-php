@@ -38,7 +38,7 @@
 // treat click buy now
 $('#buy-item').click(function(){
   console.log('test');
-  let div_id = 'div.section-headline';
-  let id_app = $(div_id).find('input#id-app').val();
+  let div_id = 'div#addons-buy';
+  let id_app = $(div_id).find('input#id-item').val();
   console.log(id_app);
 });
