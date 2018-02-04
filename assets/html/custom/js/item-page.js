@@ -38,4 +38,7 @@
 // treat click buy now
 $('#buy-item').click(function(){
   console.log('test');
+  let div_id = 'div.section-headline';
+  let id_app = $(div_id).find('id-app').val();
+  console.log(id_app);
 });
