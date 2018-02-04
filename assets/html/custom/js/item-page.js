@@ -9,7 +9,7 @@
     let button =$div_button.find('a#' + id);
     showImage(button);
   }
-  
+
   $div_button.on( 'click', select );
 
   function select(event) {
@@ -34,3 +34,8 @@
     });
   }
 })(jQuery);
+
+// treat click buy now
+$('#buy-item').click(function(){
+  console.log('test');
+});
