@@ -39,6 +39,6 @@
 $('#buy-item').click(function(){
   console.log('test');
   let div_id = 'div.section-headline';
-  let id_app = $(div_id).find('id-app').val();
+  let id_app = $(div_id).find('input#id-app').val();
   console.log(id_app);
 });
