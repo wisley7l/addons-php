@@ -45,6 +45,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $image_main = $array_images[0];
   }
   else{
+    $id_app = (int) $_GET['id'];
     $app = 0;
     //search item in themes
     $app_info = array('id' => $id_app,
