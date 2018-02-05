@@ -120,11 +120,11 @@
 					{% else %}
 						{% for i in array_images %}
 							{% if loop.index0 > 0 %}
-							<div id="image-{{i.id}}" style="display:none;">
+							<div id="image-{{i.id}}" for="image-{{i.id}}" style="display:none;">
 								{{macro_item.image_main(i,info_page)}}
 							</div>
 							{% else %}
-								<div id="image-{{i.id}}" style="">
+								<div id="image-{{i.id}}" for="image-{{i.id}}" style="">
 									{{macro_item.image_main(i,info_page)}}
 								</div>
 							{% endif %}
