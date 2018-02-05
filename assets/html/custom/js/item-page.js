@@ -52,7 +52,10 @@ $('#buy-item').click(function(){
     //If there is more than one template, capture template id.
     $div_item.each(function(){
       let views = $(this).find('div');
-      console.log(views);
+      for (var i = 0; i < views.length; i++) {
+        console.log(views[i].style);
+      }
+
     })
 
   }
