@@ -50,7 +50,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     //search item in themes
     $app_info = array('id' => $id_app,
       'name' => 'THEME',
-      'description' => 'kljdasklkdakdasslasdlsadljaksdasdalkkdasdjakldklasklasffkasfsaklçaskldaskhfajskasdfhasdjkdsaasdfjkjdsfld',
+      'description' => 'Esta é a Descrição do APP ou do TEMA',
       'json' => 'treat json'
     );
   }
@@ -74,8 +74,16 @@ $plan1 = array('id' => 'licence-regular',
   'diplay' => 'display: block;'
 );
 
+$plan2 = array('id' => 'extend-license',
+  'name' => 'Extend License',
+  'price' => 36.00 / $dictionary['mult_coin'],
+  'description' => 'Test description',
+  'checked' => 'checked',
+  'diplay' => 'display: block;'
+);
 $plans = array();
 array_push($plans, $plan1);
+array_push($plans, $plan2);
 
 
 //var_dump($array_images[0]);

@@ -43,6 +43,13 @@ $('#buy-item').click(function(){
   let is_app = $(div_id).find('input#item-is-app').val();
   console.log(is_app);
   console.log(id_app);
-  // if app
+  // if is_app = 1 app
   // else theme
+  if (is_app == 1) {
+
+  }
+  else {
+
+  }
+
 });
