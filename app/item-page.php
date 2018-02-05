@@ -78,7 +78,7 @@ $plan2 = array('id' => 'extend-license',
   'name' => 'Extend License',
   'price' => 36.00 / $dictionary['mult_coin'],
   'description' => 'Test description',
-  'checked' => 'checked',
+  'checked' => '',
   'diplay' => 'display: block;'
 );
 $plans = array();
