@@ -1,28 +1,28 @@
 (function($,event) {
-  let $div_button = $('#template');
-  let $div_item = $('div#addons-items');
-  let page = window.location.hash;
+  let $div_button = $('#template'),
+      $div_item = $('div#addons-items'),
+      page = window.location.hash;
 
   if (page != '') {
-    var res = page.split("#template");
-    let id = parseInt(res[1]);
-    let button =$div_button.find('a#' + id);
+    var res = page.split("#template"),
+        id = parseInt(res[1]),
+        button =$div_button.find('a#' + id);
     showImage(button);
   }
 
   $div_button.on( 'click', select );
 
   function select(event) {
-    let target = $(event.target);
-    id_template = target[0].id;
-    let button =$div_button.find('a#' + id_template);
+    let target = $(event.target),
+        id_template = target[0].id,
+        button = $div_button.find('a#' + id_template);
     showImage(button);
   }
 
   function showImage(button){
     $div_button.each(function() {
       let $this = $(this),
-      let buttonID = $this.find('a');
+          buttonID = $this.find('a');
       //  console.log(buttonID);
       for (var i = 0; i < buttonID.length; i++) {
         if (buttonID[i]== button[0]) {
@@ -37,10 +37,10 @@
 
 // treat click buy now
 $('#buy-item').click(function(){
-  let div_id = 'div#addons-buy';
-  let $div_item = $('div#addons-items');
-  let id_app = $(div_id).find('input#id-item').val();
-  let is_app = $(div_id).find('input#item-is-app').val();
+  let div_id = 'div#addons-buy',
+      $div_item = $('div#addons-items'),
+      id_app = $(div_id).find('input#id-item').val(),
+      is_app = $(div_id).find('input#item-is-app').val();
   // capture type licence
   // if is_app = 1 app
   // else theme
