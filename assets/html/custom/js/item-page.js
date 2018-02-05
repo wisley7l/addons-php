@@ -26,7 +26,7 @@
       //  console.log(buttonID);
       for (var i = 0; i < buttonID.length; i++) {
         if (buttonID[i]== button[0]) {
-          $div_item.find('div#image-' + buttonID[i].id).attr('style', '' );
+          $div_item.find('div#image-' + buttonID[i].id).attr('style', 'display: block;' );
         }else {
           $div_item.find('div#image-' + buttonID[i].id).attr('style', 'display:none;' );
         }
