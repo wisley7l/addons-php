@@ -56,7 +56,7 @@ $('#buy-item').click(function(){
         if (views[i].style.display == 'block') {
           console.log(views[i]);
         }
-        //console.log(views[i].style.display);
+        console.log(views[i].for);
       }
 
     })
