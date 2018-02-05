@@ -1,5 +1,5 @@
 (function($,event) {
-  var $div_button = $('#template');
+  let $div_button = $('#template');
   let $div_item = $('div#addons-items');
   let page = window.location.hash;
 
@@ -21,8 +21,8 @@
 
   function showImage(button){
     $div_button.each(function() {
-      var $this = $(this),
-        buttonID = $this.find('a');
+      let $this = $(this),
+      let buttonID = $this.find('a');
       //  console.log(buttonID);
       for (var i = 0; i < buttonID.length; i++) {
         if (buttonID[i]== button[0]) {
@@ -37,18 +37,23 @@
 
 // treat click buy now
 $('#buy-item').click(function(){
-  console.log('test');
   let div_id = 'div#addons-buy';
+  let $div_item = $('div#addons-items');
   let id_app = $(div_id).find('input#id-item').val();
   let is_app = $(div_id).find('input#item-is-app').val();
-  console.log(is_app);
-  console.log(id_app);
+  // capture type licence
   // if is_app = 1 app
   // else theme
-  if (is_app == 1) {
+  if (is_app == 1) { // treat app purchase
+    //
 
   }
-  else {
+  else { // treat theme purchase
+    //If there is more than one template, capture template id.
+    $div_item.each(function(){
+      let views = $(this).prop('style');
+      console.log(views);
+    })
 
   }
 
