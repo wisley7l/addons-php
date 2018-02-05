@@ -54,7 +54,7 @@ $('#buy-item').click(function(){
       let views = $(this).find('div');
       for (var i = 0; i < views.length; i++) {
         if (views[i].style.display == 'block') {
-          console.log(views[i]);
+          console.log(views[i].prop('for'));
         }
         //console.log(views[i].style.display);
       }
