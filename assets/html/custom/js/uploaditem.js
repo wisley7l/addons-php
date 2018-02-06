@@ -23,7 +23,13 @@ $("form#upload_form").submit(function(event){
 
   $("#uploaditem-name_app").val(name_app);
   $("#uploaditem-is_app").val(is_app);
-  
+  $("#uploaditem-category").val(categories);
+  $("#uploaditem-item_numversion").val(num_version);
+  $("#uploaditem-item_description").val(description);
+  $("#uploaditem-item_scripturl").val(script_url);
+  $("#uploaditem-item_github").val(github);
+  $("#uploaditem-item_website").val(website);
+  $("#uploaditem-item_linkvideo").val(video);
   $("#addons-uploaditem").submit();
 
   event.preventDefault();
