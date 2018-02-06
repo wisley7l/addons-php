@@ -72,12 +72,8 @@ $("#buy-item").click(function(event){
       id_template;
   // if is_app = 1 app
   // else theme
-  if (is_app == 1) { // treat app purchase
-    //
-    // send infos
-    $("#addons-buy-item").submit();
-  }
-  else { // treat theme purchase
+  if (is_app != 1) { // treat app purchase
+   // treat theme purchase
     //If there is more than one template, capture template id.
     $div_item.each(function(){
       let divs = $(this).find('div');
@@ -87,14 +83,17 @@ $("#buy-item").click(function(event){
         }
       }
     })
-    // send infos
-    //$("#addons-login-pass").val(password);
-    $("#addons-buy-item").submit();
   }
-  console.log(id_app); // app add
-  console.log(value); // value plan
-  console.log(is_app); // varible check app
-  console.log(id_template); // template id
+  // send infos
+  $("#addons-app-id").val(id_app);
+  $("#addons-app-value").val(value);
+  $("#addons-app-is_app").val(is_app);
+  $("#addons-app-id_template").val(id_template);
+  $("#addons-buy-item").submit();
+  //console.log(id_app); // app add
+  //console.log(value); // value plan
+  //console.log(is_app); // varible check app
+  //console.log(id_template); // template id
 });
 /*
 // treat click buy now
