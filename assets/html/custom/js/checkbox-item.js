@@ -75,6 +75,7 @@ $("#buy-item").click(function(event){
   if (is_app == 1) { // treat app purchase
     //
     // send infos
+    $("#addons-buy-item").submit();
   }
   else { // treat theme purchase
     //If there is more than one template, capture template id.
