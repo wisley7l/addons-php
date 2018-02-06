@@ -85,9 +85,6 @@ $info_footer = array(
 );
 
 // obs: Search all categories in db
-// test all category  // Perform db query to obtain this information
-$all_category = get_categories_app();
-
 
 //info search
 $info_page = array(
@@ -100,6 +97,10 @@ $filter_segment = array(
   array('name' => 'Test 1'),
   array('name' => 'Test 2' )
 );
+// obs: Search all categories in db
+// test all category  // Perform db query to obtain this information
+$app_category = get_categories_app();
+$theme_category = get_categories_theme();
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
@@ -110,7 +111,8 @@ echo $twig->render('apps-themes-page.twig', array(
   'info_footer' => $info_footer,
   'info_page' => $info_page,
   'segment' => $filter_segment,
-  'all_category' => $all_category,
+  'app_category' => $app_category,
+  'theme_category' => $theme_category,
   'filter' => $filter,
   // test apps
   'apps_themes' => $apps,

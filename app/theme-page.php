@@ -83,7 +83,8 @@ $info_footer = array(
 
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
-$all_category = get_categories_theme();
+$app_category = get_categories_app();
+$theme_category = get_categories_theme();
 
 //info search
 $info_page = array(
@@ -107,8 +108,10 @@ echo $twig->render('apps-themes-page.twig', array(
   'info_page' => $info_page,
   'segment' => $filter_segment,
   'filter' => $filter,
+  'app_category' => $app_category,
+  'theme_category' => $theme_category,
   // test apps
   'apps_themes' => $themes,
   'user' => $user_login,
-  'all_category' => $all_category
+
 ));
