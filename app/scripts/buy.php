@@ -1,5 +1,5 @@
 <?php
-//var_dump($_POST);
+var_dump($_POST);
 //echo "Test";
 /*
   treat variables for purchase
@@ -9,8 +9,19 @@
   if it is app create query for plans
   if it's thema create want to buy_theme
 */
+$id_app = (int) $_POST['id'];
+$price = (float) $_POST['value'];
+
 if ((int) $_POST['is_app'] == 1) {
-  echo "app";
+  echo "APP";
+  echo PHP_EOL;
+  echo $id_app;
+  echo PHP_EOL;
+  echo $price;
 }else {
-  echo "theme";
+  echo "THEME";
+  echo PHP_EOL;
+  echo $id_app;
+  echo PHP_EOL;
+  echo $price;
 }
