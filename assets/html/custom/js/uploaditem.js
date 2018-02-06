@@ -4,7 +4,7 @@ $("form#upload_form").submit(function(event){
       categories = $form.find('select#category').val(), // not null
       name_app = $form.find('input#item_name').val(), // not null
       num_version = $form.find('input#item_numversion').val(),
-      description = $form.find('input#item_description').val(),// not null
+      description = $form.find('textarea#item_description').val(),// not null
       script_url = $form.find('input#item_scripturl').val(),
       github = $form.find('input#item_github').val(),
       website = $form.find('input#item_website').val(),
