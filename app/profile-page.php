@@ -72,6 +72,12 @@ $comments = array(
   array('name' => 'C 1', 'path_image' => '', 'date' => '22 January  2018', 'is_buyer' => true, 'comment' => 'Este é um comentário de teste '),
   array('name' => 'C 2', 'path_image' => '', 'date' => '25 January  2018', 'is_buyer' => false, 'comment' => 'Este é outro comentário de teste '),
 );
+
+// obs: Search all categories in db
+// test all category  // Perform db query to obtain this information
+$app_category = get_categories_app();
+$theme_category = get_categories_theme();
+
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
@@ -80,6 +86,8 @@ echo $twig->render('profile-page.twig', array(
   'login' => $login,
   'implemented' => false,
   'info_footer' => $info_footer,
+  'app_category' => $app_category,
+  'theme_category' => $theme_category,
     // test
   'user' => $user_login,
   'info_author' => $info_author,

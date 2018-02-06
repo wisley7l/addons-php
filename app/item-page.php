@@ -99,6 +99,12 @@ $info_footer = array(
   'path_file' => $_SERVER['PATH_FILE'] . '?id=' . $_GET['id'] . '&app=' . $_GET['app']
 );
 
+// obs: Search all categories in db
+// test all category  // Perform db query to obtain this information
+$app_category = get_categories_app();
+$theme_category = get_categories_theme();
+
+
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
@@ -108,6 +114,8 @@ echo $twig->render('item-page.twig', array(
   'info_footer' => $info_footer,
   'info_page' => $info_page,
   'plans' => $plans,
+  'app_category' => $app_category,
+  'theme_category' => $theme_category,
   // test apps
   'user' => $user_login,
   'app_info' => $app_info,
