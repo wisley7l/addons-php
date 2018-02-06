@@ -18,10 +18,13 @@ if ((int) $_POST['is_app'] == 1) {
   echo $id_app;
   echo PHP_EOL;
   echo $price;
+  echo PHP_EOL;
 }else {
   echo "THEME";
   echo PHP_EOL;
   echo $id_app;
   echo PHP_EOL;
   echo $price;
+  echo PHP_EOL;
+  echo $_POST['id_template'];
 }
