@@ -126,7 +126,9 @@
       #}
       <select name="category" id="category">
         {% for cate in all_category %}
-        <option value="{{cate.id}}">{{cate.name}}</option>
+          {% if loop.index0 > 0 %}
+            <option value="{{cate.id}}">{{cate.name}}</option>
+          {% endif %}
         {% endfor %}
       </select>
       <!-- SVG ARROW -->
