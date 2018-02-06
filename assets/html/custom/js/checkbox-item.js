@@ -67,7 +67,8 @@ $("#buy-item").click(function(event){
       id_license = input[i].id; // (id plan is string) this is the id of the selected plane
     }
   }
-  let value = parseFloat($(div).find('input#i-'+ id_license).val()); // this is the value of the selected plan
+  let value = parseFloat($(div).find('input#i-'+ id_license).val()),// this is the value of the selected plan
+      id_template;
   // if is_app = 1 app
   // else theme
   if (is_app == 1) { // treat app purchase
@@ -80,11 +81,12 @@ $("#buy-item").click(function(event){
       let divs = $(this).find('div');
       for (var i = 0; i < divs.length; i++) {
         if (divs[i].style.display == 'block' && divs[i].id.indexOf("image-") != -1) {
-          let id_template = divs[i].id.split("image-")[1];
+          id_template = divs[i].id.split("image-")[1];
         }
       }
     })
     console.log(id_template);
+    console.log(value);
   }
 });
 /*
