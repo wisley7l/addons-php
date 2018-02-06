@@ -206,8 +206,8 @@
 {% macro subcategory_app(dictionary,all_category) %}
   <!-- MENU ITEM -->
   <li class="menu-item sub">
-    <a href="">
-      {{dictionary.word_categories}}
+    <a href="apps-page">
+    {{ dictionary.word_app }}
       <!-- SVG ARROW -->
       <svg class="svg-arrow">
         <use xlink:href="#svg-arrow"></use>
@@ -244,122 +244,6 @@
 
       </div>
       <!-- /FEATURE LIST BLOCK -->
-
-      <!-- FEATURE LIST BLOCK -->
-      <div class="feature-list-block">
-        <h6 class="feature-list-title">{{dictionary.word_theme}}</h6>
-        <hr class="line-separator">
-        <!-- FEATURE LIST -->
-        <ul class="feature-list">
-          <!-- FEATURE LIST ITEM -->
-          {% for category in all_category if category.id >= 12 and category.id < 22 %}
-          <li class="feature-list-item">
-            <a href="{{category.page}}">{{category.name}}</a>
-          </li>
-          {% endfor %}
-          <!-- /FEATURE LIST ITEM -->
-        </ul>
-        <!-- /FEATURE LIST -->
-        <!-- FEATURE LIST -->
-        <ul class="feature-list">
-          <!-- FEATURE LIST ITEM -->
-          {% for category in all_category if category.id >= 15 %}
-          <li class="feature-list-item">
-            <a href="{{category.page}}">{{category.name}}</a>
-          </li>
-          {% endfor %}
-          <!-- /FEATURE LIST ITEM -->
-        </ul>
-        <!-- /FEATURE LIST -->
-      </div>
-      <!-- /FEATURE LIST BLOCK -->
-      {# not implemented
-      <!-- FEATURE LIST BLOCK -->
-      <div class="feature-list-block">
-        <h6 class="feature-list-title">Dashboard</h6>
-        <hr class="line-separator">
-        <!-- FEATURE LIST -->
-        <ul class="feature-list">
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="dashboard-settings">Account Settings</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="dashboard-statistics.html">Statistics Page</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="dashboard-statement.html">Sales Statement</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="dashboard-inbox.html">Inbox Page</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="dashboard-openmessage.html">Open Message</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="dashboard-uploaditem.html">Upload Page</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-        </ul>
-        <!-- /FEATURE LIST -->
-      </div>
-      <!-- /FEATURE LIST BLOCK -->
-
-      <!-- FEATURE LIST BLOCK -->
-      <div class="feature-list-block">
-        <h6 class="feature-list-title">Gamification</h6>
-        <hr class="line-separator">
-        <!-- FEATURE LIST -->
-        <ul class="feature-list">
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="community-badges.html">Author Badges Page</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="badges.html">All Badges (Big and Small)</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="flag-badges.html">Flag Badges (Big and Small)</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="badges-boxes.html">Badge Boxes Versions</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-
-          <!-- FEATURE LIST ITEM -->
-          <li class="feature-list-item">
-            <a href="author-badges.html">Public Author Badges</a>
-          </li>
-          <!-- /FEATURE LIST ITEM -->
-        </ul>
-        <!-- /FEATURE LIST -->
-      </div>
-      <!-- /FEATURE LIST BLOCK -->
-      #}
     </div>
   </li>
   <!-- /MENU ITEM -->
