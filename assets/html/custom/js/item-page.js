@@ -57,6 +57,9 @@ $('#buy-item').click(function(){
         if (views[i].style.display == 'block') {
           console.log(views[i]);
         }
+        if (views[i].id.indexOf("image-") != -1) {
+          console.log('wis');
+        }
       }
 
     })
