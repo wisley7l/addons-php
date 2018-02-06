@@ -38,22 +38,9 @@
 					<h4>Item Specifications</h4>
 					<hr class="line-separator">
 					<form id="upload_form">
+						{# if selected app send categorys app else categories theme#}
 						<!-- INPUT CONTAINER -->
-						<div class="input-container">
-							<label for="category" class="rl-label required">Select Category</label>
-							<label for="category" class="select-block">
-								<select name="category" id="category">
-									<option value="0">Illustration</option>
-									<option value="1">Photoshop</option>
-									<option value="2">Vector</option>
-								</select>
-								<!-- SVG ARROW -->
-								<svg class="svg-arrow">
-									<use xlink:href="#svg-arrow"></use>
-								</svg>
-								<!-- /SVG ARROW -->
-							</label>
-						</div>
+						{{macro_dash_up.select_category(app_category)}}
 						<!-- /INPUT CONTAINER -->
 
 						<!-- INPUT CONTAINER -->
@@ -79,7 +66,7 @@
 						<!-- /INPUT CONTAINER -->
 
 						<!-- INPUT CONTAINER -->
-						{{macro_dash_up.up_screenshots()}}
+						{#{macro_dash_up.up_screenshots()}#}
 						<!-- /INPUT CONTAINER -->
 
 						<!-- INPUT CONTAINER -->

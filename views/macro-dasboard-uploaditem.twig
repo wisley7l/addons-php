@@ -112,3 +112,28 @@
     <!-- UPLOAD FILE -->
   </div>
 {% endmacro %}
+
+{% macro select_category(all_category) %}
+  <div class="input-container">
+    <label for="category" class="rl-label required">Select Category</label>
+    <label for="category" class="select-block">
+      {# not implemented
+      <select name="category" id="category">
+        <option value="0">Illustration</option>
+        <option value="1">Photoshop</option>
+        <option value="2">Vector</option>
+      </select>
+      #}
+      <select name="category" id="category">
+        {% for cate in all_category %}
+        <option value="{{cate.id}}">{{cate.name}}</option>
+        {% endfor %}
+      </select>
+      <!-- SVG ARROW -->
+      <svg class="svg-arrow">
+        <use xlink:href="#svg-arrow"></use>
+      </svg>
+      <!-- /SVG ARROW -->
+    </label>
+  </div>
+{% endmacro %}

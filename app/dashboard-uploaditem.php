@@ -36,6 +36,11 @@ $sales_user = array(
 );
 
 
+// get categories
+$app_category = get_categories_app();
+$theme_category = get_categories_theme();
+
+
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
@@ -43,6 +48,8 @@ echo $twig->render('dashboard-uploaditem.twig', array(
   'dictionary' => $dictionary,
   'login' => $login,
   'implemented' => false,
+  'app_category' => $app_category,
+  'theme_category' => $theme_category,
     // test
   'user' => $user_login,
   'sales_user' => $sales_user
