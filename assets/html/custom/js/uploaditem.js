@@ -9,7 +9,7 @@ event.preventDefault();
 });
 
 $("#add_category").click(function(event,num){
-  num +=;
+  num += 1;
   console.log(num);
   event.preventDefault();
 })
