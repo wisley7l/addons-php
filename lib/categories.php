@@ -84,74 +84,74 @@ $categories_apps = array(
 
 $categories_themes = array(
   // Categories Themes
-  array('id' => 11 ,
+  array('id' => 0 ,
    'name' => $dictionary['word_all_categories'],
    'page' => 'theme-page'
 ),
-  array('id' => 12 ,
+  array('id' => 1 ,
   'name' => $dictionary['word_art_photography'],
   'page' => ''
 ),
-  array('id' => 13 ,
+  array('id' => 2 ,
   'name' => $dictionary ['word_clothing_fashion'],
   'page' => ''
 ),
-  array('id' => 14 ,
+  array('id' => 3 ,
   'name' => $dictionary ['word_jewelry_accessories'],
   'page' => ''
 ),
-  array('id' => 15 ,
+  array('id' => 4 ,
   'name' => $dictionary ['word_electronics'],
   'page' => ''
 ),
-  array('id' => 16 ,
+  array('id' => 5 ,
   'name' => $dictionary ['word_food_drinks'],
   'page' => ''
 ),
-  array('id' => 17 ,
+  array('id' => 6 ,
   'name' => $dictionary ['word_home_garden'],
   'page' => ''
 ),
-  array('id' => 18 ,
+  array('id' => 7 ,
   'name' => $dictionary ['word_furniture'],
   'page' => ''
 ),
-  array('id' => 19 ,
+  array('id' => 8 ,
   'name' => $dictionary ['word_health_beauty'],
   'page' => ''
 ),
-  array('id' => 20 ,
+  array('id' => 9 ,
   'name' => $dictionary ['word_sports_recreation'],
   'page' => ''
 ),
-  array('id' => 21 ,
+  array('id' => 10 ,
   'name' => $dictionary ['word_toys_games'],
   'page' => ''
 ),
-array('id' => 22,
+array('id' => 11,
   'name' => $dictionary['word_games'],
   'page' => ''
 ),
-array('id' => 23,
+array('id' => 12,
   'name' => $dictionary['word_sexshop'],
   'page' => ''
 ),
-array('id' => 24,
+array('id' => 13,
   'name' => $dictionary['word_petshop'],
   'page' => ''
 ),
-array('id' => 25,
+array('id' => 14,
   'name' => $dictionary['word_service'],
   'page' => ''
 ),
 
-array('id' => 26,
+array('id' => 15,
   'name' => $dictionary['word_fitness'],
   'page' => ''
 ),
 
 // last from the list
-  array('id' => 27 ,
+  array('id' => 16 ,
   'name' => $dictionary ['word_other'],
   'page' => ''
 ),

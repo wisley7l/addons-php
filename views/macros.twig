@@ -202,7 +202,7 @@
   </li>
   <!-- /MENU ITEM -->
 {% endmacro %}
-<!-- macro to use features main -->
+<!-- macro to use submenu app -->
 {% macro subcategory_app(dictionary,all_category) %}
   <!-- MENU ITEM -->
   <li class="menu-item sub">
@@ -222,7 +222,7 @@
         <!-- FEATURE LIST -->
         <ul class="feature-list">
           <!-- FEATURE LIST ITEM -->
-          {% for category in all_category if category.id > 0 and category.id < 10 %}
+          {% for category in all_category if category.id < 10 %}
           <li class="feature-list-item">
             <a href="{{category.page}}">{{category.name}}</a>
           </li>
@@ -234,6 +234,52 @@
         <ul class="feature-list">
           <!-- FEATURE LIST ITEM -->
           {% for category in all_category if category.id >= 10 and category.id < 12 %}
+          <li class="feature-list-item">
+            <a href="{{category.page}}">{{category.name}}</a>
+          </li>
+          {% endfor %}
+          <!-- /FEATURE LIST ITEM -->
+        </ul>
+        <!-- /FEATURE LIST -->
+
+      </div>
+      <!-- /FEATURE LIST BLOCK -->
+    </div>
+  </li>
+  <!-- /MENU ITEM -->
+{% endmacro %}
+<!-- macro to use submenu app -->
+{% macro subcategory_theme(dictionary,all_category) %}
+  <!-- MENU ITEM -->
+  <li class="menu-item sub">
+    <a href="apps-page">
+    {{ dictionary.word_app }}
+      <!-- SVG ARROW -->
+      <svg class="svg-arrow">
+        <use xlink:href="#svg-arrow"></use>
+      </svg>
+      <!-- /SVG ARROW -->
+    </a>
+    <div class="content-dropdown">
+      <!-- FEATURE LIST BLOCK -->
+      <div class="feature-list-block">
+        <h6 class="feature-list-title">{{dictionary.word_app}}</h6>
+        <hr class="line-separator">
+        <!-- FEATURE LIST -->
+        <ul class="feature-list">
+          <!-- FEATURE LIST ITEM -->
+          {% for category in all_category if category.id < 10 %}
+          <li class="feature-list-item">
+            <a href="{{category.page}}">{{category.name}}</a>
+          </li>
+          {% endfor %}
+          <!-- /FEATURE LIST ITEM -->
+        </ul>
+        <!-- /FEATURE LIST -->
+        <!-- FEATURE LIST -->
+        <ul class="feature-list">
+          <!-- FEATURE LIST ITEM -->
+          {% for category in all_category if category.id >= 10 and category.id < 20 %}
           <li class="feature-list-item">
             <a href="{{category.page}}">{{category.name}}</a>
           </li>
@@ -876,7 +922,8 @@
   </div>
 {% endmacro %}
 <!-- macro to mount the main menu -->
-{% macro menu_main(dictionary,app_category) %}
+{% macro menu_main(dictionary,app_category,theme_category) %}
+  {% import 'macros.twig' as macro_main %}
   <div class="main-menu-wrap">
   <div class="menu-bar">
     <nav>
@@ -896,12 +943,11 @@
         <!-- /MENU ITEM -->
 
         <!-- MENU ITEM -->
-        <li class="menu-item">
-          <a href="apps-page">{{ dictionary.word_app }}</a>
-        </li>
+        {{macro_main.subcategory_app(dictionary,app_category)}}
         <!-- /MENU ITEM -->
 
         <!-- MENU ITEM -->
+        {{macro_main.subcategory_theme(dictionary,theme_category)}}
         <li class="menu-item">
           <a href="theme-page">{{ dictionary.word_theme }}</a>
         </li>
@@ -915,16 +961,11 @@
         -->
         <!-- /MENU ITEM -->
         <!-- MENU ITEM -->
-        {% import 'macros.twig' as macro_main %}
+
         {# not implemented
         {{macro_main.feature_menu(dictionary)}}
         #}
         <!-- /MENU ITEM -->
-        <!-- MENU ITEM -->
-        {{macro_main.subcategory_app(dictionary,app_category)}}
-        <!-- /MENU ITEM -->
-
-
       </ul>
     </nav>
     <form class="search-form">
@@ -1013,7 +1054,7 @@
   <img src="../images/logo.png" alt="logo">
 {% endmacro %}
 <!-- macro image logo -->
-{% macro all_header(login,dictionary,user,app_category) %}
+{% macro all_header(login,dictionary,user,app_category,theme_category) %}
   {% import 'macros.twig' as macro_main %}
   	<!-- HEADER -->
   	<div class="header-wrap">
@@ -1062,7 +1103,7 @@
   	<!-- /SIDE MENU -->
 
   	<!-- MAIN MENU -->
-  	{{macro_main.menu_main(dictionary,app_category)}}
+  	{{macro_main.menu_main(dictionary,app_category,theme_category)}}
   	<!-- /MAIN MENU -->
 {% endmacro %}
 <!-- macro user quickview main -->
