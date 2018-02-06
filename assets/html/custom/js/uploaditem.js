@@ -1,4 +1,4 @@
-let num = 1;
+var num = 1;
 $("form#upload_form").submit(function(event){
   let $form = $('form#upload_form'),
       category = $form.find('select#category').val();
