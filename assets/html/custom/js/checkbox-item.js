@@ -2,7 +2,7 @@
   var $checkbox = $('.linked-check');
   // edit
   let id = $checkbox.prop('for');
-  let price1 = parseFloat($checkbox.find('input#i-'+id).val());
+  let price1 = parseFloat($checkbox.find('input#'+id).val());
   let coin = $("p#coin").find('span#coin')[0].innerText;
   changePrice("<span>"+coin+"</span>"+price1);
 
@@ -59,8 +59,7 @@ $("#buy-item").click(function(event){
       console.log(input[i]);
     }
   }
-  let value = $(div).find('input#id_license').val();
-  console.log(value);
+  console.log(id_license);
   /*  capture item id
       License ID
       value
