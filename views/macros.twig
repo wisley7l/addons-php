@@ -244,7 +244,7 @@
 
       </div>
       <!-- /FEATURE LIST BLOCK -->
-      {# not implemented
+
       <!-- FEATURE LIST BLOCK -->
       <div class="feature-list-block">
         <h6 class="feature-list-title">{{dictionary.word_theme}}</h6>
@@ -273,8 +273,93 @@
         <!-- /FEATURE LIST -->
       </div>
       <!-- /FEATURE LIST BLOCK -->
-      #}
+      {# not implemented
+      <!-- FEATURE LIST BLOCK -->
+      <div class="feature-list-block">
+        <h6 class="feature-list-title">Dashboard</h6>
+        <hr class="line-separator">
+        <!-- FEATURE LIST -->
+        <ul class="feature-list">
+          <!-- FEATURE LIST ITEM -->
+          <li class="feature-list-item">
+            <a href="dashboard-settings">Account Settings</a>
+          </li>
+          <!-- /FEATURE LIST ITEM -->
 
+          <!-- FEATURE LIST ITEM -->
+          <li class="feature-list-item">
+            <a href="dashboard-statistics.html">Statistics Page</a>
+          </li>
+          <!-- /FEATURE LIST ITEM -->
+
+          <!-- FEATURE LIST ITEM -->
+          <li class="feature-list-item">
+            <a href="dashboard-statement.html">Sales Statement</a>
+          </li>
+          <!-- /FEATURE LIST ITEM -->
+
+          <!-- FEATURE LIST ITEM -->
+          <li class="feature-list-item">
+            <a href="dashboard-inbox.html">Inbox Page</a>
+          </li>
+          <!-- /FEATURE LIST ITEM -->
+
+          <!-- FEATURE LIST ITEM -->
+          <li class="feature-list-item">
+            <a href="dashboard-openmessage.html">Open Message</a>
+          </li>
+          <!-- /FEATURE LIST ITEM -->
+
+          <!-- FEATURE LIST ITEM -->
+          <li class="feature-list-item">
+            <a href="dashboard-uploaditem.html">Upload Page</a>
+          </li>
+          <!-- /FEATURE LIST ITEM -->
+        </ul>
+        <!-- /FEATURE LIST -->
+      </div>
+      <!-- /FEATURE LIST BLOCK -->
+
+      <!-- FEATURE LIST BLOCK -->
+      <div class="feature-list-block">
+        <h6 class="feature-list-title">Gamification</h6>
+        <hr class="line-separator">
+        <!-- FEATURE LIST -->
+        <ul class="feature-list">
+          <!-- FEATURE LIST ITEM -->
+          <li class="feature-list-item">
+            <a href="community-badges.html">Author Badges Page</a>
+          </li>
+          <!-- /FEATURE LIST ITEM -->
+
+          <!-- FEATURE LIST ITEM -->
+          <li class="feature-list-item">
+            <a href="badges.html">All Badges (Big and Small)</a>
+          </li>
+          <!-- /FEATURE LIST ITEM -->
+
+          <!-- FEATURE LIST ITEM -->
+          <li class="feature-list-item">
+            <a href="flag-badges.html">Flag Badges (Big and Small)</a>
+          </li>
+          <!-- /FEATURE LIST ITEM -->
+
+          <!-- FEATURE LIST ITEM -->
+          <li class="feature-list-item">
+            <a href="badges-boxes.html">Badge Boxes Versions</a>
+          </li>
+          <!-- /FEATURE LIST ITEM -->
+
+          <!-- FEATURE LIST ITEM -->
+          <li class="feature-list-item">
+            <a href="author-badges.html">Public Author Badges</a>
+          </li>
+          <!-- /FEATURE LIST ITEM -->
+        </ul>
+        <!-- /FEATURE LIST -->
+      </div>
+      <!-- /FEATURE LIST BLOCK -->
+      #}
     </div>
   </li>
   <!-- /MENU ITEM -->
@@ -907,7 +992,7 @@
   </div>
 {% endmacro %}
 <!-- macro to mount the main menu -->
-{% macro menu_main(dictionary) %}
+{% macro menu_main(dictionary,app_category) %}
   <div class="main-menu-wrap">
   <div class="menu-bar">
     <nav>
@@ -950,7 +1035,8 @@
         {% import 'macros.twig' as macro_main %}
         {{macro_main.feature_menu(dictionary)}}
         #}
-        <a> - </a>
+        <!-- /MENU ITEM -->
+        <!-- MENU ITEM -->
         {{macro_main.subcategory_app(dictionary,app_category)}}
         <!-- /MENU ITEM -->
 
@@ -1043,7 +1129,7 @@
   <img src="../images/logo.png" alt="logo">
 {% endmacro %}
 <!-- macro image logo -->
-{% macro all_header(login,dictionary,user) %}
+{% macro all_header(login,dictionary,user,app_category) %}
   {% import 'macros.twig' as macro_main %}
   	<!-- HEADER -->
   	<div class="header-wrap">
@@ -1092,7 +1178,7 @@
   	<!-- /SIDE MENU -->
 
   	<!-- MAIN MENU -->
-  	{{macro_main.menu_main(dictionary)}}
+  	{{macro_main.menu_main(dictionary,app_category)}}
   	<!-- /MAIN MENU -->
 {% endmacro %}
 <!-- macro user quickview main -->
