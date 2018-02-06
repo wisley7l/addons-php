@@ -50,6 +50,7 @@
 
 // buy item click buy
 $("#buy-item").click(function(event){
+  console.log('click');
   /*  capture item id
       License ID ok
       value ok
