@@ -9,6 +9,8 @@
   if it is app create query for plans
   if it's thema create want to buy_theme
 */
-if ($_POST['is_app']) {
+if ((int) $_POST['is_app'] == 1) {
   echo "app";
+}else {
+  echo "theme";
 }
