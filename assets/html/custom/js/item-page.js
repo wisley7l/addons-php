@@ -54,11 +54,8 @@ $('#buy-item').click(function(){
       let views = $(this).find('div');
       console.log(views);
       for (var i = 0; i < views.length; i++) {
-        if (views[i].style.display == 'block') {
+        if (views[i].style.display == 'block' and views[i].id.indexOf("image-") != -1) {
           console.log(views[i]);
-        }
-        if (views[i].id.indexOf("image-") != -1) {
-          console.log('wis');
         }
       }
 
