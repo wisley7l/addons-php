@@ -54,7 +54,7 @@ $('#buy-item').click(function(){
       let views = $(this).find('div');
       console.log(views);
       for (var i = 0; i < views.length; i++) {
-        if (views[i].style.display == 'block' and views[i].id.indexOf("image-") != -1) {
+        if (views[i].style.display == 'block' && views[i].id.indexOf("image-") != -1) {
           console.log(views[i]);
         }
       }
