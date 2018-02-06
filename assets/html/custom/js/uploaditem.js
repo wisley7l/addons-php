@@ -10,7 +10,14 @@ $("form#upload_form").submit(function(event){
       website = $form.find('input#item_website').val(),
       video = $form.find('input#item_linkvideo').val();
 
+  console.log(categories);
   console.log(name_app);
+  console.log(num_version);
+  console.log(description);
+  console.log(script_url);
+  console.log(github);
+  console.log(website);
+  console.log(video);
   event.preventDefault();
 });
 
