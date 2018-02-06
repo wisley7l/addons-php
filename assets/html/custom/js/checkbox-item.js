@@ -74,7 +74,7 @@ $("#buy-item").click(function(event){
   // else theme
   if (is_app == 1) { // treat app purchase
     //
-
+    // send infos 
   }
   else { // treat theme purchase
     //If there is more than one template, capture template id.
@@ -86,13 +86,12 @@ $("#buy-item").click(function(event){
         }
       }
     })
-    console.log(id_app); // app add
-    console.log(value); // value plan
-    console.log(is_app); // varible check app
-    console.log(id_template); // template id
-
-
+    // send infos
   }
+  console.log(id_app); // app add
+  console.log(value); // value plan
+  console.log(is_app); // varible check app
+  console.log(id_template); // template id
 });
 /*
 // treat click buy now
