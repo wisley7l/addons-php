@@ -114,6 +114,7 @@ echo $twig->render('apps-themes-page.twig', array(
   'app_category' => $app_category,
   'theme_category' => $theme_category,
   'filter' => $filter,
+  'all_category' => $$app_category,
   // test apps
   'apps_themes' => $apps,
   'user' => $user_login
