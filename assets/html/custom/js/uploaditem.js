@@ -6,3 +6,7 @@ $("form#upload_form").submit(function(event){
 
 event.preventDefault();
 });
+
+$("#add_category").click(function(event){
+  console.log('click');
+})
