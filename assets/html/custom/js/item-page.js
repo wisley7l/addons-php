@@ -42,7 +42,9 @@ $('#buy-item').click(function(){
       id_app = $(div_id).find('input#id-item').val(),
       is_app = $(div_id).find('input#item-is-app').val(),
       value = $('div#item-page').find('p#coin');
-      console.log(value);
+      var $checkbox = $('.linked-check');
+      let price1 = parseFloat($checkbox.find('input#'+id).val());
+      console.log(price1);
 
   // capture type licence
   // if is_app = 1 app
