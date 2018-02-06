@@ -89,7 +89,7 @@ $app_category = get_categories_app();
 $theme_category = get_categories_theme();
 // difine page
 $id_category = 1;
-foreach ($all_category as $category) {
+foreach ($app_category as $category) {
     if ($category['id'] == $id_category) {
       $name_page = $category['name'];
     }
@@ -119,7 +119,7 @@ echo $twig->render('search-category.twig', array(
   'segment' => $filter_segment,
   'app_category' => $app_category,
   'theme_category' => $theme_category,
-  'all_category' => $app_category,  
+  'all_category' => $app_category,
   'filter' => $filter,
   // test apps
   'apps_themes' => $apps,
