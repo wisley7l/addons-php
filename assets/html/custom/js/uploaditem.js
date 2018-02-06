@@ -9,7 +9,9 @@ $("form#upload_form").submit(function(event){
       github = $form.find('input#item_github').val(),
       website = $form.find('input#item_website').val(),
       video = $form.find('input#item_linkvideo').val();
+      is_app = $form.find('input#item_is_app').val();
 
+  console.log(is_app);
   console.log(categories);
   console.log(name_app);
   console.log(num_version);
@@ -18,6 +20,12 @@ $("form#upload_form").submit(function(event){
   console.log(github);
   console.log(website);
   console.log(video);
+
+  $("#uploaditem-name_app").val(name_app);
+  $("#uploaditem-is_app").val(is_app);
+  
+  $("#addons-uploaditem").submit();
+
   event.preventDefault();
 });
 

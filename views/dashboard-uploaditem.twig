@@ -39,9 +39,10 @@
 					<hr class="line-separator">
 					<form id="upload_form">
 						{# if selected app send categorys app else categories theme#}
+						<input type="text" id="item_is_app" name="item_name" value="1" style="display:none;">
 						<!-- INPUT CONTAINER -->
 						{{macro_dash_up.select_category(app_category)}}
-						<button id="add_category">+ category </button>
+						<!--button id="add_category">+ category </button-->
 						<!-- /INPUT CONTAINER -->
 
 						<!-- INPUT CONTAINER -->
@@ -161,6 +162,11 @@
 						<hr class="line-separator">
 						<button class="button big dark">Submit Item <span class="primary">for Review</span></button>
 					</form>
+					<form id="addons-uploaditem" action="scripts/uploaditem" method="post">
+						<input type="hidden" id="uploaditem-name_app" name="name_app" />
+						<input type="hidden" id="uploaditem-is_app" name="is_app" />
+						<input type="hidden" id="uploaditem-categories" name="categories" />
+					</for>
 				</div>
 				<!-- /FORM BOX ITEM -->
 			</div>
