@@ -2,7 +2,7 @@
   var $checkbox = $('.linked-check');
   // edit
   let id = $checkbox.prop('for');
-  let price1 = parseFloat($checkbox.find('input#'+id).val());
+  let price1 = parseFloat($checkbox.find('input#i-'+id).val());
   let coin = $("p#coin").find('span#coin')[0].innerText;
   changePrice("<span>"+coin+"</span>"+price1);
 
@@ -14,7 +14,7 @@
 			selectedCheckboxID = $this.prop('for'),
 			selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
 			showDescription(selectedCheckboxID);
-      let price2 = parseFloat($checkbox.find('input#'+selectedCheckboxID).val());
+      let price2 = parseFloat($checkbox.find('input#i-'+selectedCheckboxID).val());
 
 			$checkbox.each(function() {
 				var $this = $(this),
