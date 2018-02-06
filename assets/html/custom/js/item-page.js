@@ -43,6 +43,7 @@ $('#buy-item').click(function(){
       is_app = $(div_id).find('input#item-is-app').val(),
       value = $('div#item-page').find('p#coin');
       var $checkbox = $('.linked-check');
+      let id = $checkbox.prop('for');
       let price1 = parseFloat($checkbox.find('input#'+id).val());
       console.log(price1);
 
