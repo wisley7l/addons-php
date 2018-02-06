@@ -59,7 +59,8 @@ $("#buy-item").click(function(event){
       console.log(input[i]);
     }
   }
-  console.log(id_license);
+  let value = $(div).find('input#i-'+id_license).val();
+  console.log(value);
   /*  capture item id
       License ID
       value
