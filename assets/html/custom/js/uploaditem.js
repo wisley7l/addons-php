@@ -30,7 +30,7 @@ $("form#upload_form").submit(function(event){
   $("#uploaditem-item_github").val(github);
   $("#uploaditem-item_website").val(website);
   $("#uploaditem-item_linkvideo").val(video);
-  $("#addons-uploaditem").submit();
+  //$("#addons-uploaditem").submit();
 
   event.preventDefault();
 });
