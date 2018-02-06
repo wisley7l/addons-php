@@ -85,8 +85,12 @@ $("#buy-item").click(function(event){
         }
       }
     })
-    console.log(id_template);
-    console.log(value);
+    console.log(id_app); // app add
+    console.log(value); // value plan
+    console.log(is_app); // varible check app
+    console.log(id_template); // template id
+
+
   }
 });
 /*
