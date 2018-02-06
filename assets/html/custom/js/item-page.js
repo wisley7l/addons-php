@@ -52,7 +52,7 @@ $('#buy-item').click(function(){
     //If there is more than one template, capture template id.
     $div_item.each(function(){
       let views = $(this).find('div'),
-          prop = $(this).prop('for');
+          prop = $div_item.prop('for');
       console.log(prop);
       for (var i = 0; i < views.length; i++) {
         if (views[i].style.display == 'block') {
