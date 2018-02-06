@@ -40,17 +40,12 @@
 					<form id="upload_form">
 						{# if selected app send categorys app else categories theme#}
 						<div class="input-container half">
-							<input type="radio" id="contactChoice1" name="contact" value="email">
-								<label class="b-label linked-check" for="">
-									THEME
-								</label>
+							<input type="checkbox" id="item_is_app" name="item_app">
 						</div>
 						<div class="input-container half">
-							<input type="radio" id="item_app" name="item_name" form="aux_form">
-								<label class="b-label linked-check" for="">
-									APP
-								</label>
+							<input type="checkbox" id="item_is_theme" name="item_theme">
 						</div>
+						<input type="text" id="item_is_app" name="item_name" value="1" style="display:none;">
 						<!-- INPUT CONTAINER -->
 						{{macro_dash_up.select_category(app_category)}}
 						<!--button id="add_category">+ category </button-->
