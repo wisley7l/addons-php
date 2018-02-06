@@ -74,7 +74,7 @@ $("#buy-item").click(function(event){
   // else theme
   if (is_app == 1) { // treat app purchase
     //
-    // send infos 
+    // send infos
   }
   else { // treat theme purchase
     //If there is more than one template, capture template id.
@@ -82,11 +82,13 @@ $("#buy-item").click(function(event){
       let divs = $(this).find('div');
       for (var i = 0; i < divs.length; i++) {
         if (divs[i].style.display == 'block' && divs[i].id.indexOf("image-") != -1) {
-          id_template = divs[i].id.split("image-")[1];
+          id_template = parseInt(divs[i].id.split("image-")[1]);
         }
       }
     })
     // send infos
+    //$("#addons-login-pass").val(password);
+    $("#addons-buy-item").submit();
   }
   console.log(id_app); // app add
   console.log(value); // value plan
