@@ -9,10 +9,11 @@ var_dump($_POST);
   if it is app create query for plans
   if it's thema create want to buy_theme
 */
-$id_app = (int) $_POST['id'];
+$id_app = (int) $_POST['id_app'];
 $price = (float) $_POST['value'];
 
 if ((int) $_POST['is_app'] == 1) {
+  // mount query for app purchase
   echo "APP";
   echo PHP_EOL;
   echo $id_app;
@@ -20,11 +21,14 @@ if ((int) $_POST['is_app'] == 1) {
   echo $price;
   echo PHP_EOL;
 }else {
+  $id_template = (int) $_POST['id_template'];
+  // mount query for theme purchase
   echo "THEME";
   echo PHP_EOL;
   echo $id_app;
   echo PHP_EOL;
   echo $price;
   echo PHP_EOL;
-  echo $_POST['id_template'];
+  $id_template = (int) $_POST['id_template'];
+  echo $id_template;
 }
