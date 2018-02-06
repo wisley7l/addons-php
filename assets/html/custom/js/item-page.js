@@ -34,38 +34,3 @@
     });
   }
 })(jQuery);
-
-// treat click buy now
-$('#buy-item').click(function(){
-  let div_id = 'div#addons-buy',
-      $div_item = $('div#addons-items'),
-      id_app = $(div_id).find('input#id-item').val(),
-      is_app = $(div_id).find('input#item-is-app').val(),
-      value = $('div#item-page').find('p#coin');
-      var $checkbox = $('.linked-check');
-      let id = $checkbox.prop('for');
-      let price1 = parseFloat($checkbox.find('input#'+id).val());
-      console.log(price1);
-
-  // capture type licence
-  // if is_app = 1 app
-  // else theme
-  if (is_app == 1) { // treat app purchase
-    //
-
-  }
-  else { // treat theme purchase
-    //If there is more than one template, capture template id.
-    $div_item.each(function(){
-      let views = $(this).find('div');
-      for (var i = 0; i < views.length; i++) {
-        if (views[i].style.display == 'block' && views[i].id.indexOf("image-") != -1) {
-          console.log(views[i]);
-        }
-      }
-
-    })
-
-  }
-
-});
