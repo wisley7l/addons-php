@@ -80,11 +80,11 @@ $("#buy-item").click(function(event){
       let divs = $(this).find('div');
       for (var i = 0; i < divs.length; i++) {
         if (divs[i].style.display == 'block' && divs[i].id.indexOf("image-") != -1) {
-          let id_template = divs[i].id.split("image-")
-          console.log(id_template);
+          let id_template = divs[i].id.split("image-")[1];
         }
       }
     })
+    console.log(id_template);
   }
 });
 /*
