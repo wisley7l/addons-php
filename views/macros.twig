@@ -202,6 +202,83 @@
   </li>
   <!-- /MENU ITEM -->
 {% endmacro %}
+<!-- macro to use features main -->
+{% macro subcategory_app(dictionary,all_category) %}
+  <!-- MENU ITEM -->
+  <li class="menu-item sub">
+    <a href="">
+      {{dictionary.word_categories}}
+      <!-- SVG ARROW -->
+      <svg class="svg-arrow">
+        <use xlink:href="#svg-arrow"></use>
+      </svg>
+      <!-- /SVG ARROW -->
+    </a>
+    <div class="content-dropdown">
+      <!-- FEATURE LIST BLOCK -->
+      <div class="feature-list-block">
+        <h6 class="feature-list-title">{{dictionary.word_app}}</h6>
+        <hr class="line-separator">
+        <!-- FEATURE LIST -->
+        <ul class="feature-list">
+          <!-- FEATURE LIST ITEM -->
+          {% for category in all_category if category.id > 0 and category.id < 10 %}
+          <li class="feature-list-item">
+            <a href="{{category.page}}">{{category.name}}</a>
+          </li>
+          {% endfor %}
+          <!-- /FEATURE LIST ITEM -->
+        </ul>
+        <!-- /FEATURE LIST -->
+        <!-- FEATURE LIST -->
+        <ul class="feature-list">
+          <!-- FEATURE LIST ITEM -->
+          {% for category in all_category if category.id >= 10 and category.id < 12 %}
+          <li class="feature-list-item">
+            <a href="{{category.page}}">{{category.name}}</a>
+          </li>
+          {% endfor %}
+          <!-- /FEATURE LIST ITEM -->
+        </ul>
+        <!-- /FEATURE LIST -->
+
+      </div>
+      <!-- /FEATURE LIST BLOCK -->
+      {# not implemented
+      <!-- FEATURE LIST BLOCK -->
+      <div class="feature-list-block">
+        <h6 class="feature-list-title">{{dictionary.word_theme}}</h6>
+        <hr class="line-separator">
+        <!-- FEATURE LIST -->
+        <ul class="feature-list">
+          <!-- FEATURE LIST ITEM -->
+          {% for category in all_category if category.id >= 12 and category.id < 22 %}
+          <li class="feature-list-item">
+            <a href="{{category.page}}">{{category.name}}</a>
+          </li>
+          {% endfor %}
+          <!-- /FEATURE LIST ITEM -->
+        </ul>
+        <!-- /FEATURE LIST -->
+        <!-- FEATURE LIST -->
+        <ul class="feature-list">
+          <!-- FEATURE LIST ITEM -->
+          {% for category in all_category if category.id >= 15 %}
+          <li class="feature-list-item">
+            <a href="{{category.page}}">{{category.name}}</a>
+          </li>
+          {% endfor %}
+          <!-- /FEATURE LIST ITEM -->
+        </ul>
+        <!-- /FEATURE LIST -->
+      </div>
+      <!-- /FEATURE LIST BLOCK -->
+      #}
+
+    </div>
+  </li>
+  <!-- /MENU ITEM -->
+{% endmacro %}
 <!-- macro to use features moblie -->
 {% macro feature_moblie(dictionary) %}
   <!-- DROPDOWN ITEM -->
@@ -873,6 +950,7 @@
         {% import 'macros.twig' as macro_main %}
         {{macro_main.feature_menu(dictionary)}}
         #}
+        {{macro_main.subcategory_app(dictionary,app_category)}}
         <!-- /MENU ITEM -->
 
 
