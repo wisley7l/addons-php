@@ -41,7 +41,7 @@ $('#buy-item').click(function(){
       $div_item = $('div#addons-items'),
       id_app = $(div_id).find('input#id-item').val(),
       is_app = $(div_id).find('input#item-is-app').val(),
-      value = $div_item.find('p#coin');
+      value = $('div#item-page').find('p#coin');
       console.log(value);
 
   // capture type licence
