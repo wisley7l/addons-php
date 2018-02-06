@@ -8,7 +8,7 @@ $("form#upload_form").submit(function(event){
 event.preventDefault();
 });
 
-$("#add_category").click(function(event){
+$("#add_category").click(function(event,num){
   num +=;
   console.log(num);
   event.preventDefault();
