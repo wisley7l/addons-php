@@ -1,4 +1,4 @@
-$("form#upload_form").submit(function(event){
+$("#send_review_item").click(function(event){
   let $form = $('form#upload_form'),
       category = $form.find('select#category').val();
       console.log(category);
