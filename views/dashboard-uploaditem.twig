@@ -44,7 +44,6 @@
 							<label for="item_is_app" class="label-check">
 								<span class="checkbox primary"><span></span></span>
 								{{dictionary.word_app}}
-								<input id="inv-item_is_app" />
 							</label>
 						</div>
 						<div class="input-container half">
@@ -55,14 +54,16 @@
 								<input id="inv-item_is_theme" />
 							</label>
 						</div>
-						<input id="inv-up-item" value="{{up_item}}" />
-						{{up_item}}
-						<input type="text" id="item_is_app" name="item_name" value="1" style="display:none;">
+						<input type="text" id="item_is_app" name="item_name" value="{{is_app}}" style="display:none;">
 						<!-- INPUT CONTAINER -->
 						{{macro_dash_up.select_category(app_category)}}
 						<!--button id="add_category">+ category </button-->
 						<!-- /INPUT CONTAINER -->
-
+						{% if is_app == 1 %}
+						<a> a </a>
+						{% else %}
+						<a> b </a>
+						{% endif %}
 						<!-- INPUT CONTAINER -->
 						<div class="input-container">
 							<label for="item_name" class="rl-label required">Name of the Item (Max 40 Characters)</label>

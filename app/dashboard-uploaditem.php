@@ -53,5 +53,5 @@ echo $twig->render('dashboard-uploaditem.twig', array(
     // test
   'user' => $user_login,
   'sales_user' => $sales_user,
-  'up_item' => 'app'
+  'is_app' => 1
 ));

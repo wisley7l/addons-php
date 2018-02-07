@@ -77,14 +77,14 @@ $("#add_category").click(function(event){
 	}
   function enable(id) {
     //console.log(id);
-    console.log($('input#inv-up-item').val());
+    console.log($('input#item_is_app').val());
     console.log('***');
     if (id == 'item_is_app') {
       console.log('app');
-      $('input#inv-up-item').val('app');
+      $('input#item_is_app').val('app');
     }else if (id == 'item_is_theme') {
       console.log('theme');
-      $('input#inv-up-item').val('theme');
+      $('input#item_is_app').val('theme');
     }
 	}
 
