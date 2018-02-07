@@ -82,7 +82,7 @@
 						<!-- INPUT CONTAINER -->
 						<div class="input-container half">
 							<label for="item_numversion" class="rl-label required">Num Version</label>
-							<input type="text" id="item_numversion" name="item_numversion" placeholder="Enter num version item  here...">
+							<input type="text" id="item_numversion" name="item_numversion" placeholder="Ex: 1.0.1">
 						</div>
 						<!-- /INPUT CONTAINER -->
 
@@ -155,7 +155,7 @@
 					<!-- INPUT CONTAINER -->
 					<div class="input-container">
 						<label for="item_website" class="rl-label">Documentation </label>
-						<input type="text" id="item_website" name="item_website" placeholder="Enter item link documentation link here...">
+						<input type="text" id="item_linkdoc" name="item_linkdoc" placeholder="Enter item link documentation link here...">
 					</div>
 					<!-- /INPUT CONTAINER -->
 					</div>
@@ -200,15 +200,24 @@
 						<hr class="line-separator">
 						<button class="button big dark">Submit Item <span class="primary">for Review</span></button>
 					</form>
-					<form id="addons-uploaditem" action="scripts/uploaditem" method="post">
-						<input type="hidden" id="uploaditem-name_app" name="name" />
+					<form id="addons-uploaditem-app" action="scripts/uploaditem" method="post">
 						<input type="hidden" id="uploaditem-is_app" name="is_app" />
+						<input type="hidden" id="uploaditem-name_app" name="name" />
 						<input type="hidden" id="uploaditem-category" name="category" />
 						<input type="hidden" id="uploaditem-item_numversion" name="numversion" />
 						<input type="hidden" id="uploaditem-item_description" name="description" />
 						<input type="hidden" id="uploaditem-item_scripturl" name="scripturl" />
 						<input type="hidden" id="uploaditem-item_github" name="github" />
 						<input type="hidden" id="uploaditem-item_website" name="website" />
+						<input type="hidden" id="uploaditem-item_linkvideo" name="linkvideo" />
+					</for>
+					<form id="addons-uploaditem-theme" action="scripts/uploaditem" method="post">
+						<input type="hidden" id="uploaditem-is_app" name="is_app" />
+						<input type="hidden" id="uploaditem-name_app" name="name" />
+						<input type="hidden" id="uploaditem-category" name="category" />
+						<input type="hidden" id="uploaditem-item_numversion" name="numversion" />
+						<input type="hidden" id="uploaditem-item_description" name="description" />
+						<input type="hidden" id="uploaditem-item_linkdoc" name="linkdoc" />
 						<input type="hidden" id="uploaditem-item_linkvideo" name="linkvideo" />
 					</for>
 				</div>

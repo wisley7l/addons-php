@@ -1,16 +1,16 @@
 var num = 1;
 $("form#upload_form").submit(function(event){
   let $form = $('form#upload_form'),
-
       name_app = $form.find('input#item_name').val(), // not null
       num_version = $form.find('input#item_numversion').val(),
       description = $form.find('textarea#item_description').val(),// not null
       script_url = $form.find('input#item_scripturl').val(),
       github = $form.find('input#item_github').val(),
       website = $form.find('input#item_website').val(),
-      video = $form.find('input#item_linkvideo').val();
-      is_app = $form.find('input#inp-item_is_app').val();
+      video = $form.find('input#item_linkvideo').val(),
+      is_app = $form.find('input#inp-item_is_app').val(),
       categories = $form.find('select#category-'+is_app).val(), // not null
+      linkdoc = $form.find('input#item_linkdoc').val();
 
   console.log(is_app);
   console.log(categories);
@@ -21,17 +21,30 @@ $("form#upload_form").submit(function(event){
   console.log(github);
   console.log(website);
   console.log(video);
+  console.log(linkdoc);
 
-  $("#uploaditem-name_app").val(name_app);
-  $("#uploaditem-is_app").val(is_app);
-  $("#uploaditem-category").val(categories);
-  $("#uploaditem-item_numversion").val(num_version);
-  $("#uploaditem-item_description").val(description);
-  $("#uploaditem-item_scripturl").val(script_url);
-  $("#uploaditem-item_github").val(github);
-  $("#uploaditem-item_website").val(website);
-  $("#uploaditem-item_linkvideo").val(video);
-  //$("#addons-uploaditem").submit();
+  if (is_app == 1 ) { // app
+    $("#uploaditem-name_app").val(name_app);
+    $("#uploaditem-is_app").val(is_app);
+    $("#uploaditem-category").val(categories);
+    $("#uploaditem-item_numversion").val(num_version);
+    $("#uploaditem-item_description").val(description);
+    $("#uploaditem-item_scripturl").val(script_url);
+    $("#uploaditem-item_github").val(github);
+    $("#uploaditem-item_website").val(website);
+    $("#uploaditem-item_linkvideo").val(video);
+    $("#addons-uploaditem-app").submit();
+  } else if (is_app == 0 ) { // theme
+    $("#uploaditem-name_app").val(name_app);
+    $("#uploaditem-is_app").val(is_app);
+    $("#uploaditem-category").val(categories);
+    $("#uploaditem-item_numversion").val(num_version);
+    $("#uploaditem-item_description").val(description);
+    $("#uploaditem-item_linkdoc").val(linkdoc);
+    $("#uploaditem-item_linkvideo").val(video);
+    $("#addons-uploaditem-theme").submit();
+  }
+
 
   event.preventDefault();
 });
