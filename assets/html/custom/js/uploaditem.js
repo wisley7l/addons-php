@@ -43,10 +43,9 @@ $("#add_category").click(function(event){
 
 
 (function($) {
-	var $checkbox = $('.label-check');
-  console.log($checkbox);
-
-	/*$checkbox.on( 'click', deselectLinked );
+	var $checkbox = $('.linked-check');
+/*
+	$checkbox.on( 'click', deselectLinked );
 
 	function deselectLinked() {
 		var $this = $(this),
@@ -83,5 +82,6 @@ $("#add_category").click(function(event){
 
 	function changePrice(price) {
 		$('.sidebar-item .price.large').html(price);
-	}*/
+	}
+  */
 })(jQuery);
