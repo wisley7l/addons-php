@@ -1,7 +1,7 @@
 var num = 1;
 $("form#upload_form").submit(function(event){
   let $form = $('form#upload_form'),
-      categories = $form.find('select#category').val(), // not null
+
       name_app = $form.find('input#item_name').val(), // not null
       num_version = $form.find('input#item_numversion').val(),
       description = $form.find('textarea#item_description').val(),// not null
@@ -10,6 +10,7 @@ $("form#upload_form").submit(function(event){
       website = $form.find('input#item_website').val(),
       video = $form.find('input#item_linkvideo').val();
       is_app = $form.find('input#inp-item_is_app').val();
+      categories = $form.find('select#category-'+is_app).val(), // not null
 
   console.log(is_app);
   console.log(categories);
