@@ -60,6 +60,7 @@ $("#add_category").click(function(event){
 
 				if( checkboxID != selectedCheckboxID ) {
 					deselect($("#"+checkboxID))
+          desable(checkboxID);
 					//hideDescription(checkboxID);
 					//changePrice("<span>$</span>28.00");
 				} else {
@@ -71,6 +72,9 @@ $("#add_category").click(function(event){
 
 	function deselect(checkbox) {
 		checkbox.prop('checked', false);
+	}
+  function desable(id) {
+		console.log($('input#inv-'+id));
 	}
 /*
 	function showDescription(container) {
