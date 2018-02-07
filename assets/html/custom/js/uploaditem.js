@@ -79,11 +79,14 @@ $("#add_category").click(function(event){
     if (id == 'item_is_app') {
       $('input#inp-item_is_app').val(1);
       $('div#enable-app').attr('style','display:block;');
+      $('div#enable-theme').attr('style','display:none;');
     }else if (id == 'item_is_theme') {
       $('div#enable-app').attr('style','display:none;');
+      $('div#enable-theme').attr('style','display:block;');
       $('input#inp-item_is_app').val(0);
     }else {
       $('div#enable-app').attr('style','display:none;');
+      $('div#enable-theme').attr('style','display:none;');
     }
 	}
 
