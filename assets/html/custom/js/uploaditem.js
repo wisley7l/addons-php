@@ -76,12 +76,14 @@ $("#add_category").click(function(event){
 		checkbox.prop('checked', false);
 	}
   function enable(id) {
-    console.log(id);
+    //console.log(id);
     console.log($('input#inv-up-item').val());
     if (id == 'item_is_app') {
+      console.log('app');
       $('input#inv-up-item').attr('value','app');
     }else if (id == 'item_is_theme') {
-      $('input#inv-up-item').attr('value','app');
+      console.log('theme');
+      $('input#inv-up-item').attr('value','theme');
     }
 	}
 
