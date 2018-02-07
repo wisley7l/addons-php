@@ -24,13 +24,13 @@ $("form#upload_form").submit(function(event){
   console.log(linkdoc);
   if (name_app == '' || num_version == '' || description == '' || categories == undefined ) {
     alert('Error');
-    $form.find("#inp-requerid").css( "color", "red");
+    $form.find("#inp-requered").css( "color", "red");
     if (categories == undefined ) {
       console.log('vazio');
     }
 
   }else {
-    $form.find("#inp-requerid").css( "color", "black");
+    //$form.find("#inp-requerid").css( "color", "black");
     if (is_app == 1 ) { // app
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
