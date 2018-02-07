@@ -24,6 +24,10 @@ $("form#upload_form").submit(function(event){
   console.log(linkdoc);
   if (name_app == '' || num_version == '' || description == '' || categories == '' ) {
     alert('Error');
+    $form.find(".rl-label required").css( "color", "red");
+    if (categories == '') {
+      console.log('vazio');
+    }
 
   }else {
     if (is_app == 1 ) { // app
