@@ -1,10 +1,32 @@
 <?php
-var_dump($_POST);
+header('Content-Type: text/html; charset=utf-8');
+$dictionary = get_dictionary();
+$login = false;
+
+//(init) * Required on all pages *
+// close writing session, if it exists and intal session
+session_write_close();
+session_start();
+// if the session exists
+if (isset($_SESSION)) {
+  //modify the value of the login variable, by the value saved in the session
+  //var_dump($_SESSION);
+  $login = $_SESSION['login'];
+  // set values for user, with the values saved in the session
+  // array used to set user panel parameters
+  $user_login = getUserLogin($dictionary);
+}
+if ($login == false) {
+  header("Location: ../?EROORLOGIN");
+  exit;
+}
+// var_dump($_POST);
 
 if(empty($_POST)) { // not exist post
   echo "error post";
   // header("Location: ../");
 } else{
+  // obs: capture id partner
   $is_app  = (int) $_POST['is_app'];
   $name = $_POST['name'];
   $category = (int) $_POST['category'];
@@ -40,6 +62,7 @@ if(empty($_POST)) { // not exist post
     var_dump($linkvideo);
    } elseif ($is_app == 0 ) {
      echo "create theme";
+     echo PHP_EOL;
      var_dump($name);
      var_dump($category);
      var_dump($numversion);
