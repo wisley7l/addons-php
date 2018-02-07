@@ -7,6 +7,7 @@ if(empty($_POST)) { // not exist post
 } elseif (!empty($_POST) and (empty($_POST['is_app']) ) ) {
   // is app not defined
   //header("Location: ../");
+  echo $_POST['is_app'];
   echo "erro is app ";
 } elseif (!empty($_POST) and (!empty($_POST['is_app']) ) ) {
   // is app defined
