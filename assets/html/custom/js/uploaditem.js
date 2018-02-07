@@ -76,17 +76,14 @@ $("#add_category").click(function(event){
 		checkbox.prop('checked', false);
 	}
   function enable(id) {
-    //console.log(id);
-    console.log($('input#inp-item_is_app').val());
-    console.log('***');
     if (id == 'item_is_app') {
-      console.log('app');
       $('input#inp-item_is_app').val(1);
-      $('div#test').attr('style','display:block;');
+      $('div#enable-app').attr('style','display:block;');
     }else if (id == 'item_is_theme') {
-      console.log('theme');
-      $('div#test').attr('style','display:none;');
+      $('div#enable-app').attr('style','display:none;');
       $('input#inp-item_is_app').val(0);
+    }else {
+      $('div#enable-app').attr('style','display:none;');
     }
 	}
 

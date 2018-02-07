@@ -56,15 +56,11 @@
 						</div>
 						<input type="text" id="inp-item_is_app" name="item_name" value="{{is_app}}" style="display:none;">
 						<!-- INPUT CONTAINER -->
-						<div id="test" style="display:block;">
+						<div id="enable-app" style="display:block;">
 						{{macro_dash_up.select_category(app_category)}}
 						<!--button id="add_category">+ category </button-->
 						<!-- /INPUT CONTAINER -->
-						{% if is_app == 1 %}
-						<a> a </a>
-						{% else %}
-						<a> b </a>
-						{% endif %}
+
 						<!-- INPUT CONTAINER -->
 						<div class="input-container">
 							<label for="item_name" class="rl-label required">Name of the Item (Max 40 Characters)</label>
