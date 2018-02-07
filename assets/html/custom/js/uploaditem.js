@@ -24,9 +24,9 @@ $("form#upload_form").submit(function(event){
   console.log(linkdoc);
   if (name_app == '' || num_version == '' || description == '' || categories == undefined ) {
     alert('Error');
-    $form.find("#cat-requered").css( "color", "red");
-    $form.find("#name-requered").css( "color", "red");
-    $form.find("#version-requered").css( "color", "red");
+    $form.find("#cat-required").css( "color", "red");
+    $form.find("#name-required").css( "color", "red");
+    $form.find("#version-required").css( "color", "red");
     if (categories == undefined ) {
       console.log('vazio');
     }
