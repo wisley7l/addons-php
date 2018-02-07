@@ -22,10 +22,10 @@ $("form#upload_form").submit(function(event){
   console.log(website);
   console.log(video);
   console.log(linkdoc);
-  if (name_app == '' || num_version == '' || description == '' || categories == '' ) {
+  if (name_app == '' || num_version == '' || description == '' || categories == undefined ) {
     alert('Error');
-    $form.find(".rl-label required").css( "color", "red");
-    if (categories == '') {
+    $form.find(".rl-label").css( "color", "red");
+    if (categories == undefined ) {
       console.log('vazio');
     }
 
