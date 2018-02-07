@@ -51,8 +51,7 @@ $("#add_category").click(function(event){
       var $this = $(this),
 			selectedCheckboxID = $this.prop('for'),
 			selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
-      console.log(selectedCheckboxID);
-			//showDescription(selectedCheckboxID);
+    	//showDescription(selectedCheckboxID);
 
 			$checkbox.each(function() {
 				var $this = $(this),
