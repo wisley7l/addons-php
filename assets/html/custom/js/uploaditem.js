@@ -78,12 +78,13 @@ $("#add_category").click(function(event){
   function enable(id) {
     //console.log(id);
     console.log($('input#inv-up-item').val());
+    console.log('***');
     if (id == 'item_is_app') {
       console.log('app');
-      $('input#inv-up-item').attr('value','app');
+      $('input#inv-up-item').val('app');
     }else if (id == 'item_is_theme') {
       console.log('theme');
-      $('input#inv-up-item').attr('value','theme');
+      $('input#inv-up-item').val('theme');
     }
 	}
 
