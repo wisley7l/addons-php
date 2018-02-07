@@ -28,26 +28,24 @@ if(empty($_POST)) { // not exist post
    linkdoc // theme
    */
    if ($is_app == 1 ) {
-     echo "Create app";
-     echo PHP_EOL;
-     // $name
-     // $category
-     // $numversion
-     // $description
-     // $scripturl
-     // $github
-     // $website
-     // $linkvideo
-
-
+    echo "Create app";
+    echo PHP_EOL;
+    var_dump($name);
+    var_dump($category);
+    var_dump($numversion);
+    var_dump($description);
+    var_dump($scripturl);
+    var_dump($github);
+    var_dump($website);
+    var_dump($linkvideo);
    } elseif ($is_app == 0 ) {
      echo "create theme";
-     // $name
-     // $category
-     // $numversion
-     // $description
-     // $linkvideo
-     // $linkdoc
+     var_dump($name);
+     var_dump($category);
+     var_dump($numversion);
+     var_dump($description);
+     var_dump($linkvideo);
+     var_dump($linkdoc);
 
    } else {
      echo "Error";

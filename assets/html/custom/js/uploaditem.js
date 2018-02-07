@@ -27,9 +27,7 @@ $("form#upload_form").submit(function(event){
     $form.find("#cat-required").css( "color", "red");
     $form.find("#name-required").css( "color", "red");
     $form.find("#version-required").css( "color", "red");
-    if (categories == undefined ) {
-      console.log('vazio');
-    }
+    $form.find("#desc-required").css( "color", "red");
 
   }else {
     //$form.find("#inp-requerid").css( "color", "black");
