@@ -81,10 +81,10 @@ $("#add_category").click(function(event){
     console.log('***');
     if (id == 'item_is_app') {
       console.log('app');
-      $('input#item_is_app').val('app');
+      $('input#item_is_app').val(1);
     }else if (id == 'item_is_theme') {
       console.log('theme');
-      $('input#item_is_app').val('theme');
+      $('input#item_is_app').val(0);
     }
 	}
 
