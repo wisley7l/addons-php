@@ -51,6 +51,7 @@ $("#add_category").click(function(event){
       var $this = $(this),
 			selectedCheckboxID = $this.prop('for'),
 			selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
+      $('input#inv-'+selectedCheckboxID).attr('value','true');
     	//showDescription(selectedCheckboxID);
 
 			$checkbox.each(function() {
@@ -74,7 +75,7 @@ $("#add_category").click(function(event){
 		checkbox.prop('checked', false);
 	}
   function desable(id) {
-		console.log($('input#inv-'+id));
+		$('input#inv-'+id).attr('value','false');
 	}
 /*
 	function showDescription(container) {
