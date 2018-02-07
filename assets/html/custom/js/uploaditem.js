@@ -77,6 +77,7 @@ $("#add_category").click(function(event){
 	}
   function enable(id) {
     console.log(id);
+    console.log($('input#inv-up-item').val());
     if (id == 'app') {
       $('input#inv-up-item').attr('value','app');
     }else if (id == 'theme') {
