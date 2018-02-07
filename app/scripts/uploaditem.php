@@ -2,10 +2,12 @@
 var_dump($_POST);
 
 if(empty($_POST)) { // not exist post
-  header("Location: ../");
+  echo "error post";
+  //header("Location: ../");
 } elseif (!empty($_POST) and (empty($_POST['is_app']) ) ) {
   // is app not defined
-  header("Location: ../");
+  //header("Location: ../");
+  echo "erro is app ";
 } elseif (!empty($_POST) and (!empty($_POST['is_app']) ) ) {
   // is app defined
   $is_app  = (int) $_POST['is_app'];
@@ -29,4 +31,6 @@ if(empty($_POST)) { // not exist post
     echo "Error";
   }
 
+}else {
+  echo "not error ";
 }
