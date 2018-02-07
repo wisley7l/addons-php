@@ -44,7 +44,6 @@ $("#add_category").click(function(event){
 
 (function($) {
 	var $checkbox = $('.label-check');
-  console.log($checkbox);
 	$checkbox.on( 'click', deselectLinked );
 
 	function deselectLinked() {
