@@ -44,7 +44,7 @@
 							<label for="item_is_app" class="label-check">
 								<span class="checkbox primary"><span></span></span>
 								{{dictionary.word_app}}
-								<input id="inv-item_is_app" value="{{up_item}}" />
+								<input id="inv-item_is_app" />
 							</label>
 						</div>
 						<div class="input-container half">
@@ -52,9 +52,11 @@
 							<label for="item_is_theme" class="label-check">
 								<span class="checkbox primary"><span></span></span>
 								{{dictionary.word_theme}}
-								<input id="inv-item_is_theme" value="{{up_item}}" />
+								<input id="inv-item_is_theme" />
 							</label>
 						</div>
+						<input id="inv-up-item" value="{{up_item}}" />
+						{{up_item}}
 						<input type="text" id="item_is_app" name="item_name" value="1" style="display:none;">
 						<!-- INPUT CONTAINER -->
 						{{macro_dash_up.select_category(app_category)}}
