@@ -3,12 +3,18 @@ var_dump($_POST);
 
 if(empty($_POST)) { // not exist post
   echo "error post";
-  //header("Location: ../");
+  // header("Location: ../");
 } else{
   $is_app  = (int) $_POST['is_app'];
-  // is app not defined
-  //header("Location: ../");
-  echo $_POST['is_app'];
+  $name = $_POST['name'];
+  $category = (int) $_POST['category'];
+  $numversion = $_POST['numversion'];
+  $description = $_POST['description'];
+  $scripturl = $_POST['scriptul'];
+  $github = $_POST['github'];
+  $website = $_POST['website'];
+  $linkvideo = $_POST['linkvideo'];
+  $linkdoc  = $_POST['linkdoc'];
   /*
    is_app == 1 create app, == 0 create theme
    name // name
@@ -23,20 +29,28 @@ if(empty($_POST)) { // not exist post
    */
    if ($is_app == 1 ) {
      echo "Create app";
+     echo PHP_EOL;
+     // $name
+     // $category
+     // $numversion
+     // $description
+     // $scripturl
+     // $github
+     // $website
+     // $linkvideo
+
+
    } elseif ($is_app == 0 ) {
      echo "create theme";
+     // $name
+     // $category
+     // $numversion
+     // $description
+     // $linkvideo
+     // $linkdoc
+
    } else {
      echo "Error";
    }
 
 }
-
-
-// } elseif (!empty($_POST) and (!empty($_POST['is_app']) ) ) {
-//   // is app defined
-//   $is_app  = (int) $_POST['is_app'];
-//
-//
-// }else {
-//   echo "not error ";
-// }

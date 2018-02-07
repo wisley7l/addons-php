@@ -22,30 +22,32 @@ $("form#upload_form").submit(function(event){
   console.log(website);
   console.log(video);
   console.log(linkdoc);
+  if (name_app == '' || num_version == '' || description == '' || categories == '' ) {
+    alert('Error');
 
-  if (is_app == 1 ) { // app
-    $("#uploaditem-is_app").val(is_app);
-    $("#uploaditem-name_app").val(name_app);
-    $("#uploaditem-category").val(categories);
-    $("#uploaditem-item_numversion").val(num_version);
-    $("#uploaditem-item_description").val(description);
-    $("#uploaditem-item_scripturl").val(script_url);
-    $("#uploaditem-item_github").val(github);
-    $("#uploaditem-item_website").val(website);
-    $("#uploaditem-item_linkvideo").val(video);
-    $("#addons-uploaditem").submit();
-  } else if (is_app == 0 ) { // theme
-    $("#uploaditem-is_app").val(is_app);
-    $("#uploaditem-name_app").val(name_app);
-    $("#uploaditem-category").val(categories);
-    $("#uploaditem-item_numversion").val(num_version);
-    $("#uploaditem-item_description").val(description);
-    $("#uploaditem-item_linkdoc").val(linkdoc);
-    $("#uploaditem-item_linkvideo").val(video);
-    $("#addons-uploaditem").submit();
+  }else {
+    if (is_app == 1 ) { // app
+      $("#uploaditem-is_app").val(is_app);
+      $("#uploaditem-name_app").val(name_app);
+      $("#uploaditem-category").val(categories);
+      $("#uploaditem-item_numversion").val(num_version);
+      $("#uploaditem-item_description").val(description);
+      $("#uploaditem-item_scripturl").val(script_url);
+      $("#uploaditem-item_github").val(github);
+      $("#uploaditem-item_website").val(website);
+      $("#uploaditem-item_linkvideo").val(video);
+      $("#addons-uploaditem").submit();
+    } else if (is_app == 0 ) { // theme
+      $("#uploaditem-is_app").val(is_app);
+      $("#uploaditem-name_app").val(name_app);
+      $("#uploaditem-category").val(categories);
+      $("#uploaditem-item_numversion").val(num_version);
+      $("#uploaditem-item_description").val(description);
+      $("#uploaditem-item_linkdoc").val(linkdoc);
+      $("#uploaditem-item_linkvideo").val(video);
+      $("#addons-uploaditem").submit();
+    }
   }
-
-
   event.preventDefault();
 });
 
