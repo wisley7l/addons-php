@@ -43,11 +43,11 @@ $("#add_category").click(function(event){
 
 
 (function($) {
-	var $checkbox = $('.linked-check');
+	var $checkbox = $('.label-check');
+  console.log($checkbox);
+	//$checkbox.on( 'click', deselectLinked );
 
-	$checkbox.on( 'click', deselectLinked );
-
-	function deselectLinked() {
+	//function deselectLinked() {
 		/*var $this = $(this),
 			selectedCheckboxID = $this.prop('for'),
 			selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
@@ -66,7 +66,7 @@ $("#add_category").click(function(event){
 					changePrice("<span>$</span>56.00");
 				}
 			}); */
-	}
+	//}
   /*
 
 	function deselect(checkbox) {
