@@ -51,8 +51,9 @@ $("#add_category").click(function(event){
       var $this = $(this),
 			selectedCheckboxID = $this.prop('for'),
 			selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
-      $('input#inv-'+selectedCheckboxID).attr('value','true');
+      //$('input#inv-'+selectedCheckboxID).attr('value','true');
     	//showDescription(selectedCheckboxID);
+      enable(selectedCheckboxID);
 
 			$checkbox.each(function() {
 				var $this = $(this),
@@ -74,9 +75,14 @@ $("#add_category").click(function(event){
 	function deselect(checkbox) {
 		checkbox.prop('checked', false);
 	}
-  function desable(id) {
-		$('input#inv-'+id).attr('value','false');
+  function enable(id) {
+    if (id == 'app') {
+      $('input#inv-'+id).attr('value','app');
+    }else if (id == 'theme') {
+      $('input#inv-'+id).attr('value','theme');
+    }
 	}
+
 /*
 	function showDescription(container) {
 		$(".license-text[data-license='"+container+"']").slideDown();

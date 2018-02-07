@@ -52,5 +52,6 @@ echo $twig->render('dashboard-uploaditem.twig', array(
   'theme_category' => $theme_category,
     // test
   'user' => $user_login,
-  'sales_user' => $sales_user
+  'sales_user' => $sales_user,
+  'up_item' => 'app'
 ));
