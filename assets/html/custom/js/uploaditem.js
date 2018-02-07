@@ -39,7 +39,7 @@ $("#add_category").click(function(event){
   num += 1;
   //console.log(num);
   event.preventDefault();
-})
+});
 
 
 (function($) {
