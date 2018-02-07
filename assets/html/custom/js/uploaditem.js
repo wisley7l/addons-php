@@ -52,7 +52,7 @@ $("#add_category").click(function(event){
 			selectedCheckboxID = $this.prop('for'),
 			selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
       console.log(selectedCheckboxID);
-			/*showDescription(selectedCheckboxID);
+			//showDescription(selectedCheckboxID);
 
 			$checkbox.each(function() {
 				var $this = $(this),
@@ -61,19 +61,19 @@ $("#add_category").click(function(event){
 
 				if( checkboxID != selectedCheckboxID ) {
 					deselect($("#"+checkboxID))
-					hideDescription(checkboxID);
-					changePrice("<span>$</span>28.00");
+					//hideDescription(checkboxID);
+					//changePrice("<span>$</span>28.00");
 				} else {
-					changePrice("<span>$</span>56.00");
+					//changePrice("<span>$</span>56.00");
 				}
-			}); */
+			});
 	}
-  /*
+
 
 	function deselect(checkbox) {
 		checkbox.prop('checked', false);
 	}
-
+/*
 	function showDescription(container) {
 		$(".license-text[data-license='"+container+"']").slideDown();
 	}
