@@ -33,7 +33,7 @@ $("form#upload_form").submit(function(event){
     $("#uploaditem-item_github").val(github);
     $("#uploaditem-item_website").val(website);
     $("#uploaditem-item_linkvideo").val(video);
-    $("#addons-uploaditem-app").submit();
+    $("#addons-uploaditem").submit();
   } else if (is_app == 0 ) { // theme
     $("#uploaditem-is_app").val(is_app);
     $("#uploaditem-name_app").val(name_app);
@@ -42,7 +42,7 @@ $("form#upload_form").submit(function(event){
     $("#uploaditem-item_description").val(description);
     $("#uploaditem-item_linkdoc").val(linkdoc);
     $("#uploaditem-item_linkvideo").val(video);
-    $("#addons-uploaditem-theme").submit();
+    $("#addons-uploaditem").submit();
   }
 
 
