@@ -22,8 +22,8 @@ $filter = array('all' => 'selected',
   if ($_GET['filter'] == 'free') {
     // search items free
     // count the number of items found
-    $filter['all']['selected'] = '' ;
-    $filter['free']['selected'] = 'selected';
+    $filter['all'] = '' ;
+    $filter['free'] = 'selected';
     echo $_GET['name'];
     // filter items free
     // count the number of items found
