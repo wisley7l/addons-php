@@ -51,11 +51,12 @@ if (isset($_GET['logout'])){
 }
 // varible select filter
 $filter = array('all' => 'selected',
- 'free' => '');
+ 'free' => ''
+);
 // filter categories and price
 if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
-    header("Location: theme-page");
+    header("Location: ");
     exit;
   }
   if ($_GET['filter'] == 'free') {
@@ -111,21 +112,16 @@ $info_page = array(
   'search_id' => 0,
   'number_found' => $number_found
 );
-// query filter itens
-$filter_segment = array(
-  array('name' => 'Test 1'),
-  array('name' => 'Test 2')
-);
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
-echo $twig->render('apps-themes-page.twig', array(
+echo $twig->render('search-item.twig', array(
   'dictionary' => $dictionary,
   'login' => $login,
   'info_footer' => $info_footer,
   'info_page' => $info_page,
-  'segment' => $filter_segment,
+
   'filter' => $filter,
   'app_category' => $app_category,
   'theme_category' => $theme_category,

@@ -23,13 +23,8 @@
 	<!-- SECTION HEADLINE -->
 	<div class="section-headline-wrap">
 		<div class="section-headline">
-			{% if info_page.app_store == true %}
-			<h2>{{ dictionary.word_apps_store }}</h2>
+			<h2>{{info_page.name}}</h2>
 			<!--p>Home<span class="separator">/</span>Shop V1<span class="separator">/</span><span class="current-section">Illustration</span></p-->
-			{% else %}
-			<h2>{{ dictionary.word_themes_store }}</h2>
-			<!--p>Home<span class="separator">/</span>Shop V1<span class="separator">/</span><span class="current-section">Illustration</span></p-->
-			{% endif %}
 		</div>
 	</div>
 	<!-- /SECTION HEADLINE -->
@@ -39,38 +34,6 @@
 		<div class="section">
 			<div class="headline primary">
 				<h4>{{dictionary.word_items_found}} ({{info_page.number_found}})</h4>
-				<form id="shop_filter_form" name="shop_filter_form">
-					<label for="price_filter" class="select-block">
-						<select name="price_filter" id="price_filter" onchange="location = this.value;">
-							{% for category in all_category %}
-							{% set selected = '' %}
-							{% if category.id == info_page.search_id %}
-								{% set selected = 'selected' %}
-							{% endif %}
-							<option value="{{category.page}}" {{ selected }}>{{category.name}}</option>
-            {% endfor %}
-						</select>
-						<!-- SVG ARROW -->
-						<svg class="svg-arrow">
-							<use xlink:href="#svg-arrow"></use>
-						</svg>
-						<!-- /SVG ARROW -->
-					</label>
-				</form>
-				<form id="shop_filter_form" name="shop_filter_form">
-					<label for="price_filter" class="select-block">
-						<select name="price_filter" id="price_filter" onchange="location = this.value;">
-							<option value="?filter=all" {{filter.all}}>All</option>
-							<option value="?filter=free" {{filter.free}}>Free</option>
-						</select>
-						<!-- SVG ARROW -->
-						<svg class="svg-arrow">
-							<use xlink:href="#svg-arrow"></use>
-						</svg>
-						<!-- /SVG ARROW -->
-					</label>
-				</form>
-
 			</div>
 
 			<!-- CONTENT -->
