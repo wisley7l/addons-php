@@ -38,7 +38,7 @@ function getInfoUser($id)
     'member_since' => '1 Janary 2018',
     'total_sales' => 100, // sales quantity query
     'web_site' => 'www.example.com',
-    'path_image' => 'http://bluebus-wp.s3.amazonaws.com/wp-content/uploads/2014/04/Mike-Mitchell-Marvel-Portraits-Time-mitchell_spiderman_press.jpg',
+    'path_image' => 'https://cdn.pixabay.com/photo/2012/04/26/19/43/profile-42914_960_720.png',
     'number_apps_themes' => 3, // quantity of items found
     'number_badges' => 1, //not implemented
     'stars' => 1, // not implemented

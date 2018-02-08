@@ -40,7 +40,7 @@ else {
     $_SESSION['login'] = true;
     $_SESSION['is_store'] = false;
     $_SESSION['credits'] = 9;
-    $_SESSION['path_image'] = 'http://pic.68ps.com/jc/UploadFile1466/20130521/jc1305211_12.jpg';
+    $_SESSION['path_image'] = 'https://cdn.pixabay.com/photo/2012/04/26/19/43/profile-42914_960_720.png';
     //var_dump($_SESSION);
     if (!is_writable(session_save_path())) {
     //echo 'Session path "'.session_save_path().'" is not writable for PHP!';

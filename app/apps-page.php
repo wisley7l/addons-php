@@ -2,7 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
-$name_item;
+$name_item; // variable save term search
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
 session_write_close();
@@ -35,7 +35,6 @@ if (isset($_GET['filter'])){ // if exists filter
     exit;
   }else  if ($_GET['filter'] == 'free' and !empty($_GET['name'])) { // filter is free and name item
     $name_item = $_GET['name'];
-    echo "search all app $name_item free ";
     // search items free with name
     // count the number of items found
     $filter['all'] = '';
@@ -43,7 +42,6 @@ if (isset($_GET['filter'])){ // if exists filter
     $number_found = 0;
 
   }else if ($_GET['filter'] == 'free') { //filter is free and not name
-    echo "search all free ";
     // search items all free
     // count the number of items found
     $filter['all'] = '';
@@ -60,8 +58,6 @@ else if (isset($_GET['term']) and isset($_GET['x']) ){
   exit;
 }
 else if (isset($_GET['term'])){
-  echo $_GET['term'];
-  echo PHP_EOL;
   $name_item = $_GET['term'];
   // create query for search item by term
 
