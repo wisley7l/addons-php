@@ -38,7 +38,7 @@
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
-              <option value="?filter=all&name={{info_page.name}}" {{filter.all[selected]}}>All - {{filter.all}}</option>
+              <option value="?filter=all&name={{info_page.name}}" {{filter.all[selected]}}>All - {{filter.all[0]}}</option>
 							<option value="?filter=free&name={{info_page.name}}"{{filter.free[selected]}}>Free</option>
 						</select>
 						<!-- SVG ARROW -->
