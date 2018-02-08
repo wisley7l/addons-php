@@ -1,10 +1,13 @@
 <?php
 var_dump($_GET);
 
-if (empty($_GET['app']) and empty($_GET['term'])) {
-  // app is empty and term empty
+if (empty($_GET['term'])) {
+   //Term is empty
   echo "error";
-}else if ((int) $_GET['app'] == 1) {
+}else if (empty($_GET['app'])){
+  // app is empty
+  echo "error";
+} else if ((int) $_GET['app'] == 1) {
   // app is 1
   # seacrh app
   echo "app";
