@@ -27,6 +27,9 @@ if (isset($_GET['logout'])){
   // obs. check redirection on all pages
   header("Location: index");
 }
+if ($login == false) {
+  header("Location: error-page");
+}
 //(end) * Required on all pages *
 
 // intial twig and send varibles for template

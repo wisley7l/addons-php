@@ -2,7 +2,7 @@
 // Occurs after clicking the login button now
 // check if user and password are null, if null, redirect to index
 if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
-  header("Location: error-page");
+  header("Location: ../?EROORLOGIN");
   exit;
 }
 // if they are not null, treat variables and query the database
@@ -46,7 +46,8 @@ else {
     //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
     }
     else {
-      header("Location: ../?SUCCESSLOGIN");
+      header("Location: ../");
+      //header("Location: ../?SUCCESSLOGIN");
       exit;
     }
   }
