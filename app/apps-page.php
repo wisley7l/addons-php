@@ -26,20 +26,28 @@ if (isset($_GET['logout'])){
 $filter = array('all' => 'selected',
  'free' => '');
 // filter categories and price
-if (isset($_GET['filter'])){
-  if($_GET['filter'] == 'all'){
+if (isset($_GET['filter'])){ // if exists filter
+  if($_GET['filter'] == 'all'and !empty($_GET['name'])){ // filter is all and name item
     echo $_GET['name'];
+    $filter['all'] = 'selected';
+    $filter['free'] = '';
+    $name_item = $_GET['name'];
 
 
-  }else if ($_GET['filter'] == 'free' and !empty($_GET['name'])) {
-    echo "com name";
-    // search items free
+  }else if($_GET['filter'] == 'all'){ // filter is all and not name item
+    echo "redirect app page";
+
+
+  }else  if ($_GET['filter'] == 'free' and !empty($_GET['name'])) { // filter is free and name item
+    $name_item = $_GET['name'];
+    // search items free with name
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
-  }else if ($_GET['filter'] == 'free') {
+
+  }else if ($_GET['filter'] == 'free') { //filter is free and not name
     echo "certo";
-    // search items free
+    // search items all free
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
