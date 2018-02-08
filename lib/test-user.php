@@ -89,3 +89,15 @@ function getImagesTheme($value='')
 
 // search apps with name and free
 // search themes with name and free
+
+// search apps with category
+// search themes with category
+
+// search apps with category  and free
+// search themes with category and free
+
+// search apps with name and category
+// search themes with name and category
+
+// search apps with name and free and category
+// search themes with name and free and category
