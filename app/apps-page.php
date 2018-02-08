@@ -28,12 +28,8 @@ $filter = array('all' => 'selected',
 // filter categories and price
 if (isset($_GET['filter'])){ // if exists filter
   if($_GET['filter'] == 'all'and !empty($_GET['name'])){ // filter is all and name item
-    echo $_GET['name'];
-    $filter['all'] = 'selected';
-    $filter['free'] = '';
-    $name_item = $_GET['name'];
-    $number_found = 0;
-
+    header("Location: apps-page?term=" . $_GET['name']);
+    exit;
   }else if($_GET['filter'] == 'all'){ // filter is all and not name item
     header("Location: apps-page");
     exit;
