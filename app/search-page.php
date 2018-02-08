@@ -51,12 +51,11 @@ if (isset($_GET['logout'])){
 }
 // varible select filter
 $filter = array('all' => 'selected',
- 'free' => ''
-);
+ 'free' => '');
 // filter categories and price
 if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
-    header("Location: ");
+    header("Location: product-sourcing");
     exit;
   }
   if ($_GET['filter'] == 'free') {
@@ -64,30 +63,40 @@ if (isset($_GET['filter'])){
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
+    // filter items free
+    // count the number of items found
     $number_found = 0;
-    var_dump($themes);
   }
-
 }
-elseif (isset($_GET['term']) and isset($_GET['x']) ){
+else if (isset($_GET['term']) and isset($_GET['x']) ){
   // fix search
   header("Location: ?term=" . $_GET['term']);
   exit;
 }
-else {
+else if (isset($_GET['term']) and isset($_GET['app'])){
+  echo $_GET['term'];
+  echo PHP_EOL;
+  // in this case fetch only app with term = GET in the specified category
+  // create query for search item by term
+
+  // count the number of items found
+  $number_found = 0;
+
+} else {
   // count the number of items found
   $number_found = 2;
   // query all items
 
   // test apps  // Perform db query to obtain this information limit 3
   // query apps in db
-  $item = getAppTheme(1112,3,$dictionary,0);
-  $item2 = getAppTheme(1110,3,$dictionary,0);
-  $themes = array();
+  $item = getAppTheme(1001,2,$dictionary,1);
+  $item2 = getAppTheme(1000,2,$dictionary,1);
+  $apps = array();
   // add element in array
-  array_push($themes, $item);
-  array_push($themes, $item2);
+  array_push($apps, $item);
+  array_push($apps, $item2);
 }
+
 //(end) * Required on all pages *
 
 // obs: query db for informations
@@ -103,14 +112,27 @@ $info_footer = array(
 
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
-//$app_category = get_categories_app();
-//$theme_category = get_categories_theme();
+$app_category = get_categories_app();
+$theme_category = get_categories_theme();
+// difine page
+$id_category = 1;
+foreach ($app_category as $category) {
+    if ($category['id'] == $id_category) {
+      $name_page = $category['name'];
+    }
+}
+
+
 
 //info search
 $info_page = array(
-  'app_store' => false,
-  'search_id' => 0,
+  'name' => $name_page,
   'number_found' => $number_found
+);
+// query filter itens
+$filter_segment = array(
+  array('name' => 'Test 1'),
+  array('name' => 'Test 2' )
 );
 
 // intial twig and send varibles for template
@@ -121,13 +143,13 @@ echo $twig->render('search-item.twig', array(
   'login' => $login,
   'info_footer' => $info_footer,
   'info_page' => $info_page,
-
-  'filter' => $filter,
+  'segment' => $filter_segment,
   'app_category' => $app_category,
   'theme_category' => $theme_category,
-  'all_category' => $theme_category,
+  'all_category' => $app_category,
+  'filter' => $filter,
   // test apps
-  'apps_themes' => $themes,
+  'apps_themes' => $apps,
   'user' => $user_login,
-
+  'search_id' => $id_category
 ));
