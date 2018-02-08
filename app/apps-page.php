@@ -29,31 +29,17 @@ $filter = array('all' => 'selected',
 // filter categories and price
 if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
-    if (isset($_GET['name'])) {
-      header("Location: apps-page?term=" . $_GET['name']);
-      exit;
-    }else {
-      header("Location: apps-page");
-      exit;
-    }
+    echo $_GET['name'];
+
 
   }else if ($_GET['filter'] == 'free') {
     // search items free
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
+    echo $_GET['name'];
     //
-    if (isset($_GET['name'])) {
-      echo $_GET['name'];
-      // search app free with term = name
-      // count the number of items found
-      $number_found = 0;
-    }else {
-      echo "name empty";
-      // filter items free
-      // count the number of items found
-      $number_found = 0;
-    }
+
   }else {
     header("Location: apps-page");
     exit;
