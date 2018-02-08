@@ -9,6 +9,10 @@ $filter = array('all' => 'selected',
  if (!isset($_GET['app']) and !isset($_GET['term']) and !isset($_GET['filter'])){
   // app is empty
   echo "error";
+} else if (isset($_GET['term']) and isset($_GET['x']) ){
+  // fix search
+  header("Location: ?term=" . $_GET['term']);
+  exit;
 } elseif (isset($_GET['term'])) {
   # code...
   echo "term";
@@ -28,22 +32,20 @@ $filter = array('all' => 'selected',
     // count the number of items found
     $number_found = 0;
   }
-}
-else if (isset($_GET['term']) and isset($_GET['x']) ){
-  // fix search
-  header("Location: ?term=" . $_GET['term']);
-  exit;
-}
-else if ((int) $_GET['app'] == 1 and isset($_GET['name']) ) {
+}else if ((int) $_GET['app'] == 1 and isset($_GET['name']) ) {
   // app is 1
   # seacrh app
   echo "app";
-  $name_page = $_GET['name'];
+  // redirect theme page term= name
+  header("Location: apps-page?term=" . $_GET['name']);
+  exit;
 }else if ((int) $_GET['app'] == 0 and isset($_GET['name'])) {
   // app is 0
   # search theme
   echo "theme";
-  $name_page = $_GET['name'];
+  // redirect theme page term= name
+  header("Location: theme-page?term=" . $_GET['name']);
+  exit;
 }
 // else {
 //   // count the number of items found
@@ -145,5 +147,4 @@ echo $twig->render('search-item.twig', array(
   // test apps
   'apps_themes' => $apps,
   'user' => $user_login,
-  'search_id' => $id_category
 ));
