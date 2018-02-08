@@ -28,20 +28,30 @@ $filter = array('all' => 'selected',
  $name_item = '';
 // filter categories and price
 if (isset($_GET['filter'])){
-  if (isset($_GET['name'])) {
-    echo "???";
-  }
   if($_GET['filter'] == 'all'){
-    header("Location: apps-page");
-    exit;
+    if (isset($_GET['name'])) {
+      header("Location: apps-page?term=" . $_GET['name']);
+      exit;
+    }else {
+      header("Location: apps-page");
+      exit;
+    }
+
   }else if ($_GET['filter'] == 'free') {
     // search items free
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
-    // filter items free
-    // count the number of items found
-    $number_found = 0;
+    //
+    if (isset($_GET['name'])) {
+      // search app free with term = name
+      // count the number of items found
+      $number_found = 0;
+    }else {
+      // filter items free
+      // count the number of items found
+      $number_found = 0;
+    }
   }else {
     header("Location: apps-page");
     exit;
@@ -49,15 +59,13 @@ if (isset($_GET['filter'])){
 }
 else if (isset($_GET['term']) and isset($_GET['x']) ){
   // fix search
-  header("Location: ?term=" . $_GET['term'] . "&app=1");
+  header("Location: ?term=" . $_GET['term']);
   exit;
 }
-else if (isset($_GET['term']) and isset($_GET['app'])){
+else if (isset($_GET['term'])){
   echo $_GET['term'];
   echo PHP_EOL;
-  echo $_GET['app'];
   // create query for search item by term
-  // if app == 1 is app else theme
 
   // count the number of items found
   $number_found = 0;
