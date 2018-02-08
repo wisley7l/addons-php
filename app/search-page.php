@@ -6,10 +6,10 @@ $filter = array('all' => 'selected',
  'free' => '',
 );
 
- if (empty($_GET['app']) and empty($_GET['term']) and empty($_GET['filter'])){
+ if (!isset($_GET['app']) and !isset($_GET['term']) and !isset($_GET['filter'])){
   // app is empty
   echo "error";
-} elseif (!empty($_GET['term'])) {
+} elseif (isset($_GET['term'])) {
   # code...
   echo "term";
   $name_page = $_GET['term'];
@@ -34,12 +34,12 @@ else if (isset($_GET['term']) and isset($_GET['x']) ){
   header("Location: ?term=" . $_GET['term']);
   exit;
 }
-else if ((int) $_GET['app'] == 1 and !empty($_GET['name']) ) {
+else if ((int) $_GET['app'] == 1 and isset($_GET['name']) ) {
   // app is 1
   # seacrh app
   echo "app";
   $name_page = $_GET['name'];
-}else if ((int) $_GET['app'] == 0 and !empty($_GET['name'])) {
+}else if ((int) $_GET['app'] == 0 and isset($_GET['name'])) {
   // app is 0
   # search theme
   echo "theme";
