@@ -2,7 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
-
+$name_item = '';
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
 session_write_close();
@@ -25,7 +25,6 @@ if (isset($_GET['logout'])){
 // varible select filter
 $filter = array('all' => 'selected',
  'free' => '');
- $name_item = '';
 // filter categories and price
 if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
