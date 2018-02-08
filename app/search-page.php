@@ -50,8 +50,8 @@ if (isset($_GET['logout'])){
   header("Location: index");
 }
 // varible select filter
-$filter = array('all' => 'selected',
- 'free' => '');
+$filter = array('all' => array('selected' => 'selected', ),
+ 'free' => array('selected' => '', ),);
 // filter categories and price
 if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
@@ -72,16 +72,6 @@ else if (isset($_GET['term']) and isset($_GET['x']) ){
   // fix search
   header("Location: ?term=" . $_GET['term']);
   exit;
-}
-else if (isset($_GET['term']) and isset($_GET['app'])){
-  echo $_GET['term'];
-  echo PHP_EOL;
-  // in this case fetch only app with term = GET in the specified category
-  // create query for search item by term
-
-  // count the number of items found
-  $number_found = 0;
-
 } else {
   // count the number of items found
   $number_found = 2;
@@ -129,11 +119,8 @@ $info_page = array(
   'name' => $name_page,
   'number_found' => $number_found
 );
-// query filter itens
-$filter_segment = array(
-  array('name' => 'Test 1'),
-  array('name' => 'Test 2' )
-);
+
+
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
@@ -143,7 +130,6 @@ echo $twig->render('search-item.twig', array(
   'login' => $login,
   'info_footer' => $info_footer,
   'info_page' => $info_page,
-  'segment' => $filter_segment,
   'app_category' => $app_category,
   'theme_category' => $theme_category,
   'all_category' => $app_category,

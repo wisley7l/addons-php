@@ -34,6 +34,20 @@
 		<div class="section">
 			<div class="headline primary">
 				<h4>{{dictionary.word_items_found}} ({{info_page.number_found}})</h4>
+
+				<form id="shop_filter_form" name="shop_filter_form">
+					<label for="price_filter" class="select-block">
+						<select name="price_filter" id="price_filter" onchange="location = this.value;">
+              <option value="?filter=all" {{filter.all[selected]}}>All</option>
+							<option value="?filter=free"{{filter.free[selected]}}>Free</option>
+						</select>
+						<!-- SVG ARROW -->
+						<svg class="svg-arrow">
+							<use xlink:href="#svg-arrow"></use>
+						</svg>
+						<!-- /SVG ARROW -->
+					</label>
+				</form>
 			</div>
 
 			<!-- CONTENT -->
