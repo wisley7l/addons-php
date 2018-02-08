@@ -15,16 +15,15 @@ $filter = array('all' => 'selected',
   $name_page = $_GET['term'];
 } else if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
-    echo $_GET['name'];
-    //header("Location: ");
-    //exit;
+    header("Location: ?term=" . $_GET['name']);
+    exit;
   }
   if ($_GET['filter'] == 'free') {
     // search items free
     // count the number of items found
     $filter['all'] = '' ;
     $filter['free'] = 'selected';
-    echo $_GET['name'];
+    $name_page = $_GET['name'];
     // filter items free
     // count the number of items found
     $number_found = 0;
