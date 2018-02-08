@@ -2,7 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
-$name_item = 0;
+$name_item;
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
 session_write_close();
@@ -35,18 +35,18 @@ if (isset($_GET['filter'])){ // if exists filter
 
 
   }else if($_GET['filter'] == 'all'){ // filter is all and not name item
-    echo "redirect app page";
-
-
+    header("Location: apps-page");
+    exit;
   }else  if ($_GET['filter'] == 'free' and !empty($_GET['name'])) { // filter is free and name item
     $name_item = $_GET['name'];
+    echo "search all app $name_item free ";
     // search items free with name
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
 
   }else if ($_GET['filter'] == 'free') { //filter is free and not name
-    echo "certo";
+    echo "search all free ";
     // search items all free
     // count the number of items found
     $filter['all'] = '';
