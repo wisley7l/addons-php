@@ -48,6 +48,7 @@ if (isset($_GET['filter'])){
       // count the number of items found
       $number_found = 0;
     }else {
+      echo "name empty";
       // filter items free
       // count the number of items found
       $number_found = 0;
