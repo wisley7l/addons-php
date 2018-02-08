@@ -2,7 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
-
+$name_item;
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
 session_write_close();
@@ -107,6 +107,7 @@ $theme_category = get_categories_theme();
 
 //info search
 $info_page = array(
+  'name' => $name_item,
   'app_store' => false,
   'search_id' => 0,
   'number_found' => $number_found
