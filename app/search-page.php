@@ -15,8 +15,10 @@ $filter = array('all' => 'selected',
   exit;
 } elseif (isset($_GET['term'])) {
   # code...
-  echo "term";
+  // filter items free
+  // count the number of items found
   $name_page = $_GET['term'];
+  $number_found = 0;
 } else if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
     header("Location: ?term=" . $_GET['name']);
@@ -35,14 +37,12 @@ $filter = array('all' => 'selected',
 }else if ((int) $_GET['app'] == 1 and isset($_GET['name']) ) {
   // app is 1
   # seacrh app
-  echo "app";
   // redirect theme page term= name
   header("Location: apps-page?term=" . $_GET['name']);
   exit;
 }else if ((int) $_GET['app'] == 0 and isset($_GET['name'])) {
   // app is 0
   # search theme
-  echo "theme";
   // redirect theme page term= name
   header("Location: theme-page?term=" . $_GET['name']);
   exit;
@@ -61,17 +61,6 @@ $filter = array('all' => 'selected',
 //   array_push($apps, $item);
 //   array_push($apps, $item2);
 // }
-
-
-
-
-
-
-
-
-
-
-
 
 // treat template page
 
@@ -98,8 +87,6 @@ if (isset($_GET['logout'])){
   session_destroy();
   header("Location: index");
 }
-
-
 
 //(end) * Required on all pages *
 

@@ -25,13 +25,16 @@ if (isset($_GET['logout'])){
 // varible select filter
 $filter = array('all' => 'selected',
  'free' => '');
+ $name_item = '';
 // filter categories and price
 if (isset($_GET['filter'])){
+  if (isset($_GET['name'])) {
+    echo "???";
+  }
   if($_GET['filter'] == 'all'){
     header("Location: apps-page");
     exit;
-  }
-  if ($_GET['filter'] == 'free') {
+  }else if ($_GET['filter'] == 'free') {
     // search items free
     // count the number of items found
     $filter['all'] = '';
@@ -39,6 +42,9 @@ if (isset($_GET['filter'])){
     // filter items free
     // count the number of items found
     $number_found = 0;
+  }else {
+    header("Location: apps-page");
+    exit;
   }
 }
 else if (isset($_GET['term']) and isset($_GET['x']) ){
@@ -88,8 +94,9 @@ $info_footer = array(
 
 //info search
 $info_page = array(
-  'app_store' => true,
-  'search_id' => 0,
+  'name' => $name_item,
+  'app_store' => true, // is app page
+  'search_id' => 0, // sected category
   'number_found' => $number_found
 );
 // query filter itens
