@@ -40,13 +40,16 @@ if (isset($_GET['logout'])){
 if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
   if (empty($_GET['category_name'])) {
     print '<h2 style= "text-align:center; color:blue">' . $dictionary['word_search_empty'] . '</h2>';
-  }else if ($_GET['categories'] == 1) {
+  }else if ((int) $_GET['categories'] == 1) {
     // seacrch for app with name category_name
     // redirect for search page with parameters
+    header("Location: search-page?app=" . $_GET['categories'] . "&name=" . $_GET['category_name']);
   }
-  else if ($_GET['categories'] == 0) {
+  else if ((int) $_GET['categories'] == 0) {
     // seacrch for thema with name category_name
     // redirect for search page with parameters
+    header("Location: search-page?app=" . $_GET['categories'] . "&name=" . $_GET['category_name']);
+    exit;
 
   }
   else {
