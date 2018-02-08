@@ -134,6 +134,7 @@ function get_dictionary () {
       $word_service = 'Service';
       $word_other = 'Other';
       $word_categories = 'Categories';
+      $word_search_empty = 'The search is empty.';
       break;
 
     default:
@@ -252,6 +253,7 @@ function get_dictionary () {
       $word_toys_games = 'Infantil e Brinquedos';
       $word_other = 'Outros';
       $word_categories = 'Categorias';
+      $word_search_empty = 'A busca está vazia.';
 
       break;
   }
@@ -384,6 +386,7 @@ function get_dictionary () {
     'word_fitness' => 'Fitness',
     'word_other' => $word_other,
     'word_categories' => $word_categories,
+    'word_search_empty' => $word_search_empty, 
   );
   return $dictionary;
 }

@@ -5,6 +5,7 @@ $dictionary = get_dictionary();
 // variable to check the user login, because some options are only allowed for online users
 $login = false;
 // check if there was a login attempt and treats error and success attempts
+/*
 if (isset($_GET['EROORLOGIN'])) {
   // create hidden div to handle login error attempt
     print '<div class="addons-error-login" style="display:none">' . $dictionary['word_invalid_login'] . '</div>';
@@ -13,6 +14,7 @@ if (isset($_GET['SUCCESSLOGIN'])) {
     // create hidden div to handle login success attempt
     print '<div class="addons-sucess-login" style="display:none">' . $dictionary['word_sucess_login'] . '</div>';
 }
+*/
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
 session_write_close();
@@ -37,38 +39,35 @@ if (isset($_GET['logout'])){
 
 if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
   if (empty($_GET['category_name'])) {
-    echo "category_name is empty";
-    echo PHP_EOL;
-  }else {
+    print '<h2>' . $dictionary['word_search_empty'] . '</h2>';
+  }else if ($_GET['categories'] == 1) {
+    // seacrch for app with name category_name
+    // redirect for search page with parameters
     echo $_GET['category_name'];
     echo PHP_EOL;
-  }
-  //
-  if ($_GET['categories'] == 1) {
     echo "category is APP";
     echo PHP_EOL;
   }
-  else {
-    echo "category is THEME";
-    echo PHP_EOL;
-  }
+  else if ($_GET['categories'] == 0) {
+    // seacrch for thema with name category_name
+    // redirect for search page with parameters
 
-  echo $_GET['category_name'];
-  echo PHP_EOL;
-  echo $_GET['categories'];
-  echo PHP_EOL;
+  }
+  else {
+    header("Location: error-page");
+    exit;
+  }
   // obs: treat search
   //  category_name=&categories=0
 }
 else if (isset($_GET['term']) and isset($_GET['x']) ){
-  // fix search
+  // fix search menu
   header("Location: ?term=" . $_GET['term']);
   exit;
 }
 else if (isset($_GET['term']) ){
   echo $_GET['term'];
   echo PHP_EOL;
-  echo $_GET['app'];
   // create query for search item by term
   // search app and theme with term
 
