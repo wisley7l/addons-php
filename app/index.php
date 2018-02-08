@@ -39,7 +39,7 @@ if (isset($_GET['logout'])){
 
 if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
   if (empty($_GET['category_name'])) {
-    print '<h2 style = "text-align:center">' . $dictionary['word_search_empty'] . '</h2>';
+    print '<h2 style= "text-align:center" color="blue">' . $dictionary['word_search_empty'] . '</h2>';
   }else if ($_GET['categories'] == 1) {
     // seacrch for app with name category_name
     // redirect for search page with parameters
