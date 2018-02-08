@@ -67,6 +67,7 @@ else if (isset($_GET['term']) and isset($_GET['x']) ){
 else if (isset($_GET['term'])){
   echo $_GET['term'];
   echo PHP_EOL;
+  $name_item = $_GET['term'];
   // create query for search item by term
 
   // count the number of items found
