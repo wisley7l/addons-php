@@ -44,6 +44,7 @@ if (isset($_GET['filter'])){
     $filter['free'] = 'selected';
     //
     if (isset($_GET['name'])) {
+      echo $_GET['name'];
       // search app free with term = name
       // count the number of items found
       $number_found = 0;
