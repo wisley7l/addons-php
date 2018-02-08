@@ -36,7 +36,7 @@ if (isset($_GET['logout'])){
 //(end) * Required on all pages *
 
 if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
-  if ($_GET['category_name'] == '') {
+  if (empty($_GET['category_name'])) {
     echo "category_name is empty";
     echo PHP_EOL;
   }else {
