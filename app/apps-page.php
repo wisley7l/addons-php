@@ -31,18 +31,19 @@ if (isset($_GET['filter'])){
     echo $_GET['name'];
 
 
-  }else if ($_GET['filter'] == 'free') {
+  }else if ($_GET['filter'] == 'free' and isset($_GET['name'])) {
+    echo "com name";
     // search items free
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
-    echo $_GET['name'];
-    //
-    if (isset($_GET['name'])) {
-      echo $_GET['name'];
-    } else if (($_GET['name'] == '')) {
-      echo "simmmmm";
-    }
+    echo "string";
+  }else if ($_GET['filter'] == 'free') {
+    echo "certo";
+    // search items free
+    // count the number of items found
+    $filter['all'] = '';
+    $filter['free'] = 'selected';
     echo "string";
   }else {
     header("Location: apps-page");
