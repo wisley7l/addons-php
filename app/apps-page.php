@@ -2,7 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
-$name_item = '';
+$name_item = 0;
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
 session_write_close();
@@ -31,7 +31,7 @@ if (isset($_GET['filter'])){
     echo $_GET['name'];
 
 
-  }else if ($_GET['filter'] == 'free' and isset($_GET['name'])) {
+  }else if ($_GET['filter'] == 'free' and empty($_GET['name'])) {
     echo "com name";
     // search items free
     // count the number of items found
@@ -44,7 +44,6 @@ if (isset($_GET['filter'])){
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
-    echo "string";
   }else {
     header("Location: apps-page");
     exit;
