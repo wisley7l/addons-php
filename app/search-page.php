@@ -2,8 +2,8 @@
 //var_dump($_GET);
 
 // varible select filter
-$filter = array('all' => array('selected' => 'selected', ),
- 'free' => array('selected' => '', ),
+$filter = array('all' => 'selected',
+ 'free' => '',
 );
 
  if (empty($_GET['app']) and empty($_GET['term']) and empty($_GET['filter'])){
