@@ -43,7 +43,7 @@ if (isset($_GET['filter'])){
     } elseif (!isset($_GET['name'])) {
       echo "simmmmm";
     }
-
+    echo "string";
   }else {
     header("Location: apps-page");
     exit;
