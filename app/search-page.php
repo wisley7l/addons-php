@@ -70,18 +70,10 @@ if (isset($_GET['filter'])){
 }
 elseif (isset($_GET['term']) and isset($_GET['x']) ){
   // fix search
-  header("Location: ?term=" . $_GET['term'] . "&app=0");
+  header("Location: ?term=" . $_GET['term']);
   exit;
 }
-elseif (isset($_GET['term']) and isset($_GET['app'])){
-  echo $_GET['term'];
-  echo PHP_EOL;
-  echo $_GET['app'];
-  // create query for search item by term
-  // if app == 1 is app else theme
-  // count the number of items found
-  $number_found = 0;
-} else {
+else {
   // count the number of items found
   $number_found = 2;
   // query all items
