@@ -43,10 +43,6 @@ if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
   }else if ($_GET['categories'] == 1) {
     // seacrch for app with name category_name
     // redirect for search page with parameters
-    echo $_GET['category_name'];
-    echo PHP_EOL;
-    echo "category is APP";
-    echo PHP_EOL;
   }
   else if ($_GET['categories'] == 0) {
     // seacrch for thema with name category_name
@@ -66,11 +62,14 @@ else if (isset($_GET['term']) and isset($_GET['x']) ){
   exit;
 }
 else if (isset($_GET['term']) ){
-  echo $_GET['term'];
-  echo PHP_EOL;
-  // create query for search item by term
-  // search app and theme with term
-
+  if (empty($_GET['term'])) {
+    print '<h2 style= "text-align:center; color:blue">' . $dictionary['word_search_empty'] . '</h2>';
+  }else {
+    // search app and theme with term
+    // redirect for search page with parameters
+    header("Location: search-page?term=" . $_GET['term']);
+    exit;
+  }
 } else {
   //
   // test apps  // Perform db query to obtain this information
