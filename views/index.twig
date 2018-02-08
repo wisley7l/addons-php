@@ -136,14 +136,12 @@
 		<span class="icon-tag"></span>
 		<h5>{{ dictionary.desc_promo_store }}</h5>
 		<h1>{{dictionary.word_start}} {{ dictionary.word_buying }}</h1>
-		<a href="#login-popup" class="button medium dark">{{ dictionary.buy_now }}</a>
+		<a href="#login-popup" class="button medium dark promo-popup">{{ dictionary.buy_now }}</a>
 	</div>
 	<!-- /PROMO -->
-	<!-- FORM POPUP -->
 	<div id="login-popup" class="form-popup mfp-hide">
 		{{macro_main.login(dictionary)}}
 	</div>
-	<!-- /FORM POPUP -->
 	{% endif %}
 	<div class="clearfix"></div>
 
