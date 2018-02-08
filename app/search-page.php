@@ -1,5 +1,10 @@
 <?php
-var_dump($_GET);
+//var_dump($_GET);
+
+// varible select filter
+$filter = array('all' => array('selected' => 'selected', ),
+ 'free' => array('selected' => '', ),
+);
 
  if (empty($_GET['app']) and empty($_GET['term']) and empty($_GET['filter'])){
   // app is empty
@@ -24,6 +29,11 @@ var_dump($_GET);
     // count the number of items found
     $number_found = 0;
   }
+}
+else if (isset($_GET['term']) and isset($_GET['x']) ){
+  // fix search
+  header("Location: ?term=" . $_GET['term']);
+  exit;
 }
 else if ((int) $_GET['app'] == 1 and !empty($_GET['name']) ) {
   // app is 1
@@ -87,10 +97,7 @@ if (isset($_GET['logout'])){
   session_destroy();
   header("Location: index");
 }
-// varible select filter
-$filter = array('all' => array('selected' => 'selected', ),
- 'free' => array('selected' => '', ),
-);
+
 
 
 //(end) * Required on all pages *
