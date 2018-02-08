@@ -39,6 +39,12 @@ if (isset($_GET['filter'])){
     $filter['free'] = 'selected';
     echo $_GET['name'];
     //
+    if (isset($_GET['name'])) {
+      echo $_GET['name'];
+    }
+    else {
+      echo "?????";
+    }
 
   }else {
     header("Location: apps-page");
