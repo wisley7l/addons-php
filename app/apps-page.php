@@ -32,7 +32,7 @@ if (isset($_GET['filter'])){ // if exists filter
     $filter['all'] = 'selected';
     $filter['free'] = '';
     $name_item = $_GET['name'];
-
+    $number_found = 0;
 
   }else if($_GET['filter'] == 'all'){ // filter is all and not name item
     header("Location: apps-page");
@@ -44,6 +44,7 @@ if (isset($_GET['filter'])){ // if exists filter
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
+    $number_found = 0;
 
   }else if ($_GET['filter'] == 'free') { //filter is free and not name
     echo "search all free ";
@@ -51,6 +52,7 @@ if (isset($_GET['filter'])){ // if exists filter
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
+    $number_found = 0;
   }else {
     header("Location: apps-page");
     exit;

@@ -75,3 +75,17 @@ function getImagesTheme($value='')
   array_push($themes,$i2);
   return $themes;
 }
+
+// create querys
+
+// search all apps
+// search all themes
+
+// search all apps free
+// search all themes free
+
+// search apps with name
+// search themes with name
+
+// search apps with name and free
+// search themes with name and free

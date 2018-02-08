@@ -26,34 +26,53 @@ if (isset($_GET['logout'])){
 $filter = array('all' => 'selected',
  'free' => '');
 // filter categories and price
-if (isset($_GET['filter'])){
-  if($_GET['filter'] == 'all'){
+// filter categories and price
+if (isset($_GET['filter'])){ // if exists filter
+  if($_GET['filter'] == 'all'and !empty($_GET['name'])){ // filter is all and name item
+    echo $_GET['name'];
+    $filter['all'] = 'selected';
+    $filter['free'] = '';
+    $name_item = $_GET['name'];
+    $number_found = 0;
+
+  }else if($_GET['filter'] == 'all'){ // filter is all and not name item
     header("Location: theme-page");
     exit;
-  }
-  if ($_GET['filter'] == 'free') {
-    // search items free
+  }else  if ($_GET['filter'] == 'free' and !empty($_GET['name'])) { // filter is free and name item
+    $name_item = $_GET['name'];
+    echo "search all app $name_item free ";
+    // search items free with name
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
     $number_found = 0;
-    var_dump($themes);
-  }
 
+  }else if ($_GET['filter'] == 'free') { //filter is free and not name
+    echo "search all free ";
+    // search items all free
+    // count the number of items found
+    $filter['all'] = '';
+    $filter['free'] = 'selected';
+    $number_found = 0;
+  }else {
+    header("Location: theme-page");
+    exit;
+  }
 }
-elseif (isset($_GET['term']) and isset($_GET['x']) ){
+else if (isset($_GET['term']) and isset($_GET['x']) ){
   // fix search
-  header("Location: ?term=" . $_GET['term'] . "&app=0");
+  header("Location: ?term=" . $_GET['term']);
   exit;
 }
-elseif (isset($_GET['term']) and isset($_GET['app'])){
+else if (isset($_GET['term'])){
   echo $_GET['term'];
   echo PHP_EOL;
-  echo $_GET['app'];
+  $name_item = $_GET['term'];
   // create query for search item by term
-  // if app == 1 is app else theme
+
   // count the number of items found
   $number_found = 0;
+
 } else {
   // count the number of items found
   $number_found = 2;
