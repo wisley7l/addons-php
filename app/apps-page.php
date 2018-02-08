@@ -31,13 +31,12 @@ if (isset($_GET['filter'])){
     echo $_GET['name'];
 
 
-  }else if ($_GET['filter'] == 'free' and empty($_GET['name'])) {
+  }else if ($_GET['filter'] == 'free' and !empty($_GET['name'])) {
     echo "com name";
     // search items free
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
-    echo "string";
   }else if ($_GET['filter'] == 'free') {
     echo "certo";
     // search items free
