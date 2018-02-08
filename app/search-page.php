@@ -10,14 +10,17 @@ if (empty($_GET['term'])) {
 } elseif (!empty($_GET['term'])) {
   # code...
   echo "term";
+  $name_page = $_GET['term'];
 }else if ((int) $_GET['app'] == 1 and !empty($_GET['name']) ) {
   // app is 1
   # seacrh app
   echo "app";
+  $name_page = $_GET['name'];
 }else if ((int) $_GET['app'] == 0 and !empty($_GET['name'])) {
   // app is 0
   # search theme
   echo "theme";
+  $name_page = $_GET['name'];
 }else {
   # code...
   echo "error all";
@@ -51,18 +54,21 @@ if (isset($_GET['logout'])){
 }
 // varible select filter
 $filter = array('all' => array('selected' => 'selected', ),
- 'free' => array('selected' => '', ),);
+ 'free' => array('selected' => '', ),
+);
 // filter categories and price
 if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
-    header("Location: product-sourcing");
-    exit;
+    echo $_GET['name'];
+    //header("Location: ");
+    //exit;
   }
   if ($_GET['filter'] == 'free') {
     // search items free
     // count the number of items found
-    $filter['all'] = '';
-    $filter['free'] = 'selected';
+    $filter['all'] = $filter['all']['selected'] = '' ;
+    $filter['free'] = $filter['free']['selected'] = 'selected';
+    echo $_GET['name'];
     // filter items free
     // count the number of items found
     $number_found = 0;
@@ -105,12 +111,8 @@ $info_footer = array(
 $app_category = get_categories_app();
 $theme_category = get_categories_theme();
 // difine page
-$id_category = 1;
-foreach ($app_category as $category) {
-    if ($category['id'] == $id_category) {
-      $name_page = $category['name'];
-    }
-}
+
+
 
 
 

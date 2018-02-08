@@ -23,7 +23,7 @@
 	<!-- SECTION HEADLINE -->
 	<div class="section-headline-wrap">
 		<div class="section-headline">
-			<h2>{{info_page.name}}</h2>
+			<h2>{{dictionary.word_search}} : {{info_page.name}}</h2>
 			<!--p>Home<span class="separator">/</span>Shop V1<span class="separator">/</span><span class="current-section">Illustration</span></p-->
 		</div>
 	</div>
@@ -38,8 +38,8 @@
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter" onchange="location = this.value;">
-              <option value="?filter=all" {{filter.all[selected]}}>All</option>
-							<option value="?filter=free"{{filter.free[selected]}}>Free</option>
+              <option value="?filter=all&name=" {{filter.all[selected]}}>All</option>
+							<option value="?filter=free&name="{{filter.free[selected]}}>Free</option>
 						</select>
 						<!-- SVG ARROW -->
 						<svg class="svg-arrow">
