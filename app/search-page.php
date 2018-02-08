@@ -4,7 +4,7 @@ var_dump($_GET);
 if (empty($_GET['term'])) {
    //Term is empty
   echo "error";
-}else if (empty($_GET['app'])){
+}else if (empty($_GET['app']) and empty($_GET['term'])){
   // app is empty
   echo "error";
 } elseif (!empty($_GET['term'])) {
