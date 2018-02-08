@@ -40,7 +40,7 @@ if (isset($_GET['filter'])){
     //
     if (isset($_GET['name'])) {
       echo $_GET['name'];
-    } elseif (!isset($_GET['name'])) {
+    } else if (($_GET['name'] == '')) {
       echo "simmmmm";
     }
     echo "string";
