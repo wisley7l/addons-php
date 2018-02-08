@@ -102,8 +102,8 @@ $info_footer = array(
 
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
-$app_category = get_categories_app();
-$theme_category = get_categories_theme();
+//$app_category = get_categories_app();
+//$theme_category = get_categories_theme();
 
 //info search
 $info_page = array(
