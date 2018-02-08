@@ -16,7 +16,7 @@ if (isset($_SESSION)) {
   // array used to set user panel parameters
   $user_login = getUserLogin($dictionary);
 }
-if ($login == false) {
+if ($login == false) { // if not connected 
   header("Location: ../?EROORLOGIN");
   exit;
 }
@@ -32,7 +32,7 @@ if(empty($_POST)) { // not exist post
   $category = (int) $_POST['category'];
   $numversion = $_POST['numversion'];
   $description = $_POST['description'];
-  $scripturl = $_POST['scriptul'];
+  $scripturl = $_POST['scripturl'];
   $github = $_POST['github'];
   $website = $_POST['website'];
   $linkvideo = $_POST['linkvideo'];
