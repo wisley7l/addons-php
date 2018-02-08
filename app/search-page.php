@@ -8,17 +8,7 @@ var_dump($_GET);
   # code...
   echo "term";
   $name_page = $_GET['term'];
-}else if ((int) $_GET['app'] == 1 and !empty($_GET['name']) ) {
-  // app is 1
-  # seacrh app
-  echo "app";
-  $name_page = $_GET['name'];
-}else if ((int) $_GET['app'] == 0 and !empty($_GET['name'])) {
-  // app is 0
-  # search theme
-  echo "theme";
-  $name_page = $_GET['name'];
-}else if (isset($_GET['filter'])){
+} else if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
     echo $_GET['name'];
     //header("Location: ");
@@ -35,10 +25,16 @@ var_dump($_GET);
     $number_found = 0;
   }
 }
-else if (isset($_GET['term']) and isset($_GET['x']) ){
-  // fix search
-  header("Location: ?term=" . $_GET['term']);
-  exit;
+else if ((int) $_GET['app'] == 1 and !empty($_GET['name']) ) {
+  // app is 1
+  # seacrh app
+  echo "app";
+  $name_page = $_GET['name'];
+}else if ((int) $_GET['app'] == 0 and !empty($_GET['name'])) {
+  // app is 0
+  # search theme
+  echo "theme";
+  $name_page = $_GET['name'];
 }
 // else {
 //   // count the number of items found
