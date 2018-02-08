@@ -1,10 +1,7 @@
 <?php
 var_dump($_GET);
 
-if (empty($_GET['term'])) {
-   //Term is empty
-  echo "error";
-}else if (empty($_GET['app']) and empty($_GET['term'])){
+ if (empty($_GET['app']) and empty($_GET['term']) and empty($_GET['filter'])){
   // app is empty
   echo "error";
 } elseif (!empty($_GET['term'])) {
@@ -21,10 +18,52 @@ if (empty($_GET['term'])) {
   # search theme
   echo "theme";
   $name_page = $_GET['name'];
-}else {
-  # code...
-  echo "error all";
+}else if (isset($_GET['filter'])){
+  if($_GET['filter'] == 'all'){
+    echo $_GET['name'];
+    //header("Location: ");
+    //exit;
+  }
+  if ($_GET['filter'] == 'free') {
+    // search items free
+    // count the number of items found
+    $filter['all'] = $filter['all']['selected'] = '' ;
+    $filter['free'] = $filter['free']['selected'] = 'selected';
+    echo $_GET['name'];
+    // filter items free
+    // count the number of items found
+    $number_found = 0;
+  }
 }
+else if (isset($_GET['term']) and isset($_GET['x']) ){
+  // fix search
+  header("Location: ?term=" . $_GET['term']);
+  exit;
+}
+// else {
+//   // count the number of items found
+//   $number_found = 2;
+//   // query all items
+//
+//   // test apps  // Perform db query to obtain this information limit 3
+//   // query apps in db
+//   $item = getAppTheme(1001,2,$dictionary,1);
+//   $item2 = getAppTheme(1000,2,$dictionary,1);
+//   $apps = array();
+//   // add element in array
+//   array_push($apps, $item);
+//   array_push($apps, $item2);
+// }
+
+
+
+
+
+
+
+
+
+
 
 
 // treat template page
@@ -56,42 +95,7 @@ if (isset($_GET['logout'])){
 $filter = array('all' => array('selected' => 'selected', ),
  'free' => array('selected' => '', ),
 );
-// filter categories and price
-if (isset($_GET['filter'])){
-  if($_GET['filter'] == 'all'){
-    echo $_GET['name'];
-    //header("Location: ");
-    //exit;
-  }
-  if ($_GET['filter'] == 'free') {
-    // search items free
-    // count the number of items found
-    $filter['all'] = $filter['all']['selected'] = '' ;
-    $filter['free'] = $filter['free']['selected'] = 'selected';
-    echo $_GET['name'];
-    // filter items free
-    // count the number of items found
-    $number_found = 0;
-  }
-}
-else if (isset($_GET['term']) and isset($_GET['x']) ){
-  // fix search
-  header("Location: ?term=" . $_GET['term']);
-  exit;
-} else {
-  // count the number of items found
-  $number_found = 2;
-  // query all items
 
-  // test apps  // Perform db query to obtain this information limit 3
-  // query apps in db
-  $item = getAppTheme(1001,2,$dictionary,1);
-  $item2 = getAppTheme(1000,2,$dictionary,1);
-  $apps = array();
-  // add element in array
-  array_push($apps, $item);
-  array_push($apps, $item2);
-}
 
 //(end) * Required on all pages *
 
