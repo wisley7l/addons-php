@@ -101,7 +101,7 @@ $info_footer = array(
   'path_file' => $_SERVER['PATH_FILE']
 );
 
-// search item for name
+// option search item for name
 $search_item = array(
   array('id' => 1 , name => $dictionary['word_app'] ),
   array('id' => 0 , name => $dictionary['word_theme'] )
