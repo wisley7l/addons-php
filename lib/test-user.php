@@ -77,7 +77,7 @@ function getImagesTheme($value='')
 }
 
 /*
-in page index use search themes and app
+In the index page search the highlights of themes and app.
 */
 
 
