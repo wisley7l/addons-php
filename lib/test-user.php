@@ -76,6 +76,12 @@ function getImagesTheme($value='')
   return $themes;
 }
 
+/*
+in page index use search themes and app
+*/
+
+
+
 // create querys
 
 // search all apps

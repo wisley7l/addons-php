@@ -118,7 +118,6 @@ $twig = new Twig_Environment($loader);
 echo $twig->render('index.twig', array(
   'dictionary' => $dictionary,
   'login' => $login,
-  'implemented' => false,
   'info_footer' => $info_footer,
   'app_category' => $app_category,
   'theme_category' => $theme_category,
