@@ -19,7 +19,38 @@
 <!-- header -->
 	{{macro_main.all_header(login,dictionary,user,app_category,theme_category)}}
 <!-- /header -->
-	
+
+<div class="form-popup">
+  <!-- CLOSE BTN -->
+  <div class="close-btn">
+    <!-- SVG PLUS -->
+    <svg class="svg-plus">
+      <use xlink:href="#svg-plus"></use>
+    </svg>
+    <!-- /SVG PLUS -->
+  </div>
+  <!-- /CLOSE BTN -->
+
+  <!-- FORM POPUP CONTENT -->
+  <div class="form-popup-content">
+    <h4 class="popup-title">Register Account</h4>
+    <!-- LINE SEPARATOR -->
+    <hr class="line-separator">
+    <!-- /LINE SEPARATOR -->
+    <form id="register-form">
+      <label for="email_address2" class="rl-label required">Email Address</label>
+      <input type="email" id="email_address2" name="email_address2" placeholder="Enter your email address here...">
+      <label for="username2" class="rl-label">Username</label>
+      <input type="text" id="username2" name="username2" placeholder="Enter your username here...">
+      <label for="password2" class="rl-label required">Password</label>
+      <input type="password" id="password2" name="password2" placeholder="Enter your password here...">
+      <label for="repeat_password2" class="rl-label required">Repeat Password</label>
+      <input type="password" id="repeat_password2" name="repeat_password2" placeholder="Repeat your password here...">
+      <button class="button mid dark">Register <span class="primary">Now!</span></button>
+    </form>
+  </div>
+  <!-- /FORM POPUP CONTENT -->
+</div>
 
 
 
