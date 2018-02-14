@@ -121,7 +121,7 @@ $theme_category = get_categories_theme();
 
 //info search
 $info_page = array(
-  'name' => $name_page,
+  'name_page' => $name_page,
   'name_item' => $name_item,
   'number_found' => $number_found
 );
