@@ -1,8 +1,4 @@
 <?php
-echo 'Not Implemented';
-echo PHP_EOL;
-
-
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
@@ -50,6 +46,13 @@ else if (isset($_GET['term']) ){
     exit;
   }
 }
+
+// if user is already logged in, redirects to error page
+if ($login == true) {
+  header("Location: error-page" );
+  exit;
+}
+
 // necessary variables for information
 // number of partners and stores, and total apps and themes
 // obs: query db for information or configure as static (avoid excessive queries)

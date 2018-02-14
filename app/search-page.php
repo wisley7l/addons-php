@@ -8,7 +8,7 @@ $filter = array('all' => 'selected',
 
  if (!isset($_GET['app']) and !isset($_GET['term']) and !isset($_GET['filter'])){
   // app is empty
-  echo "error";
+  //echo "error";
 } else if (isset($_GET['term']) and isset($_GET['x']) ){
   // fix search
   header("Location: ?term=" . $_GET['term']);

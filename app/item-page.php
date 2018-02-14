@@ -26,9 +26,6 @@ if (isset($_GET['logout'])){
 
 
 if (isset($_GET['id']) AND isset($_GET['app'])){
-  echo $_GET['id'];
-  echo PHP_EOL;
-  echo $_GET['app'];
   if ( $_GET['app'] == 1) {
     $app = 1;
     //search item in app

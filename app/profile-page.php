@@ -36,7 +36,6 @@ if (isset($_GET['logout'])){
 //(end) * Required on all pages *
 
 if (isset($_GET['id'])){
-  //echo $_GET['id'];
   // query partner items by id
   // and  info author
 }
