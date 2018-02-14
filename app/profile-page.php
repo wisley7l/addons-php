@@ -54,14 +54,14 @@ $info_footer = array(
 $info_author = getInfoUser($_GET['id']);
 // test apps  // Perform db query to obtain this information limit 3
 // query apps in db
-$item2 = getAppTheme(1000,$_GET['id'],$dictionary,1);
+$item2 = getAppThemeTest(1000,$_GET['id'],$dictionary,1);
 // query apps in db
 $apps = array();
 // add element in array
 array_push($apps, $item2);
 // test themes  // Perform db query to obtain this information limit 3
 // query apps in db
-$item = getAppTheme(1111,$_GET['id'],$dictionary,0);
+$item = getAppThemeTest(1111,$_GET['id'],$dictionary,0);
 $themes = array();
 // add element in array
 array_push($themes, $item);

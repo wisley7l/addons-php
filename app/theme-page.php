@@ -73,8 +73,8 @@ else if (isset($_GET['term'])){
 
   // test apps  // Perform db query to obtain this information limit 3
   // query apps in db
-  $item = getAppTheme(1112,3,$dictionary,0);
-  $item2 = getAppTheme(1110,3,$dictionary,0);
+  $item = getAppThemeTest(1112,3,$dictionary,0);
+  $item2 = getAppThemeTest(1110,3,$dictionary,0);
   $themes = array();
   // add element in array
   array_push($themes, $item);

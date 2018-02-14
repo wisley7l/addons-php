@@ -12,7 +12,7 @@ function getUserLogin($dictionary)
   );
 }
 
-function getAppTheme($id_app,$id_partner,$dictionary,$app)
+function getAppThemeTest($id_app,$id_partner,$dictionary,$app)
 {
   return array(
     'id_app' => $id_app,
@@ -20,8 +20,8 @@ function getAppTheme($id_app,$id_partner,$dictionary,$app)
     'id_partner' => $id_partner,
     'name_partner' => 'Partner 2',
     'value' => 20.03 / $dictionary['mult_coin'],
-    'star_on' => 3,
-    'star_off' => 2,
+    'star_on' => 3, // not implemented
+    'star_off' => 2, // not implemented
     'image' => 'http://soucatequista.com.br/wp-content/uploads/2016/12/Christmas_night-250x150.jpg',
     'image_partner' => 'http://2.bp.blogspot.com/-7tydAWF_j7o/VbI736K_lTI/AAAAAAAADs4/vM0V-5nFTKw/s1600/boteco%2Bde%2Boa%2B%25285%2529.jpg',
     'is_app'=> $app
@@ -75,6 +75,36 @@ function getImagesTheme($value='')
   array_push($themes,$i2);
   return $themes;
 }
+
+// create connection to the database
+$conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
+// check connection
+if (mysqli_connect_errno()) {
+  echo 'Connection failed: ';
+  echo mysqli_connect_error();
+  echo PHP_EOL;
+  exit();
+}
+// query search app and theme for index page
+$query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
+  `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
+  FROM `apps a`, `partners p`
+  WHERE (`a.partner_id` = `p.id`)
+  ORDER BY `a.title`
+  LIMIT 25 ";
+
+if ($result = mysqli_query(  $conn, $query )) {
+  /* fetch associative array */
+  while ($row = mysqli_fetch_assoc($result)) {
+      // treat app
+  }
+
+  /* free result set */
+  mysqli_free_result($result);
+
+}
+
+
 
 /*
 In the index page search the highlights of themes and app.
