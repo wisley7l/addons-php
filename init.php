@@ -59,3 +59,6 @@ if (mysqli_query($conn, 'CREATE DATABASE IF NOT EXISTS ' . Addon\MYSQL_DB) === t
   echo PHP_EOL;
   handle_msyql_error($conn);
 }
+
+
+// OBS: fill category table

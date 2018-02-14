@@ -3,6 +3,15 @@ header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
 
+// difine page
+$id_category = 1;
+foreach ($app_category as $category) {
+    if ($category['id'] == $id_category) {
+      $name_page = $category['name'];
+      $url = $category['page'];
+    }
+}
+
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
 session_write_close();
@@ -28,11 +37,11 @@ $filter = array('all' => 'selected',
 // filter categories and price
 if (isset($_GET['filter'])){ // if exists filter
   if($_GET['filter'] == 'all'and !empty($_GET['name'])){ // filter is all and name item
-    header("Location: category-product-sourcing?term=" . $_GET['name']);
+    header("Location: $url?term=" . $_GET['name']);
     exit;
 
   }else if($_GET['filter'] == 'all'){ // filter is all and not name item
-    header("Location: category-product-sourcing");
+    header("Location: $url");
     exit;
   }else  if ($_GET['filter'] == 'free' and !empty($_GET['name'])) { // filter is free and name item
     $name_item = $_GET['name'];
@@ -42,8 +51,8 @@ if (isset($_GET['filter'])){ // if exists filter
     $filter['free'] = 'selected';
     $number_found = 0;
     // OBS: when you are ready to enable these functions below.
-    // $themes = search_themes_free_name(12,$name_item); // return a maximum of 12 themes in the search
-    // $number_found = count($themes);
+    // $apps = search_apps_free_name_category(12,$name_item,$id_category); // return a maximum of 12 apps in the search
+    // $number_found = count($apps);
 
   }else if ($_GET['filter'] == 'free') { //filter is free and not name
     // search items all free
@@ -52,10 +61,10 @@ if (isset($_GET['filter'])){ // if exists filter
     $filter['free'] = 'selected';
     $number_found = 0;
     // OBS: when you are ready to enable these functions below.
-    // $themes = search_all_themes_free(12); // return a maximum of 12 themes in the search
-    // $number_found = count($themes);
+    // $apps = search_apps_category_free(12,$id_category); // return a maximum of 12 apps in the search
+    // $number_found = count($apps);
   }else {
-    header("Location: category-product-sourcing");
+    header("Location: $url");
     exit;
   }
 }
@@ -70,8 +79,8 @@ else if (isset($_GET['term'])){
   // count the number of items found
   $number_found = 0;
   // OBS: when you are ready to enable these functions below.
-  // $themes = search_themes_all_name(12,$name_item); // return a maximum of 12 themes in the search
-  // $number_found = count($themes);
+  // $apps = search_apps_name_category(12,$name_item,$id_category); // return a maximum of 12 themes in the search
+  // $number_found = count($apps);
 
 } else {
   // count the number of items found
@@ -86,6 +95,9 @@ else if (isset($_GET['term'])){
   // add element in array
   array_push($apps, $item);
   array_push($apps, $item2);
+  // OBS: when you are ready to enable these functions below.
+  // $apps = search_apps_category(12,$id_category); // return a maximum of 12 apps in the search
+  // $number_found = count($apps);
 }
 
 //(end) * Required on all pages *
@@ -103,13 +115,7 @@ $info_footer = array(
 // test all category  // Perform db query to obtain this information
 $app_category = get_categories_app();
 $theme_category = get_categories_theme();
-// difine page
-$id_category = 1;
-foreach ($app_category as $category) {
-    if ($category['id'] == $id_category) {
-      $name_page = $category['name'];
-    }
-}
+
 
 
 
