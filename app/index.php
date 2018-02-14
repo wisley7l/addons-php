@@ -53,6 +53,7 @@ if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
 
   }
   else {
+    // to try search error or redirect to error page
     header("Location: error-page");
     exit;
   }
@@ -87,7 +88,7 @@ else if (isset($_GET['term']) ){
   $themes = array();
   // add element in array
   array_push($themes, $item);
-  // when you are ready to enable these functions below.
+  //OBS: when you are ready to enable these functions below.
   //$apps = search_all_apps(25); // return a maximum of 25 apps in the search
   //$themes = search_all_themes(25); // return a maximum of 25 themes in the search
 }

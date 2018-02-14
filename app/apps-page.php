@@ -40,6 +40,9 @@ if (isset($_GET['filter'])){ // if exists filter
     $filter['all'] = '';
     $filter['free'] = 'selected';
     $number_found = 0;
+    // OBS: when you are ready to enable these functions below.
+    //$apps = search_apps_free_name(12,$name_item); // return a maximum of 12 apps in the search
+    // $number_found = count($apps);
 
   }else if ($_GET['filter'] == 'free') { //filter is free and not name
     // search items all free
@@ -47,6 +50,9 @@ if (isset($_GET['filter'])){ // if exists filter
     $filter['all'] = '';
     $filter['free'] = 'selected';
     $number_found = 0;
+    // OBS: when you are ready to enable these functions below.
+    //$apps = search_all_apps_free(12); // return a maximum of 12 apps in the search
+    // $number_found = count($apps);
   }else {
     header("Location: apps-page");
     exit;
@@ -60,23 +66,29 @@ else if (isset($_GET['term']) and isset($_GET['x']) ){
 else if (isset($_GET['term'])){
   $name_item = $_GET['term'];
   // create query for search item by term
-
   // count the number of items found
   $number_found = 0;
+  // OBS: when you are ready to enable these functions below.
+  //$apps = search_apps_all_name(12,$name_item); // return a maximum of 12 apps in the search
+  // $number_found = count($apps);
 
 } else {
   // count the number of items found
   $number_found = 2;
   // query all items
-
   // test apps  // Perform db query to obtain this information limit 3
   // query apps in db
+  // only test
   $item = getAppThemeTest(1001,2,$dictionary,1);
   $item2 = getAppThemeTest(1000,2,$dictionary,1);
   $apps = array();
   // add element in array
   array_push($apps, $item);
   array_push($apps, $item2);
+
+  // OBS: when you are ready to enable these functions below.
+  //$apps = search_all_apps(12); // return a maximum of 12 apps in the search
+  // $number_found = count($apps);
 }
 
 //(end) * Required on all pages *
