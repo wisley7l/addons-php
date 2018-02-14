@@ -32,7 +32,7 @@ if (isset($_GET['filter'])){ // if exists filter
     exit;
 
   }else if($_GET['filter'] == 'all'){ // filter is all and not name item
-    header("Location: theme-page");
+    header("Location: category-product-sourcing");
     exit;
   }else  if ($_GET['filter'] == 'free' and !empty($_GET['name'])) { // filter is free and name item
     $name_item = $_GET['name'];
