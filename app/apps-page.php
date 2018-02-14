@@ -95,11 +95,9 @@ else if (isset($_GET['term'])){
 
 // obs: query db for informations
 $total_apps_and_themes = 0;
-$count_stores = 0;
 $count_partners = 0;
 $info_footer = array(
   'total_apps_and_themes' => $total_apps_and_themes,
-  'count_stores' => $count_stores,
   'count_partners' => $count_partners,
   'path_file' => $_SERVER['PATH_FILE']
 );
