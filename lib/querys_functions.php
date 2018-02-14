@@ -524,8 +524,6 @@ function search_themes_name_category($limit,$search,$category)
   }
   return $themes;
 }
-*/
-
 
 
 /*
@@ -549,16 +547,16 @@ In the index page search the highlights of themes and app.
 // search themes with name and free OK--
 
 // search apps with category OK--
-// search themes with category
+// search themes with category OK --
 
 // search apps with category  and free OK--
-// search themes with category and free
+// search themes with category and free OK --
 
 // search apps with name and category OK--
-// search themes with name and category
+// search themes with name and category OK --
 
 // search apps with name and free and category OK--
-// search themes with name and free and category
+// search themes with name and free and category OK --
 
 // search app only with id
 // search theme only with id

@@ -44,7 +44,8 @@ if (isset($_GET['filter'])){ // if exists filter
     //$apps = search_apps_free_name(12,$name_item); // return a maximum of 12 apps in the search
     // $number_found = count($apps);
 
-  }else if ($_GET['filter'] == 'free') { //filter is free and not name
+  }else if ($_GET['filter'] == 'free' and empty($_GET['name'])) { //filter is free and not name
+    echo "redirect";
     // search items all free
     // count the number of items found
     $filter['all'] = '';
