@@ -46,7 +46,7 @@ if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
     header("Location: search-page?app=" . $_GET['categories'] . "&name=" . $_GET['category_name']);
   }
   else if ((int) $_GET['categories'] == 0) {
-    // seacrch for thema with name category_name
+    // seacrch for theme with name category_name
     // redirect for search page with parameters
     header("Location: search-page?app=" . $_GET['categories'] . "&name=" . $_GET['category_name']);
     exit;
@@ -58,6 +58,7 @@ if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
   }
   // obs: treat search
   //  category_name=&categories=0
+  echo "essta busca";
 }
 else if (isset($_GET['term']) and isset($_GET['x']) ){
   // fix search menu
@@ -74,7 +75,7 @@ else if (isset($_GET['term']) ){
     exit;
   }
 } else {
-  //
+  // only test
   // test apps  // Perform db query to obtain this information
   // query apps in db
   $item2 = getAppThemeTest(1000,1,$dictionary,1);
@@ -87,6 +88,9 @@ else if (isset($_GET['term']) ){
   $themes = array();
   // add element in array
   array_push($themes, $item);
+
+  //$apps = getAppIndex();
+  //$themes = getThemeIndex();
 }
 
 
