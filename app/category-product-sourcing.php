@@ -26,19 +26,37 @@ if (isset($_GET['logout'])){
 $filter = array('all' => 'selected',
  'free' => '');
 // filter categories and price
-if (isset($_GET['filter'])){
-  if($_GET['filter'] == 'all'){
-    header("Location: product-sourcing");
+if (isset($_GET['filter'])){ // if exists filter
+  if($_GET['filter'] == 'all'and !empty($_GET['name'])){ // filter is all and name item
+    header("Location: category-product-sourcing?term=" . $_GET['name']);
     exit;
-  }
-  if ($_GET['filter'] == 'free') {
-    // search items free
+
+  }else if($_GET['filter'] == 'all'){ // filter is all and not name item
+    header("Location: theme-page");
+    exit;
+  }else  if ($_GET['filter'] == 'free' and !empty($_GET['name'])) { // filter is free and name item
+    $name_item = $_GET['name'];
+    // search items free with name
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
-    // filter items free
-    // count the number of items found
     $number_found = 0;
+    // OBS: when you are ready to enable these functions below.
+    // $themes = search_themes_free_name(12,$name_item); // return a maximum of 12 themes in the search
+    // $number_found = count($themes);
+
+  }else if ($_GET['filter'] == 'free') { //filter is free and not name
+    // search items all free
+    // count the number of items found
+    $filter['all'] = '';
+    $filter['free'] = 'selected';
+    $number_found = 0;
+    // OBS: when you are ready to enable these functions below.
+    // $themes = search_all_themes_free(12); // return a maximum of 12 themes in the search
+    // $number_found = count($themes);
+  }else {
+    header("Location: category-product-sourcing");
+    exit;
   }
 }
 else if (isset($_GET['term']) and isset($_GET['x']) ){
@@ -47,13 +65,13 @@ else if (isset($_GET['term']) and isset($_GET['x']) ){
   exit;
 }
 else if (isset($_GET['term'])){
-  echo $_GET['term'];
-  echo PHP_EOL;
-  // in this case fetch only app with term = GET in the specified category
+  $name_item = $_GET['term'];
   // create query for search item by term
-
   // count the number of items found
   $number_found = 0;
+  // OBS: when you are ready to enable these functions below.
+  // $themes = search_themes_all_name(12,$name_item); // return a maximum of 12 themes in the search
+  // $number_found = count($themes);
 
 } else {
   // count the number of items found
