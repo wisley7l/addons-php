@@ -46,7 +46,7 @@ else if (isset($_GET['term']) and isset($_GET['x']) ){
   header("Location: ?term=" . $_GET['term']);
   exit;
 }
-else if (isset($_GET['term']) and isset($_GET['app'])){
+else if (isset($_GET['term'])){
   echo $_GET['term'];
   echo PHP_EOL;
   // in this case fetch only app with term = GET in the specified category
