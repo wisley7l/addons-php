@@ -32,10 +32,12 @@ if (mysqli_connect_errno()) {
   echo PHP_EOL;
   exit();
 }
-// function for index page get apps
-function getAppIndex()
+// function to fetch all apps with limit
+function search_all_apps($limit)
 {
   $apps = array();
+  $number = (int) $limit;
+  $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
     `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
@@ -58,17 +60,19 @@ function getAppIndex()
   }
   return $apps;
 }
-// function for index page get apps
-function getThemeIndex()
+// function to fetch all themes with limit
+function search_all_themes($limit)
 {
   $themes = array();
+  $number = (int) $limit;
+  $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
     FROM `themes t`, `partners p`
     WHERE (`t.partner_id` = `p.id`)
     ORDER BY `t.title`
-    LIMIT 25 ";
+    LIMIT $number ";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -97,8 +101,8 @@ In the index page search the highlights of themes and app.
 
 // create querys
 
-// search all apps
-// search all themes
+// search all apps OK
+// search all themes OK
 
 // search all apps free
 // search all themes free

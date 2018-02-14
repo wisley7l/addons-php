@@ -560,6 +560,7 @@
   {% for app in apps %}
     {% if loop.index0 >= init and loop.index0 < end %}
   					<div class="product-item column">
+              <span class="pin featured">Featured</span>
   						<!-- PRODUCT PREVIEW ACTIONS -->
   						<div class="product-preview-actions">
   							<!-- PRODUCT PREVIEW IMAGE -->
@@ -630,7 +631,7 @@
   							<ul class="rating tooltip" title="{{ dictionary.word_reputation }}">
   								{% import 'macros.twig' as macro_main %}
                   <!-- use macros to render stars -->
-                  {# not implemented 
+                  {# not implemented
   								{{macro_main.star_on(app.star_on)}}
   								{{macro_main.star_off(app.star_off)}}
                   #}
