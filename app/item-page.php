@@ -41,7 +41,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $array_images = getImagesApp();
     $image_main = $array_images[0];
   }
-  else{
+  else if ($_GET['app'] == 0){
     $id_app = (int) $_GET['id'];
     $app = 0;
     //search item in themes
@@ -50,6 +50,9 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       'description' => 'Esta é a Descrição do APP ou do TEMA',
       'json' => 'treat json'
     );
+  }
+  else {
+    echo "fuu";
   }
 
   //images theme
