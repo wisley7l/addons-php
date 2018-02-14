@@ -75,7 +75,7 @@ function getImagesTheme($value='')
   array_push($themes,$i2);
   return $themes;
 }
-
+/*
 // create connection to the database
 $conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
 // check connection
@@ -94,12 +94,12 @@ $query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
   LIMIT 25 ";
 
 if ($result = mysqli_query(  $conn, $query )) {
-  /* fetch associative array */
+  // fetch associative array 
   while ($row = mysqli_fetch_assoc($result)) {
       // treat app
   }
 
-  /* free result set */
+  // free result set
   mysqli_free_result($result);
 
 }
