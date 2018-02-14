@@ -37,12 +37,14 @@ if (isset($_GET['filter'])){ // if exists filter
     exit;
   }else  if ($_GET['filter'] == 'free' and !empty($_GET['name'])) { // filter is free and name item
     $name_item = $_GET['name'];
-    echo $name_item;
     // search items free with name
     // count the number of items found
     $filter['all'] = '';
     $filter['free'] = 'selected';
     $number_found = 0;
+    // OBS: when you are ready to enable these functions below.
+    // $themes = search_themes_free_name(12,$name_item); // return a maximum of 12 themes in the search
+    // $number_found = count($themes);
 
   }else if ($_GET['filter'] == 'free') { //filter is free and not name
     // search items all free
@@ -50,6 +52,9 @@ if (isset($_GET['filter'])){ // if exists filter
     $filter['all'] = '';
     $filter['free'] = 'selected';
     $number_found = 0;
+    // OBS: when you are ready to enable these functions below.
+    // $themes = search_all_themes_free(12); // return a maximum of 12 themes in the search
+    // $number_found = count($themes);
   }else {
     header("Location: theme-page");
     exit;
@@ -63,9 +68,11 @@ else if (isset($_GET['term']) and isset($_GET['x']) ){
 else if (isset($_GET['term'])){
   $name_item = $_GET['term'];
   // create query for search item by term
-
   // count the number of items found
   $number_found = 0;
+  // OBS: when you are ready to enable these functions below.
+  // $themes = search_themes_all_name(12,$name_item); // return a maximum of 12 themes in the search
+  // $number_found = count($themes);
 
 } else {
   // count the number of items found
@@ -80,6 +87,10 @@ else if (isset($_GET['term'])){
   // add element in array
   array_push($themes, $item);
   array_push($themes, $item2);
+  // OBS: when you are ready to enable these functions below.
+  // $themes = search_all_themes(12); // return a maximum of 12 apps in the search
+  // $number_found = count($themes);
+
 }
 //(end) * Required on all pages *
 
