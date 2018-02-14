@@ -140,7 +140,7 @@ echo $twig->render('search-category.twig', array(
   'segment' => $filter_segment,
   'app_category' => $app_category,
   'theme_category' => $theme_category,
-  'all_category' => $app_category,
+  'all_category' => $theme_category,
   'filter' => $filter,
   // test apps
   'apps_themes' => $apps,
