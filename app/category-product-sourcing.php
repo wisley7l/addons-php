@@ -3,6 +3,11 @@ header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
 
+// obs: Search all categories in db
+// test all category  // Perform db query to obtain this information
+$app_category = get_categories_app();
+$theme_category = get_categories_theme();
+
 // difine page
 $id_category = 1;
 foreach ($app_category as $category) {
@@ -11,9 +16,6 @@ foreach ($app_category as $category) {
       $url = $category['page'];
     }
 }
-echo $name_page;
-echo PHP_EOL;
-echo $url;
 
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
@@ -113,14 +115,6 @@ $info_footer = array(
   'count_partners' => $count_partners,
   'path_file' => $_SERVER['PATH_FILE']
 );
-
-// obs: Search all categories in db
-// test all category  // Perform db query to obtain this information
-$app_category = get_categories_app();
-$theme_category = get_categories_theme();
-
-
-
 
 //info search
 $info_page = array(
