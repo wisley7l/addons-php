@@ -58,6 +58,8 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 }
 else {
   // redirect page error
+  header("Location: error-page");
+  exit;
 }
 
 $info_page = array('app' => $app,
