@@ -45,7 +45,6 @@ if (isset($_GET['filter'])){ // if exists filter
     // $number_found = count($apps);
 
   }else if ($_GET['filter'] == 'free') { //filter is free and not name
-    echo "empty";
     // search items all free
     // count the number of items found
     $filter['all'] = '';
