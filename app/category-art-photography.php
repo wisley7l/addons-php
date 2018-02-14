@@ -3,14 +3,15 @@ header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
 
+
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
 $app_category = get_categories_app();
 $theme_category = get_categories_theme();
 
 // difine page
-$id_category = 3;
-foreach ($app_category as $category) {
+$id_category = 1;
+foreach ($theme_category as $category) {
     if ($category['id'] == $id_category) {
       $name_page = $category['name'];
       $url = $category['page'];
@@ -56,7 +57,7 @@ if (isset($_GET['filter'])){ // if exists filter
     $filter['free'] = 'selected';
     $number_found = 0;
     // OBS: when you are ready to enable these functions below.
-    // $apps = search_apps_free_name_category(12,$name_item,$id_category); // return a maximum of 12 apps in the search
+    // $apps = search_themes_free_name_category(12,$name_item,$id_category); // return a maximum of 12 apps in the search
     // $number_found = count($apps);
 
   }else if ($_GET['filter'] == 'free') { //filter is free and not name
@@ -66,7 +67,7 @@ if (isset($_GET['filter'])){ // if exists filter
     $filter['free'] = 'selected';
     $number_found = 0;
     // OBS: when you are ready to enable these functions below.
-    // $apps = search_apps_free_category(12,$id_category); // return a maximum of 12 apps in the search
+    // $apps = search_themes_free_category(12,$id_category); // return a maximum of 12 apps in the search
     // $number_found = count($apps);
   }else {
     header("Location: $url");
@@ -84,7 +85,7 @@ else if (isset($_GET['term'])){
   // count the number of items found
   $number_found = 0;
   // OBS: when you are ready to enable these functions below.
-  // $apps = search_apps_name_category(12,$name_item,$id_category); // return a maximum of 12 themes in the search
+  // $apps = search_themes_name_category(12,$name_item,$id_category); // return a maximum of 12 themes in the search
   // $number_found = count($apps);
 
 } else {
@@ -94,14 +95,14 @@ else if (isset($_GET['term'])){
 
   // test apps  // Perform db query to obtain this information limit 3
   // query apps in db
-  $item = getAppThemeTest(1001,2,$dictionary,1);
-  $item2 = getAppThemeTest(1000,2,$dictionary,1);
-  $apps = array();
+  $item = getAppThemeTest(1001,2,$dictionary,0);
+  $item2 = getAppThemeTest(1000,2,$dictionary,0);
+  $themes = array();
   // add element in array
-  array_push($apps, $item);
-  array_push($apps, $item2);
+  array_push($themes, $item);
+  array_push($themes, $item2);
   // OBS: when you are ready to enable these functions below.
-  // $apps = search_apps_category(12,$id_category); // return a maximum of 12 apps in the search
+  // $apps = search_themes_category(12,$id_category); // return a maximum of 12 apps in the search
   // $number_found = count($apps);
 }
 

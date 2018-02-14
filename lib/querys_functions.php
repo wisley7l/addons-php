@@ -303,7 +303,7 @@ function search_apps_category($limit,$category)
 }
 
 //(2) function to fetch all apps free with limit
-function search_apps_category_free($limit,$category)
+function search_apps_free_category($limit,$category)
 {
   $apps = array();
   $id_category = (int)$category;
@@ -378,7 +378,7 @@ function search_apps_name_category($limit,$search,$category)
     `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
     FROM `apps a`, `partners p`, `category_apps c` , `relationship_category_apps r`
     WHERE (`a.partner_id` = `p.id` AND `a.title` = $name
-      AND `r.app_id` = `a.id` AND `r.category_apps_id` = `c.id` AND `c.id` = $id_category))
+      AND `r.app_id` = `a.id` AND `r.category_apps_id` = `c.id` AND `c.id` = $id_category)
     ORDER BY `a.title`
     LIMIT $number ";
 
@@ -397,6 +397,134 @@ function search_apps_name_category($limit,$search,$category)
   return $apps;
 }
 
+// THEME BY CATEGORY
+
+//(1) function to fetch all themes with limit
+function search_themes_category($limit,$category)
+{
+  $themes = array();
+  $id_category = (int)$category;
+  $number = (int) $limit;
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
+    `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
+    FROM `themes t`, `partners p`, `category_themes c` , `relationship_category_themes r`
+    WHERE (`t.partner_id` = `p.id`
+      AND `r.theme_id` = `t.id` AND `r.category_themes_id` = `c.id` AND `c.id` = $id_category)
+    ORDER BY `t.title`
+    LIMIT $number ";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = get_app_theme($row['t.id'], $row['t.partner_id'], $row['t.title'], $row['t.thumbnail'], $row['t.value_license_basic'],
+        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      array_push($themes, $item); // add item in array
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $themes;
+}
+
+//(2) function to fetch all apps free with limit
+function search_themes_free_category($limit,$category)
+{
+  $themes = array();
+  $id_category = (int)$category;
+  $number = (int) $limit;
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
+    `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
+    FROM `themes t`, `partners p`, `category_themes c` , `relationship_category_themes r`
+    WHERE (`t.partner_id` = `p.id` AND `t.value_license_basic` = 0
+      AND `r.app_id` = `a.id` AND `r.category_apps_id` = `c.id` AND `c.id` = $id_category)
+    ORDER BY `t.title`
+    LIMIT $number ";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = get_app_theme($row['t.id'], $row['t.partner_id'], $row['t.title'], $row['t.thumbnail'], $row['t.value_license_basic'],
+        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      array_push($themes, $item); // add item in array
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $themes;
+}
+
+//(3) function to search free themes by name with limit
+function search_themes_free_name_category($limit,$search,$category)
+{
+  $themes = array();
+  $id_category = (int)$category;
+  $number = (int) $limit;
+  $name = strtoupper($search); // coverte string for muscle
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
+    `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
+    FROM `themes a`, `partners p`, `category_themes c` , `relationship_category_themes r`
+    WHERE (`t.partner_id` = `p.id` AND `t.value_license_basic` = 0 AND `t.title` = $name
+      AND `r.app_id` = `a.id` AND `r.category_apps_id` = `c.id` AND `c.id` = $id_category)
+    ORDER BY `t.title`
+    LIMIT $number ";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = get_app_theme($row['t.id'], $row['t.partner_id'], $row['t.title'], $row['t.thumbnail'], $row['t.value_license_basic'],
+        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      array_push($themes, $item); // add item in array
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $themes;
+}
+
+//(4) function to search apps by name with limit
+function search_themes_name_category($limit,$search,$category)
+{
+  $themes = array();
+  $id_category = (int)$category;
+  $number = (int) $limit;
+  $name = strtoupper($search); // coverte string for muscle
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
+    `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
+    FROM `apps a`, `partners p, `category_themes c` , `relationship_category_themes r``
+    WHERE (`t.partner_id` = `p.id` AND `t.title` = $name
+      AND `r.app_id` = `a.id` AND `r.category_apps_id` = `c.id` AND `c.id` = $id_category)
+    ORDER BY `t.title`
+    LIMIT $number ";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = get_app_theme($row['t.id'], $row['t.partner_id'], $row['t.title'], $row['t.thumbnail'], $row['t.value_license_basic'],
+        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      array_push($themes, $item); // add item in array
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $themes;
+}
+*/
 
 
 

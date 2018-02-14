@@ -90,7 +90,7 @@ $categories_themes = array(
 ),
   array('id' => 1 ,
   'name' => $dictionary['word_art_photography'],
-  'page' => ''
+  'page' => 'category-art-photography'
 ),
   array('id' => 2 ,
   'name' => $dictionary ['word_clothing_fashion'],

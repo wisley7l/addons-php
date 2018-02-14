@@ -67,7 +67,7 @@ if (isset($_GET['filter'])){ // if exists filter
     $filter['free'] = 'selected';
     $number_found = 0;
     // OBS: when you are ready to enable these functions below.
-    // $apps = search_apps_category_free(12,$id_category); // return a maximum of 12 apps in the search
+    // $apps = search_apps_free_category(12,$id_category); // return a maximum of 12 apps in the search
     // $number_found = count($apps);
   }else {
     header("Location: $url");
