@@ -32,7 +32,9 @@ if (mysqli_connect_errno()) {
   echo PHP_EOL;
   exit();
 }
-// function to fetch all apps with limit
+// APPS
+
+// (1) function to fetch all apps with limit
 function search_all_apps($limit)
 {
   $apps = array();
@@ -49,7 +51,7 @@ function search_all_apps($limit)
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
-      $item = get_app_theme($row['a.id'], row['a.partner_id'], $row['a.title'], $row['a.thumbnail'], $row['a.value_plan_basic'],
+      $item = get_app_theme($row['a.id'], $row['a.partner_id'], $row['a.title'], $row['a.thumbnail'], $row['a.value_plan_basic'],
         $row['p.username'], $row['p.path_image'], $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
@@ -61,7 +63,7 @@ function search_all_apps($limit)
   return $apps;
 }
 
-// function to fetch all apps free with limit
+//(2) function to fetch all apps free with limit
 function search_all_apps_free($limit)
 {
   $apps = array();
@@ -78,7 +80,7 @@ function search_all_apps_free($limit)
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
-      $item = get_app_theme($row['a.id'], row['a.partner_id'], $row['a.title'], $row['a.thumbnail'], $row['a.value_plan_basic'],
+      $item = get_app_theme($row['a.id'], $row['a.partner_id'], $row['a.title'], $row['a.thumbnail'], $row['a.value_plan_basic'],
         $row['p.username'], $row['p.path_image'], $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
@@ -90,7 +92,7 @@ function search_all_apps_free($limit)
   return $apps;
 }
 
-// function to search free apps by name with limit
+//(3) function to search free apps by name with limit
 function search_apps_free_name($limit,$search)
 {
   $apps = array();
@@ -108,7 +110,7 @@ function search_apps_free_name($limit,$search)
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
-      $item = get_app_theme($row['a.id'], row['a.partner_id'], $row['a.title'], $row['a.thumbnail'], $row['a.value_plan_basic'],
+      $item = get_app_theme($row['a.id'], $row['a.partner_id'], $row['a.title'], $row['a.thumbnail'], $row['a.value_plan_basic'],
         $row['p.username'], $row['p.path_image'], $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
@@ -120,7 +122,7 @@ function search_apps_free_name($limit,$search)
   return $apps;
 }
 
-// function to search apps by name with limit
+//(4) function to search apps by name with limit
 function search_apps_all_name($limit,$search)
 {
   $apps = array();
@@ -138,7 +140,7 @@ function search_apps_all_name($limit,$search)
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
-      $item = get_app_theme($row['a.id'], row['a.partner_id'], $row['a.title'], $row['a.thumbnail'], $row['a.value_plan_basic'],
+      $item = get_app_theme($row['a.id'], $row['a.partner_id'], $row['a.title'], $row['a.thumbnail'], $row['a.value_plan_basic'],
         $row['p.username'], $row['p.path_image'], $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
@@ -150,7 +152,9 @@ function search_apps_all_name($limit,$search)
   return $apps;
 }
 
-// function to fetch all themes with limit
+// THEMES
+
+//(1) function to fetch all themes with limit
 function search_all_themes($limit)
 {
   $themes = array();
@@ -168,7 +172,7 @@ function search_all_themes($limit)
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['t.id'], $row['t.partner_id'], $row['t.title'], $row['t.thumbnail'], $row['t.value_license_basic'],
-        $row['p.username'], $row['p.path_image'], $dictionary, 0);
+        $row['p.username'], $row['p.path_image'], $dictionary, 1);
       array_push($themes, $item); // add item in array
     }
 
@@ -178,6 +182,95 @@ function search_all_themes($limit)
   }
   return $themes;
 }
+//(2) function to fetch all apps free with limit
+function search_all_themes_free($limit)
+{
+  $themes = array();
+  $number = (int) $limit;
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
+    `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
+    FROM `themes t`, `partners p`
+    WHERE (`t.partner_id` = `p.id` AND `t.value_license_basic` = 0)
+    ORDER BY `t.title`
+    LIMIT $number ";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = get_app_theme($row['t.id'], $row['t.partner_id'], $row['t.title'], $row['t.thumbnail'], $row['t.value_license_basic'],
+        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      array_push($themes, $item); // add item in array
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $themes;
+}
+
+//(3) function to search free themes by name with limit
+function search_themes_free_name($limit,$search)
+{
+  $themes = array();
+  $number = (int) $limit;
+  $name = strtoupper($search); // coverte string for muscle
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
+    `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
+    FROM `themes a`, `partners p`
+    WHERE (`t.partner_id` = `p.id` AND `t.value_license_basic` = 0 AND `t.title` = $name)
+    ORDER BY `t.title`
+    LIMIT $number ";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = get_app_theme($row['t.id'], $row['t.partner_id'], $row['t.title'], $row['t.thumbnail'], $row['t.value_license_basic'],
+        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      array_push($themes, $item); // add item in array
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $themes;
+}
+
+//(4) function to search apps by name with limit
+function search_themes_all_name($limit,$search)
+{
+  $themes = array();
+  $number = (int) $limit;
+  $name = strtoupper($search); // coverte string for muscle
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
+    `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
+    FROM `apps a`, `partners p`
+    WHERE (`t.partner_id` = `p.id` AND `t.title` = $name)
+    ORDER BY `t.title`
+    LIMIT $number ";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = get_app_theme($row['t.id'], $row['t.partner_id'], $row['t.title'], $row['t.thumbnail'], $row['t.value_license_basic'],
+        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      array_push($themes, $item); // add item in array
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $themes;
+}
+
 
 
 /*
@@ -192,13 +285,13 @@ In the index page search the highlights of themes and app.
 // search all themes OK --
 
 // search all apps free OK --
-// search all themes free
+// search all themes free OK --
 
 // search apps with name OK --
-// search themes with name
+// search themes with name OK --
 
 // search apps with name and free OK --
-// search themes with name and free
+// search themes with name and free OK--
 
 // search apps with category
 // search themes with category
