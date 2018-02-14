@@ -37,6 +37,7 @@ if (isset($_GET['filter'])){ // if exists filter
     exit;
   }else  if ($_GET['filter'] == 'free' and !empty($_GET['name'])) { // filter is free and name item
     $name_item = $_GET['name'];
+    echo $name_item;
     // search items free with name
     // count the number of items found
     $filter['all'] = '';
