@@ -309,3 +309,15 @@ In the index page search the highlights of themes and app.
 // search theme only with id
 
 // search partner only with id
+
+
+// ITEM PAGE
+
+// Search the application or item by ID
+// if theme, check if there is more than one template and return their respective id
+// if there are only two plans, if possible return the description of each plan
+
+// if app, fetch all app images
+// check what plans you have, and return the description of each plan and the value.
+
+// name and description of the theme or app are required
