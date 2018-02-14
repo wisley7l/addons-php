@@ -116,6 +116,7 @@ foreach ($app_category as $category) {
 //info search
 $info_page = array(
   'name' => $name_page,
+  'name_item' => $name_item,
   'number_found' => $number_found
 );
 // query filter itens
