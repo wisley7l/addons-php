@@ -11,6 +11,9 @@ foreach ($app_category as $category) {
       $url = $category['page'];
     }
 }
+echo $name_page;
+echo PHP_EOL;
+echo $url;
 
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
