@@ -52,12 +52,16 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     );
   }
   else {
-    echo "fuu";
+    // redirect page error or information error
   }
 
   //images theme
   $array_images = getImagesTheme();
   $image_main = $array_images[0];
+}
+elseif (isset($_GET['term']) and isset($_GET['x']) ) {
+  header("Location: search-page?term=" . $_GET['term']);
+  exit;
 }
 else {
   // redirect page error
