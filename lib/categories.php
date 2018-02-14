@@ -50,7 +50,7 @@ $categories_apps = array(
 ),
   array('id' => 3 ,
   'name' => $dictionary['word_sales'],
-  'page' => ''
+  'page' => 'category-sales'
 ),
   array('id' => 4 ,
   'name' => $dictionary['word_social_media'],
