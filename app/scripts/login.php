@@ -39,8 +39,8 @@ else {
     $_SESSION['name'] = 'User-Login';
     $_SESSION['login'] = true;
     $_SESSION['is_store'] = false;
-    $_SESSION['credits'] = 9;
-    $_SESSION['path_image'] = 'https://cdn.pixabay.com/photo/2012/04/26/19/43/profile-42914_960_720.png';
+    $_SESSION['credits'] = 10000;
+    $_SESSION['path_image'] = 'https://www.ocf.berkeley.edu/~dblab/blog/wp-content/uploads/2012/01/icon-profile.png';
     //var_dump($_SESSION);
     if (!is_writable(session_save_path())) {
     //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
