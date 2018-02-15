@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
+echo PHP_EOL;
 var_dump($_POST);
 echo PHP_EOL;
 var_dump($_FILES);
@@ -39,9 +40,10 @@ if ( isset( $_FILES[ 'image' ][ 'name' ] ) && $_FILES[ 'image' ][ 'error' ] == 0
         $destino = '/home/wisley/images/ ' . $novoNome;
         echo PHP_EOL;
         echo $destino;
+        echo PHP_EOL;
         //*
         // tenta mover o arquivo para o destino
-        if ( @move_uploaded_file ( $arquivo_tmp, $destino ) ) {
+        if ( move_uploaded_file ( $arquivo_tmp, $destino ) ) {
             echo 'Arquivo salvo com sucesso em : <strong>' . $destino . '</strong><br />';
             echo ' < img src = "' . $destino . '" />';
         }
