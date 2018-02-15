@@ -329,9 +329,14 @@
         <p class="text-header">{{dictionary.word_profile_image}}</p>
         <!--(not implemented im momment)p class="upload-details">{{dictionary.word_minimun_size}} 70x70px</p-->
       </div>
-      <!--(desable button)a href="#" class="button mid-short dark-light">{{dictionary.word_upload_image}}</a-->
+      <a href="#" class="button mid-short dark-light">{{dictionary.word_upload_image}}</a>
     </div>
     <!-- PROFILE IMAGE UPLOAD -->
+    <form method="post" enctype="multipart/form-data" action="recebeUpload.php">
+     Selecione uma imagem: <input name="arquivo" type="file" />
+     <br />
+     <input type="submit" value="Salvar" />
+    </form>
 
     <form id="profile-info-form">
       <!-- INPUT CONTAINER -->
