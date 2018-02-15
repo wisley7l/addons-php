@@ -41,7 +41,7 @@ if ( isset( $_FILES[ 'image' ][ 'name' ] ) && $_FILES[ 'image' ][ 'error' ] == 0
         echo PHP_EOL;
         echo $destino;
         echo PHP_EOL;
-        echo substr(sprintf('%o', fileperms(Addons\PATH_DATA)), -4);
+        echo substr(sprintf('%o', fileperms(Addons\PATH_APP . '/app/scripts/up-partner.php')), -4);
         echo PHP_EOL;
         //*
         // tenta mover o arquivo para o destino
