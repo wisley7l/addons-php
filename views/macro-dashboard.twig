@@ -308,16 +308,7 @@
 {% macro form_profile_info(dictionary,user) %}
   <!--div class="form-box-item"-->
   <div class="form-box-item full">
-    <form id="addons-up-partner" action="scripts/up-partner" method="post">
-      <input type="hidden" id="addons-up-id" name="id" />
-      <input type="hidden" id="addons-up-user" name="user" />
-      <input type="hidden" id="addons-up-name" name="name" />
-      <input type="hidden" id="addons-up-pass" name="pass" />
-      <input type="hidden" id="addons-up-rp-pass" name="rp-pass" />
-      <input type="hidden" id="addons-up-website" name="website" />
-      <input type="hidden" id="addons-up-about" name="about" />
-      <a> <input type="file" style="color: blue"/> wisley </a>
-    </form>
+
 
     <h4>{{dictionary.word_profile_info}}</h4>
     <hr class="line-separator">
@@ -331,6 +322,16 @@
         <!--(not implemented im momment)p class="upload-details">{{dictionary.word_minimun_size}} 70x70px</p-->
       </div>
       <!--a href="#" class="button mid-short dark-light">{{dictionary.word_upload_image}}</a-->
+      <form id="addons-up-partner" action="scripts/up-partner" method="post">
+        <input type="hidden" id="addons-up-id" name="id" />
+        <input type="hidden" id="addons-up-user" name="user" />
+        <input type="hidden" id="addons-up-name" name="name" />
+        <input type="hidden" id="addons-up-pass" name="pass" />
+        <input type="hidden" id="addons-up-rp-pass" name="rp-pass" />
+        <input type="hidden" id="addons-up-website" name="website" />
+        <input type="hidden" id="addons-up-about" name="about" />
+        <a> <input type="file" /> </a>
+      </form>
 
     </div>
     <!-- PROFILE IMAGE UPLOAD -->
