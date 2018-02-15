@@ -35,9 +35,10 @@ if (isset($_GET['logout'])){
 }
 //(end) * Required on all pages *
 
-if (isset($_GET['id'])){
+if (!empty($_GET['id'])){
   // query partner items by id
   // and  info author
+  echo $_GET['id'];
 
 }else {
   echo "sempre";
