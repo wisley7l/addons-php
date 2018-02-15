@@ -4,6 +4,7 @@ header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 // variable to check the user login, because some options are only allowed for online users
 $login = false;
+/*
 // check if there was a login attempt and treats error and success attempts
 if (isset($_GET['EROORLOGIN'])) {
   // create hidden div to handle login error attempt
@@ -13,6 +14,7 @@ if (isset($_GET['SUCCESSLOGIN'])) {
     // create hidden div to handle login success attempt
     print '<div class="addons-sucess-login" style="display:none">' . $dictionary['word_sucess_login'] . '</div>';
 }
+*/
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
 session_write_close();
@@ -40,7 +42,22 @@ if (!empty($_GET['id'])){
   // and  info author
   // search the last 3 apps and themes
   // count app total and user themes
-  echo $_GET['id'];
+  //obs: query athor in db
+  $info_author = getInfoUser($_GET['id']);
+  // test apps  // Perform db query to obtain this information limit 3
+  // query apps in db
+  $item2 = getAppThemeTest(1000,$_GET['id'],$dictionary,1);
+  // query apps in db
+  $apps = array();
+  // add element in array
+  array_push($apps, $item2);
+  // test themes  // Perform db query to obtain this information limit 3
+  // query apps in db
+  $item = getAppThemeTest(1111,$_GET['id'],$dictionary,0);
+  $themes = array();
+  // add element in array
+  array_push($themes, $item);
+
 }else {
   // redirect error page
   header("Location: error-page");
@@ -58,21 +75,6 @@ $info_footer = array(
   'count_partners' => $count_partners,
   'path_file' => $_SERVER['PATH_FILE'] . "?id=" . $_GET['id']
 );
-//obs: query athor in db
-$info_author = getInfoUser($_GET['id']);
-// test apps  // Perform db query to obtain this information limit 3
-// query apps in db
-$item2 = getAppThemeTest(1000,$_GET['id'],$dictionary,1);
-// query apps in db
-$apps = array();
-// add element in array
-array_push($apps, $item2);
-// test themes  // Perform db query to obtain this information limit 3
-// query apps in db
-$item = getAppThemeTest(1111,$_GET['id'],$dictionary,0);
-$themes = array();
-// add element in array
-array_push($themes, $item);
 // test comments
 // query comments in db limit in 2
 $comments = array(
