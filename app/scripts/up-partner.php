@@ -37,7 +37,7 @@ if ( isset( $_FILES[ 'image' ][ 'name' ] ) && $_FILES[ 'image' ][ 'error' ] == 0
         $novoNome = $id . '.' . $extensao;
 
         // Concatena a pasta com o nome
-        $destino = '/home/wisley/images/ ' . $novoNome;
+        $destino = '/home/wisley/ ' . $novoNome;
         echo PHP_EOL;
         echo $destino;
         echo PHP_EOL;
