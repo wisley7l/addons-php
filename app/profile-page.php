@@ -38,10 +38,14 @@ if (isset($_GET['logout'])){
 if (!empty($_GET['id'])){
   // query partner items by id
   // and  info author
+  // search the last 3 apps and themes
+  // count app total and user themes
   echo $_GET['id'];
-
 }else {
-  echo "sempre";
+  // redirect error page
+  header("Location: error-page");
+  exit;
+
 }
 
 // necessary variables for information
