@@ -35,7 +35,7 @@ if ( isset( $_FILES[ 'image' ][ 'name' ] ) && $_FILES[ 'image' ][ 'error' ] == 0
         $destino = Addons\PATH_DATA . 'images/profile/ ' . $novoNome;
         echo PHP_EOL;
         echo $destino;
-
+        /*
         // tenta mover o arquivo para o destino
         if ( @move_uploaded_file ( $arquivo_tmp, $destino ) ) {
             echo 'Arquivo salvo com sucesso em : <strong>' . $destino . '</strong><br />';
@@ -43,11 +43,12 @@ if ( isset( $_FILES[ 'image' ][ 'name' ] ) && $_FILES[ 'image' ][ 'error' ] == 0
         }
         else
             echo 'Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';
+            */
     }
 
     else
         echo 'Você poderá enviar apenas arquivos "*.jpg;*.jpeg;*.gif;*.png"<br />';
-        //*/
+
 }
 else
     echo 'Você não enviou nenhum arquivo!';
