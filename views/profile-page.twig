@@ -58,12 +58,96 @@
 					<!-- /PRODUCT ITEM -->
 				</div>
 				<!-- /PRODUCT LIST -->
+				<!-- PRODUCT SIDESHOW -->
+				<div id="product-sideshow-wrap">
+					<div id="product-sideshow">
+						<!-- PRODUCT SHOWCASE -->
+						<div class="product-showcase">
+							<!-- HEADLINE -->
+							<div class="headline primary">
+								<h4>{{ dictionary.apps_trends }}</h4>
+								<!-- SLIDE CONTROLS -->
+								<div class="slide-control-wrap">
+									<div class="slide-control left">
+										<!-- SVG ARROW -->
+										<svg class="svg-arrow">
+											<use xlink:href="#svg-arrow"></use>
+										</svg>
+										<!-- /SVG ARROW -->
+									</div>
 
-				<!-- HEADLINE -->
-				<div class="headline buttons primary">
-					<h4>{{dictionary.word_theme}}</h4>
+									<div class="slide-control right">
+										<!-- SVG ARROW -->
+										<svg class="svg-arrow">
+											<use xlink:href="#svg-arrow"></use>
+										</svg>
+										<!-- /SVG ARROW -->
+									</div>
+								</div>
+								<!-- /SLIDE CONTROLS -->
+							</div>
+							<!-- /HEADLINE -->
+
+							<!-- PRODUCT LIST -->
+							<div id="pl-1" class="product-list grid column4-wrap owl-carousel">
+								<!-- PRODUCT ITEM -->
+								<!-- /PRODUCT ITEM -->
+								{{macro_main.apps_themes(apps,0,8,dictionary)}}
+							</div>
+							<!-- /PRODUCT LIST -->
+							<!-- PRODUCT LIST -->
+							<div id="pl-2" class="product-list grid column4-wrap owl-carousel">
+								{{macro_main.apps_themes(apps,8,16,dictionary)}}
+							</div>
+							<!-- /PRODUCT LIST -->
+							<!-- PRODUCT LIST -->
+							<div id="pl-3" class="product-list grid column4-wrap owl-carousel">
+								{{macro_main.apps_themes(apps,16,24,dictionary)}}
+							</div>
+							<!-- /PRODUCT LIST -->
+						</div>
+						<!-- /PRODUCT SHOWCASE -->
+
+						<!-- PRODUCT SHOWCASE -->
+						<div class="product-showcase">
+							<!-- HEADLINE -->
+							<div class="headline secondary">
+								<h4>{{ dictionary.themes_trends }}</h4>
+								<!-- SLIDE CONTROLS -->
+								<div class="slide-control-wrap">
+									<div class="slide-control left">
+										<!-- SVG ARROW -->
+										<svg class="svg-arrow">
+											<use xlink:href="#svg-arrow"></use>
+										</svg>
+										<!-- /SVG ARROW -->
+									</div>
+
+									<div class="slide-control right">
+										<!-- SVG ARROW -->
+										<svg class="svg-arrow">
+											<use xlink:href="#svg-arrow"></use>
+										</svg>
+										<!-- /SVG ARROW -->
+									</div>
+								</div>
+								<!-- /SLIDE CONTROLS -->
+							</div>
+							<!-- /HEADLINE -->
+
+							<!-- PRODUCT LIST -->
+							<div id="pl-4" class="product-list grid column4-wrap owl-carousel">
+								{{macro_main.apps_themes(themes,0,12,dictionary)}}
+							</div>
+							<!-- /PRODUCT LIST -->
+						</div>
+						<!-- /PRODUCT SHOWCASE -->
+
+
+					</div>
 				</div>
-				<!-- /HEADLINE -->
+				<!-- /PRODUCTS SIDESHOW -->
+
 
 				<div class="clearfix"></div>
 				{# not implemented in moment obs: desable macro-profile too
