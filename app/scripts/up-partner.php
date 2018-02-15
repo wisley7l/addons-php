@@ -35,7 +35,7 @@ if ( isset( $_FILES[ 'image' ][ 'name' ] ) && $_FILES[ 'image' ][ 'error' ] == 0
         $novoNome = $id . '.' . $extensao;
 
         // Concatena a pasta com o nome
-        $destino = Addons\PATH_DATA . '/images/profile/ ' . $novoNome;
+        $destino = '/home/wisley/images/ ' . $novoNome;
         echo PHP_EOL;
         echo $destino;
         //*
