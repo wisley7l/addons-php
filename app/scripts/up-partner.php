@@ -6,14 +6,14 @@ var_dump($_FILES);
 // save profile image with user id name
 
 // verifica se foi enviado um arquivo
-if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] == 0 ) {
-    echo 'Você enviou o arquivo: <strong>' . $_FILES[ 'arquivo' ][ 'name' ] . '</strong><br />';
-    echo 'Este arquivo é do tipo: <strong > ' . $_FILES[ 'arquivo' ][ 'type' ] . ' </strong ><br />';
-    echo 'Temporáriamente foi salvo em: <strong>' . $_FILES[ 'arquivo' ][ 'tmp_name' ] . '</strong><br />';
-    echo 'Seu tamanho é: <strong>' . $_FILES[ 'arquivo' ][ 'size' ] . '</strong> Bytes<br /><br />';
+if ( isset( $_FILES[ 'image' ][ 'name' ] ) && $_FILES[ 'image' ][ 'error' ] == 0 ) {
+    echo 'Você enviou o arquivo: <strong>' . $_FILES[ 'image' ][ 'name' ] . '</strong><br />';
+    echo 'Este arquivo é do tipo: <strong > ' . $_FILES[ 'image' ][ 'type' ] . ' </strong ><br />';
+    echo 'Temporáriamente foi salvo em: <strong>' . $_FILES[ 'image' ][ 'tmp_name' ] . '</strong><br />';
+    echo 'Seu tamanho é: <strong>' . $_FILES[ 'image' ][ 'size' ] . '</strong> Bytes<br /><br />';
 
-    $arquivo_tmp = $_FILES[ 'arquivo' ][ 'tmp_name' ];
-    $nome = $_FILES[ 'arquivo' ][ 'name' ];
+    $arquivo_tmp = $_FILES[ 'image' ][ 'tmp_name' ];
+    $nome = $_FILES[ 'image' ][ 'name' ];
 
     // Pega a extensão
     $extensao = pathinfo ( $nome, PATHINFO_EXTENSION );
@@ -24,7 +24,7 @@ if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] 
     // Somente imagens, .jpg;.jpeg;.gif;.png
     // Aqui eu enfileiro as extensões permitidas e separo por ';'
     // Isso serve apenas para eu poder pesquisar dentro desta String
-    if ( strstr ( '.jpg;.jpeg;.gif;.png', $extensao ) ) {
+    /*if ( strstr ( '.jpg;.jpeg;.gif;.png', $extensao ) ) {
         // Cria um nome único para esta imagem
         // Evita que duplique as imagens no servidor.
         // Evita nomes com acentos, espaços e caracteres não alfanuméricos
@@ -41,8 +41,9 @@ if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] 
         else
             echo 'Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';
     }
+    
     else
-        echo 'Você poderá enviar apenas arquivos "*.jpg;*.jpeg;*.gif;*.png"<br />';
+        echo 'Você poderá enviar apenas arquivos "*.jpg;*.jpeg;*.gif;*.png"<br />'; */
 }
 else
     echo 'Você não enviou nenhum arquivo!';
