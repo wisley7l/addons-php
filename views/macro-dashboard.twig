@@ -322,7 +322,7 @@
         <!--(not implemented im momment)p class="upload-details">{{dictionary.word_minimun_size}} 70x70px</p-->
       </div>
       <!--a href="#" class="button mid-short dark-light">{{dictionary.word_upload_image}}</a-->
-      <form id="addons-up-partner" action="scripts/up-partner" method="post">
+      <form id="addons-up-partner" action="scripts/up-partner" method="post" enctype="multipart/form-data">
         <input type="hidden" id="addons-up-id" name="id" />
         <input type="hidden" id="addons-up-user" name="user" />
         <input type="hidden" id="addons-up-name" name="name" />
@@ -330,7 +330,7 @@
         <input type="hidden" id="addons-up-rp-pass" name="rp-pass" />
         <input type="hidden" id="addons-up-website" name="website" />
         <input type="hidden" id="addons-up-about" name="about" />
-        <a> <input type="file" /> </a>
+        <input type="file" name="image"/>
       </form>
 
     </div>
