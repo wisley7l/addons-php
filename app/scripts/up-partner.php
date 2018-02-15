@@ -2,6 +2,8 @@
 var_dump($_POST);
 echo PHP_EOL;
 var_dump($_FILES);
+// check if the (id) logged is equal to or (id) sent
+$id = (int) $_POST['id'];
 
 // save profile image with user id name
 
@@ -29,7 +31,8 @@ if ( isset( $_FILES[ 'image' ][ 'name' ] ) && $_FILES[ 'image' ][ 'error' ] == 0
         // Cria um nome único para esta imagem
         // Evita que duplique as imagens no servidor.
         // Evita nomes com acentos, espaços e caracteres não alfanuméricos
-        $novoNome = uniqid ( time () ) . '.' . $extensao;
+        //$novoNome = uniqid ( time () ) . '.' . $extensao;
+        $novoNome = $id . '.' . $extensao;
 
         // Concatena a pasta com o nome
         $destino = Addons\PATH_DATA . 'images/profile/ ' . $novoNome;
