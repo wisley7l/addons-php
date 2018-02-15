@@ -62,6 +62,25 @@
 
 
 				<div class="clearfix"></div>
+
+				<div class="headline buttons primary">
+					<h4>{{dictionary.word_lastes_items}}</h4>
+					<a href="author-items-page?id={{info_author.id}}" class="button mid-short dark-light">{{dictionary.word_see_all_items}}</a>
+				</div>
+				<!-- /HEADLINE -->
+
+				<!-- PRODUCT LIST -->
+				<div class="product-list grid column3-4-wrap">
+					<!-- PRODUCT ITEM -->
+					{{macro_main.apps_themes(apps, 0, 3, dictionary)}}
+          {{macro_main.apps_themes(themes, 0, 3, dictionary)}}
+					<!-- /PRODUCT ITEM -->
+				</div>
+				<!-- /PRODUCT LIST -->
+
+
+
+				<div class="clearfix"></div>
 				{# not implemented in moment obs: desable macro-profile too
 				<!-- HEADLINE -->
 				<div class="headline buttons primary">
@@ -84,7 +103,7 @@
 			</div>
 			<!-- CONTENT -->
 
-			
+
 
 			<div class="clearfix"></div>
 		</div>
