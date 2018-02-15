@@ -525,6 +525,38 @@ function search_themes_name_category($limit,$search,$category)
   return $themes;
 }
 
+// PROFILE PAGE
+
+//(1) function to search themes by name with limit
+function search_themes_partner($limit,$partner)
+{
+  $themes = array();
+  $id_partner = (int)$partner;
+  $number = (int) $limit;
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
+    `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
+    FROM `apps a`, `partners p, `category_themes c` , `relationship_category_themes r`
+    WHERE (`t.partner_id` = `p.id` AND `t.partner_id` = $id_partner)
+    ORDER BY `t.title`
+    LIMIT $number ";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = get_app_theme($row['t.id'], $row['t.partner_id'], $row['t.title'], $row['t.thumbnail'], $row['t.value_license_basic'],
+        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      array_push($themes, $item); // add item in array
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $themes;
+}
+
 
 /*
 In the index page search the highlights of themes and app.
@@ -557,6 +589,9 @@ In the index page search the highlights of themes and app.
 
 // search apps with name and free and category OK--
 // search themes with name and free and category OK --
+
+//search apps with id partner
+//search themes with id partner
 
 // search app only with id
 // search theme only with id
