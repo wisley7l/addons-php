@@ -54,31 +54,31 @@ $categories_apps = array(
 ),
   array('id' => 4 ,
   'name' => $dictionary['word_social_media'],
-  'page' => ''
+  'page' => 'category-social-media'
 ),
   array('id' => 5 ,
   'name' => $dictionary['word_shipping'],
-  'page' => ''
+  'page' => 'category-shipping'
 ),
   array('id' => 6 ,
   'name' => $dictionary['word_inventory'],
-  'page' => ''
+  'page' => 'category-invetory'
 ),
   array('id' => 7 ,
   'name' => $dictionary['word_customer_service'],
-  'page' => ''
+  'page' => 'category-customer-service'
 ),
   array('id' => 8 ,
   'name' => $dictionary['word_tools'],
-  'page' => ''
+  'page' => 'category-tools'
 ),
   array('id' => 9 ,
   'name' => $dictionary['word_reporting'],
-  'page' => ''
+  'page' => 'category-reporting'
 ),
   array('id' => 10 ,
   'name' => $dictionary['word_sales_channels'],
-  'page' => ''
+  'page' => 'category-sales-channels'
 ),
 );
 
@@ -94,66 +94,66 @@ $categories_themes = array(
 ),
   array('id' => 2 ,
   'name' => $dictionary ['word_clothing_fashion'],
-  'page' => ''
+  'page' => 'category-clotthinf-fashion'
 ),
   array('id' => 3 ,
   'name' => $dictionary ['word_jewelry_accessories'],
-  'page' => ''
+  'page' => 'category-jewelry-acessories'
 ),
   array('id' => 4 ,
   'name' => $dictionary ['word_electronics'],
-  'page' => ''
+  'page' => 'category-electronics'
 ),
   array('id' => 5 ,
   'name' => $dictionary ['word_food_drinks'],
-  'page' => ''
+  'page' => 'category-food-drinks'
 ),
   array('id' => 6 ,
   'name' => $dictionary ['word_home_garden'],
-  'page' => ''
+  'page' => 'category-home-garden'
 ),
   array('id' => 7 ,
   'name' => $dictionary ['word_furniture'],
-  'page' => ''
+  'page' => 'category-furniture'
 ),
   array('id' => 8 ,
   'name' => $dictionary ['word_health_beauty'],
-  'page' => ''
+  'page' => 'category-health-beauty'
 ),
   array('id' => 9 ,
   'name' => $dictionary ['word_sports_recreation'],
-  'page' => ''
+  'page' => 'category-sports-recreation'
 ),
   array('id' => 10 ,
   'name' => $dictionary ['word_toys_games'],
-  'page' => ''
+  'page' => 'category-toys-games'
 ),
 array('id' => 11,
   'name' => $dictionary['word_games'],
-  'page' => ''
+  'page' => 'category-games'
 ),
 array('id' => 12,
   'name' => $dictionary['word_sexshop'],
-  'page' => ''
+  'page' => 'category-sexshop'
 ),
 array('id' => 13,
   'name' => $dictionary['word_petshop'],
-  'page' => ''
+  'page' => 'category-petshop'
 ),
 array('id' => 14,
   'name' => $dictionary['word_service'],
-  'page' => ''
+  'page' => 'category-service'
 ),
 
 array('id' => 15,
   'name' => $dictionary['word_fitness'],
-  'page' => ''
+  'page' => 'category-fitness'
 ),
 
 // last from the list
   array('id' => 16 ,
   'name' => $dictionary ['word_other'],
-  'page' => ''
+  'page' => 'category-outher'
 ),
 
 );
