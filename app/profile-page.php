@@ -38,7 +38,9 @@ if (isset($_GET['logout'])){
 if (isset($_GET['id'])){
   // query partner items by id
   // and  info author
-  
+
+}else {
+  echo "sempre";
 }
 
 // necessary variables for information
