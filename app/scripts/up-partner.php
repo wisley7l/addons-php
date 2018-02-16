@@ -8,3 +8,7 @@ var_dump($_FILES);
 $id = (int) $_POST['id'];
 
 // save profile image with user id name
+if (empty($_POST)) {
+  echo "error";
+
+}
