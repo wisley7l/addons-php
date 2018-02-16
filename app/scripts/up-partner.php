@@ -9,6 +9,6 @@ $id = (int) $_POST['id'];
 
 // save profile image with user id name
 if (empty($_POST)) {
-  header("Location: index");
+  header("Location: ../index");
   exit;
 }
