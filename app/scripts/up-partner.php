@@ -1,9 +1,9 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
+//header('Content-Type: text/html; charset=utf-8');
 echo PHP_EOL;
 var_dump($_POST);
 echo PHP_EOL;
-var_dump($_FILES);
+//var_dump($_FILES); // send image profile
 // check if the (id) logged is equal to or (id) sent
 $id = (int) $_POST['id'];
 
