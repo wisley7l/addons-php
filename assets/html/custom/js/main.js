@@ -132,7 +132,7 @@ $("#addons-button-save").click(function(event){
   $("#addons-up-country").val(country);
   // just accept "submit" if the passwords and the name are "ok"
   if(pass == rp_pass && name != ""){
-  //$("#addons-up-partner").submit();
+  $("#addons-up-partner").submit();
   }
   event.preventDefault();
 });
