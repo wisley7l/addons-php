@@ -24,7 +24,7 @@ if (empty($_POST)) {
   if ($_POST['pass'] == 'empty') {
     // query without changing password
     //echo "Não Muda senha";
-    echo $profile_json;
+    echo gettype($profile_json);
      //$query = "UPDATE `partners` SET `profile_json` =  WHERE id=$id";
   }else {
     // password is changed
