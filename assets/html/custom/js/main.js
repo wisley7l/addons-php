@@ -97,10 +97,7 @@ $("#addons-button-save").click(function(event){
   let occupation = $(div).find("input.addons-up-occupation").val();
   let city = $(div).find("input.addons-up-city").val();
   let country = $(div).find("select#new_country").val();
-  console.log(country);
-  /*
-
-  */
+  
   if(pass != rp_pass ){
     //If the confirmation password and password are different, activate "span"
     $(div).find("span.pass").css( "color", "red");
