@@ -16,7 +16,7 @@ if (empty($_POST)) {
     'name' => $_POST['name'],
     'public_contact' => $_POST['website'],
     'occupation' => $_POST['occupation'],
-    'address' => array('city' => $_POST['ciy'] , 'country' => $_POST['country'] ),
+    'address' => array('city' => $_POST['city'] , 'country' => $_POST['country'] ),
     'about_us' => $_POST['about']
   );
   $profile_json = json_encode($profile);
