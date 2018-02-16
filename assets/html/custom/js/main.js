@@ -97,7 +97,7 @@ $("#addons-button-save").click(function(event){
   let occupation = $(div).find("input.addons-up-occupation").val();
   let city = $(div).find("input.addons-up-city").val();
   let country = $(div).find("select#new_country").val();
-  
+
   if(pass != rp_pass ){
     //If the confirmation password and password are different, activate "span"
     $(div).find("span.pass").css( "color", "red");
@@ -127,11 +127,9 @@ $("#addons-button-save").click(function(event){
   $("#addons-up-rp-pass").val(rp_pass);
   $("#addons-up-website").val(website);
   $("#addons-up-about").val(about);
-  /*
-  addons-up-occupation
-addons-up-city
-addons-up-country
-  */
+  $("#addons-up-occupation").val(occupation);
+  $("#addons-up-city").val(city);
+  $("#addons-up-country").val(country);
   // just accept "submit" if the passwords and the name are "ok"
   if(pass == rp_pass && name != ""){
   //$("#addons-up-partner").submit();
