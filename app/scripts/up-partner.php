@@ -23,31 +23,17 @@ if (empty($_POST)) {
 
   if ($_POST['pass'] == 'empty') {
     // query without changing password
-    //echo "Não Muda senha";
-    echo gettype($profile_json);
-     //$query = "UPDATE `partners` SET `profile_json` =  WHERE id=$id";
+    echo $profile_json;
+     //$query = "UPDATE `partners` SET `profile_json` = $profile_json  WHERE `id`= $id";
   }else {
     // password is changed
-    //echo "Muda senha";
+    // check pass is equal rp-pass
+    //$query = "UPDATE `partners` SET `profile_json` = $profile_json, `password_hash` = $password   WHERE `id`= $id";
     echo $profile_json;
   }
 
 }
 
-
-/* table partners
-
-`id` SMALLINT UNSIGNED NOT NULL,
-`username` VARCHAR (30) NOT NULL,
-`password_hash` VARCHAR (255) NULL,
-`member_since` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-`avg_stars` TINYINT UNSIGNED NOT NULL DEFAULT 0,
-`evaluations` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
-`path_image` VARCHAR(255) NULL,
-`profile_json` TEXT NULL,
-`credit` MEDIUMINT NOT NULL DEFAULT 0,
-
-*/
 // function upload partner //
 /*
 // create connection to the database
