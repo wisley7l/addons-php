@@ -1,6 +1,6 @@
 <?php
 echo "page create password";
-if (empty([$_GET])) {
+if (isset($_GET)) {
   # error redirect index
   header("Location: index");
   exit;
