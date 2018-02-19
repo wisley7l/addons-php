@@ -6,8 +6,10 @@ $('#bt-create-pass').click(function() {
 //
 $('form.addons-partner-create-pass').submit(function(){
   let $form = $(this),
-    email = $form.find('#email_address2').val();
+    email = $form.find('#email_register').val();
     console.log(email);
+    $("#addons-email-user").val(email);
+    $("#addons-create-pass").submit();
 
 });
 
