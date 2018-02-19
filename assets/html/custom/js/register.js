@@ -25,11 +25,13 @@ $('form#addons-form-password').submit(function(event){
     //If the confirmation password and password are different, activate "span"
     // $div.find("span.pass").css( "color", "red");
     // $div.find("span.rp-pass").css( "color", "red");
+    console.log(test);
     alert('Error Password');
   }
   else {
     // $div.find("span.pass").css( "color", "black");
     // $div.find("span.rp-pass").css( "color", "black");
+    console.log(test);
     alert('Redirect');
   }
   event.preventDefault();
