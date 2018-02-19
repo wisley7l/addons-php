@@ -14,6 +14,11 @@ $('form.addons-partner-create-pass').submit(function(event){
 
 });
 
+//
+$('addons-form-password').submit(function(event){
+console.log('resigter password');
+});
+
 })(jQuery);
 
 
