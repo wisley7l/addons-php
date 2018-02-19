@@ -38,21 +38,33 @@
 
     <div class="content left">
       <!-- CONTENT -->
-      <div class="content left" id="addons-items">
-        <div class="sidebar-item" id="template">
-          <form id="register-form">
-            <label for="email_address2" class="rl-label required">Email Address</label>
-            <input type="email" id="email_address2" name="email_address2" placeholder="Enter your email address here...">
-            <label for="username2" class="rl-label">Username</label>
-            <input type="text" id="username2" name="username2" placeholder="Enter your username here...">
-            <label for="password2" class="rl-label required">Password</label>
-            <input type="password" id="password2" name="password2" placeholder="Enter your password here...">
-            <label for="repeat_password2" class="rl-label required">Repeat Password</label>
-            <input type="password" id="repeat_password2" name="repeat_password2" placeholder="Repeat your password here...">
-            <button class="button mid dark">Register <span class="primary">Now!</span></button>
-          </form>
-        </div>
-      </div>
+			<div class="form-popup-content">
+	      <form id="addons-login" action="scripts/login" method="post">
+	        <input type="hidden" id="addons-login-user" name="user" />
+	        <input type="hidden" id="addons-login-pass" name="pass" />
+	      </form>
+	      <form id="login-form2"  class="addons-partner-login">
+	        <label for="username5" class="rl-label">Login</label>
+	        <input type="text" id="username5" name="username5" class="addons-login-user" placeholder="{{dictionary.word_enter_username}}">
+	        <label for="password5" class="rl-label">{{dictionary.word_password}}</label>
+	        <input type="password" id="password5" name="password5" class="addons-login-password" placeholder="{{dictionary.word_enter_pass}}">
+	        <!-- CHECKBOX -->
+	        <input type="checkbox" id="remember2" name="remember2" checked>
+	        <label for="remember2" class="label-check">
+	          <span class="checkbox primary primary"><span></span></span>
+	          {{dictionary.word_remember_user}}
+	        </label>
+	        <!-- /CHECKBOX -->
+	        <p>{{dictionary.word_forgot_pssw}} <a href="#" class="primary">{{dictionary.word_click_here}}</a></p>
+	        <button class="button mid dark">{{dictionary.word_login}} <span class="primary">{{dictionary.word_now}}!</span></button>
+	        <!--a class="button mid dark" href="test-server"> ok </a-->
+	      </form>
+	      <!-- LINE SEPARATOR -->
+	      <hr class="line-separator double">
+	      <!-- /LINE SEPARATOR -->
+	      <!-- a href="#" class="button mid fb half">Login with Facebook</a-->
+	      <!-- a href="#" class="button mid twt half">Login with Twitter</a-->
+	    </div>
       <!-- CONTENT -->
     </div>
   </div>
