@@ -58,6 +58,14 @@ if (!empty($_GET['id'])){
   // add element in array
   array_push($themes, $item);
 
+  // OBS: when you are ready to enable these functions below.
+  // $info_author = search_partner_id($id_author); // bring the query to this page
+  // $apps = search_apps_partner($id_author); // return all apps
+  // $themes = search_themes_partner($id_author); // return all themes
+  // $total_apps = count($apps);
+  // $total_themes = count($themes);
+
+
 }else {
   // redirect error page
   header("Location: error-page");
@@ -77,7 +85,7 @@ $info_footer = array(
 );
 // test comments
 // query comments in db limit in 2
-// not implemted 
+// not implemted
 $comments = array(
   array('name' => 'C 1', 'path_image' => '', 'date' => '22 January  2018', 'is_buyer' => true, 'comment' => 'Este é um comentário de teste '),
   array('name' => 'C 2', 'path_image' => '', 'date' => '25 January  2018', 'is_buyer' => false, 'comment' => 'Este é outro comentário de teste '),

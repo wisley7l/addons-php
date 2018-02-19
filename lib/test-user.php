@@ -34,7 +34,7 @@ function getInfoUser($id)
     'id' => $id,
     'name' => 'Partner 2',
     'location' => 'Brazil',
-    'occupation' => 'dev',
+    'occupation' => 'Programmer',
     'member_since' => '1 Janary 2018',
     'total_sales' => 100, // sales quantity query
     'web_site' => 'www.example.com',

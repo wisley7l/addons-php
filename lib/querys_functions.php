@@ -23,7 +23,7 @@ function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
 }
 
 // function to handle partner search and create view
-function getInfoUser($id,$member_since,$path_image,$profile_json)
+function getInfoUser($id,$member_since,$path_image,$profile_json,$total_items)
 {
   $profile = json_decode($profile_json); // json decoding
 
@@ -36,7 +36,7 @@ function getInfoUser($id,$member_since,$path_image,$profile_json)
     //'total_sales' => 100, // sales quantity query // not implemted
     'web_site' => $profile['public_contact'],
     'path_image' => $path_image,
-    'number_apps_themes' => 3, // quantity of items found
+    'number_apps_themes' => $total_items, // quantity of items found
     //'number_badges' => 1, //not implemented
     //'stars' => 1, // not implemented
     //'evaluations' => 5 // not implemented
@@ -550,7 +550,7 @@ function search_themes_name_category($limit,$search,$category)
 // PROFILE PAGE
 
 //(1) function to search partner themes with limit __OK__
-function search_themes_partner($limit,$partner)
+function search_themes_partner($partner)
 {
   $themes = array();
   $id_partner = (int) $partner;
@@ -561,8 +561,7 @@ function search_themes_partner($limit,$partner)
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
     FROM `themes t`, `partners p,
     WHERE (`t.partner_id` = `p.id` AND `t.partner_id` = $id_partner)
-    ORDER BY `t.title`
-    LIMIT $number ";
+    ORDER BY `t.title`";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -580,7 +579,7 @@ function search_themes_partner($limit,$partner)
 }
 
 // (2) function to search partner apps with limit __OK__
-function search_apps_partner($limit,$partner)
+function search_apps_partner($partner)
 {
   $apps = array();
   $id_category = (int)$category;
@@ -589,10 +588,9 @@ function search_apps_partner($limit,$partner)
   // query search app and theme for index page
   $query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
     `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
-    FROM `apps a`, `partners p,
+    FROM `apps a`, `partners p`,
     WHERE (`a.partner_id` = `p.id` AND `t.partner_id` = $id_partner)
-    ORDER BY `a.title`
-    LIMIT $number ";
+    ORDER BY `a.title`";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -614,7 +612,23 @@ function search_partner_id($partner)
 {
   $id_partner = (int) $partner; // escape id partner
   $conn = $GLOBALS['conn']; // get varible global conn
+  $number = 1; // limit
 
+  $query =  "SELECT `p.id`, `p.member_since`, `p.path_image`, `p.profile_json`
+    FROM `partners p`
+    WHERE (`p.id` = '$id_partner')
+    LIMIT '$number' ";
+
+    if ($result = mysqli_query(  $conn, $query )) {
+      // fetch associative array
+      while ($row = mysqli_fetch_assoc($result)) {
+        $partner = getInfoUser($row['id'],$row['member_since'],$row['path_image'],
+        $row['profile_json'],0); // increment total items on profile page
+      }
+      // free result set
+      mysqli_free_result($result);
+    }
+    return $partner;
 }
 
 
