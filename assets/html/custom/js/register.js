@@ -18,19 +18,19 @@ $('form.addons-partner-create-pass').submit(function(event){
 $('form#addons-form-password').submit(function(event){
   let $div = $("div#addons-form-pass"),
       pass = md5($div.find("input.addons-pass").val()),
-      rp_pass = md5($div.find("input.addon-srp-pass").val()),
+      rp_pass = md5($div.find("input.addons-rp-pass").val()),
       empty = md5('undefined'),
       test = $div.find("input.addons-pass").val();
   if(pass != rp_pass || pass == empty){
     //If the confirmation password and password are different, activate "span"
-    // $div.find("span.pass").css( "color", "red");
-    // $div.find("span.rp-pass").css( "color", "red");
+    $div.find("span.pass").css( "color", "red");
+    $div.find("span.rp-pass").css( "color", "red");
     console.log(test);
     alert('Error Password');
   }
   else {
-    // $div.find("span.pass").css( "color", "black");
-    // $div.find("span.rp-pass").css( "color", "black");
+    $div.find("span.pass").css( "color", "black");
+    $div.find("span.rp-pass").css( "color", "black");
     console.log(test);
     alert('Redirect');
   }
