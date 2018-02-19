@@ -19,7 +19,8 @@ $('form#addons-form-password').submit(function(event){
   let $div = $("div.form-box-item"),
       pass = md5($div.find("input.addons-pass").val()),
       rp_pass = md5($div.find("input.addonsrp-pass").val()),
-      empty = md5('undefined');
+      empty = md5('undefined'),
+      test = $div.find("input.addons-pass").val();
   if(pass != rp_pass || pass == empty){
     //If the confirmation password and password are different, activate "span"
     // $div.find("span.pass").css( "color", "red");
@@ -33,7 +34,7 @@ $('form#addons-form-password').submit(function(event){
   }
   event.preventDefault();
 });
-
+console.log(test);
 
 })(jQuery);
 
