@@ -1,4 +1,7 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
+$dictionary = get_dictionary();
+$login = false;
 echo "page create password";
 if (!empty($_GET['id'])) {
   $id = (int)$_GET['id'];
@@ -9,7 +12,7 @@ if (!empty($_GET['id'])) {
   header("Location: index");
   exit;
 }
-// TODO: treat login 
+// TODO: treat login
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
