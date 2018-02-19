@@ -4,12 +4,13 @@ $('#bt-create-pass').click(function() {
   form_popup();
 });
 //
-$('form.addons-partner-create-pass').submit(function(){
+$('form.addons-partner-create-pass').submit(function(event){
   let $form = $(this),
     email = $form.find('#email_register').val();
     console.log(email);
     $("#addons-email-user").val(email);
     $("#addons-create-pass").submit();
+    event.preventDefault();
 
 });
 
