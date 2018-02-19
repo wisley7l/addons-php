@@ -20,5 +20,10 @@ function test($id)
 if($_GET['id']){
   $id = (int) $_GET['id'];
   $t = test($id);
-  var_dump($t);
+  if (empty($t)) {
+    echo "empty";
+  }
+  else {
+    var_dump($t);
+  }
 }
