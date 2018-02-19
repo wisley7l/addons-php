@@ -1,5 +1,10 @@
 <?php
-if (!empty($_POST['email'])) {
+if (empty($_POST)) {
+  // error redirect index
+  header("Location: ../index");
+  exit;
+}
+else if (!empty($_POST['email'])) {
   $email = $_POST['email'];
   echo $email;
   // get in API
@@ -25,7 +30,7 @@ if (!empty($_POST['email'])) {
     // query check if it already exists in the DB
     // if there is a return, the user is already registered
     //otherwise request password
-    //*
+    /*
     // create connection to the database
     $conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
     // check connection
@@ -40,13 +45,15 @@ if (!empty($_POST['email'])) {
       WHERE (`p.id` = $id_partner) LIMIT 1";
 
     if (mysqli_query(  $conn, $query )) {
-      // message error
+      // message error (partner already has password)
     }else {
       // request password
+      // TO DO:
+      // redirect to registration page
     }
     //*/
   }else {
-    // unregistered partner
+    // partner has no pre-registration
   }
 
 }else {
