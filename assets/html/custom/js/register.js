@@ -1,4 +1,5 @@
 (function(event) {
+  console.log("ok");
 
 $('#bt-create-pass').click(function() {
   form_popup();
