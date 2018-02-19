@@ -21,6 +21,27 @@ function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
       'is_app'=> $app // if app is equal 1
     );
 }
+
+// function to handle partner search and create view
+function getInfoUser($id,$member_since,$path_image,$profile_json)
+{
+  $profile = json_decode($profile_json); // json decoding
+
+  return array(
+    'id' => $id,
+    'name' => $profile['name'],
+    'location' => $profile['address']['city'] . ',' . $profile['address']['country'],
+    'occupation' => $profile['occupation'],
+    'member_since' => $member_since,
+    //'total_sales' => 100, // sales quantity query // not implemted
+    'web_site' => $profile['public_contact'],
+    'path_image' => $path_image,
+    'number_apps_themes' => 3, // quantity of items found
+    //'number_badges' => 1, //not implemented
+    //'stars' => 1, // not implemented
+    //'evaluations' => 5 // not implemented
+  );
+}
 // QUERYS
 
 // create connection to the database
@@ -97,8 +118,9 @@ function search_apps_free_name($limit,$search)
 {
   $apps = array();
   $number = (int) $limit;
-  $name = strtoupper($search); // coverte string for muscle
   $conn = $GLOBALS['conn']; // get varible global conn
+  $name = mysqli_real_escape_string($conn, $search); // escape string
+
   // query search app and theme for index page
   $query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
     `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
@@ -127,8 +149,8 @@ function search_apps_all_name($limit,$search)
 {
   $apps = array();
   $number = (int) $limit;
-  $name = strtoupper($search); // coverte string for muscle
   $conn = $GLOBALS['conn']; // get varible global conn
+  $name = mysqli_real_escape_string($conn, $search); // escape string
   // query search app and theme for index page
   $query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
     `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
@@ -216,8 +238,8 @@ function search_themes_free_name($limit,$search)
 {
   $themes = array();
   $number = (int) $limit;
-  $name = strtoupper($search); // coverte string for muscle
   $conn = $GLOBALS['conn']; // get varible global conn
+  $name = mysqli_real_escape_string($conn, $search); // escape string
   // query search app and theme for index page
   $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
@@ -246,8 +268,8 @@ function search_themes_all_name($limit,$search)
 {
   $themes = array();
   $number = (int) $limit;
-  $name = strtoupper($search); // coverte string for muscle
   $conn = $GLOBALS['conn']; // get varible global conn
+  $name = mysqli_real_escape_string($conn, $search); // escape string
   // query search app and theme for index page
   $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
@@ -277,8 +299,8 @@ function search_apps_category($limit,$category)
 {
   $apps = array();
   $id_category = (int)$category;
-  $number = (int) $limit;
   $conn = $GLOBALS['conn']; // get varible global conn
+  $name = mysqli_real_escape_string($conn, $search); // escape string
   // query search app and theme for index page
   $query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
     `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
@@ -339,8 +361,8 @@ function search_apps_free_name_category($limit,$search,$category)
   $apps = array();
   $id_category = (int)$category;
   $number = (int) $limit;
-  $name = strtoupper($search); // coverte string for muscle
   $conn = $GLOBALS['conn']; // get varible global conn
+  $name = mysqli_real_escape_string($conn, $search); // escape string
   // query search app and theme for index page
   $query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
     `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
@@ -371,8 +393,8 @@ function search_apps_name_category($limit,$search,$category)
   $apps = array();
   $id_category = (int)$category;
   $number = (int) $limit;
-  $name = strtoupper($search); // coverte string for muscle
   $conn = $GLOBALS['conn']; // get varible global conn
+  $name = mysqli_real_escape_string($conn, $search); // escape string
   // query search app and theme for index page
   $query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
     `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
@@ -467,8 +489,8 @@ function search_themes_free_name_category($limit,$search,$category)
   $themes = array();
   $id_category = (int)$category;
   $number = (int) $limit;
-  $name = strtoupper($search); // coverte string for muscle
   $conn = $GLOBALS['conn']; // get varible global conn
+  $name = mysqli_real_escape_string($conn, $search); // escape string
   // query search app and theme for index page
   $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
@@ -499,8 +521,8 @@ function search_themes_name_category($limit,$search,$category)
   $themes = array();
   $id_category = (int)$category;
   $number = (int) $limit;
-  $name = strtoupper($search); // coverte string for muscle
   $conn = $GLOBALS['conn']; // get varible global conn
+  $name = mysqli_real_escape_string($conn, $search); // escape string
   // query search app and theme for index page
   $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
@@ -585,6 +607,14 @@ function search_apps_partner($limit,$partner)
 
   }
   return $apps;
+}
+
+// query for partner search
+function search_partner_id($partner)
+{
+  $id_partner = (int) $partner; // escape id partner
+  $conn = $GLOBALS['conn']; // get varible global conn
+
 }
 
 

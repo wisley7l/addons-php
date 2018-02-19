@@ -77,6 +77,7 @@ $info_footer = array(
 );
 // test comments
 // query comments in db limit in 2
+// not implemted 
 $comments = array(
   array('name' => 'C 1', 'path_image' => '', 'date' => '22 January  2018', 'is_buyer' => true, 'comment' => 'Este é um comentário de teste '),
   array('name' => 'C 2', 'path_image' => '', 'date' => '25 January  2018', 'is_buyer' => false, 'comment' => 'Este é outro comentário de teste '),

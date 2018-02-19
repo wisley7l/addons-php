@@ -34,7 +34,7 @@ function getInfoUser($id)
     'id' => $id,
     'name' => 'Partner 2',
     'location' => 'Brazil',
-    'description' => 'dev',
+    'occupation' => 'dev',
     'member_since' => '1 Janary 2018',
     'total_sales' => 100, // sales quantity query
     'web_site' => 'www.example.com',
@@ -62,7 +62,7 @@ function getImagesApp()
   return $images;
 }
 
-function getImagesTheme($value='')
+function getImagesTheme()
 {
   $themes = array();
   $i1 = array('id' => 1,
