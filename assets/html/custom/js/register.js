@@ -19,7 +19,7 @@ $('form#addons-form-password').submit(function(event){
   let $div = $("div.form-box-item");
   let pass = md5($div.find("input.addons-pass").val()),
       rp_pass = md5($div.find("input.addonsrp-pass").val());
-  if(pass != rp_pass ){
+  if(pass != rp_pass || pass = ''){
     //If the confirmation password and password are different, activate "span"
     $div.find("span.pass").css( "color", "red");
     $div.find("span.rp-pass").css( "color", "red");
