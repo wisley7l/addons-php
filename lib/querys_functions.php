@@ -34,7 +34,7 @@ if (mysqli_connect_errno()) {
 }
 // APPS
 
-// (1) function to fetch all apps with limit
+// (1) function to fetch all apps with limit __OK__
 function search_all_apps($limit)
 {
   $apps = array();
@@ -63,7 +63,7 @@ function search_all_apps($limit)
   return $apps;
 }
 
-//(2) function to fetch all apps free with limit
+//(2) function to fetch all apps free with limit __OK__
 function search_all_apps_free($limit)
 {
   $apps = array();
@@ -92,7 +92,7 @@ function search_all_apps_free($limit)
   return $apps;
 }
 
-//(3) function to search free apps by name with limit
+//(3) function to search free apps by name with limit __OK__
 function search_apps_free_name($limit,$search)
 {
   $apps = array();
@@ -122,7 +122,7 @@ function search_apps_free_name($limit,$search)
   return $apps;
 }
 
-//(4) function to search apps by name with limit
+//(4) function to search apps by name with limit __OK__
 function search_apps_all_name($limit,$search)
 {
   $apps = array();
@@ -154,7 +154,7 @@ function search_apps_all_name($limit,$search)
 
 // THEMES
 
-//(1) function to fetch all themes with limit
+//(1) function to fetch all themes with limit __OK__
 function search_all_themes($limit)
 {
   $themes = array();
@@ -182,7 +182,7 @@ function search_all_themes($limit)
   }
   return $themes;
 }
-//(2) function to fetch all apps free with limit
+//(2) function to fetch all apps free with limit __OK__
 function search_all_themes_free($limit)
 {
   $themes = array();
@@ -211,7 +211,7 @@ function search_all_themes_free($limit)
   return $themes;
 }
 
-//(3) function to search free themes by name with limit
+//(3) function to search free themes by name with limit __OK__
 function search_themes_free_name($limit,$search)
 {
   $themes = array();
@@ -221,7 +221,7 @@ function search_themes_free_name($limit,$search)
   // query search app and theme for index page
   $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
-    FROM `themes a`, `partners p`
+    FROM `themes t`, `partners p`
     WHERE (`t.partner_id` = `p.id` AND `t.value_license_basic` = 0 AND `t.title` = $name)
     ORDER BY `t.title`
     LIMIT $number ";
@@ -241,7 +241,7 @@ function search_themes_free_name($limit,$search)
   return $themes;
 }
 
-//(4) function to search apps by name with limit
+//(4) function to search apps by name with limit __OK__
 function search_themes_all_name($limit,$search)
 {
   $themes = array();
@@ -251,7 +251,7 @@ function search_themes_all_name($limit,$search)
   // query search app and theme for index page
   $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
-    FROM `apps a`, `partners p`
+    FROM `themes t`, `partners p`
     WHERE (`t.partner_id` = `p.id` AND `t.title` = $name)
     ORDER BY `t.title`
     LIMIT $number ";
@@ -272,7 +272,7 @@ function search_themes_all_name($limit,$search)
 }
 // APPS BY CATEGORY
 
-// (1) function to fetch all apps with limit
+// (1) function to fetch all apps with limit __OK__
 function search_apps_category($limit,$category)
 {
   $apps = array();
@@ -302,7 +302,7 @@ function search_apps_category($limit,$category)
   return $apps;
 }
 
-//(2) function to fetch all apps free with limit
+//(2) function to fetch all apps free with limit __OK__
 function search_apps_free_category($limit,$category)
 {
   $apps = array();
@@ -333,7 +333,7 @@ function search_apps_free_category($limit,$category)
   return $apps;
 }
 
-//(3) function to search free apps by name with limit
+//(3) function to search free apps by name with limit __OK__
 function search_apps_free_name_category($limit,$search,$category)
 {
   $apps = array();
@@ -365,7 +365,7 @@ function search_apps_free_name_category($limit,$search,$category)
   return $apps;
 }
 
-//(4) function to search apps by name with limit
+//(4) function to search apps by name with limit __OK__
 function search_apps_name_category($limit,$search,$category)
 {
   $apps = array();
@@ -399,7 +399,7 @@ function search_apps_name_category($limit,$search,$category)
 
 // THEME BY CATEGORY
 
-//(1) function to fetch all themes with limit
+//(1) function to fetch all themes with limit __OK__
 function search_themes_category($limit,$category)
 {
   $themes = array();
@@ -430,7 +430,7 @@ function search_themes_category($limit,$category)
   return $themes;
 }
 
-//(2) function to fetch all apps free with limit
+//(2) function to fetch all apps free with limit __OK__
 function search_themes_free_category($limit,$category)
 {
   $themes = array();
@@ -442,7 +442,7 @@ function search_themes_free_category($limit,$category)
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
     FROM `themes t`, `partners p`, `category_themes c` , `relationship_category_themes r`
     WHERE (`t.partner_id` = `p.id` AND `t.value_license_basic` = 0
-      AND `r.app_id` = `a.id` AND `r.category_apps_id` = `c.id` AND `c.id` = $id_category)
+      AND `r.theme_id` = `a.id` AND `r.category_themes_id` = `c.id` AND `c.id` = $id_category)
     ORDER BY `t.title`
     LIMIT $number ";
 
@@ -461,7 +461,7 @@ function search_themes_free_category($limit,$category)
   return $themes;
 }
 
-//(3) function to search free themes by name with limit
+//(3) function to search free themes by name with limit __OK__
 function search_themes_free_name_category($limit,$search,$category)
 {
   $themes = array();
@@ -472,9 +472,9 @@ function search_themes_free_name_category($limit,$search,$category)
   // query search app and theme for index page
   $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
-    FROM `themes a`, `partners p`, `category_themes c` , `relationship_category_themes r`
+    FROM `themes t`, `partners p`, `category_themes c` , `relationship_category_themes r`
     WHERE (`t.partner_id` = `p.id` AND `t.value_license_basic` = 0 AND `t.title` = $name
-      AND `r.app_id` = `a.id` AND `r.category_apps_id` = `c.id` AND `c.id` = $id_category)
+      AND `r.theme_id` = `t.id` AND `r.category_themes_id` = `c.id` AND `c.id` = $id_category)
     ORDER BY `t.title`
     LIMIT $number ";
 
@@ -493,7 +493,7 @@ function search_themes_free_name_category($limit,$search,$category)
   return $themes;
 }
 
-//(4) function to search apps by name with limit
+//(4) function to search apps by name with limit __OK__
 function search_themes_name_category($limit,$search,$category)
 {
   $themes = array();
@@ -504,9 +504,9 @@ function search_themes_name_category($limit,$search,$category)
   // query search app and theme for index page
   $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
-    FROM `apps a`, `partners p, `category_themes c` , `relationship_category_themes r``
+    FROM `themes t`, `partners p, `category_themes c` , `relationship_category_themes r`
     WHERE (`t.partner_id` = `p.id` AND `t.title` = $name
-      AND `r.app_id` = `a.id` AND `r.category_apps_id` = `c.id` AND `c.id` = $id_category)
+      AND `r.theme_id` = `t.id` AND `r.category_themes_id` = `c.id` AND `c.id` = $id_category)
     ORDER BY `t.title`
     LIMIT $number ";
 
@@ -527,17 +527,17 @@ function search_themes_name_category($limit,$search,$category)
 
 // PROFILE PAGE
 
-//(1) function to search themes by name with limit
+//(1) function to search partner themes with limit __OK__
 function search_themes_partner($limit,$partner)
 {
   $themes = array();
-  $id_partner = (int)$partner;
+  $id_partner = (int) $partner;
   $number = (int) $limit;
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT `t.id`, `t.partner_id`,`t.title`, `t.thumbnail`,
     `t.value_license_basic`,`p.id`, `p.username`, `p.path_image`
-    FROM `apps a`, `partners p, `category_themes c` , `relationship_category_themes r`
+    FROM `themes t`, `partners p,
     WHERE (`t.partner_id` = `p.id` AND `t.partner_id` = $id_partner)
     ORDER BY `t.title`
     LIMIT $number ";
@@ -556,6 +556,37 @@ function search_themes_partner($limit,$partner)
   }
   return $themes;
 }
+
+// (2) function to search partner apps with limit __OK__
+function search_apps_partner($limit,$partner)
+{
+  $apps = array();
+  $id_category = (int)$category;
+  $number = (int) $limit;
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
+    `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
+    FROM `apps a`, `partners p,
+    WHERE (`a.partner_id` = `p.id` AND `t.partner_id` = $id_partner)
+    ORDER BY `a.title`
+    LIMIT $number ";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = get_app_theme($row['a.id'], $row['a.partner_id'], $row['a.title'], $row['a.thumbnail'], $row['a.value_plan_basic'],
+        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      array_push($apps, $item); // add item in array
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $apps;
+}
+
 
 
 /*
@@ -590,8 +621,8 @@ In the index page search the highlights of themes and app.
 // search apps with name and free and category OK--
 // search themes with name and free and category OK --
 
-//search apps with id partner
-//search themes with id partner
+//search apps with id partner OK --
+//search themes with id partner OK --
 
 // search app only with id
 // search theme only with id
