@@ -2,7 +2,7 @@
   page = window.location.hash;
 
 if (page != '') {
-var res = page.split("#create-passwoord");
+var res = page.split("#create-password");
 console.log(res);
 }
 
