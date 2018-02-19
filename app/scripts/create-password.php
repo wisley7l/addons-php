@@ -1,6 +1,6 @@
 <?php
-if (!empty($_GET['email'])) {
-  echo $_GET['email'];
+if (!empty($_POST['email'])) {
+  
 
 }else {
   echo "error";
