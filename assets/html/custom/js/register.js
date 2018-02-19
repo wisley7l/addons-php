@@ -13,10 +13,10 @@ $('form.addons-partner-create-pass').submit(function(event){
     event.preventDefault();
 
 });
-
 //
 $('form#addons-form-password').submit(function(event){
-console.log('resigter password');
+  console.log('SIM');
+    event.preventDefault();
 });
 
 })(jQuery);
