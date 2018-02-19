@@ -16,10 +16,10 @@ $('form.addons-partner-create-pass').submit(function(event){
 
 //
 $('form#addons-form-password').submit(function(event){
-  let $div = $("div.form-box-item");
-  let pass = md5($div.find("input.addons-pass").val()),
+  let $div = $("div.form-box-item"),
+      pass = md5($div.find("input.addons-pass").val()),
       rp_pass = md5($div.find("input.addonsrp-pass").val()),
-      empty = md5('');
+      empty = $div.find("input.addons-pass").val();
   if(pass != rp_pass || pass == ''){
     //If the confirmation password and password are different, activate "span"
     $div.find("span.addons-pass").css( "color", "red");
