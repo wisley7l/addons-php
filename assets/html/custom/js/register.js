@@ -1,12 +1,14 @@
 (function(event) {
+
 $('#bt-create-pass').click(function() {
-  create();
-  alert( "Handler for .click() called." );
+  form_popup();
 });
+
 
 })(jQuery);
 
-function create() {
-  //create-password
+
+function form_popup() {
+  //enable form send email for create password
   $('#create-password').attr('class', 'form-popup')
 }
