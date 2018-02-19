@@ -30,7 +30,7 @@ else if (!empty($_POST['email'])) {
     // query check if it already exists in the DB
     // if there is a return, the user is already registered
     //otherwise request password
-    /* TO DO:
+    /* TODO:
     // create connection to the database
     $conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
     // check connection
@@ -48,7 +48,7 @@ else if (!empty($_POST['email'])) {
       // message error (partner already has password)
     }else {
       // request password
-      // TO DO:
+      // TODO:
       // redirect to registration page
       header("Location: ../password-create?id=$id_partner");
       exit;
