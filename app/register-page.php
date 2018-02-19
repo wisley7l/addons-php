@@ -45,6 +45,8 @@ else if (isset($_GET['term']) ){
     header("Location: search-page?term=" . $_GET['term']);
     exit;
   }
+}else if (!empty($_GET['email'])) {
+  echo "search email";
 }
 
 // if user is already logged in, redirects to error page
