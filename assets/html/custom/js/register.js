@@ -14,9 +14,8 @@ $('form.addons-partner-create-pass').submit(function(event){
 
 });
 //
-$('form#addons-form-password').submit(function(event){
+$('#bt-create-pass').click(function(){
   console.log('SIM');
-    event.preventDefault();
 });
 
 })(jQuery);
