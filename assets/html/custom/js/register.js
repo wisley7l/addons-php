@@ -4,6 +4,9 @@ $('#bt-create-pass').click(function() {
   form_popup();
 });
 
+$('form.addons-partner-create-pass').submit(function(){
+  console.log('click');
+});
 
 })(jQuery);
 
