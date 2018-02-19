@@ -16,9 +16,9 @@ $('form.addons-partner-create-pass').submit(function(event){
 
 //
 $('form#addons-form-password').submit(function(event){
-  let $div = $("div.form-box-item"),
+  let $div = $("div#addons-form-pass"),
       pass = md5($div.find("input.addons-pass").val()),
-      rp_pass = md5($div.find("input.addonsrp-pass").val()),
+      rp_pass = md5($div.find("input.addon-srp-pass").val()),
       empty = md5('undefined'),
       test = $div.find("input.addons-pass").val();
   if(pass != rp_pass || pass == empty){
