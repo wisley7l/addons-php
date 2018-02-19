@@ -21,16 +21,16 @@ $('form#addons-form-password').submit(function(event){
       rp_pass = md5($div.find("input.addonsrp-pass").val());
   if(pass != rp_pass ){
     //If the confirmation password and password are different, activate "span"
-    $(div).find("span.pass").css( "color", "red");
-    $(div).find("span.rp-pass").css( "color", "red");
+    $div.find("span.pass").css( "color", "red");
+    $div.find("span.rp-pass").css( "color", "red");
     console.log('Error');
   }
   else {
-    $(div).find("span.pass").css( "color", "black");
-    $(div).find("span.rp-pass").css( "color", "black");
+    $div.find("span.pass").css( "color", "black");
+    $div.find("span.rp-pass").css( "color", "black");
     console.log('Send');
   }
-
+  console.log('certo');
   event.preventDefault();
 });
 
