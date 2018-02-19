@@ -1,5 +1,4 @@
 (function(event) {
-  console.log("ok");
 
 $('#bt-create-pass').click(function() {
   form_popup();
@@ -14,10 +13,15 @@ $('form.addons-partner-create-pass').submit(function(event){
     event.preventDefault();
 
 });
+
 //
-$('#bt-create-pass').click(function(){
-  console.log('SIM');
+$('form#addons-form-password').submit(function(event){
+  console.log('resigter password');
+  event.preventDefault();
 });
+
+
+
 
 })(jQuery);
 
