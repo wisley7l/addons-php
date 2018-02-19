@@ -89,28 +89,19 @@
 	<div class="form-popup-content">
 		<!-- FORM POPUP HEADLINE -->
 		<div class="form-popup-headline secondary">
-			<h2>{{dictionary.word_login_account}}</h2>
-			<p>{{dictionary.description_login}}</p>
+			<h2>Creaate password</h2>
+			<p>description</p>
 		</div>
 		<!-- /FORM POPUP HEADLINE -->
 		<!-- FORM POPUP CONTENT -->
 		<div class="form-popup-content">
 			<form id="addons-login" action="scripts/login" method="post">
 				<input type="hidden" id="addons-login-user" name="user" />
-				<input type="hidden" id="addons-login-pass" name="pass" />
 			</form>
 			<form id="login-form2"  class="addons-partner-login">
 				<label for="username5" class="rl-label">Login</label>
 				<input type="text" id="username5" name="username5" class="addons-login-user" placeholder="{{dictionary.word_enter_username}}">
-				<label for="password5" class="rl-label">{{dictionary.word_password}}</label>
-				<input type="password" id="password5" name="password5" class="addons-login-password" placeholder="{{dictionary.word_enter_pass}}">
-				<!-- CHECKBOX -->
-				<input type="checkbox" id="remember2" name="remember2" checked>
-				<label for="remember2" class="label-check">
-					<span class="checkbox primary primary"><span></span></span>
-					{{dictionary.word_remember_user}}
-				</label>
-				<!-- /CHECKBOX -->
+				
 				<p>{{dictionary.word_forgot_pssw}} <a href="#" class="primary">{{dictionary.word_click_here}}</a></p>
 				<button class="button mid dark">{{dictionary.word_login}} <span class="primary">{{dictionary.word_now}}!</span></button>
 				<!--a class="button mid dark" href="test-server"> ok </a-->
