@@ -95,15 +95,13 @@
 		<!-- /FORM POPUP HEADLINE -->
 		<!-- FORM POPUP CONTENT -->
 		<div class="form-popup-content">
-			<form id="addons-login" action="scripts/login" method="post">
-				<input type="hidden" id="addons-login-user" name="user" />
+			<form id="addons-login" action="scripts/create-pass" method="post">
+				<input type="hidden" id="addons-partner-email" name="user" />
 			</form>
-			<form id="login-form2"  class="addons-partner-login">
-				<label for="username5" class="rl-label">Login</label>
-				<input type="text" id="username5" name="username5" class="addons-login-user" placeholder="{{dictionary.word_enter_username}}">
-				
-				<p>{{dictionary.word_forgot_pssw}} <a href="#" class="primary">{{dictionary.word_click_here}}</a></p>
-				<button class="button mid dark">{{dictionary.word_login}} <span class="primary">{{dictionary.word_now}}!</span></button>
+			<form id="login-form"  class="addons-partner-create-pass">
+				<label for="username5" class="rl-label">E-Mail</label>
+				<input type="text" id="username" name="username" class="addons-partner-email" placeholder="{{dictionary.word_enter_username}}">
+				<button class="button mid dark"> Verify <span class="primary">Now!</span></button>
 				<!--a class="button mid dark" href="test-server"> ok </a-->
 			</form>
 			<!-- LINE SEPARATOR -->
