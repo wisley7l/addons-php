@@ -8,4 +8,6 @@ if (empty([$_GET])) {
   $id = (int)$_GET['id'];
   echo PHP_EOL;
   echo "$id";
+}else if (empty($_GET['id'])){
+  echo "simmm";
 }
