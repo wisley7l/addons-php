@@ -1,9 +1,6 @@
 (function($,event) {
-  page = window.location.hash;
-
-if (page != '') {
-var res = page.split("#create-password");
-console.log(res);
-}
+$('#bt-create-pass').click(function() {
+  alert( "Handler for .click() called." );
+);
 
 })(jQuery);
