@@ -8,5 +8,5 @@ $('#bt-create-pass').click(function() {
 
 function create() {
   //create-password
-  $('#create-password').attr('class', 'form-popup mfp-hide')
+  $('#create-password').attr('class', 'form-popup')
 }
