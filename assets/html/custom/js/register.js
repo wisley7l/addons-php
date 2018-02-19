@@ -30,7 +30,7 @@ $('form#addons-form-password').submit(function(event){
     $div.find("span.addons-rp-pass").css( "color", "black");
     console.log('Send');
   }
-  console.log('certo');
+  console.log(pass);
   event.preventDefault();
 });
 
