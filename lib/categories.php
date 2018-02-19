@@ -56,6 +56,7 @@ $categories_apps = array(
   'name' => $dictionary['word_social_media'],
   'page' => 'category-social-media'
 ),
+/* not implemented
   array('id' => 5 ,
   'name' => $dictionary['word_shipping'],
   'page' => 'category-shipping'
@@ -80,6 +81,7 @@ $categories_apps = array(
   'name' => $dictionary['word_sales_channels'],
   'page' => 'category-sales-channels'
 ),
+*/
 );
 
 $categories_themes = array(
@@ -92,6 +94,7 @@ $categories_themes = array(
   'name' => $dictionary['word_art_photography'],
   'page' => 'category-art-photography'
 ),
+/* not implemented
   array('id' => 2 ,
   'name' => $dictionary ['word_clothing_fashion'],
   'page' => 'category-clotthinf-fashion'
@@ -155,9 +158,11 @@ array('id' => 15,
   'name' => $dictionary ['word_other'],
   'page' => 'category-outher'
 ),
-
+*/
 );
-//
+
+// FUNCTIONS 
+
 function get_categories_app()
 {
   $categories = $GLOBALS['categories_apps'];

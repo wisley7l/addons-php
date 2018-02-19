@@ -14,11 +14,11 @@ $filter = array('all' => 'selected',
   header("Location: ?term=" . $_GET['term']);
   exit;
 } elseif (isset($_GET['term'])) {
-  # code...
-  // filter items free
-  // count the number of items found
-  $name_page = $_GET['term'];
+  $name_item = $_GET['term'];
   $number_found = 0;
+  // OBS: when you are ready to enable these functions below.
+  //$apps = search_apps_all_name(12,$name_item); // return a maximum of 12 apps in the search
+  // $number_found = count($apps);
 } else if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
     header("Location: ?term=" . $_GET['name']);
@@ -29,10 +29,13 @@ $filter = array('all' => 'selected',
     // count the number of items found
     $filter['all'] = '' ;
     $filter['free'] = 'selected';
-    $name_page = $_GET['name'];
+    $name_item = $_GET['name'];
     // filter items free
     // count the number of items found
     $number_found = 0;
+    // OBS: when you are ready to enable these functions below.
+    //$apps = search_apps_free_name(12,$name_item); // return a maximum of 12 apps in the search
+    // $number_found = count($apps);
   }
 }else if ((int) $_GET['app'] == 1 and isset($_GET['name']) ) {
   // app is 1
@@ -111,7 +114,7 @@ $theme_category = get_categories_theme();
 
 //info search
 $info_page = array(
-  'name' => $name_page,
+  'name' => $name_item,
   'number_found' => $number_found
 );
 
