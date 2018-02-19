@@ -22,19 +22,17 @@ $('form#addons-form-password').submit(function(event){
       empty = md5('undefined');
   if(pass != rp_pass || pass == empty){
     //If the confirmation password and password are different, activate "span"
-    $div.find("span.pass").css( "color", "red");
-    $div.find("span.rp-pass").css( "color", "red");
-    console.log('Error');
+    // $div.find("span.pass").css( "color", "red");
+    // $div.find("span.rp-pass").css( "color", "red");
+    alert('Error Password');
   }
   else {
-    $div.find("span.pass").css( "color", "black");
-    $div.find("span.rp-pass").css( "color", "black");
-    console.log('Send');
+    // $div.find("span.pass").css( "color", "black");
+    // $div.find("span.rp-pass").css( "color", "black");
+    alert('Redirect');
   }
   event.preventDefault();
 });
-
-
 
 
 })(jQuery);
