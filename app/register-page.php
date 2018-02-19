@@ -45,10 +45,6 @@ else if (isset($_GET['term']) ){
     header("Location: search-page?term=" . $_GET['term']);
     exit;
   }
-}else if (!empty($_GET['email'])) {
-  // redirect to check email
-  //header("Location: scripts/create-password?email=" . $_GET['email']);
-  //exit;
 }
 
 // if user is already logged in, redirects to error page
