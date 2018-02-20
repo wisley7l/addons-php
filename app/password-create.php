@@ -2,7 +2,11 @@
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
-echo "page create password";
+// if login is true redirect index
+//TODO: seccion
+// TODO: treat login
+// TODO: get the user name to treat the view
+
 if (!empty($_GET['id'])) {
   $id = (int)$_GET['id'];
   echo PHP_EOL;
@@ -12,7 +16,11 @@ if (!empty($_GET['id'])) {
   header("Location: index");
   exit;
 }
-// TODO: treat login
+
+$user = array(
+  'id' => $id,
+  'name' => '',
+);
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
@@ -21,10 +29,6 @@ echo $twig->render('password-create.twig', array(
   'dictionary' => $dictionary,
   'login' => $login,
   'info_footer' => $info_footer,
-  'app_category' => $app_category,
-  'theme_category' => $theme_category,
     // test itens
-  'themes' => $themes,
-  'user' => $user_login,
-  'search' => $search_item
+  'user' => $user,
 ));

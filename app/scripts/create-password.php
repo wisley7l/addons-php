@@ -59,6 +59,9 @@ else if (!empty($_POST['email'])) {
     echo "partner has no pre-registration";
   }
 
+}else if(!empty($_POST['id'])){
+  echo "pass";
+
 }else {
-  echo "error";
+
 }
