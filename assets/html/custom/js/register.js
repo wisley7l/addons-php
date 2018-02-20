@@ -31,7 +31,7 @@ $('form#addons-form-password').submit(function(event){
     $div.find("span.pass-p").css( "color", "black");
     $div.find("span.rp-pass-p").css( "color", "black");
     // TODO: send password save bd
-    $('addons-register-pass').val(pass);
+    $('#addons-register-pass').val(pass);
     $('form#addons-register').submit();
   }
   event.preventDefault();
