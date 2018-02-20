@@ -16,8 +16,8 @@ if (empty($_POST)) {
   if (!empty($_POST['pass'])) {
     $pass_hash = $_POST['pass'];
     echo $pass_hash;
-    $pass_hash = password_hash($pass_hash);
-    echo $pass_hash;
+    $pass = password_hash($pass_hash);
+    echo $pass;
     // query without changing password
      //$query = "UPDATE `partners` SET `password_hash` = $pass_hash  WHERE `id`= $id";
   }else {
