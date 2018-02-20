@@ -78,7 +78,6 @@ $plan1 = array('id' => 'licence-regular',
   'price' => 16.00 / $dictionary['mult_coin'],
   'description' => 'Test description 1',
   'checked' => 'checked',
-  'display' => 'display: block;'
 );
 
 $plan2 = array('id' => 'extend-license',
@@ -86,7 +85,6 @@ $plan2 = array('id' => 'extend-license',
   'price' => 36.00 / $dictionary['mult_coin'],
   'description' => 'Test description 2',
   'checked' => '',
-  'display' => 'display: block;'
 );
 $plans = array();
 array_push($plans, $plan1);
