@@ -12,24 +12,14 @@ if (empty($_POST)) {
   header("Location: ../index");
   exit;
 }else { // if exists POST
-  $profile = array(
-    'name' => $_POST['name'],
-    'public_contact' => $_POST['website'],
-    'occupation' => $_POST['occupation'],
-    'address' => array('city' => $_POST['city'] , 'country' => $_POST['country'] ),
-    'about_us' => $_POST['about']
-  );
-  $profile_json = json_encode($profile);
-
-  if ($_POST['pass'] == 'empty') {
+  if (!empty($_POST['pass'])) {
+    $pass_hash = $_POST['pass'];
+    $pass_hash = password_hash($pass_hash);
+    echo "$pass_hash";
     // query without changing password
-    echo $profile_json;
-     //$query = "UPDATE `partners` SET `profile_json` = $profile_json  WHERE `id`= $id";
+     //$query = "UPDATE `partners` SET `password_hash` = $pass_hash  WHERE `id`= $id";
   }else {
-    // password is changed
-    // check pass is equal rp-pass
-    //$query = "UPDATE `partners` SET `profile_json` = $profile_json, `password_hash` = $password   WHERE `id`= $id";
-    echo $profile_json;
+    # error
   }
 
 }
