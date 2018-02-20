@@ -53,6 +53,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
   }
   else {
     // redirect page error or information error
+    echo "error";
   }
 
   //images theme
