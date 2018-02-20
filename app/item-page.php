@@ -76,7 +76,7 @@ $info_page = array('app' => $app,
 $plan1 = array('id' => 'licence-regular',
   'name' => 'License Regular',
   'price' => 16.00 / $dictionary['mult_coin'],
-  'description' => 'Test description',
+  'description' => 'Test description 1',
   'checked' => 'checked',
   'diplay' => 'display: block;'
 );
@@ -84,7 +84,7 @@ $plan1 = array('id' => 'licence-regular',
 $plan2 = array('id' => 'extend-license',
   'name' => 'Extend License',
   'price' => 36.00 / $dictionary['mult_coin'],
-  'description' => 'Test description',
+  'description' => 'Test description 2',
   'checked' => '',
   'diplay' => 'display: block;'
 );
