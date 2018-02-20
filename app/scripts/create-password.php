@@ -60,7 +60,11 @@ else if (!empty($_POST['email'])) {
   }
 
 }else if(!empty($_POST['id'])){
-  echo "pass";
+  echo "id: ";
+  echo $_POST['id'];
+  echo "\n";
+  echo "Pass: ";
+  echo $_POST['pass'];
 
 }else {
 
