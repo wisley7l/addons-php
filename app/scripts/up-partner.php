@@ -15,6 +15,7 @@ if (empty($_POST)) {
 }else { // if exists POST
   if (!empty($_POST['pass'])) {
     $pass_hash = $_POST['pass'];
+    echo $pass_hash;
     $pass_hash = password_hash($pass_hash);
     echo $pass_hash;
     // query without changing password
