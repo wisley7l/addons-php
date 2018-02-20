@@ -6,6 +6,7 @@ echo PHP_EOL;
 //var_dump($_FILES); // send image profile
 // check if the (id) logged is equal to or (id) sent
 $id = (int) $_POST['id'];
+var_dump($_POST);
 
 // save profile image with user id name
 if (empty($_POST)) {
@@ -15,7 +16,7 @@ if (empty($_POST)) {
   if (!empty($_POST['pass'])) {
     $pass_hash = $_POST['pass'];
     $pass_hash = password_hash($pass_hash);
-    echo "$pass_hash";
+    echo $pass_hash;
     // query without changing password
      //$query = "UPDATE `partners` SET `password_hash` = $pass_hash  WHERE `id`= $id";
   }else {
