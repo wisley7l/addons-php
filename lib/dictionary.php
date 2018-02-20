@@ -56,7 +56,7 @@ function get_dictionary () {
       $word_price  = 'Price';
       $word_themes_store = 'Themes Store';
       $word_profile_page = 'Profile page ';
-      $word_account_settings = 'Account Settings';
+      $word_account_settings = 'Change Password';
       $word_sales_statment = 'Sales Statment ';
       $word_withdrawals = 'Withdrawls ';
       $word_manage_items = 'Manage items';
@@ -175,7 +175,7 @@ function get_dictionary () {
       $word_price  = 'Preço';
       $word_themes_store = 'Loja de Temas';
       $word_profile_page = 'Perfil ';
-      $word_account_settings = 'Configurações de conta';
+      $word_account_settings = 'Alterar Senha';
       $word_sales_statment = 'Histórico de vendas';
       $word_withdrawals = 'Hitórico de Saques ';
       $word_manage_items = 'Gerenciar itens';
@@ -386,7 +386,7 @@ function get_dictionary () {
     'word_fitness' => 'Fitness',
     'word_other' => $word_other,
     'word_categories' => $word_categories,
-    'word_search_empty' => $word_search_empty, 
+    'word_search_empty' => $word_search_empty,
   );
   return $dictionary;
 }
