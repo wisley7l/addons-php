@@ -57,13 +57,14 @@ if (!empty($_GET['id'])){
   $themes = array();
   // add element in array
   array_push($themes, $item);
-
+  // TODO:
   // OBS: when you are ready to enable these functions below.
   // $info_author = search_partner_id($id_author); // bring the query to this page
   // $apps = search_apps_partner($id_author); // return all apps
   // $themes = search_themes_partner($id_author); // return all themes
   // $total_apps = count($apps);
   // $total_themes = count($themes);
+  // $info_author['number_apps_themes'] = $total_themes + $total_apps;
 
 
 }else {

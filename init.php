@@ -54,11 +54,24 @@ if (mysqli_query($conn, 'CREATE DATABASE IF NOT EXISTS ' . Addon\MYSQL_DB) === t
       handle_msyql_error($conn);
     }
   }
+  // entering values in the category tables
+  // read categories.sql file
+  $query = file_get_contents(__DIR__ . '/sql/categories.sql');
+  if ($query) {
+    // http://php.net/manual/en/mysqli.multi-query.php
+    if (mysqli_multi_query($conn, $query)) {
+      echo 'MySQL values entered';
+      echo PHP_EOL;
+      echo 'All done successfully, saying goodbye...';
+      echo PHP_EOL;
+    } else {
+      echo 'Failed to insert values into table';
+      echo PHP_EOL;
+      handle_msyql_error($conn);
+    }
+  }
 } else {
   echo 'Failed to create database';
   echo PHP_EOL;
   handle_msyql_error($conn);
 }
-
-
-// OBS: fill category table

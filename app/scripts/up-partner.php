@@ -1,4 +1,18 @@
 <?php
+
+// function upload partner //
+/*
+// create connection to the database
+$conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
+// check connection
+if (mysqli_connect_errno()) {
+  echo 'Connection failed: ';
+  echo mysqli_connect_error();
+  echo PHP_EOL;
+  exit();
+}
+*/
+
 //header('Content-Type: text/html; charset=utf-8');
 echo PHP_EOL;
 //var_dump($_POST);
@@ -18,23 +32,20 @@ if (empty($_POST)) {
     echo $pass_hash;
     $pass = password_hash($pass_hash, PASSWORD_DEFAULT);
     echo $pass;
+    // escape id and password
+    // TODO: insert table partner, escape id and pass
+    /*
+    $conn = $GLOBAL['conn'];
     // query without changing password
-     //$query = "UPDATE `partners` SET `password_hash` = $pass_hash  WHERE `id`= $id";
+    //$query = "UPDATE `partners` SET `password_hash` = $pass_hash  WHERE `id`= $id";
+    if (mysqli_query(  $conn, $query )) {
+     // message sucess
+   }
+   else {
+     # error 
+   }
+    //*/
   }else {
     # error
   }
-
 }
-
-// function upload partner //
-/*
-// create connection to the database
-$conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
-// check connection
-if (mysqli_connect_errno()) {
-  echo 'Connection failed: ';
-  echo mysqli_connect_error();
-  echo PHP_EOL;
-  exit();
-}
-*/

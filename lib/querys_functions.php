@@ -23,20 +23,20 @@ function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
 }
 
 // function to handle partner search and create view
-function getInfoUser($id,$member_since,$path_image,$profile_json,$total_items)
+function getInfoUser($id,$member_since,$path_image,$profile_json)
 {
-  $profile = json_decode($profile_json); // json decoding
+
 
   return array(
     'id' => $id,
-    'name' => $profile['name'],
-    'location' => $profile['address']['city'] . ',' . $profile['address']['country'],
-    'occupation' => $profile['occupation'],
+    'name' => '', // get via API
+    'location' => '',// get via API
+    'occupation' => '',// get via API
     'member_since' => $member_since,
     //'total_sales' => 100, // sales quantity query // not implemted
-    'web_site' => $profile['public_contact'],
+    'web_site' => '',// get via API
     'path_image' => $path_image,
-    'number_apps_themes' => $total_items, // quantity of items found
+    'number_apps_themes' => 0, // quantity of items found, started with zero
     //'number_badges' => 1, //not implemented
     //'stars' => 1, // not implemented
     //'evaluations' => 5 // not implemented
@@ -623,7 +623,7 @@ function search_partner_id($partner)
       // fetch associative array
       while ($row = mysqli_fetch_assoc($result)) {
         $partner = getInfoUser($row['id'],$row['member_since'],$row['path_image'],
-        $row['profile_json'],0); // increment total items on profile page
+        $row['profile_json']); // increment total items on profile page
       }
       // free result set
       mysqli_free_result($result);

@@ -70,7 +70,7 @@ else if (!empty($_POST['email'])) {
   echo "Pass: ";
   echo $_POST['pass'];
   $id = (int)$_POST['id'];
-  $pass_hash = password_hash($_POST['pass']);
+  $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
   // TODO: insert table partner, escape id and pass
   /*
   $conn = $GLOBAL['conn'];
