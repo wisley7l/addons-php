@@ -93,7 +93,7 @@ $("#add_category").click(function(event){
 
   }
 
-function authentication(id){
+  function authentication(id){
   if (id == 'yes-id') {
     $('input#authentication').val(1);
   }
@@ -154,15 +154,18 @@ function authentication(id){
   // function enable select module type
   function enableSelect(id) {
 
-    let div = $('select#module-type');
+    let div = $('select#module-type'),
+        lable = $('label#module-type');
 
     if (id == 3) {
       div.prop('disabled', false);
       div.attr('style','display:block;');
+      lable.attr('style','display:block;');
 
     }else {
       div.prop('disabled', true);
       div.attr('style','display:none;');
+      lable.attr('style','display:none;');
     }
 
   }
