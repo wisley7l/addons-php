@@ -65,32 +65,29 @@
 							{% if loop.index > 1 %}
 							<div id="cat-app-{{i}}" style="display:none;">
 							<!-- INPUT CONTAINER -->
-							{{macro_dash_up.select_category(app_category,1)}}
+							{{macro_dash_up.select_category(app_category,1,i)}}
 							<!--button id="add_category">+ category </button-->
 							<!-- /INPUT CONTAINER -->
 							</div>
 							{% else %}
 							<div id="cat-app-{{i}}" style="display:block;">
 							<!-- INPUT CONTAINER -->
-							{{macro_dash_up.select_category(app_category,1)}}
+							{{macro_dash_up.select_category(app_category,1,i)}}
 							<!--button id="add_category">+ category </button-->
 							<!-- /INPUT CONTAINER -->
 							</div>
 							{% endif %}
 						</div>
 						{% endfor %}
-
-
-
-
-
+						<input type="text" id="total_cat_app"  value="{{total_cat_app}}" style="display:block;">
+{#
 						<div id="enable-theme" style="display:none;">
 							<!-- INPUT CONTAINER -->
 							{{macro_dash_up.select_category(theme_category,0)}}
 							<!--button id="add_category">+ category </button-->
 							<!-- /INPUT CONTAINER -->
 						</div>
-
+#}
 
 						<!-- INPUT CONTAINER -->
 						<div class="input-container">

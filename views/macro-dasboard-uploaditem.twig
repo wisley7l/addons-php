@@ -113,7 +113,7 @@
   </div>
 {% endmacro %}
 
-{% macro select_category(all_category,id) %}
+{% macro select_category(all_category,id,num) %}
   <div class="input-container">
     <label id="cat-required" for="category" class="rl-label required">Select Category</label>
     <label for="category" class="select-block">
@@ -124,7 +124,7 @@
         <option value="2">Vector</option>
       </select>
       #}
-      <select name="category" id="category-{{id}}">
+      <select name="category" id="category-{{id}}-{{num}}">
         {% for cate in all_category %}
           {% if loop.index0 > 0 %}
             <option value="{{cate.id}}">{{cate.name}}</option>

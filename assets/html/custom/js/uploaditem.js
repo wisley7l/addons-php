@@ -9,11 +9,13 @@ $("form#upload_form").submit(function(event){
       website = $form.find('input#item_website').val(),
       video = $form.find('input#item_linkvideo').val(),
       is_app = $form.find('input#inp-item_is_app').val(),
-      categories = $form.find('select#category-'+is_app).val(), // not null
+      num_categories =  $form.find('input#total_cat_app').val(),
+      //categories = $form.find('select#category-'+is_app).val(), // not null
       linkdoc = $form.find('input#item_linkdoc').val();
       type_app = $form.find('select#type-app').val(),
       module_app = $form.find('select#module-type').val();
       authentication = $form.find('input#authentication').val();
+      console.log(num_categories);//
 
 
   if (name_app == '' || num_version == '' || description == '' || categories == undefined ) {
@@ -28,7 +30,7 @@ $("form#upload_form").submit(function(event){
     if (is_app == 1 ) { // app
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
-      $("#uploaditem-category").val(categories);
+      //$("#uploaditem-category").val(categories);
       $("#uploaditem-item_numversion").val(num_version);
       $("#uploaditem-item_description").val(description);
       $("#uploaditem-item_scripturl").val(script_url);
@@ -39,16 +41,16 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_module_app").val(module_app);
       $("#uploaditem-item_authetication").val(authentication);
       //
-      $("#addons-uploaditem").submit();//
+      // $("#addons-uploaditem").submit();//
     } else if (is_app == 0 ) { // theme
-      $("#uploaditem-is_app").val(is_app);
-      $("#uploaditem-name_app").val(name_app);
-      $("#uploaditem-category").val(categories);
-      $("#uploaditem-item_numversion").val(num_version);
-      $("#uploaditem-item_description").val(description);
-      $("#uploaditem-item_linkdoc").val(linkdoc);
-      $("#uploaditem-item_linkvideo").val(video);
-      $("#addons-uploaditem").submit();//
+      // $("#uploaditem-is_app").val(is_app);
+      // $("#uploaditem-name_app").val(name_app);
+      // $("#uploaditem-category").val(categories);
+      // $("#uploaditem-item_numversion").val(num_version);
+      // $("#uploaditem-item_description").val(description);
+      // $("#uploaditem-item_linkdoc").val(linkdoc);
+      // $("#uploaditem-item_linkvideo").val(video);
+      // $("#addons-uploaditem").submit();//
     }
   }
   event.preventDefault();
@@ -60,6 +62,7 @@ $("#add-category").click(function(event){
   for (var i = 1; i <= num; i++) {
     $("div#cat-app-"+i).attr('style','display:block;');
   }
+  $('input#total_cat_app').val(num);
 
   event.preventDefault();
 });
@@ -71,6 +74,7 @@ $("#rm-category").click(function(event){
   $("div#cat-app-"+(num+1)).attr('style','display:none;');
 
   console.log(num);
+  $('input#total_cat_app').val(num);
   event.preventDefault();
 });
 
