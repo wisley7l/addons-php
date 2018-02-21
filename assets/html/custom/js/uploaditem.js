@@ -86,6 +86,7 @@ $("#add_category").click(function(event){
         //console.log(checkboxID);
       } else {
         //changePrice("<span>$</span>56.00");
+        select($("#"+checkboxID))
       }
     });
 
@@ -120,6 +121,10 @@ $("#add_category").click(function(event){
 	function deselect(checkbox) {
 		checkbox.prop('checked', false);
 	}
+
+  function select(checkbox) {
+    checkbox.prop('checked', true);
+  }
 
   function enable(id) {
     if (id == 'item_is_app') {
