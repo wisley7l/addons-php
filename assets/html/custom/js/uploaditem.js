@@ -13,7 +13,7 @@ $("form#upload_form").submit(function(event){
       linkdoc = $form.find('input#item_linkdoc').val();
       type_app = $form.find('select#type-app').val(),
       module_app = $form.find('select#module-type').val();
-      authentication = is_app = $form.find('input#authentication').val(),
+      authentication = is_app = $form.find('input#authentication').val();
 
 
   if (name_app == '' || num_version == '' || description == '' || categories == undefined ) {
