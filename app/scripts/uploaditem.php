@@ -49,30 +49,7 @@ if(empty($_POST)) { // not exist post
    linkvideo // app and theme
    linkdoc // theme
    */
-   if ($is_app == 1 ) {
-    echo "Create app";
-    echo PHP_EOL;
-    var_dump($name);
-    var_dump($category);
-    var_dump($numversion);
-    var_dump($description);
-    var_dump($scripturl);
-    var_dump($github);
-    var_dump($website);
-    var_dump($linkvideo);
-   } elseif ($is_app == 0 ) {
-     echo "create theme";
-     echo PHP_EOL;
-     var_dump($name);
-     var_dump($category);
-     var_dump($numversion);
-     var_dump($description);
-     var_dump($linkvideo);
-     var_dump($linkdoc);
-
-   } else {
-     echo "Error";
-   }
+   var_dump($_POST);
 
 }
 
