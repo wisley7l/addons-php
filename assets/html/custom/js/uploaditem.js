@@ -61,8 +61,8 @@ $("#add_category").click(function(event){
     div = $('div#type_app');
 	var $checkbox = $('.label-check');
 
-  div.click(console.log('SIM'));
-
+  //$label_type.on('click',console.log('SIM'));
+  console.log(div);
 
 
 	$checkbox.on( 'click', deselectLinked );
