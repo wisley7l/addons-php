@@ -66,7 +66,7 @@ $("#add_category").click(function(event){
   function selectType() {
     console.log("Teste");
     let $this = $(this);
-    //console.log($this.val());
+    showDiv($this.val());
   }
 
   function showDiv(id) {
