@@ -36,9 +36,10 @@ if(empty($_POST)) { // not exist post
   $github = $_POST['github'];
   $website = $_POST['website'];
   $linkvideo = $_POST['linkvideo'];
-  $linkdoc  = $_POST['linkdoc'];
-  $type_app = $_POST['type_app'];
-  $module_type = $_POST['module_app'];
+  $linkdoc  = $_POST['linkdoc']; // only theme
+  $type_app = $_POST['type_app']; // treat 1 a 7  // only app
+  $module_type = $_POST['module_app']; // treat only type_app == 3 // only app
+  $authentication = $_POST['authentication']; // treat 0 or 1 // only app
   /*
    is_app == 1 create app, == 0 create theme
    name // name
