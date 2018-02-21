@@ -9,7 +9,7 @@ $("form#upload_form").submit(function(event){
       website = $form.find('input#item_website').val(),
       video = $form.find('input#item_linkvideo').val(),
       is_app = $form.find('input#inp-item_is_app').val(),
-      num_categories =  $form.find('input#total_cat_app').val(),
+      //num_categories =  $form.find('input#total_cat_app').val(),
       //categories = $form.find('select#category-'+is_app).val(), // not null
       linkdoc = $form.find('input#item_linkdoc').val();
       type_app = $form.find('select#type-app').val(),
@@ -57,12 +57,14 @@ $("form#upload_form").submit(function(event){
 });
 
 $("#add-category").click(function(event){
-  num += 1;
+  max_categories =  $('input#total_cat_app').val(),
+  if (num <= max_categories) {
+    num += 1;
+  }
   console.log(num);
   for (var i = 1; i <= num; i++) {
     $("div#cat-app-"+i).attr('style','display:block;');
   }
-  $('input#total_cat_app').val(num);
 
   event.preventDefault();
 });
@@ -74,7 +76,7 @@ $("#rm-category").click(function(event){
   $("div#cat-app-"+(num+1)).attr('style','display:none;');
 
   console.log(num);
-  $('input#total_cat_app').val(num);
+
   event.preventDefault();
 });
 
