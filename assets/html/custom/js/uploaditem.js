@@ -60,9 +60,10 @@ $("#add_category").click(function(event){
 	var $checkbox = $('.label-check');
 
   enableSelect(select.val());
+
   select.on('click',selectType);
 
-  	$checkbox.on( 'click', deselectLinked );
+	$checkbox.on( 'click', deselectLinked );
 
 	function deselectLinked() {
       var $this = $(this),
@@ -106,10 +107,9 @@ $("#add_category").click(function(event){
       $('div#enable-theme').attr('style','display:none;');
     }
 	}
-  
+
   // function selected type app
   function selectType() {
-    console.log("Teste");
     let $this = $(this);
     enableSelect($this.val());
   }
