@@ -58,9 +58,9 @@
 						<!-- input used to know if this add app or theme -->
 						<input type="text" id="inp-item_is_app" name="item_name" value="{{is_app}}" style="display:none;">
 
-						{% for cat_app in total_cat_app %}
-						{{cat_app}}
-						{% endfor %}
+
+						{{total_cat_app}}
+
 						<div id="enable-app" style="display:block;">
 							<!-- INPUT CONTAINER -->
 							{{macro_dash_up.select_category(app_category,1)}}
