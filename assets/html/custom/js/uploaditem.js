@@ -58,7 +58,7 @@ $("#add-category").click(function(event){
   let num += 1;
   console.log(num);
   for (var i = 0; i < num; i++) {
-    $("div#cat-app-"+num).attr('style','display:block;');
+    $("div#cat-app-"+i).attr('style','display:block;');
   }
 
   event.preventDefault();
