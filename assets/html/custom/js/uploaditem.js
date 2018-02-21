@@ -86,7 +86,7 @@ $("#add_category").click(function(event){
         console.log(selectedCheckboxID);
       } else {
         //changePrice("<span>$</span>56.00");
-        $("#"+selectedCheckboxID).prop('checked', true);
+        $("#"+checkboxID).prop('checked', true);
       }
     });
 
