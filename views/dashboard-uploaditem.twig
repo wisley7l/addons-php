@@ -102,6 +102,7 @@
 							<textarea id="item_description" name="item_description" placeholder="Enter them item description here..."></textarea>
 						</div>
 						<div id="enable-app" style="display:block;">
+							<!-- div only app -->
 						<!-- INPUT CONTAINER -->
 						<div class="input-container half">
 							<label for="item_scripturl" class="rl-label">Script url</label>
@@ -116,8 +117,27 @@
 						</div>
 						<!-- /INPUT CONTAINER -->
 
-
+						<!-- INPUT CONTAINER -->
+						<div class="input-container half">
+							<label for="country1" class="rl-label required">Country</label>
+							<label for="country1" class="select-block">
+								<select name="country1" id="country1">
+									<option value="0">Select your Country...</option>
+									<option value="1">United States</option>
+									<option value="2">Argentina</option>
+									<option value="3">Brasil</option>
+									<option value="4">Japan</option>
+								</select>
+								<!-- SVG ARROW -->
+								<svg class="svg-arrow">
+									<use xlink:href="#svg-arrow"></use>
+								</svg>
+								<!-- /SVG ARROW -->
+							</label>
+						</div>
 						<!-- /INPUT CONTAINER -->
+
+
 
 						<!-- INPUT CONTAINER -->
 						{#{macro_dash_up.up_file()}#}
@@ -153,7 +173,9 @@
 							<input type="text" id="item_website" name="item_website" placeholder="Enter item website here...">
 						</div>
 						<!-- /INPUT CONTAINER -->
+						<!-- div only app -->
 					</div>
+
 					<div id="enable-theme" style="display:none;">
 					<!-- INPUT CONTAINER -->
 					<div class="input-container">
