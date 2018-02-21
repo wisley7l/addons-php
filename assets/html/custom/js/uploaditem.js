@@ -79,6 +79,7 @@ $("#add_category").click(function(event){
     selectedCheckboxID = $this.prop('for'),
     selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
     // function send yes or no
+    authentication(selectedCheckboxID);
     $checkboxauth.each(function() {
       var $this = $(this),
         checkboxID = $this.prop('for'),
@@ -91,6 +92,7 @@ $("#add_category").click(function(event){
     });
 
   }
+
 function authentication(id){
   if (id == 'yes-id') {
     $('input#authentication').val(1);
