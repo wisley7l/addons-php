@@ -62,12 +62,21 @@
 
 						{% for i in 1.. total_cat_app %}
 						<div id="enable-app" style="display:block;">
+							{% if loop.index > 1 %}
 							<div id="cat-app-{{i}}" style="display:none;">
 							<!-- INPUT CONTAINER -->
 							{{macro_dash_up.select_category(app_category,1)}}
 							<!--button id="add_category">+ category </button-->
 							<!-- /INPUT CONTAINER -->
 							</div>
+							{% else %}
+							<div id="cat-app-{{i}}" style="display:block;">
+							<!-- INPUT CONTAINER -->
+							{{macro_dash_up.select_category(app_category,1)}}
+							<!--button id="add_category">+ category </button-->
+							<!-- /INPUT CONTAINER -->
+							</div>
+							{% endif %}
 						</div>
 						{% endfor %}
 
