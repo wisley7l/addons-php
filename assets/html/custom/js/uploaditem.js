@@ -56,11 +56,12 @@ $("#add_category").click(function(event){
 
 (function($) {
 
-  let $form = $("form#upload_form");
+  let $form = $("form#upload_form"),
+    $label_type = $('label#type-app');
     type_app = $form.find('select#type-app').val();
 	var $checkbox = $('.label-check');
-  console.log(type_app);
 
+  $label_type.on('click',console.log('SIM'));
 
 
 	$checkbox.on( 'click', deselectLinked );
