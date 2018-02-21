@@ -61,7 +61,9 @@ $("#add-category").click(function(event){
 });
 
 $("#rm-category").click(function(event){
+  if (num > 0) {
   num -= 1;
+  }
   console.log(num);
   event.preventDefault();
 });

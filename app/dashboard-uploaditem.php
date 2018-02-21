@@ -43,6 +43,9 @@ $sales_user = array(
 $app_category = get_categories_app();
 $theme_category = get_categories_theme();
 
+$total_cat_theme = count($theme_category);
+$total_cat_app = count($app_category);
+
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
@@ -50,9 +53,10 @@ $twig = new Twig_Environment($loader);
 echo $twig->render('dashboard-uploaditem.twig', array(
   'dictionary' => $dictionary,
   'login' => $login,
-  'implemented' => false,
   'app_category' => $app_category,
   'theme_category' => $theme_category,
+  'total_cat_theme' => $total_cat_theme,
+  'total_cat_app' => $total_cat_app,
     // test
   'user' => $user_login,
   'sales_user' => $sales_user,
