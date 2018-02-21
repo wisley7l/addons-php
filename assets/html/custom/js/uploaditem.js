@@ -15,7 +15,7 @@ $("form#upload_form").submit(function(event){
       module_app = $form.find('select#module-type').val();
       authentication = $form.find('input#authentication').val(),
       //num_categories =  num,
-      string = '{"num":' + num + '"categories": [';
+      string = '{"num":' + num + ',"categories": [';
       for (var i = 1; i <= num; i++) {
         string += '{"id":"'+ i + '"}' ;
         if (i+1 > num ) {
