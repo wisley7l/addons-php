@@ -84,6 +84,7 @@ $("#add_category").click(function(event){
       if( checkboxID != selectedCheckboxID ) {
         deselect($("#"+checkboxID))
       } else {
+        console.log('else');
         console.log(checkboxID);
       }
     });
