@@ -57,7 +57,7 @@ $("#add_category").click(function(event){
 (function($) {
 
   let $form = $("form#upload_form"),
-    $label_type = $('label#type-app');
+    $label_type = $('label#type_app');
     type_app = $form.find('select#type-app').val();
 	var $checkbox = $('.label-check');
 
