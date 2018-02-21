@@ -76,6 +76,11 @@ $("#add_category").click(function(event){
     selectedCheckboxID = $this.prop('for'),
     selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
     console.log(selectedCheckboxStatus);
+    
+    if (selectedCheckboxStatus == true) {
+      $("#"+selectedCheckboxID).prop('checked',true);
+    }
+
     $checkboxauth.each(function() {
       var $this = $(this),
         checkboxID = $this.prop('for'),
@@ -83,7 +88,7 @@ $("#add_category").click(function(event){
       if( checkboxID != selectedCheckboxID ) {
         deselect($("#"+checkboxID))
       } else {
-        
+
       }
     });
 
