@@ -69,7 +69,14 @@ $("#add_category").click(function(event){
   select.on('click',selectType);
 
 	$checkbox.on( 'click', deselectLinked );
-  $checkboxauth.on( 'click', deselectLinked );
+  $checkboxauth.on( 'click', checkAuth);
+
+  function checkAuth() {
+    console.log('Sim');
+
+  }
+
+
 
 	function deselectLinked() {
       var $this = $(this),
