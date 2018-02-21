@@ -124,3 +124,8 @@ $("#add_category").click(function(event){
 	}
   */
 })(jQuery);
+
+
+$(function() {
+    $( "#calendario" ).datepicker();
+});
