@@ -56,34 +56,13 @@ $("#add_category").click(function(event){
 
 (function($) {
 
-  let $form = $("form#upload_form"),
-      select = $('select#type-app');
+  let select = $('select#type-app');
 	var $checkbox = $('.label-check');
 
-  showDiv(select.val());
+  enableSelect(select.val());
   select.on('click',selectType);
 
-  function selectType() {
-    console.log("Teste");
-    let $this = $(this);
-    showDiv($this.val());
-  }
-
-  function showDiv(id) {
-    // module-type
-    let div = $('select#module-type');
-
-    if (id == 3) {
-      div.prop('disabled', false);
-    }else {
-      div.prop('disabled', true);
-    }
-
-  }
-
-
-
-	$checkbox.on( 'click', deselectLinked );
+  	$checkbox.on( 'click', deselectLinked );
 
 	function deselectLinked() {
       var $this = $(this),
@@ -109,10 +88,10 @@ $("#add_category").click(function(event){
 			});
 	}
 
-
 	function deselect(checkbox) {
 		checkbox.prop('checked', false);
 	}
+
   function enable(id) {
     if (id == 'item_is_app') {
       $('input#inp-item_is_app').val(1);
@@ -127,6 +106,26 @@ $("#add_category").click(function(event){
       $('div#enable-theme').attr('style','display:none;');
     }
 	}
+  
+  // function selected type app
+  function selectType() {
+    console.log("Teste");
+    let $this = $(this);
+    enableSelect($this.val());
+  }
+  // function enable select module type
+  function enableSelect(id) {
+
+    let div = $('select#module-type');
+
+    if (id == 3) {
+      div.prop('disabled', false);
+    }else {
+      div.prop('disabled', true);
+    }
+
+  }
+
 
 /*
 	function showDescription(container) {
