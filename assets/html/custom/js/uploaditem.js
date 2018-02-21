@@ -13,7 +13,7 @@ $("form#upload_form").submit(function(event){
       linkdoc = $form.find('input#item_linkdoc').val();
       type_app = $form.find('select#type-app').val(),
       module_app = $form.find('select#module-type').val();
-      authentication = is_app = $form.find('input#authentication').val();
+      authentication = $form.find('input#authentication').val();
 
 
   if (name_app == '' || num_version == '' || description == '' || categories == undefined ) {
@@ -39,7 +39,7 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_module_app").val(module_app);
       $("#uploaditem-item_authetication").val(authentication);
       //
-      $("#addons-uploaditem").submit();
+      // $("#addons-uploaditem").submit();//
     } else if (is_app == 0 ) { // theme
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
@@ -48,7 +48,7 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_description").val(description);
       $("#uploaditem-item_linkdoc").val(linkdoc);
       $("#uploaditem-item_linkvideo").val(video);
-      $("#addons-uploaditem").submit();
+      // $("#addons-uploaditem").submit();//
     }
   }
   event.preventDefault();
