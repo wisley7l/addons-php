@@ -61,7 +61,7 @@ $("#add_category").click(function(event){
     div = $('div#type_app');
 	var $checkbox = $('.label-check');
 
-  $div.on('click',console.log('SIM'));
+  div.on('click',console.log('SIM'));
 
 
 
