@@ -65,7 +65,7 @@ $("#add-category").click(function(event){
 });
 
 $("#rm-category").click(function(event){
-  if (num > 0) {
+  if (num > 1) {
   num -= 1;
   }
   $("div#cat-app-"+(num+1)).attr('style','display:none;');
