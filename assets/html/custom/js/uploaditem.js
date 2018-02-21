@@ -80,13 +80,11 @@ $("#add_category").click(function(event){
       var $this = $(this),
         checkboxID = $this.prop('for'),
         checkboxStatus = $("#"+checkboxID).prop('checked');
-
+        console.log(checkboxID);
       if( checkboxID != selectedCheckboxID ) {
         deselect($("#"+checkboxID))
-        console.log(selectedCheckboxID);
       } else {
         //changePrice("<span>$</span>56.00");
-        $("#"+checkboxID).prop('checked', true);
       }
     });
 
