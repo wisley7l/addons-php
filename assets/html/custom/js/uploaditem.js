@@ -61,13 +61,15 @@ $("#add_category").click(function(event){
 (function($) {
 
   let select = $('select#type-app');
-	var $checkbox = $('.label-check');
+	var $checkbox = $('.label-check'),
+      $checkboxauth = $('.label-check-auth');
 
   enableSelect(select.val());
 
   select.on('click',selectType);
 
 	$checkbox.on( 'click', deselectLinked );
+  $checkboxauth.on( 'click', deselectLinked );
 
 	function deselectLinked() {
       var $this = $(this),
