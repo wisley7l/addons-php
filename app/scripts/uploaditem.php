@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
+//header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
 
@@ -16,7 +16,7 @@ if (isset($_SESSION)) {
   // array used to set user panel parameters
   $user_login = getUserLogin($dictionary);
 }
-if ($login == false) { // if not connected 
+if ($login == false) { // if not connected
   header("Location: ../?EROORLOGIN");
   exit;
 }
@@ -75,3 +75,15 @@ if(empty($_POST)) { // not exist post
    }
 
 }
+
+/*
+type app
+dashboard 1
+string 2
+storefront 3
+string 4
+module_package 4
+string 6
+external 7
+string 8
+*/
