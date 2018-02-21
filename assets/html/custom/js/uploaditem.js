@@ -75,17 +75,19 @@ $("#add_category").click(function(event){
     var $this = $(this),
     selectedCheckboxID = $this.prop('for'),
     selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
-    console.log(selectedCheckboxID);
+  //console.log(selectedCheckboxID);
     $checkboxauth.each(function() {
       var $this = $(this),
         checkboxID = $this.prop('for'),
         checkboxStatus = $("#"+checkboxID).prop('checked');
 
       if( checkboxID != selectedCheckboxID ) {
-        deselect($("#"+checkboxID))
-        console.log(checkboxID);
+        //deselect($("#"+checkboxID))
+        $("#"+checkboxID).prop('checked', false);
+        //console.log(checkboxID);
       } else {
         //changePrice("<span>$</span>56.00");
+        $("#"+checkboxID).prop('checked', true);
       }
     });
 
