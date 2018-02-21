@@ -16,9 +16,9 @@ $("form#upload_form").submit(function(event){
       authentication = $form.find('input#authentication').val(),
       //num_categories =  num,
       string = '{"num":' + num + '"categories": [';
-      for (var i = 0; i < num; i++) {
+      for (var i = 1; i < num; i++) {
         string = '{"id":'+ i + "}" ;
-        if (i+1 != num ) {
+        if (i+1 > num ) {
           string += ",";
         }
       }
