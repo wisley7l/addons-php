@@ -74,9 +74,9 @@ $("#add_category").click(function(event){
     let div = $('div#module-type');
 
     if (id == 3) {
-      div.attr('style','display:block;');
+      //div.attr('style','display:block;');
     }else {
-      div.attr('style','display:none;');
+      //div.attr('style','display:none;');
     }
 
   }
