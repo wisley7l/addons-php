@@ -54,9 +54,9 @@ $("form#upload_form").submit(function(event){
   event.preventDefault();
 });
 
-$("#add_category").click(function(event){
+$("#add-category").click(function(event){
   num += 1;
-  //console.log(num);
+  console.log(num);
   event.preventDefault();
 });
 
