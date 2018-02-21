@@ -97,7 +97,7 @@ function authentication(id){
   if (id == 'yes-id') {
     $('input#authentication').val(1);
   }
-  else {
+  else if (id == 'no-id') {
     $('input#authentication').val(0);
   }
 }
