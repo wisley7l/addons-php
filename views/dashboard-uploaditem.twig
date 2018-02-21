@@ -58,23 +58,25 @@
 						<!-- input used to know if this add app or theme -->
 						<input type="text" id="inp-item_is_app" name="item_name" value="{{is_app}}" style="display:none;">
 
-						{% for cat_theme in total_cat_app %}
+						{% for cat_app in total_cat_app %}
+						{{cat_app}}
+						{% endfor %}
 						<div id="enable-app" style="display:block;">
 							<!-- INPUT CONTAINER -->
 							{{macro_dash_up.select_category(app_category,1)}}
 							<!--button id="add_category">+ category </button-->
 							<!-- /INPUT CONTAINER -->
 						</div>
-						{% endfor %}
 
-						{% for cat_theme in total_cat_theme %}
+
+
 						<div id="enable-theme" style="display:none;">
 							<!-- INPUT CONTAINER -->
 							{{macro_dash_up.select_category(theme_category,0)}}
 							<!--button id="add_category">+ category </button-->
 							<!-- /INPUT CONTAINER -->
 						</div>
-						{% endfor %}
+
 
 						<!-- INPUT CONTAINER -->
 						<div class="input-container">
