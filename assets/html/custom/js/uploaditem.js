@@ -57,17 +57,28 @@ $("#add_category").click(function(event){
 (function($) {
 
   let $form = $("form#upload_form"),
-    type_app = $form.find('select#type-app').val(),
-    div = $('select#type-app');
+      select = $('select#type-app');
 	var $checkbox = $('.label-check');
 
+  showDiv(select.val());
+  select.on('click',selectType);
 
-  div.on('click',test);
-
-  function test() {
+  function selectType() {
     console.log("Teste");
     let $this = $(this);
-    console.log($this.val());
+    //console.log($this.val());
+  }
+
+  function showDiv(id) {
+    // module-type
+    let div = $('div#module-type');
+
+    if (id == 3) {
+            console.log(3);
+    }else {
+      console.log('not');
+    }
+
   }
 
 
