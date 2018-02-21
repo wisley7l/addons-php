@@ -17,7 +17,7 @@ $("form#upload_form").submit(function(event){
       //num_categories =  num,
       string = '{"num":' + num + ',"categories": [';
       for (var i = 1; i <= num; i++) {
-        string += '{"id":"'+ i + '"}' ;
+        string += '{"id":"'+ $form.find('select#category-'+is_app+'-'+i).val() + '"}' ;
         if (i != num ) {
           string += ",";
         }
