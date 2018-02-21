@@ -24,6 +24,8 @@ $("form#upload_form").submit(function(event){
       }
       string += "]}";
       console.log(string);
+      var obj = JSON.parse(string);
+      console.log(obj);
       //categories = $form.find('select#category-'+is_app).val(), // not null
       //console.log(num_categories);//
 
