@@ -75,17 +75,15 @@ $("#add_category").click(function(event){
     var $this = $(this),
     selectedCheckboxID = $this.prop('for'),
     selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
-    console.log(selectedCheckboxID);
+    console.log(selectedCheckboxStatus);
     $checkboxauth.each(function() {
       var $this = $(this),
         checkboxID = $this.prop('for'),
         checkboxStatus = $("#"+checkboxID).prop('checked');
-        console.log(checkboxID);
       if( checkboxID != selectedCheckboxID ) {
         deselect($("#"+checkboxID))
       } else {
-        console.log('else');
-        console.log(checkboxID);
+        
       }
     });
 
