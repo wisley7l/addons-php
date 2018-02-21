@@ -124,8 +124,11 @@ $("#add_category").click(function(event){
 
     if (id == 3) {
       div.prop('disabled', false);
+      div.attr('style','display:block;');
+
     }else {
       div.prop('disabled', true);
+      div.attr('style','display:none;');
     }
 
   }
