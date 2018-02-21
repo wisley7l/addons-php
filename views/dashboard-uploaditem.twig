@@ -119,7 +119,26 @@
 
 						<!-- INPUT CONTAINER -->
 						<div class="input-container half">
-							<label for="country1" class="rl-label required">Country</label>
+							<label for="country1" class="rl-label required">Type of app</label>
+							<label for="country1" class="select-block">
+								<select name="type" id="type-app">
+									<option value="1">Dashboard</option>
+									<option value="2">Storefront</option>
+									<option value="3">Module Package</option>
+									<option value="4">External</option>
+								</select>
+								<!-- SVG ARROW -->
+								<svg class="svg-arrow">
+									<use xlink:href="#svg-arrow"></use>
+								</svg>
+								<!-- /SVG ARROW -->
+							</label>
+						</div>
+						<!-- /INPUT CONTAINER -->
+
+						<!-- INPUT CONTAINER -->
+						<div class="input-container half">
+							<label for="country1" class="rl-label">Country</label>
 							<label for="country1" class="select-block">
 								<select name="country1" id="country1">
 									<option value="0">Select your Country...</option>
