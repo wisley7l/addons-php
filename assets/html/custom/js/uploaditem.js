@@ -57,7 +57,7 @@ $("form#upload_form").submit(function(event){
 });
 
 $("#add-category").click(function(event){
-  max_categories =  $('input#total_cat_app').val(),
+  let max_categories =  $('input#total_cat_app').val();
   if (num <= max_categories) {
     num += 1;
   }
