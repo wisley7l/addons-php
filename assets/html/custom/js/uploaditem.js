@@ -9,13 +9,19 @@ $("form#upload_form").submit(function(event){
       website = $form.find('input#item_website').val(),
       video = $form.find('input#item_linkvideo').val(),
       is_app = $form.find('input#inp-item_is_app').val(),
-      //num_categories =  $form.find('input#total_cat_app').val(),
-      //categories = $form.find('select#category-'+is_app).val(), // not null
+
       linkdoc = $form.find('input#item_linkdoc').val();
       type_app = $form.find('select#type-app').val(),
       module_app = $form.find('select#module-type').val();
-      authentication = $form.find('input#authentication').val();
-      console.log(num_categories);//
+      authentication = $form.find('input#authentication').val(),
+      //num_categories =  num,
+      string = '{"num":' + num + '"categories": [';
+      for (var i = 0; i < num; i++) {
+        string = '"id":' ;
+      }
+      string += "]}"
+      //categories = $form.find('select#category-'+is_app).val(), // not null
+      //console.log(num_categories);//
 
 
   if (name_app == '' || num_version == '' || description == '' || categories == undefined ) {
