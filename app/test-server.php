@@ -1,6 +1,4 @@
 <?php
-echo 'Hello World';
-echo PHP_EOL;
 // test json
 $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
 
@@ -24,6 +22,8 @@ if($_GET['id']){
     echo "empty";
   }
   else {
+    echo 'Hello World';
+    echo PHP_EOL;
     var_dump($t);
   }
 }
