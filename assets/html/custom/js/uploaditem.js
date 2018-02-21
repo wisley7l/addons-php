@@ -12,16 +12,7 @@ $("form#upload_form").submit(function(event){
       categories = $form.find('select#category-'+is_app).val(), // not null
       linkdoc = $form.find('input#item_linkdoc').val();
 
-  console.log(is_app);
-  console.log(categories);
-  console.log(name_app);
-  console.log(num_version);
-  console.log(description);
-  console.log(script_url);
-  console.log(github);
-  console.log(website);
-  console.log(video);
-  console.log(linkdoc);
+
   if (name_app == '' || num_version == '' || description == '' || categories == undefined ) {
     alert('Error');
     $form.find("#cat-required").css( "color", "red");
@@ -64,7 +55,14 @@ $("#add_category").click(function(event){
 
 
 (function($) {
+
+  let $form = $("form#upload_form");
+    type_app = $form.find('select#type-app').val();
 	var $checkbox = $('.label-check');
+  console.log(type_app);
+
+
+
 	$checkbox.on( 'click', deselectLinked );
 
 	function deselectLinked() {
