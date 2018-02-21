@@ -58,7 +58,7 @@ $("form#upload_form").submit(function(event){
 
 $("#add-category").click(function(event){
   let max_categories =  $('input#total_cat_app').val();
-  if (num <= max_categories) {
+  if (num < max_categories) {
     num += 1;
   }
   console.log(num);
