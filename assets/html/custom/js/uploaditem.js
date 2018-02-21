@@ -72,7 +72,10 @@ $("#add_category").click(function(event){
   $checkboxauth.on( 'click', checkAuth);
 
   function checkAuth() {
-    console.log('Sim');
+    var $this = $(this),
+    selectedCheckboxID = $this.prop('for'),
+    selectedCheckboxStatus = $("#"+selectedCheckboxID).prop('checked');
+    console.log(selectedCheckboxID);
 
   }
 
