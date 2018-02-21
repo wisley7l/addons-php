@@ -55,8 +55,12 @@ $("form#upload_form").submit(function(event){
 });
 
 $("#add-category").click(function(event){
-  num += 1;
+  let num += 1;
   console.log(num);
+  for (var i = 0; i < num; i++) {
+    $("div#cat-app-"+num).attr('style','display:block;');
+  }
+
   event.preventDefault();
 });
 
@@ -64,6 +68,8 @@ $("#rm-category").click(function(event){
   if (num > 0) {
   num -= 1;
   }
+  $("div#cat-app-"+(num+1)).attr('style','display:none;');
+
   console.log(num);
   event.preventDefault();
 });
