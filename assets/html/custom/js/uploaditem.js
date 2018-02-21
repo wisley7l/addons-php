@@ -122,10 +122,6 @@ $("#add_category").click(function(event){
 		checkbox.prop('checked', false);
 	}
 
-  function select(checkbox) {
-    checkbox.prop('checked', true);
-  }
-
   function enable(id) {
     if (id == 'item_is_app') {
       $('input#inp-item_is_app').val(1);
