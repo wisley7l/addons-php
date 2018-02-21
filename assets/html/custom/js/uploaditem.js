@@ -58,7 +58,7 @@ $("#add_category").click(function(event){
 
   let $form = $("form#upload_form"),
     type_app = $form.find('select#type-app').val(),
-    div = $('div#type_app');
+    div = $('select#type-app');
 	var $checkbox = $('.label-check');
 
   //$label_type.on('click',console.log('SIM'));
