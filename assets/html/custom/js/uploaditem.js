@@ -57,7 +57,7 @@ $("form#upload_form").submit(function(event){
 $("#add-category").click(function(event){
   num += 1;
   console.log(num);
-  for (var i = 0; i < num; i++) {
+  for (var i = 1; i <= num; i++) {
     $("div#cat-app-"+i).attr('style','display:block;');
   }
 
