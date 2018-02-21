@@ -17,9 +17,13 @@ $("form#upload_form").submit(function(event){
       //num_categories =  num,
       string = '{"num":' + num + '"categories": [';
       for (var i = 0; i < num; i++) {
-        string = '"id":' ;
+        string = '{"id":'+ i + "}" ;
+        if (i+1 != num ) {
+          string += ",";
+        }
       }
-      string += "]}"
+      string += "]}";
+      console.log(string);
       //categories = $form.find('select#category-'+is_app).val(), // not null
       //console.log(num_categories);//
 
