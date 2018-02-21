@@ -84,7 +84,7 @@ $("#add_category").click(function(event){
       if( checkboxID != selectedCheckboxID ) {
         deselect($("#"+checkboxID))
       } else {
-        //changePrice("<span>$</span>56.00");
+        console.log(checkboxID);
       }
     });
 
