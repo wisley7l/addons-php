@@ -37,6 +37,8 @@ if(empty($_POST)) { // not exist post
   $website = $_POST['website'];
   $linkvideo = $_POST['linkvideo'];
   $linkdoc  = $_POST['linkdoc'];
+  $type_app = $_POST['type_app'];
+  $module_type = $_POST['module_app'];
   /*
    is_app == 1 create app, == 0 create theme
    name // name
