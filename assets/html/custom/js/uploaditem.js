@@ -11,6 +11,8 @@ $("form#upload_form").submit(function(event){
       is_app = $form.find('input#inp-item_is_app').val(),
       categories = $form.find('select#category-'+is_app).val(), // not null
       linkdoc = $form.find('input#item_linkdoc').val();
+      type_app = $form.find('select#type-app').val(),
+      module_app = $form.find('select#module-type').val();
 
 
   if (name_app == '' || num_version == '' || description == '' || categories == undefined ) {
@@ -32,6 +34,8 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_github").val(github);
       $("#uploaditem-item_website").val(website);
       $("#uploaditem-item_linkvideo").val(video);
+      $("#uploaditem-item_type_app").val(type_app);
+      $("#uploaditem-item_module_app").val(module_app);
       $("#addons-uploaditem").submit();
     } else if (is_app == 0 ) { // theme
       $("#uploaditem-is_app").val(is_app);
