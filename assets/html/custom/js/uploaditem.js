@@ -63,9 +63,11 @@ $("#add_category").click(function(event){
 
 
   div.on('click',test);
-  
+
   function test() {
     console.log("Teste");
+    let $this = $(this);
+    console.log($this.val());
   }
 
 
