@@ -71,12 +71,12 @@ $("#add_category").click(function(event){
 
   function showDiv(id) {
     // module-type
-    let div = $('div#module-type');
+    let div = $('select#module-type');
 
     if (id == 3) {
-      //div.attr('style','display:block;');
+      div.prop('disabled', false);
     }else {
-      //div.attr('style','display:none;');
+      div.prop('disabled', true);
     }
 
   }
