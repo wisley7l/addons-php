@@ -60,6 +60,11 @@ $("#add-category").click(function(event){
   event.preventDefault();
 });
 
+$("#rm-category").click(function(event){
+  num -= 1;
+  console.log(num);
+  event.preventDefault();
+});
 
 (function($) {
 
