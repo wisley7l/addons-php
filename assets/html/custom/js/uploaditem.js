@@ -123,9 +123,6 @@ $("#add_category").click(function(event){
 		$('.sidebar-item .price.large').html(price);
 	}
   */
+  $( "#calendario" ).datepicker();
+  
 })(jQuery);
-
-
-$(function() {
-    $( "#calendario" ).datepicker();
-});
