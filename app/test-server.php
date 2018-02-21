@@ -24,6 +24,7 @@ if($_GET['id']){
     echo "empty";
   }
   else {
-    echo json_encode($t);
+    //echo json_encode($t);
+    echo $data;
   }
 }
