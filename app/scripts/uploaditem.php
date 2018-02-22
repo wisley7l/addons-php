@@ -54,7 +54,7 @@ if(empty($_POST)) { // not exist post
    */
    //var_dump($_POST);
    $category = decode_json($category);
-   echo $category['num'];
+   echo $category['total'];
 
 
 }else {
