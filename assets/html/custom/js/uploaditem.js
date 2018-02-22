@@ -9,7 +9,6 @@ $("form#upload_form").submit(function(event){
       website = $form.find('input#item_website').val(),
       video = $form.find('input#item_linkvideo').val(),
       is_app = $form.find('input#inp-item_is_app').val(),
-
       linkdoc = $form.find('input#item_linkdoc').val();
       type_app = $form.find('select#type-app').val(),
       module_app = $form.find('select#module-type').val();
@@ -64,25 +63,34 @@ $("form#upload_form").submit(function(event){
 });
 
 $("#add-category").click(function(event){
-  let max_categories =  $('input#total_cat_app').val();
-  if (num < max_categories) {
-    num += 1;
-  }
-  console.log(num);
-  for (var i = 1; i <= num; i++) {
-    $("div#cat-app-"+i).attr('style','display:block;');
-  }
+  // if (true) {
+    let max_categories =  $('input#total_cat_app').val();
+    if (num < max_categories) {
+      num += 1;
+    }
+    for (var i = 1; i <= num; i++) {
+      $("div#cat-app-"+i).attr('style','display:block;');
+    }
+  // } else {
+    // let max_categories =  $('input#total_cat_theme').val();
+    // if (num < max_categories) {
+    //   num += 1;
+    // }
+    // for (var i = 1; i <= num; i++) {
+    //   $("div#cat-theme-"+i).attr('style','display:block;');
+    // }
+  // }
 
   event.preventDefault();
 });
 
 $("#rm-category").click(function(event){
-  if (num > 1) {
-  num -= 1;
-  }
-  $("div#cat-app-"+(num+1)).attr('style','display:none;');
-
-  console.log(num);
+  // if (true) {
+    if (num > 1) {
+    num -= 1;
+    }
+    $("div#cat-app-"+(num+1)).attr('style','display:none;');
+  // }
 
   event.preventDefault();
 });
@@ -155,6 +163,11 @@ $("#rm-category").click(function(event){
 
 	function deselect(checkbox) {
 		checkbox.prop('checked', false);
+    for (var i = 1; i <= num; i++) {
+      $("div#cat-app-"+i).attr('style','display:none;');
+    }
+    num = 1;
+
 	}
 
   function enable(id) {

@@ -45,8 +45,8 @@ $theme_category = get_categories_theme();
 
 $total_cat_theme = count($theme_category);
 $total_cat_app = count($app_category);
-var_dump($app_category);
-echo $total_cat_app;
+// var_dump($app_category);
+// echo $total_cat_app;
 
 
 // intial twig and send varibles for template
