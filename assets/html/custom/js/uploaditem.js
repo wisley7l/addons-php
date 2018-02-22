@@ -168,18 +168,16 @@ $("#rm-category").click(function(event){
     //
     let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
 
-    if (is_app == 1) {
+    if (is_app != 1) {
       for (var i = num; i > 1; i--) {
         $("div#cat-app-"+i).attr('style','display:none;');
       }
-    }else if (is_app == 0) {
+    }else if (is_app != 0) {
       for (var i = num; i > 1; i--) {
         $("div#cat-theme-"+i).attr('style','display:none;');
       }
     }
-
     num = 1;
-
 	}
 
   function enable(id) {
