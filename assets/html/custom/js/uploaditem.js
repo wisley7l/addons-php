@@ -1,4 +1,6 @@
-var num = 1;
+var num = 1,
+    is_app = $('form#upload_form').find('input#inp-item_is_app').val();
+
 $("form#upload_form").submit(function(event){
   let $form = $('form#upload_form'),
       name_app = $form.find('input#item_name').val(), // not null
@@ -96,6 +98,7 @@ $("#rm-category").click(function(event){
 });
 
 (function($) {
+  console.log(is_app);
 
   let select = $('select#type-app');
 	var $checkbox = $('.label-check'),
@@ -163,9 +166,16 @@ $("#rm-category").click(function(event){
 
 	function deselect(checkbox) {
 		checkbox.prop('checked', false);
-    for (var i = num; i > 1; i--) {
-      $("div#cat-app-"+i).attr('style','display:none;');
+    if (is_app == 1) {
+      for (var i = num; i > 1; i--) {
+        $("div#cat-app-"+i).attr('style','display:none;');
+      }
+    }else if (is_app == 0) {
+      for (var i = num; i > 1; i--) {
+        $("div#cat-theme-"+i).attr('style','display:none;');
+      }
     }
+
     num = 1;
 
 	}
