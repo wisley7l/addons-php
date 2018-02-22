@@ -25,11 +25,11 @@ if ($login == false) { // if not connected
 if(empty($_POST)) { // not exist post
   echo "error post";
   // header("Location: ../");
-} else{
+} else if (!empty($_POST['is_app']) AND ((int) $_POST['is_app'] == 0 OR (int) $_POST['is_app'] == 1) ) {
   // obs: capture id partner
   $is_app  = (int) $_POST['is_app'];
   $name = $_POST['name'];
-  $category = $_POST['category'];
+  $category = $_POST['categories_json'];
   $numversion = $_POST['numversion'];
   $description = $_POST['description'];
   $scripturl = $_POST['scripturl'];
@@ -37,7 +37,7 @@ if(empty($_POST)) { // not exist post
   $website = $_POST['website'];
   $linkvideo = $_POST['linkvideo'];
   $linkdoc  = $_POST['linkdoc']; // only theme
-  $type_app = $_POST['type_app']; // treat 1 a 7  // only app
+  $type_app = (int) $_POST['type_app']; // treat 1 a 7  // only app
   $module_type = $_POST['module_app']; // treat only type_app == 3 // only app
   $authentication = $_POST['authentication']; // treat 0 or 1 // only app
   /*
@@ -55,6 +55,7 @@ if(empty($_POST)) { // not exist post
    //var_dump($_POST);
    echo $category;
 
+
 }
 
 /*
@@ -67,4 +68,18 @@ module_package 4
 string 6
 external 7
 string 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 */
