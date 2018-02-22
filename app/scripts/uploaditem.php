@@ -46,6 +46,7 @@ if(empty($_POST)) { // not exist post
    $categories = array();
    $num_category = (int) $category['total'];
    echo $num_category;
+   var_dump($category);
    if ($num_category > 0) {
      for ($i=0; $i <$num_category ; $i++) {
        $var = $category['categories'][$i];
