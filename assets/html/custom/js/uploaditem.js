@@ -23,9 +23,7 @@ $("form#upload_form").submit(function(event){
         }
       }
       string += "]}";
-      var obj = JSON.parse(string);
-
-
+      // var obj = JSON.parse(string);
 
   if (name_app == '' || num_version == '' || description == '') {
     alert('Error');
@@ -39,7 +37,7 @@ $("form#upload_form").submit(function(event){
     if (is_app == 1 ) { // app
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
-      $("#uploaditem-category").val(obj);
+      $("#uploaditem-category").val(string);
       $("#uploaditem-item_numversion").val(num_version);
       $("#uploaditem-item_description").val(description);
       $("#uploaditem-item_scripturl").val(script_url);
