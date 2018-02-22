@@ -13,4 +13,4 @@ $manage = json_decode($data,true);
 var_dump($manage);
 
 //echo $data;
-echo $manege['a'];
+echo $manage['a'];
