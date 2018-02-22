@@ -13,16 +13,16 @@ $("form#upload_form").submit(function(event){
       type_app = $form.find('select#type-app').val(),
       module_app = $form.find('select#module-type').val();
       authentication = $form.find('input#authentication').val(),
-      //num_categories =  num,
-      string = '{"num":' + num + ',"categories": [';
+      //num_categories =  num
+      // create a string to send in json format
+      categories_str = '{"total":' + num + ',"categories": [';
       for (var i = 1; i <= num; i++) { // create string json format
-        string += '{"id":"'+ $form.find('select#category-'+is_app+'-'+i).val() + '"}' ;
+        categories_str += '{"id":"'+ $form.find('select#category-'+is_app+'-'+i).val() + '"}' ;
         if (i != num ) {
-          string += ",";
+          categories_str += ",";
         }
       }
-      string += "]}";
-      // var obj = JSON.parse(string);
+      categories_str += "]}";
 
     // if fields are empty
   if (name_app == '' || num_version == '' || description == '') {
@@ -33,11 +33,10 @@ $("form#upload_form").submit(function(event){
     $form.find("#desc-required").css( "color", "red");
 
   }else {
-    //$form.find("#inp-requerid").css( "color", "black");
     if (is_app == 1 ) { // app
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
-      $("#uploaditem-category").val(string);
+      $("#uploaditem-category").val(categories_str);
       $("#uploaditem-item_numversion").val(num_version);
       $("#uploaditem-item_description").val(description);
       $("#uploaditem-item_scripturl").val(script_url);
@@ -52,7 +51,7 @@ $("form#upload_form").submit(function(event){
     } else if (is_app == 0 ) { // theme
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
-      $("#uploaditem-category").val(categories);
+      $("#uploaditem-category").val(categories_str);
       $("#uploaditem-item_numversion").val(num_version);
       $("#uploaditem-item_description").val(description);
       $("#uploaditem-item_linkdoc").val(linkdoc);
@@ -91,11 +90,11 @@ $("#add-category").click(function(event){
 // click the button remove category
 $("#rm-category").click(function(event){
   let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
-  // check it's an app or theme
+  // can not hide all
   if (num > 1) {
   num -= 1;
   }
-
+  // check it's an app or theme
   if (is_app == 1) {
     $("div#cat-app-"+(num+1)).attr('style','display:none;');
   }else if (is_app == 0) {
@@ -108,14 +107,19 @@ $("#rm-category").click(function(event){
   console.log(typeof is_app);
 
   let select = $('select#type-app');
+      // capture (select) to enable module_type
 	var $checkbox = $('.label-check'),
+      // capture (checkbox) to enable app or theme
       $checkboxauth = $('.label-check-auth');
+      // capture (checkbox) to check whether the application needs authentication or not
 
+  // function treat to enable module_type
   enableSelect(select.val());
-
+  // function treat click in (select) to treat enable module_type
   select.on('click',selectType);
-
+  //  function treat click (checkbox) to enable app or app
 	$checkbox.on( 'click', deselectLinked );
+   // function treat click (checkbox) to authentication
   $checkboxauth.on( 'click', checkAuth);
 
   function checkAuth() {
@@ -145,7 +149,6 @@ $("#rm-category").click(function(event){
     $('input#authentication').val(0);
   }
 }
-
 
 	function deselectLinked() {
       var $this = $(this),
@@ -212,7 +215,6 @@ $("#rm-category").click(function(event){
       $('div#enable-theme').attr('style','display:none;');
     }
 	}
-
   // function selected type app
   function selectType() {
     let $this = $(this);
@@ -237,18 +239,4 @@ $("#rm-category").click(function(event){
 
   }
 
-
-/*
-	function showDescription(container) {
-		$(".license-text[data-license='"+container+"']").slideDown();
-	}
-
-	function hideDescription(container) {
-		$(".license-text[data-license='"+container+"']").slideUp();
-	}
-
-	function changePrice(price) {
-		$('.sidebar-item .price.large').html(price);
-	}
-  */
 })(jQuery);
