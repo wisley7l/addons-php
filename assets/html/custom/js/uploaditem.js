@@ -27,7 +27,7 @@ $("form#upload_form").submit(function(event){
 
 
 
-  if (name_app == '' || num_version == '' || description == '' || categories == undefined ) {
+  if (name_app == '' || num_version == '' || description == '') {
     alert('Error');
     $form.find("#cat-required").css( "color", "red");
     $form.find("#name-required").css( "color", "red");
