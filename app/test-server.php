@@ -8,9 +8,9 @@ $data = '{"Coords":[{"Accuracy":"65","Latitude":"53.277720488429026","Longitude"
 
 //echo json_encode($arr);
 $data = json_encode($arr);
-$manage = json_decode($data);
+$manage = json_decode($data,true);
 
 var_dump($manage);
 
 //echo $data;
-echo $manege->{'a'};
+echo $manege['a'];
