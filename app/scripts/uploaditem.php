@@ -53,8 +53,9 @@ if(empty($_POST)) { // not exist post
    linkdoc // theme
    */
    //var_dump($_POST);
-   $category = json_decode($category_json);
-   echo $category['total'];
+   //$category = json_decode($category_json);
+   echo $category_json;
+
 
 
 }else {
