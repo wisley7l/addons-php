@@ -39,7 +39,7 @@ $("form#upload_form").submit(function(event){
     if (is_app == 1 ) { // app
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
-      $("#uploaditem-category").val(string);
+      $("#uploaditem-category").val(obj);
       $("#uploaditem-item_numversion").val(num_version);
       $("#uploaditem-item_description").val(description);
       $("#uploaditem-item_scripturl").val(script_url);
