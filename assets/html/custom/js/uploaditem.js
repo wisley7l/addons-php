@@ -163,7 +163,7 @@ $("#rm-category").click(function(event){
 
 	function deselect(checkbox) {
 		checkbox.prop('checked', false);
-    for (var i = 1; i <= num; i++) {
+    for (var i = num; i > 1; i--) {
       $("div#cat-app-"+i).attr('style','display:none;');
     }
     num = 1;
