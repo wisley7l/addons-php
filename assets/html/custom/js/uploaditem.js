@@ -63,37 +63,44 @@ $("form#upload_form").submit(function(event){
   event.preventDefault();
 });
 
+//click the button add category
 $("#add-category").click(function(event){
   let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
-  if (is_app == 1) {
+  // check it's an app or theme
+  if (is_app == 1) { // if app
     let max_categories =  parseInt($('input#total_cat_app').val());
-    if (num < max_categories) {
+    // maximum number of categories that can be added
+    if (num < max_categories) { // if maximum number not reached
       num += 1;
     }
-    for (var i = 1; i <= num; i++) {
+    for (var i = 1; i <= num; i++) { // displays (select) categories up to the value added
       $("div#cat-app-"+i).attr('style','display:block;');
     }
-  } else if(is_app == 0 ){
+  } else if(is_app == 0 ){ // if Theme
     let max_categories =  parseInt($('input#total_cat_theme').val());
-    if (num < max_categories) {
+    if (num < max_categories) { //if maximum number not reached
       num += 1;
     }
-    for (var i = 1; i <= num; i++) {
+    for (var i = 1; i <= num; i++) { // displays (select) categories up to the value added
       $("div#cat-theme-"+i).attr('style','display:block;');
     }
   }
 
   event.preventDefault();
 });
-
+// click the button remove category
 $("#rm-category").click(function(event){
-  // if (true) {
-    if (num > 1) {
-    num -= 1;
-    }
-    $("div#cat-app-"+(num+1)).attr('style','display:none;');
-  // }
+  let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
+  // check it's an app or theme
+  if (num > 1) {
+  num -= 1;
+  }
 
+  if (is_app == 1) {
+    $("div#cat-app-"+(num+1)).attr('style','display:none;');
+  }else if (is_app == 0) {
+    $("div#cat-theme-"+(num+1)).attr('style','display:none;');
+  }
   event.preventDefault();
 });
 
