@@ -11,3 +11,4 @@ $manage = json_decode($data);
 var_dump($manage);
 
 //echo $data;
+echo $manage["test"];
