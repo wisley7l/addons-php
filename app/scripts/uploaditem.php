@@ -8,17 +8,7 @@ $app_type = array(
 );
 // module type
 $type_module = array(
-  1 => 'al',
-  2 => 'pd',
-  3 => 'sc',
-  4 => 'sh',
-  5 => 'pa',
-  6 => 'ck',
-  7 => 'cf',
-  8 => 'rg',
-  9 => 'lg',
-  10 => 'ct',
-  11 => 'nw'
+  'al','pd','sc','sh', 'pa', 'ck', 'cf', 'rg', 'lg', 'ct', 'nw'
 );
 //header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
@@ -46,7 +36,8 @@ if ($login == false) { // if not connected
 if(empty($_POST)) { // not exist post
   echo "error post";
   // header("Location: ../");
-} else if (!empty($_POST['is_app']) AND ((int) $_POST['is_app'] == 0 OR (int) $_POST['is_app'] == 1) ) {
+} else if (!empty($_POST['is_app']) AND
+    ((int) $_POST['is_app'] == 0 OR (int) $_POST['is_app'] == 1) ) {
   // obs: capture id partner
   $is_app  = (int) $_POST['is_app'];
   $name = $_POST['name']; // not null
