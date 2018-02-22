@@ -29,7 +29,7 @@ if(empty($_POST)) { // not exist post
   // obs: capture id partner
   $is_app  = (int) $_POST['is_app'];
   $name = $_POST['name']; // not null
-  $category_json = $_POST['categories_json'];
+  $categories = $_POST['categories_json'];
   $numversion = $_POST['numversion'];
   $description = $_POST['description'];
   $scripturl = $_POST['scripturl'];
@@ -40,22 +40,21 @@ if(empty($_POST)) { // not exist post
   $type_app = (int) $_POST['type_app']; // treat 1 a 7  // only app
   $module_type = $_POST['module_app']; // treat only type_app == 3 // only app
   $authentication = (int) $_POST['authentication']; // treat 0 or 1 // only app // if authentication != 1 or 0 error
-  $category = json_decode($category_json,true); // if (int) category['total'] <= 0  error
+  $category = json_decode($categories,true); // if (int) category['total'] <= 0  error
    //var_dump($_POST);
+
    // treat category
    $categories = array();
    $num_category = (int) $category['total'];
-   echo $category['categories'][0]["id"];
-   var_dump($category);
-   if ($num_category > 0) {
-     for ($i=0; $i <$num_category ; $i++) {
+   if ($num_category > 0) { // if (int) $category['total'] <= 0  error
+     for ($i=0; $i < $num_category ; $i++) { // Search in arrays if id is not repeated
        $var = $category['categories'][$i]["id"];
-       if (!in_array($var,$categories)) {
-         array_push($categories, $var);
+       if (!in_array($var,$categories)) { // check if id is already in array
+         array_push($categories, $var); // if not, let's add id in array
        }
      }
      var_dump($categories);
-   }else {
+   }else { // print error, if does not satisfy condition of categories
      echo "erro category";
    }
 
