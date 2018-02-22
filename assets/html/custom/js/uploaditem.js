@@ -104,8 +104,7 @@ $("#rm-category").click(function(event){
 });
 
 (function($) {
-  console.log(typeof is_app);
-
+  
   let select = $('select#type-app');
       // capture (select) to enable module_type
 	var $checkbox = $('.label-check'),
