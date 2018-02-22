@@ -86,7 +86,7 @@ if(empty($_POST)) { // not exist post
      if ($type_app == 3 ) { // is module_package
        // valid (type_module)
        var_dump($type_module);
-       if (!in_array($type_module, $module_type)) {
+       if (!in_array($module_type,$type_module)) {
          // print erro module_type
          // redirect dashboard-uploaditem?error=module_type
          echo "erro module_type";
