@@ -1,4 +1,25 @@
 <?php
+// type app
+$app_type = array(
+  array('id' => 1 ,' name' =>  'dashboard'),
+  array('id' => 2 ,' name' =>  'storefront '),
+  array('id' => 3 ,' name' =>  'module_package'),
+  array('id' => 4 ,' name' =>  'external')
+);
+// module type
+$type_module = array(
+  1 => 'al',
+  2 => 'pd',
+  3 => 'sc',
+  4 => 'sh',
+  5 => 'pa',
+  6 => 'ck',
+  7 => 'cf',
+  8 => 'rg',
+  9 => 'lg',
+  10 => 'ct',
+  11 => 'nw'
+);
 //header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
@@ -37,7 +58,7 @@ if(empty($_POST)) { // not exist post
   $website = $_POST['website'];
   $linkvideo = $_POST['linkvideo'];
   $linkdoc  = $_POST['linkdoc']; // only theme
-  $type_app = (int) $_POST['type_app']; // treat 1 a 7  // only app
+  $type_app = (int) $_POST['type_app']; // treat 1 a 4  // only app
   $module_type = $_POST['module_app']; // treat only type_app == 3 // only app
   $authentication = (int) $_POST['authentication']; // treat 0 or 1 // only app // if authentication != 1 or 0 error
   $category = json_decode($categories,true); // if (int) category['total'] <= 0  error
@@ -55,7 +76,37 @@ if(empty($_POST)) { // not exist post
      }
      var_dump($categories);
    }else { // print error, if does not satisfy condition of categories
+     // redirect dashboard-uploaditem?error=category
      echo "erro category";
+   }
+
+   // treat if it's app or theme
+   if ($is_app == 1) { // if app
+
+     // treat authentication and type app
+     if (($authentication != 0 AND $authentication != 1)
+      OR ($type_app < 0 OR $type_app > 4)) {
+       // print error authentication or type app
+       // redirect dashboard-uploaditem?error=authetication
+       echo "error authetication or type app";
+     }
+     echo $authetication;
+     // make sure it is module_package
+     if ($type_app == 3 ) { // is module_package
+       // valid (type_module)
+       if (!in_array($type_module, $module_type)) {
+         // print erro module_type
+         // redirect dashboard-uploaditem?error=module_type
+         echo "erro module_type";
+       }
+       echo $module_type;
+     }
+
+
+   }else if ($is_app = 0) { // if theme
+
+   }else {
+     // redirect dashboard-uploaditem?error=is_app
    }
 
 
@@ -82,15 +133,3 @@ if(empty($_POST)) { // not exist post
  linkvideo // app and theme
  linkdoc // theme
  */
-
-/*
-type app
-dashboard 1
-string 2
-storefront 3
-string 4
-module_package 4
-string 6
-external 7
-string 8
-*/
