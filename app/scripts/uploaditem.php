@@ -29,7 +29,7 @@ if(empty($_POST)) { // not exist post
   // obs: capture id partner
   $is_app  = (int) $_POST['is_app'];
   $name = $_POST['name'];
-  $category = $_POST['categories_json'];
+  $category_json = $_POST['categories_json'];
   $numversion = $_POST['numversion'];
   $description = $_POST['description'];
   $scripturl = $_POST['scripturl'];
@@ -53,7 +53,7 @@ if(empty($_POST)) { // not exist post
    linkdoc // theme
    */
    //var_dump($_POST);
-   $category = json_decode($category);
+   $category = json_decode($category_json);
    echo $category['total'];
 
 
