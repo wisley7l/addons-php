@@ -16,18 +16,15 @@ $("form#upload_form").submit(function(event){
       authentication = $form.find('input#authentication').val(),
       //num_categories =  num,
       string = '{"num":' + num + ',"categories": [';
-      for (var i = 1; i <= num; i++) {
+      for (var i = 1; i <= num; i++) { // create string json format
         string += '{"id":"'+ $form.find('select#category-'+is_app+'-'+i).val() + '"}' ;
         if (i != num ) {
           string += ",";
         }
       }
       string += "]}";
-      console.log(string);
       var obj = JSON.parse(string);
-      console.log(obj);
-      //categories = $form.find('select#category-'+is_app).val(), // not null
-      //console.log(num_categories);//
+
 
 
   if (name_app == '' || num_version == '' || description == '' || categories == undefined ) {
@@ -42,7 +39,7 @@ $("form#upload_form").submit(function(event){
     if (is_app == 1 ) { // app
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
-      //$("#uploaditem-category").val(categories);
+      $("#uploaditem-category").val(obj);
       $("#uploaditem-item_numversion").val(num_version);
       $("#uploaditem-item_description").val(description);
       $("#uploaditem-item_scripturl").val(script_url);
