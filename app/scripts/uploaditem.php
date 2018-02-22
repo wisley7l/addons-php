@@ -51,7 +51,7 @@ if(empty($_POST)) { // not exist post
      for ($i=0; $i <$num_category ; $i++) {
        $var = $category['categories'][$i]["id"];
        if (!in_array($var,$categories)) {
-         array_push($category, $var);
+         array_push($categories, $var);
        }
      }
      var_dump($categories);
