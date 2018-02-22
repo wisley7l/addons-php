@@ -98,7 +98,7 @@ $("#rm-category").click(function(event){
 });
 
 (function($) {
-  console.log(is_app);
+  console.log(typeof is_app);
 
   let select = $('select#type-app');
 	var $checkbox = $('.label-check'),
