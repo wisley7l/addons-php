@@ -1,4 +1,4 @@
-var num = 1;
+var num = 1; // variable for total value of categories added
 $("form#upload_form").submit(function(event){
   let $form = $('form#upload_form'),
       name_app = $form.find('input#item_name').val(), // not null
@@ -24,6 +24,7 @@ $("form#upload_form").submit(function(event){
       string += "]}";
       // var obj = JSON.parse(string);
 
+    // if fields are empty
   if (name_app == '' || num_version == '' || description == '') {
     alert('Error');
     $form.find("#cat-required").css( "color", "red");
@@ -49,14 +50,14 @@ $("form#upload_form").submit(function(event){
 
       $("#addons-uploaditem").submit();//
     } else if (is_app == 0 ) { // theme
-      // $("#uploaditem-is_app").val(is_app);
-      // $("#uploaditem-name_app").val(name_app);
-      // $("#uploaditem-category").val(categories);
-      // $("#uploaditem-item_numversion").val(num_version);
-      // $("#uploaditem-item_description").val(description);
-      // $("#uploaditem-item_linkdoc").val(linkdoc);
-      // $("#uploaditem-item_linkvideo").val(video);
-      // $("#addons-uploaditem").submit();//
+      $("#uploaditem-is_app").val(is_app);
+      $("#uploaditem-name_app").val(name_app);
+      $("#uploaditem-category").val(categories);
+      $("#uploaditem-item_numversion").val(num_version);
+      $("#uploaditem-item_description").val(description);
+      $("#uploaditem-item_linkdoc").val(linkdoc);
+      $("#uploaditem-item_linkvideo").val(video);
+      $("#addons-uploaditem").submit();//
     }
   }
   event.preventDefault();
@@ -164,28 +165,38 @@ $("#rm-category").click(function(event){
 	}
 
 	function deselect(checkbox) {
+    /*
+    this function is used to select only one check box for application or theme
+    as well as hide the selection of application or theme categories
+    */
+    // with the checkbox received as value, set the property (checked) as false
 		checkbox.prop('checked', false);
-    //
+    //receive value to verify that the application or theme
+    //and in the opposite condition to that value, hides the (select)
+    //of their respective categories and redefines the value (num)
+
     let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
 
-    if (is_app != 1) {
+    if (is_app != 1) { // if value is the opposite value of the app
       for (var i = num; i > 1; i--) {
         $("div#cat-app-"+i).attr('style','display:none;');
       }
-    }else if (is_app != 0) {
+    }else if (is_app != 0) { //if value is the opposite value of the Theme
       for (var i = num; i > 1; i--) {
         $("div#cat-theme-"+i).attr('style','display:none;');
       }
     }
-    num = 1;
+    num = 1; // reset num
 	}
-
+  //function to enable application or theme fields
   function enable(id) {
-    if (id == 'item_is_app') {
+    //receives the (input) to verify that it is application or theme and
+    //to display the necessarios fields to fill the application or theme
+    if (id == 'item_is_app') { // if app
       $('input#inp-item_is_app').val(1);
       $('div#enable-app').attr('style','display:block;');
       $('div#enable-theme').attr('style','display:none;');
-    }else if (id == 'item_is_theme') {
+    }else if (id == 'item_is_theme') { // if theme
       $('div#enable-app').attr('style','display:none;');
       $('div#enable-theme').attr('style','display:block;');
       $('input#inp-item_is_app').val(0);
