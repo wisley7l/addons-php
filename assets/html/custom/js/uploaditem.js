@@ -17,7 +17,7 @@ $("form#upload_form").submit(function(event){
       // create a string to send in json format
       categories_str = '{"total":' + num + ',"categories": [';
       for (var i = 1; i <= num; i++) { // create string json format
-        categories_str += '{"id":"'+ $form.find('select#category-'+is_app+'-'+i).val() + '"}' ;
+        categories_str += '{"id":'+ parseInt($form.find('select#category-'+is_app+'-'+i).val()) + '}' ;
         if (i != num ) {
           categories_str += ",";
         }
@@ -104,7 +104,7 @@ $("#rm-category").click(function(event){
 });
 
 (function($) {
-  
+
   let select = $('select#type-app');
       // capture (select) to enable module_type
 	var $checkbox = $('.label-check'),

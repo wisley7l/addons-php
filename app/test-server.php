@@ -10,21 +10,4 @@ $data = '{"Coords":[{"Accuracy":"65","Latitude":"53.277720488429026","Longitude"
 $manage = json_decode($data);
 //var_dump($manage);
 
-function test($id)
-{
-  if ($id == 1) {
-    $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
-  }
-  return $arr;
-}
-if($_GET['id']){
-  $id = (int) $_GET['id'];
-  $t = test($id);
-  if (empty($t)) {
-    echo "empty";
-  }
-  else {
-    //echo json_encode($t);
-    echo $data;
-  }
-}
+echo $data;
