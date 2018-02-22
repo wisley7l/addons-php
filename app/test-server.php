@@ -11,4 +11,4 @@ $manage = json_decode($data);
 var_dump($manage);
 
 //echo $data;
-echo $arr["a"];
+echo $manege[0];
