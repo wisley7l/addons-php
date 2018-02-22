@@ -55,8 +55,8 @@ if(empty($_POST)) { // not exist post
    //var_dump($_POST);
    $category = json_decode($category_json);
    echo $category_json;
-   var_dump($category);
-   echo $category["total"];
+   //var_dump($category);
+   //echo $category["total"];
 
 
 
