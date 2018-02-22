@@ -81,25 +81,27 @@
 						{% endfor %}
 						<input type="text" id="total_cat_app"  value="{{total_cat_app}}" style="display:none;">
 						<input type="text" id="total_cat_theme"  value="{{total_cat_theme}}" style="display:none;">
-{#
+
 						{% for i in 1.. total_cat_theme %}
 						<div id="enable-theme" style="display:none;">
+							{% if loop.index > 1 %}
 							<div id="cat-app-{{i}}" style="display:none;">
 								<!-- INPUT CONTAINER -->
-								{{macro_dash_up.select_category(theme_category,0)}}
+								{{macro_dash_up.select_category(theme_category,0,i)}}
 								<!--button id="add_category">+ category </button-->
 								<!-- /INPUT CONTAINER -->
 							</div>
 						{% else %}
 							<div id="cat-theme-{{i}}" style="display:block;">
 								<!-- INPUT CONTAINER -->
-								{{macro_dash_up.select_category(theme_category,0)}}
+								{{macro_dash_up.select_category(theme_category,0,i)}}
 								<!--button id="add_category">+ category </button-->
 								<!-- /INPUT CONTAINER -->
 							</div>
-						</div>
-						{% endif %}
-#}
+							{% endif %}
+						</div>						
+						{% endfor %}
+
 
 						<!-- INPUT CONTAINER -->
 						<div class="input-container">

@@ -1,6 +1,4 @@
-var num = 1,
-    is_app = $('form#upload_form').find('input#inp-item_is_app').val();
-
+var num = 1;
 $("form#upload_form").submit(function(event){
   let $form = $('form#upload_form'),
       name_app = $form.find('input#item_name').val(), // not null
@@ -65,23 +63,24 @@ $("form#upload_form").submit(function(event){
 });
 
 $("#add-category").click(function(event){
-  // if (true) {
-    let max_categories =  $('input#total_cat_app').val();
+  let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
+  if (is_app == 1) {
+    let max_categories =  parseInt($('input#total_cat_app').val());
     if (num < max_categories) {
       num += 1;
     }
     for (var i = 1; i <= num; i++) {
       $("div#cat-app-"+i).attr('style','display:block;');
     }
-  // } else {
-    // let max_categories =  $('input#total_cat_theme').val();
-    // if (num < max_categories) {
-    //   num += 1;
-    // }
-    // for (var i = 1; i <= num; i++) {
-    //   $("div#cat-theme-"+i).attr('style','display:block;');
-    // }
-  // }
+  } else if(is_app == 0 ){
+    let max_categories =  parseInt($('input#total_cat_theme').val());
+    if (num < max_categories) {
+      num += 1;
+    }
+    for (var i = 1; i <= num; i++) {
+      $("div#cat-theme-"+i).attr('style','display:block;');
+    }
+  }
 
   event.preventDefault();
 });
@@ -166,6 +165,9 @@ $("#rm-category").click(function(event){
 
 	function deselect(checkbox) {
 		checkbox.prop('checked', false);
+    //
+    let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
+
     if (is_app == 1) {
       for (var i = num; i > 1; i--) {
         $("div#cat-app-"+i).attr('style','display:none;');
