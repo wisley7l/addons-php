@@ -143,7 +143,7 @@ if(empty($_POST)) { // not exist post
      }
 
 
-   }else if ($is_app = 0) { // if theme
+   }else if ($is_app == 0) { // if theme
      echo "sim";
 
    }else {
