@@ -43,6 +43,8 @@ if ($login == false) { // if not connected
   exit;
 }
 // var_dump($_POST);
+// get id_partner
+$id_partner = $SESSION['user_id'];
 
 if(empty($_POST)) { // not exist post
   echo "error post";
@@ -140,7 +142,7 @@ if(empty($_POST)) { // not exist post
        echo PHP_EOL;
        handle_msyql_error($conn);
      }
-
+     echo $id_partner;
 
    }else if ($is_app == 0) { // if theme
      // create query TODO:
