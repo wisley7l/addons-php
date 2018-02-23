@@ -44,7 +44,7 @@ if ($login == false) { // if not connected
 }
 // var_dump($_POST);
 // get id_partner
-$id_partner = $SESSION['user_id'];
+$id_partner = $_SESSION['user_id'];
 
 if(empty($_POST)) { // not exist post
   echo "error post";
