@@ -156,6 +156,7 @@ if(empty($_POST)) { // not exist post
   // redirect with error
   echo "erro2";
   var_dump($_POST);
+  echo (int) $_POST['is_app'];
 }
 
 //   INSERT INTO `category_themes` (`name`) VALUES ("art_photography");
