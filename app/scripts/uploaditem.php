@@ -143,7 +143,41 @@ if(empty($_POST)) { // not exist post
 
 
    }else if ($is_app == 0) { // if theme
-     echo "sim";
+     // create query TODO:
+     // verify sessin, get id and save id in id_partner
+
+     /* $query =  "INSERT INTO `themes` (`title`, `partner_id`, `description`,`version`, `link_documentation`, `link_video` )
+        VALUES ($name, $id_partner, $description, $numversion, $linkdoc, $linkvideo)";
+     */
+     /*
+
+     // query search app and theme for index page
+
+
+    if (!mysqli_query($conn, $query)) {
+    // error INSERT // redirect
+    }
+     // $id_app = mysqli_insert_id($conn);
+
+     */
+     $query = "";
+     for ($i=0; $i < $num_category ; $i++) {
+       $item = (int) $categories[$i];
+       $query .= "INSERT INTO `relationship_category_themes` (`app_id`, `category_themes_id`) VALUES ($id_app , $item);";
+     }
+     if (mysqli_multi_query($conn, $query)) {
+       // redirect with sucess
+       echo 'MySQL theme inserted';
+       echo PHP_EOL;
+       echo 'All done successfully, saying goodbye...';
+       echo PHP_EOL;
+     } else {
+       //redirect with failed
+       echo 'Failed to insert theme';
+       echo PHP_EOL;
+       handle_msyql_error($conn);
+     }
+
 
    }else {
      // redirect dashboard-uploaditem?error=is_app
@@ -153,9 +187,8 @@ if(empty($_POST)) { // not exist post
 
 }else {
   // redirect with error
-  //echo "erro2";
-  //var_dump($_POST);
-  echo  empty($_POST['is_app']);
+  echo "erro2";
+
 }
 
 //   INSERT INTO `category_themes` (`name`) VALUES ("art_photography");
