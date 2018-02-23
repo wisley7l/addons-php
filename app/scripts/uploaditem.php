@@ -142,9 +142,10 @@ if(empty($_POST)) { // not exist post
        echo PHP_EOL;
        handle_msyql_error($conn);
      }
-     echo $id_partner;
+
 
    }else if ($is_app == 0) { // if theme
+     echo $id_partner;
      // create query TODO:
      // verify sessin, get id and save id in id_partner
 
