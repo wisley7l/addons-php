@@ -143,8 +143,8 @@ if(empty($_POST)) { // not exist post
        handle_msyql_error($conn);
      }
 
-
    }else if ($is_app == 0) { // if theme
+     echo  "<script>alert('Email enviado com Sucesso!);</script>";
      // create query TODO:
      // verify sessin, get id and save id in id_partner
 
@@ -180,21 +180,11 @@ if(empty($_POST)) { // not exist post
        handle_msyql_error($conn);
      }
 
-
    }else {
      // redirect dashboard-uploaditem?error=is_app
    }
 
-
-
 }else {
   // redirect with error
   echo "erro2";
-
 }
-
-//   INSERT INTO `category_themes` (`name`) VALUES ("art_photography");
-//apps
-//themes
-//relationship_category_apps
-//relationship_category_themes
