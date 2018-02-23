@@ -154,9 +154,9 @@ if(empty($_POST)) { // not exist post
 
 }else {
   // redirect with error
-  echo "erro2";
+  //echo "erro2";
   //var_dump($_POST);
-  echo empty($_POST['is_app']);
+  echo  gettype(empty($_POST['is_app']));
 }
 
 //   INSERT INTO `category_themes` (`name`) VALUES ("art_photography");
