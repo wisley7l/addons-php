@@ -10,6 +10,15 @@ $app_type = array(
 $type_module = array(
   'al','pd','sc','sh', 'pa', 'ck', 'cf', 'rg', 'lg', 'ct', 'nw'
 );
+// create connection to the database
+$conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
+// check connection
+if (mysqli_connect_errno()) {
+  echo 'Connection failed: ';
+  echo mysqli_connect_error();
+  echo PHP_EOL;
+  exit();
+}
 //header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
@@ -85,13 +94,50 @@ if(empty($_POST)) { // not exist post
      // make sure it is module_package
      if ($type_app == 3 ) { // is module_package
        // valid (type_module)
-       var_dump($type_module);
        if (!in_array($module_type,$type_module)) {
          // print erro module_type
          // redirect dashboard-uploaditem?error=module_type
          echo "erro module_type";
        }
        echo $module_type;
+     }else {
+       $module_type = NULL;
+     }
+
+     // create query TODO:
+     // verify sessin, get id and save id in id_partner
+
+     /* $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`,`version`, `type`,`module`,
+        `script_uri`,`github_repository`,`authentication`, `website`, `link_video` )
+        VALUES ($name,$id_partner,$description,$numversion,$type_app,$module_type,$scripturl,$github,$authentication,$website,$linkvideo)";
+     */
+     /*
+
+     // query search app and theme for index page
+
+
+    if (!mysqli_query($conn, $query)) {
+    // error INSERT // redirect
+    }
+     // $id_app = mysqli_insert_id($conn);
+
+     */
+     $query = "";
+     for ($i=0; $i < $num_category ; $i++) {
+       $item = (int) $categories[$i];
+       $query .= "INSERT INTO `relationship_category_apps` (`app_id`, `category_apps_id`) VALUES ($id_app , $item);";
+     }
+     if (mysqli_multi_query($conn, $query)) {
+       // redirect with sucess
+       echo 'MySQL app inserted';
+       echo PHP_EOL;
+       echo 'All done successfully, saying goodbye...';
+       echo PHP_EOL;
+     } else {
+       //redirect with failed
+       echo 'Failed to insert app';
+       echo PHP_EOL;
+       handle_msyql_error($conn);
      }
 
 
@@ -104,24 +150,12 @@ if(empty($_POST)) { // not exist post
 
 
 }else {
+  // redirect with error 
   echo "erro2";
 }
-
 
 //   INSERT INTO `category_themes` (`name`) VALUES ("art_photography");
 //apps
 //themes
 //relationship_category_apps
 //relationship_category_themes
-
-/*
- is_app == 1 create app, == 0 create theme
- name // name
- numversion // app and theme
- description // app and theme
- scripturl // app
- github // app
- website // app
- linkvideo // app and theme
- linkdoc // theme
- */
