@@ -47,8 +47,7 @@ if ($login == false) { // if not connected
 if(empty($_POST)) { // not exist post
   echo "error post";
   // header("Location: ../");
-} else if (!empty($_POST['is_app']) AND
-    ((int) $_POST['is_app'] == 0 OR (int) $_POST['is_app'] == 1) ) {
+} else if ((int) $_POST['is_app'] == 0 OR (int) $_POST['is_app'] == 1)  {
   // obs: capture id partner
   $is_app  = (int) $_POST['is_app'];
   $name = $_POST['name']; // not null
