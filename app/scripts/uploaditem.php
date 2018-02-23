@@ -144,7 +144,7 @@ if(empty($_POST)) { // not exist post
      }
 
    }else if ($is_app == 0) { // if theme
-     echo  "<script>alert('Email enviado com Sucesso!);</script>";
+     echo "<script type='javascript'>alert('Email enviado com Sucesso!');</script>";
      // create query TODO:
      // verify sessin, get id and save id in id_partner
 
