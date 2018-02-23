@@ -155,6 +155,7 @@ if(empty($_POST)) { // not exist post
 }else {
   // redirect with error
   echo "erro2";
+  var_dump($_POST);
 }
 
 //   INSERT INTO `category_themes` (`name`) VALUES ("art_photography");
