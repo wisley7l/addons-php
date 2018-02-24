@@ -50,11 +50,12 @@ else {
     /* TODO:
     $conn = $GLOBAL['conn'];
     // frist escape varables
-    $user = mysqli_real_escape_string($id_partner);
-    $pass = $user = mysqli_real_escape_string($conn,$_POST['pass']);
+    $id_user = mysqli_real_escape_string($id_partner);
+    $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+    $pass = $user = mysqli_real_escape_string($conn,$pass_hash);
     // query search app and theme for index page
     $query = "SELECT `p.id`,`p.path_image`, `p.credits`  FROM `partners p`
-      WHERE (`p.id` = $id_partner AND `p.passowrd_hash` = $pass) LIMIT 1";
+      WHERE (`p.id` = $id_user AND `p.passowrd_hash` = $pass) LIMIT 1";
     if (mysqli_query(  $conn, $query )) {
       // sucess, treat partners
     }else {
