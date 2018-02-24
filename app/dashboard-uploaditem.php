@@ -32,12 +32,6 @@ if ($login == false) {
 }
 //(end) * Required on all pages *
 
-// obtain the total number of items sold and the total amount collected from the user's sales
-$sales_user = array(
-  'total_items' => 100 ,
-  'total_earnings' => 2000 / $dictionary['mult_coin']
-);
-
 
 // get categories
 $app_category = get_categories_app();
@@ -61,6 +55,5 @@ echo $twig->render('dashboard-uploaditem.twig', array(
   'total_cat_app' => $total_cat_app,
     // test
   'user' => $user_login,
-  'sales_user' => $sales_user,
   'is_app' => 1
 ));

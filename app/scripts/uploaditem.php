@@ -39,7 +39,7 @@ if (isset($_SESSION)) {
   $user_login = getUserLogin($dictionary);
 }
 if ($login == false) { // if not connected
-  header("Location: ../?EROORLOGIN");
+  header("Location: ../#ERRORLOGIN");
   exit;
 }
 // var_dump($_POST);
@@ -47,8 +47,9 @@ if ($login == false) { // if not connected
 $id_partner = $_SESSION['user_id'];
 
 if(empty($_POST)) { // not exist post
-  echo "error post";
-  // header("Location: ../");
+  //echo "error post";
+  header("Location: ../dashboard-uploaditem#ERRORSend");
+  exit;
 } else if ((int) $_POST['is_app'] == 0 OR (int) $_POST['is_app'] == 1)  {
   // obs: capture id partner
   $is_app  = (int) $_POST['is_app'];
@@ -80,7 +81,9 @@ if(empty($_POST)) { // not exist post
      var_dump($categories);
    }else { // print error, if does not satisfy condition of categories
      // redirect dashboard-uploaditem?error=category
-     echo "erro category";
+     //echo "erro category";
+     header("Location: ../dashboard-uploaditem#ERRORCategories");
+     exit;
    }
 
    // treat if it's app or theme
@@ -92,6 +95,8 @@ if(empty($_POST)) { // not exist post
        // print error authentication or type app
        // redirect dashboard-uploaditem?error=authetication
        echo "error authetication or type app";
+       header("Location: ../dashboard-uploaditem#ERRORAuthORType");
+       exit;
      }
      echo $authetication;
      // make sure it is module_package
@@ -100,7 +105,9 @@ if(empty($_POST)) { // not exist post
        if (!in_array($module_type,$type_module)) {
          // print erro module_type
          // redirect dashboard-uploaditem?error=module_type
-         echo "erro module_type";
+         //echo "erro module_type";
+         header("Location: ../dashboard-uploaditem#ERRORModule");
+         exit;
        }
        echo $module_type;
      }else {
@@ -132,15 +139,19 @@ if(empty($_POST)) { // not exist post
      }
      if (mysqli_multi_query($conn, $query)) {
        // redirect with sucess
-       echo 'MySQL app inserted';
-       echo PHP_EOL;
-       echo 'All done successfully, saying goodbye...';
-       echo PHP_EOL;
+       // echo 'MySQL app inserted';
+       // echo PHP_EOL;
+       // echo 'All done successfully, saying goodbye...';
+       // echo PHP_EOL;
+       header("Location: ../dashboard-uploaditem#SucessApp");
+       exit;
      } else {
        //redirect with failed
-       echo 'Failed to insert app';
-       echo PHP_EOL;
+       // echo 'Failed to insert app';
+       // echo PHP_EOL;
        handle_msyql_error($conn);
+       header("Location: ../dashboard-uploaditem#ERRORInsert");
+       exit;
      }
 
    }else if ($is_app == 0) { // if theme
@@ -168,15 +179,19 @@ if(empty($_POST)) { // not exist post
      }
      if (mysqli_multi_query($conn, $query)) {
        // redirect with sucess
-       echo 'MySQL theme inserted';
-       echo PHP_EOL;
-       echo 'All done successfully, saying goodbye...';
-       echo PHP_EOL;
+       // echo 'MySQL theme inserted';
+       // echo PHP_EOL;
+       // echo 'All done successfully, saying goodbye...';
+       // echo PHP_EOL;
+       header("Location: ../dashboard-uploaditem#SucessTheme");
+       exit;
      } else {
        //redirect with failed
-       echo 'Failed to insert theme';
-       echo PHP_EOL;
+       // echo 'Failed to insert theme';
+       // echo PHP_EOL;
        handle_msyql_error($conn);
+       header("Location: ../dashboard-uploaditem#ERRORInsert");
+       exit;
      }
 
    }else {
@@ -185,5 +200,7 @@ if(empty($_POST)) { // not exist post
 
 }else {
   // redirect with error
-  echo "erro2";
+  // echo "erro2";
+  header("Location: ../dashboard-uploaditem#ERRORSend");
+  exit;
 }
