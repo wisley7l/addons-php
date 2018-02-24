@@ -83,7 +83,7 @@ else {
     //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
     }
     else {
-      header("Location: ../#SUCESSOLOGIN");
+      header("Location: ../#SUCESSLOGIN");
       //header("Location: ../?SUCCESSLOGIN");
       exit;
     }

@@ -21,7 +21,7 @@ $("#addons-button-save").click(function(event){
   $("#addons-up-pass").val(pass);
   $("#addons-up-rp-pass").val(rp_pass);
   // just accept "submit" if the passwords is "ok"
-  if(pass == rp_pass){
+  if(pass == rp_pass && pass != md5('')){
   $("#addons-up-partner").submit();
   }
   event.preventDefault();
