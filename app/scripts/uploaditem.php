@@ -78,7 +78,7 @@ if(empty($_POST)) { // not exist post
          array_push($categories, $var); // if not, let's add id in array
        }
      }
-     var_dump($categories);
+     // var_dump($categories);
    }else { // print error, if does not satisfy condition of categories
      // redirect dashboard-uploaditem?error=category
      //echo "erro category";
@@ -109,7 +109,7 @@ if(empty($_POST)) { // not exist post
          header("Location: ../dashboard-uploaditem#ERRORModule");
          exit;
        }
-       echo $module_type;
+       // echo $module_type;
      }else {
        $module_type = NULL;
      }
@@ -149,7 +149,7 @@ if(empty($_POST)) { // not exist post
        //redirect with failed
        // echo 'Failed to insert app';
        // echo PHP_EOL;
-       handle_msyql_error($conn);
+       // handle_msyql_error($conn);
        header("Location: ../dashboard-uploaditem#ERRORInsert");
        exit;
      }
