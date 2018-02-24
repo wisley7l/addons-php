@@ -72,7 +72,7 @@ else {
     session_id($id);
     session_start();
     $_SESSION['user_id'] = 1;
-    $_SESSION['user_name'] = $user; // get via API
+    $_SESSION['user_name'] = $email; // get via API
     $_SESSION['name'] = 'User-Login'; // get via API
     $_SESSION['login'] = true;
     $_SESSION['is_store'] = false;
@@ -83,7 +83,7 @@ else {
     //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
     }
     else {
-      header("Location: ../");
+      header("Location: ../#SUCESSOLOGIN");
       //header("Location: ../?SUCCESSLOGIN");
       exit;
     }
