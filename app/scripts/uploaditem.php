@@ -189,7 +189,7 @@ if(empty($_POST)) { // not exist post
        //redirect with failed
        // echo 'Failed to insert theme';
        // echo PHP_EOL;
-       handle_msyql_error($conn);
+       // handle_msyql_error($conn);l
        header("Location: ../dashboard-uploaditem#ERRORInsert");
        exit;
      }
