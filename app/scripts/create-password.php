@@ -10,6 +10,10 @@ if (mysqli_connect_errno()) {
   exit();
 }
 */
+if (isset($_SESSION)){
+  header("Location: ../error-page#login");
+  exit;
+}
 // TODO: treat login redirect index
 if (empty($_POST)) {
   // error redirect index
@@ -48,26 +52,6 @@ if (empty($_POST)) {
     // create login
   }
   */
-  # Our new data
-  $data = array(
-      'user' => $email,
-      'pass' => $_POST['pass']
-  );
-  # Form data string
-  $postString = http_build_query($data, '', '&');
-  # Get the URL
-  $url = $_SERVER['SERVER_NAME'] . '/scripts/login';
-  echo $postString;
-  echo PHP_EOL;
-  echo $url;
-  $defaults = array(
-    CURLOPT_URL => $url,
-    CURLOPT_POST => true,
-    CURLOPT_POSTFIELDS => $postString,
-  );
-  $ch = curl_init();
-  $r = curl_setopt_array($ch, ($options + $defaults));
-  echo $r;
 
 }else {
   // error redirect for index
