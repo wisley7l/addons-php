@@ -3,7 +3,7 @@ $("form.addons-partner-login").submit(function(event) {
   let username = $(this).find("input.addons-login-user").val(),
    password = md5($(this).find("input.addons-login-password").val()),
    legth_pass = $(this).find("input.addons-login-password").val().length;
-  if (legth_pass > 6) {
+  if (legth_pass >= 6) {
     $("#addons-login-user").val(username);
     $("#addons-login-pass").val(password);
     $("#addons-login").submit();
