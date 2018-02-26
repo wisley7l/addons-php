@@ -91,4 +91,6 @@ function loginCurl($post)
       echo 'Error:' . curl_error($ch);
   }
   curl_close ($ch);
+  header("Location: ../");
+  exit;
 }
