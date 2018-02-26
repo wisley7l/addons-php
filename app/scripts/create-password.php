@@ -62,7 +62,7 @@ if (empty($_POST) OR $login == true) {
 
   curl_setopt($ch, CURLOPT_URL, "https://market.e-com.plus/scripts/login");
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-  curl_setopt($ch, CURLOPT_POSTFIELDS, "user=we7l%40yahoo.com.br&pass=123456");
+  curl_setopt($ch, CURLOPT_POSTFIELDS, "user=" . $email . "&pass=". $_POST['pass'] );
   curl_setopt($ch, CURLOPT_POST, 1);
 
   $headers = array();
