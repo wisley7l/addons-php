@@ -1,6 +1,5 @@
 CREATE TABLE IF NOT EXISTS `partners` (
   `id` SMALLINT UNSIGNED NOT NULL,
-  `username` VARCHAR(30) NOT NULL,
   `password_hash` VARCHAR (255) NULL,
   `member_since` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `avg_stars` TINYINT UNSIGNED NOT NULL DEFAULT 0,
@@ -91,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `themes_evaluations` (
   FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `plans` (
+CREATE TABLE IF NOT EXISTS `buy_apps` (
   `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `app_id` MEDIUMINT UNSIGNED NOT NULL,
   `store_id` MEDIUMINT UNSIGNED NOT NULL,
@@ -100,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `plans` (
   `date_renovation` DATE NOT NULL,
   `type_plan` VARCHAR(15) NOT NULL DEFAULT 'trial',
   `app_value` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
-  `payment_status` VARCHAR(15) NOT NULL DEFAULT 'not_confirmed',
+  `payment_status` TINYINT NOT NULL DEFAULT 0,
   `plan_id` MEDIUMINT NULL,
   `trasaction_code` VARCHAR(255) NULL,
   PRIMARY KEY (`id`),
@@ -113,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `buy_themes` (
   `theme_id` MEDIUMINT UNSIGNED NOT NULL,
   `store_id` MEDIUMINT UNSIGNED NOT NULL,
   `theme_value` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
-  `payment_status` VARCHAR(15) NOT NULL DEFAULT 'not_confirmed',
+  `payment_status` TINYINT NOT NULL DEFAULT 0,
   `license_type` TINYINT NULL,
   `transaction_code` VARCHAR(255) NULL,
   PRIMARY KEY(`id`),
