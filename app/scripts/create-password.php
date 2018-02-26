@@ -53,13 +53,12 @@ if (empty($_POST)) {
       'user' => $email,
       'pass' => $_POST['pass']
   );
-  echo $_SERVER['SERVER_NAME'];
   # Form data string
-  //$postString = http_build_query($data, '', '&');
+  $postString = http_build_query($data, '', '&');
   # Get the URL
-  //$url = '/scritps/login';
+  $url = $_SERVER['SERVER_NAME'] . '/scritps/login';
   # Get response
-  //$response = http_post_data($url, $postString);
+  $response = http_post_data($url, $postString);
 
 }else {
   // error redirect for index
