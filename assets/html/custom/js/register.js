@@ -36,14 +36,12 @@ $('form#addons-form-password').submit(function(event){
             "\n e-mail: " + $('#addons-register-user').val() + "\n Confirm ? ";
     decision = confirm("Your informations " + information );
 
-    if (decision){
+    if (decision){ // click ok
     $('form#addons-register').submit();
     } else {
+      // click cancel
     location.reload();
     }
-
-
-
   }
   event.preventDefault();
 });
