@@ -48,6 +48,18 @@ if (empty($_POST)) {
     // create login
   }
   */
+  # Our new data
+  $data = array(
+      'user' => $email,
+      'pass' => $_POST['pass']
+  );
+  echo $_SERVER['SERVER_NAME'];
+  # Form data string
+  //$postString = http_build_query($data, '', '&');
+  # Get the URL
+  //$url = '/scritps/login';
+  # Get response
+  //$response = http_post_data($url, $postString);
 
 }else {
   // error redirect for index
