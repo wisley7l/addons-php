@@ -64,7 +64,7 @@ echo $email;
 $user = array(
   //'id' => $id_partner,
   'id' => 1,// test
-  'name' => '',
+  'name' => 'USER',
   'username' => $email
 );
 
