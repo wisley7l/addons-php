@@ -41,7 +41,7 @@ function getUserAPI($email)
   }else {
     // partner has no pre-registration
     //echo "partner has no pre-registration";
-    # error redirect index
+    # error redirect index TODO:
     // header("Location: /index#usernotfound");
     // exit;
   }

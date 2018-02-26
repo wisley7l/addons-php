@@ -9,14 +9,14 @@ $login = false;
 
 if (!empty($_POST['email'])) {
   $email = $_POST['email'];
-  $id_partner = getUserAPI($email);
+  $id_partner = (int) getUserAPI($email);
   echo PHP_EOL;
   echo $id_partner;
   echo PHP_EOL;
   echo $email;
 }else {
   # error redirect index
-  header("Location: /index#errorregister");
+  header("Location: /index#registererror");
   exit;
 }
 
