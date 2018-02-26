@@ -7,8 +7,8 @@ $login = false;
 // TODO: treat login
 // TODO: get the user name to treat the view
 
-if (!empty($_POST['user'])) {
-  $email = $_POST['user'];
+if (!empty($_POST['email'])) {
+  $email = $_POST['email'];
   /*
   // get in API
   $ch = curl_init();
