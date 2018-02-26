@@ -8,14 +8,12 @@ $('form.addons-partner-create-pass').submit(function(event){
   let $form = $(this),
     email = $form.find('#email_register').val();
     console.log(email.length);
-    if (email.length > 0 && email != 'undefined') {
-      console.log('aqui');
+    if (email != '' && email != 'undefined') {
       $("#addons-email-user").val(email);
       //$("#addons-create-pass").submit();
     }
     else {
-      console.log("vazio");
-      //email-send
+      alert("Error E-mail!")
       $("#email-send").css( "color", "red");
     }
 
