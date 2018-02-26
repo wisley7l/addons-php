@@ -109,7 +109,6 @@ $("#rm-category").click(function(event){
 
 //click the button add category
 $("#add-plan").click(function(event){
-  num_plan += 1;
 
   let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
   // check it's an app or theme
