@@ -12,7 +12,7 @@ $('form.addons-partner-create-pass').submit(function(event){
       $("#addons-email-user").val(email);
       //$("#addons-create-pass").submit();
     }
-    else if (email == '') {
+    else {
       console.log("vazio");
       //email-send
       $("#email-send").css( "color", "red");
