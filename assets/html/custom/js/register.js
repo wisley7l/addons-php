@@ -33,7 +33,7 @@ $('form#addons-form-password').submit(function(event){
     // TODO: send password save bd
     $('#addons-register-pass').val(pass);
     information = "\n id: " + $('addons-register-id').val() +
-            "e-mail: " + $('addons-register-user').val() + "\n Confirm ? ";
+            "e-mail: " + $('addons-register-pass').val() + "\n Confirm ? ";
     decisao = confirm("YOUR information " + information );
     /*
     addons-register-id
