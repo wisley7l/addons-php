@@ -10,6 +10,11 @@ $login = false;
 if (!empty($_POST['email'])) {
   $email = $_POST['email'];
   $id_partner = getUserAPI($email);
+  if ($id_partner == false) {
+    echo "False";
+  }else {
+    echo "true";
+  }
   echo PHP_EOL;
   echo $id_partner;
   echo PHP_EOL;
