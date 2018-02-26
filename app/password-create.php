@@ -12,9 +12,15 @@ if (!empty($_POST['email'])) {
   $id_partner = getUserAPI($email);
   if ($id_partner == false) {
     echo "False";
+    if ($id_partner == 0) {
+      echo "ZERO";
+    }else {
+      echo "null";
+    }
   }else {
     echo "true";
   }
+
   echo PHP_EOL;
   echo $id_partner;
   echo PHP_EOL;
