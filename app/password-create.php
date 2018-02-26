@@ -62,7 +62,8 @@ echo $email;
 }
 
 $user = array(
-  'id' => $id_partner,
+  //'id' => $id_partner,
+  'id' => 1,// test
   'name' => '',
   'username' => $email
 );

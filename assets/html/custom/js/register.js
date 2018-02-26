@@ -18,9 +18,10 @@ $('form.addons-partner-create-pass').submit(function(event){
 $('form#addons-form-password').submit(function(event){
   let $div = $("div#addons-form-pass"),
       pass = md5($div.find("input.addons-pass").val()),
+      legth_pass = $div.find("input.addons-pass").val().length;
       rp_pass = md5($div.find("input.addons-rp-pass").val()),
       test = $div.find("input.addons-pass").val();
-  if(pass != rp_pass || pass == md5('undefined') || pass == md5('')){
+  if(pass != rp_pass || pass == md5('undefined') || pass == md5('') || (legth_pass < 6)){
     //If the confirmation password and password are different, activate "span"
     $div.find("span.pass-p").css( "color", "red");
     $div.find("span.rp-pass-p").css( "color", "red");
