@@ -27,13 +27,13 @@ if (empty($_POST)) {
   $email = $_POST['user'];
   $id = (int)$_POST['id'];
   //TODO:
-
+  /*
   if ($id != (int) getUserAPI($email)) {
     // redirect index error PASSWORD
     header("Location: /index#errorpartnerid");
     exit;
   }
-
+  */
   $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
   // TODO: insert table partner, escape id and pass
   /*
