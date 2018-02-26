@@ -70,10 +70,6 @@ if (empty($_POST) OR $login == true) {
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
   $result = curl_exec($ch);
-  if (curl_errno($ch)) {
-      echo 'Error:' . curl_error($ch);
-  }
-  curl_close ($ch);
   header("Location: ../");
   exit;
 
