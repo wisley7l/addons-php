@@ -100,7 +100,7 @@ function createLogin($id_user,$pass,$email)
   $image = '';
   $credits = 1000.00;
 
-  if (!isset($_SESSION)){
+  if ($login == false ){
     createSession($id,$email,$name,$credits,$image);
   }
   else {
