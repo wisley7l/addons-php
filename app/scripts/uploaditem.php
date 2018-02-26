@@ -150,7 +150,7 @@ if(empty($_POST)) { // not exist post
        // echo 'Failed to insert app';
        // echo PHP_EOL;
        // handle_msyql_error($conn);
-       header("Location: ../dashboard-uploaditem#ERRORInsert");
+       header("Location: ../dashboard-uploaditem#ERRORInsertAPP");
        exit;
      }
 

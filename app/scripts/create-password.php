@@ -18,7 +18,7 @@ if (empty($_POST)) {
 }
 else if (!empty($_POST['email'])) {
   $email = $_POST['email'];
-  echo $email;
+  // echo $email;
   // get in API
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, 'https://e-com.plus/api/v1/partners.json?email='. $email);
@@ -50,6 +50,7 @@ else if (!empty($_POST['email'])) {
 
     if (mysqli_query(  $conn, $query )) {
       // message error (partner already has password)
+      // redirect #Exists Register
     }else {
       // request password
       // TODO:
@@ -63,12 +64,12 @@ else if (!empty($_POST['email'])) {
     echo "partner has no pre-registration";
   }
 
-}else if(!empty($_POST['id'])){
-  echo "id: ";
-  echo $_POST['id'];
-  echo "\n";
-  echo "Pass: ";
-  echo $_POST['pass'];
+}else if(!empty($_POST['id']) AND !empty($_POST['pass']) ){
+  // echo "id: ";
+  // echo $_POST['id'];
+  // echo "\n";
+  // echo "Pass: ";
+  // echo $_POST['pass'];
   $id = (int)$_POST['id'];
   $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
   // TODO: insert table partner, escape id and pass
