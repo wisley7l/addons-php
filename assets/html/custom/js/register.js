@@ -33,20 +33,13 @@ $('form#addons-form-password').submit(function(event){
     // TODO: send password save bd
     $('#addons-register-pass').val(pass);
     information = "\n id: " + $('#addons-register-id').val() +
-            "e-mail: " + $('#addons-register-user').val() + "\n Confirm ? ";
-    decisao = confirm("YOUR information " + information );
-    /*
-    addons-register-id
-    addons-register-user
-    */
+            "\n e-mail: " + $('#addons-register-user').val() + "\n Confirm ? ";
+    decision = confirm("Your informations " + information );
 
-    if (decisao){
-    alert ("Você clicou no botão OK,\n"+
-    "porque foi retornado o valor: "+decisao);
+    if (decision){
     $('form#addons-register').submit();
     } else {
-    alert ("Você clicou no botão CANCELAR,\n"+
-    "porque foi retornado o valor: "+decisao);
+    location.reload();
     }
 
 
