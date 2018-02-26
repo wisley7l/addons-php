@@ -10,8 +10,13 @@ if (mysqli_connect_errno()) {
   exit();
 }
 */
-if (isset($_SESSION)){
-  header("Location: ../error-page#login");
+//(init) * Required on all pages *
+// close writing session, if it exists and intal session
+session_write_close();
+session_start();
+// if the session exists
+if (isset($_SESSION)) {
+  header("Location: ../index#errorcreate");
   exit;
 }
 // TODO: treat login redirect index
