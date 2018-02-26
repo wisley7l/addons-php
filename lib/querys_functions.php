@@ -13,7 +13,7 @@ function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
       'name' => $name_app,
       'id_partner' => $id_partner,
       'name_partner' => $name_partner,
-      'value' => $value_app / $dictionary['mult_coin'], // value of the item multiplied by the currency of the country
+      'value' => $value_app, // value of the item multiplied by the currency of the country
       'star_on' => 0, // not implemented
       'star_off' => 0, // not implemented
       'image' => $image_app, // app image path

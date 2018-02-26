@@ -14,7 +14,6 @@ function get_dictionary () {
   $description_community = 'Confira a avaliação de outros lojistas sobre os apps ou temas comprados. ';
   $word_mkp_quality = 'Personalize ';
   $description_mkp_quality = 'De forma prática e com um preço acessível, deixe sua loja com sua cara! ';
-  $mult_coin = 1;
   */
   // obs: treat language
   switch ($_SERVER['PATH_LANG']) {
@@ -49,8 +48,6 @@ function get_dictionary () {
       $word_mkp_quality = 'Customize ';
       $description_mkp_quality = 'Practically and affordably, leave your store with your face! ';
       $word_how_works = 'How it works';
-      $coin = 'US';
-      $mult_coin = 3;
       $word_apps_store = 'Apps Stores';
       $word_items_found = 'Items found';
       $word_price  = 'Price';
@@ -168,8 +165,6 @@ function get_dictionary () {
       $word_mkp_quality = 'Personalize ';
       $description_mkp_quality = 'De forma prática e com um preço acessível, deixe sua loja com sua cara! ';
       $word_how_works = 'Como funciona ';
-      $coin = 'R';
-      $mult_coin = 1;
       $word_apps_store = 'Loja de Apps';
       $word_items_found = 'Items encontrados';
       $word_price  = 'Preço';
@@ -296,8 +291,7 @@ function get_dictionary () {
     'word_mkp_quality' => $word_mkp_quality,
     'word_how_works' => $word_how_works,
     'path_images' => $path_images,
-    'coin' => $coin,
-    'mult_coin' => $mult_coin,
+    'coin' => 'R',
     'word_apps_store' => $word_apps_store,
     'word_items_found' => $word_items_found,
     'word_price' => $word_price,
