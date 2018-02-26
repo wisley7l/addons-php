@@ -11,7 +11,9 @@ if (!empty($_GET['id']) AND !empty($_GET['user'])) {
   $id = (int)$_GET['id'];
   $email = $_GET['user'];
   echo PHP_EOL;
-  echo "$id";
+  echo $id;
+  echo PHP_EOL;
+  echo $email;
 }else {
   # error redirect index
   header("Location: /index#ErrorRegister");
