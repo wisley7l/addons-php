@@ -31,9 +31,8 @@ $('form#addons-form-password').submit(function(event){
     $div.find("span.rp-pass-p").css( "color", "black");
     // TODO: send password save bd
     $('#addons-register-pass').val(pass);
-    $('form#addons-register').submit(function() {
-      alert("t");
-    });
+    $('form#addons-register').submit();
+    alert('t');
   }
   event.preventDefault();
 });
