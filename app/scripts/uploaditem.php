@@ -21,7 +21,7 @@ if (mysqli_connect_errno()) {
   exit();
 }
 */
-//header('Content-Type: text/html; charset=utf-8');
+////header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $login = false;
 
@@ -39,7 +39,7 @@ if (isset($_SESSION)) {
   $user_login = getUserLogin($dictionary);
 }
 if ($login == false) { // if not connected
-  header("Location: ../#ERRORLOGIN");
+  //header("Location: ../#ERRORLOGIN");
   exit;
 }
 // var_dump($_POST);
@@ -48,7 +48,7 @@ $id_partner = $_SESSION['user_id'];
 
 if(empty($_POST)) { // not exist post
   //echo "error post";
-  header("Location: ../dashboard-uploaditem#ERRORSend");
+  //header("Location: ../dashboard-uploaditem#ERRORSend");
   exit;
 } else if ((int) $_POST['is_app'] == 0 OR (int) $_POST['is_app'] == 1)  {
   // obs: capture id partner
@@ -66,7 +66,7 @@ if(empty($_POST)) { // not exist post
   $module_type = $_POST['module_app']; // treat only type_app == 3 // only app
   $authentication = (int) $_POST['authentication']; // treat 0 or 1 // only app // if authentication != 1 or 0 error
   $category = json_decode($categories,true); // if (int) category['total'] <= 0  error
-   //var_dump($_POST);
+   var_dump($_POST);
 
    // treat category
    $categories = array();
@@ -82,7 +82,7 @@ if(empty($_POST)) { // not exist post
    }else { // print error, if does not satisfy condition of categories
      // redirect dashboard-uploaditem?error=category
      //echo "erro category";
-     header("Location: ../dashboard-uploaditem#ERRORCategories");
+     //header("Location: ../dashboard-uploaditem#ERRORCategories");
      exit;
    }
 
@@ -95,7 +95,7 @@ if(empty($_POST)) { // not exist post
        // print error authentication or type app
        // redirect dashboard-uploaditem?error=authetication
        echo "error authetication or type app";
-       header("Location: ../dashboard-uploaditem#ERRORAuthORType");
+       //header("Location: ../dashboard-uploaditem#ERRORAuthORType");
        exit;
      }
      echo $authetication;
@@ -106,7 +106,7 @@ if(empty($_POST)) { // not exist post
          // print erro module_type
          // redirect dashboard-uploaditem?error=module_type
          //echo "erro module_type";
-         header("Location: ../dashboard-uploaditem#ERRORModule");
+         //header("Location: ../dashboard-uploaditem#ERRORModule");
          exit;
        }
        // echo $module_type;
@@ -143,14 +143,14 @@ if(empty($_POST)) { // not exist post
        // echo PHP_EOL;
        // echo 'All done successfully, saying goodbye...';
        // echo PHP_EOL;
-       header("Location: ../dashboard-uploaditem#SucessApp");
+       //header("Location: ../dashboard-uploaditem#SucessApp");
        exit;
      } else {
        //redirect with failed
        // echo 'Failed to insert app';
        // echo PHP_EOL;
        // handle_msyql_error($conn);
-       header("Location: ../dashboard-uploaditem#ERRORInsertAPP");
+       //header("Location: ../dashboard-uploaditem#ERRORInsertAPP");
        exit;
      }
 
@@ -183,14 +183,14 @@ if(empty($_POST)) { // not exist post
        // echo PHP_EOL;
        // echo 'All done successfully, saying goodbye...';
        // echo PHP_EOL;
-       header("Location: ../dashboard-uploaditem#SucessTheme");
+       //header("Location: ../dashboard-uploaditem#SucessTheme");
        exit;
      } else {
        //redirect with failed
        // echo 'Failed to insert theme';
        // echo PHP_EOL;
        // handle_msyql_error($conn);l
-       header("Location: ../dashboard-uploaditem#ERRORInsert");
+       //header("Location: ../dashboard-uploaditem#ERRORInsert");
        exit;
      }
 
@@ -201,6 +201,6 @@ if(empty($_POST)) { // not exist post
 }else {
   // redirect with error
   // echo "erro2";
-  header("Location: ../dashboard-uploaditem#ERRORSend");
+  //header("Location: ../dashboard-uploaditem#ERRORSend");
   exit;
 }
