@@ -128,7 +128,7 @@ $("#add-plan").click(function(event){
     }
     // for (var i = 1; i <= num; i++) { // displays (select) categories up to the value added
     //   $("div#cat-theme-"+i).attr('style','display:block;');
-    }
+    // }
   }
   console.log(num_plan);
   event.preventDefault();
