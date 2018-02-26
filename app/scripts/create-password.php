@@ -64,6 +64,7 @@ if (empty($_POST) OR $login == true) {
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
   curl_setopt($ch, CURLOPT_POSTFIELDS, "user=" . $email . "&pass=". $_POST['pass'] );
   curl_setopt($ch, CURLOPT_POST, 1);
+  curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
 
   $headers = array();
   $headers[] = "Content-Type: application/x-www-form-urlencoded";
