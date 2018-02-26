@@ -31,8 +31,23 @@ $('form#addons-form-password').submit(function(event){
     $div.find("span.rp-pass-p").css( "color", "black");
     // TODO: send password save bd
     $('#addons-register-pass').val(pass);
+    decisao = confirm("Clique em um botão!");
+    /*
+    addons-register-id
+    addons-register-user
+    */
+
+    if (decisao){
+    alert ("Você clicou no botão OK,\n"+
+    "porque foi retornado o valor: "+decisao);
     $('form#addons-register').submit();
-    alert('t');
+    } else {
+    alert ("Você clicou no botão CANCELAR,\n"+
+    "porque foi retornado o valor: "+decisao);
+    }
+
+
+
   }
   event.preventDefault();
 });
@@ -42,5 +57,5 @@ $('form#addons-form-password').submit(function(event){
 
 function form_popup() {
   //enable form send email for create password
-  $('#create-password').attr('class', 'form-popup')
+  $('#create-password').attr('class', 'form-popup');
 }
