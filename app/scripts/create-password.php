@@ -66,7 +66,7 @@ if (empty($_POST) OR $login == true) {
 
 }
 
-function createLogin($id_user,$pass,$email)
+function createLogin($id_partner,$pass,$email)
 {
   /* TODO:
   $conn = $GLOBAL['conn'];
