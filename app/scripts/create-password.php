@@ -10,14 +10,7 @@ if (mysqli_connect_errno()) {
   exit();
 }
 */
-// close writing session, if it exists and intal session
-session_write_close();
-session_start();
-// if the session exists
-if (isset($_SESSION)) {
-  header("Location: ../index#errorcreate");
-  exit;
-}
+
 // TODO: treat login redirect index
 if (empty($_POST)) {
   // error redirect index
