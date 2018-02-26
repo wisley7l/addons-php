@@ -62,7 +62,7 @@ if (empty($_POST) OR $login == true) {
       'pass' => $_POST['pass']
   );
   $postString = http_build_query($data, '', '&');
-  //loginCurl($postString);
+  loginCurl($postString);
 
 }else {
   // error redirect for index
