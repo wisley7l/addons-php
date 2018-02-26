@@ -33,7 +33,8 @@ function getUserAPI($email)
     if (mysqli_query(  $conn, $query )) {
       // message error (partner already has password)
       // redirect #Exists Register
-      return 0;
+      header("Location: /index#existsregister");
+      exit;
     }
     */
     return $id_partner;
@@ -41,7 +42,7 @@ function getUserAPI($email)
     // partner has no pre-registration
     //echo "partner has no pre-registration";
     # error redirect index
-    header("Location: /index#ErrorRegister");
+    header("Location: /index#usernotfound");
     exit;
   }
 }
