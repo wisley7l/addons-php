@@ -7,19 +7,21 @@ $login = false;
 // TODO: treat login
 // TODO: get the user name to treat the view
 
-if (!empty($_GET['id'])) {
+if (!empty($_GET['id']) AND !empty($_GET['user'])) {
   $id = (int)$_GET['id'];
+  $email = $_GET['user'];
   echo PHP_EOL;
   echo "$id";
 }else {
   # error redirect index
-  header("Location: index");
+  header("Location: /index#ErrorRegister");
   exit;
 }
 
 $user = array(
   'id' => $id,
   'name' => '',
+  'username' => $email
 );
 
 // intial twig and send varibles for template

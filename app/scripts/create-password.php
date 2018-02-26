@@ -55,7 +55,7 @@ else if (!empty($_POST['email'])) {
       // request password
       // TODO:
       // redirect to registration page
-      header("Location: ../password-create?id=$id_partner");
+      header("Location: ../password-create?id=$id_partner?user=$email");
       exit;
     }
     //*/
@@ -64,12 +64,13 @@ else if (!empty($_POST['email'])) {
     echo "partner has no pre-registration";
   }
 
-}else if(!empty($_POST['id']) AND !empty($_POST['pass']) ){
+}else if(!empty($_POST['id']) AND !empty($_POST['pass']) AND $_POST['user'] ){
   // echo "id: ";
   // echo $_POST['id'];
   // echo "\n";
   // echo "Pass: ";
   // echo $_POST['pass'];
+  $email = $_POST['user'];
   $id = (int)$_POST['id'];
   $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
   // TODO: insert table partner, escape id and pass
