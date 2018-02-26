@@ -56,7 +56,7 @@ if (empty($_POST)) {
   # Form data string
   $postString = http_build_query($data, '', '&');
   # Get the URL
-  $url = $_SERVER['SERVER_NAME'] . '/scritps/login';
+  $url = $_SERVER['SERVER_NAME'] . '/scripts/login';
   echo $postString;
   echo PHP_EOL;
   echo $url;
