@@ -65,11 +65,14 @@ else if (!empty($_POST['email'])) {
   }
 
 }else if(!empty($_POST['id']) AND !empty($_POST['pass']) AND $_POST['user'] ){
-  // echo "id: ";
-  // echo $_POST['id'];
-  // echo "\n";
-  // echo "Pass: ";
-  // echo $_POST['pass'];
+  echo "id: ";
+  echo $_POST['id'];
+  echo "\n";
+  echo "Pass: ";
+  echo $_POST['pass'];
+  echo "\n";
+  echo "User: ";
+  echo $_POST['user'];
   $email = $_POST['user'];
   $id = (int)$_POST['id'];
   $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
