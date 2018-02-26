@@ -1,4 +1,5 @@
 <?php
+$login = false;
 /* TODO:
 // create connection to the database
 $conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
@@ -10,11 +11,17 @@ if (mysqli_connect_errno()) {
   exit();
 }
 */
-
+// close writing session, if it exists and intal session
+session_write_close();
+session_start();
+// if the session exists
+if (isset($_SESSION)) {
+  $login = $_SESSION['login'];
+}
 // TODO: treat login redirect index
-if (empty($_POST)) {
+if (empty($_POST) OR $login == true) {
   // error redirect index
-  header("Location: ../index");
+  header("Location: ../index#errorcreate");
   exit;
 }else if(!empty($_POST['id']) AND !empty($_POST['pass']) AND !empty($_POST['user']) ){
   echo "id: ";
