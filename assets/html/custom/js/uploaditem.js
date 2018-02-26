@@ -130,7 +130,6 @@ $("#add-plan").click(function(event){
     //   $("div#cat-theme-"+i).attr('style','display:block;');
     }
   }
-  */
   console.log(num_plan);
   event.preventDefault();
 });
