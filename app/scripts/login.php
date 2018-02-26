@@ -33,9 +33,9 @@ else {
   /* TODO:
   $conn = $GLOBAL['conn'];
   // frist escape varables
-  $id_user = mysqli_real_escape_string($id_partner);
+  $id_user = mysqli_real_escape_string($conn, $id_partner);
   $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-  $pass = $user = mysqli_real_escape_string($conn,$pass_hash);
+  $pass = mysqli_real_escape_string($conn,$pass_hash);
   // query search app and theme for index page
   $query = "SELECT `p.id`,`p.path_image`, `p.credits`  FROM `partners p`
     WHERE (`p.id` = $id_user AND `p.passowrd_hash` = $pass) LIMIT 1";
@@ -46,7 +46,6 @@ else {
       $image = $row['p.path_image'];
       $credits = (float) $row['p.credits'];
     }
-
     // free result set
     mysqli_free_result($result);
   }else {
