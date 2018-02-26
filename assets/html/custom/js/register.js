@@ -8,7 +8,7 @@ $('form.addons-partner-create-pass').submit(function(event){
   let $form = $(this),
     email = $form.find('#email_register').val();
     console.log(email.length);
-    if (email != '' || email != 'undefined') {
+    if (email.length != 0 || email != 'undefined') {
       $("#addons-email-user").val(email);
       //$("#addons-create-pass").submit();
     }
