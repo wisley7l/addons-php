@@ -59,6 +59,7 @@ if (empty($_POST)) {
   $url = $_SERVER['SERVER_NAME'] . '/scritps/login';
   # Get response
   $response = http_post_data($url, $postString);
+  echo $response;
 
 }else {
   // error redirect for index
