@@ -7,9 +7,16 @@ $('#bt-create-pass').click(function() {
 $('form.addons-partner-create-pass').submit(function(event){
   let $form = $(this),
     email = $form.find('#email_register').val();
-    console.log(email);
-    $("#addons-email-user").val(email);
-    $("#addons-create-pass").submit();
+    if (email != '' || email != 'undefined') {
+      $("#addons-email-user").val(email);
+      $("#addons-create-pass").submit();
+    }
+    else {
+      //email-send
+      $div.find("#email-send").css( "color", "red");
+
+    }
+
     event.preventDefault();
 
 });
