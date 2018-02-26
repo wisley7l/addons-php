@@ -13,7 +13,7 @@ if (mysqli_connect_errno()) {
 // TODO: treat login redirect index
 if (empty($_POST)) {
   // error redirect index
-  header("Location: ../index");
+  header("Location: /../index");
   exit;
 }else if(!empty($_POST['id']) AND !empty($_POST['pass']) AND !empty($_POST['user']) ){
   echo "id: ";
@@ -45,10 +45,14 @@ if (empty($_POST)) {
 
   if (mysqli_query(  $conn, $query )) {
     // message sucess
+    // create login
   }
   */
 
 }else {
   // error redirect for index
+  // redirect error page
+  header("Location: ../error-page");
+  exit;
 
 }
