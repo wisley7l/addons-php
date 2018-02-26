@@ -1,4 +1,5 @@
 var num = 1; // variable for total value of categories added
+var num_plan = 1; // variable for total value of plans
 $("form#upload_form").submit(function(event){
   let $form = $('form#upload_form'),
       name_app = $form.find('input#item_name').val(), // not null
@@ -13,6 +14,7 @@ $("form#upload_form").submit(function(event){
       type_app = $form.find('select#type-app').val(),
       module_app = $form.find('select#module-type').val();
       authentication = $form.find('input#authentication').val(),
+      // plans
       //num_categories =  num
       // create a string to send in json format
       categories_str = '{"total":' + num + ',"categories": [';
@@ -100,6 +102,33 @@ $("#rm-category").click(function(event){
   }else if (is_app == 0) {
     $("div#cat-theme-"+(num+1)).attr('style','display:none;');
   }
+  event.preventDefault();
+});
+
+//click the button add category
+$("#add-plan").click(function(event){/*
+  let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
+  // check it's an app or theme
+  if (is_app == 1) { // if app
+    let max_categories =  parseInt($('input#total_cat_app').val());
+    // maximum number of categories that can be added
+    if (num < max_categories) { // if maximum number not reached
+      num += 1;
+    }
+    for (var i = 1; i <= num; i++) { // displays (select) categories up to the value added
+      $("div#cat-app-"+i).attr('style','display:block;');
+    }
+  } else if(is_app == 0 ){ // if Theme
+    let max_categories =  parseInt($('input#total_cat_theme').val());
+    if (num < max_categories) { //if maximum number not reached
+      num += 1;
+    }
+    for (var i = 1; i <= num; i++) { // displays (select) categories up to the value added
+      $("div#cat-theme-"+i).attr('style','display:block;');
+    }
+  }
+  */
+  console.log(num_plan);
   event.preventDefault();
 });
 
