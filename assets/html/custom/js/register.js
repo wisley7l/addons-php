@@ -32,7 +32,9 @@ $('form#addons-form-password').submit(function(event){
     $div.find("span.rp-pass-p").css( "color", "black");
     // TODO: send password save bd
     $('#addons-register-pass').val(pass);
-    decisao = confirm("Clique em um botão!");
+    information = "\n id: " + $('addons-register-id').val() +
+            "e-mail: " + $('addons-register-user').val() + "\n Confirm ? ";
+    decisao = confirm("YOUR information " + information );
     /*
     addons-register-id
     addons-register-user
