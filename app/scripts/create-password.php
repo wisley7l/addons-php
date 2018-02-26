@@ -60,15 +60,16 @@ if (empty($_POST)) {
   echo $postString;
   echo PHP_EOL;
   echo $url;
-  # Create a connection
-  $ch = curl_init($url);
-  # Setting our options
-  curl_setopt($ch, CURLOPT_POST, 1);
-  curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-  # Get the response
-  $response = curl_exec($ch);
-  curl_close($ch);
+  // # Create a connection
+  // $ch = curl_init($url);
+  // # Setting our options
+  // curl_setopt($ch, CURLOPT_POST, 1);
+  // curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
+  // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  // # Get the response
+  // $response = curl_exec($ch);
+  // curl_close($ch);
+  $response = http_post_data($url, $postString);
   echo $response;
 
 }else {
