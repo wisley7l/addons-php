@@ -43,7 +43,7 @@ function getUserAPI($email)
     # error redirect index
     // header("Location: /index#ErrorRegister");
     // exit;
-    return false;
+    return 0;
   }
 }
 //
