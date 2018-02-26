@@ -70,31 +70,6 @@ else {
   }
 }
 
-function createSession($id,$email,$name,$credits,$image)
-{
-  if ($image == '' || $image == NULL) {
-    $image = 'https://www.ocf.berkeley.edu/~dblab/blog/wp-content/uploads/2012/01/icon-profile.png';
-  }
-
-  session_id($id);
-  session_start();
-  $_SESSION['user_id'] = (int) $id;
-  $_SESSION['user_name'] = $email; // get via API
-  $_SESSION['name'] = $name; // get via API
-  $_SESSION['login'] = true;
-  $_SESSION['is_store'] = false;
-  $_SESSION['credits'] = (float) $credits; // get via DB
-  $_SESSION['path_image'] = $image; // Get via DB
-  if (!is_writable(session_save_path())) {
-  //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
-  }
-  else {
-    header("Location: ../#sucesslogin");
-    exit;
-  }
-}
-
-
 function getUserAPIid($email)
 {
 
