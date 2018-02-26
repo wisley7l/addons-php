@@ -41,9 +41,8 @@ function getUserAPI($email)
     // partner has no pre-registration
     //echo "partner has no pre-registration";
     # error redirect index
-    // header("Location: /index#ErrorRegister");
-    // exit;
-    return "error";
+    header("Location: /index#ErrorRegister");
+    exit;
   }
 }
 //
