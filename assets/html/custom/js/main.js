@@ -9,7 +9,7 @@ $("form.addons-partner-login").submit(function(event) {
     $("#addons-login").submit();
   }
   else {
-    $("label#addons-login-user").css( "color", "red");
+    $("label#addons-login-pass").css( "color", "red");
   }
   event.preventDefault();
 });
