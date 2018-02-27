@@ -29,11 +29,16 @@ $("form#upload_form").submit(function(event){
       categories_str += "]}";
       // treat plans
       plans_str = '{"total":'+ num_plan + ',"plans": [';
+      var price_item;
 
       for (var i = 1; i <= num_plan  ; i++) {
+        price_item = parseFloat($('input#item_value-'+i).val());
+        if (price_item != 0) {
+          console.log('0');
+        }
       plans_str += '{"id":' + i + ',"name":"' + $('input#name_plan-'+i).val()
-        + '","value":' + $('input#item_value-'+i).val()
-        + '","desc":"' +  $('input#desc_plan-'+i).val() +'"}';
+        + '","value":' + price_item
+        + ',"desc":"' +  $('input#desc_plan-'+i).val() +'"}';
 
         if (i != num_plan) {
           plans_str += ",";
