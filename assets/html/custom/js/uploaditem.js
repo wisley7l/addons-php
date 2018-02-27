@@ -39,7 +39,8 @@ $("form#upload_form").submit(function(event){
         }
       }
       plans_str += "]}";
-      console.log(plans_str);
+      console.log(parseFloat($('input#item_value-'+i).val()));
+
       //  input name_plan item_value desc_plan
       /*
       ',"name":' + $('input#name_plan-'+i).val()
@@ -72,7 +73,7 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_authetication").val(authentication);
       $('#uploaditem-plans').val(plans_str);
 
-      $("#addons-uploaditem").submit();//
+      // $("#addons-uploaditem").submit();//
     } else if (is_app == 0 ) { // theme
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
