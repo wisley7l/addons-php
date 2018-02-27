@@ -134,6 +134,7 @@ if(empty($_POST)) { // not exist post
      echo PHP_EOL;
      $str_val = str_replace(".", "", "$plan_basic");
      echo $str_val;
+     echo "string";
 
      // create query TODO:
      // verify sessin, get id and save id in id_partner
