@@ -30,10 +30,10 @@ $("form#upload_form").submit(function(event){
       // treat plans
       plans_str = '{"total":'+ num_plan + ',"plans": [';
       for (var i = 1; i <= num_plan  ; i++) {
-        let price = parseFloat($('input#item_value-'+i).val());
-        if ( isNaN(price) ) {
-          price = 0.0
-        }
+        // let price = parseFloat($('input#item_value-'+i).val());
+        // if ( isNaN(price) ) {
+        //   price = 0.0
+        // }
 
         plans_str += '{"id":' + i + ',"name":"' + $('input#name_plan-'+i).val()
         + '","value":' + price
