@@ -165,7 +165,7 @@ $("#add-plan").click(function(event){
 });
 
 //click the button add faq
-$("#add-plan").click(function(event){
+$("#add-faq").click(function(event){
 
     // maximum number of faqs that can be added
     if (num_faqs < max_faqs) { // if maximum number not reached
