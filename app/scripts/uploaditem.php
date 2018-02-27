@@ -136,9 +136,9 @@ if(empty($_POST)) { // not exist post
      //echo gettype(number_format($number, 2, '', ''));
      $v = number_format($number, 2, '', '');
      echo PHP_EOL;
-     echo $v;
+     echo gettype($v);
      echo PHP_EOL;
-     echo (int)$v;
+     echo gettype((int)$v);
 
 
      // create query TODO:
