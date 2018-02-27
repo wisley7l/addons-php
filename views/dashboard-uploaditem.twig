@@ -269,59 +269,12 @@
 							<input type="text" id="item_website" name="item_website" placeholder="Enter item website here...">
 						</div>
 
-						<hr class="line-separator">
-						<div class="input-container">
-							<h4> Plans </h4>
-						</div>
-						<hr class="line-separator">
-
-						<!-- INPUT CONTAINER -->
-						<div class="input-container half">
-							<button class="button mid dark" id="add-plan"> Add Plan </button>
-						</div>
-						<!-- /INPUT CONTAINER -->
-
-						{% for i in 1.. total_plans_app %}
-						{% if loop.index == 1 %}
-						<div id="plan-{{i}}" style="display:block;" >
-						{% else %}
-						<div id="plan-{{i}}" style="display:none;" >
-						{% endif %}
-
-								<div class="input-container">
-								</div>
-								<div class="input-container">
-									<h6> Plan {{i}} </h6>
-								</div>
-								<hr class="line-separator">
-							<!-- /INPUT CONTAINER -->
-							<div class="input-container">
-								<label for="name_plan" class="rl-label">Name Plan</label>
-								<input type="text" id="name_plan" name="name_plan" placeholder="Ex: Plan Basic">
-							</div>
-							<!-- /INPUT CONTAINER -->
-
-							<!-- /INPUT CONTAINER -->
-							<div class="input-container">
-								<label for="item_value" class="rl-label">Value: {{dictionary.coin}}$</label>
-								<input type="text" id="item_value" name="item_value" placeholder="Ex: 10.00">
-							</div>
-							<!-- /INPUT CONTAINER -->
-
-							<!-- /INPUT CONTAINER -->
-							<div class="input-container">
-								<label for="desc_plan" class="rl-label">Description Plan</label>
-								<input type="text" id="desc_plan" name="desc_plan" placeholder="Ex: Is a plan">
-							</div>
-							<!-- /INPUT CONTAINER -->
-						</div>
-
-						{% endfor %}
-
-
-
-						<!-- div only app -->
+					<!-- div only app -->
 					</div>
+					{{macro_dash_up.plans(total_plans_app, dictionary)}}
+
+
+
 
 					<!-- INPUT CONTAINER -->
 					<div class="input-container">
