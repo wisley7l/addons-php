@@ -28,15 +28,23 @@ $("form#upload_form").submit(function(event){
       }
       categories_str += "]}";
       // treat plans
-      plans_str = '{"total":'+ num_plan + ',"plans": [';
+      plans_str = '{"total_plans":'+ num_plan + ',"plans": [';
       var price_item;
+      var name_plan;
 
       for (var i = 1; i <= num_plan  ; i++) {
         price_item = parseFloat($('input#item_value-'+i).val());
+        name_plan = $('input#name_plan-'+i).val();
+
         if (isNaN(price_item)) {
           price_item = 0;
         }
-      plans_str += '{"id":' + i + ',"name":"' + $('input#name_plan-'+i).val()
+
+        if (isNaN(name_plan)) {
+          name_plan = 'Plan '+ i;
+        }
+
+      plans_str += '{"id":' + i + ',"name":"' + name_plan
         + '","value":' + price_item
         + ',"desc":"' +  $('input#desc_plan-'+i).val() +'"}';
 
