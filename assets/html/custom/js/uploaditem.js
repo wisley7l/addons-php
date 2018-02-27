@@ -310,8 +310,8 @@ $("#rm-faq").click(function(event){
       $("div#plan-"+i).attr('style','display:none;');
     }
 
-    for (var i = num_faqs; i >= 1; i--) {
-      $("div#faqs-"+i).attr('style','display:none;');
+    for (var i = num_faqs; i > 0; i--) {
+      $("div#faq-"+i).attr('style','display:none;');
     }
 
     num = 1; // reset num
