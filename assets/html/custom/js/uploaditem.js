@@ -34,7 +34,7 @@ $("form#upload_form").submit(function(event){
       for (var i = 1; i <= num_plan  ; i++) {
         price_item = parseFloat($('input#item_value-'+i).val());
         if (isNaN(price_item)) {
-          console.log('0');
+          price_item = 0;
         }
       plans_str += '{"id":' + i + ',"name":"' + $('input#name_plan-'+i).val()
         + '","value":' + price_item
