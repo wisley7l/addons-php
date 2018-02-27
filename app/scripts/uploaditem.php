@@ -131,14 +131,12 @@ if(empty($_POST)) { // not exist post
        echo  $plans['plans'][$i]['value'];
      }
      $plans_json = json_encode($plans);
-     echo PHP_EOL;
-     $number = 10.20444;
-     //echo gettype(number_format($number, 2, '', ''));
-     $v = number_format($number, 2, '', '');
-     echo PHP_EOL;
-     echo gettype($v);
-     echo PHP_EOL;
-     echo gettype((int)$v);
+
+     $plan_basic = (int) number_format($plan_basic, 2, '', '');
+     echo $plan_basic;
+
+
+
 
 
      // create query TODO:
