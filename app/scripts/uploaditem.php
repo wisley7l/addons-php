@@ -66,7 +66,9 @@ if(empty($_POST)) { // not exist post
   $module_type = $_POST['module_app']; // treat only type_app == 3 // only app
   $authentication = (int) $_POST['authentication']; // treat 0 or 1 // only app // if authentication != 1 or 0 error
   $category = json_decode($categories,true); // if (int) category['total'] <= 0  error
-   var_dump($_POST);
+  $plans = $_POST['plans'];
+  //var_dump($_POST);
+  echo $plans;
 
    // treat category
    $categories = array();

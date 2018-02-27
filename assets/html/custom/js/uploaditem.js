@@ -66,8 +66,9 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_type_app").val(type_app);
       $("#uploaditem-item_module_app").val(module_app);
       $("#uploaditem-item_authetication").val(authentication);
+      $('#uploaditem-plans').val(plans_str);
 
-      // $("#addons-uploaditem").submit();//
+      $("#addons-uploaditem").submit();//
     } else if (is_app == 0 ) { // theme
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
