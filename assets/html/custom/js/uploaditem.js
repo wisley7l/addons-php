@@ -59,7 +59,17 @@ $("form#upload_form").submit(function(event){
       //treat faqs
       fqs_str = '{"total_faqs":'+ num_faqs + ',"faqs": [';
 
+      for (var i = 1; i <= num_faqs; i++) {
+          plans_str += '{"id":' + i +'}';
+
+          if (i != num_faqs) {
+            fqs_str += ",";
+          }
+      }
+
       fqs_str += "]}";
+      //question
+      //answer
 
     // if fields are empty
   if (name_app == '' || num_version == '' || description == '') {
