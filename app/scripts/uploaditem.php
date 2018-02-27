@@ -66,26 +66,13 @@ if(empty($_POST)) { // not exist post
   $module_type = $_POST['module_app']; // treat only type_app == 3 // only app
   $authentication = (int) $_POST['authentication']; // treat 0 or 1 // only app // if authentication != 1 or 0 error
   $category = json_decode($categories,true); // if (int) category['total'] <= 0  error
-  $plans = json_decode($_POST['plans'],true);
-  $faqs = json_decode($_POST['faqs'],true);
+  $plans = json_decode($_POST['plans'],true); // app and theme
+  $faqs = json_decode($_POST['faqs'],true); // app and theme (body_json)
   //var_dump($_POST);
   // echo $plans;
   //echo $faqs;
   // echo $categories;
   $body_json = json_encode(array('faqs' => $faqs));
-
-  $plan_basic = $plan['plans'][0]['value'];
-
-  for ($i=0; $i < (int) $plans['total_plans'] ; $i++) {
-    if ($plan_basic > $plans['plans'][$i]['value']) {
-      $plan_basic = $plans['plans'][$i]['value'];
-    }
-    echo PHP_EOL;
-    echo  $plans['plans'][$i]['value'];
-  }
-
-
-
 
    // treat category
    $categories = array();
@@ -133,12 +120,28 @@ if(empty($_POST)) { // not exist post
        $module_type = NULL;
      }
 
+     // treat plans
+     $plan_basic = $plan['plans'][0]['value'];
+
+     for ($i=0; $i < (int) $plans['total_plans'] ; $i++) {
+       if ($plan_basic > $plans['plans'][$i]['value']) {
+         $plan_basic = $plans['plans'][$i]['value'];
+       }
+       echo PHP_EOL;
+       echo  $plans['plans'][$i]['value'];
+     }
+     $plans_json = json_encode($plans);
+     echo PHP_EOL;
+     $str_val = str_replace(".", "", "$plan_basic");
+     echo $str_val;
+
      // create query TODO:
      // verify sessin, get id and save id in id_partner
 
-     /* $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`,`version`, `type`,`module`,
+     /* $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
         `script_uri`,`github_repository`,`authentication`, `website`, `link_video` )
-        VALUES ($name,$id_partner,$description,$numversion,$type_app,$module_type,$scripturl,$github,$authentication,$website,$linkvideo)";
+        VALUES ($name,$id_partner,$description,$body_json,$numversion,$type_app,
+        $module_type,$scripturl,$github,$authentication,$website,$linkvideo)";
      */
      /*
 
