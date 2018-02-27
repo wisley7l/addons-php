@@ -74,17 +74,17 @@ function createLogin($id_partner,$pass,$email)
 
   curl_setopt($ch, CURLOPT_URL, "https://market.e-com.plus/scripts/login");
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-  curl_setopt($ch, CURLOPT_POSTFIELDS, "user=value1&pass=value2");
+  curl_setopt($ch, CURLOPT_POSTFIELDS, "user=". $email . "&pass=" . $pass);
   curl_setopt($ch, CURLOPT_POST, 1);
 
   $headers = array();
   $headers[] = "Content-Type: application/x-www-form-urlencoded";
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
   $result = curl_exec($ch);
-
   curl_close ($ch);
-  sleep(15);
+
+  sleep(2);
+
   header("Location: ../#passeidireto");
   exit;
 
