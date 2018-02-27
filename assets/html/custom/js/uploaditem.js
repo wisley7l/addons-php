@@ -30,13 +30,13 @@ $("form#upload_form").submit(function(event){
       // treat plans
       plans_str = '{"total":'+ num_plan + ',"plans": [';
       for (var i = 1; i <= num_plan  ; i++) {
-        let val = parseFloat($('input#item_value-'+i).val());
-        if ( val == NaN) {
-          val = 0
+        let price = parseFloat($('input#item_value-'+i).val());
+        if ( isNaN(price) ) {
+          price = 0.0
         }
 
         plans_str += '{"id":' + i + ',"name":"' + $('input#name_plan-'+i).val()
-        + '","value":' + val
+        + '","value":' + price
         + ',"desc":"' +  $('input#desc_plan-'+i).val() +'"}';
 
         if (i != num_plan) {
@@ -44,7 +44,7 @@ $("form#upload_form").submit(function(event){
         }
       }
       plans_str += "]}";
-      console.log(val);
+      console.log(price);
 
       //  input name_plan item_value desc_plan
       /*
@@ -78,7 +78,7 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_authetication").val(authentication);
       $('#uploaditem-plans').val(plans_str);
 
-      // $("#addons-uploaditem").submit();//
+      $("#addons-uploaditem").submit();//
     } else if (is_app == 0 ) { // theme
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
