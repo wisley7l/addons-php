@@ -197,4 +197,20 @@
     <h4> FAQ's </h4>
   </div>
   <hr class="line-separator">
+
+{% for item in 1.. total_faqs %}
+{% if loop.index == 1 %}
+
+{% else %}
+
+{% endif %}
+
+{% endfor %}
+<!-- INPUT CONTAINER -->
+<div class="input-container half">
+  <button class="button mid dark" id="add-faq"> Add FAQ </button>
+</div>
+<!-- /INPUT CONTAINER -->
+
+
 {% endmacro %}
