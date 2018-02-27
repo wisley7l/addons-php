@@ -1,4 +1,19 @@
 <?php
+
+$handle = curl_init($url);
+curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
+
+/* Get the HTML or whatever is linked in $url. */
+$response = curl_exec($handle);
+
+$httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+if($httpCode == 504) {
+    /* Handle 504 here. */
+    echo "504";
+}
+curl_close($handle);
+
+
 $login = false;
 /* TODO:
 // create connection to the database
@@ -86,18 +101,5 @@ function createLogin($id_partner,$pass,$email)
   // if (curl_errno($ch)) {
   //     echo 'Error:' . curl_error($ch);
   // }
-  $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-  if($httpCode == 504) {
-      /* Handle 504 here. */
-      header("Location: ../index#504");
-      exit;
-  } else {
-      /* Process data */
-      header("Location: ../index#200");
-      exit;
-  }
-
   curl_close ($ch);
-
-
 }
