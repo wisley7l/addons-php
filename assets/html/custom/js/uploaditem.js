@@ -1,5 +1,7 @@
 var num = 1; // variable for total value of categories added
 var num_plan = 1; // variable for total value of plans
+var num_faqs = 0; // variable for total value of faqs
+var max_faqs = 10;
 var max_plan_app = 10;
 var max_plan_theme = 2;
 $("form#upload_form").submit(function(event){
@@ -53,7 +55,7 @@ $("form#upload_form").submit(function(event){
         }
       }
       plans_str += "]}";
-      
+
       //treat json
 
     // if fields are empty
@@ -136,7 +138,7 @@ $("#rm-category").click(function(event){
   event.preventDefault();
 });
 
-//click the button add category
+//click the button add plan
 $("#add-plan").click(function(event){
 
   let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
@@ -159,6 +161,21 @@ $("#add-plan").click(function(event){
     // }
   }
   console.log(num_plan);
+  event.preventDefault();
+});
+
+//click the button add faq
+$("#add-plan").click(function(event){
+
+    // maximum number of faqs that can be added
+    if (num_faqs < max_faqs) { // if maximum number not reached
+      num_faqs += 1;
+    }
+    for (var i = 1; i <= num_faqs; i++) { // displays (select) categories up to the value added
+      $("div#faq-"+i).attr('style','display:block;');
+    }
+
+  console.log(num_faqs);
   event.preventDefault();
 });
 

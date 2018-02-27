@@ -54,6 +54,7 @@ echo $twig->render('dashboard-uploaditem.twig', array(
   'total_cat_theme' => $total_cat_theme,
   'total_cat_app' => $total_cat_app,
   'total_plans_app' => 10,
+  'total_faqs' => 10,
     // test
   'user' => $user_login,
   'is_app' => 1
