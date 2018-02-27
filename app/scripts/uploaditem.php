@@ -134,7 +134,7 @@ if(empty($_POST)) { // not exist post
      echo PHP_EOL;
      $number = 10.20444;
      //echo gettype(number_format($number, 2, '', ''));
-     $V = number_format($number, 2, '', '');
+     $v = number_format($number, 2, '', '');
      echo PHP_EOL;
      echo $v;
      echo PHP_EOL;
