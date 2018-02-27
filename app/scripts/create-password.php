@@ -68,6 +68,7 @@ if (empty($_POST) OR $login == true) {
 
 function createLogin($id_partner,$pass,$email)
 {
+  set_time_limit(30) ;
   /* TODO:
   $conn = $GLOBAL['conn'];
   // frist escape varables
