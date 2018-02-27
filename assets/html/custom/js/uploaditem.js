@@ -30,16 +30,21 @@ $("form#upload_form").submit(function(event){
       // treat plans
       plans_str = '{"total":'+ num_plan + ',"plans": [';
       for (var i = 1; i <= num_plan  ; i++) {
+        let val = parseFloat($('input#item_value-'+i).val());
+        if ( val == NaN) {
+          val = 0
+        }
+
         plans_str += '{"id":' + i + ',"name":"' + $('input#name_plan-'+i).val()
-        + '","value":"' + $('input#item_value-'+i).val()
-        + '","desc":"' +  $('input#desc_plan-'+i).val() +'"}';
+        + '","value":' + val
+        + ',"desc":"' +  $('input#desc_plan-'+i).val() +'"}';
 
         if (i != num_plan) {
           plans_str += ",";
         }
       }
       plans_str += "]}";
-      console.log(parseFloat($('input#item_value-'+i).val()));
+      console.log(val);
 
       //  input name_plan item_value desc_plan
       /*
