@@ -282,8 +282,12 @@
 						<!-- /INPUT CONTAINER -->
 
 						{% for i in 1.. total_plans_app %}
-
+						{% if loop.index == 1 %}
+						<div id="plan-{{i}}" style="display:block;" >
+						{% else %}
 						<div id="plan-{{i}}" style="display:none;" >
+						{% endif %}
+
 								<div class="input-container">
 								</div>
 								<div class="input-container">
