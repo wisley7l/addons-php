@@ -53,14 +53,7 @@ $("form#upload_form").submit(function(event){
         }
       }
       plans_str += "]}";
-      console.log(plans_str);
-
-      //  input name_plan item_value desc_plan
-      /*
-      ',"name":' + $('input#name_plan-'+i).val()
-
-      */
-
+      
       //treat json
 
     // if fields are empty
