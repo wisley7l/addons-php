@@ -131,21 +131,17 @@ if(empty($_POST)) { // not exist post
        echo  $plans['plans'][$i]['value'];
      }
      $plans_json = json_encode($plans);
-
+     // convert float to string and after convert string to int
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
-     echo $plan_basic;
-
-
-
-
+     echo $id_partner;
 
      // create query TODO:
      // verify sessin, get id and save id in id_partner
 
      /* $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
-        `script_uri`,`github_repository`,`authentication`, `website`, `link_video` )
+        `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic` )
         VALUES ($name,$id_partner,$description,$body_json,$numversion,$type_app,
-        $module_type,$scripturl,$github,$authentication,$website,$linkvideo)";
+        $module_type,$scripturl,$github,$authentication,$website,$linkvideo,$plans_json,$plan_basic)";
      */
      /*
 
