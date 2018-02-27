@@ -133,12 +133,13 @@ if(empty($_POST)) { // not exist post
      $plans_json = json_encode($plans);
      // convert float to string and after convert string to int
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
-     echo $id_partner;
+
 
      // create query TODO:
      // verify sessin, get id and save id in id_partner
 
-     /* $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
+     /*
+        $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
         `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic` )
         VALUES ($name,$id_partner,$description,$body_json,$numversion,$type_app,
         $module_type,$scripturl,$github,$authentication,$website,$linkvideo,$plans_json,$plan_basic)";
@@ -166,22 +167,30 @@ if(empty($_POST)) { // not exist post
        // echo 'All done successfully, saying goodbye...';
        // echo PHP_EOL;
        //header("Location: ../dashboard-uploaditem#SucessApp");
-       exit;
+       // exit;
      } else {
        //redirect with failed
        // echo 'Failed to insert app';
        // echo PHP_EOL;
        // handle_msyql_error($conn);
        //header("Location: ../dashboard-uploaditem#ERRORInsertAPP");
-       exit;
+       // exit;
      }
 
    }else if ($is_app == 0) { // if theme
      // create query TODO:
      // verify sessin, get id and save id in id_partner
+     $plan_basic = $plan['plans'][0]['value'];
+     
+     if ($plans['total_plans'] == 2) {
+       $plan_extend = $plan['plans'][1]['value'];
+     }
 
-     /* $query =  "INSERT INTO `themes` (`title`, `partner_id`, `description`,`version`, `link_documentation`, `link_video` )
-        VALUES ($name, $id_partner, $description, $numversion, $linkdoc, $linkvideo)";
+
+     /* $query =  "INSERT INTO `themes` (`title`, `partner_id`, `description`,
+          `version`, `json_body`, `link_documentation`, `link_video`, `value_license_basic`, `value_license_extend` )
+        VALUES ($name, $id_partner, $description,$body_json, $numversion,
+        $linkdoc, $linkvideo,$plan_basic,$plan_extend)";
      */
      /*
 
@@ -206,14 +215,14 @@ if(empty($_POST)) { // not exist post
        // echo 'All done successfully, saying goodbye...';
        // echo PHP_EOL;
        //header("Location: ../dashboard-uploaditem#SucessTheme");
-       exit;
+       // exit;
      } else {
        //redirect with failed
        // echo 'Failed to insert theme';
        // echo PHP_EOL;
        // handle_msyql_error($conn);l
        //header("Location: ../dashboard-uploaditem#ERRORInsert");
-       exit;
+       // exit;
      }
 
    }else {
@@ -224,5 +233,5 @@ if(empty($_POST)) { // not exist post
   // redirect with error
   // echo "erro2";
   //header("Location: ../dashboard-uploaditem#ERRORSend");
-  exit;
+  // exit;
 }
