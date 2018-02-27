@@ -60,7 +60,10 @@ $("form#upload_form").submit(function(event){
       fqs_str = '{"total_faqs":'+ num_faqs + ',"faqs": [';
 
       for (var i = 1; i <= num_faqs; i++) {
-          plans_str += '{"id":' + i +'}';
+          fqs_str += '{"id":' + i
+          + ',"question":"' + i
+          + '","answer":"' + i + '"'
+          +'}';
 
           if (i != num_faqs) {
             fqs_str += ",";
