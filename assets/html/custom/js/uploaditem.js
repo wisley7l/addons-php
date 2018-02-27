@@ -56,7 +56,10 @@ $("form#upload_form").submit(function(event){
       }
       plans_str += "]}";
 
-      //treat json
+      //treat faqs
+      fqs_str = '{"total_faqs":'+ num_faqs + ',"faqs": [';
+
+      fqs_str += "]}";
 
     // if fields are empty
   if (name_app == '' || num_version == '' || description == '') {
@@ -81,6 +84,7 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_module_app").val(module_app);
       $("#uploaditem-item_authetication").val(authentication);
       $('#uploaditem-plans').val(plans_str);
+      $('#uploaditem-faqs').val(fqs_str);
 
       $("#addons-uploaditem").submit();//
     } else if (is_app == 0 ) { // theme

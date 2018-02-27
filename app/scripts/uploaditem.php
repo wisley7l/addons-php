@@ -67,8 +67,10 @@ if(empty($_POST)) { // not exist post
   $authentication = (int) $_POST['authentication']; // treat 0 or 1 // only app // if authentication != 1 or 0 error
   $category = json_decode($categories,true); // if (int) category['total'] <= 0  error
   $plans = $_POST['plans'];
+  $faqs = $_POST['faqs'];
   //var_dump($_POST);
   echo $plans;
+  echo $faqs;
   // echo $categories;
 
 
