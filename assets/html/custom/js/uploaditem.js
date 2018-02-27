@@ -40,7 +40,7 @@ $("form#upload_form").submit(function(event){
           price_item = 0;
         }
 
-        if (isNaN(name_plan)) {
+        if (name_plan == '') {
           name_plan = 'Plan '+ i;
         }
 
