@@ -132,8 +132,9 @@ if(empty($_POST)) { // not exist post
      }
      $plans_json = json_encode($plans);
      echo PHP_EOL;
-     $number = 0;
-     echo gettype(number_format($number, 2, '', ''));
+     $number = 10.20444;
+     //echo gettype(number_format($number, 2, '', ''));
+     echo number_format($number, 2, '', '');
 
 
      // create query TODO:
