@@ -198,12 +198,29 @@
   </div>
   <hr class="line-separator">
 
-{% for item in 1.. total_faqs %}
-{% if loop.index == 1 %}
+{% for i in 1.. total_faqs %}
 
-{% else %}
+<div id="faq-{{i}}" style="display:block;" >
+  <div class="input-container">
+  </div>
+  <div class="input-container">
+    <h6> FAQ {{i}} </h6>
+  </div>
+  <hr class="line-separator">
+  <!-- /INPUT CONTAINER -->
+  <div class="input-container">
+    <label for="desc_plan" class="rl-label">Question</label>
+    <input type="text" id="question-{{i}}" name="question" placeholder="Ex: ">
+  </div>
+  <!-- /INPUT CONTAINER -->
+  <!-- /INPUT CONTAINER -->
+  <div class="input-container">
+    <label for="desc_plan" class="rl-label">Answer</label>
+    <input type="text" id="answer-{{i}}" name="answer" placeholder="Ex: ">
+  </div>
+  <!-- /INPUT CONTAINER -->
+</div>
 
-{% endif %}
 
 {% endfor %}
 <!-- INPUT CONTAINER -->
