@@ -61,8 +61,8 @@ $("form#upload_form").submit(function(event){
 
       for (var i = 1; i <= num_faqs; i++) {
           fqs_str += '{"id":' + i
-          + ',"question":"' + i
-          + '","answer":"' + i + '"'
+          + ',"question":"' + $('input#question-'+i).val()
+          + '","answer":"' + $('input#answer-'+i).val() + '"'
           +'}';
 
           if (i != num_faqs) {
