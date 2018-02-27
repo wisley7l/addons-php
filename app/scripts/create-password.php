@@ -1,19 +1,4 @@
 <?php
-
-$handle = curl_init("https://market.e-com.plus/scripts/create-password");
-curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
-
-/* Get the HTML or whatever is linked in $url. */
-$response = curl_exec($handle);
-
-$httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
-if($httpCode == 504) {
-    /* Handle 504 here. */
-    echo "504";
-}
-curl_close($handle);
-
-
 $login = false;
 /* TODO:
 // create connection to the database
@@ -57,7 +42,7 @@ if (empty($_POST) OR $login == true) {
     exit;
   }
   */
-  //$pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+  $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
   // TODO: insert table partner, escape id and pass
   /*
   $conn = $GLOBAL['conn'];
@@ -71,7 +56,7 @@ if (empty($_POST) OR $login == true) {
     //create login
   }
   */
-  echo "ok";
+  createLogin($id, $_POST['pass'],$email);
 
 }else {
   // error redirect for index
@@ -79,4 +64,47 @@ if (empty($_POST) OR $login == true) {
   header("Location: ../error-page");
   exit;
 
+}
+
+function createLogin($id_partner,$pass,$email)
+{
+  /* TODO:
+  $conn = $GLOBAL['conn'];
+  // frist escape varables
+  $id_user = mysqli_real_escape_string($conn, $id_partner);
+  $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+  $pass = mysqli_real_escape_string($conn,$pass_hash);
+  // query search app and theme for index page
+  $query = "SELECT `p.id`,`p.path_image`, `p.credits`  FROM `partners p`
+    WHERE (`p.id` = $id_user AND `p.passowrd_hash` = $pass) LIMIT 1";
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $id = $row['p.id'];
+      $image = $row['p.path_image'];
+      $credits = (float) $row['p.credits'];
+    }
+    // free result set
+    mysqli_free_result($result);
+  }else {
+    // partner not found or error login
+    // TODO: redirect error
+  }
+  //TODO:
+  get name via API
+  //*/
+
+  // TEST
+  $id = 1;
+  $name = 'USER';
+  $image = '';
+  $credits = 1000.00;
+
+  if ($login == false ){
+    createSession($id,$email,$name,$credits,$image);
+  }
+  else {
+    header("Location: ../#loginexists");
+    exit;
+  }
 }
