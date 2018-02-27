@@ -27,6 +27,19 @@ $("form#upload_form").submit(function(event){
         }
       }
       categories_str += "]}";
+      // treat plans
+      plans_str = '{"total":'+ num_plan + ',"plans": [';
+      for (var i = 1; i <= num_plan  ; i++) {
+        plans_str += '["id":' + i + '"name":' + $('input#name_plan').val();
+
+        if (i != num_plan) {
+          plans_str += ',';
+        }
+      }
+      console.log(plans_str);
+      //  input name_plan item_value desc_plan
+
+      //treat json
 
     // if fields are empty
   if (name_app == '' || num_version == '' || description == '') {
@@ -51,7 +64,7 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_module_app").val(module_app);
       $("#uploaditem-item_authetication").val(authentication);
 
-      $("#addons-uploaditem").submit();//
+      // $("#addons-uploaditem").submit();//
     } else if (is_app == 0 ) { // theme
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
@@ -60,7 +73,7 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_description").val(description);
       $("#uploaditem-item_linkdoc").val(linkdoc);
       $("#uploaditem-item_linkvideo").val(video);
-      $("#addons-uploaditem").submit();//
+      // $("#addons-uploaditem").submit();//
     }
   }
   event.preventDefault();
