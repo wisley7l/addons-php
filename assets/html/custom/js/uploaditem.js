@@ -178,6 +178,21 @@ $("#add-faq").click(function(event){
   console.log(num_faqs);
   event.preventDefault();
 });
+//click the button add faq
+$("#rm-faq").click(function(event){
+
+    // maximum number of faqs that can be added
+    if (num_faqs >= 0) { // if maximum number not reached
+      $("div#faq-"+num_faqs).attr('style','display:none;');
+      num_faqs -= 1;
+    }
+
+
+
+
+  console.log(num_faqs);
+  event.preventDefault();
+});
 
 (function($) {
 
