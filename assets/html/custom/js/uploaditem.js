@@ -117,9 +117,9 @@ $("#add-plan").click(function(event){
     if (num_plan < max_plan_app) { // if maximum number not reached
       num_plan += 1;
     }
-    // for (var i = 1; i <= num; i++) { // displays (select) categories up to the value added
-    //   $("div#cat-app-"+i).attr('style','display:block;');
-    // }
+    for (var i = 1; i <= num_plan; i++) { // displays (select) categories up to the value added
+      $("div#plan-"+i).attr('style','display:block;');
+    }
   } else if(is_app == 0 ){ // if Theme
 
     if (num_plan < max_plan_theme) { //if maximum number not reached
