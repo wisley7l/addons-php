@@ -132,7 +132,8 @@ if(empty($_POST)) { // not exist post
      }
      $plans_json = json_encode($plans);
      echo PHP_EOL;
-     $str_val = str_replace(".", "", "$plan_basic");
+     $v = 10.0;
+     $str_val = str_replace(".", "", "$v");
      echo $str_val;
      echo "string";
 
