@@ -1,6 +1,6 @@
 var num = 1; // variable for total value of categories added
 var num_plan = 1; // variable for total value of plans
-var max_plan_app = 3;
+var max_plan_app = 10;
 var max_plan_theme = 2;
 $("form#upload_form").submit(function(event){
   let $form = $('form#upload_form'),

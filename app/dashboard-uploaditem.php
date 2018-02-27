@@ -53,6 +53,7 @@ echo $twig->render('dashboard-uploaditem.twig', array(
   'theme_category' => $theme_category,
   'total_cat_theme' => $total_cat_theme,
   'total_cat_app' => $total_cat_app,
+  'total_plans_app' => 10,
     // test
   'user' => $user_login,
   'is_app' => 1
