@@ -76,11 +76,12 @@ if(empty($_POST)) { // not exist post
 
   $plan_basic = $plan['plans'][0]['value'];
 
-  for ($i=0; $i < (int) $plans['total_plans'] ; $i++) {
-    if ($plan_basic < $plan['plans'][$i]['value']) {
-      echo "sim";
+  for ($i=1; $i < (int) $plans['total_plans'] ; $i++) {
+    if ($plan_basic > $plan['plans'][$i]['value']) {
+      $plan_basic = $plan['plans'][$i]['value'];
     }
-    echo "não";
+    echo PHP_EPL;
+    echo  $plan['plans'][$i]['value'];
   }
 
 
