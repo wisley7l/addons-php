@@ -108,6 +108,8 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_description").val(description);
       $("#uploaditem-item_linkdoc").val(linkdoc);
       $("#uploaditem-item_linkvideo").val(video);
+      $('#uploaditem-plans').val(plans_str);
+      $('#uploaditem-faqs').val(fqs_str);
       // $("#addons-uploaditem").submit();//
     }
   }
@@ -303,7 +305,16 @@ $("#rm-faq").click(function(event){
         $("div#cat-theme-"+i).attr('style','display:none;');
       }
     }
+
+    for (var i = num_plan; i > 1; i--) {
+      $("div#plan-"+i).attr('style','display:none;');
+    }
+    for (var i = num_faqs i >= 1; i--) {
+      $("div#faqs-"+i).attr('style','display:none;');
+    }
     num = 1; // reset num
+    num_plan = 1; //
+    num_faqs = 0; //
 	}
   //function to enable application or theme fields
   function enable(id) {
