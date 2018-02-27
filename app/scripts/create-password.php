@@ -86,8 +86,18 @@ function createLogin($id_partner,$pass,$email)
   // if (curl_errno($ch)) {
   //     echo 'Error:' . curl_error($ch);
   // }
+  $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  if($httpCode == 504) {
+      /* Handle 504 here. */
+      header("Location: ../index#504");
+      exit;
+  } else {
+      /* Process data */
+      header("Location: ../index#200");
+      exit;
+  }
+
   curl_close ($ch);
-  header("Location: ../index#ok");
-  exit;
+
 
 }
