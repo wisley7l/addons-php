@@ -80,7 +80,7 @@ function createLogin($id_partner,$pass,$email)
   $headers = array();
   $headers[] = "Content-Type: application/x-www-form-urlencoded";
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-  curl_setopt($ch, CURLOPT_TIMEOUT, 400); //timeout in seconds
+  curl_setopt($ch, CURLOPT_TIMEOUT, 60); //timeout in seconds
 
   $result = curl_exec($ch);
   // if (curl_errno($ch)) {
