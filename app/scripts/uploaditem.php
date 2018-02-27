@@ -77,11 +77,11 @@ if(empty($_POST)) { // not exist post
   $plan_basic = $plan['plans'][0]['value'];
 
   for ($i=1; $i < (int) $plans['total_plans'] ; $i++) {
-    if ($plan_basic > $plan['plans'][$i]['value']) {
-      $plan_basic = $plan['plans'][$i]['value'];
+    if ($plan_basic > $plans['plans'][$i]['value']) {
+      $plan_basic = $plans['plans'][$i]['value'];
     }
-    echo PHP_EPL;
-    echo  $plan['plans'][$i]['value'];
+    echo PHP_EOL;
+    echo  $plans['plans'][$i]['value'];
   }
 
 
