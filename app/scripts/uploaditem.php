@@ -73,7 +73,15 @@ if(empty($_POST)) { // not exist post
   //echo $faqs;
   // echo $categories;
   $body_json = json_encode(array('faqs' => $faqs));
-  echo $body_json;
+
+  $plan_basic = $plan['plans'][0]['value'];
+
+  for ($i=0; $i < (int) $faqs['total_plans'] ; $i++) {
+    if ($plan_basic < $plan['plans'][$i]['value']) {
+      echo "sim";
+    }
+    echo "não";
+  }
 
 
 
