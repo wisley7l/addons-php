@@ -29,12 +29,9 @@ $("form#upload_form").submit(function(event){
       categories_str += "]}";
       // treat plans
       plans_str = '{"total":'+ num_plan + ',"plans": [';
-      var price;
+
       for (var i = 1; i <= num_plan  ; i++) {
-        price = parseFloat($('input#item_value-'+i).val());
-
-
-        plans_str += '{"id":' + i + ',"name":"' + $('input#name_plan-'+i).val()
+      plans_str += '{"id":' + i + ',"name":"' + $('input#name_plan-'+i).val()
         + '","value":' + $('input#item_value-'+i).val()
         + '","desc":"' +  $('input#desc_plan-'+i).val() +'"}';
 
@@ -43,7 +40,7 @@ $("form#upload_form").submit(function(event){
         }
       }
       plans_str += "]}";
-      console.log(parseFloat(price);
+      console.log(plans_str);
 
       //  input name_plan item_value desc_plan
       /*
