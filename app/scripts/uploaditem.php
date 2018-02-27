@@ -70,8 +70,11 @@ if(empty($_POST)) { // not exist post
   $faqs = $_POST['faqs'];
   //var_dump($_POST);
   // echo $plans;
-  echo $faqs;
+  //echo $faqs;
   // echo $categories;
+  $body_json = json_encode(array('palns' => $plans , 'faqs' => $faqs ));
+  echo $body_json;
+
 
 
    // treat category
