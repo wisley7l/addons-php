@@ -30,7 +30,7 @@ $("form#upload_form").submit(function(event){
       // treat plans
       plans_str = '{"total":'+ num_plan + ',"plans": [';
       for (var i = 1; i <= num_plan  ; i++) {
-        plans_str += '{"id":"' + i + '","name":"' + $('input#name_plan-'+i).val() +'"}';
+        plans_str += '{"id":' + i + ',"name":"' + $('input#name_plan-'+i).val() +'"}';
 
         if (i != num_plan) {
           plans_str += ",";
