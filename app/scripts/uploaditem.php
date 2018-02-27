@@ -68,7 +68,9 @@ if(empty($_POST)) { // not exist post
   $category = json_decode($categories,true); // if (int) category['total'] <= 0  error
   $plans = $_POST['plans'];
   //var_dump($_POST);
-  echo $plans;
+  //echo $plans;
+  echo $categories;
+
 
    // treat category
    $categories = array();
