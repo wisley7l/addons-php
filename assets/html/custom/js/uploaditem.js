@@ -309,9 +309,11 @@ $("#rm-faq").click(function(event){
     for (var i = num_plan; i > 1; i--) {
       $("div#plan-"+i).attr('style','display:none;');
     }
-    for (var i = num_faqs i >= 1; i--) {
+
+    for (var i = num_faqs; i >= 1; i--) {
       $("div#faqs-"+i).attr('style','display:none;');
     }
+
     num = 1; // reset num
     num_plan = 1; //
     num_faqs = 0; //
