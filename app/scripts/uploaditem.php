@@ -69,7 +69,7 @@ if(empty($_POST)) { // not exist post
   $plans = $_POST['plans'];
   $faqs = $_POST['faqs'];
   //var_dump($_POST);
-  echo $plans;
+  // echo $plans;
   echo $faqs;
   // echo $categories;
 
