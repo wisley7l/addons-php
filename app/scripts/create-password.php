@@ -83,9 +83,7 @@ function createLogin($id_partner,$pass,$email)
 
   $result = curl_exec($ch);
 
-  curl_close ($ch);
-
-
+  // curl_close ($ch);
   header("Location: ../#passeidireto");
   exit;
 
