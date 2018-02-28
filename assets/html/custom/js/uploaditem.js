@@ -175,9 +175,9 @@ $("#add-plan").click(function(event){
     if (num_plan < max_plan_theme) { //if maximum number not reached
       num_plan += 1;
     }
-    // for (var i = 1; i <= num; i++) { // displays (select) categories up to the value added
-    //   $("div#cat-theme-"+i).attr('style','display:block;');
-    // }
+    for (var i = 1; i <= num_plan; i++) { // displays (select) categories up to the value added
+      $("div#plan-"+i).attr('style','display:block;');
+    }
   }
   console.log(num_plan);
   event.preventDefault();
