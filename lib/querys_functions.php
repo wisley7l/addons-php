@@ -631,6 +631,161 @@ function search_partner_id($partner)
     return $partner;
 }
 
+// query search app with id
+
+// body json app contains faqs, app contains plnas json
+function search_app_id($id_app)
+{
+  $id = (int) $id_app;
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `id`, `partner_id`, `title`, `slug`, `thumbnail`, `description`,
+    `json_body`, `paid`, `version`, `version_date`, `type`, `module`, `load_events`,
+    `script_uri`, `github_repository`, `authentication`, `auth_scope`, `avg_stars`,
+    `evaluations`,`website`,`link_video`,`plans_json`,`value_plan_basic`,
+    FROM `apps`
+    WHERE ( `id` = $id)";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = array(
+        'id'=> $row['id'],
+        'partner_id'=> $row['partner_id'],
+        'title'=> $row['title'],
+        'slug'=> $row['slug'],
+        'thumbnail'=> $row['thumbnail'],
+        'description'=> $row['description'],
+        'json_body'=> $row['json_body'],
+        'paid'=> $row['paid'],
+        'version'=> $row['version'],
+        'version_date'=> $row['version_date'],
+        'type' => $row['type'],
+        'module' => $row['module'],
+        'load_events' => $row['load_events'],
+        'script_uri' => $row['script_uri'],
+        'github_repository' => $row['github_repository'],
+        'authentication' => $row['authentication'],
+        'auth_scope' => $row['auth_scope'],
+        'avg_stars' => $row['avg_stars'],
+        'evaluations' => $row['evaluations'],
+        'website' => $row['website'],
+        'link_video' => $row['link_video'],
+        'plans_json' => $row['plans_json'],
+        'value_plan_basic' => $row['value_plan_basic'],
+      );
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $item;
+}
+
+
+// query search theme with id
+// body json them contains faqs and plans, descreiption and name plans is necessary
+function search_theme_id($id_theme)
+{
+  $id = (int) $id_theme;
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `id`, `partner_id`, `title`, `slug`, `thumbnail`, `description`,
+    `json_body`, `paid`, `version`, `version_date`, `avg_stars`, `evaluations`, `link_documentation`,
+    `link_video`, `value_license_basic`,`value_license_extend`
+    FROM `themes`
+    WHERE ( `id` = $id)";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = array(
+        'id'=> $row['id'],
+        'partner_id'=> $row['partner_id'],
+        'title'=> $row['title'],
+        'slug'=> $row['slug'],
+        'thumbnail'=> $row['thumbnail'],
+        'description'=> $row['description'],
+        'json_body'=> $row['json_body'],
+        'paid'=> $row['paid'],
+        'version'=> $row['version'],
+        'version_date'=> $row['version_date'],
+        'avg_stars' => $row['avg_stars'],
+        'evaluations' => $row['evaluations'],
+        'link_documentation' => $row['link_documentation'],
+        'link_video' => $row['link_video'],
+        'value_license_basic' => $row['value_license_basic'],
+        'value_license_extend' => $row['value_license_extend'],
+      );
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $item;
+}
+
+// FUNCTION item page
+function item_page($id_item, $is_app)
+{
+  // body json app contains faqs, app contains plnas json
+  // body json them contains faqs and plans, descreiption and name plans is necessary
+
+  $item = search_app_id($id_item);
+  if ((int) $is_app == 1) { // is app
+    $item = search_app_id($id_item);
+
+    // $faqs =
+    // treat plans for view
+    $plans_json = json_decode($item['plans_json'],true);
+    $plans = array();
+    for ($i=0; $i < $plans_json['total_plans'] ; $i++) {
+      $plan = array(
+        'id' => $plans_json['plans'][$i]['id'],
+        'name' => $plans_json['plans'][$i]['name'],
+        'price' => $plans_json['plans'][$i]['id'],
+        'description' => $plans_json['plans'][$i]['id'],
+        'checked'=> ''
+      );
+      if ($i == 0) {
+        $plan['checked'] = 'checked';
+      }
+      array_push($plans, $plan);
+    }
+    $desc = ' ' . $item['description'] .  ',Version: ' . $item['version'] .
+      'Date version: ' . $item['version_date'];
+    // //`id`, `partner_id`, `title`, `slug`, `thumbnail`, ``,
+    //   `json_body`, `paid`, ``, ``, `type`, `module`, `load_events`,
+    //   `script_uri`, `github_repository`, `authentication`, `auth_scope`, `avg_stars`,
+    //   `evaluations`,`website`,`link_video`,`plans_json`,`value_plan_basic`,
+    // return in function
+    return array(
+      'item' => $app ,
+      'plans' => $plans,
+      'faqs' => $faqs
+    );
+
+  }elseif ((int) $is_app == 0) { // is theme
+
+  }
+}
+
+
+
+$app_info = array('id' => $id_app,
+  'name' => 'THEME',
+  'description' => 'Esta é a Descrição do APP ou do TEMA',
+  'json' => 'treat json'
+);
+$plan2 = array('id' => 'extend-license',
+'name' => 'Extend License',
+'price' => 36.00,
+'description' => 'Test description 2',
+'checked' => '',
+);
+
 
 
 /*
@@ -665,7 +820,7 @@ In the index page search the highlights of themes and app.
 // search apps with name and free and category OK--
 // search themes with name and free and category OK --
 
-//search apps with id partner OK --
+//search apps with id partner OK --value_license_extend
 //search themes with id partner OK --
 
 // search app only with id

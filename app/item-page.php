@@ -33,7 +33,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
     $app_info = array('id' => $id_app,
       'name' => 'APP',
-      'description' => 'kljdasklkdakdasslasdlsadljaksdasdalkkdasdjakldklasklasffkasfsaklçaskldaskhfajskasdfhasdjkdsaasdfjkjdsfld',
+      'description' => 'kljdasklkdakdasslasdlsadljaksdasdalkkdasdjakldklasklasffkasfsaklçaskldaskhfajskasdfhasdjkdsaasdfjkjdsfld, \n continua teste',
       'json' => 'treat json'
     );
 
