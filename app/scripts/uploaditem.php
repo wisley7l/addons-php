@@ -180,14 +180,14 @@ if(empty($_POST)) { // not exist post
    }else if ($is_app == 0) { // if theme
      // create query TODO:
      // verify sessin, get id and save id in id_partner
-     $plan_basic = $plan['plans'][0]['value'];
+     $plan_basic = $plans['plans'][0]['value'];
 
      if ($plans['total_plans'] == 2) {
-       $plan_extend = $plan['plans'][1]['value'];
+       $plan_extend = $plans['plans'][1]['value'];
      }
 
      $body_json = json_decode($body_json,true);
-     $body_json['plans'] = $plan;
+     $body_json['plans'] = $plans;
      $body_json = json_encode($body_json);
      echo $body_json;
 
