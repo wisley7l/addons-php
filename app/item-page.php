@@ -34,7 +34,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $app_info = array('id' => $id_app,
       'name' => 'APP',
       'description' => '' ,
-      'video' => 'https://www.youtube.com/watch?v=Z3fm04YeAgg',
+      'video' => 'https://www.youtube.com/embed/tgbNymZ7vqY"',
       'website' => 'https://apps.shopify.com/',
     );
 
