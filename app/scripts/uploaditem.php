@@ -186,7 +186,7 @@ if(empty($_POST)) { // not exist post
        $plan_extend = $plan['plans'][1]['value'];
      }
 
-     $body_json = json_decode($body_json);
+     $body_json = json_decode($body_json,true);
      $body_json['plans'] = $plan;
      $body_json = json_encode($body_json);
      echo $body_json;
