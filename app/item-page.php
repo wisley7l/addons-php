@@ -33,7 +33,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
     $app_info = array('id' => $id_app,
       'name' => 'APP',
-      'description' => 'kljdasklkdakdasslasdlsadljaksdasdalkkdasdjakldklasklasffkasfsaklçaskldaskhfajskasdfhasdjkdsaasdfjkjdsfld' . "<br />" . 'deu' ,
+      'description' => 'kljdasklkdakdasslasdlsadljaksdasdalkkdasdjakldklasklasffkasfsaklçaskldaskhfajskasdfhasdjkdsaasdfjkjdsfldsdasdas  sadsadkaH ÇDSÇAsçdçSADÇ djçSJDÇSAJ klçDAJSÇKLJDEKASJdçsdJD KLAS  J DSAJDk sjaKD AÇSKJdlkaSSKJDHÇS DSAdkjASLKDH SAGLdhSADFKHSAPDglaSJDÇAJSPdhkAH DÇLD AdhglA K dçSAJDGH AkjAS' ,
       'json' => 'treat json'
     );
 
