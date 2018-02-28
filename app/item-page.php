@@ -39,8 +39,8 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     );
 
     //images app
-    $array_images = getImagesApp();
-    $image_main = $array_images[0];
+    //$array_images = getImagesApp();
+    //$image_main = $array_images[0];
   }
   else if ($_GET['app'] == 0){
     $id_app = (int) $_GET['id'];
@@ -59,8 +59,8 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
   }
 
   //images theme
-  $array_images = getImagesTheme();
-  $image_main = $array_images[0];
+  //$array_images = getImagesTheme();
+  //$image_main = $array_images[0];
 }
 elseif (isset($_GET['term']) and isset($_GET['x']) ) {
   header("Location: search-page?term=" . $_GET['term']);
