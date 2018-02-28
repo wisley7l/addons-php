@@ -40,8 +40,13 @@
 
 				<!-- SIDEBAR ITEM -->
 				<div class="sidebar-item">
-				<a href="{{app_info.website}}"><h6 style="text-align: center;">Doc</h6></a>
-				<div class="clearfix"></div>
+					{% if info_page.app == 0 %}
+					<h5>LINK DOC</h5>
+					{% else %}
+						<h5>WEB SITE</h5>
+					{% endif %}
+					<a href="{{app_info.website}}"><h6 style="text-align: center;">Doc</h6></a>
+					<div class="clearfix"></div>
 				</div>
 				<!-- /SIDEBAR ITEM -->
 
