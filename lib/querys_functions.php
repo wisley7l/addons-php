@@ -642,7 +642,7 @@ function search_app_id($id_app)
   $query = "SELECT `id`, `partner_id`, `title`, `slug`, `thumbnail`, `description`,
     `json_body`, `paid`, `version`, `version_date`, `type`, `module`, `load_events`,
     `script_uri`, `github_repository`, `authentication`, `auth_scope`, `avg_stars`,
-    `evaluations`,`website`,`link_video`,`plans_json`,`value_plan_basic`,
+    `evaluations`,`website`,`link_video`,`plans_json`,`value_plan_basic`
     FROM `apps`
     WHERE ( `id` = $id)";
 
@@ -732,8 +732,6 @@ function item_page($id_item, $is_app)
 {
   // body json app contains faqs, app contains plnas json
   // body json them contains faqs and plans, descreiption and name plans is necessary
-
-  $item = search_app_id($id_item);
   if ((int) $is_app == 1) { // is app
     $item = search_app_id($id_item);
 
@@ -745,8 +743,8 @@ function item_page($id_item, $is_app)
       $plan = array(
         'id' => $plans_json['plans'][$i]['id'],
         'name' => $plans_json['plans'][$i]['name'],
-        'price' => $plans_json['plans'][$i]['id'],
-        'description' => $plans_json['plans'][$i]['id'],
+        'price' => $plans_json['plans'][$i]['value'],
+        'description' => $plans_json['plans'][$i]['desc'],
         'checked'=> ''
       );
       if ($i == 0) {
@@ -754,12 +752,19 @@ function item_page($id_item, $is_app)
       }
       array_push($plans, $plan);
     }
+
     $desc = ' ' . $item['description'] .  ',Version: ' . $item['version'] .
-      'Date version: ' . $item['version_date'];
-    // //`id`, `partner_id`, `title`, `slug`, `thumbnail`, ``,
-    //   `json_body`, `paid`, ``, ``, `type`, `module`, `load_events`,
-    //   `script_uri`, `github_repository`, `authentication`, `auth_scope`, `avg_stars`,
-    //   `evaluations`,`website`,`link_video`,`plans_json`,`value_plan_basic`,
+      'Date version: ' . $item['version_date'] . ',Type: ' . $item['type'] .
+      ', Module: ' . $item['module'];
+
+    $app = array(
+        'id' => $item['id'],
+        'name' => $item['title'],
+        'description' => $desc,
+        'video' => $item['link_video'],
+        'website' => $item['website']
+    );
+
     // return in function
     return array(
       'item' => $app ,
@@ -768,6 +773,41 @@ function item_page($id_item, $is_app)
     );
 
   }elseif ((int) $is_app == 0) { // is theme
+    $item = search_theme_id($id_item);
+    /*
+    `id`, `partner_id`, `title`, `slug`, `thumbnail`, `description`,
+      `json_body`, `paid`, `version`, `version_date`, `avg_stars`, `evaluations`, `link_documentation`,
+      `link_video`, `value_license_basic`,`value_license_extend`
+    */
+    $faqs_json = json_decode($item['json_body'],true);
+    $plans_json = $faqs_json['plans'];
+
+    // treat plans
+    $plans = array();
+    for ($i=0; $i < $plans_json['total_plans'] ; $i++) {
+      $plan = array(
+        'id' => $plans_json['plans'][$i]['id'],
+        'name' => $plans_json['plans'][$i]['name'],
+        'price' => $plans_json['plans'][$i]['value'],
+        'description' => $plans_json['plans'][$i]['desc'],
+        'checked'=> ''
+      );
+      if ($i == 0) {
+        $plan['checked'] = 'checked';
+      }
+      array_push($plans, $plan);
+    }
+
+    $desc = ' ' . $item['description'] .  ',Version: ' . $item['version'] .
+      'Date version: ' . $item['version_date'];
+
+    $theme = array(
+        'id' => $item['id'],
+        'name' => $item['title'],
+        'description' => $desc,
+        'video' => $item['link_video'],
+        'website' => $item['link_documentation']
+    );
 
   }
 }

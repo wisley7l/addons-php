@@ -33,8 +33,9 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
     $app_info = array('id' => $id_app,
       'name' => 'APP',
-      'description' => 'kljdasklkdakdasslasdlsadljaksdasdalkkdasdjakldklasklasffkasfsaklçaskldaskhfajskasdfhasdjkdsaasdfjkjdsfldsdasdas  sadsadkaH ÇDSÇAsçdçSADÇ djçSJDÇSAJ klçDAJSÇKLJDEKASJdçsdJD KLAS  J DSAJDk sjaKD AÇSKJdlkaSSKJDHÇS DSAdkjASLKDH SAGLdhSADFKHSAPDglaSJDÇAJSPdhkAH DÇLD AdhglA K dçSAJDGH AkjAS' ,
-      'json' => 'treat json'
+      'description' => '' ,
+      'video' => 'https://www.youtube.com/watch?v=Z3fm04YeAgg&list=RDZ3fm04YeAgg',
+      'website' => 'https://apps.shopify.com/',
     );
 
     //images app
@@ -48,7 +49,8 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $app_info = array('id' => $id_app,
       'name' => 'THEME',
       'description' => 'Esta é a Descrição do APP ou do TEMA',
-      'json' => 'treat json'
+      'video' => 'https://www.youtube.com/watch?v=UcSwVfCZb_I&list=RDMMUcSwVfCZb_I',
+      'website' => 'https://themes.shopify.com/',
     );
   }
   else {

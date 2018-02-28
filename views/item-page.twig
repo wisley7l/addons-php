@@ -37,6 +37,16 @@
 			<!-- SIDEBAR -->
 			<div class="sidebar right">
 
+
+				<!-- SIDEBAR ITEM -->
+				<div class="sidebar-item">
+				<a href="{{app_info.website}}" ></a>
+				<div class="clearfix"></div>
+				</div>
+				<!-- /SIDEBAR ITEM -->
+
+
+
         <!-- SIDEBAR ITEM -->
         {% if info_page.app == 0 %}
 				<div class="sidebar-item" id="template">
@@ -154,7 +164,7 @@
 					<h3 style="text-align: left;">Video</h3>
 					<hr class="line-separator">
 					<div>
-						<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" align="middle">
+						<iframe src="{{app_info.video}}" align="middle">
 						</iframe>
 					</div>
 					<hr class="line-separator">
