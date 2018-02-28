@@ -671,7 +671,7 @@ In the index page search the highlights of themes and app.
 // search app only with id
 // search theme only with id
 
-// search partner only with id
+// search partner only with id ok --
 
 
 // ITEM PAGE
