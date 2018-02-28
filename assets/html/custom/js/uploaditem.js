@@ -110,7 +110,7 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_linkvideo").val(video);
       $('#uploaditem-plans').val(plans_str);
       $('#uploaditem-faqs').val(fqs_str);
-      // $("#addons-uploaditem").submit();//
+      $("#addons-uploaditem").submit();//
     }
   }
   event.preventDefault();
@@ -179,8 +179,17 @@ $("#add-plan").click(function(event){
       $("div#plan-"+i).attr('style','display:block;');
     }
   }
-  console.log(num_plan);
   event.preventDefault();
+});
+//
+$("#rm-plan").click(function(event){
+  // maximum number of faqs that can be added
+  if (num_plan > 1) { // if maximum number not reached
+    $("div#plan-"+num_plan).attr('style','display:none;');
+    num_faqs -= 1;
+  }
+
+event.preventDefault();
 });
 
 //click the button add faq
@@ -194,7 +203,6 @@ $("#add-faq").click(function(event){
       $("div#faq-"+i).attr('style','display:block;');
     }
 
-  console.log(num_faqs);
   event.preventDefault();
 });
 //click the button add faq
@@ -206,10 +214,6 @@ $("#rm-faq").click(function(event){
       num_faqs -= 1;
     }
 
-
-
-
-  console.log(num_faqs);
   event.preventDefault();
 });
 
