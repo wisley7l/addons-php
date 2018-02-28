@@ -186,7 +186,7 @@ $("#rm-plan").click(function(event){
   // maximum number of faqs that can be added
   if (num_plan > 1) { // if maximum number not reached
     $("div#plan-"+num_plan).attr('style','display:none;');
-    num_faqs -= 1;
+    num_plan -= 1;
   }
 
 event.preventDefault();

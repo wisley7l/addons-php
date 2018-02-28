@@ -186,6 +186,7 @@ if(empty($_POST)) { // not exist post
        $plan_extend = $plan['plans'][1]['value'];
      }
 
+     $body_json['plans'] = $$plan;
      echo $body_json;
 
      /* $query =  "INSERT INTO `themes` (`title`, `partner_id`, `description`,
