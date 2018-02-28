@@ -104,7 +104,7 @@ if(empty($_POST)) { // not exist post
        //header("Location: ../dashboard-uploaditem#ERRORAuthORType");
        exit;
      }
-     echo $authetication;
+     // echo $authetication;
      // make sure it is module_package
      if ($type_app == 3 ) { // is module_package
        // valid (type_module)
@@ -127,8 +127,8 @@ if(empty($_POST)) { // not exist post
        if ($plan_basic > $plans['plans'][$i]['value']) {
          $plan_basic = $plans['plans'][$i]['value'];
        }
-       echo PHP_EOL;
-       echo  $plans['plans'][$i]['value'];
+       // echo PHP_EOL;
+       // echo  $plans['plans'][$i]['value'];
      }
      $plans_json = json_encode($plans);
      // convert float to string and after convert string to int
@@ -189,7 +189,7 @@ if(empty($_POST)) { // not exist post
      $body_json = json_decode($body_json,true);
      $body_json['plans'] = $plans;
      $body_json = json_encode($body_json);
-     echo $body_json;
+     // echo $body_json;
 
      /* $query =  "INSERT INTO `themes` (`title`, `partner_id`, `description`,
           `version`, `json_body`, `link_documentation`, `link_video`, `value_license_basic`, `value_license_extend` )
