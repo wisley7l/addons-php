@@ -181,11 +181,12 @@ if(empty($_POST)) { // not exist post
      // create query TODO:
      // verify sessin, get id and save id in id_partner
      $plan_basic = $plan['plans'][0]['value'];
-     
+
      if ($plans['total_plans'] == 2) {
        $plan_extend = $plan['plans'][1]['value'];
      }
 
+     echo $body_json;
 
      /* $query =  "INSERT INTO `themes` (`title`, `partner_id`, `description`,
           `version`, `json_body`, `link_documentation`, `link_video`, `value_license_basic`, `value_license_extend` )
