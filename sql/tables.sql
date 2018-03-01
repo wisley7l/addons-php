@@ -223,20 +223,6 @@ CREATE TABLE IF NOT EXISTS `historic_transaction` (
   FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`)
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
-CREATE TABLE IF NOT EXISTS `favorites_apps` (
-  `store_id` MEDIUMINT UNSIGNED NOT NULL,
-  `app_id` MEDIUMINT UNSIGNED NOT NULL,
-  PRIMARY KEY (`store_id`, `app_id`),
-  FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-
-CREATE TABLE IF NOT EXISTS `favorites_themes` (
-  `store_id` MEDIUMINT UNSIGNED NOT NULL,
-  `theme_id` MEDIUMINT UNSIGNED NOT NULL,
-  PRIMARY KEY (`store_id`, `theme_id`),
-  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-
 CREATE TABLE IF NOT EXISTS `historic_withdrawal` (
   `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `partner_id` SMALLINT UNSIGNED NOT NULL,

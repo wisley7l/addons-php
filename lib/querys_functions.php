@@ -809,6 +809,12 @@ function item_page($id_item, $is_app)
         'website' => $item['link_documentation']
     );
 
+    return array(
+      'item' => $theme,
+      'plans' => $plans,
+      'faqs' => $faqs
+    );
+
   }
 }
 

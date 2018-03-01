@@ -37,6 +37,10 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       'video' => 'https://www.youtube.com/embed/WcTRQXtXJPs',
       'website' => 'https://apps.shopify.com/',
     );
+    // TODO:
+    // $info = item_page($id_app,1);
+    // app_info = $info['item'];
+    // $plans = $infor['plans'];
 
     //images app
     //$array_images = getImagesApp();
@@ -52,13 +56,18 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       'video' => 'https://www.youtube.com/embed/WcTRQXtXJPs',
       'website' => 'https://themes.shopify.com/',
     );
+
+    // TODO:
+    // $info = item_page($id_app,0);
+    // app_info = $info['item'];
+    // $plans = $infor['plans'];
   }
   else {
     // redirect page error or information error
     echo "error";
   }
 
-  //images theme
+  //images theme (not implemted)
   //$array_images = getImagesTheme();
   //$image_main = $array_images[0];
 }
@@ -72,9 +81,11 @@ else {
   exit;
 }
 
+// exists diference page app and page theme
 $info_page = array('app' => $app,
 );
 
+// TODO: delete
 $plan1 = array('id' => 'licence-regular',
   'name' => 'License Regular',
   'price' => 16.00 ,
