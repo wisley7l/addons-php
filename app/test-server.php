@@ -38,7 +38,7 @@ $eh_aqui = strlen ( $string ) - 2;
 // //echo $plan_basic;
 $antes = substr($string, 0, $eh_aqui);
 //
-$depois = substr($string, $eh_aqui + 1);
+$depois = substr($string, $eh_aqui);
 //
 $string = $antes . "." . $depois;
 
