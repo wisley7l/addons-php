@@ -30,9 +30,9 @@
 //
 // header("Location: ../");
 // exit;
-$number = 1001;
+$number = 100001;
 $string = strval ($number);
-$eh_aqui = strlen ( $string ) - 2;
+$eh_aqui = strlen ( $string ) - 1;
 // echo $eh_aqui;
 // //$plan_basic = number_format($number, 2, '', '');
 // //echo $plan_basic;
