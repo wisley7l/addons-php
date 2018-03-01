@@ -34,7 +34,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $app_info = array('id' => $id_app,
       'name' => 'APP',
       'description' => '' ,
-      'video' => 'https://www.youtube.com/embed/WcTRQXtXJPs',
+      'video' => '"https://www.youtube.com/embed/gkjITSCiAxQ"',
       'website' => 'https://apps.shopify.com/',
     );
     // TODO:
@@ -53,7 +53,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $app_info = array('id' => $id_app,
       'name' => 'THEME',
       'description' => 'Esta é a Descrição do APP ou do TEMA',
-      'video' => 'https://www.youtube.com/embed/WcTRQXtXJPs',
+      'video' => '"https://www.youtube.com/embed/gkjITSCiAxQ"',
       'website' => 'https://themes.shopify.com/',
     );
 
