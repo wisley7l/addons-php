@@ -24,7 +24,7 @@ if (file_exists(__DIR__ . '/config/config.php')) {
 }
 
 // create connection to the database
-$conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS);
+$conn = mysqli_connect(Addons\MYSQL_HOST, Addons\MYSQL_USER, Addons\MYSQL_PASS);
 // check connection
 if (mysqli_connect_errno()) {
   echo 'Connection failed: ';
@@ -34,7 +34,7 @@ if (mysqli_connect_errno()) {
 }
 
 // create database in MariaDB
-if (mysqli_query($conn, 'CREATE DATABASE IF NOT EXISTS ' . Addon\MYSQL_DB) === true) {
+if (mysqli_query($conn, 'CREATE DATABASE IF NOT EXISTS ' . Addons\MYSQL_DB) === true) {
   echo 'MySQL database created';
   echo PHP_EOL;
 
