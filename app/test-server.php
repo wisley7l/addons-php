@@ -30,7 +30,7 @@
 //
 // header("Location: ../");
 // exit;
-$number = 1000;
+$number = 1001;
 $string = strval ($number);
 $eh_aqui = strlen ( $string ) - 2;
 echo $eh_aqui;
