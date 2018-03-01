@@ -44,7 +44,3 @@ $string = $antes . "." . $depois;
 
 
 echo (float) $string;
-echo PHP_EOL;
-// echo $antes;
-// echo PHP_EOL;
-// echo $depois;

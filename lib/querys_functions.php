@@ -54,9 +54,14 @@ if (mysqli_connect_errno()) {
   exit();
 }
 // APPS
-function treatNumber($value)
+function treatNumber($number)
 {
-  
+  $value = strval ($number); // length number
+  $part = strlen ( $value ) - 2; // the last two digits are equivalent to cents
+  $real = substr($value, 0, $part); // value without the cents
+  $cents = substr($value, $part); // value only the cents
+  $value = $real . "." . $cents; // value complet (string)
+  return (float) $value;
 }
 
 // (1) function to fetch all apps with limit __OK__
