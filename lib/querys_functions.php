@@ -54,6 +54,10 @@ if (mysqli_connect_errno()) {
   exit();
 }
 // APPS
+function treatNumber($value)
+{
+  
+}
 
 // (1) function to fetch all apps with limit __OK__
 function search_all_apps($limit)

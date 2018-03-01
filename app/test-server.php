@@ -30,3 +30,7 @@
 //
 // header("Location: ../");
 // exit;
+$number = 1000;
+$plan_basic = (float) number_format($number, 2, '.', '');
+
+echo $plan_basic;
