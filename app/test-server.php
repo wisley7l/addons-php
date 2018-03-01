@@ -40,11 +40,11 @@ $antes = substr($string, 0, $eh_aqui);
 //
 $depois = substr($string, $eh_aqui + 1);
 //
-// $string = $antes . "-" . $depois;
+$string = $antes . "." . $depois;
 
 
-// echo $string;
+echo $string;
 echo PHP_EOL;
-echo $antes;
-echo PHP_EOL;
+// echo $antes;
+// echo PHP_EOL;
 // echo $depois;
