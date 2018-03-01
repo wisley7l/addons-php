@@ -32,7 +32,7 @@
 // exit;
 $number = 1001;
 $string = strval ($number);
-$eh_aqui = strlen ( $string );
+$eh_aqui = strlen ( $string ) - 2;
 // echo $eh_aqui;
 // //$plan_basic = number_format($number, 2, '', '');
 // //echo $plan_basic;
