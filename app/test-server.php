@@ -31,6 +31,14 @@
 // header("Location: ../");
 // exit;
 $number = 1000;
-$plan_basic = (float) number_format($number, 2, '.', '');
 
-echo $plan_basic;
+// //$plan_basic = number_format($number, 2, '', '');
+// //echo $plan_basic;
+// $antes = substr($string, 0, $eh_aqui);
+//
+// $depois = substr($string, $eh_aqui + 1);
+//
+// $string = $antes . "-" . $depois;
+
+
+echo strval ($number);
