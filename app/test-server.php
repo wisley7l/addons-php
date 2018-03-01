@@ -32,7 +32,7 @@
 // exit;
 $number = 1000;
 $string = strval ($number);
-$eh_aqui = 2;
+$eh_aqui = 1;
 // //$plan_basic = number_format($number, 2, '', '');
 // //echo $plan_basic;
 $antes = substr($string, 0, $eh_aqui);
