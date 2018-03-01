@@ -43,7 +43,7 @@ $depois = substr($string, $eh_aqui);
 $string = $antes . "." . $depois;
 
 
-echo $string;
+echo (float) $string;
 echo PHP_EOL;
 // echo $antes;
 // echo PHP_EOL;
