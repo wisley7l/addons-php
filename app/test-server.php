@@ -33,7 +33,7 @@
 $number = 1001;
 $string = strval ($number);
 $eh_aqui = strlen ( $string );
-echo $eh_aqui;
+// echo $eh_aqui;
 // //$plan_basic = number_format($number, 2, '', '');
 // //echo $plan_basic;
 $antes = substr($string, 0, $eh_aqui);
@@ -43,8 +43,8 @@ $depois = substr($string, $eh_aqui + 1);
 // $string = $antes . "-" . $depois;
 
 
-echo $string;
+// echo $string;
 echo PHP_EOL;
 echo $antes;
 echo PHP_EOL;
-echo $depois;
+// echo $depois;
