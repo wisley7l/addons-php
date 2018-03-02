@@ -32,6 +32,7 @@ if (isset($_GET['logout'])){
   session_destroy();
   // obs. check redirection on all pages
   header("Location: index");
+  exit;
 }
 //(end) * Required on all pages *
 
