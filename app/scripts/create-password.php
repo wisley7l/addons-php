@@ -1,5 +1,4 @@
 <?php
-$login = false;
 /* TODO:
 // create connection to the database
 $conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
@@ -15,11 +14,8 @@ if (mysqli_connect_errno()) {
 session_write_close();
 session_start();
 // if the session exists
-if (isset($_SESSION)) {
-  $login = $_SESSION['login'];
-}
 // TODO: treat login redirect index
-if (empty($_POST) OR $login == true) {
+if (empty($_POST) OR $_SESSION['login'] == true) {
   // error redirect index
   header("Location: ../index#errorcreate");
   exit;

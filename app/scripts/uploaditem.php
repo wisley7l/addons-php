@@ -23,7 +23,6 @@ if (mysqli_connect_errno()) {
 */
 ////header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
-$login = false;
 
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
@@ -33,12 +32,11 @@ session_start();
 if (isset($_SESSION)) {
   //modify the value of the login variable, by the value saved in the session
   //var_dump($_SESSION);
-  $login = $_SESSION['login'];
   // set values for user, with the values saved in the session
   // array used to set user panel parameters
   $user_login = getUserLogin($dictionary);
 }
-if ($login == false) { // if not connected
+if ($_SESSION['login'] == false) { // if not connected
   //header("Location: ../#ERRORLOGIN");
   exit;
 }

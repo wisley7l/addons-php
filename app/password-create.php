@@ -1,7 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
-$login = false;
 // if login is true redirect index
 //TODO: seccion
 // TODO: treat login
@@ -32,7 +31,7 @@ $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
 echo $twig->render('password-create.twig', array(
   'dictionary' => $dictionary,
-  'login' => $login,
+  'login' => $_SESSION['login'],
   'info_footer' => $info_footer,
     // test itens
   'user' => $user,

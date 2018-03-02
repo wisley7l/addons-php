@@ -1,7 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
-$login = false;
 $name_item; // variable save term search
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
@@ -11,7 +10,6 @@ session_start();
 if (isset($_SESSION)) {
   //modify the value of the login variable, by the value saved in the session
   //var_dump($_SESSION);
-  $login = $_SESSION['login'];
   // set values for user, with the values saved in the session
   // array used to set user panel parameters
   $user_login = getUserLogin($dictionary);
@@ -126,7 +124,7 @@ $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
 echo $twig->render('apps-themes-page.twig', array(
   'dictionary' => $dictionary,
-  'login' => $login,
+  'login' => $_SESSION['login'],
   'info_footer' => $info_footer,
   'info_page' => $info_page,
   'segment' => $filter_segment,

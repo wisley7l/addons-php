@@ -3,16 +3,7 @@ header('Content-Type: text/html; charset=utf-8');
 // get dictionary
 $dictionary = get_dictionary();
 // variable to check the user login, because some options are only allowed for online users
-$login = false;
-// check if there was a login attempt and treats error and success attempts
-if (isset($_GET['EROORLOGIN'])) {
-  // create hidden div to handle login error attempt
-    print '<div class="addons-error-login" style="display:none">' . $dictionary['word_invalid_login'] . '</div>';
-}
-if (isset($_GET['SUCCESSLOGIN'])) {
-    // create hidden div to handle login success attempt
-    print '<div class="addons-sucess-login" style="display:none">' . $dictionary['word_sucess_login'] . '</div>';
-}
+
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
 session_write_close();
@@ -21,7 +12,6 @@ session_start();
 if (isset($_SESSION)) {
   //modify the value of the login variable, by the value saved in the session
   //var_dump($_SESSION);
-  $login = $_SESSION['login'];
   // set values for user, with the values saved in the session
   // array used to set user panel parameters
   $user_login = getUserLogin($dictionary);
@@ -72,7 +62,7 @@ $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
 echo $twig->render('author-items-page.twig', array(
   'dictionary' => $dictionary,
-  'login' => $login,
+  'login' => $_SESSION['login'],
   'implemented' => false,
   'info_footer' => $info_footer,
   'app_category' => $app_category,
