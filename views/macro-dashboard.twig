@@ -688,28 +688,28 @@
 {% macro item_list(dictionary,item) %}
   <div class="transaction-list-item">
     <div class="transaction-list-item-date">
-      <p>Dec 12th, 2014</p>
+      <p>{{item.date}}</p>
     </div>
     <div class="transaction-list-item-author">
-      <p class="text-header"><a href="">Sarah-Imaginarium</a></p>
+      <p class="text-header"><a href="">-</a></p>
     </div>
     <div class="transaction-list-item-item">
-      <p class="category primary"><a href="">Westeros Custom Clothing</a></p>
+      <p class="category primary"><a href="">{{item.name}}</a></p>
     </div>
     <div class="transaction-list-item-detail">
       <p>Sale</p>
     </div>
     <div class="transaction-list-item-code">
-      <p><span class="light">ED3546</span></p>
+      <p><span class="light">{{item.code}}</span></p>
     </div>
     <div class="transaction-list-item-price">
-      <p>$ 12</p>
+      <p>{{dictionary.coin}}$ {{item.price}}</p>
     </div>
     <div class="transaction-list-item-cut">
-      <p><span class="light">50%</span></p>
+      <p><span class="light">-</span></p>
     </div>
     <div class="transaction-list-item-earnings">
-      <p class="text-header">$ 6</p>
+      <p class="text-header">-</p>
     </div>
     <div class="transaction-list-item-icon">
       <div class="transaction-icon primary">
