@@ -33,8 +33,8 @@ if ($_SESSION['login'] == false) {
 
 // obtain the total number of items sold and the total amount collected from the user's sales
 $sales_user = array(
-  'total_items' => 100 ,
-  'total_earnings' => 2000
+  'total_items' => 100 , // get in DB
+  'total_earnings' => 2000 // get in DB 
 );
 
 
