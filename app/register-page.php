@@ -19,6 +19,7 @@ if (isset($_GET['logout'])){
   // if attempt is true, destroy session values and redirect to index page
   session_destroy();
   header("Location: index");
+  exit;
 }
 // check if logout attempt
 if (isset($_GET['logout'])){

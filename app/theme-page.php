@@ -19,6 +19,7 @@ if (isset($_GET['logout'])){
   // if attempt is true, destroy session values and redirect to index page
   session_destroy();
   header("Location: index");
+  exit;
 }
 // varible select filter
 $filter = array('all' => 'selected',
