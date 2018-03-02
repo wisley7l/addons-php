@@ -687,7 +687,7 @@
 
 {% macro item_list(dictionary) %}
   <div class="transaction-list-item">
-    <div class="">
+    <div class="transaction-list-item-date">
       <p>Dec 12th, 2014</p>
     </div>
     <div class="transaction-list-item-author">
@@ -696,21 +696,22 @@
     <div class="transaction-list-item-item">
       <p class="category primary"><a href="">Westeros Custom Clothing</a></p>
     </div>
-    <div class="transaction-list-item-detail">
+    <!--div class="transaction-list-item-detail">
       <p>Sale</p>
-    </div>
+    </div-->
     <div class="transaction-list-item-code">
       <p><span class="light">ED3546</span></p>
     </div>
     <div class="transaction-list-item-price">
       <p>$ 12</p>
     </div>
-    <div class="transaction-list-item-cut">
+    <!--div class="transaction-list-item-cut">
       <p><span class="light">50%</span></p>
-    </div>
+    </div-->
     <div class="transaction-list-item-earnings">
       <p class="text-header">$ 6</p>
     </div>
+    {#
     <div class="transaction-list-item-icon">
       <div class="transaction-icon primary">
         <!-- SVG PLUS -->
@@ -720,5 +721,6 @@
         <!-- /SVG PLUS -->
       </div>
     </div>
+    #}
   </div>
 {% endmacro %}
