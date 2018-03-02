@@ -59,7 +59,7 @@ function createSession($id,$email,$name,$credits,$image)
   $_SESSION['user_name'] = $email; // get via API
   $_SESSION['name'] = $name; // get via API
   $_SESSION['login'] = true;
-  $_SESSION['is_store'] = true; // false is partner, true is store
+  $_SESSION['is_store'] = false; // false is partner, true is store
   $_SESSION['credits'] = (float) $credits; // get via DB
   $_SESSION['path_image'] = $image; // Get via DB
   if (!is_writable(session_save_path())) {
