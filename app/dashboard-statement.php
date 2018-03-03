@@ -37,12 +37,12 @@ $sales_user = array(
   'total_earnings' => 2000 // get in DB
 );
 $item = array(
-  'id_item' => 1000,
+  'id_item' => '1000',
   'price' => 12,
   'date' => '2 de marco',
   'code' => 'EF001',
   'is_app' => 'app',
-  'id_shopkeeper' => 3
+  'id_shopkeeper' => '3'
  );
 
 
