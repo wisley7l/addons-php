@@ -42,7 +42,7 @@ $item = array(
   'date' => '2 de marco',
   'code' => 'EF001',
   'is_app' => 'app',
-  'id_shopkeeper ' => 3
+  'id_shopkeeper' => 3
  );
 
 
