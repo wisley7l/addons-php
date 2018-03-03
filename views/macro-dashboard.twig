@@ -675,10 +675,11 @@
     <div class="transaction-list-header-price">
       <p class="text-header small">Price</p>
     </div>
-    {#}
+
     <div class="transaction-list-header-cut">
-      <p class="text-header small">Your Cut</p>
+      <p class="text-header small">Notes</p>
     </div>
+    {#}
     <div class="transaction-list-header-earnings">
       <p class="text-header small">Earnings</p>
     </div>
@@ -694,10 +695,10 @@
       <p>{{item.date}}</p>
     </div>
     <div class="transaction-list-item-author">
-      <p class="text-header"><a href="">{{item.id_shopkeeper}}</a></p>
+      <p class="text-header">{{item.id_shopkeeper}}</p>
     </div>
     <div class="transaction-list-item-item">
-      <p class="category primary"><a href="">{{item.id_item}}</a></p>
+      <p class="category primary">{{item.id_item}}</p>
     </div>
     <div class="transaction-list-item-detail">
       <p>{{item.is_app}}</p>
@@ -708,10 +709,11 @@
     <div class="transaction-list-item-price">
       <p>{{dictionary.coin}}$ {{item.price}}</p>
     </div>
-    {#
+
     <div class="transaction-list-item-cut">
-      <p><span class="light">-</span></p>
+      <p><span class="light">{{item.note}}</span></p>
     </div>
+    {#
     <div class="transaction-list-item-earnings">
       <p class="text-header">-</p>
     </div>
