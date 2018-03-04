@@ -845,21 +845,55 @@ function item_page($id_item, $is_app)
   }
 }
 
+function search_transaction_id($id_partner)
+{
+  $id = (int) $id_partner;
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT `id`, `partner_id`, `store_id`, `app_id`, `theme_id`,
+    `transaction_code`, `notes`, `description`, `payment_value` ,`date_transaction`
+    FROM `historic_transaction`
+    WHERE ( `partner_id` = $id)";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = array(
+        'id'=> $row['id'],
+        'partner_id'=> $row['partner_id'],
+        'store_id'=> $row['store_id'],
+        'app_id'=> $row['app_id'],
+        'theme_id'=> $row['theme_id'],
+        'transaction_code'=> $row['transaction_code'],
+        'notes'=> $row['notes'],
+        'description'=> $row['description'],
+        'payment_value'=> $row['payment_value'],
+        'date_transaction'=> $row['date_transaction'],
+      );
+    }
+
+    // free result set
+    mysqli_free_result($result);
+
+  }
+  return $item;
+
+}
 
 
-$app_info = array('id' => $id_app,
-  'name' => 'THEME',
-  'description' => 'Esta é a Descrição do APP ou do TEMA',
-  'json' => 'treat json'
-);
-$plan2 = array('id' => 'extend-license',
-'name' => 'Extend License',
-'price' => 36.00,
-'description' => 'Test description 2',
-'checked' => '',
-);
 
-
+/*
+`id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+`partner_id` SMALLINT UNSIGNED NULL,
+`store_id` MEDIUMINT UNSIGNED NULL,
+`app_id` MEDIUMINT UNSIGNED NULL,
+`theme_id` MEDIUMINT UNSIGNED NULL,
+`transaction_code` VARCHAR(255) NULL,
+`notes` TEXT NULL,
+`description` VARCHAR (255) NULL,
+`payment_value` MEDIUMINT NOT NULL DEFAULT 0,
+`date_transaction` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+*/
 
 /*
 In the index page search the highlights of themes and app.
