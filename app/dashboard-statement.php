@@ -46,6 +46,7 @@ $item = array(
   'note' => 'nothing'
  );
 
+ // $transaction = search_transaction_id( $_SESSION['user_id']); 
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');

@@ -722,7 +722,8 @@ function search_theme_id($id_theme)
     `json_body`, `paid`, `version`, `version_date`, `avg_stars`, `evaluations`, `link_documentation`,
     `link_video`, `value_license_basic`,`value_license_extend`
     FROM `themes`
-    WHERE ( `id` = $id)";
+    WHERE ( `id` = $id)
+    LIMIT 1";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -854,6 +855,7 @@ function search_transaction_id($id_partner)
     `transaction_code`, `notes`, `description`, `payment_value` ,`date_transaction`
     FROM `historic_transaction`
     WHERE ( `partner_id` = $id)";
+    $transaction = array();
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -870,14 +872,12 @@ function search_transaction_id($id_partner)
         'payment_value'=> $row['payment_value'],
         'date_transaction'=> $row['date_transaction'],
       );
+      array_push($transaction, $item);
     }
-
     // free result set
     mysqli_free_result($result);
-
   }
-  return $item;
-
+  return $transaction;
 }
 
 
