@@ -851,26 +851,37 @@ function search_transaction_id($id_partner)
   $id = (int) $id_partner;
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
-  $query = "SELECT `id`, `partner_id`, `store_id`, `app_id`, `theme_id`,
-    `transaction_code`, `notes`, `description`, `payment_value` ,`date_transaction`
-    FROM `historic_transaction`
-    WHERE ( `partner_id` = $id)";
+  $query = "SELECT `h.id`, `h.partner_id`, `h.store_id`, `h.app_id`, `h.theme_id`,
+    `h.transaction_code`, `h.notes`, `h.description`, `h.payment_value` ,
+    `h.date_transaction`, `t.title`, `a.title`
+    FROM `historic_transaction h`, `themes t`, `apps a`
+    WHERE ( `partner_id` = $id AND (`h.app_id` = `a.id` OR `h.app_id` = `t.id`) )";
     $transaction = array();
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
+      if ($row[`h.app_id`] == NULL) {
+        $name = $row['t.title'];
+        $id_item = $row['h.theme_id'];
+        $is_app = 'THEME';
+      }else {
+        $name = $row['a.title'];
+        $id_item = $row['h.app_id'];
+        $is_app = 'APP';
+      }
       $item = array(
-        'id'=> $row['id'],
-        'partner_id'=> $row['partner_id'],
-        'store_id'=> $row['store_id'],
-        'app_id'=> $row['app_id'],
-        'theme_id'=> $row['theme_id'],
-        'transaction_code'=> $row['transaction_code'],
-        'notes'=> $row['notes'],
-        'description'=> $row['description'],
-        'payment_value'=> $row['payment_value'],
-        'date_transaction'=> $row['date_transaction'],
+        'id'=> $row['h.id'],
+        'partner_id'=> $row['h.partner_id'],
+        'store_id'=> $row['h.store_id'],
+        'id_item'=> $id_item,
+        'code'=> $row['h.transaction_code'],
+        'notes'=> $row['h.notes'],
+        'description'=> $row['h.description'],
+        'payment_value'=> $row['h.payment_value'],
+        'date_transaction'=> $row['h.date_transaction'],
+        'name' => $name,
+        'is_app' => $is_app
       );
       array_push($transaction, $item);
     }
@@ -883,16 +894,15 @@ function search_transaction_id($id_partner)
 
 
 /*
-`id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
-`partner_id` SMALLINT UNSIGNED NULL,
-`store_id` MEDIUMINT UNSIGNED NULL,
-`app_id` MEDIUMINT UNSIGNED NULL,
-`theme_id` MEDIUMINT UNSIGNED NULL,
-`transaction_code` VARCHAR(255) NULL,
-`notes` TEXT NULL,
-`description` VARCHAR (255) NULL,
-`payment_value` MEDIUMINT NOT NULL DEFAULT 0,
-`date_transaction` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+$item = array(
+  'id_item' => 1000,
+  'price' => 12,
+  'date' => '2 de marco',
+  'code' => 'EF001',
+  'is_app' => 'app',
+  'id_shopkeeper' => 3,
+  'note' => 'nothing'
+ );
 */
 
 /*

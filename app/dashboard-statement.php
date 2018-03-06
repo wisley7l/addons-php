@@ -37,16 +37,20 @@ $sales_user = array(
   'total_earnings' => 2000 // get in DB
 );
 $item = array(
+  'id' => 1,
+  'id_shopkeeper' => 3,
   'id_item' => 1000,
+  'code' => 'EF001',
+  'note' => 'nothing',
+  'description' => 'nothing',
   'price' => 12,
   'date' => '2 de marco',
-  'code' => 'EF001',
+  'name' => 'ITEM',
   'is_app' => 'app',
-  'id_shopkeeper' => 3,
-  'note' => 'nothing'
  );
 
- // $transaction = search_transaction_id( $_SESSION['user_id']); 
+
+ // $transaction = search_transaction_id( $_SESSION['user_id']);
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');

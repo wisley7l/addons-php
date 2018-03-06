@@ -656,6 +656,19 @@
 
 {# macros for dashboard Statement #}
 {% macro header_table(dictionary) %}
+{#
+id
+id_shopkeeper -
+id_item -
+code -
+note -
+description
+price -
+date -
+name
+is_app -
+#}
+
   <div class="transaction-list-header">
     <div class="transaction-list-header-date">
       <p class="text-header small">Date</p>
@@ -666,18 +679,23 @@
     <div class="transaction-list-header-code">
       <p class="text-header small">Item ID</p>
     </div>
+    <div class="transaction-list-header-item">
+      <p class="text-header small">Name Item</p>
+    </div>
     <div class="transaction-list-header-detail">
       <p class="text-header small">Detail</p>
     </div>
     <div class="transaction-list-header-code">
-      <p class="text-header small">Code</p>
+      <p class="text-header small">Code TRANSACTION</p>
     </div>
     <div class="transaction-list-header-price">
       <p class="text-header small">Price</p>
     </div>
-
     <div class="transaction-list-header-item">
       <p class="text-header small">Notes</p>
+    </div>
+    <div class="transaction-list-header-item">
+      <p class="text-header small">Description</p>
     </div>
     {#}
     <div class="transaction-list-header-earnings">
