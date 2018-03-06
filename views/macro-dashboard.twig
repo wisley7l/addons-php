@@ -683,16 +683,16 @@ is_app -
       <p class="text-header small">Name Item</p>
     </div>
     <div class="transaction-list-header-code">
-      <p class="text-header small">Code TRANSACTION</p>
+      <p class="text-header small">Transaction</p>
     </div>
     <div class="transaction-list-header-price">
       <p class="text-header small">Price</p>
     </div>
     <div class="transaction-list-header-item">
-      <p class="text-header small">Notes :d</p>
+      <p class="text-header small">Notes</p>
     </div>
     <div class="transaction-list-header-item">
-      <p class="text-header small">Description</p>
+      <p class="text-header small">Desc</p>
     </div>
     {#}
     <div class="transaction-list-header-earnings">
@@ -715,6 +715,9 @@ is_app -
     <div class="transaction-list-item-code">
       <p class="category primary">{{item.id_item}}</p>
     </div>
+    <div class="transaction-list-item-code">
+      <p class="category primary">{{item.name}}</p>
+    </div>
     <div class="transaction-list-item-detail">
       <p>{{item.is_app}}</p>
     </div>
@@ -727,6 +730,9 @@ is_app -
 
     <div class="transaction-list-item-item">
       <p><span class="light">{{item.note}}</span></p>
+    </div>
+    <div class="transaction-list-item-item">
+      <p><span class="light">{{item.description}}</span></p>
     </div>
     {#
     <div class="transaction-list-item-earnings">
