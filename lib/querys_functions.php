@@ -864,11 +864,9 @@ function search_transaction_id($id_partner)
       if ($row[`h.app_id`] == NULL) {
         $name = $row['t.title'];
         $id_item = $row['h.theme_id'];
-        $is_app = 'THEME';
       }else {
         $name = $row['a.title'];
         $id_item = $row['h.app_id'];
-        $is_app = 'APP';
       }
       $item = array(
         'id'=> $row['h.id'],
@@ -881,7 +879,6 @@ function search_transaction_id($id_partner)
         'payment_value'=> $row['h.payment_value'],
         'date_transaction'=> $row['h.date_transaction'],
         'name' => $name,
-        'is_app' => $is_app
       );
       array_push($transaction, $item);
     }

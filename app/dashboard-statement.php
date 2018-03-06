@@ -46,7 +46,6 @@ $item = array(
   'price' => 12,
   'date' => '2 de marco',
   'name' => 'ITEM',
-  'is_app' => 'app',
  );
 
 
