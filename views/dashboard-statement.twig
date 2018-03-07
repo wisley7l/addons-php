@@ -123,14 +123,12 @@
 				<!-- /TRANSACTION LIST HEADER -->
 
         {# use foreach to list items #}
+				{% for i in item %}
+					<!-- TRANSACTION LIST ITEM -->
+					{{macro_dashboad.item_list(dictionary,i)}}
+					<!-- /TRANSACTION LIST ITEM -->
+				{% endfor %}
 
-				<!-- TRANSACTION LIST ITEM -->
-          {{macro_dashboad.item_list(dictionary,item)}}
-				<!-- /TRANSACTION LIST ITEM -->
-				
-				<!-- TRANSACTION LIST ITEM -->
-          {{macro_dashboad.item_list(dictionary,item)}}
-				<!-- /TRANSACTION LIST ITEM -->
 
 				<!-- PAGER -->
         {# not implemented in moment

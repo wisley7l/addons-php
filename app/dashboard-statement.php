@@ -36,7 +36,8 @@ $sales_user = array(
   'total_items' => 100 , // get in DB
   'total_earnings' => 2000 // get in DB
 );
-$item = array(
+$item = array();
+$buy = array(
   'id' => 1,
   'id_shopkeeper' => 3,
   'id_item' => 1000,
@@ -47,6 +48,8 @@ $item = array(
   'date' => '2 de marco',
   'name' => 'ITEM',
  );
+ array_push($item, $buy);
+
 
 
  // $transaction = search_transaction_id( $_SESSION['user_id']);
