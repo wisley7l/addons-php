@@ -54,5 +54,5 @@ echo $twig->render('dashboard-withdrawls.twig', array(
     // test
   'user' => $user_login,
   'item' => $item,
-  'limit_withdrawl' => $_SESSION['creadits']
+  'limit_withdrawl' => $_SESSION['credits']
 ));
