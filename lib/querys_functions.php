@@ -876,7 +876,7 @@ function search_transaction_id($id_partner)
         'code'=> $row['h.transaction_code'],
         'notes'=> $row['h.notes'],
         'description'=> $row['h.description'],
-        'payment_value'=> $row['h.payment_value'],
+        'price'=> $row['h.payment_value'],
         'date_transaction'=> $row['h.date_transaction'],
         'name' => $name,
       );

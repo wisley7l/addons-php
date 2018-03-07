@@ -1,4 +1,4 @@
-dashboard-statement<?php
+<?php
 header('Content-Type: text/html; charset=utf-8');
 // get dictionary
 $dictionary = get_dictionary();
@@ -31,10 +31,14 @@ if ($_SESSION['login'] == false) {
 }
 //(end) * Required on all pages *
 
+//TODO:
+// $transaction = search_transaction_id( $_SESSION['user_id']);
+
+
 // obtain the total number of items sold and the total amount collected from the user's sales
 $sales_user = array(
-  'total_items' => 100 , // get in DB
-  'total_earnings' => 2000 // get in DB
+  'total_items' => 100 , // get in DB count($transaction)
+  'total_earnings' => 2000 // get in DB array_sum($transaction['price'])
 );
 $item = array();
 $buy = array(
@@ -50,8 +54,6 @@ $buy = array(
  );
  array_push($item, $buy);
  array_push($item, $buy);
-
- // $transaction = search_transaction_id( $_SESSION['user_id']);
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
