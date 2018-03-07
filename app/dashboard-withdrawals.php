@@ -45,13 +45,13 @@ $withdrawal = array(
  // array_push($item, $buy);
  // array_push($item, $buy);
 
-// // intial twig and send varibles for template
-// $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
-// $twig = new Twig_Environment($loader);
-// echo $twig->render('dashboard-statement.twig', array(
-//   'dictionary' => $dictionary,
-//   'login' => $_SESSION['login'],
-//     // test
-//   'user' => $user_login,
-//   'item' => $item
-// ));
+// intial twig and send varibles for template
+$loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
+$twig = new Twig_Environment($loader);
+echo $twig->render('dashboard-withdrawls.twig', array(
+  'dictionary' => $dictionary,
+  'login' => $_SESSION['login'],
+    // test
+  'user' => $user_login,
+  'item' => $item
+));
