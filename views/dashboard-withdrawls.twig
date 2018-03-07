@@ -19,290 +19,131 @@
     <!-- DASHBOARD BODY -->
     <div class="dashboard-body">
         <!-- DASHBOARD HEADER -->
-        <div class="dashboard-header retracted">
-            <!-- DB CLOSE BUTTON -->
-            <a href="index.html" class="db-close-button">
-               <img src="../images/dashboard/back-icon.png" alt="back-icon">
-            </a>
-            <!-- DB CLOSE BUTTON -->
-
-			<!-- DB OPTIONS BUTTON -->
-            <div class="db-options-button">
-               <img src="../images/dashboard/db-list-right.png" alt="db-list-right">
-			   <img src="../images/dashboard/close-icon.png" alt="close-icon">
-            </div>
-            <!-- DB OPTIONS BUTTON -->
-
-            <!-- DASHBOARD HEADER ITEM -->
-            <div class="dashboard-header-item title">
-                <!-- DB SIDE MENU HANDLER -->
-                 <div class="db-side-menu-handler">
-                    <img src="../images/dashboard/db-list-left.png" alt="db-list-left">
-                </div>
-                <!-- /DB SIDE MENU HANDLER -->
-                <h6>Your Dashboard</h6>
-            </div>
-            <!-- /DASHBOARD HEADER ITEM -->
-
-			<!-- DASHBOARD HEADER ITEM -->
-            <div class="dashboard-header-item form">
-                <form class="dashboard-search">
-                    <input type="text" name="search" id="search_dashboard" placeholder="Search on dashboard...">
-                    <input type="image" src="../images/dashboard/search-icon.png" alt="search-icon">
-                </form>
-            </div>
-            <!-- /DASHBOARD HEADER ITEM -->
-
-            <!-- DASHBOARD HEADER ITEM -->
-            <div class="dashboard-header-item stats">
-                <!-- STATS META -->
-                <div class="stats-meta">
-                    <div class="pie-chart pie-chart1">
-                        <!-- SVG PLUS -->
-                        <svg class="svg-plus primary">
-                            <use xlink:href="#svg-plus"></use>
-                        </svg>
-                        <!-- /SVG PLUS -->
-                    </div>
-                    <h6>64.579</h6>
-                    <p>New Original Visits</p>
-                </div>
-                <!-- /STATS META -->
-            </div>
-            <!-- /DASHBOARD HEADER ITEM -->
-
-            <!-- DASHBOARD HEADER ITEM -->
-            <div class="dashboard-header-item stats">
-                <!-- STATS META -->
-                <div class="stats-meta">
-                    <div class="pie-chart pie-chart2">
-                        <!-- SVG PLUS -->
-                        <svg class="svg-minus tertiary">
-                            <use xlink:href="#svg-minus"></use>
-                        </svg>
-                        <!-- /SVG PLUS -->
-                    </div>
-                    <h6>20.8</h6>
-                    <p>Less Sales Than Last Month</p>
-                </div>
-                <!-- /STATS META -->
-            </div>
-            <!-- /DASHBOARD HEADER ITEM -->
-
-            <!-- DASHBOARD HEADER ITEM -->
-            <div class="dashboard-header-item stats">
-                <!-- STATS META -->
-                <div class="stats-meta">
-                    <div class="pie-chart pie-chart3">
-                        <!-- SVG PLUS -->
-                        <svg class="svg-plus primary">
-                            <use xlink:href="#svg-plus"></use>
-                        </svg>
-                        <!-- /SVG PLUS -->
-                    </div>
-                    <h6>322k</h6>
-                    <p>Total Visits This Month</p>
-                </div>
-                <!-- /STATS META -->
-            </div>
-            <!-- /DASHBOARD HEADER ITEM -->
-
-			<!-- DASHBOARD HEADER ITEM -->
-            <div class="dashboard-header-item back-button">
-                <a href="index.html" class="button mid dark-light">Back to Homepage</a>
-            </div>
-            <!-- /DASHBOARD HEADER ITEM -->
-        </div>
+				{{macro_dashboad.dashboard_header(dictionary)}}
         <!-- DASHBOARD HEADER -->
 
         <!-- DASHBOARD CONTENT -->
         <div class="dashboard-content">
             <!-- HEADLINE -->
-            <div class="headline simple primary">
-                <h4>Withdrawals</h4>
-            </div>
-            <!-- /HEADLINE -->
+            {#not implemented im momment
+              <div class="headline statement primary">
+                <h4>Sales Statement</h4>
+        				<a href="#" class="button primary">Download File</a>
+        				<button form="statement_filter_form" class="button dark-light">Refine Search</button>
+        				<form id="statement_filter_form" name="statement_filter_form" class="statement-form">
+        					<!-- DATEPICKER -->
+        					<div class="datepicker-wrap">
+        						<input type="text" id="date_from" name="date_from" class="datepicker" value="02/22/2016">
+        						<span class="icon-calendar"></span>
+        					</div>
+        					<!-- /DATEPICKER -->
+        					<label>to:</label>
+        					<!-- DATEPICKER -->
+        					<div class="datepicker-wrap">
+        						<input type="text" id="date_to" name="date_to" class="datepicker" value="02/22/2017">
+        						<span class="icon-calendar"></span>
+        					</div>
+        					<!-- /DATEPICKER -->
+        					<label for="ss_filter" class="select-block">
+        						<select name="ss_filter" id="ss_filter">
+        							<option value="0">Sales and Purchases</option>
+        							<option value="1">Sales</option>
+        							<option value="2">Purchases</option>
+        						</select>
+        						<!-- SVG ARROW -->
+        						<svg class="svg-arrow">
+        							<use xlink:href="#svg-arrow"></use>
+        						</svg>
+        						<!-- /SVG ARROW -->
+        					</label>
+        				</form>
+              </div>
+            #}
+          <!-- /HEADLINE -->
 
-			<!-- FORM BOX ITEMS -->
-			<div class="form-box-items">
-				<!-- FORM BOX ITEM -->
-				<div class="form-box-item">
-					<h4>Withdraw Earnings</h4>
-					<hr class="line-separator">
-					<form id="withdraw-form">
-						<!-- INPUT CONTAINER -->
-						<div class="input-container">
-							<label for="amount" class="rl-label required">Amount to Withdraw ($745.00 Maximum)</label>
-							<input type="number" id="amount" name="amount" min="0" step="any" placeholder="Enter the amount you want to withdraw...">
-						</div>
-						<!-- /INPUT CONTAINER -->
-						<hr class="line-separator">
-
-						<!-- INPUT CONTAINER -->
-						<div class="input-container">
-							<label class="rl-label required">Choose your Withdrawal Method </label>
-							<!-- RADIO -->
-							<input type="radio" id="paypal" name="payment_method" value="pp" checked>
-							<label for="paypal">
-								<span class="radio primary"><span></span></span>
-								Paypal
-							</label>
-							<!-- /RADIO -->
-
-							<!-- RADIO -->
-							<input type="radio" id="skrill" name="payment_method" value="sk">
-							<label for="skrill">
-								<span class="radio primary"><span></span></span>
-								Skrill
-							</label>
-							<!-- /RADIO -->
-
-							<!-- RADIO -->
-							<input type="radio" id="int_transf" name="payment_method" value="it">
-							<label for="int_transf">
-								<span class="radio primary"><span></span></span>
-								International Transfer ($200 Minimum)
-							</label>
-							<!-- /RADIO -->
-						</div>
-						<!-- /INPUT CONTAINER -->
-
-						<hr class="line-separator">
-
-						<!-- INPUT CONTAINER -->
-						<div class="input-container">
-							<label for="pp_ac" class="rl-label required">Your Paypal Account</label>
-							<input type="text" id="pp_ac" name="pp_ac" placeholder="Enter your paypal account here...">
-						</div>
-						<!-- /INPUT CONTAINER -->
-
-						<!-- INPUT CONTAINER -->
-						<div class="input-container">
-							<label for="pwd_ac" class="rl-label required">Confirm your Password</label>
-							<input type="password" id="pwd_ac" name="pwd_ac" placeholder="Confirm your password for security...">
-						</div>
-						<!-- /INPUT CONTAINER -->
-
-						<hr class="line-separator">
-
-						<button class="button big dark">Request <span class="primary">Withdrawal</span></button>
-					</form>
-				</div>
-				<!-- /FORM BOX ITEM -->
-
-				<!-- FORM BOX ITEM -->
-				<div class="form-box-item withdraw-history">
-					<h4>Withdrawal History</h4>
-					<hr class="line-separator">
-					<!-- TRANSACTION HISTORY -->
-					<div class="transaction-history">
-						<!-- TRANSACTION HISTORY ITEM -->
-						<div class="transaction-history-item">
-							<div class="transaction-history-item-date">
-								<p>Mar 27th, 2014</p>
-							</div>
-							<div class="transaction-history-item-mail">
-								<p>jhonny_fisher@paypal.com</p>
-							</div>
-							<div class="transaction-history-item-amount">
-								<p class="text-header">$537,20</p>
-							</div>
-							<div class="transaction-history-item-status">
-								<p class="text-header">Pending</p>
-							</div>
-						</div>
-						<!-- /TRANSACTION HISTORY ITEM -->
-
-						<!-- TRANSACTION HISTORY ITEM -->
-						<div class="transaction-history-item">
-							<div class="transaction-history-item-date">
-								<p>Feb 25th, 2014</p>
-							</div>
-							<div class="transaction-history-item-mail">
-								<p>jhonny_fisher@paypal.com</p>
-							</div>
-							<div class="transaction-history-item-amount">
-								<p class="text-header">$235,00</p>
-							</div>
-							<div class="transaction-history-item-status">
-								<p class="text-header primary">Paid</p>
-							</div>
-						</div>
-						<!-- /TRANSACTION HISTORY ITEM -->
-
-						<!-- TRANSACTION HISTORY ITEM -->
-						<div class="transaction-history-item">
-							<div class="transaction-history-item-date">
-								<p>Jan 28th, 2014</p>
-							</div>
-							<div class="transaction-history-item-mail">
-								<p>jhonny_fisher@paypal.com</p>
-							</div>
-							<div class="transaction-history-item-amount">
-								<p class="text-header">$1200,85</p>
-							</div>
-							<div class="transaction-history-item-status">
-								<p class="text-header primary">Paid</p>
-							</div>
-						</div>
-						<!-- /TRANSACTION HISTORY ITEM -->
-
-						<!-- TRANSACTION HISTORY ITEM -->
-						<div class="transaction-history-item">
-							<div class="transaction-history-item-date">
-								<p>Dec 26th, 2013</p>
-							</div>
-							<div class="transaction-history-item-mail">
-								<p>jhonny_fisher@paypal.com</p>
-							</div>
-							<div class="transaction-history-item-amount">
-								<p class="text-header">$406,08</p>
-							</div>
-							<div class="transaction-history-item-status">
-								<p class="text-header primary">Paid</p>
-							</div>
-						</div>
-						<!-- /TRANSACTION HISTORY ITEM -->
-
-						<!-- TRANSACTION HISTORY ITEM -->
-						<div class="transaction-history-item">
-							<div class="transaction-history-item-date">
-								<p>Nov 29th, 2013</p>
-							</div>
-							<div class="transaction-history-item-mail">
-								<p>jhonny_fisher@paypal.com</p>
-							</div>
-							<div class="transaction-history-item-amount">
-								<p class="text-header">$97,60</p>
-							</div>
-							<div class="transaction-history-item-status">
-								<p class="text-header primary">Paid</p>
-							</div>
-						</div>
-						<!-- /TRANSACTION HISTORY ITEM -->
-
-						<!-- TRANSACTION HISTORY ITEM -->
-						<div class="transaction-history-item">
-							<div class="transaction-history-item-date">
-								<p>Oct 24th, 2013</p>
-							</div>
-							<div class="transaction-history-item-mail">
-								<p>jhonny_fisher@paypal.com</p>
-							</div>
-							<div class="transaction-history-item-amount">
-								<p class="text-header">$512,64</p>
-							</div>
-							<div class="transaction-history-item-status">
-								<p class="text-header primary">Paid</p>
-							</div>
-						</div>
-						<!-- /TRANSACTION HISTORY ITEM -->
+			<!-- SALE DATA -->
+			<div class="sale-data">
+				<!-- SALE DATA ITEM -->
+				<div class="sale-data-item">
+					<span class="sl-icon icon-present"></span>
+					<p class="text-header big">{{sales_user.total_items}}</p>
+					<div class="sale-data-item-info">
+						<p class="text-header">{{dictionary.word_items_sold}}</p>
+						<p>{{dictionary.word_up_to_now}}</p>
 					</div>
-					<!-- /TRANSACTION HISTORY -->
 				</div>
-				<!-- /FORM BOX ITEM -->
+				<!-- /SALE DATA ITEM-->
+
+				<!-- SALE DATA ITEM -->
+        {#not implemented #}
+				<div class="sale-data-item">
+          {#
+					<span class="sl-icon icon-present"></span>
+					<p class="text-header big">234</p>
+					<div class="sale-data-item-info">
+						<p class="text-header">Products Sold</p>
+						<p>In this Month</p>
+					</div>
+          #}
+				</div>
+				<!-- /SALE DATA ITEM-->
+
+				<!-- SALE DATA ITEM -->
+        {# not implemented in moment #}
+				<div class="sale-data-item">
+          {#
+					<span class="sl-icon icon-tag"></span>
+					<p class="price big"><span>$</span>12.450</p>
+					<div class="sale-data-item-info">
+						<p class="text-header">Total Sales</p>
+						<p>In all Time</p>
+					</div>
+          #}
+				</div>
+				<!-- /SALE DATA ITEM-->
+
+				<!-- SALE DATA ITEM -->
+				<div class="sale-data-item">
+					<span class="sl-icon icon-wallet"></span>
+					<p class="price big"><span>{{dictionary.coin}}$</span>{{sales_user.total_earnings}}</p>
+					<div class="sale-data-item-info">
+						<p class="text-header">{{dictionary.word_total_earnings}}</p>
+						<p>{{dictionary.word_from_sales}}</p>
+					</div>
+				</div>
+				<!-- /SALE DATA ITEM-->
 			</div>
-			<!-- /FORM BOX ITEMS -->
+			<!-- /SALE DATA -->
+
+			<!-- TRANSACTION LIST -->
+			<div class="transaction-list">
+				<!-- TRANSACTION LIST HEADER -->
+          {{macro_dashboad.header_table(dictionary)}}
+				<!-- /TRANSACTION LIST HEADER -->
+
+        {# use foreach to list items #}
+				{% for i in item %}
+					<!-- TRANSACTION LIST ITEM -->
+					{{macro_dashboad.item_list(dictionary,i)}}
+					<!-- /TRANSACTION LIST ITEM -->
+				{% endfor %}
+
+
+				<!-- PAGER -->
+        {# not implemented in moment
+				<div class="pager-wrap">
+					<div class="pager primary">
+						<div class="pager-item"><p>1</p></div>
+						<div class="pager-item active"><p>2</p></div>
+						<div class="pager-item"><p>3</p></div>
+						<div class="pager-item"><p>...</p></div>
+						<div class="pager-item"><p>17</p></div>
+					</div>
+				</div>
+        #}
+				<!-- /PAGER -->
+			</div>
+			<!-- /TRANSACTION LIST -->
         </div>
         <!-- DASHBOARD CONTENT -->
     </div>
