@@ -62,4 +62,4 @@ function form_popup() {
 
 $('a#button-create-account').onclick(function(event) {
   console.log('sim');
-});
+})(jQuery);
