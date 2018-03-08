@@ -42,8 +42,8 @@ $withdrawal = array(
   'value' => 12,
   'date' => '2 de marco',
  );
- array_push($item, $withdrwal);
- array_push($item, $withdrwal);
+ array_push($item, $withdrawal);
+ array_push($item, $withdrawal);
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
