@@ -34,7 +34,7 @@ if ($_SESSION['login'] == false) {
 //TODO:
 
 
-// $item = array();
+$item = array();
 $withdrawal = array(
   'id' => 1,
   'id_partner' => 3,
@@ -42,8 +42,8 @@ $withdrawal = array(
   'value' => 12,
   'date' => '2 de marco',
  );
- // array_push($item, $buy);
- // array_push($item, $buy);
+ array_push($item, $withdrwal);
+ array_push($item, $withdrwal);
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');

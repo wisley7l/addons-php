@@ -105,24 +105,27 @@
 					<hr class="line-separator">
 					<!-- TRANSACTION HISTORY -->
 					<div class="transaction-history">
-						<!-- TRANSACTION HISTORY ITEM -->
+						{% for item in seq %}
+            <!-- TRANSACTION HISTORY ITEM -->
 						<div class="transaction-history-item">
 							<div class="transaction-history-item-date">
-								<p>Mar 27th, 2014</p>
+								<p>{{i.date}}</p>
 							</div>
 							<div class="transaction-history-item-mail">
-								<p>jhonny_fisher@paypal.com</p>
+								<p>{{i.id_partner}}</p>
 							</div>
 							<div class="transaction-history-item-amount">
-								<p class="text-header">$537,20</p>
+								<p class="text-header">{{dictionary.coin}}${{i.value}}</p>
 							</div>
 							<div class="transaction-history-item-status">
-								<p class="text-header">Pending</p>
+								<p class="text-header">{{i.status}}</p>
 							</div>
 						</div>
 						<!-- /TRANSACTION HISTORY ITEM -->
 
-						
+						{% endfor %}
+
+
 					</div>
 					<!-- /TRANSACTION HISTORY -->
 				</div>
