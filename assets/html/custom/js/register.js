@@ -60,6 +60,6 @@ function form_popup() {
   $('#create-password').attr('class', 'form-popup');
 }
 
-$('a#button-create-account').onclick(function(event) {
+$('a#button-create-account').click(function(event) {
   console.log('sim');
 })(jQuery);
