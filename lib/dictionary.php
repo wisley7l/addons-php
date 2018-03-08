@@ -172,7 +172,7 @@ function get_dictionary () {
       $word_profile_page = 'Perfil ';
       $word_account_settings = 'Alterar Senha';
       $word_sales_statment = 'Histórico de vendas';
-      $word_withdrawals = 'Hitórico de Saques ';
+      $word_withdrawals = 'Saques ';
       $word_manage_items = 'Gerenciar itens';
       $word_upload_item = 'Envio de item ';
       $word_login_account = 'Faça login na sua conta';

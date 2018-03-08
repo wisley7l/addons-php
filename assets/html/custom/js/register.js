@@ -59,3 +59,7 @@ function form_popup() {
   //enable form send email for create password
   $('#create-password').attr('class', 'form-popup');
 }
+
+$('a#button-create-account').onclick(function(event) {
+  console.log('sim');
+});
