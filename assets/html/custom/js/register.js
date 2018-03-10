@@ -63,5 +63,4 @@ function form_popup() {
 $('a#button-create-account').click(function(event) {
   window.open("https://docs.google.com/forms/d/e/1FAIpQLSfd8uUsMG6N_rSFi2blGuk3Rfqi_BPp6fxschkmkdhEBVDsyw/viewform","_blank");
   window.location.href = "/index";
-
 })(jQuery);

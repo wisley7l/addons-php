@@ -888,19 +888,35 @@ function search_transaction_id($id_partner)
   return $transaction;
 }
 
+// TODO: Edit
+function search_withdrawl_id($id_partner)
+{
+  $id = (int) $id_partner;
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT
+    FROM
+    WHERE ( `partner_id` = $id )";
+    $transaction = array();
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = array(
+
+      );
+      array_push($transaction, $item);
+    }
+    // free result set
+    mysqli_free_result($result);
+  }
+  return $transaction;
+}
 
 
-/*
-$item = array(
-  'id_item' => 1000,
-  'price' => 12,
-  'date' => '2 de marco',
-  'code' => 'EF001',
-  'is_app' => 'app',
-  'id_shopkeeper' => 3,
-  'note' => 'nothing'
- );
-*/
+
+
+
 
 /*
 In the index page search the highlights of themes and app.
