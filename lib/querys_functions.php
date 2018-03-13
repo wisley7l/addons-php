@@ -894,8 +894,9 @@ function search_withdrawl_id($id_partner)
   $id = (int) $id_partner;
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
-  $query = "SELECT
-    FROM
+  $query = "SELECT `h.id`, `h.partner_id`, `h.date_withdrawal`,
+   `h.value_withdrawal`, `h.transaction_code`, `h.notes`
+    FROM `historic_withdrawal`
     WHERE ( `partner_id` = $id )";
     $transaction = array();
 
@@ -903,7 +904,12 @@ function search_withdrawl_id($id_partner)
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
       $item = array(
-
+      'id' => $row['h.id'],
+      'id_partner' => $row['h.partner_id'],
+      'code' => $row['h.date_withdrawal'],
+      'value' => $row['h.value_withdrawal'],
+      'date' => $row['h.transaction_code'],
+      'notes' => $row['h.notes']
       );
       array_push($transaction, $item);
     }
