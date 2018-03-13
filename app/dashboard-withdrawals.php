@@ -32,7 +32,7 @@ if ($_SESSION['login'] == false) {
 //(end) * Required on all pages *
 
 //TODO:
-
+// $item = search_withdrawl_id($_SESSION['user_id']);
 
 $item = array();
 $withdrawal = array(
