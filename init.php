@@ -51,7 +51,7 @@ if (mysqli_query($conn, 'CREATE DATABASE IF NOT EXISTS ' . Addons\MYSQL_DB) === 
     } else {
       echo 'Failed to create tables';
       echo PHP_EOL;
-      echo handle_msyql_error($conn);
+      echo msyql_error($conn);
       echo PHP_EOL;
     }
   }
@@ -68,7 +68,7 @@ if (mysqli_query($conn, 'CREATE DATABASE IF NOT EXISTS ' . Addons\MYSQL_DB) === 
     } else {
       echo 'Failed to insert values into table';
       echo PHP_EOL;
-      echo handle_msyql_error($conn);
+      echo msyql_error($conn);
       echo PHP_EOL;
     }
   }
