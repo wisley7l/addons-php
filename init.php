@@ -66,7 +66,7 @@ if (mysqli_connect_errno()) {
     } else {
       echo 'Failed to create tables';
       echo PHP_EOL;
-      handle_msyql_error($conn);
+      handle_mysql_error($conn);
     }
   }
   // entering values in the category tables
@@ -82,6 +82,6 @@ if (mysqli_connect_errno()) {
     } else {
       echo 'Failed to insert values into table';
       echo PHP_EOL;
-      handle_msyql_error($conn);
+      handle_mysql_error($conn);
     }
   }
