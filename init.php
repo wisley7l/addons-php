@@ -70,7 +70,7 @@ if ($sql) {
   } else {
     echo 'Failed to create tables';
     echo PHP_EOL;
-    echo msyqli_error($conn);
+    echo mysqli_error($conn);
   }
 }
 // entering values in the category tables
@@ -86,6 +86,6 @@ if ($query) {
   } else {
     echo 'Failed to insert values into table';
     echo PHP_EOL;
-    msyqli_error($conn);
+    echo mysqli_error($conn);
   }
 }
