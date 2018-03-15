@@ -70,7 +70,7 @@ if ($sql) {
   } else {
     echo 'Failed to create tables';
     echo PHP_EOL;
-    msyqli_error($conn);
+    echo msyqli_error($conn);
   }
 }
 // entering values in the category tables
