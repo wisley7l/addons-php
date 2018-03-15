@@ -37,6 +37,21 @@ if (mysqli_connect_errno()) {
 if (mysqli_query($conn, 'CREATE DATABASE IF NOT EXISTS ' . Addons\MYSQL_DB) === true) {
   echo 'MySQL database created';
   echo PHP_EOL;
+} else {
+  echo 'Failed to create database';
+  echo PHP_EOL;
+  handle_msyql_error($conn);
+}
+
+// update connection to the database
+$conn = mysqli_connect(Addons\MYSQL_HOST, Addons\MYSQL_USER, Addons\MYSQL_PASS, Addons\MYSQL_DB );
+// check connection
+if (mysqli_connect_errno()) {
+  echo 'Connection failed: ';
+  echo mysqli_connect_error();
+  echo PHP_EOL;
+  exit();
+}
 
   // create tables
   // read tables.sql file
@@ -51,8 +66,7 @@ if (mysqli_query($conn, 'CREATE DATABASE IF NOT EXISTS ' . Addons\MYSQL_DB) === 
     } else {
       echo 'Failed to create tables';
       echo PHP_EOL;
-      echo msyql_error($conn);
-      echo PHP_EOL;
+      handle_msyql_error($conn);
     }
   }
   // entering values in the category tables
@@ -68,13 +82,6 @@ if (mysqli_query($conn, 'CREATE DATABASE IF NOT EXISTS ' . Addons\MYSQL_DB) === 
     } else {
       echo 'Failed to insert values into table';
       echo PHP_EOL;
-      echo msyql_error($conn);
-      echo PHP_EOL;
+      handle_msyql_error($conn);
     }
   }
-} else {
-  echo 'Failed to create database';
-  echo PHP_EOL;
-  echo handle_msyql_error($conn);
-  echo PHP_EOL;
-}
