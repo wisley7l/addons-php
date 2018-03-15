@@ -41,6 +41,8 @@ if (mysqli_query($conn, 'CREATE DATABASE IF NOT EXISTS ' . Addons\MYSQL_DB) === 
   // create tables
   // read tables.sql file
   $sql = file_get_contents(__DIR__ . '/sql/tables.sql');
+  echo $sql;
+  echo PHP_EOL;
   if ($sql) {
     // http://php.net/manual/en/mysqli.multi-query.php
     if (mysqli_multi_query($conn, $sql)) {
