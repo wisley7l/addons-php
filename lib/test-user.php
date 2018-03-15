@@ -95,8 +95,8 @@ function getAppThemeTest($id_app,$id_partner,$dictionary,$app)
     'value' => 20.03,
     'star_on' => 3, // not implemented
     'star_off' => 2, // not implemented
-    'image' => 'http://soucatequista.com.br/wp-content/uploads/2016/12/Christmas_night-250x150.jpg',
-    'image_partner' => 'http://2.bp.blogspot.com/-7tydAWF_j7o/VbI736K_lTI/AAAAAAAADs4/vM0V-5nFTKw/s1600/boteco%2Bde%2Boa%2B%25285%2529.jpg',
+    'image' => '',
+    'image_partner' => '',
     'is_app'=> $app
   );
 }
@@ -111,7 +111,7 @@ function getInfoUser($id)
     'member_since' => '1 Janary 2018',
     'total_sales' => 100, // sales quantity query
     'web_site' => 'www.example.com',
-    'path_image' => 'https://cdn.pixabay.com/photo/2012/04/26/19/43/profile-42914_960_720.png',
+    'path_image' => '', // empty
     'number_apps_themes' => 3, // quantity of items found
     'number_badges' => 1, //not implemented
     'stars' => 1, // not implemented
