@@ -44,6 +44,19 @@ if (mysqli_query($conn, 'CREATE DATABASE IF NOT EXISTS ' . Addons\MYSQL_DB) === 
   handle_msyql_error($conn);
 }
 
+// create connection to the database
+$conn = mysqli_connect(Addons\MYSQL_HOST, Addons\MYSQL_USER, Addons\MYSQL_PASS,Addons\MYSQL_DB);
+// check connection
+if (mysqli_connect_errno()) {
+  echo 'Connection failed: ';
+  echo mysqli_connect_error();
+  echo PHP_EOL;
+  exit();
+}else {
+  echo "CONNECT";
+  echo PHP_EOL;
+}
+
 // create tables
 // read tables.sql file
 $sql = file_get_contents(__DIR__ . '/sql/tables.sql');
