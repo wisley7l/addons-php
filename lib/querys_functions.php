@@ -46,7 +46,7 @@ function getInfoUser($id,$member_since,$path_image,$profile_json)
 // QUERYS
 
 // create connection to the database
-$conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
+$conn = mysqli_connect(Addons\MYSQL_HOST, Addons\MYSQL_USER, Addons\MYSQL_PASS, Addons\MYSQL_DB);
 // check connection
 if (mysqli_connect_errno()) {
   echo 'Connection failed: ';
