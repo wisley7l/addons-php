@@ -74,6 +74,7 @@ if ($sql) {
 // entering values in the category tables
 // read categories.sql file
 $query = file_get_contents(__DIR__ . '/sql/categories.sql');
+echo $query;
 if ($query) {
   // http://php.net/manual/en/mysqli.multi-query.php
   if (mysqli_multi_query($conn, $query)) {
