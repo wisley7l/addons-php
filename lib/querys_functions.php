@@ -4,7 +4,7 @@ $dictionary = get_dictionary();
 // VARIABLES
 
 // FUNCTIONS
-
+/*
 // function handles item search to create view
 function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
   $name_partner, $image_partner, $dictionary,$app){
@@ -42,6 +42,7 @@ function getInfoUser($id,$member_since,$path_image,$profile_json)
     //'evaluations' => 5 // not implemented
   );
 }
+*/
 // QUERYS
 /*
 // create connection to the database
