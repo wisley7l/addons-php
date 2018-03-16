@@ -2,7 +2,7 @@
 // get dictionary
 $dictionary = get_dictionary();
 // VARIABLES
-//*
+
 // FUNCTIONS
 
 // function handles item search to create view
@@ -43,7 +43,7 @@ function getInfoUser($id,$member_since,$path_image,$profile_json)
   );
 }
 // QUERYS
-
+/*
 // create connection to the database
 $conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
 // check connection
@@ -53,6 +53,7 @@ if (mysqli_connect_errno()) {
   echo PHP_EOL;
   exit();
 }
+*/
 // APPS
 function treatNumber($number)
 {
@@ -802,7 +803,11 @@ function item_page($id_item, $is_app)
 
   }elseif ((int) $is_app == 0) { // is theme
     $item = search_theme_id($id_item);
-
+    /*
+    `id`, `partner_id`, `title`, `slug`, `thumbnail`, `description`,
+      `json_body`, `paid`, `version`, `version_date`, `avg_stars`, `evaluations`, `link_documentation`,
+      `link_video`, `value_license_basic`,`value_license_extend`
+    */
     $faqs_json = json_decode($item['json_body'],true);
     $plans_json = $faqs_json['plans'];
 
@@ -920,8 +925,9 @@ function search_withdrawl_id($id_partner)
 
 
 
-
-//In the index page search the highlights of themes and app.
+/*
+In the index page search the highlights of themes and app.
+*/
 
 
 
@@ -970,4 +976,3 @@ function search_withdrawl_id($id_partner)
 // check what plans you have, and return the description of each plan and the value.
 
 // name and description of the theme or app are required
-//*/
