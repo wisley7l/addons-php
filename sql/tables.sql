@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS `comment_themes` (
   `parent_comment_id` INT UNSIGNED NULL,
   PRIMARY KEY (`id`),
   INDEX (`theme_id`),
-  FOREIGN KEY (`theme_id`) REFERENCES `theme`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`parent_comment_id`) REFERENCES `comment_themes`(`id`) ON DELETE SET NULL ON UPDATE SET NULL
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
@@ -237,5 +237,5 @@ CREATE TABLE IF NOT EXISTS `historic_withdrawal` (
 
 CREATE TABLE IF NOT EXISTS `store` (
   `store_id` MEDIUMINT UNSIGNED NOT NULL,
-  `credits` MEDIUMINT NOT NULL DEFAULT 0,
+  `credits` MEDIUMINT NOT NULL DEFAULT 0
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
