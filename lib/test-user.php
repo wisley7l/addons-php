@@ -101,7 +101,7 @@ function getAppThemeTest($id_app,$id_partner,$dictionary,$app)
   );
 }
 // info partner for profile page
-function getInfoUser($id)
+function getInfoUserTest($id)
 {
   return array(
     'id' => $id,
