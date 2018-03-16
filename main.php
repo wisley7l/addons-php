@@ -61,6 +61,6 @@ require __DIR__ . '/lib/categories.php';
 //load test query php
 require __DIR__ . '/lib/test-user.php';
 //
-require __DIR__ . '/lib/query_functions.php';
+require __DIR__ . '/lib/querys_functions.php';
 // app script
 require $filename;
