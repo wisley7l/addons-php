@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `partners` (
   `profile_json` TEXT NULL,
   `credit` MEDIUMINT NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
-  INDEX (`username`),
+  INDEX (`id`)
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `partners_evaluations` (
