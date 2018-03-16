@@ -71,6 +71,15 @@ if ($sql) {
     handle_mysql_error($conn);
   }
 }
+// update connection to the database
+$conn = mysqli_connect(Addons\MYSQL_HOST, Addons\MYSQL_USER, Addons\MYSQL_PASS, Addons\MYSQL_DB);
+// check connection
+if (mysqli_connect_errno()) {
+  echo 'Connection failed: ';
+  echo mysqli_connect_error();
+  echo PHP_EOL;
+  exit();
+}
 // entering values in the category tables
 // read categories.sql file
 $query = file_get_contents(__DIR__ . '/sql/categories.sql');
