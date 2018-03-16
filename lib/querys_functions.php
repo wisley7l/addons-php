@@ -2,7 +2,7 @@
 // get dictionary
 $dictionary = get_dictionary();
 // VARIABLES
-/*
+//*
 // FUNCTIONS
 
 // function handles item search to create view
@@ -970,4 +970,4 @@ function search_withdrawl_id($id_partner)
 // check what plans you have, and return the description of each plan and the value.
 
 // name and description of the theme or app are required
-*/
+//*/
