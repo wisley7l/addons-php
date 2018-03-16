@@ -4,7 +4,7 @@ $dictionary = get_dictionary();
 // VARIABLES
 
 // FUNCTIONS
-/*
+
 // function handles item search to create view
 function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
   $name_partner, $image_partner, $dictionary,$app){
@@ -21,7 +21,7 @@ function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
       'is_app'=> $app // if app is equal 1
     );
 }
-
+/*
 // function to handle partner search and create view
 function getInfoUser($id,$member_since,$path_image,$profile_json)
 {
