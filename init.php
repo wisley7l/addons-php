@@ -60,11 +60,13 @@ if (mysqli_connect_errno()) {
 $sql = file_get_contents(__DIR__ . '/sql/tables.sql');
 if ($sql) {
   // http://php.net/manual/en/mysqli.multi-query.php
-  if (mysqli_multi_query($conn, $sql)) {
+  if ($result = mysqli_multi_query($conn, $sql)) {
     echo 'MySQL tables created';
     echo PHP_EOL;
     echo 'All done successfully, saying goodbye...';
     echo PHP_EOL;
+    // free result set
+    mysqli_free_result($result);
   } else {
     echo 'Failed to create tables';
     echo PHP_EOL;
@@ -78,11 +80,12 @@ $query = file_get_contents(__DIR__ . '/sql/categories.sql');
 echo $query;
 if ($query) {
   // http://php.net/manual/en/mysqli.multi-query.php
-  if (mysqli_multi_query($conn, $query)) {
+  if ($result = mysqli_multi_query($conn, $query)) {
     echo 'MySQL values entered';
     echo PHP_EOL;
     echo 'All done successfully, saying goodbye...';
     echo PHP_EOL;
+    mysqli_free_result($result);
   } else {
     echo 'Failed to insert values into table';
     echo PHP_EOL;
