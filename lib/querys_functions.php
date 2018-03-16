@@ -21,12 +21,9 @@ function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
       'is_app'=> $app // if app is equal 1
     );
 }
-/*
 // function to handle partner search and create view
 function getInfoUser($id,$member_since,$path_image,$profile_json)
 {
-
-
   return array(
     'id' => $id,
     'name' => '', // get via API
@@ -36,13 +33,13 @@ function getInfoUser($id,$member_since,$path_image,$profile_json)
     //'total_sales' => 100, // sales quantity query // not implemted
     'web_site' => '',// get via API
     'path_image' => $path_image,
-    'number_apps_themes' => 0, // quantity of items found, started with zero
+    'number_apps_themes' => 0 //, // quantity of items found, started with zero
     //'number_badges' => 1, //not implemented
     //'stars' => 1, // not implemented
     //'evaluations' => 5 // not implemented
   );
 }
-*/
+
 // QUERYS
 
 // create connection to the database
