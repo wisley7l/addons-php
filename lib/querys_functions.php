@@ -4,7 +4,7 @@ $dictionary = get_dictionary();
 // VARIABLES
 
 // FUNCTIONS
-/*
+
 // function handles item search to create view
 function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
   $name_partner, $image_partner, $dictionary,$app){
@@ -42,7 +42,7 @@ function getInfoUser($id,$member_since,$path_image,$profile_json)
     //'evaluations' => 5 // not implemented
   );
 }
-*/
+
 // QUERYS
 /*
 // create connection to the database
@@ -805,11 +805,7 @@ function item_page($id_item, $is_app)
 
   }elseif ((int) $is_app == 0) { // is theme
     $item = search_theme_id($id_item);
-    /*
-    `id`, `partner_id`, `title`, `slug`, `thumbnail`, `description`,
-      `json_body`, `paid`, `version`, `version_date`, `avg_stars`, `evaluations`, `link_documentation`,
-      `link_video`, `value_license_basic`,`value_license_extend`
-    */
+
     $faqs_json = json_decode($item['json_body'],true);
     $plans_json = $faqs_json['plans'];
 
@@ -922,7 +918,7 @@ function search_withdrawl_id($id_partner)
   return $transaction;
 }
 
-//*/
+//end */
 /*
 In the index page search the highlights of themes and app.
 */
