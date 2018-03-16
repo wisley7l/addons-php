@@ -22,7 +22,7 @@ function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
     );
 }
 // function to handle partner search and create view
-function FunctionName($id,$member_since,$path_image,$profile_json)
+function getInfoUser($id,$member_since,$path_image,$profile_json)
 {
   /*
   return array(
