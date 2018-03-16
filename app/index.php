@@ -88,8 +88,8 @@ else if (isset($_GET['term']) ){
   // add element in array
   //array_push($themes, $item);
   //OBS: when you are ready to enable these functions below.
-  $apps = search_all_apps(24); // return a maximum of 25 apps in the search
-  $themes = search_all_themes(24); // return a maximum of 25 themes in the search
+  //$apps = search_all_apps(24); // return a maximum of 25 apps in the search
+  //$themes = search_all_themes(24); // return a maximum of 25 themes in the search
 }
 
 
