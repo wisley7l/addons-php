@@ -54,6 +54,7 @@ if (mysqli_connect_errno()) {
   exit();
 }
 */
+/*
 // APPS
 function treatNumber($number)
 {
@@ -920,11 +921,7 @@ function search_withdrawl_id($id_partner)
   return $transaction;
 }
 
-
-
-
-
-
+//*/
 /*
 In the index page search the highlights of themes and app.
 */
