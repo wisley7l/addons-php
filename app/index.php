@@ -77,19 +77,19 @@ else if (isset($_GET['term']) ){
   // only test
   // test apps  // Perform db query to obtain this information
   // query apps in db
-  $item2 = getAppThemeTest(1000,1,$dictionary,1);
+  //$item2 = getAppThemeTest(1000,1,$dictionary,1);
   // query apps in db
-  $apps = array();
+  //$apps = array();
   // add element in array
-  array_push($apps, $item2);
+  //array_push($apps, $item2);
   // test themes // Perform db query to obtain this information
-  $item = getAppThemeTest(1111,1,$dictionary,0);
-  $themes = array();
+  //$item = getAppThemeTest(1111,1,$dictionary,0);
+  //$themes = array();
   // add element in array
-  array_push($themes, $item);
+  //array_push($themes, $item);
   //OBS: when you are ready to enable these functions below.
-  //$apps = search_all_apps(24); // return a maximum of 25 apps in the search
-  //$themes = search_all_themes(24); // return a maximum of 25 themes in the search
+  $apps = search_all_apps(24); // return a maximum of 25 apps in the search
+  $themes = search_all_themes(24); // return a maximum of 25 themes in the search
 }
 
 
