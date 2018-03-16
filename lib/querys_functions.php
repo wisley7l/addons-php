@@ -22,12 +22,7 @@ function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
     );
 }
 // function to handle partner search and create view
-function FunctionName($value='')
-{
-  # code...
-}
-/*
-function getInfoUser($id,$member_since,$path_image,$profile_json)
+function FunctionName($id,$member_since,$path_image,$profile_json)
 {
   /*
   return array(
@@ -44,6 +39,12 @@ function getInfoUser($id,$member_since,$path_image,$profile_json)
     //'stars' => 1, // not implemented
     //'evaluations' => 5 // not implemented
   );*/
+}
+
+/*
+function getInfoUser($id,$member_since,$path_image,$profile_json)
+{
+
 //}
 
 
