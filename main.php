@@ -59,7 +59,7 @@ require __DIR__ . '/lib/dictionary.php';
 // load categories
 require __DIR__ . '/lib/categories.php';
 //load test query php
-// require __DIR__ . '/lib/test-user.php';
+require __DIR__ . '/lib/test-user.php';
 //
 // require __DIR__ . '/lib/query_functions.php';
 // app script
