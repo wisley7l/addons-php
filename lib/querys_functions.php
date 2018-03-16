@@ -2,7 +2,7 @@
 // get dictionary
 $dictionary = get_dictionary();
 // VARIABLES
-
+/*
 // FUNCTIONS
 
 // function handles item search to create view
@@ -802,11 +802,7 @@ function item_page($id_item, $is_app)
 
   }elseif ((int) $is_app == 0) { // is theme
     $item = search_theme_id($id_item);
-    /*
-    `id`, `partner_id`, `title`, `slug`, `thumbnail`, `description`,
-      `json_body`, `paid`, `version`, `version_date`, `avg_stars`, `evaluations`, `link_documentation`,
-      `link_video`, `value_license_basic`,`value_license_extend`
-    */
+
     $faqs_json = json_decode($item['json_body'],true);
     $plans_json = $faqs_json['plans'];
 
@@ -924,9 +920,8 @@ function search_withdrawl_id($id_partner)
 
 
 
-/*
-In the index page search the highlights of themes and app.
-*/
+
+//In the index page search the highlights of themes and app.
 
 
 
@@ -975,3 +970,4 @@ In the index page search the highlights of themes and app.
 // check what plans you have, and return the description of each plan and the value.
 
 // name and description of the theme or app are required
+*/
