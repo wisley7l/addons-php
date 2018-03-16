@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `partners` (
   `credit` MEDIUMINT NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   INDEX (`username`),
-) CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `partners_evaluations` (
   `partner_id` SMALLINT UNSIGNED NOT NULL,
