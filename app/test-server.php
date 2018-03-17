@@ -46,4 +46,4 @@
 // echo (float) $string;
 
 $apps = search_all_apps(24); // return a maximum of 25 apps in the search
-// var_dump($apps);
+var_dump($apps);
