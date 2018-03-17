@@ -30,17 +30,20 @@
 //
 // header("Location: ../");
 // exit;
-$number = 101;
-$string = strval ($number);
-$eh_aqui = strlen ( $string ) - 2;
+// $number = 101;
+// $string = strval ($number);
+// $eh_aqui = strlen ( $string ) - 2;
 // echo $eh_aqui;
-// //$plan_basic = number_format($number, 2, '', '');
-// //echo $plan_basic;
-$antes = substr($string, 0, $eh_aqui);
+// $plan_basic = number_format($number, 2, '', '');
+// echo $plan_basic;
+// $antes = substr($string, 0, $eh_aqui);
 //
-$depois = substr($string, $eh_aqui);
+// $depois = substr($string, $eh_aqui);
 //
-$string = $antes . "." . $depois;
+// $string = $antes . "." . $depois;
+//
+//
+// echo (float) $string;
 
-
-echo (float) $string;
+$apps = search_all_apps(24); // return a maximum of 25 apps in the search
+echo $apps;
