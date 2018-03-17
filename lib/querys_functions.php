@@ -8,6 +8,13 @@ $dictionary = get_dictionary();
 // function handles item search to create view
 function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
   $name_partner, $image_partner, $dictionary,$app){
+    if ($image_partner == NULL ) {
+      $image_partner = "../images/avatars/avatar_01.jpg";
+
+    }
+    if ($image_app == NULL) {
+      $image_app = "../images/items/westeros_m.jpg";
+    }
     return array(
       'id_app' => $id_app,
       'name' => $name_app,
