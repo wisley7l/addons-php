@@ -136,7 +136,7 @@ function search_apps_free_name($limit,$search)
   $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p
-    WHERE (a.partner_id = p.id AND a.value_plan_basic = 0 AND a.title = $name)
+    WHERE (a.partner_id = p.id AND a.value_plan_basic = 0 AND a.title LIKE '%$name%')
     ORDER BY a.title
     LIMIT $number ";
 
