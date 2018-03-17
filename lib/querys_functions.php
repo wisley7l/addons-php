@@ -101,19 +101,19 @@ function search_all_apps_free($limit)
   $number = (int) $limit;
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
-  $query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
-    `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
-    FROM `apps a`, `partners p`
-    WHERE (`a.partner_id` = `p.id` AND `a.value_plan_basic` = 0)
-    ORDER BY `a.title`
+  $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
+    a.value_plan_basic,p.id AS p_id, p.path_image
+    FROM apps a, partners p
+    WHERE (a.partner_id = p.id AND a.value_plan_basic = 0)
+    ORDER BY a.title
     LIMIT $number ";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
-      $item = get_app_theme($row['a.id'], $row['a.partner_id'], $row['a.title'],
-        $row['a.thumbnail'], treatNumber($row['a.value_plan_basic']),
-        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
+        $row['thumbnail'], treatNumber($row['value_plan_basic']),
+        $row['p_id'], $row['path_image'], $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
 
