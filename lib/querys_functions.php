@@ -71,12 +71,12 @@ function search_all_apps($limit)
   $number = (int) $limit;
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
-  $query = "SELECT `a.id`, `a.partner_id`,`a.title`, `a.thumbnail`,
-    `a.value_plan_basic`,`p.id`, `p.username`, `p.path_image`
-    FROM `apps a`, `partners p`
-    WHERE (`a.partner_id` = `p.id`)
-    ORDER BY `a.title`
-    LIMIT $number ";
+    $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
+      a.value_plan_basic,p.id, p.path_image
+      FROM apps a, partners p
+      WHERE (a.partner_id = p.id)
+      ORDER BY a.title
+      LIMIT $number ";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
