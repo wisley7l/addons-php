@@ -81,7 +81,7 @@ function search_all_apps($limit)
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
-      echo $row['a.id'];
+      var_dump($row);
       $item = get_app_theme($row['a.id'], $row['a.partner_id'], $row['a.title'],
         $row['a.thumbnail'], treatNumber($row['a.value_plan_basic']),
         $row['p.username'], $row['p.path_image'], $dictionary, 1);
