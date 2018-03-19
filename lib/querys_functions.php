@@ -557,7 +557,7 @@ function search_themes_name_category($limit,$search,$category)
   $name = mysqli_real_escape_string($conn, $search); // escape string
   // query search app and theme for index page
   $query = "SELECT t.id, t.partner_id,t.title, t.thumbnail,
-    t.value_license_basic,p.id, p.username, p.path_image
+    t.value_license_basic,p.id AS p_id, p.path_image
     FROM themes t, partners p, category_themes c , relationship_category_themes r
     WHERE (t.partner_id = p.id AND t.title = $name
       AND r.theme_id = t.id AND r.category_themes_id = c.id AND c.id = $id_category)
@@ -567,9 +567,9 @@ function search_themes_name_category($limit,$search,$category)
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
-      $item = get_app_theme($row['t.id'], $row['t.partner_id'], $row['t.title'],
-        $row['t.thumbnail'], treatNumber($row['t.value_license_basic']),
-        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
+        $row['thumbnail'], treatNumber($row['value_license_basic']),
+        $row['p_id'], $row['path_image'], $dictionary, 0);
       array_push($themes, $item); // add item in array
     }
 
@@ -591,7 +591,7 @@ function search_themes_partner($partner)
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT t.id, t.partner_id,t.title, t.thumbnail,
-    t.value_license_basic,p.id, p.username, p.path_image
+    t.value_license_basic,p.id AS p_id, p.path_image
     FROM themes t, partners p,
     WHERE (t.partner_id = p.id AND t.partner_id = $id_partner)
     ORDER BY t.title";
@@ -599,9 +599,9 @@ function search_themes_partner($partner)
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
-      $item = get_app_theme($row['t.id'], $row['t.partner_id'], $row['t.title'],
-        $row['t.thumbnail'], treatNumber($row['t.value_license_basic']),
-        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
+        $row['thumbnail'], treatNumber($row['value_license_basic']),
+        $row['p_id'], $row['path_image'], $dictionary, 0);
       array_push($themes, $item); // add item in array
     }
 
@@ -621,7 +621,7 @@ function search_apps_partner($partner)
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
-    a.value_plan_basic,p.id, p.username, p.path_image
+    a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p,
     WHERE (a.partner_id = p.id AND t.partner_id = $id_partner)
     ORDER BY a.title";
@@ -629,9 +629,9 @@ function search_apps_partner($partner)
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
-      $item = get_app_theme($row['a.id'], $row['a.partner_id'], $row['a.title'],
-        $row['a.thumbnail'], treatNumber($row['a.value_plan_basic']),
-        $row['p.username'], $row['p.path_image'], $dictionary, 1);
+      $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
+        $row['thumbnail'], treatNumber($row['value_plan_basic']),
+        $row['p_id'], $row['path_image'], $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
 
@@ -855,33 +855,33 @@ function search_transaction_id($id_partner)
   $id = (int) $id_partner;
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
-  $query = "SELECT h.id, h.partner_id, h.store_id, h.app_id, h.theme_id,
+  $query = "SELECT h.id, h.partner_id, h.store_id, h.app_id, h.theme_id ,
     h.transaction_code, h.notes, h.description, h.payment_value ,
-    h.date_transaction, t.title, a.title
+    h.date_transaction, t.title AS t_name, a.title AS a_name
     FROM historic_transaction h, themes t, apps a
-    WHERE ( partner_id = $id AND (h.app_id = a.id OR h.app_id = t.id) )";
+    WHERE ( partner_id = $id AND (h.app_id = a.id OR h.theme_id = t.id) )";
     $transaction = array();
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
       if ($row[h.app_id] == NULL) {
-        $name = $row['t.title'];
-        $id_item = $row['h.theme_id'];
+        $name = $row['t_name'];
+        $id_item = $row['theme_id'];
       }else {
-        $name = $row['a.title'];
-        $id_item = $row['h.app_id'];
+        $name = $row['a_name'];
+        $id_item = $row['app_id'];
       }
       $item = array(
-        'id'=> $row['h.id'],
-        'partner_id'=> $row['h.partner_id'],
-        'store_id'=> $row['h.store_id'],
+        'id'=> $row['id'],
+        'partner_id'=> $row['partner_id'],
+        'store_id'=> $row['store_id'],
         'id_item'=> $id_item,
-        'code'=> $row['h.transaction_code'],
-        'notes'=> $row['h.notes'],
-        'description'=> $row['h.description'],
-        'price'=> $row['h.payment_value'],
-        'date_transaction'=> $row['h.date_transaction'],
+        'code'=> $row['transaction_code'],
+        'notes'=> $row['notes'],
+        'description'=> $row['description'],
+        'price'=> $row['payment_value'],
+        'date_transaction'=> $row['date_transaction'],
         'name' => $name,
       );
       array_push($transaction, $item);
@@ -908,12 +908,12 @@ function search_withdrawl_id($id_partner)
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
       $item = array(
-      'id' => $row['h.id'],
-      'id_partner' => $row['h.partner_id'],
-      'code' => $row['h.date_withdrawal'],
-      'value' => $row['h.value_withdrawal'],
-      'date' => $row['h.transaction_code'],
-      'notes' => $row['h.notes']
+      'id' => $row['id'],
+      'id_partner' => $row['partner_id'],
+      'code' => $row['date_withdrawal'],
+      'value' => $row['value_withdrawal'],
+      'date' => $row['transaction_code'],
+      'notes' => $row['notes']
       );
       array_push($transaction, $item);
     }
