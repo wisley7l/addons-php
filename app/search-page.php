@@ -39,7 +39,7 @@ $filter = array('all' => 'selected',
     // OBS: when you are ready to enable these functions below.
     $apps = search_apps_free_name(12,$name_item); // return a maximum of 12 apps in the search
     $number_found = count($apps);
-    $themes = search_apps_free_name(12,$name_item); // return a maximum of 12 apps in the search
+    $themes = search_themes_free_name(12,$name_item); // return a maximum of 12 apps in the search
     $apps_themes = array_merge($apps,$themes);
     $number_found = count($apps_themes);
 
