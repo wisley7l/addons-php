@@ -33,7 +33,7 @@ function getInfoUser($id,$member_since,$path_image,$profile_json)
 {
   return array(
     'id' => $id,
-    'name' => '', // get via API
+    'name' => 'test', // get via API
     'location' => '',// get via API
     'occupation' => '',// get via API
     'member_since' => $member_since,
@@ -651,7 +651,7 @@ function search_partner_id($partner)
 
   $query =  "SELECT p.id, p.member_since, p.path_image, p.profile_json
     FROM partners p
-    WHERE (p.id = '$id_partner')
+    WHERE (p.id = $id_partner)
     LIMIT '$number' ";
 
     if ($result = mysqli_query(  $conn, $query )) {
