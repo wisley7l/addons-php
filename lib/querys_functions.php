@@ -648,7 +648,6 @@ function search_partner_id($partner)
   $id_partner = (int) $partner; // escape id partner
   $conn = $GLOBALS['conn']; // get varible global conn
   $number = 1; // limit
-  echo $id_partner;
   $query =  "SELECT p.id, p.member_since, p.path_image, p.profile_json
     FROM partners p
     WHERE (p.id = $id_partner)
@@ -663,6 +662,9 @@ function search_partner_id($partner)
       }
       // free result set
       mysqli_free_result($result);
+    }
+    else {
+      echo "ERROR";
     }
     return $partner;
 }
