@@ -42,7 +42,7 @@ if (!empty($_GET['id'])){
   // search the last 3 apps and themes
   // count app total and user themes
   //obs: query athor in db
-  $info_author = getInfoUser($_GET['id']);
+  $info_author = getInfoUsertest($_GET['id']);
   // test apps  // Perform db query to obtain this information limit 3
   // query apps in db
   $item2 = getAppThemeTest(1000,$_GET['id'],$dictionary,1);
