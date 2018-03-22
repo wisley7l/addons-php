@@ -648,7 +648,6 @@ function search_partner_id($partner)
   $id_partner = (int) $partner; // escape id partner
   $conn = $GLOBALS['conn']; // get varible global conn
   $number = 1; // limit
-  echo "string";
   $query =  "SELECT p.id, p.member_since, p.path_image, p.profile_json
     FROM partners p
     WHERE (p.id = $id_partner)
@@ -659,6 +658,7 @@ function search_partner_id($partner)
       while ($row = mysqli_fetch_assoc($result)) {
         $partner = getInfoUser($row['id'],$row['member_since'],$row['path_image'],
         $row['profile_json']); // increment total items on profile page
+        echo $row['id'];
       }
       // free result set
       mysqli_free_result($result);
