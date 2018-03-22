@@ -31,6 +31,9 @@ function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
 // function to handle partner search and create view
 function getInfoUser($id,$member_since,$path_image,$profile_json)
 {
+  if ($path_image == NULL) {
+    $path_image = "../images/avatars/avatar_01.jpg";
+  }
   return array(
     'id' => $id,
     'name' => 'test', // get via API
@@ -592,7 +595,7 @@ function search_themes_partner($partner)
   // query search app and theme for index page
   $query = "SELECT t.id, t.partner_id,t.title, t.thumbnail,
     t.value_license_basic,p.id AS p_id, p.path_image
-    FROM themes t, partners p,
+    FROM themes t, partners p
     WHERE (t.partner_id = p.id AND t.partner_id = $id_partner)
     ORDER BY t.title";
 
