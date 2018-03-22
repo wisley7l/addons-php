@@ -59,6 +59,7 @@ if (!empty($_GET['id'])){
   array_push($themes, $item);
 */
   // TODO:
+  $id_author = (int) $_GET['id'];
   // OBS: when you are ready to enable these functions below.
   $info_author = search_partner_id($id_author); // bring the query to this page
   $apps = search_apps_partner($id_author); // return all apps
