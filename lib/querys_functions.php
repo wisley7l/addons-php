@@ -616,15 +616,15 @@ function search_themes_partner($partner)
 function search_apps_partner($partner)
 {
   $apps = array();
-  $id_category = (int)$category;
-  $number = (int) $limit;
+  $id_partner = (int) $partner;
+
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p,
     WHERE (a.partner_id = p.id AND t.partner_id = $id_partner)
-    ORDER BY a.title";
+    ORDER BY a.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
