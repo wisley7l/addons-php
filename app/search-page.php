@@ -17,7 +17,7 @@ $filter = array('all' => 'selected',
   $name_item = $_GET['term'];
   $number_found = 0;
   // OBS: when you are ready to enable these functions below.
-  //$apps = search_apps_all_name(12,$name_item); // return a maximum of 12 apps in the search
+  $apps = search_apps_all_name(12,$name_item); // return a maximum of 12 apps in the search
   $themes = search_themes_all_name(12,$name_item); // return a maximum of 12 apps in the search
   $apps_themes = array_merge($apps,$themes);
   $number_found = count($apps_themes);
