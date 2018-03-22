@@ -18,8 +18,10 @@ $filter = array('all' => 'selected',
   $number_found = 0;
   // OBS: when you are ready to enable these functions below.
   $apps = search_apps_all_name(12,$name_item); // return a maximum of 12 apps in the search
-  $number_found = count($apps);
-  // themes = search_apps_all_name(12,$name_item); // return a maximum of 12 apps in the search
+  $themes = search_themes_all_name(12,$name_item); // return a maximum of 12 apps in the search
+  $apps_themes = array_merge($apps,$themes);
+  $number_found = count($apps_themes);
+
 } else if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
     header("Location: ?term=" . $_GET['name']);
@@ -134,6 +136,6 @@ echo $twig->render('search-item.twig', array(
   'all_category' => $app_category,
   'filter' => $filter,
   // test apps
-  'apps_themes' => $apps,
+  'apps_themes' => $apps_themes,
   'user' => $user_login,
 ));
