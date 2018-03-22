@@ -36,22 +36,27 @@ $info_footer = array(
   'count_partners' => $count_partners,
   'path_file' => $_SERVER['PATH_FILE'] . "?id=" . $_GET['id']
 );
-//obs: query athor in db
-$info_author = search_partner_id((int)$_GET['id']);
-// test apps  // Perform db query to obtain this information limit 3
-// query apps in db
-$item2 = getAppThemeTest(1000,$_GET['id'],$dictionary,1);
-// query apps in db
-$apps = array();
-// add element in array
-array_push($apps, $item2);
-// test themes  // Perform db query to obtain this information limit 3
-// query apps in db
-$item = getAppThemeTest(1111,2,$dictionary,0);
-$themes = array();
-// add element in array
-array_push($themes, $item);
-// test comments
+if (!empty($_GET['id'])) {
+
+  //obs: query athor in db
+  $info_author = search_partner_id((int)$_GET['id']);
+  // test apps  // Perform db query to obtain this information limit 3
+  // query apps in db
+  $item2 = getAppThemeTest(1000,$_GET['id'],$dictionary,1);
+  // query apps in db
+  $apps = array();
+  // add element in array
+  array_push($apps, $item2);
+  // test themes  // Perform db query to obtain this information limit 3
+  // query apps in db
+  $item = getAppThemeTest(1111,2,$dictionary,0);
+  $themes = array();
+  // add element in array
+  array_push($themes, $item);
+  // test comments
+
+
+}
 
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
