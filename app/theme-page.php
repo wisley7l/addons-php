@@ -42,8 +42,8 @@ if (isset($_GET['filter'])){ // if exists filter
     $filter['free'] = 'selected';
     $number_found = 0;
     // OBS: when you are ready to enable these functions below.
-    // $themes = search_themes_free_name(12,$name_item); // return a maximum of 12 themes in the search
-    // $number_found = count($themes);
+    $themes = search_themes_free_name(12,$name_item); // return a maximum of 12 themes in the search
+    $number_found = count($themes);
 
   }else if ($_GET['filter'] == 'free') { //filter is free and not name
     // search items all free
@@ -52,8 +52,8 @@ if (isset($_GET['filter'])){ // if exists filter
     $filter['free'] = 'selected';
     $number_found = 0;
     // OBS: when you are ready to enable these functions below.
-    // $themes = search_all_themes_free(12); // return a maximum of 12 themes in the search
-    // $number_found = count($themes);
+    $themes = search_all_themes_free(12); // return a maximum of 12 themes in the search
+    $number_found = count($themes);
   }else {
     header("Location: theme-page");
     exit;
@@ -70,10 +70,11 @@ else if (isset($_GET['term'])){
   // count the number of items found
   $number_found = 0;
   // OBS: when you are ready to enable these functions below.
-  // $themes = search_themes_all_name(12,$name_item); // return a maximum of 12 themes in the search
-  // $number_found = count($themes);
+  $themes = search_themes_all_name(12,$name_item); // return a maximum of 12 themes in the search
+  $number_found = count($themes);
 
 } else {
+  /*
   // count the number of items found
   $number_found = 2;
   // query all items
@@ -86,9 +87,11 @@ else if (isset($_GET['term'])){
   // add element in array
   array_push($themes, $item);
   array_push($themes, $item2);
+  */
+  $number_found = 0;
   // OBS: when you are ready to enable these functions below.
-  // $themes = search_all_themes(12); // return a maximum of 12 apps in the search
-  // $number_found = count($themes);
+  $themes = search_all_themes(12); // return a maximum of 12 apps in the search
+  $number_found = count($themes);
 
 }
 //(end) * Required on all pages *
