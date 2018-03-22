@@ -52,6 +52,7 @@ $themes = array();
 // add element in array
 array_push($themes, $item);
 // test comments
+var_dump($info_author);
 
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
