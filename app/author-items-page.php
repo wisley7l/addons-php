@@ -54,8 +54,9 @@ if (!empty($_GET['id'])) {
   // add element in array
   array_push($themes, $item);
   // test comments
-
-
+}
+else {
+  echo "ERROR";
 }
 
 // obs: Search all categories in db
