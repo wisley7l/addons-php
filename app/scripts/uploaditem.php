@@ -153,6 +153,7 @@ if(empty($_POST)) { // not exist post
      // $id_app = mysqli_insert_id($conn);
 
      */
+     /*
      $query = "";
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
@@ -174,6 +175,7 @@ if(empty($_POST)) { // not exist post
        //header("Location: ../dashboard-uploaditem#ERRORInsertAPP");
        // exit;
      }
+     */
 
    }else if ($is_app == 0) { // if theme
      // create query TODO:
@@ -205,6 +207,7 @@ if(empty($_POST)) { // not exist post
      // $id_app = mysqli_insert_id($conn);
 
      */
+     /*
      $query = "";
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
@@ -226,7 +229,7 @@ if(empty($_POST)) { // not exist post
        //header("Location: ../dashboard-uploaditem#ERRORInsert");
        // exit;
      }
-
+     */
    }else {
      // redirect dashboard-uploaditem?error=is_app
    }
