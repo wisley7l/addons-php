@@ -66,6 +66,7 @@ if (!empty($_GET['id'])){
   $total_apps = count($apps);
   $total_themes = count($themes);
   $info_author['number_apps_themes'] = $total_themes + $total_apps;
+  echo $info_author;
 
 
 }else {
