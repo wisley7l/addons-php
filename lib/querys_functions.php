@@ -170,7 +170,7 @@ function search_apps_all_name($limit,$search)
   $number = (int) $limit;
   $conn = $GLOBALS['conn']; // get varible global conn
   $name = mysqli_real_escape_string($conn, $search); // escape string
-  echo $name;
+  //echo $name;
   // query search app and theme for index page
   $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
