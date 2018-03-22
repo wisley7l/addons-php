@@ -652,7 +652,7 @@ function search_partner_id($partner)
   $query =  "SELECT p.id, p.member_since, p.path_image, p.profile_json
     FROM partners p
     WHERE (p.id = $id_partner)
-    LIMIT '$number' ";
+    LIMIT '$number'; ";
 
     if ($result = mysqli_query(  $conn, $query )) {
       // fetch associative array
