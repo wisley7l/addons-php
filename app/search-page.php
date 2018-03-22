@@ -17,8 +17,8 @@ $filter = array('all' => 'selected',
   $name_item = $_GET['term'];
   $number_found = 0;
   // OBS: when you are ready to enable these functions below.
-  //$apps = search_apps_all_name(12,$name_item); // return a maximum of 12 apps in the search
-  // $number_found = count($apps);
+  $apps = search_apps_all_name(12,$name_item); // return a maximum of 12 apps in the search
+  $number_found = count($apps);
 } else if (isset($_GET['filter'])){
   if($_GET['filter'] == 'all'){
     header("Location: ?term=" . $_GET['name']);
@@ -34,8 +34,9 @@ $filter = array('all' => 'selected',
     // count the number of items found
     $number_found = 0;
     // OBS: when you are ready to enable these functions below.
-    //$apps = search_apps_free_name(12,$name_item); // return a maximum of 12 apps in the search
-    // $number_found = count($apps);
+    $apps = search_apps_free_name(12,$name_item); // return a maximum of 12 apps in the search
+    $number_found = count($apps);
+    // themes = search_apps_free_name(12,$name_item); // return a maximum of 12 apps in the search
   }
 }else if ((int) $_GET['app'] == 1 and isset($_GET['name']) ) {
   // app is 1
