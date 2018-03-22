@@ -623,7 +623,7 @@ function search_apps_partner($partner)
   $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p,
-    WHERE (a.partner_id = p.id AND t.partner_id = $id_partner)
+    WHERE (a.partner_id = p.id AND p.id = $id_partner)
     ORDER BY a.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
