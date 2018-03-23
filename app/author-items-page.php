@@ -42,17 +42,11 @@ if (!empty($_GET['id'])) {
   $info_author = search_partner_id((int)$_GET['id']);
   // test apps  // Perform db query to obtain this information limit 3
   // query apps in db
-  $item2 = getAppThemeTest(1000,$_GET['id'],$dictionary,1);
+
   // query apps in db
-  $apps = array();
-  // add element in array
-  array_push($apps, $item2);
-  // test themes  // Perform db query to obtain this information limit 3
+  $apps = search_apps_partner((int)$_GET['id']);
   // query apps in db
-  $item = getAppThemeTest(1111,2,$dictionary,0);
-  $themes = array();
-  // add element in array
-  array_push($themes, $item);
+  $themes = search_themes_partner((int)$_GET['id']);
   // test comments
 }
 else {
