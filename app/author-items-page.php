@@ -48,6 +48,9 @@ if (!empty($_GET['id'])) {
   // query apps in db
   $themes = search_themes_partner((int)$_GET['id']);
   // test comments
+  $total_apps = count($apps);
+  $total_themes = count($themes);
+  $info_author['number_apps_themes'] = $total_themes + $total_apps;
 }
 else {
   echo "ERROR";
