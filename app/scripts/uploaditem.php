@@ -130,7 +130,8 @@ if(empty($_POST)) { // not exist post
        // echo PHP_EOL;
        // echo  $plans['plans'][$i]['value'];
      }
-     $plans_json = mysqli_real_escape_string($conn,json_encode($plans));
+     //$plans_json = mysqli_real_escape_string($conn,json_encode($plans));
+     $plans_json = json_encode($plans);
      echo $plans_json;
      // convert float to string and after convert string to int
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
@@ -188,9 +189,9 @@ if(empty($_POST)) { // not exist post
     ///echo PHP_EOL;
     //echo mysqli_error($conn);
     }
-     $id_app = mysqli_insert_id($conn);
-     echo PHP_EOL;
-     echo $id_app;
+     //$id_app = mysqli_insert_id($conn);
+     //echo PHP_EOL;
+     //echo $id_app;
 
 
      //*/
