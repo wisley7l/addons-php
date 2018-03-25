@@ -178,7 +178,7 @@ if(empty($_POST)) { // not exist post
         VALUES ('$name',1,'$description','$body_json','$numversion','$type_app','$module_type',
           '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic);";
      //*/
-     //*
+     /*
      echo $name;
      echo PHP_EOL;
      echo gettype($id_partner);
@@ -257,30 +257,42 @@ if(empty($_POST)) { // not exist post
      $plan_basic = $plans['plans'][0]['value'];
 
      if ($plans['total_plans'] == 2) {
-       $plan_extend = $plans['plans'][1]['value'];
+       if ($plans['plans'][1]['value'] < $plans['plans'][0]['value']) {
+         $plan_extend = $plans['plans'][0]['value'];
+         $plan_basic = $plans['plans'][1]['value'];
+       }else {
+         $plan_extend = $plans['plans'][1]['value'];
+       }
      }
 
      $body_json = json_decode($body_json,true);
      $body_json['plans'] = $plans;
      $body_json = json_encode($body_json);
+     $plan_basic = (int) number_format($plan_basic, 2, '', '');
+     $plan_extend = (int) number_format($plan_extend, 2, '', '');
      // echo $body_json;
 
-     /* $query =  "INSERT INTO `themes` (`title`, `partner_id`, `description`,
-          `version`, `json_body`, `link_documentation`, `link_video`, `value_license_basic`, `value_license_extend` )
-        VALUES ($name, $id_partner, $description,$body_json, $numversion,
-        $linkdoc, $linkvideo,$plan_basic,$plan_extend)";
-     */
-     /*
+
+     //*
+     $query =  "INSERT INTO themes (title, partner_id, description,
+          version, json_body, link_documentation, link_video, value_license_basic, value_license_extend )
+        VALUES ('$name', $id_partner, '$description','$body_json', '$numversion',
+        '$linkdoc', '$linkvideo',$plan_basic,$plan_extend);";
+     //*/
+     //*
 
      // query search app and theme for index page
 
 
     if (!mysqli_query($conn, $query)) {
-    // error INSERT // redirect
+      echo PHP_EOL;
+      echo "ERROR INSERT";
+      echo PHP_EOL;
+      echo mysqli_error($conn);
     }
      // $id_app = mysqli_insert_id($conn);
 
-     */
+     //*/
      /*
      $query = "";
      for ($i=0; $i < $num_category ; $i++) {
