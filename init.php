@@ -103,7 +103,7 @@ array_push($query, 'INSERT INTO category_themes (name) VALUES ("petshop");');
 array_push($query, 'INSERT INTO category_themes (name) VALUES ("service");');
 array_push($query, 'INSERT INTO category_themes (name) VALUES ("fitness");');
 array_push($query, 'INSERT INTO category_themes (name) VALUES ("other");');
-
+var_dump($query);
 for ($i=0; $i <count($query) ; $i++) {
 
     // http://php.net/manual/en/mysqli.multi-query.php
@@ -119,5 +119,5 @@ for ($i=0; $i <count($query) ; $i++) {
       echo PHP_EOL;
       handle_mysql_error($conn);
     }
-  
+
 }
