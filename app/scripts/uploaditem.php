@@ -136,12 +136,13 @@ if(empty($_POST)) { // not exist post
      // create query TODO:
      // verify sessin, get id and save id in id_partner
 
-     /*
+     //*
         $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
         `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic` )
         VALUES ($name,$id_partner,$description,$body_json,$numversion,$type_app,
         $module_type,$scripturl,$github,$authentication,$website,$linkvideo,$plans_json,$plan_basic)";
-     */
+     //*/
+     /*
      echo $name;
      echo PHP_EOL;
      echo $id_partner;
@@ -171,18 +172,22 @@ if(empty($_POST)) { // not exist post
      echo $plan_basic;
      echo PHP_EOL;
      var_dump($categories);
-
-     /*
+     */
+     //*
 
      // query search app and theme for index page
 
 
     if (!mysqli_query($conn, $query)) {
     // error INSERT // redirect
+    echo "ERROR INSERT";
     }
-     // $id_app = mysqli_insert_id($conn);
+     $id_app = mysqli_insert_id($conn);
+     echo PHP_EOL;
+     echo $id_app;
 
-     */
+
+     //*/
      /*
      $query = "";
      for ($i=0; $i < $num_category ; $i++) {
