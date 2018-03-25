@@ -19,6 +19,8 @@ if (mysqli_connect_errno()) {
   echo mysqli_connect_error();
   echo PHP_EOL;
   exit();
+}else {
+  echo "CONNECTION OK!";
 }
 //*/
 ////header('Content-Type: text/html; charset=utf-8');
