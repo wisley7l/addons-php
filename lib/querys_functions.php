@@ -244,6 +244,7 @@ function search_all_themes_free($limit)
     LIMIT $number ";
 
   if ($result = mysqli_query(  $conn, $query )) {
+    echo $row['id'];
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
