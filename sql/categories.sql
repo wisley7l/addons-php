@@ -9,7 +9,6 @@
   INSERT INTO category_apps (name) VALUES ("tools");
   INSERT INTO category_apps (name) VALUES ("reporting");
   INSERT INTO category_apps (name) VALUES ("sales_channels");
-
   INSERT INTO category_themes (name) VALUES ("art_photography");
   INSERT INTO category_themes (name) VALUES ("clothing_fashion");
   INSERT INTO category_themes (name) VALUES ("jewelry_accessories");
