@@ -76,19 +76,47 @@ if ($sql) {
 
 // entering values in the category tables
 // read categories.sql file
-$query = file_get_contents(__DIR__ . '/sql/categories.sql');
-echo $query;
-if ($query) {
-  // http://php.net/manual/en/mysqli.multi-query.php
-  if ($result = mysqli_multi_query($conn, $query)) {
-    echo 'MySQL values entered';
-    echo PHP_EOL;
-    echo 'All done successfully, saying goodbye...';
-    echo PHP_EOL;
-    mysqli_free_result($result);
-  } else {
-    echo 'Failed to insert values into table';
-    echo PHP_EOL;
-    handle_mysql_error($conn);
+$query = array();
+//array_push($query, 'INSERT INTO category_apps (name) VALUES ("product_sourcing");');
+array_push($query, 'INSERT INTO category_apps (name) VALUES ("marketing");');
+array_push($query, 'INSERT INTO category_apps (name) VALUES ("sales");');
+array_push($query, 'INSERT INTO category_apps (name) VALUES ("social_media");');
+array_push($query, 'INSERT INTO category_apps (name) VALUES ("shipping");');
+array_push($query, 'INSERT INTO category_apps (name) VALUES ("inventory");');
+array_push($query, 'INSERT INTO category_apps (name) VALUES ("customer_service");');
+array_push($query, 'INSERT INTO category_apps (name) VALUES ("tools");');
+array_push($query, 'INSERT INTO category_apps (name) VALUES ("reporting");');
+array_push($query, 'INSERT INTO category_apps (name) VALUES ("sales_channels");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("art_photography");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("clothing_fashion");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("jewelry_accessories");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("electronics");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("food_drinks");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("home_garden");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("furniture");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("health_beauty");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("sports_recreation");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("toys_games");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("games");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("sexshop");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("petshop");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("service");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("fitness");');
+array_push($query, 'INSERT INTO category_themes (name) VALUES ("other");');
+
+for ($i=0; $i <count($query) ; $i++) {
+  if ($query) {
+    // http://php.net/manual/en/mysqli.multi-query.php
+    if ($result = mysqli_multi_query($conn, $query)) {
+      echo 'MySQL values entered';
+      echo PHP_EOL;
+      echo 'All done successfully, saying goodbye...';
+      echo PHP_EOL;
+      mysqli_free_result($result);
+    } else {
+      echo 'Failed to insert values into table';
+      echo PHP_EOL;
+      handle_mysql_error($conn);
+    }
   }
 }
