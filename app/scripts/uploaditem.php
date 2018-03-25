@@ -184,10 +184,10 @@ if(empty($_POST)) { // not exist post
 
     if (!mysqli_query($conn, $query)) {
     // error INSERT // redirect
-    //echo PHP_EOL;
-    //echo "ERROR INSERT";
-    ///echo PHP_EOL;
-    //echo mysqli_error($conn);
+    echo PHP_EOL;
+    echo "ERROR INSERT";
+    echo PHP_EOL;
+    echo mysqli_error($conn);
     }
      //$id_app = mysqli_insert_id($conn);
      //echo PHP_EOL;
