@@ -237,7 +237,7 @@ function search_all_themes_free($limit)
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT t.id, t.partner_id,t.title, t.thumbnail,
-    t.value_license_basic,p.id AS p_id, p.username, p.path_image
+    t.value_license_basic,p.id AS p_id, p.path_image
     FROM themes t, partners p
     WHERE (t.partner_id = p.id AND t.value_license_basic = 0)
     ORDER BY t.title
