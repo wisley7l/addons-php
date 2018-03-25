@@ -130,7 +130,8 @@ if(empty($_POST)) { // not exist post
        // echo PHP_EOL;
        // echo  $plans['plans'][$i]['value'];
      }
-     $plans_json = $_POST['plans'];
+     $plans_json = json_encode($plans);
+     echo gettype($plans_json);
      // convert float to string and after convert string to int
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
 
