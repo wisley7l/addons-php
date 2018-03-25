@@ -122,10 +122,9 @@ if(empty($_POST)) { // not exist post
 
      // treat plans
      $plan_basic = $plan['plans'][0]['value'];
+     var_dump($plan['plans']);
 
      for ($i=0; $i < (int) $plans['total_plans'] ; $i++) {
-       echo $plans['plans'][$i]['value'];
-       echo PHP_EOL;
        if ($plan_basic > $plans['plans'][$i]['value']) {
          $plan_basic = $plans['plans'][$i]['value'];
        }
