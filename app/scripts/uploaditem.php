@@ -146,7 +146,7 @@ if(empty($_POST)) { // not exist post
         VALUES ($name,$id_partner,$description, '',$numversion,$type_app,
         $module_type,$scripturl,$github,$authentication,$website,$linkvideo,'',$plan_basic)";
      //*/
-     /*
+     //*
      echo $name;
      echo PHP_EOL;
      echo $id_partner;
@@ -176,7 +176,7 @@ if(empty($_POST)) { // not exist post
      echo $plan_basic;
      echo PHP_EOL;
      var_dump($categories);
-     */
+     //*/
      //*
 
      // query search app and theme for index page
