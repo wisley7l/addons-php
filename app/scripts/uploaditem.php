@@ -142,6 +142,36 @@ if(empty($_POST)) { // not exist post
         VALUES ($name,$id_partner,$description,$body_json,$numversion,$type_app,
         $module_type,$scripturl,$github,$authentication,$website,$linkvideo,$plans_json,$plan_basic)";
      */
+     echo $name;
+     echo PHP_EOL;
+     echo $id_partner;
+     echo PHP_EOL;
+     echo $description;
+     echo PHP_EOL;
+     echo $body_json;
+     echo PHP_EOL;
+     echo $numversion;
+     echo PHP_EOL;
+     echo $type_app;
+     echo PHP_EOL;
+     echo $module_type;
+     echo PHP_EOL;
+     echo $scripturl;
+     echo PHP_EOL;
+     echo $github;
+     echo PHP_EOL;
+     echo $authentication;
+     echo PHP_EOL;
+     echo $website;
+     echo PHP_EOL;
+     echo $linkvideo;
+     echo PHP_EOL;
+     echo $plans_json;
+     echo PHP_EOL;
+     echo $plan_basic;
+     echo PHP_EOL;
+     var_dump($categories);
+
      /*
 
      // query search app and theme for index page
