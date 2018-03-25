@@ -105,6 +105,16 @@ array_push($query, 'INSERT INTO category_themes (name) VALUES ("fitness");');
 array_push($query, 'INSERT INTO category_themes (name) VALUES ("other");');
 var_dump($query);
 for ($i=0; $i <count($query) ; $i++) {
+  mysqli_close($conn);
+  // update connection to the database
+  $conn = mysqli_connect(Addons\MYSQL_HOST, Addons\MYSQL_USER, Addons\MYSQL_PASS, Addons\MYSQL_DB);
+  // check connection
+  if (mysqli_connect_errno()) {
+    echo 'Connection failed: ';
+    echo mysqli_connect_error();
+    echo PHP_EOL;
+    exit();
+  }
 
     // http://php.net/manual/en/mysqli.multi-query.php
     if ($result = mysqli_query($conn, $query[$i])) {
