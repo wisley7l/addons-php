@@ -107,7 +107,7 @@ var_dump($query);
 for ($i=0; $i <count($query) ; $i++) {
 
     // http://php.net/manual/en/mysqli.multi-query.php
-    if ($result = mysqli_query($conn, $query)) {
+    if ($result = mysqli_query($conn, $query[$i])) {
       echo 'MySQL values entered';
       echo PHP_EOL;
       echo 'All done successfully, saying goodbye...';
