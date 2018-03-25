@@ -122,7 +122,6 @@ if(empty($_POST)) { // not exist post
 
      // treat plans
      $plan_basic = $plans['plans'][0]['value'];
-     var_dump($plans);
 
      for ($i=0; $i < (int) $plans['total_plans'] ; $i++) {
        if ($plan_basic > $plans['plans'][$i]['value']) {
@@ -133,7 +132,6 @@ if(empty($_POST)) { // not exist post
      }
      //$plans_json = mysqli_real_escape_string($conn,json_encode($plans));
      $plans_json = json_encode($plans);
-     echo $plans_json;
      // convert float to string and after convert string to int
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
 
@@ -145,7 +143,7 @@ if(empty($_POST)) { // not exist post
         $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
         `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic` )
         VALUES ($name,$id_partner,$description, '',$numversion,$type_app,
-        $module_type,$scripturl,$github,$authentication,$website,$linkvideo,'',$plan_basic)";
+        $module_type,$scripturl,$github,$authentication,$website,$linkvideo,$plans_json,$plan_basic)";
      //*/
      //*
      echo $name;
