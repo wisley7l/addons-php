@@ -163,13 +163,15 @@ if(empty($_POST)) { // not exist post
      `link_video` VARCHAR(255) NULL,
      `plans_json` TEXT NULL,
      `value_plan_basic` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
+     VALUES ($name,$id_partner,$description,$body_json,$numversion,$type_app,
+     $module_type,$scripturl,$github,$authentication,$website,$linkvideo,$plans_json,$plan_basic)
      */
 
      //*
         $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
         `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic` )
-        VALUES ($name,$id_partner,$description,$body_json,$numversion,$type_app,
-        $module_type,$scripturl,$github,$authentication,$website,$linkvideo,$plans_json,$plan_basic);";
+        VALUES ('teste',1,'dasdas','body','dasdas','tipo',
+        'mo','dasdasd','dasdas',1,'dasdas','dasdas',plan,$plan_basic);";
      //*/
      //*
      echo $name;
