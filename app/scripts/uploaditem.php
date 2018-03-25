@@ -72,8 +72,8 @@ if(empty($_POST)) { // not exist post
   // echo $plans;
   //echo $faqs;
   // echo $categories;
-  $body_json = json_encode(array('faqs' => $faqs));
-
+  //$body_json = json_encode(array('faqs' => $faqs));
+  $body_json = '';
    // treat category
    $categories = array();
    $num_category = (int) $category['total'];
