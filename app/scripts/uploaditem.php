@@ -143,8 +143,8 @@ if(empty($_POST)) { // not exist post
      //*
         $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
         `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic` )
-        VALUES ($name,$id_partner,$description, $body_json,$numversion,$type_app,
-        $module_type,$scripturl,$github,$authentication,$website,$linkvideo,'$plans_json',$plan_basic)";
+        VALUES ($name,$id_partner,$description, '',$numversion,$type_app,
+        $module_type,$scripturl,$github,$authentication,$website,$linkvideo,'',$plan_basic)";
      //*/
      /*
      echo $name;
