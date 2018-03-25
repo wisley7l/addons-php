@@ -72,7 +72,7 @@ if(empty($_POST)) { // not exist post
   // echo $plans;
   //echo $faqs;
   // echo $categories;
-  $body_json = mysqli_real_escape_string($conn,json_encode(array('faqs' => $faqs)) );
+  $body_json = json_encode(array('faqs' => $faqs));
   //$body_json = '';
    // treat category
    $categories = array();
@@ -138,17 +138,43 @@ if(empty($_POST)) { // not exist post
 
      // create query TODO:
      // verify sessin, get id and save id in id_partner
+     /*
+     `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+     `partner_id` SMALLINT UNSIGNED NOT NULL,
+     `title` VARCHAR(70) NOT NULL DEFAULT '',
+     `slug` VARCHAR(70) NOT NULL DEFAULT '',
+     `thumbnail` VARCHAR(255) NULL,
+     `description` TEXT NULL,
+     `json_body` TEXT NULL,
+     `paid` TINYINT NOT NULL DEFAULT 0,
+     `version` VARCHAR(8) NOT NULL DEFAULT '1.0.0',
+     `version_date` DATE NULL,
+     `type` VARCHAR(14) NULL,
+     `module` CHAR(2) NULL,
+     `load_events` TEXT NULL,
+     `script_uri` VARCHAR(255) NULL,
+     `github_repository` VARCHAR(255),
+     `authentication` TINYINT NOT NULL DEFAULT 0,
+     `auth_callback_uri` VARCHAR(255),
+     `auth_scope` TEXT NULL,
+     `avg_stars` TINYINT UNSIGNED NOT NULL DEFAULT 0,
+     `evaluations` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
+     `website` VARCHAR(255) NULL,
+     `link_video` VARCHAR(255) NULL,
+     `plans_json` TEXT NULL,
+     `value_plan_basic` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
+     */
 
      //*
         $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
         `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic` )
-        VALUES ($name,$id_partner,$description, '',$numversion,$type_app,
+        VALUES ($name,$id_partner,$description,$body_json,$numversion,$type_app,
         $module_type,$scripturl,$github,$authentication,$website,$linkvideo,$plans_json,$plan_basic)";
      //*/
      //*
      echo $name;
      echo PHP_EOL;
-     echo $id_partner;
+     echo gettype($id_partner);
      echo PHP_EOL;
      echo $description;
      echo PHP_EOL;
