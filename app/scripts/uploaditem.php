@@ -10,7 +10,7 @@ $app_type = array(
 $type_module = array(
   'al','pd','sc','sh', 'pa', 'ck', 'cf', 'rg', 'lg', 'ct', 'nw'
 );
-/*
+//*
 // create connection to the database
 $conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
 // check connection
@@ -20,7 +20,7 @@ if (mysqli_connect_errno()) {
   echo PHP_EOL;
   exit();
 }
-*/
+//*/
 ////header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 
