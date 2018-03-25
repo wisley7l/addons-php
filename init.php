@@ -105,7 +105,7 @@ array_push($query, 'INSERT INTO category_themes (name) VALUES ("fitness");');
 array_push($query, 'INSERT INTO category_themes (name) VALUES ("other");');
 
 for ($i=0; $i <count($query) ; $i++) {
-  if ($query) {
+
     // http://php.net/manual/en/mysqli.multi-query.php
     if ($result = mysqli_query($conn, $query)) {
       echo 'MySQL values entered';
@@ -119,5 +119,5 @@ for ($i=0; $i <count($query) ; $i++) {
       echo PHP_EOL;
       handle_mysql_error($conn);
     }
-  }
+  
 }
