@@ -279,6 +279,7 @@ if(empty($_POST)) { // not exist post
       echo mysqli_error($conn);
     }
      $id_app = (int) mysqli_insert_id($conn);
+     echo $id_app;
 
      //*/
      //*
