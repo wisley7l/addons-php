@@ -12,16 +12,7 @@ $type_module = array(
 );
 //*
 // create connection to the database
-$conn = mysqli_connect(Addons\MYSQL_HOST, Addons\MYSQL_USER, Addons\MYSQL_PASS, Addons\MYSQL_DB);
-// check connection
-if (mysqli_connect_errno()) {
-  echo 'Connection failed: ';
-  echo mysqli_connect_error();
-  echo PHP_EOL;
-  exit();
-}else {
-  //echo "CONNECTION OK!";
-}
+$conn = connect_db();
 //*/
 ////header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
@@ -224,32 +215,34 @@ if(empty($_POST)) { // not exist post
      //$id_app = mysqli_insert_id($conn);
      //echo PHP_EOL;
      //echo $id_app;
-
-
+     
      //*/
-     /*
-     $query = "";
+     //*
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
-       $query .= "INSERT INTO `relationship_category_apps` (`app_id`, `category_apps_id`) VALUES ($id_app , $item);";
-     }
-     if (mysqli_multi_query($conn, $query)) {
-       // redirect with sucess
-       // echo 'MySQL app inserted';
-       // echo PHP_EOL;
-       // echo 'All done successfully, saying goodbye...';
-       // echo PHP_EOL;
-       //header("Location: ../dashboard-uploaditem#SucessApp");
-       // exit;
-     } else {
-       //redirect with failed
-       // echo 'Failed to insert app';
-       // echo PHP_EOL;
-       // handle_msyql_error($conn);
-       //header("Location: ../dashboard-uploaditem#ERRORInsertAPP");
-       // exit;
-     }
-     */
+       $query = "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
+
+       mysqli_close($conn);
+       $conn = connect_db();
+
+       if (mysqli_multi_query($conn, $query)) {
+         // redirect with sucess
+         echo 'MySQL app inserted';
+         echo PHP_EOL;
+         echo 'All done successfully, saying goodbye...';
+         echo PHP_EOL;
+         //header("Location: ../dashboard-uploaditem#SucessApp");
+         // exit;
+       } else {
+         // redirect with failed
+         echo 'Failed to insert app';
+         echo PHP_EOL;
+         handle_msyql_error($conn);
+         //header("Location: ../dashboard-uploaditem#ERRORInsertAPP");
+         // exit;
+       }
+   }
+     //*/
 
    }else if ($is_app == 0) { // if theme
      // create query TODO:
@@ -271,18 +264,13 @@ if(empty($_POST)) { // not exist post
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
      $plan_extend = (int) number_format($plan_extend, 2, '', '');
      // echo $body_json;
-
-
      //*
      $query =  "INSERT INTO themes (title, partner_id, description,
           version, json_body, link_documentation, link_video, value_license_basic, value_license_extend )
         VALUES ('$name', $id_partner, '$description','$body_json', '$numversion',
         '$linkdoc', '$linkvideo',$plan_basic,$plan_extend);";
-     //*/
-     //*
 
      // query search app and theme for index page
-
 
     if (!mysqli_query($conn, $query)) {
       echo PHP_EOL;
@@ -293,29 +281,33 @@ if(empty($_POST)) { // not exist post
      // $id_app = mysqli_insert_id($conn);
 
      //*/
-     /*
-     $query = "";
+     //*
+
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
-       $query .= "INSERT INTO `relationship_category_themes` (`app_id`, `category_themes_id`) VALUES ($id_app , $item);";
-     }
-     if (mysqli_multi_query($conn, $query)) {
-       // redirect with sucess
-       // echo 'MySQL theme inserted';
-       // echo PHP_EOL;
-       // echo 'All done successfully, saying goodbye...';
-       // echo PHP_EOL;
-       //header("Location: ../dashboard-uploaditem#SucessTheme");
-       // exit;
-     } else {
-       //redirect with failed
-       // echo 'Failed to insert theme';
-       // echo PHP_EOL;
-       // handle_msyql_error($conn);l
-       //header("Location: ../dashboard-uploaditem#ERRORInsert");
-       // exit;
-     }
-     */
+       $query = "INSERT INTO relationship_category_themes (app_id, category_themes_id) VALUES ($id_app , $item);";
+
+       mysql_close($conn);
+       $conn = connect_db();
+
+       if (mysqli_query($conn, $query)) {
+         // redirect with sucess
+         echo 'MySQL theme inserted';
+         echo PHP_EOL;
+         echo 'All done successfully, saying goodbye...';
+         echo PHP_EOL;
+         //header("Location: ../dashboard-uploaditem#SucessTheme");
+         // exit();
+       } else {
+         // redirect with failed
+         echo 'Failed to insert theme';
+         echo PHP_EOL;
+         handle_msyql_error($conn);
+         // header("Location: ../dashboard-uploaditem#ERRORInsert");
+         // exit();
+       }
+    }
+     //*/
    }else {
      // redirect dashboard-uploaditem?error=is_app
    }

@@ -53,15 +53,20 @@ function getInfoUser($id,$member_since,$path_image,$profile_json)
 // QUERYS
 
 // create connection to the database
-$conn = mysqli_connect(Addons\MYSQL_HOST, Addons\MYSQL_USER, Addons\MYSQL_PASS, Addons\MYSQL_DB);
-// check connection
-if (mysqli_connect_errno()) {
-  echo 'Connection failed: ';
-  echo mysqli_connect_error();
-  echo PHP_EOL;
-  exit();
+function connect_db()
+{
+  $conn = mysqli_connect(Addons\MYSQL_HOST, Addons\MYSQL_USER, Addons\MYSQL_PASS, Addons\MYSQL_DB);
+  // check connection
+  if (mysqli_connect_errno()) {
+    echo 'Connection failed: ';
+    echo mysqli_connect_error();
+    echo PHP_EOL;
+    exit();
+  }
+  return $conn;
 }
 
+$conn = connect_db();
 
 // APPS
 function treatNumber($number)
@@ -244,7 +249,7 @@ function search_all_themes_free($limit)
     LIMIT $number ";
 
   if ($result = mysqli_query(  $conn, $query )) {
-    
+
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
