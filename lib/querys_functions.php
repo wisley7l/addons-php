@@ -690,7 +690,8 @@ function search_app_id($id_app)
     script_uri, github_repository, authentication, auth_scope, avg_stars,
     evaluations,website,link_video,plans_json,value_plan_basic
     FROM apps
-    WHERE ( id = $id)";
+    WHERE ( id = $id)
+    LIMIT 1;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -742,7 +743,7 @@ function search_theme_id($id_theme)
     link_video, value_license_basic,value_license_extend
     FROM themes
     WHERE ( id = $id)
-    LIMIT 1";
+    LIMIT 1;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array

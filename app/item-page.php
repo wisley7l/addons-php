@@ -29,6 +29,8 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $app = 1;
     //search item in app
     $id_app = (int) $_GET['id'];
+    $item = search_app_id($id_app);
+    var_dump($item);
 
     $app_info = array('id' => $id_app,
       'name' => 'APP',
@@ -36,6 +38,9 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       'video' => 'https://www.youtube.com/embed/gkjITSCiAxQ',
       'website' => 'https://apps.shopify.com/',
     );
+
+
+
     // TODO:
     // $info = item_page($id_app,1);
     // app_info = $info['item'];

@@ -130,32 +130,6 @@ if(empty($_POST)) { // not exist post
      // create query TODO:
      // verify sessin, get id and save id in id_partner
      /*
-     `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
-     `partner_id` SMALLINT UNSIGNED NOT NULL,
-     `title` VARCHAR(70) NOT NULL DEFAULT '',
-     `slug` VARCHAR(70) NOT NULL DEFAULT '',
-     `thumbnail` VARCHAR(255) NULL,
-     `description` TEXT NULL,
-     `json_body` TEXT NULL,
-     `paid` TINYINT NOT NULL DEFAULT 0,
-     `version` VARCHAR(8) NOT NULL DEFAULT '1.0.0',
-     `version_date` DATE NULL,
-     `type` VARCHAR(14) NULL,
-     `module` CHAR(2) NULL,
-     `load_events` TEXT NULL,
-     `script_uri` VARCHAR(255) NULL,
-     `github_repository` VARCHAR(255),
-     `authentication` TINYINT NOT NULL DEFAULT 0,
-     `auth_callback_uri` VARCHAR(255),
-     `auth_scope` TEXT NULL,
-     `avg_stars` TINYINT UNSIGNED NOT NULL DEFAULT 0,
-     `evaluations` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
-     `website` VARCHAR(255) NULL,
-     `link_video` VARCHAR(255) NULL,
-     `plans_json` TEXT NULL,
-     `value_plan_basic` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
-     VALUES ($name,$id_partner,$description,$body_json,$numversion,$type_app,
-     $module_type,$scripturl,$github,$authentication,$website,$linkvideo,$plans_json,$plan_basic)
      */
      if ($module_type == '') {
        $module_type = NULL;
