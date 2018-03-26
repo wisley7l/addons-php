@@ -169,37 +169,7 @@ if(empty($_POST)) { // not exist post
         VALUES ('$name',1,'$description','$body_json','$numversion','$type_app','$module_type',
           '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic);";
      //*/
-     /*
-     echo $name;
-     echo PHP_EOL;
-     echo gettype($id_partner);
-     echo PHP_EOL;
-     echo $description;
-     echo PHP_EOL;
-     echo $body_json;
-     echo PHP_EOL;
-     echo $numversion;
-     echo PHP_EOL;
-     echo $type_app;
-     echo PHP_EOL;
-     echo $module_type;
-     echo PHP_EOL;
-     echo $scripturl;
-     echo PHP_EOL;
-     echo $github;
-     echo PHP_EOL;
-     echo $authentication;
-     echo PHP_EOL;
-     echo $website;
-     echo PHP_EOL;
-     echo $linkvideo;
-     echo PHP_EOL;
-     echo $plans_json;
-     echo PHP_EOL;
-     echo $plan_basic;
-     echo PHP_EOL;
-     var_dump($categories);
-     //*/
+
      //*
 
      // query search app and theme for index page
@@ -212,7 +182,7 @@ if(empty($_POST)) { // not exist post
     echo PHP_EOL;
     echo mysqli_error($conn);
     }
-     //$id_app = mysqli_insert_id($conn);
+     $id_app = (int) mysqli_insert_id($conn);
      //echo PHP_EOL;
      //echo $id_app;
 
@@ -279,7 +249,6 @@ if(empty($_POST)) { // not exist post
       echo mysqli_error($conn);
     }
      $id_app = (int) mysqli_insert_id($conn);
-     echo $id_app;
 
      //*/
      //*
@@ -287,7 +256,6 @@ if(empty($_POST)) { // not exist post
      for ($i=0; $i < $num_category ; $i++) {
 
        $item = (int) $categories[$i];
-       echo $item;
        $query = "INSERT INTO relationship_category_themes (theme_id, category_themes_id) VALUES ($id_app , $item);";
 
        mysqli_close($conn);
