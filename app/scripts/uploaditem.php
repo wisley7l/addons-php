@@ -278,12 +278,13 @@ if(empty($_POST)) { // not exist post
       echo PHP_EOL;
       echo mysqli_error($conn);
     }
-     // $id_app = mysqli_insert_id($conn);
+     $id_app = mysqli_insert_id($conn);
 
      //*/
      //*
 
      for ($i=0; $i < $num_category ; $i++) {
+
        $item = (int) $categories[$i];
        $query = "INSERT INTO relationship_category_themes (app_id, category_themes_id) VALUES ($id_app , $item);";
 
