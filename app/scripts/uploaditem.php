@@ -287,6 +287,7 @@ if(empty($_POST)) { // not exist post
      for ($i=0; $i < $num_category ; $i++) {
 
        $item = (int) $categories[$i];
+       echo $item;
        $query = "INSERT INTO relationship_category_themes (app_id, category_themes_id) VALUES ($id_app , $item);";
 
        mysqli_close($conn);
