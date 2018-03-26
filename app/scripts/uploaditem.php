@@ -291,8 +291,8 @@ if(empty($_POST)) { // not exist post
        mysqli_close($conn);
        $conn = connect_db();
 
-       echo $conn;
-       echo $query;
+       // echo $conn;
+       // echo $query;
 
        if (mysqli_query($conn, $query)) {
          // redirect with sucess
