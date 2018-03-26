@@ -215,15 +215,15 @@ if(empty($_POST)) { // not exist post
      //$id_app = mysqli_insert_id($conn);
      //echo PHP_EOL;
      //echo $id_app;
-     
+
      //*/
      //*
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
        $query = "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
 
-       mysqli_close($conn);
-       $conn = connect_db();
+       // mysqli_close($conn);
+       // $conn = connect_db();
 
        if (mysqli_multi_query($conn, $query)) {
          // redirect with sucess
@@ -287,7 +287,7 @@ if(empty($_POST)) { // not exist post
        $item = (int) $categories[$i];
        $query = "INSERT INTO relationship_category_themes (app_id, category_themes_id) VALUES ($id_app , $item);";
 
-       mysql_close($conn);
+       mysqli_close($conn);
        $conn = connect_db();
 
        if (mysqli_query($conn, $query)) {
