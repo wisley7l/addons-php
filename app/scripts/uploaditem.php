@@ -278,7 +278,7 @@ if(empty($_POST)) { // not exist post
       echo PHP_EOL;
       echo mysqli_error($conn);
     }
-     $id_app = mysqli_insert_id($conn);
+     $id_app = (int) mysqli_insert_id($conn);
 
      //*/
      //*
@@ -290,6 +290,9 @@ if(empty($_POST)) { // not exist post
 
        mysqli_close($conn);
        $conn = connect_db();
+
+       echo $conn;
+       echo $query;
 
        if (mysqli_query($conn, $query)) {
          // redirect with sucess
