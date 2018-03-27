@@ -31,6 +31,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $id_app = (int) $_GET['id'];
     $item = search_app_id($id_app);
     $_plans = json_decode($item['plans_json'],true);
+    var_dump($item);
     var_dump($_plans);
 
     $app_info = array('id' => $id_app,
@@ -40,7 +41,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       'website' => $item['website'],
     );
     $plans = array();
-    
+
     for ($i=0; $i < $_plans['total_plans'] ; $i++) {
       $i_plan = array('id' => $_plans['plans'][$i]['id'],
         'name' => $_plans['plans'][$i]['name'],
@@ -48,6 +49,9 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
         'description' => $_plans['plans'][$i]['desc'],
         'checked' => '',
       );
+      // if ( $_plans['plans'][$i]['value'] == ) {
+        # code...
+      // }
       array_push($plans, $i_plan);
     }
 
