@@ -39,6 +39,17 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       'video' => 'https://www.youtube.com/embed/gkjITSCiAxQ',
       'website' => $item['website'],
     );
+    $plans = array();
+    
+    for ($i=0; $i < $_plans['total_plans'] ; $i++) {
+      $i_plan = array('id' => $_plans['plans'][$i]['id'],
+        'name' => $_plans['plans'][$i]['name'],
+        'price' => $_plans['plans'][$i]['value'],
+        'description' => $_plans['plans'][$i]['desc'],
+        'checked' => '',
+      );
+      array_push($plans, $i_plan);
+    }
 
 
 
@@ -91,6 +102,7 @@ $info_page = array('app' => $app,
 );
 
 // TODO: delete
+/*
 $plan1 = array('id' => 'licence-regular',
   'name' => 'License Regular',
   'price' => 16.00 ,
@@ -107,7 +119,7 @@ $plan2 = array('id' => 'extend-license',
 $plans = array();
 array_push($plans, $plan1);
 array_push($plans, $plan2);
-
+*/
 
 //var_dump($array_images[0]);
 
