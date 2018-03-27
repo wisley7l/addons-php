@@ -49,9 +49,9 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
         'description' => $_plans['plans'][$i]['desc'],
         'checked' => '',
       );
-      // if ( $_plans['plans'][$i]['value'] == ) {
-        # code...
-      // }
+      if ( $_plans['plans'][$i]['value'] == $item['value_plan_basic']) {
+        $i_plan['checked'] = 'checked';
+      }
       array_push($plans, $i_plan);
     }
 
