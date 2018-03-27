@@ -45,7 +45,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     for ($i=0; $i < $_plans['total_plans'] ; $i++) {
       $i_plan = array('id' => $_plans['plans'][$i]['id'],
         'name' => $_plans['plans'][$i]['name'],
-        'price' => treatNumber($_plans['plans'][$i]['value']),
+        'price' => $_plans['plans'][$i]['value'],
         'description' => $_plans['plans'][$i]['desc'],
         'checked' => '',
       );
