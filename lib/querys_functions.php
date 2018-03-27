@@ -719,7 +719,7 @@ function search_app_id($id_app)
         'website' => $row['website'],
         'link_video' => $row['link_video'],
         'plans_json' => $row['plans_json'],
-        'value_plan_basic' => $row['value_plan_basic'],
+        'value_plan_basic' => treatNumber($row['value_plan_basic']),
       );
     }
 
