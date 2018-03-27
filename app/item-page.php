@@ -49,7 +49,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
         'description' => $_plans['plans'][$i]['desc'],
         'checked' => '',
       );
-      if ( $_plans['plans'][$i]['value'] == $item['value_plan_basic']) {
+      if ( $i == 0 ) {
         $i_plan['checked'] = 'checked';
       }
       array_push($plans, $i_plan);
@@ -106,24 +106,7 @@ $info_page = array('app' => $app,
 );
 
 // TODO: delete
-/*
-$plan1 = array('id' => 'licence-regular',
-  'name' => 'License Regular',
-  'price' => 16.00 ,
-  'description' => 'Test description 1',
-  'checked' => 'checked',
-);
 
-$plan2 = array('id' => 'extend-license',
-  'name' => 'Extend License',
-  'price' => 36.00,
-  'description' => 'Test description 2',
-  'checked' => '',
-);
-$plans = array();
-array_push($plans, $plan1);
-array_push($plans, $plan2);
-*/
 
 //var_dump($array_images[0]);
 
