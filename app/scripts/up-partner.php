@@ -24,11 +24,7 @@ var_dump($_POST);
 var_dump($_FILES);
 
 $filename = PATH_DATA . '/teste.txt';
-if (is_writable($filename)) {
-    echo 'O arquivo possui permissão de escrita';
-} else {
-    echo 'O arquivo não possui permissão de escrita';
-}
+
 echo PHP_EOL;
 echo shell_exec('users');
 echo PHP_EOL;
@@ -58,7 +54,6 @@ if (empty($_POST) AND empty($_FILES)) {
     //*/
   }
   if (!empty($_FILES)) {
-    echo "upload Image";
     // verifica se foi enviado um arquivo
     if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] == 0 ) {
         echo 'Você enviou o arquivo: <strong>' . $_FILES[ 'arquivo' ][ 'name' ] . '</strong><br />';
@@ -66,31 +61,33 @@ if (empty($_POST) AND empty($_FILES)) {
         echo 'Temporáriamente foi salvo em: <strong>' . $_FILES[ 'arquivo' ][ 'tmp_name' ] . '</strong><br />';
         echo 'Seu tamanho é: <strong>' . $_FILES[ 'arquivo' ][ 'size' ] . '</strong> Bytes<br /><br />';
 
-        $arquivo_tmp = $_FILES[ 'arquivo' ][ 'tmp_name' ];
-        $nome = $_FILES[ 'arquivo' ][ 'name' ];
+        $file_tmp = $_FILES[ 'arquivo' ][ 'tmp_name' ];
+        $name = $_FILES[ 'arquivo' ][ 'name' ];
+        $length = $_FILES[ 'arquivo' ][ 'size' ];
 
         // Pega a extensão
-        $extensao = pathinfo ( $nome, PATHINFO_EXTENSION );
+        $extension = pathinfo ( $name, PATHINFO_EXTENSION );
 
         // Converte a extensão para minúsculo
-        $extensao = strtolower ( $extensao );
+        $extension = strtolower ( $extension );
 
         // Somente imagens, .jpg;.jpeg;.gif;.png
         // Aqui eu enfileiro as extensões permitidas e separo por ';'
         // Isso serve apenas para eu poder pesquisar dentro desta String
-        if ( strstr ( '.jpg;.jpeg;.gif;.png', $extensao ) ) {
+        if ( strstr ( '.jpg;.jpeg;.gif;.png', $extension ) AND $length <= 1960000 ) {
             // Cria um nome único para esta imagem
             // Evita que duplique as imagens no servidor.
             // Evita nomes com acentos, espaços e caracteres não alfanuméricos
-            $novoNome = uniqid ( time () ) . '.' . $extensao;
+            $new_name = 'profile_'. $id . '.' . $extension;
 
             // Concatena a pasta com o nome
-            $destino = PATH_DATA . '/' . $novoNome;
+            $dist = PATH_DATA . '/' . $new_name;
+            echo $dist;
 
             // tenta mover o arquivo para o destino
-            if ( @move_uploaded_file ( $arquivo_tmp, $destino ) ) {
-                echo 'Arquivo salvo com sucesso em : <strong>' . $destino . '</strong><br />';
-                echo ' < img src = "' . $destino . '" />';
+            if ( @move_uploaded_file ( $file_tmp, $dist ) ) {
+                echo 'Arquivo salvo com sucesso em : <strong>' . $dist . '</strong><br />';
+                echo ' < img src = "' . $dist . '" />';
             }
             else
                 echo 'Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';
