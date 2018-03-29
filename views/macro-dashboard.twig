@@ -320,19 +320,17 @@
           <img src="{{user.path_image}}" alt="profile-default-image">
         </figure>
         <p class="text-header">{{dictionary.word_profile_image}}</p>
-        <!--(not implemented im momment)p class="upload-details">{{dictionary.word_minimun_size}} 70x70px</p-->
+        <p class="upload-details">{{dictionary.word_minimun_size}} 70x70px</p>
       </div>
       <!--a href="#" class="button mid-short dark-light">{{dictionary.word_upload_image}}</a-->
       <form id="addons-up-partner" action="scripts/up-partner" method="post" enctype="multipart/form-data">
         <input type="hidden" id="addons-up-id" name="id" />
         <input type="hidden" id="addons-up-pass" name="pass" />
         <input type="hidden" id="addons-up-rp-pass" name="rp-pass" />
-        </p>
         <!-- image -- >
         <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
         <!-- O Nome do elemento input determina o nome da array $_FILES -->
         Enviar esse arquivo: <input name="userfile" type="file" />
-        </p> 
         {# enter <input> to send image #}
       </form>
 
