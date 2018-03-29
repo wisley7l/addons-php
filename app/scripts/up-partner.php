@@ -24,7 +24,7 @@ var_dump($_POST);
 var_dump($_FILES);
 
 // save profile image with user id name
-if (empty($_POST)) {
+if (empty($_POST) AND empty($_FILES)) {
   //header("Location: ../index");
   //exit;
 }else { // if exists POST
@@ -46,7 +46,8 @@ if (empty($_POST)) {
      # error
    }
     //*/
-  }else {
-    # error
+  }
+  if (!empty($_FILES)) {
+    echo "upload Image";
   }
 }
