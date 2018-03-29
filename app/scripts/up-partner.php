@@ -22,6 +22,7 @@ echo PHP_EOL;
 $id = (int) $_POST['id'];
 var_dump($_POST);
 var_dump($_FILES);
+echo file_put_contents(PATH_DATA.'/arquivo.txt', 'teste /n');
 
 // save profile image with user id name
 if (empty($_POST) AND empty($_FILES)) {
