@@ -29,6 +29,9 @@ if (is_writable($filename)) {
 } else {
     echo 'O arquivo não possui permissão de escrita';
 }
+echo PHP_EOL;
+echo shell_exec('ls -la');
+echo PHP_EOL;
 
 // save profile image with user id name
 if (empty($_POST) AND empty($_FILES)) {
