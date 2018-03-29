@@ -56,7 +56,7 @@ if (empty($_POST) AND empty($_FILES)) {
         echo PHP_EOL;
         echo 'Temporáriamente foi salvo em: ' . $_FILES[ 'arquivo' ][ 'tmp_name' ] ;
         echo PHP_EOL;
-        echo 'Seu tamanho é: <strong>' . $_FILES[ 'arquivo' ][ 'size' ] ;
+        echo 'Seu tamanho é: ' . $_FILES[ 'arquivo' ][ 'size' ] ;
         echo PHP_EOL;
 
         $file_tmp = $_FILES[ 'arquivo' ][ 'tmp_name' ];
