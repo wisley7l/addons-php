@@ -23,12 +23,6 @@ $id = (int) $_POST['id'];
 var_dump($_POST);
 var_dump($_FILES);
 
-$filename = PATH_DATA . '/teste.txt';
-
-echo PHP_EOL;
-echo shell_exec('users');
-echo PHP_EOL;
-
 // save profile image with user id name
 if (empty($_POST) AND empty($_FILES)) {
   //header("Location: ../index");
@@ -56,10 +50,14 @@ if (empty($_POST) AND empty($_FILES)) {
   if (!empty($_FILES)) {
     // verifica se foi enviado um arquivo
     if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] == 0 ) {
-        echo 'Você enviou o arquivo: <strong>' . $_FILES[ 'arquivo' ][ 'name' ] . '</strong><br />';
-        echo 'Este arquivo é do tipo: <strong > ' . $_FILES[ 'arquivo' ][ 'type' ] . ' </strong ><br />';
-        echo 'Temporáriamente foi salvo em: <strong>' . $_FILES[ 'arquivo' ][ 'tmp_name' ] . '</strong><br />';
-        echo 'Seu tamanho é: <strong>' . $_FILES[ 'arquivo' ][ 'size' ] . '</strong> Bytes<br /><br />';
+        echo 'Você enviou o arquivo:'. $_FILES[ 'arquivo' ][ 'name' ] ;
+        echo PHP_EOL;
+        echo 'Este arquivo é do tipo: ' . $_FILES[ 'arquivo' ][ 'type' ] ;
+        echo PHP_EOL;
+        echo 'Temporáriamente foi salvo em: ' . $_FILES[ 'arquivo' ][ 'tmp_name' ] ;
+        echo PHP_EOL;
+        echo 'Seu tamanho é: <strong>' . $_FILES[ 'arquivo' ][ 'size' ] ;
+        echo PHP_EOL;
 
         $file_tmp = $_FILES[ 'arquivo' ][ 'tmp_name' ];
         $name = $_FILES[ 'arquivo' ][ 'name' ];

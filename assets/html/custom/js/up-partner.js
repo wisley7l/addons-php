@@ -7,7 +7,7 @@ $("#addons-button-save").click(function(event){
   let rp_pass = md5($(div).find("input.addons-up-rp-pass").val());
 
 
-  if(pass != rp_pass || pass == md5("") ){
+  if(pass != rp_pass){
     //If the confirmation password and password are different, activate "span"
     $(div).find("span.pass").css( "color", "red");
     $(div).find("span.rp-pass").css( "color", "red");
