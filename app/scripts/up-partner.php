@@ -22,7 +22,13 @@ echo PHP_EOL;
 $id = (int) $_POST['id'];
 var_dump($_POST);
 var_dump($_FILES);
-echo file_put_contents(PATH_DATA.'/arquivo.txt', 'teste /n');
+
+$filename = PATH_DATA . '/teste.txt';
+if (is_writable($filename)) {
+    echo 'O arquivo possui permissão de escrita';
+} else {
+    echo 'O arquivo não possui permissão de escrita';
+}
 
 // save profile image with user id name
 if (empty($_POST) AND empty($_FILES)) {
