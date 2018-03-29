@@ -21,11 +21,12 @@ echo PHP_EOL;
 // check if the (id) logged is equal to or (id) sent
 $id = (int) $_POST['id'];
 var_dump($_POST);
+var_dump($_FILES);
 
 // save profile image with user id name
 if (empty($_POST)) {
-  header("Location: ../index");
-  exit;
+  //header("Location: ../index");
+  //exit;
 }else { // if exists POST
   if (!empty($_POST['pass'])) {
     $pass_hash = $_POST['pass'];
@@ -42,7 +43,7 @@ if (empty($_POST)) {
      // message sucess
    }
    else {
-     # error 
+     # error
    }
     //*/
   }else {
