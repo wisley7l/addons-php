@@ -75,7 +75,7 @@ if (empty($_POST) AND empty($_FILES)) {
             $novoNome = uniqid ( time () ) . '.' . $extensao;
 
             // Concatena a pasta com o nome
-            $destino = 'imagens / ' . $novoNome;
+            $destino = PATH_DATA . '/' . $novoNome;
 
             // tenta mover o arquivo para o destino
             if ( @move_uploaded_file ( $arquivo_tmp, $destino ) ) {
