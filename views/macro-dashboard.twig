@@ -334,11 +334,9 @@
         {# enter <input> to send image #}
       </form>
       <form enctype="multipart/form-data" action="scripts/up-partner" method="POST">
-          <!-- MAX_FILE_SIZE deve preceder o campo input -->
-          <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-          <!-- O Nome do elemento input determina o nome da array $_FILES -->
-          Enviar esse arquivo: <input name="userfile" type="file" />
-          <input type="submit" value="Enviar arquivo" />
+        Selecione uma imagem: <input name="arquivo" type="file" />
+        <br />
+        <input type="submit" value="Salvar" />
       </form>
 
     </div>
