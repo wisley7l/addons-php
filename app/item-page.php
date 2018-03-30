@@ -65,7 +65,8 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
        );
        array_push($faqs, $i_faqs);
     }
-
+    echo PHP_EOL;
+    var_dump($faqs);
 
     // TODO:
     // $info = item_page($id_app,1);
