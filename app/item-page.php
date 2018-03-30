@@ -99,7 +99,6 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $json = json_decode($item['json_body'],true);
 
     $_faqs = $json['faqs'];
-    $$_plans = $json['plans'];
 
     for ($i=0; $i < $_faqs['total_faqs']; $i++) {
       echo $_faqs[$i]['id'];
@@ -113,18 +112,26 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
     $plans = array();
 
-    for ($i=0; $i < $_plans['total_plans'] ; $i++) {
-      $i_plan = array('id' => $_plans['plans'][$i]['id'],
-        'name' => $_plans['plans'][$i]['name'],
-        'price' => $_plans['plans'][$i]['value'],
-        'description' => $_plans['plans'][$i]['desc'],
-        'checked' => '',
+      $planBasic = array('id' => 1,
+        'name' => 'Basic',
+        'price' => $item['value_license_basic'],
+        'description' => '',
+        'checked' => 'checked',
       );
-      if ( $i == 0 ) {
-        $i_plan['checked'] = 'checked';
+      array_push($plans, $planBasic);
+
+      if ($item['value_license_extend'] != NULL) {
+        $planExtend = array('id' => 2,
+          'name' => 'Extend',
+          'price' => $item['value_license_extend'],
+          'description' => '',
+          'checked' => '',
+        );
+        array_push($plans, $planExtend);
       }
-      array_push($plans, $i_plan);
-    }
+
+
+
 
     // TODO:
     // $info = item_page($id_app,0);
