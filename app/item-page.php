@@ -58,7 +58,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $faqs = array();
     $json = json_decode($item['json_body'],true);
     // var_dump($json);
-    $_faqs = $json['faqs'];
+    $_faqs = $json['faqs']['faqs'];
     var_dump($_faqs);
 
 
