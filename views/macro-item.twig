@@ -3,95 +3,24 @@
   <div class="tab-content">
     <!-- ITEM-FAQ -->
     <div class="accordion item-faq primary">
-      <!-- ACCORDION ITEM -->
-      <div class="accordion-item">
-        <h6 class="accordion-item-header">Read Before Buying</h6>
-        <!-- SVG ARROW -->
-        <svg class="svg-arrow">
-          <use xlink:href="#svg-arrow"></use>
-        </svg>
-        <!-- /SVG ARROW -->
-        <div class="accordion-item-content">
-          <h4>Bidding for the First Time</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-          <h4>Winning the Auction</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-        </div>
-      </div>
-      <!-- /ACCORDION ITEM -->
-
-
       {% for f in faqs %}
       <!-- ACCORDION ITEM -->
       <div class="accordion-item">
-        <h6 class="accordion-item-header">{{f.question}}</h6>
+        <h6 class="accordion-item-header">{{f.question}} ?</h6>
         <!-- SVG ARROW -->
         <svg class="svg-arrow">
           <use xlink:href="#svg-arrow"></use>
         </svg>
         <!-- /SVG ARROW -->
         <div class="accordion-item-content">
-          <h4>Bidding for the First Time</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-          <h4>Winning the Auction</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+          <h4></h4>
+          <p>{{f.answer}}. </p>
+          <h4></h4>
+          <p>.</p>
         </div>
       </div>
       <!-- /ACCORDION ITEM -->
-
       {% endfor %}
-
-
-      <!-- ACCORDION ITEM -->
-      <div class="accordion-item">
-        <h6 class="accordion-item-header">Our Return Policy</h6>
-        <!-- SVG ARROW -->
-        <svg class="svg-arrow">
-          <use xlink:href="#svg-arrow"></use>
-        </svg>
-        <!-- /SVG ARROW -->
-        <div class="accordion-item-content">
-          <h4>Bidding for the First Time</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-          <h4>Winning the Auction</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-        </div>
-      </div>
-      <!-- /ACCORDION ITEM -->
-
-      <!-- ACCORDION ITEM -->
-      <div class="accordion-item">
-        <h6 class="accordion-item-header">Shipping and Delivery</h6>
-        <!-- SVG ARROW -->
-        <svg class="svg-arrow">
-          <use xlink:href="#svg-arrow"></use>
-        </svg>
-        <!-- /SVG ARROW -->
-        <div class="accordion-item-content">
-          <h4>Bidding for the First Time</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-          <h4>Winning the Auction</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-        </div>
-      </div>
-      <!-- /ACCORDION ITEM -->
-
-      <!-- ACCORDION ITEM -->
-      <div class="accordion-item">
-        <h6 class="accordion-item-header">Quality Guarantee</h6>
-        <!-- SVG ARROW -->
-        <svg class="svg-arrow">
-          <use xlink:href="#svg-arrow"></use>
-        </svg>
-        <!-- /SVG ARROW -->
-        <div class="accordion-item-content">
-          <h4>Bidding for the First Time</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-          <h4>Winning the Auction</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-        </div>
-      </div>
-      <!-- /ACCORDION ITEM -->
     </div>
     <!-- /ITEM-FAQ -->
   </div>
