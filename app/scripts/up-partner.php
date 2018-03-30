@@ -24,7 +24,7 @@ var_dump($_POST);
 var_dump($_FILES);
 
 // save profile image with user id name
-if (empty($_POST) AND [ 'arquivo' ][ 'size' ] == 0) {
+if (empty($_POST) AND $_FILES[ 'arquivo' ][ 'size' ] == 0) {
   //header("Location: ../index");
   //exit;
 }else { // if exists POST
