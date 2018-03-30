@@ -72,7 +72,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     var_dump($item);
 
     $app_info = array('id' => $id_app,
-      'name' => $item['name'],
+      'name' => $item['title'],
       'description' => $item['description'],
       'video' => $item['link_video'],
       'website' => $item['link_docomentation'],
