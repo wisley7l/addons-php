@@ -37,7 +37,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $app_info = array('id' => $id_app,
       'name' => $item['title'],
       'description' => $item['description'] ,
-      'video' => 'https://www.youtube.com/embed/gkjITSCiAxQ',
+      'video' => $item['link_video'],
       'website' => $item['website'],
     );
     $plans = array();
