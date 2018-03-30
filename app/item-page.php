@@ -70,12 +70,12 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     //search item in themes
     $item = search_theme_id($id_app);
     var_dump($item);
-    
+
     $app_info = array('id' => $id_app,
-      'name' => 'THEME',
-      'description' => 'Esta é a Descrição do APP ou do TEMA',
-      'video' => 'https://www.youtube.com/embed/gkjITSCiAxQ',
-      'website' => 'https://themes.shopify.com/',
+      'name' => $item['name'],
+      'description' => $item['description'],
+      'video' => $item['link_video'],
+      'website' => $item['link_docomentation'],
     );
 
     // TODO:
