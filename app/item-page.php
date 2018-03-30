@@ -55,6 +55,18 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       array_push($plans, $i_plan);
     }
 
+    $faqs = array();
+    $_faqs = json_decode($item['json_body'],true);
+
+    for ($i=0; $i < $_faqs['total_faqs'] ; $i++) {
+      $i_faqs = array('id' => $_faqs['id'] ,
+        'question' => $_faqs['question'],
+        'answer' => $_faqs['answer']
+       );
+       array_push($faqs, $i_faqs);
+    }
+
+
     // TODO:
     // $info = item_page($id_app,1);
     // app_info = $info['item'];
@@ -107,12 +119,12 @@ $info_page = array('app' => $app,
 );
 
 // TODO: delete
-$faqs = array();
-$i_faqs = array('id' => 1,
-  'question' => 'pergunta',
-  'answer' => 'Aqui sera a resposta das perguntas'
- );
- array_push($faqs, $i_faqs);
+// $faqs = array();
+// $i_faqs = array('id' => 1,
+//   'question' => 'pergunta',
+//   'answer' => 'Aqui sera a resposta das perguntas'
+//  );
+//  array_push($faqs, $i_faqs);
 
 
 //var_dump($array_images[0]);
