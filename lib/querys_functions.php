@@ -748,6 +748,8 @@ function search_theme_id($id_theme)
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
+      echo $row['json_body'];
+      echo PHP_EOL;
       $item = array(
         'id'=> $row['id'],
         'partner_id'=> $row['partner_id'],
