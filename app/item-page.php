@@ -32,7 +32,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $item = search_app_id($id_app);
     $_plans = json_decode($item['plans_json'],true);
     var_dump($item);
-    var_dump($_plans);
+    // var_dump($_plans);
 
     $app_info = array('id' => $id_app,
       'name' => $item['title'],
@@ -54,8 +54,6 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       }
       array_push($plans, $i_plan);
     }
-
-
 
     // TODO:
     // $info = item_page($id_app,1);
