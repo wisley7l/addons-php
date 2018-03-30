@@ -59,15 +59,15 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $json = json_decode($item['json_body'],true);
     // var_dump($json);
     $_faqs = $json['faqs']['faqs'];
-    // var_dump($_faqs);
+    var_dump($_faqs);
 
 
     for ($i=0; $i < count($_faqs); $i++) {
-      echo $_faqs['id'];
+      echo $_faqs[$i]['id'];
       echo PHP_EOL;
-      $i_faqs = array('id' => $_faqs['id'] ,
-        'question' => $_faqs['question'],
-        'answer' => $_faqs['answer']
+      $i_faqs = array('id' => $_faqs[$i]['id'] ,
+        'question' => $_faqs[$i]['question'],
+        'answer' => $_faqs[$i]['answer']
        );
        array_push($faqs, $i_faqs);
     }
