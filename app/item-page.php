@@ -56,8 +56,9 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     }
 
     $faqs = array();
-    $_faqs = json_decode($item['json_body'],true);
-
+    $json = json_decode($item['json_body'],true);
+    $_faqs = $json['faqs'];
+    
     for ($i=0; $i < $_faqs['total_faqs'] ; $i++) {
       $i_faqs = array('id' => $_faqs['id'] ,
         'question' => $_faqs['question'],
