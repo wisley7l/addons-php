@@ -211,7 +211,7 @@ if(empty($_POST)) { // not exist post
      //*
      $query =  "INSERT INTO themes (title, partner_id, description,
           version, json_body, link_documentation, link_video, value_license_basic, value_license_extend )
-        VALUES ('$name', $id_partner, '$description', '$numversion',''$body_json',
+        VALUES ('$name', $id_partner, '$description', '$numversion','$body_json',
         '$linkdoc', '$linkvideo',$plan_basic,$plan_extend);";
 
      // query search app and theme for index page

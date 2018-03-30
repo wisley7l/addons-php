@@ -57,9 +57,9 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
     $faqs = array();
     $json = json_decode($item['json_body'],true);
-    // var_dump($json);
-    $_faqs = $json['faqs'];
     
+    $_faqs = $json['faqs'];
+
     for ($i=0; $i < $_faqs['total_faqs']; $i++) {
       echo $_faqs[$i]['id'];
       echo PHP_EOL;
@@ -69,8 +69,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
        );
        array_push($faqs, $i_faqs);
     }
-    echo PHP_EOL;
-    var_dump($faqs);
+
 
     // TODO:
     // $info = item_page($id_app,1);
