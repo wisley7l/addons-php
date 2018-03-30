@@ -31,7 +31,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $id_app = (int) $_GET['id'];
     $item = search_app_id($id_app);
     $_plans = json_decode($item['plans_json'],true);
-    var_dump($item);
+    // var_dump($item);
     // var_dump($_plans);
 
     $app_info = array('id' => $id_app,
@@ -57,6 +57,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
     $faqs = array();
     $json = json_decode($item['json_body'],true);
+    var_dump($json);
     $_faqs = $json['faqs'];
 
     for ($i=0; $i < $_faqs['total_faqs'] ; $i++) {
@@ -67,7 +68,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
        array_push($faqs, $i_faqs);
     }
     echo PHP_EOL;
-    var_dump($faqs);
+    // var_dump($faqs);
 
     // TODO:
     // $info = item_page($id_app,1);
