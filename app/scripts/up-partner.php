@@ -30,7 +30,7 @@ if (empty($_POST) AND $_FILES[ 'arquivo' ][ 'size' ] == 0) {
 }else { // if exists POST
   if (!empty($_POST['pass'])) {
     $pass_hash = $_POST['pass'];
-    echo $pass_hash;
+    // echo $pass_hash;
     $pass = password_hash($pass_hash, PASSWORD_DEFAULT);
     echo $pass;
     // escape id and password
