@@ -1,5 +1,5 @@
 
-{% macro faqs() %}
+{% macro faqs(faqs) %}
   <div class="tab-content">
     <!-- ITEM-FAQ -->
     <div class="accordion item-faq primary">
@@ -20,9 +20,11 @@
       </div>
       <!-- /ACCORDION ITEM -->
 
+
+      {% for f in faqs %}
       <!-- ACCORDION ITEM -->
       <div class="accordion-item">
-        <h6 class="accordion-item-header">How Does Bidding Work?</h6>
+        <h6 class="accordion-item-header">{{f.question}}</h6>
         <!-- SVG ARROW -->
         <svg class="svg-arrow">
           <use xlink:href="#svg-arrow"></use>
@@ -36,6 +38,9 @@
         </div>
       </div>
       <!-- /ACCORDION ITEM -->
+
+      {% endfor %}
+
 
       <!-- ACCORDION ITEM -->
       <div class="accordion-item">

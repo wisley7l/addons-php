@@ -107,6 +107,12 @@ $info_page = array('app' => $app,
 );
 
 // TODO: delete
+$faqs = array();
+$i_faqs = array('id' => 1,
+  'question' => 'pergunta',
+  'answer' => 'Aqui sera a resposta das perguntas'
+ );
+ array_push($faqs, $i_faqs);
 
 
 //var_dump($array_images[0]);
@@ -144,5 +150,6 @@ echo $twig->render('item-page.twig', array(
   'app_info' => $app_info,
   'array_images' => $array_images,
   'image_main' => $image_main,
+  'faqs' => $faqs,
 
 ));
