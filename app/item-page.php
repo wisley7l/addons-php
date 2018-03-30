@@ -63,9 +63,11 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
 
     for ($i=0; $i < count($_faqs); $i++) {
-      $i_faqs = array('id' => $_faqs['faqs']['id'] ,
-        'question' => $_faqs['faqs']['question'],
-        'answer' => $_faqs['faqs']['answer']
+      echo $_faqs['id'];
+      echo PHP_EOL;
+      $i_faqs = array('id' => $_faqs['id'] ,
+        'question' => $_faqs['question'],
+        'answer' => $_faqs['answer']
        );
        array_push($faqs, $i_faqs);
     }
