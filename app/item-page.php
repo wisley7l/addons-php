@@ -114,7 +114,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
       $planBasic = array('id' => 1,
         'name' => 'Basic',
-        'price' => $item['value_license_basic'],
+        'price' => treatNumber($item['value_license_basic']),
         'description' => '',
         'checked' => 'checked',
       );
@@ -123,7 +123,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       if ($item['value_license_extend'] != NULL) {
         $planExtend = array('id' => 2,
           'name' => 'Extend',
-          'price' => $item['value_license_extend'],
+          'price' => treatNumber($item['value_license_extend']),
           'description' => '',
           'checked' => '',
         );
