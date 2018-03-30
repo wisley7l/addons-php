@@ -57,7 +57,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
     $faqs = array();
     $json = json_decode($item['json_body'],true);
-    
+
     $_faqs = $json['faqs'];
 
     for ($i=0; $i < $_faqs['total_faqs']; $i++) {
@@ -93,6 +93,22 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       'video' => $item['link_video'],
       'website' => $item['link_docomentation'],
     );
+
+
+    $faqs = array();
+    $json = json_decode($item['json_body'],true);
+
+    $_faqs = $json['faqs'];
+
+    for ($i=0; $i < $_faqs['total_faqs']; $i++) {
+      echo $_faqs[$i]['id'];
+      echo PHP_EOL;
+      $i_faqs = array('id' => $_faqs['faqs'][$i]['id'] ,
+        'question' => $_faqs['faqs'][$i]['question'],
+        'answer' => $_faqs['faqs'][$i]['answer']
+       );
+       array_push($faqs, $i_faqs);
+    }
 
     // TODO:
     // $info = item_page($id_app,0);
