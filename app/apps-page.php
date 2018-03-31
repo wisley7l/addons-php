@@ -105,6 +105,10 @@ if ($_GET['type'] == 'apps') {
         $apps = search_all_apps(12);
         $number_found = count($apps);
       }
+    }else {
+      // search item  all
+      $apps = search_all_apps(12);
+      $number_found = count($apps);      
     }
   }
 
