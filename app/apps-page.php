@@ -33,7 +33,7 @@ if ($_GET['filter'] == 'free') {
 }
 
 if (!empty($_GET['category'])) {
-  $page = $page . 'caterogory=' . $_GET['category'];
+  $page = $page . '&caterogory=' . $_GET['category'];
 }
 
 if ($_GET['type'] == 'apps') {
