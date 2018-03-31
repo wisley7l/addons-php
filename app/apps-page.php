@@ -76,7 +76,7 @@ if ($_GET['type'] == 'apps') {
       if (!empty($_GET['name'])) {
         // search item by category and name
         $name_item = $_GET['name'];
-        $apps =search_apps_name_category($limit,$search,$id_category);
+        $apps =search_apps_name_category(12,$name_item,$id_category);
         $number_found = count($apps);
       }else {
         // search item by category all
