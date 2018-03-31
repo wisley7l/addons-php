@@ -67,7 +67,7 @@ if ($_GET['type'] == 'apps') {
       }else {
           // search item by category and free
       }
-    }elseif (!empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
+    }elseif (isset($_GET['filter']) OR !empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
       if (!empty($_GET['name'])) {
         // search item by category and name
       }else {
