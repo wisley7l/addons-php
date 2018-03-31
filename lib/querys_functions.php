@@ -367,6 +367,7 @@ function search_apps_free_category($limit,$category)
   $id_category = (int)$category;
   $number = (int) $limit;
   $conn = $GLOBALS['conn']; // get varible global conn
+  $number = (int) $limit;
   // query search app and theme for index page
   $query = "SELECT a.id, a.partner_id, a.title, a.thumbnail,
     a.value_plan_basic, p.id AS p_id, p.path_image
