@@ -40,7 +40,6 @@ if ($_GET['filter'] == 'free') {
 }
 
 if (!empty($_GET['category'])) {
-  echo $_GET['category'];
   $category = '&category=' . $_GET['category'];
 }else {
   $category = '';
@@ -73,6 +72,8 @@ if ($_GET['type'] == 'apps') {
         // search item by category and name
       }else {
         // search item by category all
+        $apps = search_apps_category(12,$id_category);
+        $number_found = count($apps);
       }
     }
   }else {
