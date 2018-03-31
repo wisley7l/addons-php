@@ -38,23 +38,23 @@ $dictionary = get_dictionary();
 $categories_apps = array(
   array('id' => 0 ,
    'name' => $dictionary['word_all_categories'],
-   'page' => 'apps-page'
+   'page' => 'apps-page?type=apps'
 ),
   array('id' => 1 ,
    'name' => $dictionary['word_product_sourcing'],
-   'page' => 'category-product-sourcing'
+   'page' => 'apps-page?type=apps&category=1'
 ),
   array('id' => 2 ,
   'name' => $dictionary['word_marketing'],
-  'page' => 'category-marketing'
+  'page' => 'apps-page?type=apps&category=2'
 ),
   array('id' => 3 ,
   'name' => $dictionary['word_sales'],
-  'page' => 'category-sales'
+  'page' => 'apps-page?type=apps&category=3'
 ),
   array('id' => 4 ,
   'name' => $dictionary['word_social_media'],
-  'page' => 'category-social-media'
+  'page' => 'apps-page?type=apps&category=4'
 ),
 /* not implemented
   array('id' => 5 ,
@@ -88,7 +88,7 @@ $categories_themes = array(
   // Categories Themes
   array('id' => 0 ,
    'name' => $dictionary['word_all_categories'],
-   'page' => 'theme-page'
+   'page' => 'apps-page?type=themes'
 ),
   array('id' => 1 ,
   'name' => $dictionary['word_art_photography'],
@@ -161,7 +161,7 @@ array('id' => 15,
 */
 );
 
-// FUNCTIONS 
+// FUNCTIONS
 
 function get_categories_app()
 {
