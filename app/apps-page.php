@@ -1,6 +1,5 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
-$apps_page = 'apps-page';
 $dictionary = get_dictionary();
 $name_item; // variable save term search
 //(init) * Required on all pages *
@@ -25,28 +24,12 @@ if (isset($_GET['logout'])){
 // varible select filter
 $filter = array('all' => 'selected',
  'free' => '');
-
 // filter categories and price
-
-if (empty($_GET['category'])) {
-  $page_cat = '';
-
-}else {
-     $page_cat = '&category=' . $_GET['category'];
-}
-
-//
 if ($_GET['type'] == 'apps') {
-  $page = $apps_page .'?type=apps' .$page_cat;
 
 }elseif ($_GET['type'] == 'themes') {
-  $page = $apps_page .'?type=apps' .$page_cat;
-
+  # code...
 }else {
-
-}
-
-if (!empty($_GET['term'])) {
 
 }
 //(end) * Required on all pages *
