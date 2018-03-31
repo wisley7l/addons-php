@@ -53,6 +53,8 @@ $page = 'apps-page?type' . $_GET['type'] . $category . $_filter;
 
 if (!empty($_GET['term'])) {
   $name = $_GET['term'];
+  header("Location:". $page . " ?name=" . $_GET['name']);
+  exit;
 }
 if (!empty($_GET['name'])) {
   $name = $_GET['name'];
