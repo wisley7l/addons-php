@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
-$apps_page = 'apps-page'
+$apps_page = 'apps-page';
 $dictionary = get_dictionary();
 $name_item; // variable save term search
 //(init) * Required on all pages *
