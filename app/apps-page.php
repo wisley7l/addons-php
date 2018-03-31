@@ -29,7 +29,13 @@ $filter = array('all' => 'selected',
 if ($_GET['filter'] == 'free') {
   $filter['all'] = '';
   $filter['free'] = 'selected';
+
 }
+
+if (!empty($_GET['category'])) {
+  $page . 'caterogory=' . $_GET['category'];
+}
+
 if ($_GET['type'] == 'apps') {
 
 
