@@ -335,6 +335,7 @@ function search_apps_category($limit,$category)
   $id_category = (int)$category;
   $conn = $GLOBALS['conn']; // get varible global conn
   $name = mysqli_real_escape_string($conn, $search); // escape string
+  $number = (int) $limit;
   // query search app and theme for index page
   $query = "SELECT a.id, a.partner_id, a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
