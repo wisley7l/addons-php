@@ -20,8 +20,7 @@ echo PHP_EOL;
 //var_dump($_FILES); // send image profile
 // check if the (id) logged is equal to or (id) sent
 $id = (int) $_POST['id'];
-var_dump($_POST);
-var_dump($_FILES);
+$conn = connect_db();
 
 // save profile image with user id name
 if (empty($_POST) AND $_FILES[ 'arquivo' ][ 'size' ] == 0) {
@@ -36,7 +35,7 @@ if (empty($_POST) AND $_FILES[ 'arquivo' ][ 'size' ] == 0) {
     // escape id and password
     // TODO: insert table partner, escape id and pass
     /*
-    $conn = $GLOBAL['conn'];
+
     // query without changing password
     //$query = "UPDATE `partners` SET `password_hash` = $pass_hash  WHERE `id`= $id";
     if (mysqli_query(  $conn, $query )) {
@@ -84,8 +83,7 @@ if (empty($_POST) AND $_FILES[ 'arquivo' ][ 'size' ] == 0) {
 
             // tenta mover o arquivo para o destino
             if ( @move_uploaded_file ( $file_tmp, $dist ) ) {
-                echo 'Arquivo salvo com sucesso em : <strong>' . $dist . '</strong><br />';
-                echo ' < img src = "' . $dist . '" />';
+                echo "Sucess ";
             }
             else
                 echo 'Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';
