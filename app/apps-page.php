@@ -57,7 +57,7 @@ $id_category = 0;
 
 if ($_GET['type'] == 'apps') {
   $title_page = $dictionary['word_apps_store'];
-  $_category = $apps_category;
+  $_category = $app_category;
 
   if (!empty($_GET['category'])) {
     $id_category = (int) $_GET['category'];
@@ -102,7 +102,7 @@ if ($_GET['type'] == 'apps') {
 
 }elseif ($_GET['type'] == 'themes') {
   $title_page = $dictionary['word_themes_store'];
-  $_category = $themes_category;
+  $_category = $theme_category;
 
 }
 
