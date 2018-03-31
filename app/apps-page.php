@@ -68,6 +68,7 @@ if ($_GET['type'] == 'apps') {
           // search item by category and free
       }
     }elseif (isset($_GET['filter']) OR !empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
+      echo "aqui";
       if (!empty($_GET['name'])) {
         // search item by category and name
       }else {
