@@ -2,6 +2,9 @@
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $name_item; // variable save term search
+// test all category  // Perform db query to obtain this information
+$app_category = get_categories_app();
+$theme_category = get_categories_theme();
 
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
@@ -49,10 +52,12 @@ $page = 'apps-page?type=' . $_GET['type'] . $category;
 if (!empty($_GET['term'])) {
 
 }
-
+// treat querys
+$id_category = 0;
 
 if ($_GET['type'] == 'apps') {
   $title_page = $dictionary['word_apps_store'];
+  $_category = $apps_category;
 
   if (!empty($_GET['category'])) {
     $id_category = (int) $_GET['category'];
@@ -74,6 +79,8 @@ if ($_GET['type'] == 'apps') {
     if ($_GET['filter'] == 'free') {
       if (!empty($_GET['name'])) {
         // search item  and freee and name
+        $apps = search_apps_free_name(12,$search);
+        $number_found = count($apps);
       }else {
           // search item and free
           $apps = search_all_apps_free(12);
@@ -82,6 +89,8 @@ if ($_GET['type'] == 'apps') {
     }elseif (!empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
       if (!empty($_GET['name'])) {
         // search item and name
+        $apps = search_apps_all_name($limit,$search);
+        $number_found = count($apps);
       }else {
         // search item  all
         $apps = search_all_apps(12);
@@ -93,6 +102,7 @@ if ($_GET['type'] == 'apps') {
 
 }elseif ($_GET['type'] == 'themes') {
   $title_page = $dictionary['word_themes_store'];
+  $_category = $themes_category;
 
 }
 
@@ -115,16 +125,14 @@ $info_footer = array(
 //info search
 $info_page = array(
   'name' => $title_page . $name_item,
-  'search_id' => 0, // sected category
+  'search_id' => $id_category, // sected category
   'number_found' => $number_found,
   'page' => $page,
   'search' => $name_item,
 );
 
 // obs: Search all categories in db
-// test all category  // Perform db query to obtain this information
-$app_category = get_categories_app();
-$theme_category = get_categories_theme();
+
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
@@ -137,7 +145,7 @@ echo $twig->render('apps-themes-page.twig', array(
   'app_category' => $app_category,
   'theme_category' => $theme_category,
   'filter' => $filter,
-  'all_category' => $app_category,
+  'all_category' => $_category,
   // test apps
   'apps_themes' => $apps,
   'user' => $user_login
