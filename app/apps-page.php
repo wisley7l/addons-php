@@ -59,10 +59,7 @@ if ($_GET['type'] == 'apps') {
   $title_page = $dictionary['word_themes_store'];
 
 }
-else {
-  header("Location: error-page");
-  exit;
-}
+
 
 
 
