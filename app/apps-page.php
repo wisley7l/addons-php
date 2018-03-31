@@ -77,6 +77,7 @@ if ($_GET['type'] == 'apps') {
       }else {
           // search item and free
           $apps = search_all_apps_free(12);
+          $number_found = count($apps);
       }
     }elseif (!empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
       if (!empty($_GET['name'])) {
@@ -84,6 +85,7 @@ if ($_GET['type'] == 'apps') {
       }else {
         // search item  all
         $apps = search_all_apps(12);
+        $number_found = count($apps);
       }
     }
   }
