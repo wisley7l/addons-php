@@ -435,8 +435,8 @@ function search_apps_name_category($limit,$search,$category)
   $conn = $GLOBALS['conn']; // get varible global conn
   $name = mysqli_real_escape_string($conn, $search); // escape string
   // query search app and theme for index page
-  $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
-    a.value_plan_basic, p.id AS p_id, p.username, p.path_image
+  $query = "SELECT a.id, a.partner_id, a.title, a.thumbnail,
+    a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p, category_apps c , relationship_category_apps r
     WHERE (a.partner_id = p.id AND a.title LIKE '%$name%'
       AND r.app_id = a.id AND r.category_apps_id = c.id AND c.id = $id_category)
