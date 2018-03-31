@@ -81,13 +81,10 @@ $info_page = array(
   'name' => $title_page . $name_item,
   'search_id' => 0, // sected category
   'number_found' => $number_found,
-  'page' => $page
+  'page' => $page,
+  'search' => $name_item,
 );
-// query filter itens
-$filter_segment = array(
-  array('name' => 'Test 1'),
-  array('name' => 'Test 2' )
-);
+
 // obs: Search all categories in db
 // test all category  // Perform db query to obtain this information
 $app_category = get_categories_app();
@@ -101,7 +98,6 @@ echo $twig->render('apps-themes-page.twig', array(
   'login' => $_SESSION['login'],
   'info_footer' => $info_footer,
   'info_page' => $info_page,
-  'segment' => $filter_segment,
   'app_category' => $app_category,
   'theme_category' => $theme_category,
   'filter' => $filter,
