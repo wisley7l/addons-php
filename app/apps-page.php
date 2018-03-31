@@ -26,6 +26,10 @@ if (isset($_GET['logout'])){
 $filter = array('all' => 'selected',
  'free' => '');
 // filter categories and price
+if ($_GET['filter'] == 'free') {
+  $filter['all'] = '';
+  $filter['free'] = 'selected';
+}
 if ($_GET['type'] == 'apps') {
 
 
