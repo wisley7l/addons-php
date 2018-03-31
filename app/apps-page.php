@@ -84,6 +84,11 @@ if ($_GET['type'] == 'apps') {
         $number_found = count($apps);
       }
     }
+    else {
+      // search item by category all
+      $apps = search_apps_category(12,$id_category);
+      $number_found = count($apps);      
+    }
   }else {
     if ($_GET['filter'] == 'free') {
       if (!empty($_GET['name'])) {
@@ -108,7 +113,7 @@ if ($_GET['type'] == 'apps') {
     }else {
       // search item  all
       $apps = search_all_apps(12);
-      $number_found = count($apps);      
+      $number_found = count($apps);
     }
   }
 
