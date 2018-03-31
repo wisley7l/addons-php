@@ -42,12 +42,12 @@ if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
   }else if ((int) $_GET['categories'] == 1) {
     // seacrch for app with name category_name
     // redirect for search page with parameters
-    header("Location: search-page?app=" . $_GET['categories'] . "&name=" . $_GET['category_name']);
+    header("Location: apps-page?type=apps"."&name=" . $_GET['category_name']);
   }
   else if ((int) $_GET['categories'] == 0) {
     // seacrch for theme with name category_name
     // redirect for search page with parameters
-    header("Location: search-page?app=" . $_GET['categories'] . "&name=" . $_GET['category_name']);
+    header("Location: apps-page?type=themes" . "&name=" . $_GET['category_name']);
     exit;
 
   }

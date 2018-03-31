@@ -54,6 +54,40 @@ if (!empty($_GET['term'])) {
 if ($_GET['type'] == 'apps') {
   $title_page = $dictionary['word_apps_store'];
 
+  if (!empty($_GET['category'])) {
+    $id_category = (int) $_GET['category'];
+    // search item by caategory and free
+    if ($_GET['filter'] == 'free') {
+      if (!empty($_GET['name'])) {
+        // search item by category and freee and name
+      }else {
+          // search item by category and free
+      }
+    }elseif (!empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
+      if (!empty($_GET['name'])) {
+        // search item by category and name
+      }else {
+        // search item by category all
+      }
+    }
+  }else {
+    if ($_GET['filter'] == 'free') {
+      if (!empty($_GET['name'])) {
+        // search item  and freee and name
+      }else {
+          // search item and free
+          $apps = search_all_apps_free(12);
+      }
+    }elseif (!empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
+      if (!empty($_GET['name'])) {
+        // search item and name
+      }else {
+        // search item  all
+        $apps = search_all_apps(12);
+      }
+    }
+  }
+
 
 }elseif ($_GET['type'] == 'themes') {
   $title_page = $dictionary['word_themes_store'];
