@@ -64,13 +64,15 @@ if ($_GET['type'] == 'apps') {
     if ($_GET['filter'] == 'free') {
       if (!empty($_GET['name'])) {
         // search item by category and freee and name
+        $search = $_GET['name'];
+        $apps = search_apps_free_name_category(12,$search,$id_category);
+        $number_found = count($apps);
       }else {
           // search item by category and free
           $apps = search_apps_free_category(12,$id_category);
           $number_found = count($apps);
       }
     }elseif (isset($_GET['filter']) OR !empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
-      echo "aqui";
       if (!empty($_GET['name'])) {
         // search item by category and name
       }else {
