@@ -64,7 +64,7 @@ if ($_GET['type'] == 'apps') {
     if ($_GET['filter'] == 'free') {
       if (!empty($_GET['name'])) {
         // search item by category and freee and name
-        $search = $_GET['name'];
+        $name_item = $_GET['name'];
         $apps = search_apps_free_name_category(12,$search,$id_category);
         $number_found = count($apps);
       }else {
