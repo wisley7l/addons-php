@@ -37,8 +37,8 @@ if ($_GET['type'] == 'apps') {
 
 }
 
-if (!empty($GET['category'])) {
-  echo ['category'];
+if (!empty($_GET['category'])) {
+  echo $_GET['category'];
 }
 
 
