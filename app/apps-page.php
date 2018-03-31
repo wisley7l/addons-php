@@ -2,6 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 $dictionary = get_dictionary();
 $name_item; // variable save term search
+$page = 'apps-page?type=' . $_GET['type'];
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
 session_write_close();
@@ -26,6 +27,7 @@ $filter = array('all' => 'selected',
  'free' => '');
 // filter categories and price
 if ($_GET['type'] == 'apps') {
+
 
 }elseif ($_GET['type'] == 'themes') {
   # code...
