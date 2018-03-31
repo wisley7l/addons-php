@@ -43,7 +43,7 @@ if (!empty($_GET['category'])) {
   $category = '';
 }
 
-$page = 'apps-page?type' . $_GET['type'] . $category . $_filter;
+$page = 'apps-page?type=' . $_GET['type'] . $category . $_filter;
 
 // redirect search page
 if (!empty($_GET['term'])) {
