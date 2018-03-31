@@ -36,12 +36,6 @@ if ($_GET['filter'] == 'free') {
   $_filter = '';
 }
 
-if ($_GET['type'] == 'apps') {
-
-}elseif ($_GET['type'] == 'themes') {
-
-}
-
 if (!empty($_GET['category'])) {
   echo $_GET['category'];
   $category = '&category=' . $_GET['category'];
@@ -51,16 +45,24 @@ if (!empty($_GET['category'])) {
 
 $page = 'apps-page?type' . $_GET['type'] . $category . $_filter;
 
+// redirect search page
 if (!empty($_GET['term'])) {
-  $name = $_GET['term'];
-  header("Location:". $page . " ?name=" . $_GET['name']);
+
+}
+
+
+if ($_GET['type'] == 'apps') {
+  $title_page = $dictionary['word_apps_store'];
+
+
+}elseif ($_GET['type'] == 'themes') {
+  $title_page = $dictionary['word_themes_store'];
+
+}
+else {
+  header("Location: error-page");
   exit;
 }
-if (!empty($_GET['name'])) {
-  $name = $_GET['name'];
-}
-
-
 
 
 
@@ -79,8 +81,7 @@ $info_footer = array(
 
 //info search
 $info_page = array(
-  'name' => $name_item,
-  'app_store' => true, // is app page
+  'name' => $title_page . $name_item,
   'search_id' => 0, // sected category
   'number_found' => $number_found,
   'page' => $page
