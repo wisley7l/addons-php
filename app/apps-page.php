@@ -29,6 +29,11 @@ $filter = array('all' => 'selected',
 if ($_GET['filter'] == 'free') {
   $filter['all'] = '';
   $filter['free'] = 'selected';
+  $_filter = '&filter=free';
+}elseif ($_GET['filter'] == 'all') {
+  $_filter = '&filter=all';
+} else{
+  $_filter = '';
 }
 
 if ($_GET['type'] == 'apps') {
@@ -39,7 +44,20 @@ if ($_GET['type'] == 'apps') {
 
 if (!empty($_GET['category'])) {
   echo $_GET['category'];
+  $category = '&category=' . $_GET['category'];
+}else {
+  $category = '';
 }
+
+$page = 'apps-page?type' . $_GET['type'] . $category . $_filter;
+
+if (!empty($_GET['term'])) {
+  $name = $_GET['term'];
+}
+if (!empty($_GET['name'])) {
+  $name = $_GET['name'];
+}
+
 
 
 
