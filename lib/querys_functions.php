@@ -490,6 +490,7 @@ function search_themes_category($limit,$category)
     mysqli_free_result($result);
 
   }
+  var_dump($themes);
   return $themes;
 }
 
