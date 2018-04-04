@@ -76,7 +76,7 @@ if ($_GET['type'] == 'apps') {
       if (!empty($_GET['name'])) {
         // search item by category and name
         $name_item = $_GET['name'];
-        $apps =search_apps_name_category(12,$name_item,$id_category);
+        $apps = search_apps_name_category(12,$name_item,$id_category);
         $number_found = count($apps);
       }else {
         // search item by category all
@@ -123,6 +123,7 @@ if ($_GET['type'] == 'apps') {
   $_category = $theme_category;
   if (!empty($_GET['category'])) {
     $id_category = (int) $_GET['category'];
+    $title = $theme_category[$id_category]['name'];
     // search item by caategory and free
     if ($_GET['filter'] == 'free') {
       if (!empty($_GET['name'])) {
