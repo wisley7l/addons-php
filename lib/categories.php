@@ -92,7 +92,7 @@ $categories_themes = array(
 ),
   array('id' => 1 ,
   'name' => $dictionary['word_art_photography'],
-  'page' => 'category-art-photography'
+  'page' => 'apps-page?type=themes&category=1'
 ),
 /* not implemented
   array('id' => 2 ,
