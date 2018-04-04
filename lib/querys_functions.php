@@ -470,7 +470,7 @@ function search_themes_category($limit,$category)
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT t.id, t.partner_id,t.title, t.thumbnail,
-    t.value_license_basic, p.id AS p_id, p.username, p.path_image
+    t.value_license_basic, p.id AS p_id, p.path_image
     FROM themes t, partners p, category_themes c , relationship_category_themes r
     WHERE (t.partner_id = p.id
       AND r.theme_id = t.id AND r.category_themes_id = c.id AND c.id = $id_category)
