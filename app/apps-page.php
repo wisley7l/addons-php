@@ -87,7 +87,7 @@ if ($_GET['type'] == 'apps') {
     else {
       // search item by category all
       $apps = search_apps_category(12,$id_category);
-      $number_found = count($apps);      
+      $number_found = count($apps);
     }
   }else {
     if ($_GET['filter'] == 'free') {
@@ -121,6 +121,64 @@ if ($_GET['type'] == 'apps') {
 }elseif ($_GET['type'] == 'themes') {
   $title_page = $dictionary['word_themes_store'];
   $_category = $theme_category;
+  if (!empty($_GET['category'])) {
+    $id_category = (int) $_GET['category'];
+    // search item by caategory and free
+    if ($_GET['filter'] == 'free') {
+      if (!empty($_GET['name'])) {
+        // search item by category and freee and name
+        $name_item = $_GET['name'];
+        $apps = search_themes_free_name_category(12,$name_item,$id_category);
+        $number_found = count($apps);
+      }else {
+          // search item by category and free
+          $apps = search_themes_free_category(12,$id_category);
+          $number_found = count($apps);
+      }
+    }elseif (isset($_GET['filter']) OR !empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
+      if (!empty($_GET['name'])) {
+        // search item by category and name
+        $name_item = $_GET['name'];
+        $apps = search_themes_name_category(12,$name_item,$id_category);
+        $number_found = count($apps);
+      }else {
+        // search item by category all
+        $apps = search_themes_category(12,$id_category);
+        $number_found = count($apps);
+      }
+    }
+    else {
+      // search item by category all
+      $apps = search_themes_category(12,$id_category);
+      $number_found = count($apps);
+    }
+  }else {
+    if ($_GET['filter'] == 'free') {
+      if (!empty($_GET['name'])) {
+        // search item  and freee and name
+        $apps = search_themes_free_name(12,$search);
+        $number_found = count($apps);
+      }else {
+          // search item and free
+          $apps = search_all_themes_free(12);
+          $number_found = count($apps);
+      }
+    }elseif (!empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
+      if (!empty($_GET['name'])) {
+        // search item and name
+        $apps = search_themes_all_name($limit,$search);
+        $number_found = count($apps);
+      }else {
+        // search item  all
+        $apps = search_all_themes(12);
+        $number_found = count($apps);
+      }
+    }else {
+      // search item  all
+      $apps = search_all_themes(12);
+      $number_found = count($apps);
+    }
+  }
 
 }
 
