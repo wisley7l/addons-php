@@ -143,6 +143,7 @@ if ($_GET['type'] == 'apps') {
         $number_found = count($apps);
       }else {
         // search item by category all
+        echo $id_category;
         $apps = search_themes_category(12,$id_category);
         $number_found = count($apps);
       }
