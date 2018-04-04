@@ -505,7 +505,7 @@ function search_themes_free_category($limit,$category)
     t.value_license_basic, p.id AS p_id, p.path_image
     FROM themes t, partners p, category_themes c , relationship_category_themes r
     WHERE (t.partner_id = p.id AND t.value_license_basic = 0
-      AND r.theme_id = a.id AND r.category_themes_id = c.id AND c.id = $id_category)
+      AND r.theme_id = t.id AND r.category_themes_id = c.id AND c.id = $id_category)
     ORDER BY t.title
     LIMIT $number ";
 
@@ -522,6 +522,7 @@ function search_themes_free_category($limit,$category)
     mysqli_free_result($result);
 
   }
+
   return $themes;
 }
 
