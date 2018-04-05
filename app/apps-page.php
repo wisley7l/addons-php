@@ -60,6 +60,7 @@ if ($_GET['type'] == 'apps') {
 
   if (!empty($_GET['category'])) {
     $id_category = (int) $_GET['category'];
+    $title_page = $app_category[$id_category]['name'];
     // search item by caategory and free
     if ($_GET['filter'] == 'free') {
       if (!empty($_GET['name'])) {
