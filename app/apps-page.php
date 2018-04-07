@@ -105,7 +105,8 @@ if ($_GET['type'] == 'apps') {
     }elseif (!empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
       if (!empty($_GET['name'])) {
         // search item and name
-        $apps = search_apps_all_name($limit,$search);
+        $name_item = $_GET['name'];
+        $apps = search_apps_all_name($limit,$name_item);
         $number_found = count($apps);
       }else {
         // search item  all
