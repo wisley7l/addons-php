@@ -180,6 +180,7 @@ function search_apps_all_name($limit,$search)
   $name = mysqli_real_escape_string($conn, $search); // escape string
   //echo $name;
   // query search app and theme for index page
+  echo $name;
   $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p
