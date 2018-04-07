@@ -92,13 +92,14 @@ if ($_GET['type'] == 'apps') {
     }
   }else {
     if ($_GET['filter'] == 'free' OR empty($_GET['filter']) ) {
-      echo 'teste' ;
       if (!empty($_GET['name'])) {
         // search item  and freee and name
+        $search = $_GET['name'];
         $apps = search_apps_free_name(12,$search);
         $number_found = count($apps);
       }else {
           // search item and free
+          echo "naooo";
           $apps = search_all_apps_free(12);
           $number_found = count($apps);
       }
