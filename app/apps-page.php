@@ -205,7 +205,7 @@ $info_footer = array(
 
 //info search
 $info_page = array(
-  'name' => $title_page . $name_item,
+  'name' => $title_page,
   'search_id' => $id_category, // sected category
   'number_found' => $number_found,
   'page' => $page,
