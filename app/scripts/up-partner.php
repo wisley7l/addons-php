@@ -85,10 +85,10 @@ if (empty($_POST) AND $_FILES[ 'arquivo' ][ 'size' ] == 0) {
             if ( @move_uploaded_file ( $file_tmp, $dist ) ) {
 
                 // TODO: insert table partner, escape id and pass
-                /*
+                //*
 
                 // query without changing password
-                //$query = "UPDATE `partners` SET `path_image` = $dist  WHERE `id`= $id";
+                $query = "UPDATE `partners` SET `path_image` = $dist  WHERE `id`= $id";
                 if (mysqli_query(  $conn, $query )) {
                  echo "Sucess ";
                  $_SESSION['path_image'] = $dist;
