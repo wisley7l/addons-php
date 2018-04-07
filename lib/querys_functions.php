@@ -200,6 +200,7 @@ function search_apps_all_name($limit,$search)
     mysqli_free_result($result);
 
   }
+  var_dump($apps);
   return $apps;
 }
 
