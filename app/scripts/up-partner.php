@@ -83,7 +83,23 @@ if (empty($_POST) AND $_FILES[ 'arquivo' ][ 'size' ] == 0) {
 
             // tenta mover o arquivo para o destino
             if ( @move_uploaded_file ( $file_tmp, $dist ) ) {
-                echo "Sucess ";
+
+                // TODO: insert table partner, escape id and pass
+                /*
+
+                // query without changing password
+                //$query = "UPDATE `partners` SET `path_image` = $dist  WHERE `id`= $id";
+                if (mysqli_query(  $conn, $query )) {
+                 echo "Sucess ";
+                 $_SESSION['path_image'] = $dist;
+                 // redirect dashboard
+               }
+               else {
+                 // remove image
+                 echo 'remove image';
+               }
+                //*/
+
             }
             else
                 echo 'Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';
