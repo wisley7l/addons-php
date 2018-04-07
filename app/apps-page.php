@@ -91,7 +91,7 @@ if ($_GET['type'] == 'apps') {
       $number_found = count($apps);
     }
   }else {
-    if ($_GET['filter'] == 'free') {
+    if ($_GET['filter'] == 'free' OR empty($_GET['filter']) ) {
       echo 'teste' ;
       if (!empty($_GET['name'])) {
         // search item  and freee and name
