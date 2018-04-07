@@ -92,6 +92,7 @@ if ($_GET['type'] == 'apps') {
     }
   }else {
     if ($_GET['filter'] == 'free') {
+      echo 'teste' ; 
       if (!empty($_GET['name'])) {
         // search item  and freee and name
         $apps = search_apps_free_name(12,$search);
