@@ -1,17 +1,10 @@
 <?php
 
 // function upload partner //
-/*
+//*
 // create connection to the database
-$conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS, Addon\MYSQL_DB);
-// check connection
-if (mysqli_connect_errno()) {
-  echo 'Connection failed: ';
-  echo mysqli_connect_error();
-  echo PHP_EOL;
-  exit();
-}
-*/
+$conn = connect_db();
+//*/
 
 //header('Content-Type: text/html; charset=utf-8');
 echo PHP_EOL;
