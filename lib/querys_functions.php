@@ -15,6 +15,7 @@ function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
     if ($image_app == NULL) {
       $image_app = "../images/items/westeros_m.jpg";
     }
+    //$image_app = 
     return array(
       'id_app' => $id_app,
       'name' => $name_app,
