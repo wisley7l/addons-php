@@ -75,6 +75,7 @@ function createSession($id,$email,$name,$credits,$image)
 // necessary index
 function getUserLogin($dictionary)
 {
+  echo $_SESSION['path_image'];
   return array(
     'id_user' => $_SESSION['user_id'],
     'name_login' => $_SESSION['user_name'] ,
