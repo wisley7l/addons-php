@@ -85,6 +85,7 @@ if (empty($_POST) AND $_FILES[ 'arquivo' ][ 'size' ] == 0) {
 
                 if (mysqli_query(  $conn, $query )) {
                  echo "Sucess ";
+                 session_start();
                  $_SESSION['path_image'] = $dist;
                  echo $_SESSION['path_image'];
                  // redirect dashboard
