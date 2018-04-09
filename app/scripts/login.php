@@ -50,6 +50,7 @@ else {
   }else {
     // partner not found or error login
     // TODO: redirect error
+    echo "error";
   }
   //TODO: get name via API
   //*/
