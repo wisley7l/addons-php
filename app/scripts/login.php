@@ -35,8 +35,8 @@ else {
   //$query = "SELECT `p.id`,`p.path_image`, `p.credits`  FROM `partners p`
     //WHERE (`p.id` = $id_user AND `p.passowrd_hash` = $pass) LIMIT 1";
   // TODO: test
-  $query = "SELECT `p.id`,`p.path_image`, `p.credits`  FROM `partners p`
-    WHERE (`p.id` = $id_user) LIMIT 1";
+  $query = "SELECT id,path_image, credit  FROM partners
+    WHERE (id = $id_user) LIMIT 1";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
