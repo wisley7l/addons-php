@@ -43,7 +43,7 @@ else {
     while ($row = mysqli_fetch_assoc($result)) {
       $id = $row['id'];
       $image = $row['path_image'];
-      $credits = (float) $row['credits'];
+      $credits = treatNumber($row['credits']);
     }
     // free result set
     mysqli_free_result($result);
