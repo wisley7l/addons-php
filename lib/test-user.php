@@ -66,8 +66,8 @@ function createSession($id,$email,$name,$credits,$image)
   //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
   }
   else {
-    header("Location: ../#sucesslogin");
-    exit;
+    //header("Location: ../#sucesslogin");
+    //exit;
   }
 }
 
