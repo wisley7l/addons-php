@@ -25,7 +25,7 @@ else {
   // if there is a return, the user is already registered
   //otherwise request password
   // TODO:
-  $conn = $GLOBAL['conn'];
+  $conn = $GLOBALS['conn'];
   // frist escape varables
   $id_user = 1;
   //$id_user = mysqli_real_escape_string($conn, $id_partner);
