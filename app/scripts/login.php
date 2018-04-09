@@ -23,6 +23,8 @@ else {
   // test user and password
   $email = $_POST['user'];
   $pass = $_POST['pass'];
+  echo $email;
+  echo $pass;
   $id = getUserAPIid($email);
 
   // if exists partner
