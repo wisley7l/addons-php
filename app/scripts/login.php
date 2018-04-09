@@ -20,11 +20,10 @@ else {
   $id = getUserAPIid($email);
 
   // if exists partner
-  // OBS :
+  // TODO:
   // query check if it already exists in the DB
   // if there is a return, the user is already registered
   //otherwise request password
-  // TODO:
   $conn = $GLOBALS['conn'];
   // frist escape varables
   $id_user = 1;
@@ -50,17 +49,13 @@ else {
   }else {
     // partner not found or error login
     // TODO: redirect error
-    echo "error";
+    header("Location: ../#errorlogin");
+    exit;
   }
+  // TODO: vefify password
   //TODO: get name via API
-  //*/
-
   // TEST
-  //$id = 1;
   $name = 'USER' . $id;
-  echo $name;
-  //$image = '';
-  //$credits = 1000.00;
 
   if (!isset($_SESSION)){
     createSession($id,$email,$name,$credits,$image);
