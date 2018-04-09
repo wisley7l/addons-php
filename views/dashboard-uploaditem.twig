@@ -297,7 +297,7 @@
 							<input type="text" id="item_linkvideo" name="item_linkvideo" placeholder="Enter link video item here...">
 						</div>
 						<!-- /INPUT CONTAINER -->
-
+						{{ macro_dash_up.form_send() }}
 						{{macro_dash_up.plans(total_plans_app, dictionary)}}
 						{{macro_dash_up.faqs(total_faqs,dictionary)}}
 
@@ -331,8 +331,6 @@
 						</div>
 						#}
 						<!-- /INPUT CONTAINER -->
-						{{ macro_dash_up.form_send() }}
-
 						<hr class="line-separator">
 						<button class="button big dark">Submit Item <span class="primary">.</span></button>
 					</form>

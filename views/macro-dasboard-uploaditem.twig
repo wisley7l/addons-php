@@ -246,8 +246,6 @@
 
 {% macro form_send() %}
   <form id="addons-uploaditem" action="scripts/uploaditem" method="post" enctype="multipart/form-data">
-    Selecione um arquivo: <input name="arquivo" type="file" />
-    <br />
     <input type="hidden" id="uploaditem-is_app" name="is_app" />
     <input type="hidden" id="uploaditem-name_app" name="name" />
     <input type="hidden" id="uploaditem-category" name="categories_json" />
@@ -263,5 +261,21 @@
     <input type="hidden" id="uploaditem-item_authetication" name="authentication" />
     <input type="hidden" id="uploaditem-plans" name="plans" />
     <input type="hidden" id="uploaditem-faqs" name="faqs" />
+
+    Selecione uma Imagem: <input name="arquivo" type="file1" />
+    <br />
+    Selecione uma Imagem: <input name="arquivo" type="file2" />
+    <br />
+    Selecione uma Imagem: <input name="arquivo" type="file3" />
+    <br />
+    Selecione uma Imagem: <input name="arquivo" type="file4" />
+    <br />
+    Selecione uma Imagem: <input name="arquivo" type="file5" />
+    <br />
+    Selecione uma Imagem: <input name="arquivo" type="file6" />
+    <br />
+    Selecione um ZIP: <input name="arquivo" type="filemodule" />
+    <br />
+
   </for>
 {% endmacro %}
