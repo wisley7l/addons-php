@@ -62,7 +62,7 @@ require __DIR__ . '/lib/categories.php';
 require __DIR__ . '/lib/test-user.php';
 //
 require __DIR__ . '/lib/querys_functions.php';
-// load function send e-mail 
-require __DIR__ . '/lib/querys_functions.php';
+// load function send e-mail
+require __DIR__ . '/lib/send_mail.php';
 // app script
 require $filename;
