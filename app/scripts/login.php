@@ -57,6 +57,7 @@ else {
   // TEST
   //$id = 1;
   $name = 'USER' . $id;
+  echo $name;
   //$image = '';
   //$credits = 1000.00;
 
