@@ -1,13 +1,7 @@
 <?php
-/*
-$conn = mysqli_connect(Addon\MYSQL_HOST, Addon\MYSQL_USER, Addons\MYSQL_PASS,Addon\MYSQL_DB);
-if (mysqli_connect_errno()) {
-  echo 'Connection failed: ';
-  echo mysqli_connect_error();
-  echo PHP_EOL;
-  exit();
-}
-*/
+//*
+$conn = connect_db();
+//*/
 // Occurs after clicking the login button now
 // check if user and password are null, if null, redirect to index
 if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
@@ -23,8 +17,6 @@ else {
   // test user and password
   $email = $_POST['user'];
   $pass = $_POST['pass'];
-  echo $email;
-  echo $pass;
   $id = getUserAPIid($email);
 
   // if exists partner
@@ -32,21 +24,26 @@ else {
   // query check if it already exists in the DB
   // if there is a return, the user is already registered
   //otherwise request password
-  /* TODO:
+  // TODO:
   $conn = $GLOBAL['conn'];
   // frist escape varables
-  $id_user = mysqli_real_escape_string($conn, $id_partner);
-  $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-  $pass = mysqli_real_escape_string($conn,$pass_hash);
+  $id_user = 1;
+  //$id_user = mysqli_real_escape_string($conn, $id_partner);
+  //$pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+  //$pass = mysqli_real_escape_string($conn,$pass_hash);
   // query search app and theme for index page
+  //$query = "SELECT `p.id`,`p.path_image`, `p.credits`  FROM `partners p`
+    //WHERE (`p.id` = $id_user AND `p.passowrd_hash` = $pass) LIMIT 1";
+  // TODO: test
   $query = "SELECT `p.id`,`p.path_image`, `p.credits`  FROM `partners p`
-    WHERE (`p.id` = $id_user AND `p.passowrd_hash` = $pass) LIMIT 1";
+    WHERE (`p.id` = $id_user) LIMIT 1";
+
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
-      $id = $row['p.id'];
-      $image = $row['p.path_image'];
-      $credits = (float) $row['p.credits'];
+      $id = $row['id'];
+      $image = $row['path_image'];
+      $credits = (float) $row['credits'];
     }
     // free result set
     mysqli_free_result($result);
@@ -58,10 +55,10 @@ else {
   //*/
 
   // TEST
-  $id = 1;
-  $name = 'USER';
-  $image = '';
-  $credits = 1000.00;
+  //$id = 1;
+  $name = 'USER' . $id;
+  //$image = '';
+  //$credits = 1000.00;
 
   if (!isset($_SESSION)){
     createSession($id,$email,$name,$credits,$image);
