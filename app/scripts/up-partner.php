@@ -71,7 +71,7 @@ if (empty($_POST) AND $_FILES[ 'arquivo' ][ 'size' ] == 0) {
             $new_name = 'profile_'. $id . '.' . $extension;
 
             // Concatena a pasta com o nome
-            $dist = Addons\PATH_DATA . '/' . $new_name;
+            $dist = Addons\PATH_DATA . '/images/profile/' . $new_name;
             echo $dist;
 
             // tenta mover o arquivo para o destino
