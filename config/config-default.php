@@ -21,6 +21,10 @@ const MYSQL_DB = 'ecomplus_addons';
 // Marketplace configuration
 const MKTP_TITLE = 'E-Com Plus Addons';
 
+// constants for sending e-mail used Mailjet
+const USER_MAILJET = 'USER_MAILJET';
+const PWD_MAILJET = 'PSWD_MAILJET';
+
 switch ($_SERVER['PATH_LANG']) {
   case 'en_us':
     define('Addons\MKTP_SUBTITLE', 'Ecommerce apps and themes marketplace');
