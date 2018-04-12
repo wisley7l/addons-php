@@ -1,8 +1,7 @@
 <?php
 function send_mailjet($from,$mailJet,$subject,$text,$msg,$reply)
 {
-  echo $from;
-  echo Addons\USER_MAILJET;
+
   // Mailjet API
   $data = array(
     'FromEmail' => 'noreply@e-com.club',
@@ -30,6 +29,6 @@ function send_mailjet($from,$mailJet,$subject,$text,$msg,$reply)
   curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
   curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
   $result = curl_exec($ch);
-  echo $result;
+  var_dump($result);
   curl_close($ch);
 }
