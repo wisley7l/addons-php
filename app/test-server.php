@@ -49,4 +49,4 @@
 // var_dump($apps);
 
 
-send_mailjet('tiatenas7l@gmail.com','$subject','$text','$msg',null);
+send_mailjet('test','tiatenas7l@gmail.com','$subject','$text','$msg',null);
