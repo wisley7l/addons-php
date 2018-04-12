@@ -22,6 +22,8 @@ function send_mailjet($from,$mailJet,$subject,$text,$msg,$reply)
   echo PHP_EOL;
   echo Addons\PWD_MAILJET;
   echo PHP_EOL;
+  var_dump($data);
+  echo PHP_EOL;
 
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, 'https://api.mailjet.com/v3/send');
