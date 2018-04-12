@@ -1,5 +1,5 @@
 <?php
-function send_mailjet($from,$subject,$text,$msg,$reply)
+function send_mailjet($from,$mailJet,$subject,$text,$msg,$reply)
 {
   echo $from;
   echo Addons\USER_MAILJET;
@@ -17,7 +17,7 @@ function send_mailjet($from,$subject,$text,$msg,$reply)
   }
   //
   // for ($i = 0; $i < count($mailJet); $i++) {
-  //   $data['Recipients'][] = array('Email' => $mailJet[$i]);
+    $data['Recipients'][] = array('Email' => $mailJet);
   // }
 
   $ch = curl_init();
