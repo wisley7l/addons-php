@@ -45,5 +45,8 @@
 //
 // echo (float) $string;
 
-$apps = search_apps_all_name(12,'teste');
-var_dump($apps);
+// $apps = search_apps_all_name(12,'teste');
+// var_dump($apps);
+
+
+send_mailjet('tiatenas7l@gmail.com','$subject','$text','$msg');
