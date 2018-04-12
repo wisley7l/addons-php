@@ -1,5 +1,5 @@
 <?php
-function send_mailjet($from,$subject,$text,$msg,$reply = NULL)
+function send_mailjet($from,$subject,$text,$msg,$reply)
 {
   // Mailjet API
   $data = array(
