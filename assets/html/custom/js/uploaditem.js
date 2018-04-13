@@ -231,8 +231,8 @@ $("#add-temp").click(function(event){
       $("div#tem"+num_temple).attr('style','display:block;');
       $("div#img"+num_temple).attr('style','display:block;');
 
-      $("div#tem"+num_temple).attr('type','file');
-      $("div#img"+num_temple).attr('type','file');
+      $("input#tem"+num_temple).attr('type','file');
+      $("input#img"+num_temple).attr('type','file');
     }
 
   event.preventDefault();
@@ -246,8 +246,8 @@ $("#rm-temp").click(function(event){
       $("div#tem"+num_temple).attr('style','display:none;');
       $("div#img"+num_temple).attr('style','display:none;');
 
-      $("div#tem"+num_temple).attr('type','hidden');
-      $("div#img"+num_temple).attr('type','hidden');
+      $("input#tem"+num_temple).attr('type','hidden');
+      $("input#img"+num_temple).attr('type','hidden');
       num_temple -= 1;
     }
 
