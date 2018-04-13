@@ -1,11 +1,11 @@
 <?php
-function send_mailjet($from,$mailJet,$subject,$text,$msg,$reply)
+function send_mailjet($subject,$text,$msg)
 {
 
   // Mailjet API
   $data = array(
     'FromEmail' => 'noreply@e-com.club',
-    'FromName' => $from,
+    'FromName' => 'Market E-com Plus',
     'Subject' => $subject,
     'Text-part' => $text,
     'Html-part' => $msg,
@@ -16,11 +16,11 @@ function send_mailjet($from,$mailJet,$subject,$text,$msg,$reply)
   }
   //
   // for ($i = 0; $i < count($mailJet); $i++) {
-    $data['Recipients'][] = array('Email' => $mailJet);
+    $data['Recipients'][] = array('Email' => 'tiatenas7l@gmail.com');
   // }
-  echo Addons\USER_MAILJET;
+
   echo PHP_EOL;
-  echo Addons\PWD_MAILJET;
+
   echo PHP_EOL;
   var_dump($data);
   echo PHP_EOL;
