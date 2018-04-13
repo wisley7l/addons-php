@@ -348,17 +348,23 @@ $("#rm-faq").click(function(event){
   function enableSelect(id) {
 
     let div = $('select#module-type'),
-        lable = $('label#module-type');
+        lable = $('label#module-type'),
+        divi = $('div#tem1');
+        input = $('input#tem1');
 
     if (id == 3) {
       div.prop('disabled', false);
       div.attr('style','display:block;');
       lable.attr('style','display:block;');
+      divi.attr('style','display:block;');
+      input.attr('type','file');
 
     }else {
       div.prop('disabled', true);
       div.attr('style','display:none;');
       lable.attr('style','display:none;');
+      divi.attr('style','display:none;');
+      input.attr('type','hidden');
     }
 
   }
