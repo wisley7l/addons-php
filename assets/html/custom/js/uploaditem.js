@@ -334,6 +334,12 @@ $("#rm-faq").click(function(event){
       $('div#enable-app').attr('style','display:none;');
       $('div#enable-theme').attr('style','display:block;');
       $('input#inp-item_is_app').val(0);
+      for (var i = 2; i <= 6; i++) {
+        $('div#img'+i).attr('style','display:none;');
+      }
+      //$('div#imag'+i).attr('style','display:none;');
+      //$('input#tem'+i).attr('type','hidden');
+
     }else {
       $('div#enable-app').attr('style','display:none;');
       $('div#enable-theme').attr('style','display:none;');
