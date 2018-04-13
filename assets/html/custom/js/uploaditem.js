@@ -349,6 +349,7 @@ $("#rm-faq").click(function(event){
         $('input#tem'+i).attr('type','hidden');
         $('div#tem'+i).attr('style','display:none;');
       }
+      $('div#button_template').attr('style','display:block;');
 
     }else {
       $('div#enable-app').attr('style','display:none;');
@@ -365,7 +366,7 @@ $("#rm-faq").click(function(event){
 
     let div = $('select#module-type'),
         lable = $('label#module-type'),
-        divi = $('div#tem1');
+        divi = $('div#tem1'),
         input = $('input#tem1');
 
     if (id == 3) {
@@ -381,6 +382,7 @@ $("#rm-faq").click(function(event){
       lable.attr('style','display:none;');
       divi.attr('style','display:none;');
       input.attr('type','hidden');
+
     }
 
   }
