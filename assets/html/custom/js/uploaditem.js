@@ -219,8 +219,9 @@ $("#rm-faq").click(function(event){
 
   event.preventDefault();
 });
+// TODO:
 //click the button add templete
-$("#add-faq").click(function(event){
+$("#add-temp").click(function(event){
 
     // maximum number of templeate that can be added
     if (num_temple < max_temple) { // if maximum number not reached
