@@ -1,9 +1,12 @@
 var num = 1; // variable for total value of categories added
-var num_plan = 1; // variable for total value of plans
-var num_faqs = 0; // variable for total value of faqs
-var max_faqs = 10;
-var max_plan_app = 10;
-var max_plan_theme = 2;
+    num_plan = 1, // variable for total value of plans
+    num_faqs = 0, // variable for total value of faqs
+    max_faqs = 10,
+    max_plan_app = 10,
+    max_plan_theme = 2,
+    num_temple = 1,
+    max_temple = 3;
+
 $("form#upload_form").submit(function(event){
   let $form = $('form#upload_form'),
       name_app = $form.find('input#item_name').val(), // not null
@@ -330,17 +333,22 @@ $("#rm-faq").click(function(event){
       $('input#inp-item_is_app').val(1);
       $('div#enable-app').attr('style','display:block;');
       $('div#enable-theme').attr('style','display:none;');
+      // enable_img();
     }else if (id == 'item_is_theme') { // if theme
       $('div#enable-app').attr('style','display:none;');
       $('div#enable-theme').attr('style','display:block;');
       $('input#inp-item_is_app').val(0);
+
       for (var i = 2; i <= 6; i++) {
         $('div#img'+i).attr('style','display:none;');
       }
         $('input#tem1').attr('type','file');
         $('div#tem1').attr('style','display:block;');
-      //$('div#imag'+i).attr('style','display:none;');
-      //$('input#tem'+i).attr('type','hidden');
+
+      for (var i = 2; i <= 3; i++) {
+        $('input#tem'+i).attr('type','hidden');
+        $('div#tem'+i).attr('style','display:none;');
+      }
 
     }else {
       $('div#enable-app').attr('style','display:none;');
