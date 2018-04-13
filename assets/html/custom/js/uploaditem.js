@@ -337,6 +337,7 @@ $("#rm-faq").click(function(event){
       for (var i = 2; i <= 6; i++) {
         $('div#img'+i).attr('style','display:none;');
       }
+        $('input#tem1').attr('type','file');
       //$('div#imag'+i).attr('style','display:none;');
       //$('input#tem'+i).attr('type','hidden');
 
