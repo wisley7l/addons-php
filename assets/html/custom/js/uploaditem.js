@@ -219,6 +219,39 @@ $("#rm-faq").click(function(event){
 
   event.preventDefault();
 });
+//click the button add templete
+$("#add-faq").click(function(event){
+
+    // maximum number of templeate that can be added
+    if (num_temple < max_temple) { // if maximum number not reached
+      num_temple += 1;
+    }
+    for (var i = 1; i <= num_temple; i++) { // displays (select) categories up to the value added
+      $("div#tem"+num_temple).attr('style','display:block;');
+      $("div#img"+num_temple).attr('style','display:block;');
+
+      $("div#tem"+num_temple).attr('type','file');
+      $("div#img"+num_temple).attr('type','file');
+    }
+
+  event.preventDefault();
+});
+
+//click the button add faq
+$("#rm-temp").click(function(event){
+
+    // maximum number of faqs that can be added
+    if (num_temple >= 1) { // if maximum number not reached
+      $("div#tem"+num_temple).attr('style','display:none;');
+      $("div#img"+num_temple).attr('style','display:none;');
+
+      $("div#tem"+num_temple).attr('type','hidden');
+      $("div#img"+num_temple).attr('type','hidden');
+      num_temple -= 1;
+    }
+
+  event.preventDefault();
+});
 
 (function($) {
 
