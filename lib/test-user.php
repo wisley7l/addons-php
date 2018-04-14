@@ -3,7 +3,7 @@
 function send_file($file,$title,$type,$dist)
 {
   $_FILES = $file;
-  $title = 'img1';
+  
   // verifica se foi enviado um arquivo
   if ( isset( $_FILES[ $title ][ 'name' ] ) && $_FILES[ $title ][ 'error' ] == 0 ) {
       echo 'Você enviou o arquivo:'. $_FILES[ $title ][ 'name' ] ;

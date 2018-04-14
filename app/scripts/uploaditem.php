@@ -132,19 +132,20 @@ if(empty($_POST)) { // not exist post
      /*
      */
 
-     $dist = Addons\PATH_DATA . '/images/apps/';
-     $img1 = send_file($_FILES,'test',1,$dist);
-     echo $img1;
+     $dist_img = Addons\PATH_DATA . '/images/apps/';
+     $dist_zip = Addons\PATH_DATA . '/module/';
+     $img1 = send_file($_FILES,'img1',1,$dist_img);
      /*/
      $img2 = send_file($_FILES,'test');
      $img3 = send_file($_FILES,'test');
      $img4 = send_file($_FILES,'test');
      $img5 = send_file($_FILES,'test');
      $img6 = send_file($_FILES,'test');
-     $zip1 = send_file($_FILES,'test');
+     $zip1 = send_file($_FILES,'test',0,$dist_zip);
      $zip2 = send_file($_FILES,'test');
      $zip3 = send_file($_FILES,'test');
      //*/
+     $zip1 = send_file($_FILES,'temp1',0,$dist_zip);
      // add zip se existir no body_json
 
      if ($module_type == '') {
