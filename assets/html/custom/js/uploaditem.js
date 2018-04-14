@@ -367,7 +367,7 @@ $("#rm-temp").click(function(event){
       $('input#inp-item_is_app').val(1);
       $('div#enable-app').attr('style','display:block;');
       $('div#enable-theme').attr('style','display:none;');
-      // enable_img();
+      enable_img();
     }else if (id == 'item_is_theme') { // if theme
       $('div#enable-app').attr('style','display:none;');
       $('div#enable-theme').attr('style','display:block;');
@@ -390,6 +390,18 @@ $("#rm-temp").click(function(event){
       $('div#enable-theme').attr('style','display:none;');
     }
 	}
+  function enable_img() {
+
+    for (var i = 1; i <= 6; i++) {
+      $('div#img'+i).attr('style','display:block;');
+    }
+
+    for (var i = 1; i <= 3; i++) {
+      $('input#tem'+i).attr('type','hidden');
+      $('div#tem'+i).attr('style','display:none;');
+    }
+
+  }
   // function selected type app
   function selectType() {
     let $this = $(this);
