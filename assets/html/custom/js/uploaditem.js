@@ -242,7 +242,7 @@ $("#add-temp").click(function(event){
 $("#rm-temp").click(function(event){
 
     // maximum number of faqs that can be added
-    if (num_temple >= 1) { // if maximum number not reached
+    if (num_temple > 1) { // if maximum number not reached
       $("div#tem"+num_temple).attr('style','display:none;');
       $("div#img"+num_temple).attr('style','display:none;');
 
@@ -394,6 +394,7 @@ $("#rm-temp").click(function(event){
 
     for (var i = 1; i <= 6; i++) {
       $('div#img'+i).attr('style','display:block;');
+      $('input#img'+i).attr('type','efle');
     }
 
     for (var i = 1; i <= 3; i++) {
