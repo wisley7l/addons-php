@@ -45,9 +45,10 @@ function send_file($file,$title,$type,$dist)
 
           // Concatena a pasta com o nome
           $dist = $dist . $new_name;
-          
+
           // tenta mover o arquivo para o destino
           if ( @move_uploaded_file ( $file_tmp, $dist ) ) {
+            echo $dist;
             return $dist;
 
           }
