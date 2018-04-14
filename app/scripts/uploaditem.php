@@ -143,7 +143,7 @@ if(empty($_POST)) { // not exist post
         VALUES ('$name',1,'$description','$body_json','$numversion','$type_app','$module_type',
           '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic);";
      //*/
-     send_file($_FILES,'test');
+    // send_file($_FILES,'test'); 
      /*
 
      // query search app and theme for index page
