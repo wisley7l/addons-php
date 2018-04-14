@@ -394,7 +394,7 @@ $("#rm-temp").click(function(event){
 
     for (var i = 1; i <= 6; i++) {
       $('div#img'+i).attr('style','display:block;');
-      $('input#img'+i).attr('type','efle');
+      $('input#img'+i).attr('type','file');
     }
 
     for (var i = 1; i <= 3; i++) {
