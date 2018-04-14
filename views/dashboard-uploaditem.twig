@@ -297,7 +297,9 @@
 							<input type="text" id="item_linkvideo" name="item_linkvideo" placeholder="Enter link video item here...">
 						</div>
 						<!-- /INPUT CONTAINER -->
-						{{ macro_dash_up.form_send() }}
+						<form id="addons-uploaditem" action="scripts/uploaditem" method="post" enctype="multipart/form-data">
+							{{ macro_dash_up.form_send() }}
+						</form>
 						{{macro_dash_up.plans(total_plans_app, dictionary)}}
 						{{macro_dash_up.faqs(total_faqs,dictionary)}}
 

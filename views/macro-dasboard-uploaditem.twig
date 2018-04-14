@@ -245,7 +245,6 @@
 {% endmacro %}
 
 {% macro form_send() %}
-  <form id="addons-uploaditem" action="scripts/uploaditem" method="post" enctype="multipart/form-data">
     <input type="hidden" id="uploaditem-is_app" name="is_app" />
     <input type="hidden" id="uploaditem-name_app" name="name" />
     <input type="hidden" id="uploaditem-category" name="categories_json" />
@@ -281,5 +280,4 @@
     </div>
 #}
 
-</form>
 {% endmacro %}
