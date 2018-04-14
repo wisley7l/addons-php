@@ -400,7 +400,7 @@ $("#rm-temp").click(function(event){
       $('input#tem'+i).attr('type','hidden');
       $('div#tem'+i).attr('style','display:none;');
     }
-
+    $('div#button_template').attr('style','display:none;');
   }
   // function selected type app
   function selectType() {
