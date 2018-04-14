@@ -143,8 +143,8 @@ if(empty($_POST)) { // not exist post
         VALUES ('$name',1,'$description','$body_json','$numversion','$type_app','$module_type',
           '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic);";
      //*/
-
-     //*
+     send_file($_FILES,'test');
+     /*
 
      // query search app and theme for index page
 
@@ -161,7 +161,7 @@ if(empty($_POST)) { // not exist post
      //echo $id_app;
 
      //*/
-     //*
+     /*
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
        $query = "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
