@@ -300,24 +300,7 @@
 
 						{{macro_dash_up.plans(total_plans_app, dictionary)}}
 						{{macro_dash_up.faqs(total_faqs,dictionary)}}
-
-						<form id="addons-uploaditem" action="scripts/uploaditem" method="post" enctype="multipart/form-data">
-							<input type="hidden" id="uploaditem-is_app" name="is_app" />
-							<input type="hidden" id="uploaditem-name_app" name="name" />
-							<input type="hidden" id="uploaditem-category" name="categories_json" />
-							<input type="hidden" id="uploaditem-item_numversion" name="numversion" />
-							<input type="hidden" id="uploaditem-item_description" name="description" />
-							<input type="hidden" id="uploaditem-item_scripturl" name="scripturl" />
-							<input type="hidden" id="uploaditem-item_github" name="github" />
-							<input type="hidden" id="uploaditem-item_website" name="website" />
-							<input type="hidden" id="uploaditem-item_linkvideo" name="linkvideo" />
-							<input type="hidden" id="uploaditem-item_linkdoc" name="linkdoc" />
-							<input type="hidden" id="uploaditem-item_type_app" name="type_app" />
-							<input type="hidden" id="uploaditem-item_module_app" name="module_app" />
-							<input type="hidden" id="uploaditem-item_authetication" name="authentication" />
-							<input type="hidden" id="uploaditem-plans" name="plans" />
-							<input type="hidden" id="uploaditem-faqs" name="faqs" />
-						</form>
+						{{ macro_dash_up.form_send() }}
 
 
 						<div class="clearfix"></div>
