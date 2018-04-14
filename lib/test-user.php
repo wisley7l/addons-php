@@ -1,6 +1,6 @@
 <?php
 
-function send_file($file,$title)
+function send_file($file,$title,$type,$dist)
 {
   $_FILES = $file;
   $title = 'img1';
@@ -28,44 +28,37 @@ function send_file($file,$title)
       // Somente imagens, .jpg;.jpeg;.gif;.png
       // Aqui eu enfileiro as extensões permitidas e separo por ';'
       // Isso serve apenas para eu poder pesquisar dentro desta String
-      if ( strstr ( '.jpg;.jpeg;.gif;.png', $extension ) AND $length <= 1960000 ) {
+
+      if ($type == 1){
+        $extension_file = '.jpg;.jpeg;.gif;.png';
+        $length_file = 1960000;
+      }else {
+        $extension_file ='.zip';
+        $length_file = 1960000;
+      }
+
+      if ( strstr ( $extension_file, $extension ) AND $length <= $length_file ) {
           // Cria um nome único para esta imagem
           // Evita que duplique as imagens no servidor.
           // Evita nomes com acentos, espaços e caracteres não alfanuméricos
-          $new_name = 'profile_'. $id . '.' . $extension;
+          $new_name =  uniqid ( time () ) . '.' . $extension;
 
           // Concatena a pasta com o nome
-          $dist = Addons\PATH_DATA . '/images/profile/' . $new_name;
-          echo $dist;
-/*
+          $dist = $dist . $new_name;
+          
           // tenta mover o arquivo para o destino
           if ( @move_uploaded_file ( $file_tmp, $dist ) ) {
-
-              // TODO: insert table partner, escape id and pass
-
-
-              // query without changing password
-              //$query = "UPDATE partners SET path_image = '$dist'  WHERE id = $id;";
-
-              //if (mysqli_query(  $conn, $query )) {
-               echo "Sucess ";
-               // redirect dashboard
-             //}
-             //else {
-               // remove image
-               //echo 'remove image';
-             //}
+            return $dist;
 
           }
           else
-              echo 'Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';
-              //*/
+              return 0;
       }
       else
-          echo 'Você poderá enviar apenas arquivos "*.jpg;*.jpeg;*.gif;*.png"<br />';
+          return 0;
   }
   else
-      echo 'Você não enviou nenhum arquivo!';
+      return 0;
 }
 
 function getUserAPI($email)

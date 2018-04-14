@@ -131,19 +131,37 @@ if(empty($_POST)) { // not exist post
      // verify sessin, get id and save id in id_partner
      /*
      */
+
+     $dist = Addons\PATH_DATA . '/images/apps/';
+     $img1 = send_file($_FILES,'test',1,$dist);
+     /*/
+     $img2 = send_file($_FILES,'test');
+     $img3 = send_file($_FILES,'test');
+     $img4 = send_file($_FILES,'test');
+     $img5 = send_file($_FILES,'test');
+     $img6 = send_file($_FILES,'test');
+     $zip1 = send_file($_FILES,'test');
+     $zip2 = send_file($_FILES,'test');
+     $zip3 = send_file($_FILES,'test');
+     //*/
+     // add zip se existir no body_json
+
      if ($module_type == '') {
        $module_type = NULL;
      }
      else {
        $module_type = "$module_type";
+       // $dist = Addons\PATH_DATA . '/module/'
+       $body_json = json_decode($body_json,true);
+       $body_json['zip'] = $zip1;
+       var_dump($body_json);
+       //$body_json = json_encode($body_json);
      }
      //*
-        $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
-        `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic` )
-        VALUES ('$name',1,'$description','$body_json','$numversion','$type_app','$module_type',
-          '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic);";
-     //*/
-     send_file($_FILES,'test'); 
+     $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
+     `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic` )
+     VALUES ('$name',1,'$description','$body_json','$numversion','$type_app','$module_type',
+       '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic);";
      /*
 
      // query search app and theme for index page
