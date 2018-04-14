@@ -145,7 +145,7 @@ if(empty($_POST)) { // not exist post
      $zip2 = send_file($_FILES,'test');
      $zip3 = send_file($_FILES,'test');
      //*/
-     $zip1 = send_file($_FILES,'temp1',0,$dist_zip);
+     $zip1 = send_file($_FILES,'tem1',0,$dist_zip);
      // add zip se existir no body_json
 
      if ($module_type == '') {
