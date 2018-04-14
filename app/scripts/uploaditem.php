@@ -134,6 +134,7 @@ if(empty($_POST)) { // not exist post
 
      $dist = Addons\PATH_DATA . '/images/apps/';
      $img1 = send_file($_FILES,'test',1,$dist);
+     echo $img1;
      /*/
      $img2 = send_file($_FILES,'test');
      $img3 = send_file($_FILES,'test');
