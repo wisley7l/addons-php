@@ -8,6 +8,7 @@ var num = 1; // variable for total value of categories added
     max_temple = 3;
 
 $("form#upload_form").submit(function(event){
+  console.log('Sim');
   let $form = $('form#upload_form'),
       name_app = $form.find('input#item_name').val(), // not null
       num_version = $form.find('input#item_numversion').val(),
