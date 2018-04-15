@@ -229,8 +229,8 @@ if(empty($_POST)) { // not exist post
 
        if ($img != -1 AND $zip != -1) {
          $templates = array('id' => $i,
-          'path_zip' => $zip,
-          'path_img' => $img
+          'path_zip' => "$zip",
+          'path_img' => "$img"
           );
           array_push($tem, $templates);
        }else {
