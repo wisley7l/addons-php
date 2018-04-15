@@ -229,8 +229,8 @@ if(empty($_POST)) { // not exist post
 
        if ($img != -1 AND $zip != -1) {
          $templates = array('id' => $i,
-          'path_zip' => "$zip",
-          'path_img' => "$img"
+          'path_zip' => utf8_encode($img),
+          'path_img' => utf8_encode($img)
           );
           array_push($tem, $templates);
        }else {
@@ -239,7 +239,7 @@ if(empty($_POST)) { // not exist post
          echo "error";
        }
      }
-     
+
      $body_json = json_decode($body_json,true);
      $body_json['plans'] = $plans;
      $body_json['templates'] = array('num_templates' => $n_template, 'templates' => $tem );
