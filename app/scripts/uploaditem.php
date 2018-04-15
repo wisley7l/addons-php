@@ -239,8 +239,7 @@ if(empty($_POST)) { // not exist post
          echo "error";
        }
      }
-     echo phpinfo();
-
+     
      $body_json = json_decode($body_json,true);
      $body_json['plans'] = $plans;
      $body_json['templates'] = array('num_templates' => $n_template, 'templates' => $tem );
