@@ -228,13 +228,14 @@ if(empty($_POST)) { // not exist post
        $zip = send_file($_FILES,'tem' . $i,0,$dist_zip);
        if ($img != 0 AND $zip != 0) {
          $templates = array('id' => $i,
-          'path_zip' => $dist_zip,
-          'path_img' => $dist_img
+          'path_zip' => $zip,
+          'path_img' => $img
           );
           array_push($tem, $templates) ;
        }else {
          // TODO:
          // error
+         echo "error";
        }
      }
 
