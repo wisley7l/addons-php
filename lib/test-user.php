@@ -53,13 +53,13 @@ function send_file($file,$title,$type,$dist)
 
           }
           else
-              return 0;
+              return -1;
       }
       else
-          return 0;
+          return -1;
   }
   else
-      return 0;
+      return -1;
 }
 
 function getUserAPI($email)
