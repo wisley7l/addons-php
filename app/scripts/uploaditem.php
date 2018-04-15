@@ -218,7 +218,7 @@ if(empty($_POST)) { // not exist post
        }
      }
      $dist_img = Addons\PATH_DATA . '/images/themes/';
-     $dist_zip = Addons\PATH_DATA . '/templates/';
+     $dist_zip = Addons\PATH_DATA . '/template/';
 
      $n_template = $_POST['n_temp'];
      $tem = array();
