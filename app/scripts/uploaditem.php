@@ -226,8 +226,6 @@ if(empty($_POST)) { // not exist post
      for ($i=1; $i <= $n_template ; $i++) {
        $img = send_file($_FILES,'img' . $i,1,$dist_img);
        $zip = send_file($_FILES,'tem' . $i,0,$dist_zip);
-       echo $zip;
-       echo PHP_EOL;
        if ($img != 0 AND $zip != 0) {
          $templates = array('id' => $i,
           'path_zip' => $zip,
