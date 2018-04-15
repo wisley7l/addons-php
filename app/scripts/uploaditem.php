@@ -234,11 +234,9 @@ if(empty($_POST)) { // not exist post
           array_push($tem, $templates) ;
        }else {
          // TODO:
-         // error 
+         // error
        }
      }
-
-
 
      $body_json = json_decode($body_json,true);
      $body_json['plans'] = $plans;
@@ -246,8 +244,8 @@ if(empty($_POST)) { // not exist post
      $body_json = json_encode($body_json);
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
      $plan_extend = (int) number_format($plan_extend, 2, '', '');
-     // echo $body_json;
-     //*
+     echo $body_json;
+     /*
      $query =  "INSERT INTO themes (title, partner_id, description,
           version, json_body, link_documentation, link_video, value_license_basic, value_license_extend )
         VALUES ('$name', $id_partner, '$description', '$numversion','$body_json',
@@ -264,7 +262,7 @@ if(empty($_POST)) { // not exist post
      $id_app = (int) mysqli_insert_id($conn);
 
      //*/
-     //*
+     /*
 
      for ($i=0; $i < $num_category ; $i++) {
 
