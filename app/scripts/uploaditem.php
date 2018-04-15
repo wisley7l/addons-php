@@ -63,7 +63,7 @@ if(empty($_POST)) { // not exist post
   // echo $plans;
   //echo $faqs;
   // echo $categories;
-  $body_json = json_encode(array('faqs' => $faqs));
+  $body_json = json_encode(array('faqs' => $faqs),JSON_UNESCAPED_UNICODE);
   //$body_json = '';
    // treat category
    $categories = array();
@@ -122,7 +122,7 @@ if(empty($_POST)) { // not exist post
        // echo  $plans['plans'][$i]['value'];
      }
      //$plans_json = mysqli_real_escape_string($conn,json_encode($plans));
-     $plans_json = json_encode($plans);
+     $plans_json = json_encode($plans,JSON_UNESCAPED_UNICODE);
      // convert float to string and after convert string to int
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
 
@@ -149,7 +149,7 @@ if(empty($_POST)) { // not exist post
        $module_type = "$module_type";
        $body_json = json_decode($body_json,true);
        $body_json['zip'] = $zip1;
-       $body_json = json_encode($body_json);
+       $body_json = json_encode($body_json,JSON_UNESCAPED_UNICODE);
        if ($zip1 != 0 ) {
          // error save
        }
@@ -241,16 +241,14 @@ if(empty($_POST)) { // not exist post
        }
      }
 
-     $a = array('<foo>',"'bar'",'"baz"','&blong&', "\xc3\xa9");
-
      $body_json = json_decode($body_json,true);
      $body_json['plans'] = $plans;
      $body_json['templates'] = array('num_templates' => $n_template, 'templates' => $tem );
      $body_json = json_encode($body_json,JSON_UNESCAPED_UNICODE);
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
      $plan_extend = (int) number_format($plan_extend, 2, '', '');
-     echo $body_json;
-     /*
+
+     //*
      $query =  "INSERT INTO themes (title, partner_id, description,
           version, json_body, link_documentation, link_video, value_license_basic, value_license_extend )
         VALUES ('$name', $id_partner, '$description', '$numversion','$body_json',
@@ -267,7 +265,7 @@ if(empty($_POST)) { // not exist post
      $id_app = (int) mysqli_insert_id($conn);
 
      //*/
-     /*
+     //*
 
      for ($i=0; $i < $num_category ; $i++) {
 
