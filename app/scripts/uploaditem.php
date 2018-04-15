@@ -241,6 +241,26 @@ if(empty($_POST)) { // not exist post
        }
      }
 
+     $a = array('<foo>',"'bar'",'"baz"','&blong&', "\xc3\xa9");
+
+echo "Normal: ",  json_encode($a), "\n";
+echo PHP_EOL;
+echo "Tags: ",    json_encode($a, JSON_HEX_TAG), "\n";
+echo PHP_EOL;
+echo "Apos: ",    json_encode($a, JSON_HEX_APOS), "\n";
+echo PHP_EOL;
+echo "Quot: ",    json_encode($a, JSON_HEX_QUOT), "\n";
+echo PHP_EOL;
+echo "Amp: ",     json_encode($a, JSON_HEX_AMP), "\n";
+echo PHP_EOL;
+echo "Unicode: ", json_encode($a, JSON_UNESCAPED_UNICODE), "\n";
+echo PHP_EOL;
+echo "All: ",     json_encode($a, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE), "\n\n";
+echo PHP_EOL;
+
+
+
+
      $body_json = json_decode($body_json,true);
      $body_json['plans'] = $plans;
      $body_json['templates'] = array('num_templates' => $n_template, 'templates' => $tem );
