@@ -240,6 +240,11 @@ if(empty($_POST)) { // not exist post
          // TODO:
          // error
          echo "error";
+         echo PHP_EOL;
+         echo $img;
+         echo PHP_EOL;
+         echo $zip;
+         echo PHP_EOL;
        }
      }
 
