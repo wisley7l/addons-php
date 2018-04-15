@@ -240,7 +240,7 @@ if(empty($_POST)) { // not exist post
 
      $body_json = json_decode($body_json,true);
      $body_json['plans'] = $plans;
-     $body_json['templates'] = array('num_templates' => $n_template, 'templates' => $templates );
+     $body_json['templates'] = array('num_templates' => $n_template, 'templates' => $tem );
      $body_json = json_encode($body_json);
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
      $plan_extend = (int) number_format($plan_extend, 2, '', '');
