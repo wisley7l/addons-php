@@ -114,6 +114,7 @@ $("form#upload_form").submit(function(event){
       $("#uploaditem-item_linkvideo").val(video);
       $('#uploaditem-plans').val(plans_str);
       $('#uploaditem-faqs').val(fqs_str);
+      $('#uploaditem-n_temp').val(num_temple);
       $("#addons-uploaditem").submit();//
     }
   }

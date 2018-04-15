@@ -134,31 +134,26 @@ if(empty($_POST)) { // not exist post
 
      $dist_img = Addons\PATH_DATA . '/images/apps/';
      $dist_zip = Addons\PATH_DATA . '/module/';
-     //$img1 = send_file($_FILES,'img1',1,$dist_img);
-     /*/
-     $img2 = send_file($_FILES,'test');
-     $img3 = send_file($_FILES,'test');
-     $img4 = send_file($_FILES,'test');
-     $img5 = send_file($_FILES,'test');
-     $img6 = send_file($_FILES,'test');
-     $zip1 = send_file($_FILES,'test',0,$dist_zip);
-     $zip2 = send_file($_FILES,'test');
-     $zip3 = send_file($_FILES,'test');
-     //*/
-     //var_dump($_FILES);
+     $img1 = send_file($_FILES,'img1',1,$dist_img);
+     $img2 = send_file($_FILES,'img2',1,$dist_img);
+     $img3 = send_file($_FILES,'img3',1,$dist_img);
+     $img4 = send_file($_FILES,'img4',1,$dist_img);
+     $img5 = send_file($_FILES,'img5',1,$dist_img);
+     $img6 = send_file($_FILES,'img6',1,$dist_img);
      $zip1 = send_file($_FILES,'tem1',0,$dist_zip);
-     // add zip se existir no body_json
-
+     // add zip in the  body_json if exists
      if ($module_type == '') {
        $module_type = NULL;
      }
      else {
        $module_type = "$module_type";
-       // $dist = Addons\PATH_DATA . '/module/'
        $body_json = json_decode($body_json,true);
        $body_json['zip'] = $zip1;
-       var_dump($body_json);
-       //$body_json = json_encode($body_json);
+       $body_json = json_encode($body_json);
+       if ($zip1 != 0 ) {
+         // error save
+       }
+
      }
      //*
      $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
@@ -222,9 +217,32 @@ if(empty($_POST)) { // not exist post
          $plan_extend = $plans['plans'][1]['value'];
        }
      }
+     $dist_img = Addons\PATH_DATA . '/images/themes/';
+     $dist_zip = Addons\PATH_DATA . '/templates/';
+
+     $n_template = $_POST['n_temp'];
+     $tem = array();
+
+     for ($i=1; $i <= $n_template ; $i++) {
+       $img = send_file($_FILES,'img' . $i,1,$dist_img);
+       $zip = send_file($_FILES,'tem' . $i,0,$dist_zip);
+       if ($img != 0 AND $zip != 0) {
+         $templates = array('id' => $i,
+          'path_zip' => $dist_zip,
+          'path_img' => $dist_img
+          );
+          array_push($tem, $templates) ;
+       }else {
+         // TODO:
+         // error 
+       }
+     }
+
+
 
      $body_json = json_decode($body_json,true);
      $body_json['plans'] = $plans;
+     $body_json['templates'] = array('num_templates' => $n_template, 'templates' => $templates );
      $body_json = json_encode($body_json);
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
      $plan_extend = (int) number_format($plan_extend, 2, '', '');
