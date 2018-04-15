@@ -230,7 +230,7 @@ if(empty($_POST)) { // not exist post
        echo PHP_EOL;
        echo $zip;
        echo PHP_EOL;
-       if (($img != 0) AND ($zip != 0)) {
+       if ($img != 0) {
          $templates = array('id' => $i,
           'path_zip' => $zip,
           'path_img' => $img
