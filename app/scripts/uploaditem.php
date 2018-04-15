@@ -233,6 +233,7 @@ if(empty($_POST)) { // not exist post
           'path_img' => utf8_encode($img)
           );
           array_push($tem, $templates);
+          echo "OK";
        }else {
          // TODO:
          // error
