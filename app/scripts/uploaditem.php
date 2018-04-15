@@ -140,7 +140,7 @@ if(empty($_POST)) { // not exist post
      $img4 = send_file($_FILES,'img4',1,$dist_img);
      $img5 = send_file($_FILES,'img5',1,$dist_img);
      $img6 = send_file($_FILES,'img6',1,$dist_img);
-     $zip1 = send_file($_FILES,'tem1',0,$dist_zip);
+     $zip = send_file($_FILES,'tem1',0,$dist_zip);
      // add zip in the  body_json if exists
      if ($module_type == '') {
        $module_type = NULL;
@@ -148,10 +148,11 @@ if(empty($_POST)) { // not exist post
      else {
        $module_type = "$module_type";
        $body_json = json_decode($body_json,true);
-       $body_json['zip'] = $zip1;
+       $body_json['zip'] = $zip;
        $body_json = json_encode($body_json,JSON_UNESCAPED_UNICODE);
-       if ($zip1 != 0 ) {
+       if ($zip != -1 ) {
          // error save
+         echo 'error';
        }
 
      }
@@ -160,11 +161,11 @@ if(empty($_POST)) { // not exist post
      `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic` )
      VALUES ('$name',1,'$description','$body_json','$numversion','$type_app','$module_type',
        '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic);";
-     /*
+       // TODO:
+       // thumbnail in insert
 
+     //*
      // query search app and theme for index page
-
-
     if (!mysqli_query($conn, $query)) {
     // error INSERT // redirect
     echo PHP_EOL;
@@ -245,11 +246,12 @@ if(empty($_POST)) { // not exist post
      $body_json['plans'] = $plans;
      $body_json['templates'] = array('num_templates' => $n_template, 'templates' => $tem );
      $body_json = json_encode($body_json,JSON_UNESCAPED_UNICODE);
-     echo $body_json;
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
      $plan_extend = (int) number_format($plan_extend, 2, '', '');
 
-     /*
+     // TODO:
+     // thumbnail in insert
+     //*
      $query =  "INSERT INTO themes (title, partner_id, description,
           version, json_body, link_documentation, link_video, value_license_basic, value_license_extend )
         VALUES ('$name', $id_partner, '$description', '$numversion','$body_json',
