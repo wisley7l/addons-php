@@ -36,7 +36,7 @@ if (empty($_POST) OR $_SESSION['login'] == true) {
   $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
   // TODO: insert table partner, escape id and pass
   //*
-  $conn = $GLOBAL['conn'];
+  $conn = $GLOBALS['conn'];
   // query search app and theme for index page
   $query = "INSERT INTO `partners` (`id`, `password_hash`) VALUES ($id, '$pass_hash')";
 
