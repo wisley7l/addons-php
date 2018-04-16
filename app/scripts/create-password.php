@@ -37,9 +37,7 @@ if (empty($_POST) OR $_SESSION['login'] == true) {
   //*
   $conn = $GLOBAL['conn'];
   // query search app and theme for index page
-  $query = "INSERT INTO `partners` (`id`, `password_hash`, `member_since`,
-    `avg_stars`, `evaluations`, `path_image`, `profile_json`, `credit`)
-    VALUES (`$id`, `$pass_hash`, NULL, NULL, NULL, NULL, NULL, NULL)";
+  $query = "INSERT INTO partners (id, password_hash) VALUES ($id, $pass_hash)";
 
   if (mysqli_query(  $conn, $query )) {
     //message sucess
