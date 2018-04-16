@@ -22,6 +22,7 @@ if (empty($_POST) OR $_SESSION['login'] == true) {
   echo "\n";
   echo "User: ";
   echo $_POST['user'];
+  echo "\n";
   $email = $_POST['user'];
   $id = (int)$_POST['id'];
   //TODO:
@@ -37,14 +38,14 @@ if (empty($_POST) OR $_SESSION['login'] == true) {
   //*
   $conn = $GLOBAL['conn'];
   // query search app and theme for index page
-  $query = "INSERT INTO partners (id, password_hash) VALUES ($id, '$pass_hash')";
+  $query = "INSERT INTO `partners` (`id`, `password_hash`) VALUES ($id, '$pass_hash')";
 
-  if (mysqli_query(  $conn, $query )) {
-    //message sucess
-    echo "Sucess";
-  }
-  else {
-    echo "ERROR";
+  if (!mysqli_query($conn, $query)) {
+  // error INSERT // redirect
+  echo PHP_EOL;
+  echo "ERROR INSERT";
+  echo PHP_EOL;
+  echo mysqli_error($conn);
   }
   //*/
   createLogin($id, $_POST['pass'],$email);
