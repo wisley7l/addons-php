@@ -34,7 +34,7 @@ if (empty($_POST) OR $_SESSION['login'] == true) {
   */
   $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
   // TODO: insert table partner, escape id and pass
-  /*
+  //*
   $conn = $GLOBAL['conn'];
   // query search app and theme for index page
   $query = "INSERT INTO `partners` (`id`, `username`, `password_hash`, `member_since`,
@@ -44,6 +44,9 @@ if (empty($_POST) OR $_SESSION['login'] == true) {
   if (mysqli_query(  $conn, $query )) {
     //message sucess
     echo "Sucess";
+  }
+  else {
+    echo "ERROR";
   }
   //*/
   createLogin($id, $_POST['pass'],$email);
