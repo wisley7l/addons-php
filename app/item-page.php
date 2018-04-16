@@ -40,19 +40,17 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       'video' => $item['link_video'],
       'website' => $item['website'],
     );
-    $plans = array();
+    $plans = $_plans['plans'];
+    $plans[0]['checked'] = 'checked';
 
-    for ($i=0; $i < $_plans['total_plans'] ; $i++) {
-      $i_plan = array('id' => $_plans['plans'][$i]['id'],
-        'name' => $_plans['plans'][$i]['name'],
-        'value' => $_plans['plans'][$i]['value'],
-        'desc' => $_plans['plans'][$i]['desc'],
-        'checked' => '',
-      );
-      if ( $i == 0 ) {
-        $i_plan['checked'] = 'checked';
-      }
-      array_push($plans, $i_plan);
+    for ($i=1; $i < $_plans['total_plans'] ; $i++) {
+      // $i_plan = array('id' => $_plans['plans'][$i]['id'],
+      //   'name' => $_plans['plans'][$i]['name'],
+      //   'value' => $_plans['plans'][$i]['value'],
+      //   'desc' => $_plans['plans'][$i]['desc'],
+      //   'checked' => '',
+      // );
+      $plans[$i]['checked'] = '';
     }
 
     $faqs = array();
