@@ -43,9 +43,9 @@ if (empty($_POST) OR $_SESSION['login'] == true) {
 
   if (mysqli_query(  $conn, $query )) {
     //message sucess
-    //create login
+    echo "Sucess";
   }
-  */
+  //*/
   createLogin($id, $_POST['pass'],$email);
 
 }else {
