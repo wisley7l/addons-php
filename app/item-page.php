@@ -98,8 +98,8 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
       $planBasic = array('id' => 1,
         'name' => 'Basic',
-        'price' => treatNumber($item['value_license_basic']),
-        'description' => $json['plans']['plans'][0]['desc'],
+        'value' => treatNumber($item['value_license_basic']),
+        'desc' => $json['plans']['plans'][0]['desc'],
         'checked' => 'checked',
       );
       array_push($plans, $planBasic);
@@ -107,8 +107,8 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       if ($item['value_license_extend'] != 0) {
         $planExtend = array('id' => 2,
           'name' => 'Extend',
-          'price' => treatNumber($item['value_license_extend']),
-          'description' => $json['plans']['plans'][1]['desc'],
+          'value' => treatNumber($item['value_license_extend']),
+          'desc' => $json['plans']['plans'][1]['desc'],
           'checked' => '',
         );
         array_push($plans, $planExtend);
