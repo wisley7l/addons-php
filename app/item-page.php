@@ -58,17 +58,9 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $faqs = array();
     $json = json_decode($item['json_body'],true);
 
-    $_faqs = $json['faqs'];
+    $faqs = $json['faqs']['faqs'];
 
-    for ($i=0; $i < $_faqs['total_faqs']; $i++) {
-      echo $_faqs[$i]['id'];
-      echo PHP_EOL;
-      $i_faqs = array('id' => $_faqs['faqs'][$i]['id'] ,
-        'question' => $_faqs['faqs'][$i]['question'],
-        'answer' => $_faqs['faqs'][$i]['answer']
-       );
-       array_push($faqs, $i_faqs);
-    }
+
 
 
     // TODO:
@@ -98,19 +90,11 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $faqs = array();
     $json = json_decode($item['json_body'],true);
 
-    $_faqs = $json['faqs'];
+    $faqs = $json['faqs']['faqs'];
     $_templates = $json['templates'];
     $array_images = $_templates['templates'];
+    $image_main = $array_images[0];
 
-    for ($i=0; $i < $_faqs['total_faqs']; $i++) {
-      echo $_faqs[$i]['id'];
-      echo PHP_EOL;
-      $i_faqs = array('id' => $_faqs['faqs'][$i]['id'] ,
-        'question' => $_faqs['faqs'][$i]['question'],
-        'answer' => $_faqs['faqs'][$i]['answer']
-       );
-       array_push($faqs, $i_faqs);
-    }
 
     $plans = array();
 
