@@ -23,7 +23,6 @@ if (isset($_GET['logout'])){
 }
 //(end) * Required on all pages *
 
-
 if (isset($_GET['id']) AND isset($_GET['app'])){
   if ( $_GET['app'] == 1) {
     $app = 1;
@@ -44,22 +43,11 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $plans[0]['checked'] = 'checked';
 
     for ($i=1; $i < $_plans['total_plans'] ; $i++) {
-      // $i_plan = array('id' => $_plans['plans'][$i]['id'],
-      //   'name' => $_plans['plans'][$i]['name'],
-      //   'value' => $_plans['plans'][$i]['value'],
-      //   'desc' => $_plans['plans'][$i]['desc'],
-      //   'checked' => '',
-      // );
       $plans[$i]['checked'] = '';
     }
-    var_dump($plans);
-    $faqs = array();
+
     $json = json_decode($item['json_body'],true);
-
     $faqs = $json['faqs']['faqs'];
-
-
-
 
     // TODO:
     // $info = item_page($id_app,1);
@@ -84,7 +72,6 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       'website' => $item['link_docomentation'],
     );
 
-
     $faqs = array();
     $json = json_decode($item['json_body'],true);
 
@@ -92,7 +79,6 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $_templates = $json['templates'];
     $array_images = $_templates['templates'];
     $image_main = $array_images[0];
-
 
     $plans = array();
 
@@ -113,9 +99,6 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
         );
         array_push($plans, $planExtend);
       }
-
-
-
 
     // TODO:
     // $info = item_page($id_app,0);
