@@ -52,7 +52,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       // );
       $plans[$i]['checked'] = '';
     }
-
+    var_dump($plans);
     $faqs = array();
     $json = json_decode($item['json_body'],true);
 
