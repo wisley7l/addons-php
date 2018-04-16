@@ -116,7 +116,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       $planBasic = array('id' => 1,
         'name' => 'Basic',
         'price' => treatNumber($item['value_license_basic']),
-        'description' => '',
+        'description' => $json['plans']['plans'][0]['desc'],
         'checked' => 'checked',
       );
       array_push($plans, $planBasic);
