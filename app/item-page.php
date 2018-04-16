@@ -99,6 +99,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $json = json_decode($item['json_body'],true);
 
     $_faqs = $json['faqs'];
+    $_templates = $json['templates'];
 
     for ($i=0; $i < $_faqs['total_faqs']; $i++) {
       echo $_faqs[$i]['id'];
@@ -120,7 +121,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       );
       array_push($plans, $planBasic);
 
-      if ($item['value_license_extend'] != NULL) {
+      if ($item['value_license_extend'] != 0) {
         $planExtend = array('id' => 2,
           'name' => 'Extend',
           'price' => treatNumber($item['value_license_extend']),
