@@ -216,6 +216,8 @@ function limit_str($str)
 {
   if (strlen($str) > 7 ) {
     $len = strlen($str) - 7;
+    echo $len;
+    echo PHP_EOL;
     return substr($str, - $len);
   }
   else {
