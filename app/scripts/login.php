@@ -16,7 +16,6 @@ else if(empty($_POST)) {
 else {
   // test user and password
   $email = $_POST['user'];
-  echo $email;
   $pass = $_POST['pass'];
   $id = getUserAPIid($email);
 
@@ -28,13 +27,9 @@ else {
   $conn = $GLOBALS['conn'];
   // frist escape varables
   $id_user = (int) $email;
-  //$id_user = mysqli_real_escape_string($conn, $id_partner);
-  //$pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-  //$pass = mysqli_real_escape_string($conn,$pass_hash);
+
   // query search app and theme for index page
-  //$query = "SELECT `p.id`,`p.path_image`, `p.credits`  FROM `partners p`
-    //WHERE (`p.id` = $id_user AND `p.passowrd_hash` = $pass) LIMIT 1";
-  // TODO: test
+
   $query = "SELECT id,password_hash,path_image, credit  FROM partners
     WHERE (id = $id_user) LIMIT 1";
 
@@ -46,22 +41,13 @@ else {
       $credits = treatNumber($row['credits']);
       $pass_hash = $row['password_hash'];
     }
-    echo $id;
-    echo PHP_EOL;
-    password_verify($pass,$pass_hash);
-    if (!password_verify($pass,$pass_hash)) {
-      echo "ERROR";
-    }
-    else {
-      echo "SIM";
-    }
     // free result set
     mysqli_free_result($result);
   }else {
     // partner not found or error login
     // TODO: redirect error
-    // header("Location: ../#errorlogin");
-    // exit;
+    header("Location: ../#errorlogin");
+    exit;
   }
   // TODO: vefify password
   //TODO: get name via API
@@ -69,11 +55,18 @@ else {
   $name = 'USER' . $id;
 
   if (!isset($_SESSION)){
-    // createSession($id,$email,$name,$credits,$image);
+
+    if (!password_verify($pass,$pass_hash)) {
+      header("Location: ../#loginerror");
+      exit;
+    }
+    else {
+      createSession($id,$email,$name,$credits,$image);
+    }
   }
   else {
-    // header("Location: ../#loginexists");
-    // exit;
+    header("Location: ../#loginexists");
+    exit;
   }
 }
 
