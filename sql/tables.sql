@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS `apps` (
   `link_video` VARCHAR(255) NULL,
   `plans_json` TEXT NULL,
   `value_plan_basic` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
+  `active` TINYINT NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   INDEX (`partner_id`, `slug`),
   FOREIGN KEY (`partner_id`) REFERENCES `partners`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
