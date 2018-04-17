@@ -48,4 +48,4 @@
 // $apps = search_apps_all_name(12,'teste');
 // var_dump($apps);
 
-echo treatNumber(1);
+echo treatNumber(10);
