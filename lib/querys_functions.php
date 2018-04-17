@@ -15,7 +15,7 @@ function get_app_theme($id_app, $id_partner, $name_app, $image_app, $value_app,
     if ($image_app == NULL) {
       $image_app = "../images/items/westeros_m.jpg";
     }
-    //$image_app = 
+    //$image_app =
     return array(
       'id_app' => $id_app,
       'name' => $name_app,
@@ -90,9 +90,8 @@ function search_all_apps($limit)
     $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
       a.value_plan_basic,p.id as p_id, p.path_image
       FROM apps a, partners p
-      WHERE (a.partner_id = p.id)
-      ORDER BY a.title
-      LIMIT $number ";
+      WHERE (a.active = 1 AND a.partner_id = p.id)
+      ORDER BY a.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -120,9 +119,8 @@ function search_all_apps_free($limit)
   $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p
-    WHERE (a.partner_id = p.id AND a.value_plan_basic = 0)
-    ORDER BY a.title
-    LIMIT $number ";
+    WHERE (a.active = 1 AND a.partner_id = p.id AND a.value_plan_basic = 0)
+    ORDER BY a.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -152,9 +150,8 @@ function search_apps_free_name($limit,$search)
   $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p
-    WHERE (a.partner_id = p.id AND a.value_plan_basic = 0 AND a.title LIKE '%$name%')
-    ORDER BY a.title
-    LIMIT $number ";
+    WHERE (a.active = 1 AND a.partner_id = p.id AND a.value_plan_basic = 0 AND a.title LIKE '%$name%')
+    ORDER BY a.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -184,9 +181,8 @@ function search_apps_all_name($limit,$search)
   $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p
-    WHERE (a.partner_id = p.id AND a.title LIKE '%$name%')
-    ORDER BY a.title
-    LIMIT $number ";
+    WHERE (a.active = 1 AND a.partner_id = p.id AND a.title LIKE '%$name%')
+    ORDER BY a.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -217,8 +213,7 @@ function search_all_themes($limit)
     t.value_license_basic,p.id AS p_id, p.path_image
     FROM themes t, partners p
     WHERE (t.partner_id = p.id)
-    ORDER BY t.title
-    LIMIT $number ";
+    ORDER BY t.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -246,8 +241,7 @@ function search_all_themes_free($limit)
     t.value_license_basic,p.id AS p_id, p.path_image
     FROM themes t, partners p
     WHERE (t.partner_id = p.id AND t.value_license_basic = 0)
-    ORDER BY t.title
-    LIMIT $number ";
+    ORDER BY t.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
 
@@ -278,8 +272,7 @@ function search_themes_free_name($limit,$search)
     t.value_license_basic, p.id AS p_id, p.path_image
     FROM themes t, partners p
     WHERE (t.partner_id = p.id AND t.value_license_basic = 0 AND t.title LIKE '%$name%')
-    ORDER BY t.title
-    LIMIT $number ";
+    ORDER BY t.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -309,8 +302,7 @@ function search_themes_all_name($limit,$search)
     t.value_license_basic,p.id AS p_id, p.path_image
     FROM themes t, partners p
     WHERE (t.partner_id = p.id AND t.title LIKE '%$name%')
-    ORDER BY t.title
-    LIMIT $number ";
+    ORDER BY t.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -341,9 +333,8 @@ function search_apps_category($limit,$category)
   $query = "SELECT a.id, a.partner_id, a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p , category_apps c , relationship_category_apps r
-    WHERE (a.partner_id = p.id AND r.app_id = a.id AND r.category_apps_id = c.id AND c.id = $id_category)
-    ORDER BY a.title
-    LIMIT $number ";
+    WHERE (a.active = 1 AND a.partner_id = p.id AND r.app_id = a.id AND r.category_apps_id = c.id AND c.id = $id_category)
+    ORDER BY a.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -373,10 +364,9 @@ function search_apps_free_category($limit,$category)
   $query = "SELECT a.id, a.partner_id, a.title, a.thumbnail,
     a.value_plan_basic, p.id AS p_id, p.path_image
     FROM apps a, partners p, category_apps c , relationship_category_apps r
-    WHERE (a.partner_id = p.id AND a.value_plan_basic = 0
+    WHERE (a.active = 1 AND a.partner_id = p.id AND a.value_plan_basic = 0
       AND r.app_id = a.id AND r.category_apps_id = c.id AND c.id = $id_category)
-    ORDER BY a.title
-    LIMIT $number ";
+    ORDER BY a.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -406,10 +396,9 @@ function search_apps_free_name_category($limit,$search,$category)
   $query = "SELECT a.id, a.partner_id, a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p, category_apps c , relationship_category_apps r
-    WHERE (a.partner_id = p.id AND a.value_plan_basic = 0 AND a.title LIKE '%$name%'
+    WHERE (a.active = 1 AND a.partner_id = p.id AND a.value_plan_basic = 0 AND a.title LIKE '%$name%'
       AND r.app_id = a.id AND r.category_apps_id = c.id AND c.id = $id_category)
-    ORDER BY a.title
-    LIMIT $number ";
+    ORDER BY a.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -439,10 +428,9 @@ function search_apps_name_category($limit,$search,$category)
   $query = "SELECT a.id, a.partner_id, a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p, category_apps c , relationship_category_apps r
-    WHERE (a.partner_id = p.id AND a.title LIKE '%$name%'
+    WHERE (a.active = 1 AND a.partner_id = p.id AND a.title LIKE '%$name%'
       AND r.app_id = a.id AND r.category_apps_id = c.id AND c.id = $id_category)
-    ORDER BY a.title
-    LIMIT $number ";
+    ORDER BY a.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -475,8 +463,7 @@ function search_themes_category($limit,$category)
     FROM themes t, partners p, category_themes c , relationship_category_themes r
     WHERE (t.partner_id = p.id
       AND r.theme_id = t.id AND r.category_themes_id = c.id AND c.id = $id_category)
-    ORDER BY t.title
-    LIMIT $number ";
+    ORDER BY t.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -507,8 +494,7 @@ function search_themes_free_category($limit,$category)
     FROM themes t, partners p, category_themes c , relationship_category_themes r
     WHERE (t.partner_id = p.id AND t.value_license_basic = 0
       AND r.theme_id = t.id AND r.category_themes_id = c.id AND c.id = $id_category)
-    ORDER BY t.title
-    LIMIT $number ";
+    ORDER BY t.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -541,8 +527,7 @@ function search_themes_free_name_category($limit,$search,$category)
     FROM themes t, partners p, category_themes c , relationship_category_themes r
     WHERE (t.partner_id = p.id AND t.value_license_basic = 0 AND t.title = $name
       AND r.theme_id = t.id AND r.category_themes_id = c.id AND c.id = $id_category)
-    ORDER BY t.title
-    LIMIT $number ";
+    ORDER BY t.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -574,8 +559,7 @@ function search_themes_name_category($limit,$search,$category)
     FROM themes t, partners p, category_themes c , relationship_category_themes r
     WHERE (t.partner_id = p.id AND t.title = $name
       AND r.theme_id = t.id AND r.category_themes_id = c.id AND c.id = $id_category)
-    ORDER BY t.title
-    LIMIT $number ";
+    ORDER BY t.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
@@ -600,7 +584,6 @@ function search_themes_partner($partner)
 {
   $themes = array();
   $id_partner = (int) $partner;
-  $number = (int) $limit;
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT t.id, t.partner_id,t.title, t.thumbnail,
@@ -636,7 +619,7 @@ function search_apps_partner($partner)
   $query = "SELECT a.id, a.partner_id,a.title, a.thumbnail,
     a.value_plan_basic,p.id AS p_id, p.path_image
     FROM apps a, partners p
-    WHERE (a.partner_id = p.id AND a.partner_id = $id_partner)
+    WHERE (a.active = 1 AND a.partner_id = p.id AND a.partner_id = $id_partner)
     ORDER BY a.title;";
 
   if ($result = mysqli_query(  $conn, $query )) {
@@ -660,11 +643,9 @@ function search_partner_id($partner)
 {
   $id_partner = (int) $partner; // escape id partner
   $conn = $GLOBALS['conn']; // get varible global conn
-  $number = 1; // limit
   $query =  "SELECT p.id, p.member_since, p.path_image, p.profile_json
     FROM partners p
-    WHERE (p.id = $id_partner)
-    LIMIT $number; ";
+    WHERE (p.id = $id_partner) LIMIT 1;";
 
     if ($result = mysqli_query(  $conn, $query )) {
       // fetch associative array
@@ -694,7 +675,7 @@ function search_app_id($id_app)
     script_uri, github_repository, authentication, auth_scope, avg_stars,
     evaluations,website,link_video,plans_json,value_plan_basic
     FROM apps
-    WHERE ( id = $id)
+    WHERE ( active = 1 AND id = $id)
     LIMIT 1;";
 
   if ($result = mysqli_query(  $conn, $query )) {
