@@ -35,7 +35,7 @@ if ($_SESSION['login'] == false) { // if not connected
 }
 // var_dump($_POST);
 // get id_partner
-$id_partner = $_SESSION['user_id'];
+$id_partner = (int) $_SESSION['user_id'];
 
 if(empty($_POST)) { // not exist post
   //echo "error post";
@@ -161,8 +161,8 @@ if(empty($_POST)) { // not exist post
      //*
      $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
      `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic`, `active` )
-     VALUES ('$name',1,'$description','$body_json','$numversion','$type_app','$module_type',
-       '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic);";
+     VALUES ('$name',$id_partner,'$description','$body_json','$numversion','$type_app','$module_type',
+       '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic,$active);";
        // TODO:
        // thumbnail in insert
 
