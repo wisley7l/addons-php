@@ -48,7 +48,13 @@ else {
     }
     echo $id;
     echo PHP_EOL;
-    echo password_verify($pass,$pass_hash);
+    password_verify($pass,$pass_hash);
+    if (!password_verify($pass,$pass_hash)) {
+      echo "ERROR";
+    }
+    else {
+      echo "SIM";
+    }
     // free result set
     mysqli_free_result($result);
   }else {
