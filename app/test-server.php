@@ -47,5 +47,3 @@
 
 // $apps = search_apps_all_name(12,'teste');
 // var_dump($apps);
-$str = "12345678910";
-echo limit_str($str);
