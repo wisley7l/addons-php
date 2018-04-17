@@ -38,7 +38,7 @@ else {
     while ($row = mysqli_fetch_assoc($result)) {
       $id = $row['id'];
       $image = $row['path_image'];
-      $credits = treatNumber($row['credits']);
+      $credits = treatNumber($row['credit']);
       $pass_hash = $row['password_hash'];
     }
     // free result set
@@ -61,6 +61,7 @@ else {
       exit;
     }
     else {
+      // echo ":" . $credits ;
       createSession($id,$email,$name,$credits,$image);
     }
   }

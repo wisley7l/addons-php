@@ -117,7 +117,7 @@ function createSession($id,$email,$name,$credits,$image)
 
   session_id($id);
   session_start();
-  echo $credits;
+  // echo $credits;
   $_SESSION['user_id'] = (int) $id;
   $_SESSION['user_name'] = $email; // get via API
   $_SESSION['name'] = $name; // get via API
@@ -129,8 +129,8 @@ function createSession($id,$email,$name,$credits,$image)
   //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
   }
   else {
-    // header("Location: ../#sucesslogin");
-    // exit;
+    header("Location: ../#sucesslogin");
+    exit;
   }
 }
 
