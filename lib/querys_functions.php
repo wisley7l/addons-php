@@ -72,10 +72,9 @@ $conn = connect_db();
 // APPS
 function treatNumber($number)
 {
-  $value = strval ($number); // length number
-  echo PHP_EOL;
-  echo $value;
-  echo PHP_EOL;
+  $value = strval ($number); // convert number for string
+  // strlen($value)
+
   $part = strlen ( $value ) - 2; // the last two digits are equivalent to cents
   $real = substr($value, 0, $part); // value without the cents
   $cents = substr($value, $part); // value only the cents
