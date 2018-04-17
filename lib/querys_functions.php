@@ -76,7 +76,7 @@ function treatNumber($number)
   echo PHP_EOL;
   echo strlen($value);
   echo PHP_EOL;
-
+  $value = "0" . $value;
   $part = strlen ( $value ) - 2; // the last two digits are equivalent to cents
   $real = substr($value, 0, $part); // value without the cents
   $cents = substr($value, $part); // value only the cents
