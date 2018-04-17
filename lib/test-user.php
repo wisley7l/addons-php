@@ -215,7 +215,7 @@ function getImagesTheme()
 function limit_str($str)
 {
   if (strlen($str) > 7 ) {
-    $len = strlen($str) - 7;
+    $len = strlen($str);
     echo $len;
     echo PHP_EOL;
     return substr($str, - $len);
