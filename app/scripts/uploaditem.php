@@ -99,6 +99,7 @@ if(empty($_POST)) { // not exist post
      // make sure it is module_package
      if ($type_app == 3 ) { // is module_package
        // valid (type_module)
+       $active = 0;
        if (!in_array($module_type,$type_module)) {
          // print erro module_type
          // redirect dashboard-uploaditem?error=module_type
@@ -109,6 +110,7 @@ if(empty($_POST)) { // not exist post
        // echo $module_type;
      }else {
        $module_type = NULL;
+       $active = 1;
      }
 
      // treat plans
@@ -158,7 +160,7 @@ if(empty($_POST)) { // not exist post
      }
      //*
      $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
-     `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic` )
+     `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic`, `active` )
      VALUES ('$name',1,'$description','$body_json','$numversion','$type_app','$module_type',
        '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic);";
        // TODO:

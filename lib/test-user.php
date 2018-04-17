@@ -210,3 +210,14 @@ function getImagesTheme()
   array_push($themes,$i2);
   return $themes;
 }
+
+
+function limit_str($str)
+{
+  if (strlen($str) > 7 ) {
+    return substr($str,7);
+  }
+  else {
+    return $str;
+  }
+}
