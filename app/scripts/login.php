@@ -27,9 +27,9 @@ else {
   //otherwise request password
   $conn = $GLOBALS['conn'];
   // frist escape varables
-  //$id_user = 1;
+  $id_user = (int) $email;
   //$id_user = mysqli_real_escape_string($conn, $id_partner);
-  $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+  //$pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
   //$pass = mysqli_real_escape_string($conn,$pass_hash);
   // query search app and theme for index page
   //$query = "SELECT `p.id`,`p.path_image`, `p.credits`  FROM `partners p`
@@ -44,7 +44,10 @@ else {
       $id = $row['id'];
       $image = $row['path_image'];
       $credits = treatNumber($row['credits']);
+      $pass_hash = $row['password_hash'];
     }
+    echo $id;
+    echo password_verify($pass,$pass_hash);
     // free result set
     mysqli_free_result($result);
   }else {
