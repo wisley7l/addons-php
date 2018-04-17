@@ -47,6 +47,7 @@ else {
       $pass_hash = $row['password_hash'];
     }
     echo $id;
+    echo PHP_EOL;
     echo password_verify($pass,$pass_hash);
     // free result set
     mysqli_free_result($result);
