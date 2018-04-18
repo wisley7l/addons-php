@@ -100,6 +100,8 @@ if(empty($_POST)) { // not exist post
      if ($type_app == 3 ) { // is module_package
        // valid (type_module)
        $active = 0;
+       // TODO::
+       //SEND EMAIL
        if (!in_array($module_type,$type_module)) {
          // print erro module_type
          // redirect dashboard-uploaditem?error=module_type
@@ -154,7 +156,8 @@ if(empty($_POST)) { // not exist post
        $body_json = json_encode($body_json,JSON_UNESCAPED_UNICODE);
        if ($zip != -1 ) {
          // error save
-         echo 'error';
+         echo 'error ZIP';
+         exit;
        }
 
      }
@@ -180,7 +183,7 @@ if(empty($_POST)) { // not exist post
      //echo $id_app;
 
      //*/
-     /*
+     //*
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
        $query = "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
@@ -240,7 +243,9 @@ if(empty($_POST)) { // not exist post
        }else {
          // TODO:
          // error
-         echo "error";
+         echo "error ZIP";
+         //header("Location: ../dashboard-uploaditem#ERRORModule");
+         exit;
        }
      }
 
@@ -270,7 +275,7 @@ if(empty($_POST)) { // not exist post
      $id_app = (int) mysqli_insert_id($conn);
 
      //*/
-     /*
+     //*
 
      for ($i=0; $i < $num_category ; $i++) {
 
@@ -297,7 +302,7 @@ if(empty($_POST)) { // not exist post
          echo PHP_EOL;
          handle_msyql_error($conn);
          // header("Location: ../dashboard-uploaditem#ERRORInsert");
-         // exit();
+         exit();
        }
     }
      //*/
