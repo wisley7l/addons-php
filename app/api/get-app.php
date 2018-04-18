@@ -21,7 +21,7 @@ if ($app_id > 0) {
        http_response_code(404);
     } else {
       echo "string";
-       http_response_code(204);
+       // http_response_code(204);
     }
   }
 } else {
