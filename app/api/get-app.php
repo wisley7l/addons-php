@@ -3,14 +3,7 @@
 $app_id = (int)$_GET['id'];
 if ($app_id > 0) {
   // open in conection with db
-  $conn = mysqli_connect(Addons\MYSQL_HOST, Addons\MYSQL_USER, Addons\MYSQL_PASS, Addons\MYSQL_DB);
-  // check connection
-  if (mysqli_connect_errno()) {
-    echo 'Connection failed: ';
-    echo mysqli_connect_error();
-    echo PHP_EOL;
-    exit();
-  }
+  $conn = connect_db();
 
   // String for query
   $query = 'SELECT `id` FROM `apps` FROM `id` = ' . $app_id . ' LIMIT 1';
