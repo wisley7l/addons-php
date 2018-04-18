@@ -18,11 +18,12 @@ if ($app_id > 0) {
     // echo "OK";
     // check if the number of rows in the search is equal to zero, if yes there is no app with that id
     if (mysqli_num_rows($result) === 0) {
-      echo http_response_code(404);
+       http_response_code(404);
     } else {
-      echo http_response_code(204);
+      echo "string";
+       http_response_code(204);
     }
   }
 } else {
-  echo http_response_code(400);
+   http_response_code(400);
 }
