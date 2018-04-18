@@ -59,6 +59,7 @@ if(empty($_POST)) { // not exist post
   $category = json_decode($categories,true); // if (int) category['total'] <= 0  error
   $plans = json_decode($_POST['plans'],true); // app and theme
   $faqs = json_decode($_POST['faqs'],true); // app and theme (body_json)
+  $slug = uniqid(NULL, true) . uniqid(NULL, true);
   //var_dump($_POST);
   // echo $plans;
   //echo $faqs;
@@ -162,9 +163,9 @@ if(empty($_POST)) { // not exist post
 
      }
      //*
-     $query =  "INSERT INTO `apps` (`title`, `partner_id`, `description`, `json_body`,`version`, `type`,`module`,
+     $query =  "INSERT INTO `apps` (`title`, `slug`,`partner_id`, `description`, `json_body`,`version`, `type`,`module`,
      `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic`, `active` )
-     VALUES ('$name',$id_partner,'$description','$body_json','$numversion','$type_app','$module_type',
+     VALUES ('$name','$slug',$id_partner,'$description','$body_json','$numversion','$type_app','$module_type',
        '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic,$active);";
        // TODO:
        // thumbnail in insert
@@ -208,6 +209,8 @@ if(empty($_POST)) { // not exist post
          // exit;
        }
    }
+   header("Location: ../dashboard-uploaditem#SUCESSInsert");
+   exit();
      //*/
 
    }else if ($is_app == 0) { // if theme
@@ -245,7 +248,7 @@ if(empty($_POST)) { // not exist post
          // error
          echo "error ZIP";
          header("Location: ../dashboard-uploaditem#ERRORthemeZIP");
-         exit;
+         exit();
        }
      }
 
@@ -259,9 +262,9 @@ if(empty($_POST)) { // not exist post
      // TODO:
      // thumbnail in insert
      //*
-     $query =  "INSERT INTO themes (title, partner_id, description,
+     $query =  "INSERT INTO themes (title,slug, partner_id, description,
           version, json_body, link_documentation, link_video, value_license_basic, value_license_extend )
-        VALUES ('$name', $id_partner, '$description', '$numversion','$body_json',
+        VALUES ('$name','$slug',$id_partner, '$description', '$numversion','$body_json',
         '$linkdoc', '$linkvideo',$plan_basic,$plan_extend);";
 
      // query search app and theme for index page
@@ -282,11 +285,8 @@ if(empty($_POST)) { // not exist post
        $item = (int) $categories[$i];
        $query = "INSERT INTO relationship_category_themes (theme_id, category_themes_id) VALUES ($id_app , $item);";
 
-       mysqli_close($conn);
-       $conn = connect_db();
-
-       // echo $conn;
-       // echo $query;
+       // mysqli_close($conn);
+       // $conn = connect_db();
 
        if (mysqli_query($conn, $query)) {
          // redirect with sucess
@@ -294,8 +294,6 @@ if(empty($_POST)) { // not exist post
          echo PHP_EOL;
          echo 'All done successfully, saying goodbye...';
          echo PHP_EOL;
-         //header("Location: ../dashboard-uploaditem#SucessTheme");
-         // exit();
        } else {
          // redirect with failed
          echo 'Failed to insert theme';
@@ -305,6 +303,8 @@ if(empty($_POST)) { // not exist post
          exit();
        }
     }
+    header("Location: ../dashboard-uploaditem#SUCESSInsert");
+    exit();
      //*/
    }else {
      // redirect dashboard-uploaditem?error=is_app
@@ -313,6 +313,6 @@ if(empty($_POST)) { // not exist post
 }else {
   // redirect with error
   // echo "erro2";
-  //header("Location: ../dashboard-uploaditem#ERRORSend");
-  // exit;
+  header("Location: ../dashboard-uploaditem#ERRORSend");
+  exit;
 }
