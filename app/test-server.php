@@ -57,3 +57,5 @@ echo PHP_EOL;
 echo $_2;
 echo PHP_EOL;
 echo $str;
+echo PHP_EOL;
+echo strlen($str);
