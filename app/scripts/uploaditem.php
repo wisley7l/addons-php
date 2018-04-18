@@ -244,7 +244,7 @@ if(empty($_POST)) { // not exist post
          // TODO:
          // error
          echo "error ZIP";
-         //header("Location: ../dashboard-uploaditem#ERRORModule");
+         header("Location: ../dashboard-uploaditem#ERRORthemeZIP");
          exit;
        }
      }
