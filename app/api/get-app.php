@@ -6,7 +6,7 @@ if ($app_id > 0) {
   $conn = connect_db();
 
   // String for query
-  $query = 'SELECT `id` FROM `apps` FROM `id` = ' . $app_id . ' LIMIT 1';
+  $query = 'SELECT `id` FROM `apps` WHERE `id` = ' . $app_id . ' LIMIT 1';
   // Send query for search
   if (!$result = mysqli_query($conn, $query)) {
     // if querry error
