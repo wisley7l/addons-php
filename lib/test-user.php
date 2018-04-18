@@ -213,10 +213,10 @@ function getImagesTheme()
 }
 
 
-function limit_str($str)
+function limit_str($str,$limit)
 {
-  if (strlen($str) > 70 ) {
-    $len = strlen($str) - 70;
+  if (strlen($str) > $limit ) {
+    $len = strlen($str) - $limit;
     return substr($str, 0, -$len);
   }
   else {

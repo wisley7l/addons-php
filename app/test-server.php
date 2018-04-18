@@ -47,3 +47,13 @@
 
 // $apps = search_apps_all_name(12,'teste');
 // var_dump($apps);
+$_1 = uniqid(NULL, true);
+$_2 = uniqid(NULL, true);
+
+$str = $_1 . $_2;
+
+echo $_1;
+echo PHP_EOL;
+echo $_2;
+echo PHP_EOL;
+echo $str;
