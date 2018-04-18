@@ -15,11 +15,12 @@ if ($app_id > 0) {
     echo mysqli_error($conn);
     echo PHP_EOL;
   } else {
+    echo "OK";
     // check if the number of rows in the search is equal to zero, if yes there is no app with that id
     if (mysqli_num_rows($result) === 0) {
-      http_response_code(404);
+      // http_response_code(404);
     } else {
-      http_response_code(204);
+      // http_response_code(204);
     }
   }
 } else {
