@@ -91,7 +91,7 @@ if ($_GET['type'] == 'apps') {
       $number_found = count($apps);
     }
   }else {
-    if ($_GET['filter'] == 'free' OR (!empty($_GET['filter'])) ) {
+    if ($_GET['filter'] == 'free' ) {
       echo "free";
       echo PHP_EOL;
       echo $_GET['filter'];
