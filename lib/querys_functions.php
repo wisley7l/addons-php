@@ -35,7 +35,9 @@ function getInfoUser($id,$member_since,$path_image,$profile_json)
   if ($path_image == NULL) {
     $path_image = "../images/avatars/avatar_01.jpg";
   }
-  echo $id;
+  if ($id == NULL OR $id == 0 OR $id == '') {
+    echo "YES";
+  }
   return array(
     'id' => $id,
     'name' => 'test', // get via API
