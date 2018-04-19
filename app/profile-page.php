@@ -59,7 +59,8 @@ if (!empty($_GET['id'])){
 }
 
 if ($info_author == 404) {
-  echo "ERROR";
+  header("Location: error-page");
+  exit;
 }
 // necessary variables for information
 // number of partners and stores, and total apps and themes
