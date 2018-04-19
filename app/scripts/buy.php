@@ -13,7 +13,7 @@ if (isset($_SESSION)) {
   // array used to set user panel parameters
   $user_login = getUserLogin($dictionary);
 }
-if ($_SESSION['login'] == false || $_SESSION['is_store'] == false) { // if not connected
+if ($_SESSION['login'] == false){// || $_SESSION['is_store'] == false) { // if not connected
   header("Location: ../#notbuy");
   exit;
 }

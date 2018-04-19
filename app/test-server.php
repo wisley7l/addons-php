@@ -47,10 +47,3 @@
 
 // $apps = search_apps_all_name(12,'teste');
 // var_dump($apps);
-
-
-$str = uniqid(NULL, true) . uniqid(NULL, true);
-
-echo $str;
-echo PHP_EOL;
-echo strlen($str);
