@@ -92,10 +92,6 @@ if ($_GET['type'] == 'apps') {
     }
   }else {
     if ($_GET['filter'] == 'free' ) {
-      echo "free";
-      echo PHP_EOL;
-      echo $_GET['filter'];
-      echo PHP_EOL;
       echo empty($_GET['filter']);
       if (!empty($_GET['name'])) {
         // search item  and freee and name
@@ -108,7 +104,7 @@ if ($_GET['type'] == 'apps') {
           $number_found = count($apps);
       }
     }elseif (empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
-      echo "all";
+
       if (!empty($_GET['name'])) {
         // search item and name
         $name_item = $_GET['name'];
