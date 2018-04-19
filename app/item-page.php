@@ -30,7 +30,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $id_app = (int) $_GET['id'];
     $item = search_app_id($id_app);
     $_plans = json_decode($item['plans_json'],true);
-    // var_dump($item);
+    var_dump($item);
     // var_dump($_plans);
 
     $app_info = array('id' => $id_app,
@@ -64,7 +64,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     //search item in themes
     $item = search_theme_id($id_app);
     // var_dump($item);
-    
+
     $app_info = array('id' => $id_app,
       'name' => $item['title'],
       'description' => $item['description'],
