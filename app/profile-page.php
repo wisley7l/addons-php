@@ -42,22 +42,6 @@ if (!empty($_GET['id'])){
   // search the last 3 apps and themes
   // count app total and user themes
   //obs: query athor in db
-  /*
-  $info_author = getInfoUsertest($_GET['id']);
-  // test apps  // Perform db query to obtain this information limit 3
-  // query apps in db
-  $item2 = getAppThemeTest(1000,$_GET['id'],$dictionary,1);
-  // query apps in db
-  $apps = array();
-  // add element in array
-  array_push($apps, $item2);
-  // test themes  // Perform db query to obtain this information limit 3
-  // query apps in db
-  $item = getAppThemeTest(1111,$_GET['id'],$dictionary,0);
-  $themes = array();
-  // add element in array
-  array_push($themes, $item);
-*/
   // TODO:
   $id_author = (int) $_GET['id'];
   // OBS: when you are ready to enable these functions below.
@@ -67,9 +51,6 @@ if (!empty($_GET['id'])){
   $total_apps = count($apps);
   $total_themes = count($themes);
   $info_author['number_apps_themes'] = $total_themes + $total_apps;
-  
-
-
 }else {
   // redirect error page
   header("Location: error-page");
@@ -77,6 +58,9 @@ if (!empty($_GET['id'])){
 
 }
 
+if ($info_author == 404) {
+  echo "ERROR";
+}
 // necessary variables for information
 // number of partners and stores, and total apps and themes
 // obs: query db for information or configure as static (avoid excessive queries)
