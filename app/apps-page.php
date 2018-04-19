@@ -93,6 +93,10 @@ if ($_GET['type'] == 'apps') {
   }else {
     if ($_GET['filter'] == 'free' OR !empty($_GET['filter']) ) {
       echo "free";
+      echo PHP_EOL;
+      echo $_GET['filter'];
+      echo PHP_EOL;
+      echo empty($_GET['filter']);
       if (!empty($_GET['name'])) {
         // search item  and freee and name
         $name_item = $_GET['name'];
