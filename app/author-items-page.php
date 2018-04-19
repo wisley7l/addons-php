@@ -55,7 +55,7 @@ if (!empty($_GET['id'])) {
 else {
   $info_author = 404;
 }
-
+echo $info_author;
 if ($info_author == 404) {
   echo 'YES';
 }
