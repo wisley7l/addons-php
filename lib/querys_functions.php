@@ -660,9 +660,12 @@ function search_partner_id($partner)
     else {
       echo "ERROR";
     }
-    var_dump($partner) ;
+
     if (!is_array($partner)) {
       echo 'false';
+    }
+    else {
+      echo "YES";
     }
     return $partner;
 }
