@@ -79,8 +79,8 @@ $("#buy-item").click(function(event){
   }
   // send infos
   $("#addons-app-id").val(id_app); // app id
-  $("#addons-app-value").val(value); // app value
+  $("#addons-app-id_plan").val(value); // app value
   $("#addons-app-is_app").val(is_app); // check app
   $("#addons-app-id_template").val(id_template); // template id
-  $("#addons-buy-item").submit(); // send 
+  $("#addons-buy-item").submit(); // send
 });

@@ -63,7 +63,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     $app = 0;
     //search item in themes
     $item = search_theme_id($id_app);
-    var_dump($item);
+    // var_dump($item);
 
     $app_info = array('id' => $id_app,
       'name' => $item['title'],

@@ -76,7 +76,7 @@
 					<label class="b-label linked-check" for="{{plan.id}}">
 						<span class="checkbox primary"><span></span></span>
 						{{plan.name}}
-						<input id="i-{{plan.id}}" style="display:none" value="{{plan.value}}"></input>
+						<input id="i-{{plan.id}}" style="display:none" value="{{plan.id}}"></input>
 					</label>
 					<!-- /CHECKBOX -->
 					<p class="license-text" data-license="{{plan.id}}" >{{plan.desc}}</p>
@@ -108,7 +108,7 @@
 					<form id="addons-buy-item" action="scripts/buy" method="post">
 		        <input type="hidden" id="addons-app-id" name="id_app" />
 		        <input type="hidden" id="addons-app-is_app" name="is_app" />
-						<input type="hidden" id="addons-app-value" name="value" />
+						<input type="hidden" id="addons-app-id_plan" name="id_plan" />
 						<input type="hidden" id="addons-app-id_template" name="id_template" />
 
 					</form>
