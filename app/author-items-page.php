@@ -53,7 +53,11 @@ if (!empty($_GET['id'])) {
   $info_author['number_apps_themes'] = $total_themes + $total_apps;
 }
 else {
-  echo "ERROR";
+  $info_author = 404;
+}
+
+if ($info_author == 404) {
+  echo 'YES';
 }
 
 // obs: Search all categories in db
