@@ -660,7 +660,7 @@ function search_partner_id($partner)
     else {
       echo "ERROR";
     }
-    echo $partner;
+    var_dump($partner) ;
     return $partner;
 }
 
