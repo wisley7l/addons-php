@@ -662,12 +662,25 @@ function search_partner_id($partner)
     }
 
     if (!is_array($partner)) {
-      echo 'false';
+        return array(
+        'id' => $id_partner,
+        'name' => 'NOT FOUND', // get via API
+        'location' => '',// get via API
+        'occupation' => '',// get via API
+        'member_since' => 'ERROR',
+        //'total_sales' => 100, // sales quantity query // not implemted
+        'web_site' => '',// get via API
+        'path_image' => "../images/avatars/avatar_01.jpg",
+        'number_apps_themes' => 0 //, // quantity of items found, started with zero
+        //'number_badges' => 1, //not implemented
+        //'stars' => 1, // not implemented
+        //'evaluations' => 5 // not implemented
+      );
     }
     else {
-      echo "YES";
+      return $partner;
     }
-    return $partner;
+
 }
 
 // query search app with id
