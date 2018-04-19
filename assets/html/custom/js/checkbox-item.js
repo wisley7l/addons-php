@@ -63,6 +63,7 @@ $("#buy-item").click(function(event){
     }
   }
   let value = parseFloat($(div).find('input#i-'+ id_license).val()),// this is the value of the selected plan
+      id_plan = $(div).find('input#s-'+ id_license).val();
       id_template;
   // if is_app = 1 app
   // else theme
@@ -79,7 +80,8 @@ $("#buy-item").click(function(event){
   }
   // send infos
   $("#addons-app-id").val(id_app); // app id
-  $("#addons-app-id_plan").val(value); // app value
+  $("#addons-app-id_plan").val(id_plan); // app plan
+  $("#addons-app-value").val(value); // app plan
   $("#addons-app-is_app").val(is_app); // check app
   $("#addons-app-id_template").val(id_template); // template id
   $("#addons-buy-item").submit(); // send
