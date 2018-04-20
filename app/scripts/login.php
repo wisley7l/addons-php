@@ -62,7 +62,7 @@ else {
     }
     else {
       // echo ":" . $credits ;
-      createSession($id,$email,$name,$credits,$image);
+      createSession($id,$email,$name,$credits,$image,false);
     }
   }
   else {
