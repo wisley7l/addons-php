@@ -115,7 +115,13 @@ function createSession($id,$email,$name,$credits,$image,$is_store)
     $image = 'https://www.ocf.berkeley.edu/~dblab/blog/wp-content/uploads/2012/01/icon-profile.png';
   }
 
-  session_id($id);
+  if ($is_store == false) {
+    $id_session = 'partner-'.$id;
+  }else {
+    $id_session = 'shopman-' . $id;
+  }
+
+  session_id($id_session);
   session_start();
   // echo $credits;
   $_SESSION['user_id'] = (int) $id;
