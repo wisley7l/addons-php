@@ -115,7 +115,7 @@ $search_item = array(
 $app_category = get_categories_app();
 $theme_category = get_categories_theme();
 
-echo session_id(); // test
+// echo session_id(); // test
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
