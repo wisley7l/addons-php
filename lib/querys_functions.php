@@ -942,7 +942,7 @@ function getImagesApp($id)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = array(
       'id' => $row['id'],
-      'image' => $row['path_image']
+      'path_img' => $row['path_image']
       );
       // var_dump($item);
       array_push($images, $item);
