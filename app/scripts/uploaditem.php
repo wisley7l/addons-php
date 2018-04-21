@@ -216,6 +216,7 @@ if(empty($_POST)) { // not exist post
        echo PHP_EOL;
        echo "$item";
        echo PHP_EOL;
+       echo $query;
     //  }
        // mysqli_close($conn);
        // $conn = connect_db();
