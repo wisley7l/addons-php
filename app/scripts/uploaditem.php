@@ -187,29 +187,33 @@ if(empty($_POST)) { // not exist post
      //echo PHP_EOL;
      //echo $id_app;
      //*
+     $query = "";
      for ($i=0; $i < 6 ; $i++) {
        if ($img[$i] != -1) {
          echo PHP_EOL;
          $with = getimagesize($img[$i])[0];
          $height = getimagesize($img[$i])[1];
          echo "$with,$height";
-         $query = "INSERT INTO image_apps (app_id,path_image,width_px,heigth_px) VALUES($id_app,$img[$i],$with,$height);";
-         if (!mysqli_query($conn, $query)) {
-         // error INSERT // redirect
-         echo PHP_EOL;
-         echo "ERROR INSERT";
-         echo PHP_EOL;
-         echo mysqli_error($conn);
-         }
+         $query .= "INSERT INTO image_apps (app_id,path_image,width_px,heigth_px) VALUES($id_app,$img[$i],$with,$height);";
+
        }
      }
 
+     if (!mysqli_multi_query($conn, $query)) {
+     // error INSERT // redirect
+     echo PHP_EOL;
+     echo "ERROR INSERT";
+     echo PHP_EOL;
+     echo mysqli_error($conn);
+     }
+
      //*/
-     /*
+     //*
+     $query = "";
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
-       $query = "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
-
+       $query .=  "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
+      }
        // mysqli_close($conn);
        // $conn = connect_db();
 
@@ -229,7 +233,7 @@ if(empty($_POST)) { // not exist post
          //header("Location: ../dashboard-uploaditem#ERRORInsertAPP");
          // exit;
        }
-   }
+   //}
    header("Location: ../dashboard-uploaditem#SUCESSInsert");
    exit();
      //*/
