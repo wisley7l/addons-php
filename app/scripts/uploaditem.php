@@ -211,10 +211,6 @@ if(empty($_POST)) { // not exist post
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
        $query =  "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
-       echo PHP_EOL;
-       echo "$item";
-       echo PHP_EOL;
-       echo $query;
     //  }
        // mysqli_close($conn);
        // $conn = connect_db();
@@ -232,7 +228,7 @@ if(empty($_POST)) { // not exist post
          echo 'Failed to insert app';
          echo PHP_EOL;
          echo mysqli_error($conn);
-         header("Location: ../dashboard-uploaditem#ERRORInsertCategory");
+         header("Location: ../dashboard-uploaditem#ERRORInsertCategory:" . mysqli_error($conn));
          exit();
        }
    }
