@@ -228,7 +228,7 @@ if(empty($_POST)) { // not exist post
          echo 'Failed to insert app';
          echo PHP_EOL;
          echo mysqli_error($conn);
-         header("Location: ../dashboard-uploaditem#ERRORInsertCategory:" . mysqli_error($conn));
+         // header("Location: ../dashboard-uploaditem#ERRORInsertCategory:" . mysqli_error($conn));
          exit();
        }
    }
