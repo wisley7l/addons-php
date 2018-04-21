@@ -162,33 +162,9 @@ if(empty($_POST)) { // not exist post
        }
 
      }
+
+
      //*
-     echo PHP_EOL;
-     echo "Certo";
-     echo PHP_EOL;
-
-     for ($i=0; $i < 6 ; $i++) {
-       if ($img[$i] != -1) {
-         echo PHP_EOL;
-         $with = getimagesize($img[$i])[0];
-         $height = getimagesize($img[$i])[1];
-         echo "$with,$height";
-         $query = "INSERT INTO image_apps (path_image,width_px,heigth_px) VALUES($img[$i],$with,$height);";
-         if (!mysqli_query($conn, $query)) {
-         // error INSERT // redirect
-         echo PHP_EOL;
-         echo "ERROR INSERT";
-         echo PHP_EOL;
-         echo mysqli_error($conn);
-         }
-       }
-     }
-     //*/
-
-
-
-
-     /*
      $query =  "INSERT INTO `apps` (`title`, `slug`,`partner_id`, `description`, `json_body`,`version`, `type`,`module`,
      `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic`, `active` )
      VALUES ('$name','$slug',$id_partner,'$description','$body_json','$numversion','$type_app','$module_type',
@@ -206,8 +182,27 @@ if(empty($_POST)) { // not exist post
     echo mysqli_error($conn);
     }
      $id_app = (int) mysqli_insert_id($conn);
+     //*/
+
      //echo PHP_EOL;
      //echo $id_app;
+     //*
+     for ($i=0; $i < 6 ; $i++) {
+       if ($img[$i] != -1) {
+         echo PHP_EOL;
+         $with = getimagesize($img[$i])[0];
+         $height = getimagesize($img[$i])[1];
+         echo "$with,$height";
+         $query = "INSERT INTO image_apps (app_id,path_image,width_px,heigth_px) VALUES($id_app,$img[$i],$with,$height);";
+         if (!mysqli_query($conn, $query)) {
+         // error INSERT // redirect
+         echo PHP_EOL;
+         echo "ERROR INSERT";
+         echo PHP_EOL;
+         echo mysqli_error($conn);
+         }
+       }
+     }
 
      //*/
      /*
