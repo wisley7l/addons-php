@@ -194,7 +194,7 @@ if(empty($_POST)) { // not exist post
          $with = getimagesize($img[$i])[0];
          $height = getimagesize($img[$i])[1];
          echo "$with,$height";
-         $query .= "INSERT INTO image_apps (app_id,path_image,width_px,heigth_px) VALUES($id_app,'$img[$i]',$with,$height);";
+         $query .= "INSERT INTO image_apps (app_id,path_image,width_px,height_px) VALUES($id_app,'$img[$i]',$with,$height);";
 
        }
      }
