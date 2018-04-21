@@ -212,11 +212,8 @@ if(empty($_POST)) { // not exist post
      $query = "";
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
-       $query .=  "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
-       echo PHP_EOL;
-       echo "$item";
-       echo PHP_EOL;
-    //  }
+       $query .=  "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES($id_app , $item);";
+
        // mysqli_close($conn);
        // $conn = connect_db();
 
