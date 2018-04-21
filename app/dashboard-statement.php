@@ -41,15 +41,16 @@ $sales_user = array(
   'total_earnings' => 2000 // get in DB array_sum($transaction['price'])
 );
 $item = array();
-$buy = array(
-  'id' => 1,
-  'id_shopkeeper' => 3,
-  'id_item' => 1000,
-  'code' => 'EF001',
-  'note' => 'nothing',
+$buy = array( // hidtory_transaction
+  'id' => 1, // id
+  'id_shopkeeper' => 3, // id _
+  'id_item' => 1000, // id Theme or app
+  'code' => 'EF001', // code paypal
+  'note' => 'nothing', // note
   'description' => 'nothing',
-  'price' => 12,
-  'date' => '2 de marco',
+  'is_app' => '',// is app or theme
+  'price' => 12, // payment_value
+  'date' => '2 de marco', // date transaction
   'name' => 'ITEM',
  );
  array_push($item, $buy);
