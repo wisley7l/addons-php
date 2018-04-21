@@ -208,13 +208,13 @@ if(empty($_POST)) { // not exist post
      $query = "";
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
-       $query .=  "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES($id_app , $item);";
-     }
+       $query .=  "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
+     // }
 
        // mysqli_close($conn);
        // $conn = connect_db();
 
-       if (mysqli_multi_query($conn, $query)) {
+       if (mysqli_query($conn, $query)) {
          // redirect with sucess
          echo 'MySQL app inserted';
          echo PHP_EOL;
@@ -227,7 +227,7 @@ if(empty($_POST)) { // not exist post
          header("Location: ../dashboard-uploaditem#ERRORInsertCategory");
          exit();
        }
-   // }
+   }
 
    // header("Location: ../dashboard-uploaditem#SUCESSInsert");
    // exit();
