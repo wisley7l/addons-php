@@ -63,7 +63,7 @@ $("#buy-item").click(function(event){
     }
   }
   let value = parseFloat($(div).find('input#i-'+ id_license).val()),// this is the value of the selected plan
-      id_plan = $(div).find('input#s-'+ id_license).val();
+      id_plan = $(div).find('input#s-'+ id_license).val(),
       id_template;
   // if is_app = 1 app
   // else theme
