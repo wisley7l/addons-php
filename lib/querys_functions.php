@@ -944,12 +944,12 @@ function getImagesApp($id)
       'id' => $row['id'],
       'image' => $row['path_image']
       );
+      var_dump($item);
       array_push($images, $item);
     }
     // free result set
     mysqli_free_result($result);
   }
-  var_dump($images);
   return $images;
 }
 
