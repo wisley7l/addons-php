@@ -233,7 +233,7 @@ if(empty($_POST)) { // not exist post
          // redirect with failed
          echo 'Failed to insert app';
          echo PHP_EOL;
-         handle_msyql_error($conn);
+         echo mysqli_error($conn);
          //header("Location: ../dashboard-uploaditem#ERRORInsertAPP");
          // exit;
        }
