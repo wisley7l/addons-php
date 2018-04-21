@@ -234,8 +234,9 @@ if(empty($_POST)) { // not exist post
          // exit;
        }
    //}
-   header("Location: ../dashboard-uploaditem#SUCESSInsert");
-   exit();
+
+   // header("Location: ../dashboard-uploaditem#SUCESSInsert");
+   // exit();
      //*/
 
    }else if ($is_app == 0) { // if theme
