@@ -176,10 +176,8 @@ if(empty($_POST)) { // not exist post
      // query search app and theme for index page
     if (!mysqli_query($conn, $query)) {
     // error INSERT // redirect
-    echo PHP_EOL;
-    echo "ERROR INSERT";
-    echo PHP_EOL;
-    echo mysqli_error($conn);
+    header("Location: ../dashboard-uploaditem#ERRORInsertApp");
+    exit();
     }
      $id_app = (int) mysqli_insert_id($conn);
      //*/
@@ -234,13 +232,13 @@ if(empty($_POST)) { // not exist post
          echo 'Failed to insert app';
          echo PHP_EOL;
          echo mysqli_error($conn);
-         //header("Location: ../dashboard-uploaditem#ERRORInsertAPP");
-         // exit;
+         header("Location: ../dashboard-uploaditem#ERRORInsertCategory");
+         exit();
        }
    }
 
-   // header("Location: ../dashboard-uploaditem#SUCESSInsert");
-   // exit();
+   header("Location: ../dashboard-uploaditem#SUCESSInsert");
+   exit();
      //*/
 
    }else if ($is_app == 0) { // if theme
