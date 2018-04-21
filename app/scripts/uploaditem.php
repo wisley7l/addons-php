@@ -173,6 +173,14 @@ if(empty($_POST)) { // not exist post
          $with = getimagesize($img[$i])[0];
          $height = getimagesize($img[$i])[1];
          echo "$with,$height";
+         $query = "INSERT INTO image_apps (path_image,width_px,heigth_px) VALUES($img[$i],$with,$height);";
+         if (!mysqli_query($conn, $query)) {
+         // error INSERT // redirect
+         echo PHP_EOL;
+         echo "ERROR INSERT";
+         echo PHP_EOL;
+         echo mysqli_error($conn);
+         }
        }
      }
      //*/
