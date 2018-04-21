@@ -14,7 +14,7 @@ if (isset($_SESSION)) {
   $user_login = getUserLogin($dictionary);
 }
 if ($_SESSION['login'] == false || $_SESSION['is_store'] == false) { // if not connected
-  header("Location: ../#notbuy");
+  header("Location: ../item-page?id=" . $_POST['id_app'] . "&app=".  $_POST['is_app'] . "#notbuy");
   exit;
 }
 
