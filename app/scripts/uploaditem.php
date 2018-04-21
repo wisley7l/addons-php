@@ -214,8 +214,8 @@ if(empty($_POST)) { // not exist post
        $item = (int) $categories[$i];
        $query .=  "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
       }
-       // mysqli_close($conn);
-       // $conn = connect_db();
+       mysqli_close($conn);
+       $conn = connect_db();
 
        if (mysqli_multi_query($conn, $query)) {
          // redirect with sucess
