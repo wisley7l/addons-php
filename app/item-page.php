@@ -55,8 +55,8 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     // $plans = $infor['plans'];
 
     //images app
-    //$array_images = getImagesApp();
-    //$image_main = $array_images[0];
+    $array_images = getImagesApp();
+    $image_main = $array_images[0];
   }
   else if ($_GET['app'] == 0){
     $id_app = (int) $_GET['id'];

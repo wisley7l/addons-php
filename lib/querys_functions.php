@@ -928,6 +928,30 @@ function search_withdrawl_id($id_partner)
   return $transaction;
 }
 
+
+function getImagesApp($id)
+{
+  $id_app = (int) $id;
+  $images = array();
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT id, path_image FROM image_apps WHERE app_id = $id_app";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = array(
+      'id' => $row['id'],
+      'image' => $row['path_image']
+      );
+      array_push($images, $item);
+    }
+    // free result set
+    mysqli_free_result($result);
+  }
+  return $images;
+}
+
 /*
 In the index page search the highlights of themes and app.
 */

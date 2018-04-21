@@ -188,7 +188,7 @@ function getInfoUserTest($id)
   );
 }
 
-function getImagesApp()
+function getImagesAppTest()
 {
   $images = array();
   $i1 = array('id' => 1,
