@@ -166,9 +166,10 @@ if(empty($_POST)) { // not exist post
      echo PHP_EOL;
      echo "Certo";
      echo PHP_EOL;
+     var_dump($img);
      for ($i=1; $i <=6 ; $i++) {
        if ($img[$i] != -1) {
-         echo $img[$i];
+
          echo PHP_EOL;
          //var_dump( getimagesize($img[$i]));
        }
