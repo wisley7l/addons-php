@@ -170,7 +170,7 @@ if(empty($_POST)) { // not exist post
      for ($i=0; $i < 6 ; $i++) {
        if ($img[$i] != -1) {
          echo PHP_EOL;
-         echo getimagesize($img[$i]);
+         var_dump(getimagesize($img[$i]));
        }
      }
      //*/
