@@ -163,9 +163,11 @@ if(empty($_POST)) { // not exist post
        }
 
      }
-     /*
+     //*
      for ($i=1; $i <=6 ; $i++) {
-       echo getimagesize($img[$i]);
+       if ($img[$i] != -1) {
+         echo getimagesize($img[$i]);
+       }       
      }
      //*/
 
