@@ -139,12 +139,11 @@ if(empty($_POST)) { // not exist post
 
      $dist_img = Addons\PATH_DATA . '/images/apps/';
      $dist_zip = Addons\PATH_DATA . '/module/';
-     $img1 = send_file($_FILES,'img1',1,$dist_img);
-     $img2 = send_file($_FILES,'img2',1,$dist_img);
-     $img3 = send_file($_FILES,'img3',1,$dist_img);
-     $img4 = send_file($_FILES,'img4',1,$dist_img);
-     $img5 = send_file($_FILES,'img5',1,$dist_img);
-     $img6 = send_file($_FILES,'img6',1,$dist_img);
+     $img = array();
+     for ($i=1; $i <=6 ; $i++) {
+       $tem_img = send_file($_FILES,'img'. $i,1,$dist_img);
+       array_push($img, $tem_img);
+     }
      $zip = send_file($_FILES,'tem1',0,$dist_zip);
      // add zip in the  body_json if exists
      if ($module_type == '') {
@@ -162,7 +161,14 @@ if(empty($_POST)) { // not exist post
        }
 
      }
-     //*
+     for ($i=1; $i <=6 ; $i++) {
+       echo getimagesize($img[$i]);
+     }
+
+
+
+
+     /*
      $query =  "INSERT INTO `apps` (`title`, `slug`,`partner_id`, `description`, `json_body`,`version`, `type`,`module`,
      `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic`, `active` )
      VALUES ('$name','$slug',$id_partner,'$description','$body_json','$numversion','$type_app','$module_type',
@@ -184,7 +190,7 @@ if(empty($_POST)) { // not exist post
      //echo $id_app;
 
      //*/
-     //*
+     /*
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
        $query = "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
