@@ -140,8 +140,10 @@ if(empty($_POST)) { // not exist post
      $dist_img = Addons\PATH_DATA . '/images/apps/';
      $dist_zip = Addons\PATH_DATA . '/module/';
      $img = array();
+     echo "string";
      for ($i=1; $i <=6 ; $i++) {
        $tem_img = send_file($_FILES,'img'. $i,1,$dist_img);
+       echo $tem_img;
        array_push($img, $tem_img);
      }
      $zip = send_file($_FILES,'tem1',0,$dist_zip);
@@ -161,9 +163,11 @@ if(empty($_POST)) { // not exist post
        }
 
      }
+     /*
      for ($i=1; $i <=6 ; $i++) {
        echo getimagesize($img[$i]);
      }
+     //*/
 
 
 
