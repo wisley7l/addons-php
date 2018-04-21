@@ -176,8 +176,10 @@ if(empty($_POST)) { // not exist post
      // query search app and theme for index page
     if (!mysqli_query($conn, $query)) {
     // error INSERT // redirect
-    header("Location: ../dashboard-uploaditem#ERRORApp");
-    exit();
+    echo PHP_EOL;
+    echo "ERROR INSERT";
+    echo PHP_EOL;
+    echo mysqli_error($conn);
     }
      $id_app = (int) mysqli_insert_id($conn);
      //*/
@@ -199,8 +201,10 @@ if(empty($_POST)) { // not exist post
 
      if (!mysqli_multi_query($conn, $query)) {
      // error INSERT // redirect
-     header("Location: ../dashboard-uploaditem#ERRORInsertImage");
-     exit();
+     echo PHP_EOL;
+     echo "ERROR INSERT";
+     echo PHP_EOL;
+     echo mysqli_error($conn);
      }
 
      //*/
@@ -209,12 +213,14 @@ if(empty($_POST)) { // not exist post
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];
        $query .=  "INSERT INTO relationship_category_apps (app_id, category_apps_id) VALUES ($id_app , $item);";
-     // }
-
+       echo PHP_EOL;
+       echo "$item";
+       echo PHP_EOL;
+    //  }
        // mysqli_close($conn);
        // $conn = connect_db();
 
-       if (mysqli_query($conn, $query)) {
+       if (mysqli_multi_query($conn, $query)) {
          // redirect with sucess
          echo 'MySQL app inserted';
          echo PHP_EOL;
@@ -224,8 +230,11 @@ if(empty($_POST)) { // not exist post
          // exit;
        } else {
          // redirect with failed
-         header("Location: ../dashboard-uploaditem#ERRORInsertCategory");
-         exit();
+         echo 'Failed to insert app';
+         echo PHP_EOL;
+         handle_msyql_error($conn);
+         //header("Location: ../dashboard-uploaditem#ERRORInsertAPP");
+         // exit;
        }
    }
 
