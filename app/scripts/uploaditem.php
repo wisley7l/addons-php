@@ -223,9 +223,6 @@ if(empty($_POST)) { // not exist post
          // exit;
        } else {
          // redirect with failed
-         echo 'Failed to insert app';
-         echo PHP_EOL;
-         handle_msyql_error($conn);
          header("Location: ../dashboard-uploaditem#ERRORInsertCategory");
          exit();
        }
