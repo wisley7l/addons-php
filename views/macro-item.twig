@@ -393,15 +393,31 @@
       <img src="{{image_main.path_img}}" alt="">
     </figure>
     {% if info_page.app == 1 %}
+    <!-- SLIDE CONTROLS -->
+    <div class="slide-control-wrap">
+      <div class="slide-control rounded left">
+        <!-- SVG ARROW -->
+        <svg class="svg-arrow">
+          <use xlink:href="#svg-arrow"></use>
+        </svg>
+        <!-- /SVG ARROW -->
+      </div>
 
+      <div class="slide-control rounded right">
+        <!-- SVG ARROW -->
+        <svg class="svg-arrow">
+          <use xlink:href="#svg-arrow"></use>
+        </svg>
+        <!-- /SVG ARROW -->
+      </div>
+    </div>
+    <!-- /SLIDE CONTROLS -->
     {% endif %}
     <!--a href="#" class="button mid primary half">Go to Live Demo</a-->
   </div>
 {% endmacro %}
 
 {% macro outher_images_item(image_main,array_images) %}
-
-<!-- /SLIDE CONTROLS -->
   <div class="image-slides-wrap full">
     <!-- IMAGE SLIDES -->
     <div class="image-slides" data-slide-visible-full="8"
