@@ -944,7 +944,7 @@ function getImagesApp($id)
       'id' => $row['id'],
       'image' => $row['path_image']
       );
-      var_dump($item);
+      // var_dump($item);
       array_push($images, $item);
     }
     // free result set
