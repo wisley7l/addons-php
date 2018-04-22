@@ -57,4 +57,4 @@ array_push($sum, $teste);
 array_push($sum, $teste);
 array_push($sum, $teste);
 array_push($sum, $teste1);
-echo array_sum($sum['sum']);
+echo array_sum($sum);
