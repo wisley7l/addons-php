@@ -953,6 +953,48 @@ function getImagesApp($id)
   return $images;
 }
 
+function search_history_transaction($id)
+{
+  $id_partner = (int) $id;
+  $history = array();
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT id,partner_id,store_id,app_id,theme_id,transaction_code,
+    notes,description,payment_value,date_transaction FROM historic_transaction
+    WHERE partner_id = $id_partner";
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      if ($row['app_id'] == NULL AND $row['theme_id'] != NULL) {
+        $id_item = $row['theme_id'];
+        $is_app = 0;
+      }elseif ($row['app_id'] != NULL AND $row['theme_id'] == NULL) {
+        $id_item = $row['app_id'];
+        $is_app = 1;
+      }
+
+      $buy = array( // history_transaction
+        'id' => $row['id'], // id
+        'id_shopkeeper' => $row['store_id'], // id_
+        'id_item' => $id_item, // id Theme or app
+        'code' => $row['transaction_code'], // code paypal
+        'note' => $row['notes'], // note
+        'description' => $row['description'],
+        'is_app' => $is_app,// is app or theme
+        'price' => treatNumber($row['payment_value']), // payment_value
+        'date' => $row['date_transaction'], // date transaction
+        //'name' => $row['id'],
+       );
+      // var_dump($item);
+      array_push($history, $buy);
+    }
+    // free result set
+    mysqli_free_result($result);
+  }
+  return $history;
+}
+
 /*
 In the index page search the highlights of themes and app.
 */

@@ -33,17 +33,18 @@ if ($_SESSION['login'] == false) {
 
 //TODO:
 // $transaction = search_transaction_id( $_SESSION['user_id']);
-
+echo $_SESSION['user_id'];
 
 // obtain the total number of items sold and the total amount collected from the user's sales
 $sales_user = array(
   'total_items' => 100 , // get in DB count($transaction)
   'total_earnings' => 2000 // get in DB array_sum($transaction['price'])
 );
-$item = array();
+// $item = search_history_transaction();
+/*
 $buy = array( // hidtory_transaction
   'id' => 1, // id
-  'id_shopkeeper' => 3, // id _
+  'id_shopkeeper' => 3, // id_
   'id_item' => 1000, // id Theme or app
   'code' => 'EF001', // code paypal
   'note' => 'nothing', // note
@@ -55,6 +56,7 @@ $buy = array( // hidtory_transaction
  );
  array_push($item, $buy);
  array_push($item, $buy);
+ //*/
 
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
