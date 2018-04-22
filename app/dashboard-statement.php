@@ -34,6 +34,12 @@ if ($_SESSION['login'] == false) {
 //TODO:
 // $transaction = search_transaction_id( $_SESSION['user_id']);
 $item = search_history_transaction((int) $_SESSION['user_id']);
+$sum = 0;
+
+foreach ($item as $key => $value) {
+  $sum += $value['price'];
+}
+
 
 // obtain the total number of items sold and the total amount collected from the user's sales
 $sales_user = array(

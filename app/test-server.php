@@ -50,6 +50,7 @@
 $teste = array('name' => 'dasd', 'sum' => 1 );
 $teste1 = array('name' => 'dasd', 'sum' => 10 );
 $sum = array();
+$t =0;
 array_push($sum, $teste);
 array_push($sum, $teste);
 array_push($sum, $teste);
@@ -57,4 +58,9 @@ array_push($sum, $teste);
 array_push($sum, $teste);
 array_push($sum, $teste);
 array_push($sum, $teste1);
-echo array_sum($sum);
+
+foreach ($sum as $key => $value) {
+  $t += $value['sum'];
+}
+
+echo $t;
