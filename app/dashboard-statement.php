@@ -44,7 +44,7 @@ foreach ($item as $key => $value) {
 // obtain the total number of items sold and the total amount collected from the user's sales
 $sales_user = array(
   'total_items' => count($item), // get in DB count($transaction)
-  'total_earnings' => 2000 // get in DB array_sum($transaction['price'])
+  'total_earnings' => $sum // get in DB array_sum($transaction['price'])
 );
 
 /*
