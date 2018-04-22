@@ -34,6 +34,7 @@ if ($_SESSION['login'] == false) {
 //TODO:
 // $transaction = search_transaction_id( $_SESSION['user_id']);
 echo $_SESSION['user_id'];
+echo "string";
 
 // obtain the total number of items sold and the total amount collected from the user's sales
 $sales_user = array(
