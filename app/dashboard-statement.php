@@ -33,14 +33,14 @@ if ($_SESSION['login'] == false) {
 
 //TODO:
 // $transaction = search_transaction_id( $_SESSION['user_id']);
-
+$item = search_history_transaction((int) $_SESSION['user_id']);
 
 // obtain the total number of items sold and the total amount collected from the user's sales
 $sales_user = array(
-  'total_items' => 10 , // get in DB count($transaction)
+  'total_items' => count($item), // get in DB count($transaction)
   'total_earnings' => 2000 // get in DB array_sum($transaction['price'])
 );
-$item = search_history_transaction((int) $_SESSION['user_id']);
+
 /*
 $buy = array( // hidtory_transaction
   'id' => 1, // id

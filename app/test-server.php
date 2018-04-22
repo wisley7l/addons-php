@@ -47,3 +47,14 @@
 
 // $apps = search_apps_all_name(12,'teste');
 // var_dump($apps);
+$teste = array('name' => 'dasd', 'sum' => 1 );
+$teste1 = array('name' => 'dasd', 'sum' => 10 );
+$sum = array();
+array_push($sum, $teste);
+array_push($sum, $teste);
+array_push($sum, $teste);
+array_push($sum, $teste);
+array_push($sum, $teste);
+array_push($sum, $teste);
+array_push($sum, $teste1);
+echo array_sum($sum['sum']);
