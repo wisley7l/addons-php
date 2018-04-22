@@ -32,8 +32,7 @@ if ($_SESSION['login'] == false) {
 //(end) * Required on all pages *
 
 //TODO:
-// $transaction = search_transaction_id( $_SESSION['user_id']);
-$item = search_history_transaction((int) $_SESSION['user_id']);
+$transaction = search_transaction_id( (int) $_SESSION['user_id']);
 $sum = 0;
 
 foreach ($item as $key => $value) {
@@ -74,5 +73,5 @@ echo $twig->render('dashboard-statement.twig', array(
     // test
   'user' => $user_login,
   'sales_user' => $sales_user,
-  'item' => $item
+  'item' => $transaction
 ));
