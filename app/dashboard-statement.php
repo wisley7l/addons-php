@@ -38,7 +38,7 @@ echo "string";
 
 // obtain the total number of items sold and the total amount collected from the user's sales
 $sales_user = array(
-  'total_items' => 100 , // get in DB count($transaction)
+  'total_items' => (int) $_SESSION['user_id'] , // get in DB count($transaction)
   'total_earnings' => 2000 // get in DB array_sum($transaction['price'])
 );
 // $item = search_history_transaction();
