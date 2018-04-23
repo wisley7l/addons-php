@@ -48,7 +48,7 @@ $buy = array(
   'note' => 'nothing', // info id plan or id template
   'description' => 'nothing', //
   'price' => 12, // value theme or app
-  'date' => '2 de marco', 
+  'date' => '2 de marco',
   'name' => 'ITEM',
  );
  array_push($item, $buy);
@@ -57,10 +57,9 @@ $buy = array(
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
-echo $twig->render('dashboard-statement.twig', array(
+echo $twig->render('dashboard-statement0.twig', array(
   'dictionary' => $dictionary,
   'login' => $_SESSION['login'],
-  'implemented' => false,
     // test
   'user' => $user_login,
   'sales_user' => $sales_user,
