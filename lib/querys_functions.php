@@ -916,7 +916,7 @@ function search_withdrawl_id($id_partner)
       'id' => $row['id'],
       'id_partner' => $row['partner_id'],
       'code' => $row['date_withdrawal'],
-      'value' => treateNumber($row['value_withdrawal']),
+      'value' => treatNumber($row['value_withdrawal']),
       'date' => $row['transaction_code'],
       'notes' => $row['notes']
       );
