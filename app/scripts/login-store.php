@@ -6,7 +6,7 @@
 
 //createSession($id,$email,$name,$credits,$image,$is_store)
 $conn = connect_db();
-$id_store = 1;
+$id_store = (int) 1;
 
 $query = "SELECT id, credits FROM store  WHERE id = $id_store LIMIT 1;";
 
@@ -20,10 +20,8 @@ if ($result = mysqli_query(  $conn, $query )) {
   // free result set
   mysqli_free_result($result);
 }
-if ($id == NULL) {
-  echo 'NULL';
-}
-/*
+
+//*
 if ($id == NULL OR $id == '' ) {
   //create user
   $query =  "INSERT INTO `store` (`id`, `credits`) VALUES ($id_store,0);";
@@ -33,9 +31,9 @@ if ($id == NULL OR $id == '' ) {
     exit();
   }
   else {
-      //createSession($id_store,'NO-Email','SHOPMAN-TEST',0,NULL,1);
+      createSession($id_store,'NO-Email','SHOPMAN-TEST',0,NULL,1);
   }
 }else {
-  //createSession($id,'NO-Email','SHOPMAN-TEST',$credit,NULL,1);
+  createSession($id,'NO-Email','SHOPMAN-TEST',$credit,NULL,1);
 }
 //*/
