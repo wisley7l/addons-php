@@ -905,8 +905,8 @@ function search_withdrawl_id($id_partner)
   // query search app and theme for index page
   $query = "SELECT h.id, h.partner_id, h.date_withdrawal,
    h.value_withdrawal, h.transaction_code, h.notes
-    FROM historic_withdrawal
-    WHERE ( partner_id = $id )";
+    FROM historic_withdrawal h
+    WHERE ( h.partner_id = $id )";
     $transaction = array();
 
   if ($result = mysqli_query(  $conn, $query )) {
@@ -916,7 +916,7 @@ function search_withdrawl_id($id_partner)
       'id' => $row['id'],
       'id_partner' => $row['partner_id'],
       'code' => $row['date_withdrawal'],
-      'value' => $row['value_withdrawal'],
+      'value' => treateNumber($row['value_withdrawal']),
       'date' => $row['transaction_code'],
       'notes' => $row['notes']
       );

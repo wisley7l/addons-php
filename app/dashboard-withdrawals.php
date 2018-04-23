@@ -33,6 +33,8 @@ if ($_SESSION['login'] == false) {
 
 //TODO:
 $item = search_withdrawl_id((int)$_SESSION['user_id']);
+echo (int)$_SESSION['user_id'];
+echo $item;
 /*
 $item = array();
 $withdrawal = array(
