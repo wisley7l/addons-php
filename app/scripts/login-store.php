@@ -20,8 +20,9 @@ if ($result = mysqli_query(  $conn, $query )) {
   // free result set
   mysqli_free_result($result);
 }
-echo $id;
-
+if ($id == NULL) {
+  echo 'NULL';
+}
 /*
 if ($id == NULL OR $id == '' ) {
   //create user
