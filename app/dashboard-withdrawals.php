@@ -32,8 +32,8 @@ if ($_SESSION['login'] == false) {
 //(end) * Required on all pages *
 
 //TODO:
-// $item = search_withdrawl_id($_SESSION['user_id']);
-
+$item = search_withdrawl_id((int)$_SESSION['user_id']);
+/*
 $item = array();
 $withdrawal = array(
   'id' => 1,
@@ -44,7 +44,7 @@ $withdrawal = array(
  );
  array_push($item, $withdrawal);
  array_push($item, $withdrawal);
-
+//*/
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
