@@ -200,6 +200,127 @@
   </div>
 {% endmacro %}
 
+{% macro all_menu_store(dictionary,user)%}
+  <div id="dashboard-options-menu" class="side-menu dashboard left closed">
+        <!-- SVG PLUS -->
+    <svg class="svg-plus">
+      <use xlink:href="#svg-plus"></use>
+    </svg>
+    <!-- /SVG PLUS -->
+
+    <!-- SIDE MENU HEADER -->
+    <div class="side-menu-header">
+      <!-- USER QUICKVIEW -->
+      <div class="user-quickview">
+        <!-- USER AVATAR -->
+        <a href="author-profile.html">
+        <div class="outer-ring">
+          <div class="inner-ring"></div>
+          <figure class="user-avatar">
+            <img src="{{user.path_image}}" alt="avatar">
+          </figure>
+        </div>
+        </a>
+        <!-- /USER AVATAR -->
+
+        <!-- USER INFORMATION -->
+        <p class="user-name">{{user.name}}</p>
+        <p class="user-money">{{dictionary.coin}}${{user.credits  | number_format(2, '.', ',')}}</p>
+        <!-- /USER INFORMATION -->
+      </div>
+      <!-- /USER QUICKVIEW -->
+    </div>
+    <!-- /SIDE MENU HEADER -->
+
+    <!-- SIDE MENU TITLE -->
+    <p class="side-menu-title">{{dictionary.word_your_account}}</p>
+    <!-- /SIDE MENU TITLE -->
+
+    <!-- DROPDOWN -->
+    <ul class="dropdown dark hover-effect interactive">
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item" id="addons-li-dashboard-settings">
+        <a href="dashboard-settings">
+                    <span class="sl-icon icon-settings"></span>
+                    {{dictionary.word_account_settings}}
+                </a>
+      </li>
+
+      
+    </ul>
+    <!-- /DROPDOWN -->
+
+        <!-- SIDE MENU TITLE -->
+    <p class="side-menu-title">{{dictionary.word_info_account}}</p>
+    <!-- /SIDE MENU TITLE -->
+
+    <!-- DROPDOWN -->
+    <ul class="dropdown dark hover-effect">
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item" id="addons-li-dashboard-statement">
+        <a href="dashboard-statement">
+                    <span class="sl-icon icon-layers"></span>
+                  {{dictionary.word_sales_statment}}
+                </a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
+      {#comments
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item">
+        <a href="dashboard-statistics.html">
+                    <span class="sl-icon icon-chart"></span>
+                    Statistics
+                </a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
+      #}
+    </ul>
+    <!-- /DROPDOWN -->
+
+         <!-- SIDE MENU TITLE -->
+    <p class="side-menu-title">{{dictionary.word_tool_acoount}}</p>
+    <!-- /SIDE MENU TITLE -->
+
+    <!-- DROPDOWN -->
+    <ul class="dropdown dark hover-effect">
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item"  id="addons-li-dashboard-upitem">
+        <a href="dashboard-uploaditem">
+                    <span class="sl-icon icon-arrow-up-circle"></span>
+                    {{dictionary.word_upload_item}}
+                </a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
+      {#
+      <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item" id="addons-li-dashboard-manageitem">
+        <a href="dashboard-manageitems">
+                    <span class="sl-icon icon-folder-alt"></span>
+                    {{dictionary.word_manage_items}}
+                </a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
+      #}
+            <!-- DROPDOWN ITEM -->
+      <li class="dropdown-item" id="addons-li-dashboard-withdrawals">
+        <a href="dashboard-withdrawals">
+                    <span class="sl-icon icon-wallet"></span>
+                    {{dictionary.word_withdrawals}}
+                </a>
+      </li>
+      <!-- /DROPDOWN ITEM -->
+
+    </ul>
+    <!-- /DROPDOWN -->
+
+        <a href="?logout" class="button medium secondary">Logout</a>
+  </div>
+{% endmacro %}
+
+
+
+
+
 {% macro dashboard_header(dictionary) %}
   <!-- DASHBOARD HEADER -->
   <div class="dashboard-header retracted">

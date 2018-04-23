@@ -14,13 +14,13 @@
   {% import 'macros.twig' as macro_main %}
   {% import 'macro-dashboard.twig' as macro_dashboad %}
 	<!-- SIDE MENU -->
-	{{macro_dashboad.all_menu(dictionary,user)}}
+	{{macro_dashboad.all_menu_store(dictionary,user)}}
 	<!-- /SIDE MENU -->
 
     <!-- DASHBOARD BODY -->
     <div class="dashboard-body">
         <!-- DASHBOARD HEADER -->
-				{#{macro_dashboad.dashboard_header(dictionary)}#}
+				{{macro_dashboad.dashboard_header(dictionary)}}
         <!-- DASHBOARD HEADER -->
 
         <!-- DASHBOARD CONTENT -->
