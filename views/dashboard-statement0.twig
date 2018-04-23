@@ -62,68 +62,13 @@
             #}
           <!-- /HEADLINE -->
 
-			<!-- SALE DATA -->
-			<div class="sale-data">
-				<!-- SALE DATA ITEM -->
-				<div class="sale-data-item">
-					<span class="sl-icon icon-present"></span>
-					<p class="text-header big">{{sales_user.total_items}}</p>
-					<div class="sale-data-item-info">
-						<p class="text-header">{{dictionary.word_items_sold}}</p>
-						<p>{{dictionary.word_up_to_now}}</p>
-					</div>
-				</div>
-				<!-- /SALE DATA ITEM-->
-
-				<!-- SALE DATA ITEM -->
-        {#not implemented #}
-				<div class="sale-data-item">
-          {#
-					<span class="sl-icon icon-present"></span>
-					<p class="text-header big">234</p>
-					<div class="sale-data-item-info">
-						<p class="text-header">Products Sold</p>
-						<p>In this Month</p>
-					</div>
-          #}
-				</div>
-				<!-- /SALE DATA ITEM-->
-
-				<!-- SALE DATA ITEM -->
-        {# not implemented in moment #}
-				<div class="sale-data-item">
-          {#
-					<span class="sl-icon icon-tag"></span>
-					<p class="price big"><span>$</span>12.450</p>
-					<div class="sale-data-item-info">
-						<p class="text-header">Total Sales</p>
-						<p>In all Time</p>
-					</div>
-          #}
-				</div>
-				<!-- /SALE DATA ITEM-->
-
-				<!-- SALE DATA ITEM -->
-				<div class="sale-data-item">
-					<span class="sl-icon icon-wallet"></span>
-					<p class="price big"><span>{{dictionary.coin}}$</span>{{sales_user.total_earnings}}</p>
-					<div class="sale-data-item-info">
-						<p class="text-header">{{dictionary.word_total_earnings}}</p>
-						<p>{{dictionary.word_from_sales}}</p>
-					</div>
-				</div>
-				<!-- /SALE DATA ITEM-->
-			</div>
-			<!-- /SALE DATA -->
+			
 
 			<!-- TRANSACTION LIST -->
 			<div class="transaction-list">
 				<!-- TRANSACTION LIST HEADER -->
           {{macro_dashboad.header_table(dictionary)}}
 				<!-- /TRANSACTION LIST HEADER -->
-				kkkkkk
-				{{user.is_store}}
-				kkkkk
         {# use foreach to list items #}
 				{% for i in item %}
 					<!-- TRANSACTION LIST ITEM -->
