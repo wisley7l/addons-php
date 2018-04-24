@@ -8,13 +8,13 @@
 $conn = connect_db();
 $id_store = (int) 1;
 
-$query = "SELECT id, credits FROM store  WHERE id = $id_store LIMIT 1;";
+$query = "SELECT store_id, credits FROM store  WHERE id = $id_store LIMIT 1;";
 
 
 if ($result = mysqli_query(  $conn, $query )) {
   // fetch associative array
   while ($row = mysqli_fetch_assoc($result)) {
-    $id = $row['id'];
+    $id = $row['store_id'];
     $credit = $row['credits'];
   }
   // free result set
@@ -24,7 +24,7 @@ if ($result = mysqli_query(  $conn, $query )) {
 //*
 if ($id == NULL OR $id == '' ) {
   //create user
-  $query =  "INSERT INTO `store` (`id`, `credits`) VALUES ($id_store,0);";
+  $query =  "INSERT INTO `store` (`store_id`, `credits`) VALUES ($id_store,0);";
   if (!mysqli_query($conn, $query)) {
     // error INSERT // redirect
     header("Location: ../#ERRORCreateUser");
