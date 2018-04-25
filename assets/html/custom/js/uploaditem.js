@@ -133,6 +133,7 @@ $("#add-category").click(function(event){
   let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
   // check it's an app or theme
   if (is_app == 1) { // if app
+    $("div#duration_plan").attr('style','display:none;');
     let max_categories =  parseInt($('input#total_cat_app').val());
     // maximum number of categories that can be added
     if (num < max_categories) { // if maximum number not reached
@@ -142,6 +143,7 @@ $("#add-category").click(function(event){
       $("div#cat-app-"+i).attr('style','display:block;');
     }
   } else if(is_app == 0 ){ // if Theme
+    $("div#duration_plan").attr('style','display:block;');
     let max_categories =  parseInt($('input#total_cat_theme').val());
     if (num < max_categories) { //if maximum number not reached
       num += 1;
