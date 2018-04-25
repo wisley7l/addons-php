@@ -58,7 +58,7 @@ $("form#upload_form").submit(function(event){
       plans_str += '{"id":' + i + ',"name":"' + name_plan
         + '","value":' + price_item
         + ',"desc":"' +  $('input#desc_plan-'+i).val()
-        + ',"duration":"' + duration_plan
+        + '","duration":"' + duration_plan
         + '"}';
 
         if (i != num_plan) {
