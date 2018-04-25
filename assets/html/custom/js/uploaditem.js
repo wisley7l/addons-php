@@ -347,13 +347,10 @@ $("#rm-temp").click(function(event){
     let is_app = parseInt($('form#upload_form').find('input#inp-item_is_app').val());
 
     if (is_app != 1) { // if value is the opposite value of the app
-      $("div#duration_plan").attr('style','display:block;');
       for (var i = num; i > 1; i--) {
         $("div#cat-app-"+i).attr('style','display:none;');
       }
     }else if (is_app != 0) { //if value is the opposite value of the Theme
-      $("div#duration_plan").attr('style','display:block;');
-
       for (var i = num; i > 1; i--) {
         $("div#cat-theme-"+i).attr('style','display:none;');
       }
@@ -379,11 +376,13 @@ $("#rm-temp").click(function(event){
       $('input#inp-item_is_app').val(1);
       $('div#enable-app').attr('style','display:block;');
       $('div#enable-theme').attr('style','display:none;');
+      $('div#duration_plan').attr('style','display:block;');
       enable_img();
     }else if (id == 'item_is_theme') { // if theme
       $('div#enable-app').attr('style','display:none;');
       $('div#enable-theme').attr('style','display:block;');
       $('input#inp-item_is_app').val(0);
+      $('div#duration_plan').attr('style','display:none;');
 
       for (var i = 2; i <= 6; i++) {
         $('div#img'+i).attr('style','display:none;');
