@@ -128,6 +128,7 @@ if(empty($_POST)) { // not exist post
      }
      //$plans_json = mysqli_real_escape_string($conn,json_encode($plans));
      $plans_json = json_encode($plans,JSON_UNESCAPED_UNICODE);
+     echo $plans_json;
      // convert float to string and after convert string to int
      $plan_basic = (int) number_format($plan_basic, 2, '', '');
 
@@ -164,7 +165,7 @@ if(empty($_POST)) { // not exist post
      }
 
 
-     //*
+     /*
      $query =  "INSERT INTO `apps` (`title`, `slug`,`partner_id`, `description`, `json_body`,`version`, `type`,`module`,
      `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic`, `active` )
      VALUES ('$name','$slug',$id_partner,'$description','$body_json','$numversion','$type_app','$module_type',
@@ -184,7 +185,8 @@ if(empty($_POST)) { // not exist post
 
      //echo PHP_EOL;
      //echo $id_app;
-     //*
+
+     /*
      $query = "";
      for ($i=0; $i < 6 ; $i++) {
        if ($img[$i] != -1) {
@@ -204,9 +206,9 @@ if(empty($_POST)) { // not exist post
      echo PHP_EOL;
      echo mysqli_error($conn);
      }
-
      //*/
-     //*
+
+     /*
      $query = "";
      for ($i=0; $i < $num_category ; $i++) {
        $item = (int) $categories[$i];

@@ -41,9 +41,14 @@ $("form#upload_form").submit(function(event){
       for (var i = 1; i <= num_plan  ; i++) {
         price_item = parseFloat($('input#item_value-'+i).val());
         name_plan = $('input#name_plan-'+i).val();
+        duration_plan = parseInt($('input#duration_plan-'+i).val());
 
         if (isNaN(price_item)) {
           price_item = 0;
+        }
+
+        if (isNaN(price_item)) {
+          duration_plan = 0;
         }
 
         if (name_plan == '') {
@@ -52,7 +57,9 @@ $("form#upload_form").submit(function(event){
 
       plans_str += '{"id":' + i + ',"name":"' + name_plan
         + '","value":' + price_item
-        + ',"desc":"' +  $('input#desc_plan-'+i).val() +'"}';
+        + ',"desc":"' +  $('input#desc_plan-'+i).val()
+        + ',"duration":"' + duration_plan
+        + '"}';
 
         if (i != num_plan) {
           plans_str += ",";
