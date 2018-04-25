@@ -170,7 +170,8 @@
     <!-- /INPUT CONTAINER -->
     <div class="input-container">
       <label for="item_value" class="rl-label">Value: {{dictionary.coin}}$</label>
-      <input type="number" id="item_value-{{i}}" name="item_value" placeholder="Ex: 10.00">
+      <input type="number" id="item_value-{{i}}" name="item_value"
+      min="0" max="1000" step="any" placeholder="Ex: 10.00">
     </div>
     <!-- /INPUT CONTAINER -->
 
@@ -183,7 +184,8 @@
     <!-- /INPUT CONTAINER -->
     <div class="input-container" id="duration_plan" style="display:block;">
       <label for="duration_plan" class="rl-label">Duration of plan (in months)</label>
-      <input type="number" id="duration_plan-{{i}}" name="duration_plan" min="0" max="1000" step="any" placeholder="Ex: 0 (or empty for lifetime)">
+      <input type="number" id="duration_plan-{{i}}" name="duration_plan"
+      placeholder="Ex: 0 (or empty for lifetime)">
     </div>
     <!-- /INPUT CONTAINER -->
   </div>
