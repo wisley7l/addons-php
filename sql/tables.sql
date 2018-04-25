@@ -116,6 +116,7 @@ CREATE TABLE IF NOT EXISTS `buy_themes` (
   `payment_status` TINYINT NOT NULL DEFAULT 0,
   `license_type` TINYINT NULL,
   `transaction_code` VARCHAR(255) NULL,
+  `template_id` TINYINT NOT NULL DEFAULT 0,
   PRIMARY KEY(`id`),
   INDEX (`theme_id`, `store_id`),
   FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE

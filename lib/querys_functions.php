@@ -952,6 +952,27 @@ function getImagesApp($id)
   }
   return $images;
 }
+//
+function get_apps_buy($id)
+{
+  $id_app = (int) $id;
+  
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT ";
+
+}
+//
+function get_themes_buy($id)
+{
+  $id_app = (int) $id;
+
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT ";
+
+}
+
 
 /*
 In the index page search the highlights of themes and app.
