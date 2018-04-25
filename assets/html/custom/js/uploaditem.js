@@ -66,7 +66,7 @@ $("form#upload_form").submit(function(event){
         }
       }
       plans_str += "]}";
-
+      console.log(plans_str);
       //treat faqs
       fqs_str = '{"total_faqs":'+ num_faqs + ',"faqs": [';
 
@@ -110,7 +110,7 @@ $("form#upload_form").submit(function(event){
       $('#uploaditem-plans').val(plans_str);
       $('#uploaditem-faqs').val(fqs_str);
 
-      $("#addons-uploaditem").submit();//
+  //    $("#addons-uploaditem").submit();//
     } else if (is_app == 0 ) { // theme
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
@@ -122,7 +122,7 @@ $("form#upload_form").submit(function(event){
       $('#uploaditem-plans').val(plans_str);
       $('#uploaditem-faqs').val(fqs_str);
       $('#uploaditem-n_temp').val(num_temple);
-      $("#addons-uploaditem").submit();//
+     $("#addons-uploaditem").submit();//
     }
   }
   event.preventDefault();
