@@ -58,8 +58,8 @@ $("form#upload_form").submit(function(event){
       plans_str += '{"id":' + i + ',"name":"' + name_plan
         + '","value":' + price_item
         + ',"desc":"' +  $('input#desc_plan-'+i).val()
-        + '","duration":"' + duration_plan
-        + '"}';
+        + '","duration":' + duration_plan
+        + '}';
 
         if (i != num_plan) {
           plans_str += ",";
@@ -110,7 +110,7 @@ $("form#upload_form").submit(function(event){
       $('#uploaditem-plans').val(plans_str);
       $('#uploaditem-faqs').val(fqs_str);
 
-  //    $("#addons-uploaditem").submit();//
+     $("#addons-uploaditem").submit();//
     } else if (is_app == 0 ) { // theme
       $("#uploaditem-is_app").val(is_app);
       $("#uploaditem-name_app").val(name_app);
