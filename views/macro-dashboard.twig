@@ -867,35 +867,28 @@ Link
 #}
 
   <div class="transaction-list-item">
-    <div class="transaction-list-item-date">
-      <p>{{item.date}}</p>
+    <div class="transaction-list-header-date">
+      <p class="text-header small">Title</p>
     </div>
-    <div class="transaction-list-item-code">
-      <p class="text-header">{{item.id_shopkeeper}}</p>
+    <div class="transaction-list-header-code">
+      <p class="text-header small">Partner ID</p>
     </div>
-    <div class="transaction-list-item-code">
-      <p class="category primary">{{item.id_item}}</p>
+    <div class="transaction-list-header-date">
+      <p class="text-header small">Date init</p>
     </div>
-    <div class="transaction-list-item-code">
-      <p class="category primary">{{item.name}}</p>
+    <div class="transaction-list-header-date">
+      <p class="text-header small">Date End</p>
     </div>
-    <div class="transaction-list-item-code">
-      <p><span class="light">{{item.code}}</span></p>
+    <div class="transaction-list-header-price">
+      <p class="text-header small">Price</p>
     </div>
-    <div class="transaction-list-item-price">
-      <p>{{dictionary.coin}}$ {{item.price}}</p>
+    <div class="transaction-list-header-code">
+      <p class="text-header small">Transaction</p>
     </div>
-
-    <div class="transaction-list-item-item">
-      <p><span class="light">{{item.note}}</span></p>
-    </div>
-    <div class="transaction-list-item-detail">
-      <p><span class="light">{{item.description}}</span></p>
+    <div class="transaction-list-header-item">
+      <p class="text-header small">Link</p>
     </div>
 
-    <div class="transaction-list-item-earnings">
-      <p class="text-header">-</p>
-    </div>
     <div class="transaction-list-item-icon">
       <div class="transaction-icon primary">
         <!-- SVG PLUS -->
@@ -905,7 +898,7 @@ Link
         <!-- /SVG PLUS -->
       </div>
     </div>
-    
+
   </div>
 
 {% endmacro %}
