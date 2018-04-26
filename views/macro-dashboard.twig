@@ -775,6 +775,39 @@ is_app -
   </div>
 {% endmacro %}
 
+{% macro header_table_store(dictionary) %}
+
+  <div class="transaction-list-header">
+    <div class="transaction-list-header-date">
+      <p class="text-header small">Title</p>
+    </div>
+    <div class="transaction-list-header-code">
+      <p class="text-header small">Partner ID</p>
+    </div>
+    <div class="transaction-list-header-date">
+      <p class="text-header small">Date init</p>
+    </div>
+    <div class="transaction-list-header-date">
+      <p class="text-header small">Date End</p>
+    </div>
+    <div class="transaction-list-header-price">
+      <p class="text-header small">Price</p>
+    </div>
+    <div class="transaction-list-header-code">
+      <p class="text-header small">Transaction</p>
+    </div>
+    <div class="transaction-list-header-item">
+      <p class="text-header small">Link</p>
+    </div>
+    {#}
+    <div class="transaction-list-header-earnings">
+      <p class="text-header small">Earnings</p>
+    </div>
+    <div class="transaction-list-header-icon"></div>
+    #}
+  </div>
+{% endmacro %}
+
 {% macro item_list(dictionary,item) %}
 
   <div class="transaction-list-item">
@@ -817,6 +850,62 @@ is_app -
       </div>
     </div>
     #}
+  </div>
+
+{% endmacro %}
+
+{% macro item_list_store(dictionary,item) %}
+
+{#
+Title
+Partner
+Date
+Date
+Price
+Transaction
+Link
+#}
+
+  <div class="transaction-list-item">
+    <div class="transaction-list-item-date">
+      <p>{{item.date}}</p>
+    </div>
+    <div class="transaction-list-item-code">
+      <p class="text-header">{{item.id_shopkeeper}}</p>
+    </div>
+    <div class="transaction-list-item-code">
+      <p class="category primary">{{item.id_item}}</p>
+    </div>
+    <div class="transaction-list-item-code">
+      <p class="category primary">{{item.name}}</p>
+    </div>
+    <div class="transaction-list-item-code">
+      <p><span class="light">{{item.code}}</span></p>
+    </div>
+    <div class="transaction-list-item-price">
+      <p>{{dictionary.coin}}$ {{item.price}}</p>
+    </div>
+
+    <div class="transaction-list-item-item">
+      <p><span class="light">{{item.note}}</span></p>
+    </div>
+    <div class="transaction-list-item-detail">
+      <p><span class="light">{{item.description}}</span></p>
+    </div>
+
+    <div class="transaction-list-item-earnings">
+      <p class="text-header">-</p>
+    </div>
+    <div class="transaction-list-item-icon">
+      <div class="transaction-icon primary">
+        <!-- SVG PLUS -->
+        <svg class="svg-plus">
+          <use xlink:href="#svg-plus"></use>
+        </svg>
+        <!-- /SVG PLUS -->
+      </div>
+    </div>
+    
   </div>
 
 {% endmacro %}

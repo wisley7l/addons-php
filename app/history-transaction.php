@@ -55,6 +55,7 @@ $buy = array(
  array_push($item, $buy);
 
 // intial twig and send varibles for template
+// /*
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
 echo $twig->render('dashboard-statement0.twig', array(
@@ -65,3 +66,4 @@ echo $twig->render('dashboard-statement0.twig', array(
   'sales_user' => $sales_user,
   'item' => $item
 ));
+//*/

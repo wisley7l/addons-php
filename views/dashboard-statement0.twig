@@ -67,12 +67,12 @@
 			<!-- TRANSACTION LIST -->
 			<div class="transaction-list">
 				<!-- TRANSACTION LIST HEADER -->
-          {{macro_dashboad.header_table(dictionary)}}
+          {{macro_dashboad.header_table_store(dictionary)}}
 				<!-- /TRANSACTION LIST HEADER -->
         {# use foreach to list items #}
 				{% for i in item %}
 					<!-- TRANSACTION LIST ITEM -->
-					{{macro_dashboad.item_list(dictionary,i)}}
+					{{macro_dashboad.item_list_store(dictionary,i)}}
 					<!-- /TRANSACTION LIST ITEM -->
 				{% endfor %}
 
