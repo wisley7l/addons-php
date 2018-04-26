@@ -875,11 +875,20 @@ is_app -
     <div class="transaction-list-item-code">
       <p><span class="light">{{item.code}}</span></p>
     </div>
-
+    <div class="transaction-list-item-icon">
+      <div class="transaction-icon primary">
+        <!-- SVG PLUS -->
+        <svg class="svg-plus">
+          <use xlink:href="#{{item.note}}"></use>
+        </svg>
+        <!-- /SVG PLUS -->
+      </div>
+    </div>
+{#
     <div class="transaction-list-item-item">
       <p><span class="light">{{item.note}}</span></p>
     </div>
-    {#
+
     <div class="transaction-list-item-detail">
       <p><span class="light">{{item.description}}</span></p>
     </div>
