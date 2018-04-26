@@ -42,14 +42,13 @@ $sales_user = array(
 $item = array();
 $buy = array(
   'id' => 1,
-  'id_shopkeeper' => 3, // id partner or name
-  'id_item' => 1000,
-  'code' => 'EF001',
-  'note' => 'nothing', // info id plan or id template
-  'description' => 'nothing', //
+  'id_partner' => 10, // id partner or name
+  'title' => 'nome',
+  'date_init' => 'data',
+  'date_end' => 'data', // info id plan or id template
   'price' => 12, // value theme or app
-  'date' => '2 de marco',
-  'name' => 'ITEM',
+  'transaction' => '',
+  'link' => 'www.google.com'
  );
  array_push($item, $buy);
  array_push($item, $buy);

@@ -858,25 +858,25 @@ is_app -
 
   <div class="transaction-list-item">
     <div class="transaction-list-item-date">
-      <p class="category primary">{{item.date}}</p>
+      <p class="category primary">{{item.title}}</p>
     </div>
     <div class="transaction-list-item-code">
-      <p class="text-header">{{item.id_shopkeeper}}</p>
+      <p class="text-header">{{item.id_partner}}</p>
     </div>
     <div class="transaction-list-item-date">
-      <p class="category primary">{{item.id_item}}</p>
+      <p class="category primary">{{item.date_init}}</p>
     </div>
     <div class="transaction-list-item-date">
-      <p>{{item.name}}</p>
+      <p class="category primary">{{item.date_end}}</p>
     </div>
     <div class="transaction-list-item-price">
       <p>{{dictionary.coin}}$ {{item.price}}</p>
     </div>
     <div class="transaction-list-item-code">
-      <p><span class="light">{{item.code}}</span></p>
+      <p><span class="light">{{item.transaction}}</span></p>
     </div>
     <div class="transaction-list-item-icon">
-      <a href="#{{item.desc}}">
+      <a href="#{{item.link}}">
         <div class="transaction-icon primary">
         </div>
       </a>
