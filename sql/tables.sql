@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `buy_apps` (
   `app_value` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
   `payment_status` TINYINT NOT NULL DEFAULT 0,
   `plan_id` MEDIUMINT NULL,
-  `trasaction_code` VARCHAR(255) NULL,
+  `transaction_code` VARCHAR(255) NULL,
   PRIMARY KEY (`id`),
   INDEX (`app_id`, `store_id`),
   FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
