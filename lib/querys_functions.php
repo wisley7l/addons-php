@@ -999,6 +999,26 @@ function get_themes_buy($id)
     FROM buy_theme b, themes t
     WHERE (b.theme_id = t.id AND b.payment_status = 1 AND b.store_id = $id_store); ";
 
+    if ($result = mysqli_query(  $conn, $query )) {
+      // fetch associative array
+      while ($row = mysqli_fetch_assoc($result)) {
+        $item = array(
+        'id' => $row['theme_id'],
+        'id_partner' => $row['partner_id'], // id partner or name
+        'title' => $row['title'],
+        'date_init' => '',
+        'date_end' => '', // info id plan or id template
+        'price' => $row['theme_value'], // value theme or app
+        'transaction' => $row['transaction_code'],
+        'link' => json_decode($row['json_body'],true)['zip'],
+        );
+        // var_dump($item);
+        // array_push($images, $item);
+      }
+      // free result set
+      mysqli_free_result($result);
+    }
+
 }
 
 
