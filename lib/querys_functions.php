@@ -961,8 +961,7 @@ function get_apps_buy($id)
   // query search app and theme for index page
   $query = "SELECT b.id, b.app_id, b.store_id,b.date_init, b.date_end,
   b.date_renovation,b.type_plan, b.payment_status, b.transaction_code,
-  b.app_value, b.plan_id,
-   a.partner_id, a.title, a.plans_json
+  b.app_value, b.plan_id, a.partner_id, a.title, a.plans_json, a.json_body
     FROM buy_app b, apps a
     WHERE (b.app_id = a.id AND b.payment_status = 1 AND b.store_id = $id_store); ";
 
@@ -970,11 +969,17 @@ function get_apps_buy($id)
       // fetch associative array
       while ($row = mysqli_fetch_assoc($result)) {
         $item = array(
-        'id' => $row['id'],
-        'path_img' => $row['path_image']
+        'id' => $row['app_id'],
+        'id_partner' => $row['partner_id'], // id partner or name
+        'title' => $row['title'],
+        'date_init' => $row['date_init'],
+        'date_end' => $row['date_end'], // info id plan or id template
+        'price' => $row['app_value'], // value theme or app
+        'transaction' => $row['transaction_code'],
+        'link' => json_decode($row['json_body'],true)['zip'],
         );
         // var_dump($item);
-        array_push($images, $item);
+        // array_push($images, $item);
       }
       // free result set
       mysqli_free_result($result);

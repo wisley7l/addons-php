@@ -48,7 +48,7 @@ $buy = array(
   'date_end' => 'data', // info id plan or id template
   'price' => 12, // value theme or app
   'transaction' => 'dasdasd',
-  'link' => 'www.google.com'
+  'link' => ''
  );
  array_push($item, $buy);
  array_push($item, $buy);
