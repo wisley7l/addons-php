@@ -964,7 +964,21 @@ function get_apps_buy($id)
   b.app_value, b.plan_id,
    a.partner_id, a.title, a.plans_json
     FROM buy_app b, apps a
-    WHERE (b.app_id = a.id AND b.store_id = $id_store); ";
+    WHERE (b.app_id = a.id AND b.payment_status = 1 AND b.store_id = $id_store); ";
+
+    if ($result = mysqli_query(  $conn, $query )) {
+      // fetch associative array
+      while ($row = mysqli_fetch_assoc($result)) {
+        $item = array(
+        'id' => $row['id'],
+        'path_img' => $row['path_image']
+        );
+        // var_dump($item);
+        array_push($images, $item);
+      }
+      // free result set
+      mysqli_free_result($result);
+    }
 
 }
 //
@@ -978,7 +992,7 @@ function get_themes_buy($id)
    b.license_type, b.transaction_code, b.theme_value, b.template_id,
    t.partner_id, t.title, t.json_body
     FROM buy_theme b, themes t
-    WHERE (b.theme_id = t.id AND b.store_id = $id_store); ";
+    WHERE (b.theme_id = t.id AND b.payment_status = 1 AND b.store_id = $id_store); ";
 
 }
 
