@@ -1025,8 +1025,8 @@ function get_themes_buy($id)
 
 function sendFile()
 {
-  echo Addons\PATH_DATA;
-  //PATH_DATA
+  // Addons\PATH_DATA;
+  var_dump(strpos("Fabio", 'bio'));
 }
 
 
