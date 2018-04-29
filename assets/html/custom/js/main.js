@@ -91,6 +91,6 @@ $( document ).ready(function() {
 
 });
 // test
-$("a#bt-download").click(function(event) {
+$("#bt-download").click(function(event) {
   console.log("test");
 }
