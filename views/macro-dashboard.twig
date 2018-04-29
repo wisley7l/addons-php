@@ -856,7 +856,7 @@ is_app -
 
 {% macro item_list_store(dictionary,item) %}
 
-  <div class="transaction-list-item">
+  <div class="transaction-list-item" id="addons-download">
     <div class="transaction-list-item-date">
       <p class="category primary">{{item.title}}</p>
     </div>
@@ -875,7 +875,7 @@ is_app -
     <div class="transaction-list-item-code">
       <p><span class="light">{{item.transaction}}</span></p>
     </div>
-    <div id="bt-download" class="transaction-list-item-icon">
+    <div class="transaction-list-item-icon">
       <a href="#">
         <div class="transaction-icon primary">
         </div>
