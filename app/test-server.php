@@ -1,2 +1,2 @@
 <?php
-//send_file (0,0);
+sendFile ();

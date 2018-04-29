@@ -1025,7 +1025,8 @@ function get_themes_buy($id)
 
 function sendFile()
 {
-  echo "send";
+  echo Addons\PATH_DATA;
+  //PATH_DATA
 }
 
 
