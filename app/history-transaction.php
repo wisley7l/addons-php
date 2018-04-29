@@ -50,8 +50,18 @@ $buy = array(
   'transaction' => 'dasdasd',
   'link' => ''
  );
+ $buy1 = array(
+   'id' => 2,
+   'id_partner' => 10, // id partner or name
+   'title' => 'dasda',
+   'date_init' => 'data',
+   'date_end' => 'dasd', // info id plan or id template
+   'price' => 100, // value theme or app
+   'transaction' => 'dasdasd',
+   'link' => ''
+  );
  array_push($item, $buy);
- array_push($item, $buy);
+ array_push($item, $buy1);
 
 // intial twig and send varibles for template
 // /*
