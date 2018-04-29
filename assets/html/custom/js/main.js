@@ -93,4 +93,4 @@ $( document ).ready(function() {
 // test
 $("#bt-download").click(function(event) {
   console.log("test");
-}
+});
