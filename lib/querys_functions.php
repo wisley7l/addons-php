@@ -1023,10 +1023,38 @@ function get_themes_buy($id)
 
 }
 
-function sendFile()
+function sendFile($path_file,$is_app)
 {
-  $sim =  Addons\PATH_DATA . 'teste.jpg';
-  echo explode(Addons\PATH_DATA, $sim)[1];
+  if ($is_app == 1) {
+    $path = '/module/';
+  }else {
+    $path = '/template/';
+  }
+
+  // Define o tempo máximo de execução em 0 para as conexões lentas
+   set_time_limit(0);
+   // Arqui você faz as validações e/ou pega os dados do banco de dados
+   $file_name = explode(Addons\PATH_DATA . $path, $sim)[1];; // nome do arquivo que será enviado p/ download
+   // $path_file = '/pasta/do/arquivo/'.$aquivoNome; // caminho absoluto do arquivo
+   // Verifica se o arquivo não existe
+   if (!file_exists($path_file)) {
+   // Exiba uma mensagem de erro caso ele não exista
+   exit;
+   }
+   // Aqui você pode aumentar o contador de downloads
+   // Definimos o novo nome do arquivo
+   // $novoNome = 'imagem_nova.jpg';
+   // Configuramos os headers que serão enviados para o browser
+   header('Content-Description: File Transfer');
+   header('Content-Disposition: attachment; filename="'.$file_name.'"');
+   header('Content-Type: application/octet-stream');
+   header('Content-Transfer-Encoding: binary');
+   header('Content-Length: ' . filesize($file_name));
+   header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+   header('Pragma: public');
+   header('Expires: 0');
+   // Envia o arquivo para o cliente
+   readfile($file_name);
 }
 
 
