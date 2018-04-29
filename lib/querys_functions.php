@@ -977,7 +977,7 @@ function get_apps_buy($id)
         'price' => $row['app_value'], // value theme or app
         'transaction' => $row['transaction_code'],
         'link' => json_decode($row['json_body'],true)['zip'],
-        'is_app' => $dictionary['word_app']
+        'is_app' => $dictionary['word']
         );
         // var_dump($item);
         // array_push($images, $item);
@@ -1012,7 +1012,6 @@ function get_themes_buy($id)
         'price' => $row['theme_value'], // value theme or app
         'transaction' => $row['transaction_code'],
         // 'link' => json_decode($row['json_body'],true)['zip'],
-        'is_app' => $dictionary['word_theme']
         );
         // var_dump($item);
         // array_push($images, $item);
@@ -1022,38 +1021,6 @@ function get_themes_buy($id)
     }
 
 }
-
-function send_file($path_file, $is_app)
-{
-  echo Addons/PATH_DATA;
-  /*
-  // Define o tempo máximo de execução em 0 para as conexões lentas
-   set_time_limit(0);
-   // Arqui você faz as validações e/ou pega os dados do banco de dados
-   $aquivoNome = 'imagem.jpg'; // nome do arquivo que será enviado p/ download
-   $arquivoLocal = '/pasta/do/arquivo/'.$aquivoNome; // caminho absoluto do arquivo
-   // Verifica se o arquivo não existe
-   if (!file_exists($arquivoLocal)) {
-   // Exiba uma mensagem de erro caso ele não exista
-   exit;
-   }
-   // Aqui você pode aumentar o contador de downloads
-   // Definimos o novo nome do arquivo
-   $novoNome = 'imagem_nova.jpg';
-   // Configuramos os headers que serão enviados para o browser
-   header('Content-Description: File Transfer');
-   header('Content-Disposition: attachment; filename="'.$novoNome.'"');
-   header('Content-Type: application/octet-stream');
-   header('Content-Transfer-Encoding: binary');
-   header('Content-Length: ' . filesize($aquivoNome));
-   header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
-   header('Pragma: public');
-   header('Expires: 0');
-   // Envia o arquivo para o cliente
-   readfile($aquivoNome);
-   //*/
-}
-
 
 
 /*
