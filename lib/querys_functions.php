@@ -1025,7 +1025,7 @@ function get_themes_buy($id)
 
 function send_file($path_file, $is_app)
 {
-  echo Addons\PATH_DATA;
+  echo Addons/PATH_DATA;
   /*
   // Define o tempo máximo de execução em 0 para as conexões lentas
    set_time_limit(0);
