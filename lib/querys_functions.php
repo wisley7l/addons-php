@@ -1025,8 +1025,8 @@ function get_themes_buy($id)
 
 function sendFile()
 {
-  // Addons\PATH_DATA;
-  var_dump(explode("Fa", 'Fabio'));
+  $sim =  Addons\PATH_DATA . 'teste.jpg';
+  var_dump(explode(Addons\PATH_DATA, $sim));
 }
 
 
