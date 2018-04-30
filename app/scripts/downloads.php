@@ -26,7 +26,7 @@ if ($_SESSION['login'] == false) { // if not connected
 $id_store = (int) $_SESSION['user_id'];
 echo $id_store;
 echo PHP_EOL;
-
-var_dump($_POST);
+$id_buy = (int) $_POST['id_buy'];
+echo $id_buy;
 
 // download only themes
