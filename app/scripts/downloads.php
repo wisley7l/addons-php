@@ -25,5 +25,6 @@ if ($_SESSION['login'] == false) { // if not connected
 // get id_partner
 $id_store = (int) $_SESSION['user_id'];
 echo $id_store;
+echo PHP_EOL;
 
 var_dump($_POST);
