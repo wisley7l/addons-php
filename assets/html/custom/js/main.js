@@ -97,6 +97,6 @@ $("#addons-download").click(function(event) {
   id = event.target.id;
   //addons-downlod-file
   //addons-id-plan
-  $("#addons-id-plan").val(id);
+  $("#addons-id-buy").val(id);
   $("#addons-downlod-file").submit();
 });

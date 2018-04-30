@@ -969,7 +969,8 @@ function get_apps_buy($id)
       // fetch associative array
       while ($row = mysqli_fetch_assoc($result)) {
         $item = array(
-        'id' => $row['app_id'],
+        'id' => $row['id'],
+        'id_app' => $row['app_id'],
         'id_partner' => $row['partner_id'], // id partner or name
         'title' => $row['title'],
         'date_init' => $row['date_init'],
@@ -1004,7 +1005,8 @@ function get_themes_buy($id)
       // fetch associative array
       while ($row = mysqli_fetch_assoc($result)) {
         $item = array(
-        'id' => $row['theme_id'],
+        'id' => $row['id'],
+        'id_app' => $row['theme_id'],
         'id_partner' => $row['partner_id'], // id partner or name
         'title' => $row['title'],
         'date_init' => '',

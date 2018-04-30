@@ -28,3 +28,5 @@ echo $id_store;
 echo PHP_EOL;
 
 var_dump($_POST);
+
+// download only themes
