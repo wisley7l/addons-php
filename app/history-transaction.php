@@ -62,6 +62,7 @@ $buy = array(
   );
  array_push($item, $buy);
  array_push($item, $buy1);
+ array_push($item, $buy1);
 
 // intial twig and send varibles for template
 // /*
