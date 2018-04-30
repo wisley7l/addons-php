@@ -100,7 +100,7 @@ $("#addons-download").click(function(event) {
   // console.log(is_app);
   //addons-downlod-file
   //addons-id-plan
+  $("#addons-is-app").val(is_app);
   $("#addons-id-buy").val(id);
-  // $("#addons-id-buy").val(id);
-  // $("#addons-downlod-file").submit();
+  $("#addons-downlod-file").submit();
 });
