@@ -91,9 +91,7 @@ $( document ).ready(function() {
 
 });
 // test
-$(function(){
-    $("#addons-download").click(function(event) {
-      var id = $(this).attr('id');
-            alert(id);
-    });
-  });
+
+$("#addons-download").click(function(event) {
+  alert(event.target);
+});
