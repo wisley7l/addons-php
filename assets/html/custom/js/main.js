@@ -94,4 +94,9 @@ $( document ).ready(function() {
 
 $("#addons-download").click(function(event) {
   console.log(event.target.id);
+  id = event.target.id;
+  //addons-downlod-file
+  //addons-id-plan
+  $("#addons-id-plan").val(id);
+  $("#addons-downlod-file").submit();
 });
