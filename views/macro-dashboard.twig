@@ -878,6 +878,8 @@ is_app -
     <div class="transaction-list-item-icon" >
       <a href="#">
         <div class="transaction-icon primary"id="{{item.id}}">
+          <input type="hidden" id="addons-buy-theme-{{item.id}}"
+            value="{{item.is_app}}"/>
         </div>
       </a>
     </div>

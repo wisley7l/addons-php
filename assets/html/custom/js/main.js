@@ -94,9 +94,13 @@ $( document ).ready(function() {
 
 $("#addons-download").click(function(event) {
   console.log(event.target.id);
-  id = event.target.id;
+  let id = event.target.id,
+      is_app = $("input#addons-buy-theme-"+id).val();
+
+  console.log(is_app);
   //addons-downlod-file
   //addons-id-plan
   $("#addons-id-buy").val(id);
-  $("#addons-downlod-file").submit();
+  // $("#addons-id-buy").val(id);
+  // $("#addons-downlod-file").submit();
 });

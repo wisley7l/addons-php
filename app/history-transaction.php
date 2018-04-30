@@ -48,7 +48,7 @@ $buy = array(
   'date_end' => 'data', // info id plan or id template
   'price' => 12, // value theme or app
   'transaction' => 'dasdasd',
-  'link' => ''
+  'is_app' => 1
  );
  $buy1 = array(
    'id' => 2,
@@ -58,7 +58,7 @@ $buy = array(
    'date_end' => 'dasd', // info id plan or id template
    'price' => 100, // value theme or app
    'transaction' => 'dasdasd',
-   'link' => ''
+   'is_app' => 0
   );
  array_push($item, $buy);
  array_push($item, $buy1);

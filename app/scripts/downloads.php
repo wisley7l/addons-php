@@ -21,12 +21,14 @@ if ($_SESSION['login'] == false) { // if not connected
   //header("Location: ../#ERRORLOGIN");
   exit;
 }
-// var_dump($_POST);
-// get id_partner
-$id_store = (int) $_SESSION['user_id'];
-echo $id_store;
-echo PHP_EOL;
-$id_buy = (int) $_POST['id_buy'];
-echo $id_buy;
+if(empty($_POST)) { // not exist post
+  //echo "error post";
+  //header("Location: ../history-transaction#ERRORSend");
+  exit;
+}else {
+
+  $id_store = (int) $_SESSION['user_id'];
+  $id_buy = (int) $_POST['id_buy'];
+}
 
 // download only themes
