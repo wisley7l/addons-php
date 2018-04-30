@@ -21,10 +21,10 @@ if ($_SESSION['login'] == false) { // if not connected
   //header("Location: ../#ERRORLOGIN");
   exit;
 }
-if(empty($_POST)) { // not exist post
-  //echo "error post";
+if(empty($_POST) OR ((int)$_POST['is_app'] == 1)) { // not exist post
+  echo "error post";
   //header("Location: ../history-transaction#ERRORSend");
-  exit;
+  // exit;
 }else {
   var_dump($_POST);
   $id_store = (int) $_SESSION['user_id'];

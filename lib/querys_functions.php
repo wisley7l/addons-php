@@ -978,7 +978,7 @@ function get_apps_buy($id)
         'price' => $row['app_value'], // value theme or app
         'transaction' => $row['transaction_code'],
         'link' => json_decode($row['json_body'],true)['zip'],
-        'is_app' => $dictionary['word_app']
+        'is_app' => 1
         );
         // var_dump($item);
         // array_push($images, $item);
@@ -1014,7 +1014,7 @@ function get_themes_buy($id)
         'price' => $row['theme_value'], // value theme or app
         'transaction' => $row['transaction_code'],
         // 'link' => json_decode($row['json_body'],true)['zip'],
-        'is_app' => $dictionary['word_theme']
+        'is_app' => 0
         );
         // var_dump($item);
         // array_push($images, $item);
