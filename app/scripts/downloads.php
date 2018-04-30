@@ -26,7 +26,7 @@ if(empty($_POST)) { // not exist post
   //header("Location: ../history-transaction#ERRORSend");
   exit;
 }else {
-
+  var_dump($_POST);
   $id_store = (int) $_SESSION['user_id'];
   $id_buy = (int) $_POST['id_buy'];
 }

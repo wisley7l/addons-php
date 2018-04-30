@@ -93,11 +93,11 @@ $( document ).ready(function() {
 // test
 
 $("#addons-download").click(function(event) {
-  console.log(event.target.id);
+  // console.log(event.target.id);
   let id = event.target.id,
       is_app = $("input#addons-buy-theme-"+id).val();
 
-  console.log(is_app);
+  // console.log(is_app);
   //addons-downlod-file
   //addons-id-plan
   $("#addons-id-buy").val(id);
