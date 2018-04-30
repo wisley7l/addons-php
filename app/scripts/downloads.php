@@ -22,9 +22,9 @@ if ($_SESSION['login'] == false) { // if not connected
   exit;
 }
 if(empty($_POST) OR ((int)$_POST['is_app'] == 1)) { // not exist post
-  echo "error post";
-  //header("Location: ../history-transaction#ERRORSend");
-  // exit;
+  // echo "error post";
+  header("Location: ../history-transaction#");
+  exit;
 }else {
   var_dump($_POST);
   $id_store = (int) $_SESSION['user_id'];
