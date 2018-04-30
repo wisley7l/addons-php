@@ -977,7 +977,6 @@ function get_apps_buy($id)
         'date_end' => $row['date_end'], // info id plan or id template
         'price' => $row['app_value'], // value theme or app
         'transaction' => $row['transaction_code'],
-        'link' => json_decode($row['json_body'],true)['zip'],
         'is_app' => 1
         );
         // var_dump($item);
@@ -1013,7 +1012,6 @@ function get_themes_buy($id)
         'date_end' => '', // info id plan or id template
         'price' => $row['theme_value'], // value theme or app
         'transaction' => $row['transaction_code'],
-        // 'link' => json_decode($row['json_body'],true)['zip'],
         'is_app' => 0
         );
         // var_dump($item);
