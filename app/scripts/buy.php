@@ -91,7 +91,8 @@ if ((int) $_POST['is_app'] == 1) {
 
 
 }else {
-  // redirect error page or alert error
+  header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#ErrorConsult");
+  exit;
 }
 
 
