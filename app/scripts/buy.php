@@ -51,6 +51,7 @@ if ((int) $_POST['is_app'] == 1) {
   echo $price;
   echo PHP_EOL;
   echo $id_template;
+  echo PHP_EOL;
   // consult in bd and verify
 
   $conn = $GLOBALS['conn']; // get varible global conn
@@ -61,7 +62,7 @@ if ((int) $_POST['is_app'] == 1) {
     if ($result = mysqli_query(  $conn, $query )) {
       // fetch associative array
       while ($row = mysqli_fetch_assoc($result)) {
-        $theme = $row['json_body']; // increment total items on profile page
+        $theme =  json_decode($row['json_body'],true); // increment total items on profile page
       }
       var_dump($theme);
       // free result set
