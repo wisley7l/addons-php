@@ -1,6 +1,7 @@
 <?php
 $dictionary = get_dictionary();
 
+$conn = connect_db();
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
 session_write_close();
@@ -18,7 +19,7 @@ if ($_SESSION['login'] == false || $_SESSION['is_store'] == false) { // if not c
   exit;
 }
 
-var_dump($_POST);
+// var_dump($_POST);
 //echo "Test";
 /*
   treat variables for purchase
@@ -39,6 +40,7 @@ if ((int) $_POST['is_app'] == 1) {
   echo PHP_EOL;
   echo $price;
   echo PHP_EOL;
+  // consult in bd and verify
 }else if ((int) $_POST['is_app'] == 0) {
   $id_template = (int) $_POST['id_template'];
   // mount query for theme purchase
@@ -49,6 +51,28 @@ if ((int) $_POST['is_app'] == 1) {
   echo $price;
   echo PHP_EOL;
   echo $id_template;
+  // consult in bd and verify
+
+  $conn = $GLOBALS['conn']; // get varible global conn
+  $query =  "SELECT t.json_body
+    FROM themes t
+    WHERE (t.id = $id_app) LIMIT 1;";
+
+    if ($result = mysqli_query(  $conn, $query )) {
+      // fetch associative array
+      while ($row = mysqli_fetch_assoc($result)) {
+        $theme = $row['json_body']; // increment total items on profile page
+      }
+      var_dump($theme);
+      // free result set
+      mysqli_free_result($result);
+    }
+    else {
+      echo "error";
+    }
+
+
+
 }else {
   // redirect error page or alert error
 }
