@@ -82,10 +82,11 @@ if ((int) $_POST['is_app'] == 1) {
     exit;
   }
 
-  if (!verify_template($templates,$id_template)) {
-    header("Location: ../item-page?id=" . $id_app . "&app=" .  $_POST['is_app'] . "#ErrorTemplate");
-    exit;
-  }
+  // if (!verify_template($templates,$id_template)) {
+  //   header("Location: ../item-page?id=" . $id_app . "&app=" .  $_POST['is_app'] . "#ErrorTemplate");
+  //   exit;
+  // }
+  echo verify_template($templates,$id_template);
 
 
 }else {
