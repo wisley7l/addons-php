@@ -64,7 +64,7 @@ if ((int) $_POST['is_app'] == 1) {
       while ($row = mysqli_fetch_assoc($result)) {
         $theme =  json_decode($row['json_body'],true); // increment total items on profile page
       }
-    //  var_dump($theme);
+     var_dump($theme);
       // free result set
       mysqli_free_result($result);
     }
@@ -73,7 +73,7 @@ if ((int) $_POST['is_app'] == 1) {
     }
 
 $plans = $theme['plans']['plans'];
-var_dump($plans);
+// var_dump($plans);
 
 
 }else {
