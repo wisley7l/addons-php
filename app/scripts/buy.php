@@ -19,7 +19,7 @@ if ($_SESSION['login'] == false || $_SESSION['is_store'] == false) { // if not c
   exit;
 }
 
-// var_dump($_POST);
+var_dump($_POST);
 //echo "Test";
 /*
   treat variables for purchase
@@ -72,7 +72,7 @@ if ((int) $_POST['is_app'] == 1) {
       echo "error";
     }
 
-    $plans = $theme['plans']['plans'];
+  $plans = $theme['plans']['plans'];
   // var_dump($plans);
   $templates = $theme['templates']['templates'];
 
