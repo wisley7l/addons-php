@@ -77,7 +77,7 @@ if ((int) $_POST['is_app'] == 1) {
   // var_dump($plans);
   $templates = $theme['templates']['templates'];
 
-  if (!verify_plan($plans,$id_plan)) {
+  if (!verify_plan($plans,2)) {
     header("Location: ../item-page?id=" . $id_app . "&app=" .  $_POST['is_app'] . "#plan");
     exit;
   }
