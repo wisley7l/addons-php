@@ -102,10 +102,11 @@ CREATE TABLE IF NOT EXISTS `buy_apps` (
   `app_value` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
   `payment_status` TINYINT NOT NULL DEFAULT 0,
   `plan_id` MEDIUMINT NULL,
-  `transaction_code` VARCHAR(255) NULL,
+  `id_transaction` MEDIUMINT UNSIGNED NULL,
   PRIMARY KEY (`id`),
   INDEX (`app_id`, `store_id`),
-  FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`id_transaction`) REFERENCES `historic_transaction`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `buy_themes` (
@@ -115,11 +116,12 @@ CREATE TABLE IF NOT EXISTS `buy_themes` (
   `theme_value` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
   `payment_status` TINYINT NOT NULL DEFAULT 0,
   `license_type` TINYINT NOT NULL DEFAULT 0,
-  `transaction_code` VARCHAR(255) NULL,
+  `id_transaction` MEDIUMINT UNSIGNED NULL,
   `template_id` TINYINT NOT NULL DEFAULT 0,
   PRIMARY KEY(`id`),
   INDEX (`theme_id`, `store_id`),
-  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`id_transaction`) REFERENCES `historic_transaction`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `comment_apps` (
