@@ -31,6 +31,7 @@ var_dump($_POST);
 */
 $id_app = (int) $_POST['id_app'];
 $price = (float) $_POST['value'];
+$id_plan = (int) $_POST['id_plan'];
 
 if ((int) $_POST['is_app'] == 1) {
   // mount query for app purchase
