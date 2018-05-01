@@ -72,8 +72,9 @@ if ((int) $_POST['is_app'] == 1) {
       echo "error";
     }
 
-$plans = $theme['plans']['plans'];
-// var_dump($plans);
+    $plans = $theme['plans']['plans'];
+  // var_dump($plans);
+  $templates = $theme['templates']['templates'];
 
 
 }else {
