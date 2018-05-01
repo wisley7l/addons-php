@@ -77,8 +77,13 @@ if ((int) $_POST['is_app'] == 1) {
   // var_dump($plans);
   $templates = $theme['templates']['templates'];
 
-  if (!verify_plan($plans,2)) {
-    header("Location: ../item-page?id=" . $id_app . "&app=" .  $_POST['is_app'] . "#plan");
+  if (!verify_plan($plans,$id_plan)) {
+    header("Location: ../item-page?id=" . $id_app . "&app=" .  $_POST['is_app'] . "#ErrorPlan");
+    exit;
+  }
+
+  if (!verify_template($templates,$id_template)) {
+    header("Location: ../item-page?id=" . $id_app . "&app=" .  $_POST['is_app'] . "#ErrorTemplate");
     exit;
   }
 
@@ -93,6 +98,18 @@ function verify_plan($array_plan, $id_plan)
   $r = 0;
   for ($i=0; $i < count($array_plan) ; $i++) {
     if ($array_plan[$i]['id'] == $id_plan ) {
+      $r = 1;
+      break;
+    }
+  }
+  return $r;
+}
+
+function verify_template($array_teplate, $id_template)
+{
+  $r = 0;
+  for ($i=0; $i < count($array_teplate) ; $i++) {
+    if ($array_teplate[$i]['id'] == $id_template ) {
       $r = 1;
       break;
     }
