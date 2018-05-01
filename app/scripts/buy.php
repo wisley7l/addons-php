@@ -19,7 +19,7 @@ if ($_SESSION['login'] == false || $_SESSION['is_store'] == false) { // if not c
   exit;
 }
 
-var_dump($_POST);
+// var_dump($_POST);
 //echo "Test";
 /*
   treat variables for purchase
@@ -65,7 +65,7 @@ if ((int) $_POST['is_app'] == 1) {
       while ($row = mysqli_fetch_assoc($result)) {
         $theme =  json_decode($row['json_body'],true); // increment total items on profile page
       }
-     var_dump($theme);
+     // var_dump($theme);
       // free result set
       mysqli_free_result($result);
     }
@@ -77,7 +77,22 @@ if ((int) $_POST['is_app'] == 1) {
   // var_dump($plans);
   $templates = $theme['templates']['templates'];
 
+  echo verify_plan($plans,$id_plan);
+
 
 }else {
   // redirect error page or alert error
+}
+
+
+function verify_plan($array_plan, $id_plan)
+{
+  $r = 0;
+  for ($i=0; $i < count($array_plan) ; $i++) {
+    if ($array_plan[$i]['id'] == $id_plan ) {
+      $r = 1;
+      break;
+    }
+  }
+  return $r;
 }
