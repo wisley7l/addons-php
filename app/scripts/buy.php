@@ -76,15 +76,15 @@ if ((int) $_POST['is_app'] == 1) {
   $plans = $theme['plans']['plans'];
   // var_dump($plans);
   $templates = $theme['templates']['templates'];
-  var_dump($templates);
+  // var_dump($templates);
 
   if (!verify_plan($plans,$id_plan)) {
-    header("Location: ../item-page?id=" . $id_app . "&app=" .  $_POST['is_app'] . "#ErrorPlan");
+    header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#ErrorPlan");
     exit;
   }
 
   if (!verify_template($templates,$id_template)) {
-    header("Location: ../item-page?id=" . $id_app . "&app=" .  $_POST['is_app'] . "#ErrorTemplate");
+    header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#ErrorTemplate");
     exit;
   }
 
