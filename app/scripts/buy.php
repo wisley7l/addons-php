@@ -103,14 +103,13 @@ if ((int) $_POST['is_app'] == 1) {
   template_id
   //(int) number_format($plan_extend, 2, '', '');
   */
-  $query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND  store_id = $id_store);";
+  $query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND  store_id = $id_store and template_id = $id_template);";
   if (mysqli_query($conn, $query)) {
-    echo "ja existe";
-    echo PHP_EOL;
+
     exit();
   }
 
-
+echo "string";
 
   // $query =  "INSERT INTO `buy_themes` (`theme_id`, `store_id`,`theme_value`,
   //   `payment_status`, `license_type`,`id_transaction`, `template_id` )
