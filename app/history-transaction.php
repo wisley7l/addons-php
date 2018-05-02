@@ -40,6 +40,7 @@ $id_store = (int) $_SESSION['user_id'];
 $sales_user = array(
 
 );
+
 $item = get_themes_buy($id_store);
 // $buy = array(
 //   'id' => 1,

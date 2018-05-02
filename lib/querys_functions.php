@@ -992,6 +992,7 @@ function get_apps_buy($id)
 function get_themes_buy($id)
 {
   $id_store = (int) $id;
+  echo $id_store;
   $buys = array();
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
