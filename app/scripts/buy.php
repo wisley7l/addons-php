@@ -112,10 +112,10 @@ if ((int) $_POST['is_app'] == 1) {
   if (!mysqli_query($conn, $query)) {
     echo "ERROR";
     echo PHP_EOL;
-    echo mysqli_connect_error();
-  // // error INSERT // redirect
-  // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
-  exit();
+    echo mysqli_error($conn);
+    // // error INSERT // redirect
+    // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
+    exit();
   }
   $id_buy = (int) mysqli_insert_id($conn);
   echo $id_buy;
