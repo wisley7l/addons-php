@@ -82,12 +82,12 @@ if ((int) $_POST['is_app'] == 1) {
   // var_dump($templates);
 
   if (!verify_plan($plans,$id_plan)) {
-    header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#ErrorPlan");
+    header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&ErrorPlan");
     exit;
   }
 
   if (!verify_template($templates,$id_template)) {
-    header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#ErrorTemplate");
+    header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&ErrorTemplate");
     exit;
   }
   // insert item table buy item
@@ -105,7 +105,7 @@ if ((int) $_POST['is_app'] == 1) {
   */
   $query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND  store_id = $id_store and template_id = $id_template);";
   if (mysqli_query($conn, $query)) {
-    header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#InCar");
+    header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&InCar");
     exit();
   }
 
