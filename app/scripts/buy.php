@@ -103,9 +103,18 @@ if ((int) $_POST['is_app'] == 1) {
   template_id
   //(int) number_format($plan_extend, 2, '', '');
   */
-  $query =  "INSERT INTO `buy_themes` (`theme_id`, `store_id`,`theme_value`,
-    `payment_status`, `license_type`,`id_transaction`, `template_id` )
-    VALUES ($id_app,$id_store,$price,0,0,NULL,$id_template);";
+  $query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND  store_id = $id_store);";
+  if (mysqli_query($conn, $query)) {
+    echo "ERROR";
+    echo PHP_EOL;
+    exit();
+  }
+
+
+
+  // $query =  "INSERT INTO `buy_themes` (`theme_id`, `store_id`,`theme_value`,
+  //   `payment_status`, `license_type`,`id_transaction`, `template_id` )
+  //   VALUES ($id_app,$id_store,$price,0,0,NULL,$id_template);";
 
   //*
   // query search app and theme for index page
