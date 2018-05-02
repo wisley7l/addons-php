@@ -1020,8 +1020,11 @@ function get_themes_buy($id)
         // var_dump($item);
         array_push($buys, $item);
       }
+
       // free result set
       mysqli_free_result($result);
+    }else {
+      echo mysqli_error($conn);
     }
     return $buys;
 }
