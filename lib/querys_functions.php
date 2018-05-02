@@ -992,7 +992,7 @@ function get_apps_buy($id)
 function get_themes_buy($id)
 {
   $id_store = (int) $id;
-
+  $buys = array();
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT b.id, b.theme_id, b.store_id, b.payment_status,
@@ -1010,19 +1010,19 @@ function get_themes_buy($id)
         'id_app' => $row['theme_id'],
         'id_partner' => $row['partner_id'], // id partner or name
         'title' => $row['title'],
-        'date_init' => '',
-        'date_end' => '', // info id plan or id template
-        'price' => $row['theme_value'], // value theme or app
+        'date_init' => '-',
+        'date_end' => '-', // info id plan or id template
+        'price' => treatNumber($row['theme_value']), // value theme or app
         'transaction' => $row['transaction_code'],
         'is_app' => 0
         );
         // var_dump($item);
-        // array_push($images, $item);
+        array_push($buys, $item);
       }
       // free result set
       mysqli_free_result($result);
     }
-
+    return $buys;
 }
 
 function sendFile($path_file,$is_app)
