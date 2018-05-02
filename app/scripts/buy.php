@@ -110,6 +110,9 @@ if ((int) $_POST['is_app'] == 1) {
   //*
   // query search app and theme for index page
   if (!mysqli_query($conn, $query)) {
+    echo "ERROR";
+    echo PHP_EOL;
+    echo mysqli_connect_error();
   // // error INSERT // redirect
   // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
   exit();
