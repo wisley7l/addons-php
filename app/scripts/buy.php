@@ -47,14 +47,14 @@ if ((int) $_POST['is_app'] == 1) {
 }else if ((int) $_POST['is_app'] == 0) {
   $id_template = (int) $_POST['id_template'];
   // mount query for theme purchase
-  echo "THEME";
-  echo PHP_EOL;
-  echo $id_app;
-  echo PHP_EOL;
-  echo $price;
-  echo PHP_EOL;
-  echo $id_template;
-  echo PHP_EOL;
+  // echo "THEME";
+  // echo PHP_EOL;
+  // echo $id_app;
+  // echo PHP_EOL;
+  // echo $price;
+  // echo PHP_EOL;
+  // echo $id_template;
+  // echo PHP_EOL;
   // consult in bd and verify
 
   $conn = $GLOBALS['conn']; // get varible global conn
@@ -90,19 +90,7 @@ if ((int) $_POST['is_app'] == 1) {
     header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&ErrorTemplate");
     exit;
   }
-  // insert item table buy item
-  /*
-  buy_themes
-  id
-  theme_id
-  store_id
-  theme_value
-  payment_status
-  license_type
-  id_transaction
-  template_id
-  //(int) number_format($plan_extend, 2, '', '');
-  */
+
   $query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND  store_id = $id_store and template_id = $id_template);";
   if (mysqli_query($conn, $query)) {
     header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&InCar");
