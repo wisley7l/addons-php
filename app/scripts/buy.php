@@ -105,7 +105,7 @@ if ((int) $_POST['is_app'] == 1) {
   */
   $query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND  store_id = $id_store);";
   if (mysqli_query($conn, $query)) {
-    echo "ERROR";
+    echo "ja existe";
     echo PHP_EOL;
     exit();
   }
