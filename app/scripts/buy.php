@@ -105,7 +105,7 @@ if ((int) $_POST['is_app'] == 1) {
   */
   $query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND  store_id = $id_store and template_id = $id_template);";
   if (mysqli_query($conn, $query)) {
-
+    header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#");
     exit();
   }
 
