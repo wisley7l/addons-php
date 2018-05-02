@@ -19,6 +19,8 @@ if ($_SESSION['login'] == false || $_SESSION['is_store'] == false) { // if not c
   exit;
 }
 
+$id_store = (int) $_SESSION['user_id'];
+
 // var_dump($_POST);
 //echo "Test";
 /*
@@ -30,7 +32,7 @@ if ($_SESSION['login'] == false || $_SESSION['is_store'] == false) { // if not c
   if it's theme create want to buy_theme
 */
 $id_app = (int) $_POST['id_app'];
-$price = (float) $_POST['value'];
+$price = (int) number_format((float) $_POST['value'], 2, '', '');
 $id_plan = (int) $_POST['id_plan'];
 
 if ((int) $_POST['is_app'] == 1) {
@@ -70,7 +72,8 @@ if ((int) $_POST['is_app'] == 1) {
       mysqli_free_result($result);
     }
     else {
-      echo "error";
+      header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#ErrorConsult");
+      exit;
     }
 
   $plans = $theme['plans']['plans'];
@@ -87,12 +90,37 @@ if ((int) $_POST['is_app'] == 1) {
     header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#ErrorTemplate");
     exit;
   }
+  // insert item table buy item
+  /*
+  buy_themes
+  id
+  theme_id
+  store_id
+  theme_value
+  payment_status
+  license_type
+  id_transaction
+  template_id
+  //(int) number_format($plan_extend, 2, '', '');
+  */
+  $query =  "INSERT INTO `buy_themes` (`theme_id`, `store_id`,`theme_value`,
+    `payment_status`, `license_type`,`id_transaction`, `template_id` )
+    VALUES ($id_app,$id_store,$price,NULL,NULL,NULL,$id_template);";
+
+  //*
+  // query search app and theme for index page
+  if (!mysqli_query($conn, $query)) {
+  // // error INSERT // redirect
+  // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
+  exit();
+  }
+  $id_buy = (int) mysqli_insert_id($conn);
+  echo $id_buy;
 
 
 
 }else {
-  header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#ErrorConsult");
-  exit;
+
 }
 
 
