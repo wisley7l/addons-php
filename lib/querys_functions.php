@@ -999,7 +999,7 @@ function get_themes_buy($id)
   $query = "SELECT b.id, b.theme_id, b.store_id, b.payment_status,
    b.license_type, h.transaction_code, b.theme_value, b.template_id,
    t.partner_id, t.title, t.json_body
-    FROM buy_theme b, themes t
+    FROM buy_themes b, themes t
     WHERE (b.theme_id = t.id AND b.payment_status = 0
       AND h.id = a.id_transaction  AND b.store_id = $id_store); ";
 
