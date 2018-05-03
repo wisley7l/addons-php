@@ -1052,7 +1052,7 @@ function get_themes_car($id)
         'date_init' => '-',
         'date_end' => '-', // info id plan or id template
         'price' => treatNumber($row['theme_value']), // value theme or app
-        'Template' => 'Template' . $row['template_id'],
+        'transaction' => 'Template' . $row['template_id'],
         'is_app' => 0
         );
         // var_dump($item);
