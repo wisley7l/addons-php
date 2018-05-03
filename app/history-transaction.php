@@ -41,30 +41,7 @@ $sales_user = array(
 
 );
 
-$item = get_themes_car($id_store);
-// var_dump($item);
-// $buy = array(
-//   'id' => 1,
-//   'id_partner' => 10, // id partner or name
-//   'title' => 'nome',
-//   'date_init' => 'data',
-//   'date_end' => 'data', // info id plan or id template
-//   'price' => 12, // value theme or app
-//   'transaction' => 'dasdasd',
-//   'is_app' => 1
-//  );
-//  $buy1 = array(
-//    'id' => 2,
-//    'id_partner' => 10, // id partner or name
-//    'title' => 'dasda',
-//    'date_init' => 'data',
-//    'date_end' => 'dasd', // info id plan or id template
-//    'price' => 100, // value theme or app
-//    'transaction' => 'dasdasd',
-//    'is_app' => 0
-//   );
-//  array_push($item, $buy);
-//  array_push($item, $buy1);
+$item = get_themes_store($id_store);
 
 
 // intial twig and send varibles for template
