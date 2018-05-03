@@ -37,6 +37,7 @@ $id_plan = (int) $_POST['id_plan'];
 
 if (empty($_POST)) {
   echo "error";
+  var_dump($_GET);
 }else if ((int) $_POST['is_app'] == 1) {
   // mount query for app purchase
   echo "APP";
