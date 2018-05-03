@@ -98,7 +98,7 @@ if ((int) $_POST['is_app'] == 1) {
       exit();
     }
   }
-
+echo "string";
   $query =  "INSERT INTO `buy_themes` (`theme_id`, `store_id`,`theme_value`,
    `payment_status`, `license_type`,`id_transaction`, `template_id` )
      VALUES ($id_app,$id_store,$price,0,$id_plan,NULL,$id_template);";
