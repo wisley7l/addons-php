@@ -35,7 +35,9 @@ $id_app = (int) $_POST['id_app'];
 $price = (int) number_format((float) $_POST['value'], 2, '', '');
 $id_plan = (int) $_POST['id_plan'];
 
-if ((int) $_POST['is_app'] == 1) {
+if (empty($_POST)) {
+  echo "error";
+}else if ((int) $_POST['is_app'] == 1) {
   // mount query for app purchase
   echo "APP";
   echo PHP_EOL;
@@ -146,5 +148,3 @@ function verify_template($array_template, $id_template)
   }
   return $r;
 }
-
-var_dump($_GET);
