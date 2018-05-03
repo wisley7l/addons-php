@@ -93,7 +93,8 @@ if ((int) $_POST['is_app'] == 1) {
 
   $query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND  store_id = $id_store and template_id = $id_template) LIMIT 1;";
   if ( $result = mysqli_query($conn, $query)) {
-    if (mysql_num_rows($result) > 0 ) {
+
+    if (mysqli_num_rows($result) > 0 ) {
       header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&InCar");
       exit();
     }else {
