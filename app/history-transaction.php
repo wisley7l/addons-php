@@ -41,7 +41,7 @@ $sales_user = array(
 
 );
 
-$item = get_themes_store($id_store);
+$item = get_themes_buy($id_store);
 
 
 // intial twig and send varibles for template
