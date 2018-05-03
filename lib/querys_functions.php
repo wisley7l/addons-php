@@ -997,6 +997,45 @@ function get_themes_buy($id)
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT b.id, b.theme_id, b.store_id, b.payment_status,
+   b.license_type, h.transaction_code, b.theme_value, b.template_id,
+   t.partner_id, t.title, t.json_body
+    FROM buy_themes b, themes t
+    WHERE (b.theme_id = t.id AND b.payment_status = 0 AND b.store_id = $id_store); ";
+
+    if ($result = mysqli_query(  $conn, $query )) {
+      // fetch associative array
+      while ($row = mysqli_fetch_assoc($result)) {
+        $item = array(
+        'id' => $row['id'],
+        'id_app' => $row['theme_id'],
+        'id_partner' => $row['partner_id'], // id partner or name
+        'title' => $row['title'],
+        'date_init' => '-',
+        'date_end' => '-', // info id plan or id template
+        'price' => treatNumber($row['theme_value']), // value theme or app
+        'transaction' => $row['transaction_code'],
+        'is_app' => 0
+        );
+        // var_dump($item);
+        array_push($buys, $item);
+      }
+
+      // free result set
+      mysqli_free_result($result);
+    }else {
+      echo mysqli_error($conn);
+    }
+    return $buys;
+}
+
+function get_themes_car($id)
+{
+  $id_store = (int) $id;
+  echo $id_store;
+  $buys = array();
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT b.id, b.theme_id, b.store_id, b.payment_status,
    b.license_type, b.theme_value, b.template_id,
    t.partner_id, t.title, t.json_body
     FROM buy_themes b, themes t
@@ -1013,7 +1052,7 @@ function get_themes_buy($id)
         'date_init' => '-',
         'date_end' => '-', // info id plan or id template
         'price' => treatNumber($row['theme_value']), // value theme or app
-        'transaction' => '-',
+        'transaction' => '',
         'is_app' => 0
         );
         // var_dump($item);
@@ -1027,6 +1066,9 @@ function get_themes_buy($id)
     }
     return $buys;
 }
+
+
+
 
 function sendFile($path_file,$is_app)
 {

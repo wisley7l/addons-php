@@ -41,7 +41,7 @@ $sales_user = array(
 
 );
 
-$item = get_themes_buy($id_store);
+$item = get_themes_car($id_store);
 // var_dump($item);
 // $buy = array(
 //   'id' => 1,
