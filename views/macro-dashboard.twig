@@ -808,6 +808,39 @@ is_app -
   </div>
 {% endmacro %}
 
+{% macro header_table_car(dictionary) %}
+
+  <div class="transaction-list-header">
+    <div class="transaction-list-header-date">
+      <p class="text-header small">Title</p>
+    </div>
+    <div class="transaction-list-header-code">
+      <p class="text-header small">Partner ID</p>
+    </div>
+    <div class="transaction-list-header-date">
+      <p class="text-header small">Date init</p>
+    </div>
+    <div class="transaction-list-header-date">
+      <p class="text-header small">Date End</p>
+    </div>
+    <div class="transaction-list-header-price">
+      <p class="text-header small">Price</p>
+    </div>
+    <div class="transaction-list-header-code">
+      <p class="text-header small">Transaction</p>
+    </div>
+    <div class="transaction-list-header-item">
+      <p class="text-header small">Link</p>
+    </div>
+    {#}
+    <div class="transaction-list-header-earnings">
+      <p class="text-header small">Earnings</p>
+    </div>
+    <div class="transaction-list-header-icon"></div>
+    #}
+  </div>
+{% endmacro %}
+
 {% macro item_list(dictionary,item) %}
 
   <div class="transaction-list-item">
@@ -855,6 +888,61 @@ is_app -
 {% endmacro %}
 
 {% macro item_list_store(dictionary,item) %}
+
+  <div class="transaction-list-item">
+    <div class="transaction-list-item-date">
+      <p class="category primary">{{item.title}}</p>
+    </div>
+    <div class="transaction-list-item-code">
+      <p class="text-header">{{item.id_partner}}</p>
+    </div>
+    <div class="transaction-list-item-date">
+      <p class="category primary">{{item.date_init}}</p>
+    </div>
+    <div class="transaction-list-item-date">
+      <p class="category primary">{{item.date_end}}</p>
+    </div>
+    <div class="transaction-list-item-price">
+      <p>{{dictionary.coin}}$ {{item.price}}</p>
+    </div>
+    <div class="transaction-list-item-code">
+      <p><span class="light">{{item.transaction}}</span></p>
+    </div>
+    <div class="transaction-list-item-icon" >
+      <a href="#">
+        <div class="transaction-icon primary"id="{{item.id}}">
+          <input type="hidden" id="addons-buy-theme-{{item.id}}"
+            value="{{item.is_app}}"/>
+        </div>
+      </a>
+    </div>
+{#
+    <div class="transaction-list-item-item">
+      <p><span class="light">{{item.note}}</span></p>
+    </div>
+
+    <div class="transaction-list-item-detail">
+      <p><span class="light">{{item.description}}</span></p>
+    </div>
+
+    <div class="transaction-list-item-earnings">
+      <p class="text-header">-</p>
+    </div>
+    <div class="transaction-list-item-icon">
+      <div class="transaction-icon primary">
+        <!-- SVG PLUS -->
+        <svg class="svg-plus">
+          <use xlink:href="#svg-plus"></use>
+        </svg>
+        <!-- /SVG PLUS -->
+      </div>
+    </div>
+    #}
+  </div>
+
+{% endmacro %}
+
+{% macro item_list_car(dictionary,item) %}
 
   <div class="transaction-list-item">
     <div class="transaction-list-item-date">
