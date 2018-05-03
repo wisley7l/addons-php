@@ -21,7 +21,7 @@ if ($_SESSION['login'] == false || $_SESSION['is_store'] == false) { // if not c
 
 $id_store = (int) $_SESSION['user_id'];
 
-// var_dump($_POST);
+var_dump($_POST);
 //echo "Test";
 /*
   treat variables for purchase
@@ -61,7 +61,7 @@ if ((int) $_POST['is_app'] == 1) {
   $query =  "SELECT t.json_body
     FROM themes t
     WHERE (t.id = $id_app) LIMIT 1;";
-
+/*
     if ($result = mysqli_query(  $conn, $query )) {
       // fetch associative array
       while ($row = mysqli_fetch_assoc($result)) {
@@ -100,8 +100,8 @@ if ((int) $_POST['is_app'] == 1) {
   $query =  "INSERT INTO `buy_themes` (`theme_id`, `store_id`,`theme_value`,
    `payment_status`, `license_type`,`id_transaction`, `template_id` )
      VALUES ($id_app,$id_store,$price,0,0,NULL,$id_template);";
-
-  //*
+  //*/
+  /*
   // query search app and theme for index page
   if (!mysqli_query($conn, $query)) {
     echo "ERROR";
@@ -113,7 +113,7 @@ if ((int) $_POST['is_app'] == 1) {
   }
   $id_buy = (int) mysqli_insert_id($conn);
   echo $id_buy;
-
+//*/
 
 
 }else {
