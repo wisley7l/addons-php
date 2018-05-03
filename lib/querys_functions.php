@@ -1055,7 +1055,7 @@ function get_themes_car($id)
         'transaction' => 'Template' . $row['template_id'],
         'is_app' => 0
         );
-        var_dump($item);
+        // var_dump($item);
         array_push($buys, $item);
       }
 
