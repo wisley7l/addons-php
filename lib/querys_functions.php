@@ -1048,6 +1048,7 @@ function get_themes_car($id)
         'id' => $row['id'],
         'id_app' => $row['theme_id'],
         'id_partner' => $row['partner_id'], // id partner or name
+        'id_store' => $row['store_id'], // id partner or name
         'title' => $row['title'],
         'date_valid' => '-',
         'plan' => 'license' . $row['license_type'], // info id plan or id template

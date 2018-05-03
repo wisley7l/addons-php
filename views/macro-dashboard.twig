@@ -953,9 +953,6 @@ is_app -
 
 {% macro item_list_car(dictionary,item) %}
 
-
-
-
   <div class="transaction-list-item">
     <div class="transaction-list-item-date">
       <p class="category primary">{{item.title}}</p>
@@ -976,16 +973,14 @@ is_app -
       <p><span class="light">{{item.template}}</span></p>
     </div>
 
-    {#
+
     <div class="transaction-list-item-icon" >
-      <a href="#">
-        <div class="transaction-icon primary"id="{{item.id}}">
-          <input type="hidden" id="addons-buy-theme-{{item.id}}"
-            value="{{item.is_app}}"/>
+      <a href="?id_buy={{item.id}}&amp;is_app={{item.is_app}}	&amp;id_store={{item.id_store}}">
+        <div class="transaction-icon primary">
         </div>
       </a>
     </div>
-
+{#
     <div class="transaction-list-item-item">
       <p><span class="light">{{item.note}}</span></p>
     </div>

@@ -146,3 +146,5 @@ function verify_template($array_template, $id_template)
   }
   return $r;
 }
+
+var_dump($_GET);
