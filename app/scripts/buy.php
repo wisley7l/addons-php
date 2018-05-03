@@ -61,7 +61,7 @@ if ((int) $_POST['is_app'] == 1) {
   $query =  "SELECT t.json_body
     FROM themes t
     WHERE (t.id = $id_app) LIMIT 1;";
-/*
+    //*
     if ($result = mysqli_query(  $conn, $query )) {
       // fetch associative array
       while ($row = mysqli_fetch_assoc($result)) {
@@ -99,9 +99,9 @@ if ((int) $_POST['is_app'] == 1) {
 
   $query =  "INSERT INTO `buy_themes` (`theme_id`, `store_id`,`theme_value`,
    `payment_status`, `license_type`,`id_transaction`, `template_id` )
-     VALUES ($id_app,$id_store,$price,0,0,NULL,$id_template);";
+     VALUES ($id_app,$id_store,$price,0,$id_plan,NULL,$id_template);";
   //*/
-  /*
+  //*
   // query search app and theme for index page
   if (!mysqli_query($conn, $query)) {
     echo "ERROR";
