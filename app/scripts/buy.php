@@ -96,7 +96,9 @@ if ((int) $_POST['is_app'] == 1) {
     if (mysql_num_rows($result) > 0 ) {
       header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&InCar");
       exit();
-    }
+    }else {
+      echo "else";
+    };
   }
 echo "string";
   $query =  "INSERT INTO `buy_themes` (`theme_id`, `store_id`,`theme_value`,
