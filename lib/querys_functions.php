@@ -1049,13 +1049,13 @@ function get_themes_car($id)
         'id_app' => $row['theme_id'],
         'id_partner' => $row['partner_id'], // id partner or name
         'title' => $row['title'],
-        'date_init' => '-',
+        'date_valid' => '-',
         'plan' => 'license' . $row['license_type'], // info id plan or id template
         'price' => treatNumber($row['theme_value']), // value theme or app
-        'transaction' => 'Template' . $row['template_id'],
+        'template' => 'Template' . $row['template_id'],
         'is_app' => 0
         );
-        var_dump($item);
+        // var_dump($item);
         array_push($buys, $item);
       }
 

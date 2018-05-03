@@ -827,7 +827,7 @@ is_app -
       <p class="text-header small">Partner ID</p>
     </div>
     <div class="transaction-list-header-date">
-      <p class="text-header small">Date init</p>
+      <p class="text-header small">Date Valid</p>
     </div>
     <div class="transaction-list-header-date">
       <p class="text-header small">Plan / License</p>
@@ -953,6 +953,9 @@ is_app -
 
 {% macro item_list_car(dictionary,item) %}
 
+
+
+
   <div class="transaction-list-item">
     <div class="transaction-list-item-date">
       <p class="category primary">{{item.title}}</p>
@@ -961,17 +964,19 @@ is_app -
       <p class="text-header">{{item.id_partner}}</p>
     </div>
     <div class="transaction-list-item-date">
-      <p class="category primary">{{item.date_init}}</p>
+      <p class="category primary">{{item.date_valid}}</p>
     </div>
     <div class="transaction-list-item-date">
-      <p class="category primary">{{item.date_end}}</p>
+      <p class="category primary">{{item.plan}}</p>
     </div>
     <div class="transaction-list-item-price">
       <p>{{dictionary.coin}}$ {{item.price}}</p>
     </div>
     <div class="transaction-list-item-code">
-      <p><span class="light">{{item.transaction}}</span></p>
+      <p><span class="light">{{item.tamplate}}</span></p>
     </div>
+
+    {#
     <div class="transaction-list-item-icon" >
       <a href="#">
         <div class="transaction-icon primary"id="{{item.id}}">
@@ -980,7 +985,7 @@ is_app -
         </div>
       </a>
     </div>
-{#
+
     <div class="transaction-list-item-item">
       <p><span class="light">{{item.note}}</span></p>
     </div>
