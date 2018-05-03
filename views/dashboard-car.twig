@@ -67,12 +67,12 @@
 			<!-- TRANSACTION LIST -->
 			<div class="transaction-list" id="addons-download">
 				<!-- TRANSACTION LIST HEADER -->
-          {{macro_dashboad.header_table_store(dictionary)}}
+          {{macro_dashboad.header_table_car(dictionary)}}
 				<!-- /TRANSACTION LIST HEADER -->
         {# use foreach to list items #}
 				{% for i in item %}
 					<!-- TRANSACTION LIST ITEM -->
-					{{macro_dashboad.item_list_store(dictionary,i)}}
+					{{macro_dashboad.item_list_car(dictionary,i)}}
 					<!-- /TRANSACTION LIST ITEM -->
 				{% endfor %}
 

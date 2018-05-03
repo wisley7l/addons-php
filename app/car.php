@@ -71,7 +71,7 @@ $item = get_themes_car($id_store);
  //*
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
-echo $twig->render('dashboard-statement0.twig', array(
+echo $twig->render('dashboard-car.twig', array(
   'dictionary' => $dictionary,
   'login' => $_SESSION['login'],
     // test
