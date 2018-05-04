@@ -36,8 +36,7 @@ $price = (int) number_format((float) $_POST['value'], 2, '', '');
 $id_plan = (int) $_POST['id_plan'];
 
 if (empty($_POST)) {
-  echo "error";
-  var_dump($_GET);
+  var_dump($_GET); // get (page car)
 }else if ((int) $_POST['is_app'] == 1) {
   // mount query for app purchase
   echo "APP";
