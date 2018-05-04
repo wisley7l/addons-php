@@ -37,6 +37,41 @@ $id_plan = (int) $_POST['id_plan'];
 
 if (empty($_POST)) {
   var_dump($_GET); // get (page car)
+
+  $query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND
+    store_id = $id_store AND template_id = $id_template AND payment_status = 0)
+    LIMIT 1;";
+  if ( $result = mysqli_query($conn, $query)) {
+
+    if (mysqli_num_rows($result) > 0 ) {
+      header("Location: ../");
+      exit();
+    }
+
+    while ($row = mysqli_fetch_assoc($result)) {
+      $id_buy = $row['id'];
+    }
+    // free result set
+    mysqli_free_result($result);
+
+/*
+payment_status
+id_transaction
+////
+
+*/
+
+// query  get id historic_transaction passed code_trasaction
+// query updadte buy_themes
+
+
+
+
+
+
+
+  }
+
 }else if ((int) $_POST['is_app'] == 1) {
   // mount query for app purchase
   echo "APP";
