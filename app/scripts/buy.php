@@ -36,7 +36,7 @@ $price = (int) number_format((float) $_POST['value'], 2, '', '');
 $id_plan = (int) $_POST['id_plan'];
 
 if (empty($_POST)) {
-  var_dump($_GET); // get (page car)
+  // var_dump($_GET); // get (page car)
 
   $query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND
     store_id = $id_store AND template_id = $id_template AND payment_status = 0)
@@ -53,6 +53,7 @@ if (empty($_POST)) {
     }
     // free result set
     mysqli_free_result($result);
+    echo $id_buy;
 
 /*
 payment_status
