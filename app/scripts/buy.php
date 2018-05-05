@@ -43,10 +43,10 @@ $conn = $GLOBALS['conn']; // get varible global conn
     store_id = $id_store AND template_id = $id_template AND payment_status = 0)
     LIMIT 1;";
   if ( $result = mysqli_query($conn, $query)) {
-
+    echo "string";
     if (mysqli_num_rows($result) > 0 ) {
-      header("Location: ../");
-      exit();
+      // header("Location: ../");
+      // exit();
     }else {
       echo "error";
       echo PHP_EOL;
