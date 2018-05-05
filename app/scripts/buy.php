@@ -39,8 +39,9 @@ if (empty($_POST)) {
   var_dump($_GET); // get (page car)
 echo "sim";
 $id_buy = (int) $_GET['id_buy'];
+$id_store = (int) $_GET['id_store'];
 $conn = $GLOBALS['conn']; // get varible global conn
-$query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND  store_id = $id_store and template_id = $id_template) LIMIT 1;";
+$query =  "SELECT id FROM buy_themes WHERE (id = $id_buy AND  store_id = $id_store ) LIMIT 1;";
 
   if ( $result = mysqli_query($conn, $query)) {
     echo "string";
