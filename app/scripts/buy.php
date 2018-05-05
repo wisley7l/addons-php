@@ -46,6 +46,10 @@ if (empty($_POST)) {
     if (mysqli_num_rows($result) > 0 ) {
       header("Location: ../");
       exit();
+    }else {
+      echo "error";
+      echo PHP_EOL;
+      echo mysqli_error($conn);
     }
 
     while ($row = mysqli_fetch_assoc($result)) {
