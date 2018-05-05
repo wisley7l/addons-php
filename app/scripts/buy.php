@@ -76,7 +76,11 @@ id_transaction
 
 
 
-  }
+}else {
+  echo "errorrrrrr";
+  echo PHP_EOL;
+  echo mysqli_error($conn);
+}
 
 }else if ((int) $_POST['is_app'] == 1) {
   // mount query for app purchase
