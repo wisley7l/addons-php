@@ -36,11 +36,11 @@ $price = (int) number_format((float) $_POST['value'], 2, '', '');
 $id_plan = (int) $_POST['id_plan'];
 
 if (empty($_POST)) {
-  // var_dump($_GET); // get (page car)
+  var_dump($_GET); // get (page car)
 echo "sim";
 $conn = $GLOBALS['conn']; // get varible global conn
 $query =  "SELECT id FROM buy_themes WHERE (theme_id = $id_app AND  store_id = $id_store and template_id = $id_template) LIMIT 1;";
-  
+
   if ( $result = mysqli_query($conn, $query)) {
     echo "string";
     if (mysqli_num_rows($result) > 0 ) {
