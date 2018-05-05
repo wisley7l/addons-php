@@ -39,8 +39,8 @@ if (empty($_POST)) {
   // var_dump($_GET); // get (page car)
 echo "sim";
 $conn = $GLOBALS['conn']; // get varible global conn
-  $query =  "SELECT id FROM buy_themes WHERE (payment_status = 0 AND theme_id = $id_app AND
-    store_id = $id_store AND template_id = $id_template)";
+  $query =  "SELECT id FROM buy_themes WHERE ( payment_status = 0 AND theme_id = $id_app AND
+    store_id = $id_store AND template_id = $id_template )";
   if ( $result = mysqli_query($conn, $query)) {
     echo "string";
     if (mysqli_num_rows($result) > 0 ) {
