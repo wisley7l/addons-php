@@ -1124,6 +1124,9 @@ function insert_history_transaction($id_partner, $id_store, $id_app, $id_theme,
   if ($app_id == 0) {
     $app_id = NULL;
   }
+  if ($date_transaction == '') {
+    echo "vazio";
+  }
   $query =  "INSERT INTO `historic_transaction` (`partner_id`, `store_id`,
     `app_id`,`theme_id`, `transaction_code`,`notes`, `description`,
     `payment_value`, `date_transaction`) VALUES ($partner_id,$store_id,$app_id,
