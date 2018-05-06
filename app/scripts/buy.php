@@ -42,11 +42,10 @@ if (empty($_POST)) {
   $id_store = (int) $_GET['id_store'];
 
   $conn = $GLOBALS['conn']; // get varible global conn
-  $query =  "SELECT b.theme_value, t.partner_id FROM buy_themes b, themes t
+  $query =  "SELECT b.theme_value, b.theme_id, t.partner_id FROM buy_themes b, themes t
     WHERE (b.id = $id_buy AND  b.store_id = $id_store ) LIMIT 1;";
 
   if ( $result = mysqli_query($conn, $query)) {
-    echo "string";
     if (mysqli_num_rows($result) > 0 ) {
       // header("Location: ../");
       // exit();
@@ -54,6 +53,7 @@ if (empty($_POST)) {
     while ($row = mysqli_fetch_assoc($result)) {
       $price = $row['theme_value'];
       $id_partner = $row['partner_id'];
+      $id_app = $row['theme_id'];
     }
     $transaction_code  = 'code-' . uniqid();
 
