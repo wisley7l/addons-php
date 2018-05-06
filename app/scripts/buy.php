@@ -43,7 +43,7 @@ if (empty($_POST)) {
 
   $conn = $GLOBALS['conn']; // get varible global conn
   $query =  "SELECT b.theme_value, t.partner_id FROM buy_themes b, themes t
-    WHERE (id = $id_buy AND  store_id = $id_store ) LIMIT 1;";
+    WHERE (b.id = $id_buy AND  b.store_id = $id_store ) LIMIT 1;";
 
   if ( $result = mysqli_query($conn, $query)) {
     echo "string";
