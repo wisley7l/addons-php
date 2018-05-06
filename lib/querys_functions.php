@@ -1116,17 +1116,6 @@ function insert_history_transaction($id_partner, $id_store, $id_app, $id_theme,
 
   $conn = $GLOBALS['conn']; // get varible global conn
 
-  echo PHP_EOL;
-  echo "-";
-  echo $app_id;
-  echo PHP_EOL;
-  echo $theme_id;
-  if ($app_id == 0) {
-    $app_id = NULL;
-  }
-  if ($date_transaction == '') {
-    $date_transaction = NULL;
-  }
   $query =  "INSERT INTO historic_transaction (partner_id, store_id,theme_id,
      transaction_code,notes, description, payment_value) VALUES ($partner_id,
        $store_id, $theme_id,'$transaction_code','$notes','$description',$payment_value);";
