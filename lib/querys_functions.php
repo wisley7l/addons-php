@@ -1016,7 +1016,7 @@ function get_themes_buy($id)
         'transaction' => $row['transaction_code'],
         'is_app' => 0
         );
-        // var_dump($item);
+        var_dump($item);
         array_push($buys, $item);
       }
 
