@@ -1112,7 +1112,7 @@ function insert_history_transaction($id_partner, $id_store, $id_app, $id_theme,
   $store_id = (int) $id_store;
   $app_id = (int) $id_app;
   $theme_id = (int) $id_theme;
-  $payment_value = $price;// obs
+  $payment_value = (int) $price;// obs
 
   $conn = $GLOBALS['conn']; // get varible global conn
 
@@ -1130,7 +1130,7 @@ function insert_history_transaction($id_partner, $id_store, $id_app, $id_theme,
   $query =  "INSERT INTO `historic_transaction` (`partner_id`, `store_id`,
     `app_id`,`theme_id`, `transaction_code`,`notes`, `description`,
     `payment_value`, `date_transaction`) VALUES ($partner_id,$store_id,$app_id,
-      $theme_id,'$transaction_code','$notes','$description',$payment_value,
+      $theme_id,$transaction_code,$notes,$description,$payment_value,
       $date_transaction);";
   //*/
   //*
