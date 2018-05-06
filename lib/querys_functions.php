@@ -1125,7 +1125,7 @@ function insert_history_transaction($id_partner, $id_store, $id_app, $id_theme,
     $app_id = NULL;
   }
   if ($date_transaction == '') {
-    echo "vazio";
+    $date_transaction = NULL;
   }
   $query =  "INSERT INTO `historic_transaction` (`partner_id`, `store_id`,
     `app_id`,`theme_id`, `transaction_code`,`notes`, `description`,
