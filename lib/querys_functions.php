@@ -1129,9 +1129,8 @@ function insert_history_transaction($id_partner, $id_store, $id_app, $id_theme,
   }
   $query =  "INSERT INTO historic_transaction (partner_id, store_id,
     app_id,theme_id, transaction_code,notes, description,
-    payment_value, date_transaction) VALUES ($partner_id,$store_id,$app_id,
-      $theme_id,$transaction_code,$notes,$description,$payment_value,
-      $date_transaction);";
+    payment_value) VALUES ($partner_id,$store_id,$app_id,
+      $theme_id,$transaction_code,$notes,$description,$payment_value);";
   //*/
   //*
   // query search app and theme for index page
