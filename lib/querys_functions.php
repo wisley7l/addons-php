@@ -1126,19 +1126,60 @@ function insert_history_transaction($id_partner, $id_store, $id_app, $id_theme,
   //*
   // query search app and theme for index page
   if (!mysqli_query($conn, $query)) {
-    echo "ERROR";
+    echo "ERROR insert history";
     echo PHP_EOL;
     echo mysqli_error($conn);
     // // error INSERT // redirect
     // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
-    exit();
+    // exit();
   }
   $id_buy = (int) mysqli_insert_id($conn);
   echo $id_buy;
+  echo PHP_EOL;
+  return $id_buy;
+}
 
+function update_partner_credits($id_partner,$credits)
+{
+  $id = (int) $id_partner;
+  $credit = (int) $credits;
+  $conn = $GLOBALS['conn']; // get varible global conn
+
+  $query = "UPDATE partners SET credit = credit + $credit WHERE id =  $id";
+  if (!mysqli_query($conn, $query)) {
+    echo "ERROR update partner";
+    echo PHP_EOL;
+    echo mysqli_error($conn);
+    // // error INSERT // redirect
+    // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
+    // exit();
+  }
+}
+
+function update_buy_themes($id,$transaction)
+{
+  $id_transaction = (int) $transaction;
+  $id_buy = (int) $id;
+
+  $conn = $GLOBALS['conn']; // get varible global conn
+  $query =  "UPDATE buy_themes SET payment_status = 1, id_transaction = $id_transaction
+    WHERE id = $id_buy; ";
+
+  if (!mysqli_query($conn, $query)) {
+    echo "ERROR update buy";
+    echo PHP_EOL;
+    echo mysqli_error($conn);
+    // // error INSERT // redirect
+    // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
+    // exit();
+  }
 
 }
 
+function update_buy_apps()
+{
+
+}
 
 /*
 In the index page search the highlights of themes and app.

@@ -55,7 +55,7 @@ if (empty($_POST)) {
       $price = $row['theme_value'];
       $id_partner = $row['partner_id'];
     }
-    $transaction_code  = 'code' . uniqid();
+    $transaction_code  = 'code-' . uniqid();
 
     // free result set
     mysqli_free_result($result);
@@ -70,8 +70,9 @@ if (empty($_POST)) {
   echo $id_partner;
   echo PHP_EOL;
   echo $transaction_code;
-  //insert_history_transaction ($id_partner, $id_store, NULL, $id_app, $price,
-  //  $transaction_code, 'notes', 'description', NULL);
+
+  $id_transaction = insert_history_transaction ($id_partner, $id_store, NULL,
+    $id_app, $price, $transaction_code, 'notes', 'description', NULL);
   /*
   payment_status
   id_transaction
@@ -81,6 +82,11 @@ if (empty($_POST)) {
 
   // query  get id historic_transaction passed code_trasaction
   // query updadte buy_themes
+  //query updadte partner credits
+
+  update_partner_credits($id_partner,$price);
+  update_buy_themes($id_buy,$id_transaction);
+  echo "SUCESS";
 
 
 }else if ((int) $_POST['is_app'] == 1) {
