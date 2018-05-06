@@ -1120,6 +1120,9 @@ function insert_history_transaction($id_partner, $id_store, $id_app, $id_theme,
   echo $app_id;
   echo PHP_EOL;
   echo $theme_id;
+  if ($app_id == 0) {
+    echo 'app zero';
+  }
   $query =  "INSERT INTO `historic_transaction` (`partner_id`, `store_id`,
     `app_id`,`theme_id`, `transaction_code`,`notes`, `description`,
     `payment_value`, `date_transaction`) VALUES ($partner_id,$store_id,$app_id,
