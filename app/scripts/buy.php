@@ -37,51 +37,49 @@ $id_plan = (int) $_POST['id_plan'];
 
 if (empty($_POST)) {
   var_dump($_GET); // get (page car)
-echo "sim";
-$id_buy = (int) $_GET['id_buy'];
-$id_store = (int) $_GET['id_store'];
-$conn = $GLOBALS['conn']; // get varible global conn
-$query =  "SELECT id FROM buy_themes WHERE (id = $id_buy AND  store_id = $id_store ) LIMIT 1;";
+  $is_app =  (int) $_GET['is_app'];
+  $id_buy = (int) $_GET['id_buy'];
+  $id_store = (int) $_GET['id_store'];
+
+  $conn = $GLOBALS['conn']; // get varible global conn
+  $query =  "SELECT b.theme_value, t.partner_id FROM buy_themes b, themes t
+    WHERE (id = $id_buy AND  store_id = $id_store ) LIMIT 1;";
 
   if ( $result = mysqli_query($conn, $query)) {
     echo "string";
     if (mysqli_num_rows($result) > 0 ) {
       // header("Location: ../");
       // exit();
-    }else {
-      echo "error";
-      echo PHP_EOL;
-      echo mysqli_error($conn);
     }
-
     while ($row = mysqli_fetch_assoc($result)) {
-      $id_buy = $row['id'];
+      $price = $row['theme_value'];
+      $id_partner = $row['partner_id'];
     }
+    $transaction_code  = 'code' . uniqid();
+
     // free result set
     mysqli_free_result($result);
-    echo $id_buy;
+  }else {
+    echo "errorrrrrr";
+    echo PHP_EOL;
+    echo mysqli_error($conn);
+  }
 
-/*
-payment_status
-id_transaction
-////
+  echo $price;
+  echo $id_partner;
+  echo $transaction_code;
+  //insert_history_transaction ($id_partner, $id_store, NULL, $id_app, $price,
+  //  $transaction_code, 'notes', 'description', NULL);
+  /*
+  payment_status
+  id_transaction
+  ////
 
-*/
+  */
 
-// query  get id historic_transaction passed code_trasaction
-// query updadte buy_themes
+  // query  get id historic_transaction passed code_trasaction
+  // query updadte buy_themes
 
-
-
-
-
-
-
-}else {
-  echo "errorrrrrr";
-  echo PHP_EOL;
-  echo mysqli_error($conn);
-}
 
 }else if ((int) $_POST['is_app'] == 1) {
   // mount query for app purchase
