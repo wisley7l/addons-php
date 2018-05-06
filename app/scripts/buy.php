@@ -64,9 +64,11 @@ if (empty($_POST)) {
     echo PHP_EOL;
     echo mysqli_error($conn);
   }
-
+  echo PHP_EOL;
   echo $price;
+  echo PHP_EOL;
   echo $id_partner;
+  echo PHP_EOL;
   echo $transaction_code;
   //insert_history_transaction ($id_partner, $id_store, NULL, $id_app, $price,
   //  $transaction_code, 'notes', 'description', NULL);
