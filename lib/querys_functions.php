@@ -1145,7 +1145,7 @@ function update_partner_credits($id_partner,$credits)
   $credit = (int) $credits;
   $conn = $GLOBALS['conn']; // get varible global conn
 
-  $query = "UPDATE partners SET credit = credit + $credit WHERE id =  $id";
+  $query = "UPDATE partners SET credit = credit + $credit WHERE id =  $id;";
   if (!mysqli_query($conn, $query)) {
     echo "ERROR update partner";
     echo PHP_EOL;

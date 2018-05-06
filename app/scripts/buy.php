@@ -73,6 +73,9 @@ if (empty($_POST)) {
 
   $id_transaction = insert_history_transaction ($id_partner, $id_store, NULL,
     $id_app, $price, $transaction_code, 'notes', 'description', NULL);
+  echo PHP_EOL;
+  echo $id_transaction;
+  echo PHP_EOL;
   /*
   payment_status
   id_transaction
