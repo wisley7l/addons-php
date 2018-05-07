@@ -62,7 +62,7 @@ $buy = array( // hidtory_transaction
  array_push($item, $buy);
  array_push($item, $buy);
  //*/
-/*
+//*
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
