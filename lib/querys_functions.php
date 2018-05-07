@@ -879,7 +879,7 @@ function search_transaction_id($id_partner)
         'code'=> $row['transaction_code'],
         'notes'=> $row['notes'],
         'description'=> $row['description'],
-        'price'=> $row['payment_value'],
+        'price'=> treatNumber($row['payment_value']),
         'date_transaction'=> $row['date_transaction'],
         'name' =>  $row['title'],
       );
