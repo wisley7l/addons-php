@@ -771,11 +771,12 @@ function search_theme_id($id_theme)
 // FUNCTION item page
 function item_page($id_item, $is_app)
 {
+  echo "string";
   // body json app contains faqs, app contains plnas json
   // body json them contains faqs and plans, descreiption and name plans is necessary
   if ((int) $is_app == 1) { // is app
     $item = search_app_id($id_item);
-    echo "string";
+
     // $faqs =
     // treat plans for view
     $plans_json = json_decode($item['plans_json'],true);
@@ -794,7 +795,7 @@ function item_page($id_item, $is_app)
       }
       array_push($plans, $plan);
     }
-    var_dump($plans);
+
 
     $desc = ' ' . $item['description'] .  ',Version: ' . $item['version'] .
       'Date version: ' . $item['version_date'] . ',Type: ' . $item['type'] .
