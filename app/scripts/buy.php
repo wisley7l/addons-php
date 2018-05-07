@@ -80,6 +80,7 @@ if (empty($_POST)) {
 
 }else if ((int) $_POST['is_app'] == 1) {
   // mount query for app purchase
+  var_dump($_POST);
   echo "APP";
   echo PHP_EOL;
   echo $id_app;

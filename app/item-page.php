@@ -49,15 +49,9 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
       $plans[$i]['desc'] = $plans[$i]['desc']. "duration : " .
       $plans[$i]['duration'] . "month(s)";
     }
-    var_dump($plans);
 
     $json = json_decode($item['json_body'],true);
     $faqs = $json['faqs']['faqs'];
-
-    // TODO:
-    // $info = item_page($id_app,1);
-    // app_info = $info['item'];
-    // $plans = $infor['plans'];
 
     //images app
     $array_images = getImagesApp($id_app);
@@ -106,10 +100,6 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
         array_push($plans, $planExtend);
       }
 
-    // TODO:
-    // $info = item_page($id_app,0);
-    // app_info = $info['item'];
-    // $plans = $infor['plans'];
   }
   else {
     // redirect page error or information error
