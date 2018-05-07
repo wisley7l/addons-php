@@ -854,10 +854,10 @@ is_app -
 
   <div class="transaction-list-item">
     <div class="transaction-list-item-date">
-      <p>{{item.date}}</p>
+      <p>{{item.date_transaction}}</p>
     </div>
     <div class="transaction-list-item-code">
-      <p class="text-header">{{item.id_shopkeeper}}</p>
+      <p class="text-header">{{item.store_id}}</p>
     </div>
     <div class="transaction-list-item-code">
       <p class="category primary">{{item.id_item}}</p>
@@ -875,16 +875,10 @@ is_app -
     <div class="transaction-list-item-item">
       <p><span class="light">{{item.note}}</span></p>
     </div>
-    *
     <div class="transaction-list-item-detail">
       <p><span class="light">{{item.description}}</span></p>
     </div>
     {#
-
-
-
-
-
     <div class="transaction-list-item-earnings">
       <p class="text-header">-</p>
     </div>
