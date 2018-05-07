@@ -775,7 +775,7 @@ function item_page($id_item, $is_app)
   // body json them contains faqs and plans, descreiption and name plans is necessary
   if ((int) $is_app == 1) { // is app
     $item = search_app_id($id_item);
-
+    echo "string";
     // $faqs =
     // treat plans for view
     $plans_json = json_decode($item['plans_json'],true);
