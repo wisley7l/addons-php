@@ -785,7 +785,8 @@ function item_page($id_item, $is_app)
         'id' => $plans_json['plans'][$i]['id'],
         'name' => $plans_json['plans'][$i]['name'],
         'price' => $plans_json['plans'][$i]['value'],
-        'description' => $plans_json['plans'][$i]['desc'],
+        'description' => $plans_json['plans'][$i]['desc'] . "duration : " .
+        $plans_json['plans'][$i]['duration'] . "month(s)",
         'checked'=> ''
       );
       if ($i == 0) {
@@ -855,13 +856,13 @@ function item_page($id_item, $is_app)
   }
 }
 
-function search_transaction_id($id_partner)
+function search_transaction_id_theme($id_partner)
 {
   echo "search_transaction_id";
   $id = (int) $id_partner;
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
-  $query = "SELECT h.id, h.partner_id, h.store_id, h.app_id, h.theme_id ,
+  $query = "SELECT h.id, h.partner_id, h.store_id, h.theme_id ,
     h.transaction_code, h.notes, h.description, h.payment_value ,
     h.date_transaction, t.title
     FROM historic_transaction h, themes t
@@ -1063,8 +1064,6 @@ function get_themes_car($id)
     }
     return $buys;
 }
-
-
 
 
 function sendFile($path_file,$is_app)
