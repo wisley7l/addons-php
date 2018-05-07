@@ -64,25 +64,12 @@ if (empty($_POST)) {
     echo PHP_EOL;
     echo mysqli_error($conn);
   }
-  echo PHP_EOL;
-  echo $price;
-  echo PHP_EOL;
-  echo $id_partner;
-  echo PHP_EOL;
-  echo $transaction_code;
 
   $id_transaction = insert_history_transaction ($id_partner, $id_store, NULL,
     $id_app, $price, $transaction_code, 'notes', 'description', NULL);
   echo PHP_EOL;
   echo $id_transaction;
   echo PHP_EOL;
-  /*
-  payment_status
-  id_transaction
-  ////
-
-  */
-
   // query  get id historic_transaction passed code_trasaction
   // query updadte buy_themes
   //query updadte partner credits
@@ -90,7 +77,6 @@ if (empty($_POST)) {
   update_partner_credits($id_partner,$price);
   update_buy_themes($id_buy,$id_transaction);
   echo "SUCESS";
-
 
 }else if ((int) $_POST['is_app'] == 1) {
   // mount query for app purchase

@@ -857,6 +857,7 @@ function item_page($id_item, $is_app)
 
 function search_transaction_id($id_partner)
 {
+  echo "search_transaction_id";
   $id = (int) $id_partner;
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
