@@ -41,8 +41,8 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     );
     $plans = $_plans['plans'];
     $plans[0]['checked'] = 'checked';
-    $plans[0]['desc'] = $plans[0]['desc']. "duration : " .
-    $plans[0]['duration'] . "month(s)";
+    $plans[0]['desc'] = $plans[0]['desc']. "duration: " .
+    $plans[0]['duration'] . " month(s)";
 
     for ($i=1; $i < $_plans['total_plans'] ; $i++) {
       $plans[$i]['checked'] = '';
@@ -161,7 +161,7 @@ $info_footer = array(
 $app_category = get_categories_app();
 $theme_category = get_categories_theme();
 
-/*
+//*
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
