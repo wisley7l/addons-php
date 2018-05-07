@@ -895,6 +895,7 @@ function search_transaction_id($id_partner)
     // free result set
     mysqli_free_result($result);
   }
+  var_dump($transaction);
   return $transaction;
 }
 
