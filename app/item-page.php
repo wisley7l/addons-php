@@ -44,6 +44,8 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
 
     for ($i=1; $i < $_plans['total_plans'] ; $i++) {
       $plans[$i]['checked'] = '';
+      $plans[$i]['description'] = $plans[$i]['description']. "duration : " .
+      $plans[$i]['duration'] . "month(s)";
     }
 
     $json = json_decode($item['json_body'],true);
