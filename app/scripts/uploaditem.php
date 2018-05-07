@@ -287,7 +287,7 @@ if(empty($_POST)) { // not exist post
 
      // TODO:
      // thumbnail in insert
-     //*
+     /*
      $query =  "INSERT INTO themes (title,slug, partner_id, description,
           version, json_body, link_documentation, link_video, value_license_basic, value_license_extend )
         VALUES ('$name','$slug',$id_partner, '$description', '$numversion','$body_json',
@@ -304,7 +304,7 @@ if(empty($_POST)) { // not exist post
      $id_app = (int) mysqli_insert_id($conn);
 
      //*/
-     //*
+     /*
 
      for ($i=0; $i < $num_category ; $i++) {
 

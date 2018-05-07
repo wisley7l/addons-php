@@ -47,7 +47,7 @@ $("form#upload_form").submit(function(event){
           price_item = 0;
         }
 
-        if (isNaN(price_item)) {
+        if (isNaN(duration_plan)) {
           duration_plan = 0;
         }
 
