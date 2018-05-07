@@ -794,6 +794,7 @@ function item_page($id_item, $is_app)
       }
       array_push($plans, $plan);
     }
+    var_dump($plans);
 
     $desc = ' ' . $item['description'] .  ',Version: ' . $item['version'] .
       'Date version: ' . $item['version_date'] . ',Type: ' . $item['type'] .
