@@ -863,32 +863,25 @@ function search_transaction_id($id_partner)
   // query search app and theme for index page
   $query = "SELECT h.id, h.partner_id, h.store_id, h.app_id, h.theme_id ,
     h.transaction_code, h.notes, h.description, h.payment_value ,
-    h.date_transaction, t.title AS t_name, a.title AS a_name
-    FROM historic_transaction h, themes t, apps a
-    WHERE ( h.partner_id = $id AND (h.app_id = a.id OR h.theme_id = t.id) )";
+    h.date_transaction, t.title
+    FROM historic_transaction h, themes t
+    WHERE ( h.partner_id = $id AND h.theme_id = t.id )";
     $transaction = array();
 
   if ($result = mysqli_query(  $conn, $query )) {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
-      if ($row[app_id] == NULL) {
-        $name = $row['t_name'];
-        $id_item = $row['theme_id'];
-      }else {
-        $name = $row['a_name'];
-        $id_item = $row['app_id'];
-      }
       $item = array(
         'id'=> $row['id'],
         'partner_id'=> $row['partner_id'],
         'store_id'=> $row['store_id'],
-        'id_item'=> $id_item,
+        'id_item'=> $row['theme_id'],
         'code'=> $row['transaction_code'],
         'notes'=> $row['notes'],
         'description'=> $row['description'],
         'price'=> $row['payment_value'],
         'date_transaction'=> $row['date_transaction'],
-        'name' => $name,
+        'name' =>  $row['title'],
       );
       array_push($transaction, $item);
     }
