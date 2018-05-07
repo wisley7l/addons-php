@@ -33,9 +33,9 @@ if ($_SESSION['login'] == false) {
 
 //TODO:
 $transaction = search_transaction_id( (int) $_SESSION['user_id']);
-$sum = 0;
+$sum = 0.0;
 
-foreach ($item as $key => $value) {
+foreach ($transaction as $key => $value) {
   $sum += $value['price'];
 }
 
