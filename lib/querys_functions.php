@@ -863,9 +863,9 @@ function search_transaction_id($id_partner)
   // query search app and theme for index page
   $query = "SELECT h.id, h.partner_id, h.store_id, h.app_id, h.theme_id ,
     h.transaction_code, h.notes, h.description, h.payment_value ,
-    h.date_transaction, t.title AS t_name, a.title AS a_name
-    FROM historic_transaction h, themes t, apps a
-    WHERE ( partner_id = $id AND (h.app_id = a.id OR h.theme_id = t.id) )";
+    h.date_transaction, t.title AS t_name
+    FROM historic_transaction h, themes t
+    WHERE ( partner_id = $id AND h.theme_id = t.id )";
     $transaction = array();
 
   if ($result = mysqli_query(  $conn, $query )) {
