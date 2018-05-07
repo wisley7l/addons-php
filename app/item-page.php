@@ -57,7 +57,7 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     //images app
     $array_images = getImagesApp($id_app);
     $image_main = $array_images[0];
-    
+
   }
   else if ($_GET['app'] == 0){
     $id_app = (int) $_GET['id'];
@@ -156,7 +156,7 @@ $info_footer = array(
 $app_category = get_categories_app();
 $theme_category = get_categories_theme();
 
-
+/*
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
@@ -174,5 +174,5 @@ echo $twig->render('item-page.twig', array(
   'array_images' => $array_images,
   'image_main' => $image_main,
   'faqs' => $faqs,
-
 ));
+//*/
