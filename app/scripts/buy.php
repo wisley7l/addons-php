@@ -116,6 +116,17 @@ if (empty($_POST)) {
       exit();
     }
     // verifica se ja esta no carrinho, para nao comprar o mesmo produto
+    $query =  "SELECT id FROM buy_apps WHERE (app_id = $id_app AND  store_id = $id_store AND plan_id = $id_plan
+     AND payment_status = 0) LIMIT 1;";
+    if ( $result = mysqli_query($conn, $query)) {
+      if (mysqli_num_rows($result) > 0 ) {
+        header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&InCar");
+        exit();
+      }
+    }
+    else {
+      echo "Nothing";
+    }
     // cria buy plan
 
 
