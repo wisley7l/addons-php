@@ -132,7 +132,7 @@ if (empty($_POST)) {
     $date_init = '';
     $date_end = '';
     $date_renovation = '';
-    $today = getdate();
+    $today = time ();
     echo date("Y-m-d H:i:s",$today);
     echo PHP_EOL;
     // echo $today + 1;
