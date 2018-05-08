@@ -106,7 +106,7 @@ if (empty($_POST)) {
       mysqli_free_result($result);
     }
 
-    var_dump(verify_plan($plans, $id_plan));
+    var_dump(verify_plan($plans['plans'], $id_plan));
 
   // consult in bd and verify
 }else if ((int) $_POST['is_app'] == 0) {
