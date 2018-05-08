@@ -138,7 +138,7 @@ if (empty($_POST)) {
     echo PHP_EOL;
     echo date("Y-m-d H:i:s",$date_renovation);
     echo PHP_EOL;
-    echo (int) 5/2;
+    echo (int) (5/2);
     // echo $today + 1;
     /*
     $query =  "INSERT INTO `buy_apps` (`app_id`, `store_id`,`app_value`,
