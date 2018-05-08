@@ -130,13 +130,13 @@ if (empty($_POST)) {
     }
     // cria buy plan
     $date_init = time ();
-    $date_end = '';
-    $date_renovation = '';
-    $today = time ();
-    $after = $today + (30*24*60*60);
-    echo date("Y-m-d H:i:s",$today);
+    $date_end = $date_init + ((int)$v['duration']*30*24*60*60);
+    $date_renovation = $date_end - (15*24*60*60);
+    echo date("Y-m-d H:i:s",$date_init);
     echo PHP_EOL;
-    echo date("Y-m-d H:i:s",$after);
+    echo date("Y-m-d H:i:s",$date_end);
+    echo PHP_EOL;
+    echo date("Y-m-d H:i:s",$date_renovation);
     // echo $today + 1;
     /*
     $query =  "INSERT INTO `buy_apps` (`app_id`, `store_id`,`app_value`,
@@ -243,6 +243,7 @@ function verify_plan($array_plan, $id_plan)
     if ($array_plan[$i]['id'] == $id_plan ) {
       $r['verify'] = 1;
       $r['price'] = $array_plan[$i]['value'];
+      $r['duration'] = $array_plan[$i]['duration'];
       break;
     }
   }
