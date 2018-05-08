@@ -122,15 +122,34 @@ if (empty($_POST)) {
       if (mysqli_num_rows($result) > 0 ) {
         header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&InCar");
         exit();
-      }else {
-        echo "Nothing";
       }
     }
     else {
-
+      header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#ErrorQuery");
+      exit();
     }
     // cria buy plan
+    $date_init = '';
+    $date_end = '';
+    $date_renovation = '';
+    echo $tomorrow  = mktime (0, 0, 0, date("m")  , date("d")+1, date("Y"));
+    /*
+    $query =  "INSERT INTO `buy_apps` (`app_id`, `store_id`,`app_value`,
+     `payment_status`, `plan_id`,`id_transaction`,`date_init`, `date_end`,`date_renovation`, )
+       VALUES ($id_app,$id_store,$price,0,$id_plan,NULL,$date_init,$date_end, $date_renovation);";
 
+    // query search app and theme for index page
+    if (!mysqli_query($conn, $query)) {
+      echo "ERROR";
+      echo PHP_EOL;
+      echo mysqli_error($conn);
+      // // error INSERT // redirect
+      // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
+      exit();
+    }
+    $id_buy = (int) mysqli_insert_id($conn);
+    echo $id_buy;
+    //*/
 
 
   // consult in bd and verify
