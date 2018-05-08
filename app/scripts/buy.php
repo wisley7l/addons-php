@@ -132,9 +132,10 @@ if (empty($_POST)) {
     $date_init = '';
     $date_end = '';
     $date_renovation = '';
-    echo $today = date("Y-m-d H:i:s");
+    $today = getdate();
+    echo date("Y-m-d H:i:s",$today);
     echo PHP_EOL;
-    echo $today + 1;
+    // echo $today + 1;
     /*
     $query =  "INSERT INTO `buy_apps` (`app_id`, `store_id`,`app_value`,
      `payment_status`, `plan_id`,`id_transaction`,`date_init`, `date_end`,`date_renovation`, )
