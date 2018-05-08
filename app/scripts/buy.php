@@ -133,14 +133,12 @@ if (empty($_POST)) {
     $date_init = time ();
     $date_end = $date_init + ($date_duration*30*24*60*60) + (($date_duration/2)*24*60*60);
     $date_renovation = $date_end - (15*24*60*60);
-    echo date("Y-m-d H:i:s",$date_init);
+    echo $date_init = date("Y-m-d H:i:s",$date_init);
     echo PHP_EOL;
-    echo date("Y-m-d H:i:s",$date_end);
+    echo $date_end = date("Y-m-d H:i:s",$date_end);
     echo PHP_EOL;
-    echo date("Y-m-d H:i:s",$date_renovation);
+    echo $date_renovation = date("Y-m-d H:i:s",$date_renovation);
     echo PHP_EOL;
-    echo (int) (5/2);
-    // echo $today + 1;
     /*
     $query =  "INSERT INTO `buy_apps` (`app_id`, `store_id`,`app_value`,
      `payment_status`, `plan_id`,`id_transaction`,`date_init`, `date_end`,`date_renovation`, )
