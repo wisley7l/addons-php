@@ -89,6 +89,22 @@ if (empty($_POST)) {
   echo PHP_EOL;
   echo $id_plan;
   echo PHP_EOL;
+
+  $conn = $GLOBALS['conn']; // get varible global conn
+  $query =  "SELECT a.plans_json
+    FROM apps a
+    WHERE (a.id = $id_app) LIMIT 1;";
+    //*
+    if ($result = mysqli_query(  $conn, $query )) {
+      // fetch associative array
+      while ($row = mysqli_fetch_assoc($result)) {
+        $apps =  json_decode($row['plans_json'],true); // increment total items on profile page
+      }
+     var_dump($apps);
+     echo PHP_EOL;
+      // free result set
+      mysqli_free_result($result);
+    }
   //id_plan
   // consult in bd and verify
 }else if ((int) $_POST['is_app'] == 0) {
