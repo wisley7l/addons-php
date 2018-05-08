@@ -100,16 +100,16 @@ if (empty($_POST)) {
       while ($row = mysqli_fetch_assoc($result)) {
         $plans =  json_decode($row['plans_json'],true); // increment total items on profile page
       }
-     var_dump($plans);
-     echo PHP_EOL;
+     // var_dump($plans);
+     // echo PHP_EOL;
       // free result set
       mysqli_free_result($result);
     }
     $v = verify_plan($plans['plans'], $id_plan);
-    echo treatNumber($price);
 
     if($v['verify'] == 1 AND $v['price'] == treatNumber($price)  ){
-      
+      echo "string";
+
     }
 
   // consult in bd and verify
