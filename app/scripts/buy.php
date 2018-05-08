@@ -105,13 +105,20 @@ if (empty($_POST)) {
       // free result set
       mysqli_free_result($result);
     }
+    else {
+      header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "#ErrorConsult");
+      exit;
+    }
     $v = verify_plan($plans['plans'], $id_plan);
 
     if(!$v['verify'] OR $v['price'] != treatNumber($price)){
       echo "ERROR";
-    }else {
-      echo "OK";
+      exit();
     }
+    // verifica se ja esta no carrinho, para nao comprar o mesmo produto
+    // cria buy plan
+
+
 
   // consult in bd and verify
 }else if ((int) $_POST['is_app'] == 0) {
