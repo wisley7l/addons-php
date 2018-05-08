@@ -87,6 +87,9 @@ if (empty($_POST)) {
   echo PHP_EOL;
   echo $price;
   echo PHP_EOL;
+  echo $id_plan;
+  echo PHP_EOL;
+  //id_plan
   // consult in bd and verify
 }else if ((int) $_POST['is_app'] == 0) {
   $id_template = (int) $_POST['id_template'];
@@ -125,7 +128,7 @@ if (empty($_POST)) {
   $templates = $theme['templates']['templates'];
   // var_dump($templates);
 
-  if (!verify_plan($plans,$id_plan)) {
+  if (!verify_plan($plans,$id_plan)['verify']) {
     header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&ErrorPlan");
     exit;
   }
@@ -161,7 +164,6 @@ if (empty($_POST)) {
   echo $id_buy;
 //*/
 
-
 }else {
 
 }
@@ -169,10 +171,11 @@ if (empty($_POST)) {
 
 function verify_plan($array_plan, $id_plan)
 {
-  $r = 0;
+  $r['verify'] = 0;
   for ($i=0; $i < count($array_plan) ; $i++) {
     if ($array_plan[$i]['id'] == $id_plan ) {
-      $r = 1;
+      $r['verify'] = 1;
+      $r['price'] = $array_plan[$i]['value'];
       break;
     }
   }
