@@ -98,14 +98,16 @@ if (empty($_POST)) {
     if ($result = mysqli_query(  $conn, $query )) {
       // fetch associative array
       while ($row = mysqli_fetch_assoc($result)) {
-        $apps =  json_decode($row['plans_json'],true); // increment total items on profile page
+        $plans =  json_decode($row['plans_json'],true); // increment total items on profile page
       }
-     var_dump($apps);
-     echo PHP_EOL;
+     // var_dump($apps);
+     // echo PHP_EOL;
       // free result set
       mysqli_free_result($result);
     }
-  //id_plan
+
+    var_dump(verify_plan($plans, $id_plan));
+
   // consult in bd and verify
 }else if ((int) $_POST['is_app'] == 0) {
   $id_template = (int) $_POST['id_template'];
