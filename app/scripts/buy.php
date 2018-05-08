@@ -132,7 +132,8 @@ if (empty($_POST)) {
     $date_init = '';
     $date_end = '';
     $date_renovation = '';
-    echo $tomorrow  = mktime (0, 0, 0, date("m")  , date("d")+1, date("Y"));
+    echo $today = date("Y-m-d H:i:s");      
+    // $tomorrow  = mktime (0, 0, 0, date("m")  , date("d")+1, date("Y"));
     /*
     $query =  "INSERT INTO `buy_apps` (`app_id`, `store_id`,`app_value`,
      `payment_status`, `plan_id`,`id_transaction`,`date_init`, `date_end`,`date_renovation`, )
