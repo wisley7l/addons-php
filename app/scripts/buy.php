@@ -129,9 +129,9 @@ if (empty($_POST)) {
       exit();
     }
     // cria buy plan
-    $date_duration = (int)$v['duration'] + (int)($v['duration']/2) ;
+    $date_duration = (int)$v['duration'];
     $date_init = time ();
-    $date_end = $date_init + ($date_duration*30*24*60*60);
+    $date_end = $date_init + ($date_duration*30*24*60*60) + (($date_duration/2)*24*60*60);
     $date_renovation = $date_end - (15*24*60*60);
     echo date("Y-m-d H:i:s",$date_init);
     echo PHP_EOL;
