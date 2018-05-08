@@ -122,10 +122,12 @@ if (empty($_POST)) {
       if (mysqli_num_rows($result) > 0 ) {
         header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&InCar");
         exit();
+      }else {
+        echo "Nothing";
       }
     }
     else {
-      echo "Nothing";
+
     }
     // cria buy plan
 
