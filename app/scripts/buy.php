@@ -107,9 +107,10 @@ if (empty($_POST)) {
     }
     $v = verify_plan($plans['plans'], $id_plan);
 
-    if($v['verify'] == 1 AND $v['price'] == treatNumber($price)  ){
-      echo "string";
-
+    if(!$v['verify'] OR $v['price'] != treatNumber($price)){
+      echo "ERROR";
+    }else {
+      echo "OK";
     }
 
   // consult in bd and verify
@@ -149,8 +150,8 @@ if (empty($_POST)) {
   // var_dump($plans);
   $templates = $theme['templates']['templates'];
   // var_dump($templates);
-
-  if (!verify_plan($plans,$id_plan)['verify']) {
+  $v = verify_plan($plans,$id_plan);
+  if (!$v['verify'] OR $v['price'] != treatNumber($price)) {
     header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&ErrorPlan");
     exit;
   }
