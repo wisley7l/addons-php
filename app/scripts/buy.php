@@ -105,8 +105,12 @@ if (empty($_POST)) {
       // free result set
       mysqli_free_result($result);
     }
+    $v = verify_plan($plans['plans'], $id_plan);
+    echo treatNumber($price);
 
-    var_dump(verify_plan($plans['plans'], $id_plan));
+    if($v['verify'] == 1 AND $v['price'] == treatNumber($price)  ){
+      
+    }
 
   // consult in bd and verify
 }else if ((int) $_POST['is_app'] == 0) {
