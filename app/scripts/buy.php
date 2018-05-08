@@ -133,8 +133,10 @@ if (empty($_POST)) {
     $date_end = '';
     $date_renovation = '';
     $today = time ();
+    $after = $today + (30*24*60*60);
     echo date("Y-m-d H:i:s",$today);
     echo PHP_EOL;
+    echo date("Y-m-d H:i:s",$after);
     // echo $today + 1;
     /*
     $query =  "INSERT INTO `buy_apps` (`app_id`, `store_id`,`app_value`,
