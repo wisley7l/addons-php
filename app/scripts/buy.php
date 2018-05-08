@@ -100,8 +100,8 @@ if (empty($_POST)) {
       while ($row = mysqli_fetch_assoc($result)) {
         $plans =  json_decode($row['plans_json'],true); // increment total items on profile page
       }
-     // var_dump($plans);
-     // echo PHP_EOL;
+     var_dump($plans);
+     echo PHP_EOL;
       // free result set
       mysqli_free_result($result);
     }
@@ -129,7 +129,7 @@ if (empty($_POST)) {
       exit();
     }
     // cria buy plan
-    $date_init = '';
+    $date_init = time ();
     $date_end = '';
     $date_renovation = '';
     $today = time ();
