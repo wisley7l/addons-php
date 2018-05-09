@@ -986,7 +986,7 @@ function get_apps_car($id)
   $query = "SELECT b.id, b.app_id, b.store_id, b.payment_status,
     b.date_init,b.date_end,b.date_renovation,b.type_plan,b.app_value,
     b.payment_status,b.plan_id,b.id_transaction,
-    a.partner_id, a.title, t.plans_json
+    a.partner_id, a.title, a.plans_json
     FROM buy_apps b, apps a
     WHERE (b.theme_id = a.id AND b.payment_status = 0 AND b.store_id = $id_store); ";
 
