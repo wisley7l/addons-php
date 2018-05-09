@@ -41,12 +41,12 @@ $sales_user = array(
 
 );
 
-$item = get_themes_car($id_store);
-$item = get_apps_car($id_store);
+$item_apps = get_themes_car($id_store);
+$item_themes = get_apps_car($id_store);
 
 
 // intial twig and send varibles for template
- /*
+ // /*
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
 echo $twig->render('dashboard-car.twig', array(
@@ -55,6 +55,7 @@ echo $twig->render('dashboard-car.twig', array(
     // test
   'user' => $user_login,
   'sales_user' => $sales_user,
-  'item' => $item
+  'item_apps'  => $item_apps,
+  'item_themes' => $item_themes,
 ));
 //*/
