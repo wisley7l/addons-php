@@ -988,7 +988,7 @@ function get_apps_car($id)
     b.payment_status,b.plan_id,b.id_transaction,
     a.partner_id, a.title, a.plans_json
     FROM buy_apps b, apps a
-    WHERE (b.theme_id = a.id AND b.payment_status = 0 AND b.store_id = $id_store); ";
+    WHERE (b.app_id = a.id AND b.payment_status = 0 AND b.store_id = $id_store); ";
 
     if ($result = mysqli_query(  $conn, $query )) {
       // fetch associative array
