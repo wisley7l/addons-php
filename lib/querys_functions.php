@@ -1106,10 +1106,10 @@ function insert_history_transaction_2($id_partner, $id_store, $id_app, $id_theme
   $payment_value = (int) $price;// obs
 
   $conn = $GLOBALS['conn']; // get varible global conn
-
-  $query =  "INSERT INTO historic_transaction (partner_id, store_id,theme_id,
-     transaction_code,notes, description, payment_value) VALUES ($partner_id,
-       $store_id, $theme_id,'$transaction_code','$notes','$description',$payment_value);";
+  $query =  "INSERT INTO historic_transaction (partner_id, store_id,app_id,theme_id,
+     transaction_code,notes,description,payment_value,date_transaction)
+      VALUES ($partner_id,$store_id,$app_id,$theme_id,'$transaction_code',
+        '$notes','$description',$payment_value,$date_transaction);";
   //*/
   //*
   // query search app and theme for index page
@@ -1120,7 +1120,7 @@ function insert_history_transaction_2($id_partner, $id_store, $id_app, $id_theme
     echo mysqli_error($conn);
     // // error INSERT // redirect
     // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
-    // exit();
+    exit();
   }
   $id_buy = (int) mysqli_insert_id($conn);
   echo $id_buy;
@@ -1165,9 +1165,61 @@ function update_buy_themes($id,$transaction)
 
 }
 
-function update_buy_apps()
+function update_buy_apps($id,$transaction,$duration_plan)
 {
+  $date_duration = (int)$duration_plan;
+  $day_add = (int)($date_duration/2);
+  $date_init = time ();
+  $date_end = $date_init + ($date_duration*30*24*60*60) + ($day_add*24*60*60);
+  $date_renovation = $date_end - (15*24*60*60);
+  $date_init = date("Y-m-d H:i:s",$date_init);
+  $date_end = date("Y-m-d H:i:s",$date_end);
+  $date_renovation = date("Y-m-d H:i:s",$date_renovation);
 
+  $id_transaction = (int) $transaction;
+  $id_buy = (int) $id;
+
+  $conn = $GLOBALS['conn']; // get varible global conn
+  $query =  "UPDATE buy_apps SET payment_status = 1, id_transaction = $id_transaction,
+    date_init = $date_init, date_end = $date_end, date_renovation = $date_renovation
+    WHERE id = $id_buy; ";
+
+  if (!mysqli_query($conn, $query)) {
+    echo "ERROR update buy";
+    echo PHP_EOL;
+    echo mysqli_error($conn);
+    // // error INSERT // redirect
+    // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
+    // exit();
+  }
+
+}
+
+
+function verify_plan($array_plan, $id_plan)
+{
+  $r['verify'] = 0;
+  for ($i=0; $i < count($array_plan) ; $i++) {
+    if ($array_plan[$i]['id'] == $id_plan ) {
+      $r['verify'] = 1;
+      $r['price'] = $array_plan[$i]['value'];
+      $r['duration'] = $array_plan[$i]['duration'];
+      break;
+    }
+  }
+  return $r;
+}
+
+function verify_template($array_template, $id_template)
+{
+  $r = 0;
+  for ($i=0; $i < count($array_template) ; $i++) {
+    if ($array_template[$i]['id'] == $id_template ) {
+      $r = 1;
+      break;
+    }
+  }
+  return $r;
 }
 
 /*

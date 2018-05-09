@@ -81,7 +81,43 @@ if (empty($_POST)) {
     echo "SUCESS";
 }
 elseif ($is_app == 1) {
-  echo "sim";
+  $query =  "SELECT b.theme_value, b.app_id, a.partner_id, a.plans_json FROM buy_apps b, apps a
+    WHERE (b.id = $id_buy AND  b.store_id = $id_store ) LIMIT 1;";
+
+  if ( $result = mysqli_query($conn, $query)) {
+    if (mysqli_num_rows($result) > 0 ) {
+      // header("Location: ../");
+      // exit();
+    }
+    while ($row = mysqli_fetch_assoc($result)) {
+      $price = $row['app_value'];
+      $id_partner = $row['partner_id'];
+      $id_app = $row['app_id'];
+      $id_plan = $row['plan_id'];
+      $plans =  json_decode($row['plans_json'],true); // increment total items on profile page
+    }
+    $transaction_code  = 'code-' . uniqid();
+    $duration_plan = (int) verify_plan($plans['plans'], $id_plan)['duration'];
+    // free result set
+    mysqli_free_result($result);
+  }else {
+    echo "errorrrrrr";
+    echo PHP_EOL;
+    echo mysqli_error($conn);
+  }
+
+  $id_transaction = insert_history_transaction_2 ($id_partner, $id_store,$id_app,
+   NULL,$price, $transaction_code, '-', '-', NULL);
+  echo PHP_EOL;
+  echo $id_transaction;
+  echo PHP_EOL;
+  // query  get id historic_transaction passed code_trasaction
+  // query updadte buy_themes
+  //query updadte partner credits
+
+  update_partner_credits($id_partner,$price);
+  update_buy_apps($id_buy,$id_transaction,$duration_plan);
+  echo "SUCESS";
 }
 
 
@@ -239,31 +275,4 @@ elseif ($is_app == 1) {
 
 }else {
 
-}
-
-
-function verify_plan($array_plan, $id_plan)
-{
-  $r['verify'] = 0;
-  for ($i=0; $i < count($array_plan) ; $i++) {
-    if ($array_plan[$i]['id'] == $id_plan ) {
-      $r['verify'] = 1;
-      $r['price'] = $array_plan[$i]['value'];
-      $r['duration'] = $array_plan[$i]['duration'];
-      break;
-    }
-  }
-  return $r;
-}
-
-function verify_template($array_template, $id_template)
-{
-  $r = 0;
-  for ($i=0; $i < count($array_template) ; $i++) {
-    if ($array_template[$i]['id'] == $id_template ) {
-      $r = 1;
-      break;
-    }
-  }
-  return $r;
 }
