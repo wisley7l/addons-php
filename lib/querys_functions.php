@@ -1193,7 +1193,7 @@ function update_buy_apps($id,$transaction,$duration_plan)
 
   $conn = $GLOBALS['conn']; // get varible global conn
   $query =  "UPDATE buy_apps SET payment_status = 1, id_transaction = $id_transaction,
-    date_init = $date_init, date_end = $date_end, date_renovation = $date_renovation
+    date_init = '$date_init', date_end = '$date_end', date_renovation = '$date_renovation'
     WHERE id = $id_buy; ";
 
   if (!mysqli_query($conn, $query)) {
