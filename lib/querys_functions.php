@@ -1195,6 +1195,9 @@ function update_buy_apps($id,$transaction,$duration_plan)
   $query =  "UPDATE buy_apps SET payment_status = 1, id_transaction = $id_transaction,
     date_init = '$date_init', date_end = '$date_end', date_renovation = '$date_renovation'
     WHERE id = $id_buy; ";
+  echo PHP_EOL;
+  echo $query;
+  echo PHP_EOL;
 
   if (!mysqli_query($conn, $query)) {
     echo "ERROR update buy";
