@@ -888,7 +888,7 @@ function get_apps_buy($id)
         'transaction' => $row['transaction_code'],
         'is_app' => 1
         );
-        // var_dump($item);
+        var_dump($item);
         // array_push($images, $item);
       }
       // free result set
