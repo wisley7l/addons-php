@@ -100,8 +100,8 @@ if (empty($_POST)) {
       while ($row = mysqli_fetch_assoc($result)) {
         $plans =  json_decode($row['plans_json'],true); // increment total items on profile page
       }
-     var_dump($plans);
-     echo PHP_EOL;
+     // var_dump($plans);
+     // echo PHP_EOL;
       // free result set
       mysqli_free_result($result);
     }
@@ -134,13 +134,10 @@ if (empty($_POST)) {
     $date_init = time ();
     $date_end = $date_init + ($date_duration*30*24*60*60) + ($day_add*24*60*60);
     $date_renovation = $date_end - (15*24*60*60);
-    echo $date_init = date("Y-m-d H:i:s",$date_init);
-    echo PHP_EOL;
-    echo $date_end = date("Y-m-d H:i:s",$date_end);
-    echo PHP_EOL;
-    echo $date_renovation = date("Y-m-d H:i:s",$date_renovation);
-    echo PHP_EOL;
-    /*
+    $date_init = date("Y-m-d H:i:s",$date_init);
+    $date_end = date("Y-m-d H:i:s",$date_end);
+    $date_renovation = date("Y-m-d H:i:s",$date_renovation);
+    // /*
     $query =  "INSERT INTO `buy_apps` (`app_id`, `store_id`,`app_value`,
      `payment_status`, `plan_id`,`id_transaction`,`date_init`, `date_end`,`date_renovation`, )
        VALUES ($id_app,$id_store,$price,0,$id_plan,NULL,$date_init,$date_end, $date_renovation);";
