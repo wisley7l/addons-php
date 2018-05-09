@@ -870,8 +870,9 @@ function get_apps_buy($id)
   $query = "SELECT b.id, b.app_id, b.store_id,b.date_init, b.date_end,
   b.date_renovation,b.type_plan, b.payment_status, h.transaction_code,
   b.app_value, b.plan_id, a.partner_id, a.title, a.plans_json, a.json_body
-    FROM buy_app b, apps a, historic_transaction h
-    WHERE ( b.store_id = $id_store); ";
+    FROM buy_apps b, apps a, historic_transaction h
+    WHERE (b.app_id = a.id AND b.payment_status = 1 AND h.id = a.id_transaction
+      AND b.store_id = $id_store); ";
 
     if ($result = mysqli_query(  $conn, $query )) {
       // fetch associative array
