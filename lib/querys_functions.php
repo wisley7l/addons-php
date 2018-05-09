@@ -976,6 +976,58 @@ function get_themes_car($id)
     }
     return $buys;
 }
+function get_apps_car($id)
+{
+  $id_store = (int) $id;
+  echo $id_store;
+  $buys = array();
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT b.id, b.app_id, b.store_id, b.payment_status,
+    b.date_init,b.date_end,b.date_renovation,b.type_plan,b.app_value,
+    b.payment_status,b.plan_id,b.id_transaction,
+    a.partner_id, a.title, t.plans_json
+    FROM buy_apps b, apps a
+    WHERE (b.theme_id = a.id AND b.payment_status = 0 AND b.store_id = $id_store); ";
+
+    if ($result = mysqli_query(  $conn, $query )) {
+      // fetch associative array
+      while ($row = mysqli_fetch_assoc($result)) {
+        $item = array(
+        'id' => $row['id'],
+        'id_app' => $row['theme_id'],
+        'id_partner' => $row['partner_id'], // id partner or name
+        'id_store' => $row['store_id'], // id partner or name
+        'title' => $row['title'],
+        'date_valid' => $row['date_end'],
+        'plan' => 'Plan-' . $row['plan_id'], // info id plan or id template
+        'price' => treatNumber($row['app_value']), // value theme or app
+        'template' => '-',
+        'is_app' => 1
+        );
+        // var_dump($item);
+        array_push($buys, $item);
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // free result set
+      mysqli_free_result($result);
+    }else {
+      echo mysqli_error($conn);
+    }
+    return $buys;
+}
 
 
 function sendFile($path_file,$is_app)
@@ -1013,6 +1065,38 @@ function sendFile($path_file,$is_app)
 }
 
 function insert_history_transaction($id_partner, $id_store, $id_app, $id_theme,
+  $price, $transaction_code, $notes, $description, $date_transaction)
+{
+  $partner_id = (int) $id_partner;
+  $store_id = (int) $id_store;
+  $app_id = (int) $id_app;
+  $theme_id = (int) $id_theme;
+  $payment_value = (int) $price;// obs
+
+  $conn = $GLOBALS['conn']; // get varible global conn
+
+  $query =  "INSERT INTO historic_transaction (partner_id, store_id,theme_id,
+     transaction_code,notes, description, payment_value) VALUES ($partner_id,
+       $store_id, $theme_id,'$transaction_code','$notes','$description',$payment_value);";
+  //*/
+  //*
+  // query search app and theme for index page
+  if (!mysqli_query($conn, $query)) {
+    echo PHP_EOL;
+    echo "ERROR insert history";
+    echo PHP_EOL;
+    echo mysqli_error($conn);
+    // // error INSERT // redirect
+    // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
+    // exit();
+  }
+  $id_buy = (int) mysqli_insert_id($conn);
+  echo $id_buy;
+  echo PHP_EOL;
+  return $id_buy;
+}
+
+function insert_history_transaction_2($id_partner, $id_store, $id_app, $id_theme,
   $price, $transaction_code, $notes, $description, $date_transaction)
 {
   $partner_id = (int) $id_partner;
