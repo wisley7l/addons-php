@@ -42,7 +42,7 @@ $sales_user = array(
 );
 
 $item_apps = get_apps_buy($id_store);
-$item_themes = get_themes_buy($id_store);
+// $item_themes = get_themes_buy($id_store);
 
 
 
