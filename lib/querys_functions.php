@@ -1005,7 +1005,7 @@ function get_apps_car($id)
         'template' => '-',
         'is_app' => 1
         );
-        // var_dump($item);
+        var_dump($item);
         array_push($buys, $item);
       }
 
