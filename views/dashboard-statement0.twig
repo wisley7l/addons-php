@@ -70,13 +70,7 @@
           {{macro_dashboad.header_table_store(dictionary)}}
 				<!-- /TRANSACTION LIST HEADER -->
         {# use foreach to list items #}
-				{% for i in item_apps %}
-					<!-- TRANSACTION LIST ITEM -->
-					{{macro_dashboad.item_list_store(dictionary,i)}}
-					<!-- /TRANSACTION LIST ITEM -->
-				{% endfor %}
-
-				{% for i in item_themes %}
+				{% for i in item %}
 					<!-- TRANSACTION LIST ITEM -->
 					{{macro_dashboad.item_list_store(dictionary,i)}}
 					<!-- /TRANSACTION LIST ITEM -->

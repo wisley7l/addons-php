@@ -56,7 +56,7 @@ echo $twig->render('dashboard-statement0.twig', array(
     // test
   'user' => $user_login,
   'sales_user' => $sales_user,
-  'item_apps' => $item_apps,
+  'item' => $item_apps,
   'item_themes' => $item_themes,
 ));
 //*/
