@@ -41,8 +41,9 @@ $sales_user = array(
 
 );
 
-$item = get_themes_buy($id_store);
-// ,get_apps_buy($id_store));
+$item_apps = get_apps_buy($id_store);
+$item_themes = get_themes_buy($id_store);
+
 
 
 // intial twig and send varibles for template
@@ -55,6 +56,7 @@ echo $twig->render('dashboard-statement0.twig', array(
     // test
   'user' => $user_login,
   'sales_user' => $sales_user,
-  'item' => $item
+  'item_apps' => $item_apps,
+  'item_themes' => $item_themes,
 ));
 //*/
