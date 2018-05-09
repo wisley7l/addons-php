@@ -40,43 +40,50 @@ if (empty($_POST)) {
   $is_app =  (int) $_GET['is_app'];
   $id_buy = (int) $_GET['id_buy'];
   $id_store = (int) $_GET['id_store'];
-
   $conn = $GLOBALS['conn']; // get varible global conn
-  $query =  "SELECT b.theme_value, b.theme_id, t.partner_id FROM buy_themes b, themes t
-    WHERE (b.id = $id_buy AND  b.store_id = $id_store ) LIMIT 1;";
 
-  if ( $result = mysqli_query($conn, $query)) {
-    if (mysqli_num_rows($result) > 0 ) {
-      // header("Location: ../");
-      // exit();
-    }
-    while ($row = mysqli_fetch_assoc($result)) {
-      $price = $row['theme_value'];
-      $id_partner = $row['partner_id'];
-      $id_app = $row['theme_id'];
-    }
-    $transaction_code  = 'code-' . uniqid();
+  if ($is_app == 0) {
 
-    // free result set
-    mysqli_free_result($result);
-  }else {
-    echo "errorrrrrr";
+    $query =  "SELECT b.theme_value, b.theme_id, t.partner_id FROM buy_themes b, themes t
+      WHERE (b.id = $id_buy AND  b.store_id = $id_store ) LIMIT 1;";
+
+    if ( $result = mysqli_query($conn, $query)) {
+      if (mysqli_num_rows($result) > 0 ) {
+        // header("Location: ../");
+        // exit();
+      }
+      while ($row = mysqli_fetch_assoc($result)) {
+        $price = $row['theme_value'];
+        $id_partner = $row['partner_id'];
+        $id_app = $row['theme_id'];
+      }
+      $transaction_code  = 'code-' . uniqid();
+
+      // free result set
+      mysqli_free_result($result);
+    }else {
+      echo "errorrrrrr";
+      echo PHP_EOL;
+      echo mysqli_error($conn);
+    }
+
+    $id_transaction = insert_history_transaction ($id_partner, $id_store, NULL,
+      $id_app, $price, $transaction_code, 'notes', 'description', NULL);
     echo PHP_EOL;
-    echo mysqli_error($conn);
-  }
+    echo $id_transaction;
+    echo PHP_EOL;
+    // query  get id historic_transaction passed code_trasaction
+    // query updadte buy_themes
+    //query updadte partner credits
 
-  $id_transaction = insert_history_transaction ($id_partner, $id_store, NULL,
-    $id_app, $price, $transaction_code, 'notes', 'description', NULL);
-  echo PHP_EOL;
-  echo $id_transaction;
-  echo PHP_EOL;
-  // query  get id historic_transaction passed code_trasaction
-  // query updadte buy_themes
-  //query updadte partner credits
+    update_partner_credits($id_partner,$price);
+    update_buy_themes($id_buy,$id_transaction);
+    echo "SUCESS";
+}
+elseif ($is_app == 1) {
+  echo "sim";
+}
 
-  update_partner_credits($id_partner,$price);
-  update_buy_themes($id_buy,$id_transaction);
-  echo "SUCESS";
 
 }else if ((int) $_POST['is_app'] == 1) {
   // mount query for app purchase
