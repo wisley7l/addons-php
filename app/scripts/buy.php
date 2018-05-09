@@ -140,7 +140,7 @@ if (empty($_POST)) {
     // /*
     $query =  "INSERT INTO `buy_apps` (`app_id`, `store_id`,`date_init`,
      `date_end`,`date_renovation`,`type_plan`,`app_value`,`payment_status`,`plan_id`,`id_transaction`)
-       VALUES ($id_app,$id_store,$date_init,$date_end,$date_renovation,0,$price,0,$id_plan,NULL)";
+       VALUES ($id_app,$id_store,'$date_init','$date_end','$date_renovation',0,$price,0,$id_plan,NULL)";
 
     // query search app and theme for index page
     if (!mysqli_query($conn, $query)) {
