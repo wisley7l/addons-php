@@ -1113,7 +1113,7 @@ function insert_history_transaction_2($id_partner, $id_store, $id_app, $id_theme
   if ($theme_id == 0 ) {
     $query =  "INSERT INTO historic_transaction (partner_id, store_id,app_id,
        transaction_code,notes,description,payment_value,date_transaction)
-        VALUES ($partner_id,$store_id,$app_id,'$transaction_code',
+        VALUES ($partner_id,$store_id,$app_id,$transaction_code,
           '$notes','$description',$payment_value,$date_transaction);";
   }
   echo PHP_EOL;
