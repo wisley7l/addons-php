@@ -885,7 +885,7 @@ function get_apps_buy($id)
         'title' => $row['title'],
         'date_init' => $row['date_init'],
         'date_end' => $row['date_end'], // info id plan or id template
-        'price' => $row['app_value'], // value theme or app
+        'price' => treatNumber($row['app_value']), // value theme or app
         'transaction' => $row['transaction_code'],
         'is_app' => 1
         );
