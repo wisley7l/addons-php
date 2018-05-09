@@ -41,13 +41,13 @@ $sales_user = array(
 
 );
 
-// $item_apps = get_apps_buy($id_store);
-$item_themes = get_themes_buy($id_store);
+$item_apps = get_apps_buy($id_store);
+// $item_themes = get_themes_buy($id_store);
 
 
 
 // intial twig and send varibles for template
- /*
+ // /*
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
 echo $twig->render('dashboard-statement0.twig', array(
