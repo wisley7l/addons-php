@@ -1104,6 +1104,7 @@ function insert_history_transaction_2($id_partner, $id_store, $id_app, $id_theme
   $app_id = (int) $id_app;
   $theme_id = (int) $id_theme;
   $payment_value = (int) $price;// obs
+  echo NULL;
 
   $conn = $GLOBALS['conn']; // get varible global conn
   $query =  "INSERT INTO historic_transaction (partner_id, store_id,app_id,theme_id,
