@@ -1110,6 +1110,9 @@ function insert_history_transaction_2($id_partner, $id_store, $id_app, $id_theme
   if ($theme_id == 0 ) {
     $theme_id = 'NULL';
   }
+  if ($date_transaction == '') {
+    $date_transaction = 'NULL';
+  }
 
   $conn = $GLOBALS['conn']; // get varible global conn
   $query =  "INSERT INTO historic_transaction (partner_id, store_id,app_id,theme_id,
