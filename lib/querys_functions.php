@@ -1105,22 +1105,20 @@ function insert_history_transaction_2($id_partner, $id_store, $id_app, $id_theme
   $theme_id = (int) $id_theme;
   $payment_value = (int) $price;// obs
   if ($app_id == 0 ) {
-    $query =  "INSERT INTO historic_transaction (partner_id, store_id,theme_id,
-       transaction_code,notes,description,payment_value,date_transaction)
-        VALUES ($partner_id,$store_id,$theme_id,'$transaction_code',
-          '$notes','$description',$payment_value,$date_transaction);";
+    $app_id = 'NULL';
   }
   if ($theme_id == 0 ) {
-    $query =  "INSERT INTO historic_transaction (partner_id, store_id,app_id,
-       transaction_code,notes,description,payment_value,date_transaction)
-        VALUES ($partner_id,$store_id,$app_id,$transaction_code,
-          '$notes','$description',$payment_value,$date_transaction);";
+    $theme_id = 'NULL';
   }
+
+  $conn = $GLOBALS['conn']; // get varible global conn
+  $query =  "INSERT INTO historic_transaction (partner_id, store_id,app_id,theme_id,
+     transaction_code,notes,description,payment_value,date_transaction)
+      VALUES ($partner_id,$store_id,$app_id,$theme_id,'$transaction_code',
+        '$notes','$description',$payment_value,$date_transaction);";
   echo PHP_EOL;
   echo $query;
   echo PHP_EOL;
-  $conn = $GLOBALS['conn']; // get varible global conn
-
   //*/
   //*
   // query search app and theme for index page
