@@ -865,6 +865,7 @@ function get_apps_buy($id)
 {
   $id_store = (int) $id;
 
+  $buys = array();
   $conn = $GLOBALS['conn']; // get varible global conn
   // query search app and theme for index page
   $query = "SELECT b.id, b.app_id, b.store_id,b.date_init, b.date_end,
@@ -889,12 +890,12 @@ function get_apps_buy($id)
         'is_app' => 1
         );
         var_dump($item);
-        // array_push($images, $item);
+        array_push($buys, $item);
       }
       // free result set
       mysqli_free_result($result);
     }
-
+  return $buys;
 }
 //
 function get_themes_buy($id)
