@@ -138,9 +138,9 @@ if (empty($_POST)) {
     $date_end = date("Y-m-d H:i:s",$date_end);
     $date_renovation = date("Y-m-d H:i:s",$date_renovation);
     // /*
-    $query =  "INSERT INTO `buy_apps` (`app_id`, `store_id`,`app_value`,
-     `payment_status`, `plan_id`,`id_transaction`,`date_init`, `date_end`,`date_renovation`, )
-       VALUES ($id_app,$id_store,$price,0,$id_plan,NULL,'$date_init','$date_end', '$date_renovation');";
+    $query =  "INSERT INTO `buy_apps` (`app_id`, `store_id`,`date_init`,
+     `date_end`, `date_renovation`,`type_plan`,`app_value`, `payment_status`,`plan_id`,`id_transaction`)
+       VALUES ($id_app,$id_store,$date_init,$date_end,$date_renovation,0,$price,0,$id_plan,NULL)";
 
     // query search app and theme for index page
     if (!mysqli_query($conn, $query)) {
