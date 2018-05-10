@@ -805,6 +805,43 @@ function search_transaction_id_theme($id_partner)
   return $transaction;
 }
 
+function search_transaction_id_app($id_partner)
+{
+  echo "search_transaction_id";
+  $id = (int) $id_partner;
+  $conn = $GLOBALS['conn']; // get varible global conn
+  // query search app and theme for index page
+  $query = "SELECT h.id, h.partner_id, h.store_id, h.app_id ,
+    h.transaction_code, h.notes, h.description, h.payment_value ,
+    h.date_transaction, a.title
+    FROM historic_transaction h, apps a
+    WHERE ( h.partner_id = $id AND h.app_id = a.id )";
+    $transaction = array();
+
+  if ($result = mysqli_query(  $conn, $query )) {
+    // fetch associative array
+    while ($row = mysqli_fetch_assoc($result)) {
+      $item = array(
+        'id'=> $row['id'],
+        'partner_id'=> $row['partner_id'],
+        'store_id'=> $row['store_id'],
+        'id_item'=> $row['app_id'],
+        'code'=> $row['transaction_code'],
+        'notes'=> $row['notes'],
+        'description'=> $row['description'],
+        'price'=> treatNumber($row['payment_value']),
+        'date_transaction'=> $row['date_transaction'],
+        'name' =>  $row['title'],
+      );
+      array_push($transaction, $item);
+    }
+    // free result set
+    mysqli_free_result($result);
+  }
+  // var_dump($transaction);
+  return $transaction;
+}
+
 // TODO: Edit
 function search_withdrawl_id($id_partner)
 {

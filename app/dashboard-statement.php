@@ -32,7 +32,9 @@ if ($_SESSION['login'] == false) {
 //(end) * Required on all pages *
 
 //TODO:
-$transaction = search_transaction_id_theme( (int) $_SESSION['user_id']);
+// $transaction = search_transaction_id_theme( (int) $_SESSION['user_id']);
+$transaction = search_transaction_id_app( (int) $_SESSION['user_id']);
+
 $sum = 0.0;
 
 foreach ($transaction as $key => $value) {
