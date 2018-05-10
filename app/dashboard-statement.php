@@ -32,19 +32,23 @@ if ($_SESSION['login'] == false) {
 //(end) * Required on all pages *
 
 //TODO:
-// $transaction = search_transaction_id_theme( (int) $_SESSION['user_id']);
-$transaction = search_transaction_id_app( (int) $_SESSION['user_id']);
+// $transaction_theme = search_transaction_id_theme( (int) $_SESSION['user_id']);
+$transaction_app = search_transaction_id_app( (int) $_SESSION['user_id']);
 
 $sum = 0.0;
 
-foreach ($transaction as $key => $value) {
+foreach ($transaction_theme as $key => $value) {
+  $sum += $value['price'];
+}
+
+foreach ($transaction_app as $key => $value) {
   $sum += $value['price'];
 }
 
 
 // obtain the total number of items sold and the total amount collected from the user's sales
 $sales_user = array(
-  'total_items' => count($transaction), // get in DB count($transaction)
+  'total_items' => count($transaction_theme) + count($transaction_app) , // get in DB count($transaction)
   'total_earnings' => $sum // get in DB array_sum($transaction['price'])
 );
 
@@ -75,6 +79,7 @@ echo $twig->render('dashboard-statement.twig', array(
     // test
   'user' => $user_login,
   'sales_user' => $sales_user,
-  'item' => $transaction
+  'item_theme' => $transaction_theme,
+  'item_app' => $transaction_app,
 ));
 //*/

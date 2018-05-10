@@ -123,7 +123,13 @@
 				<!-- /TRANSACTION LIST HEADER -->
 
         {# use foreach to list items #}
-				{% for i in item %}
+				{% for i in item_theme %}
+					<!-- TRANSACTION LIST ITEM -->
+					{{macro_dashboad.item_list(dictionary,i)}}
+					<!-- /TRANSACTION LIST ITEM -->
+				{% endfor %}
+
+				{% for i in item_apps %}
 					<!-- TRANSACTION LIST ITEM -->
 					{{macro_dashboad.item_list(dictionary,i)}}
 					<!-- /TRANSACTION LIST ITEM -->
