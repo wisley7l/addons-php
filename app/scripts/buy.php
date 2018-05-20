@@ -98,6 +98,7 @@ elseif ($is_app == 1) {
     }
     $transaction_code  = 'code-' . uniqid();
     $duration_plan = (int) verify_plan($plans['plans'], $id_plan)['duration'];
+    echo "Duration $duration_plan\n ";
     // free result set
     mysqli_free_result($result);
   }else {
@@ -115,9 +116,9 @@ elseif ($is_app == 1) {
   // query updadte buy_themes
   //query updadte partner credits
 
-  update_partner_credits($id_partner,$price);
-  update_buy_apps($id_buy,$id_transaction,$duration_plan);
-  echo "SUCESS";
+  // update_partner_credits($id_partner,$price);
+  // update_buy_apps($id_buy,$id_transaction,$duration_plan);
+  // echo "SUCESS";
 }
 
 
