@@ -81,7 +81,7 @@ if (empty($_POST)) {
     echo "SUCESS";
 }
 elseif ($is_app == 1) {
-  $query =  "SELECT b.app_value, b.app_id, a.partner_id, a.plans_json FROM buy_apps b, apps a
+  $query =  "SELECT b.app_value, b.app_id, b.plan_id, a.partner_id, a.plans_json FROM buy_apps b, apps a
     WHERE (b.id = $id_buy AND  b.store_id = $id_store ) LIMIT 1;";
 
   if ( $result = mysqli_query($conn, $query)) {
