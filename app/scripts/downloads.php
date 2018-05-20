@@ -53,6 +53,7 @@ if ((int)$_GET["is_app"] == 0) {
   var_dump($templates);
   $filepath = verify_template($templates['templates'], $id_template)["path_zip"];
   var_dump($filepath);
+  
   // Process download
   if(file_exists($filepath)) {
     header('Content-Description: File Transfer');
