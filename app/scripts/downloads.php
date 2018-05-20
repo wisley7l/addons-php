@@ -39,7 +39,7 @@ if ((int)$_GET["is_app"] == 0) {
   if ( $result = mysqli_query($conn, $query)) {
     while ($row = mysqli_fetch_assoc($result)) {
       $id_template = (int) $row['template_id'];
-      $templates = json_decode($row['json_body'],true);
+      $templates = json_decode($row['json_body'],true)['templates'];
     }
     // free result set
     mysqli_free_result($result);
