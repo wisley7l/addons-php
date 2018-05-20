@@ -1217,6 +1217,7 @@ function update_buy_themes($id,$transaction)
 
 function update_buy_apps($id,$transaction,$duration_plan)
 {
+  echo "string: $duration_plan\n ";
   $date_duration = (int)$duration_plan;
   $day_add = (int)($date_duration/2);
   $date_init = time ();
