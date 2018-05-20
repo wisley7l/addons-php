@@ -1226,6 +1226,8 @@ function update_buy_apps($id,$transaction,$duration_plan)
   $date_renovation = $date_end - (15*24*60*60);
   $date_init = date("Y-m-d H:i:s",$date_init);
   $date_end = date("Y-m-d H:i:s",$date_end);
+  echo ":***** ";
+  echo $date_end;
   $date_renovation = date("Y-m-d H:i:s",$date_renovation);
 
   $id_transaction = (int) $transaction;
