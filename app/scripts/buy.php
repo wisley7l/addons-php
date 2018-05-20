@@ -245,7 +245,7 @@ elseif ($is_app == 1) {
     exit;
   }
 
-  if (!verify_template($templates,$id_template)) {
+  if (!verify_template($templates,$id_template)['verify']) {
     header("Location: ../item-page?id=" . $id_app . "&app=" .  (int) $_POST['is_app'] . "&ErrorTemplate");
     exit;
   }

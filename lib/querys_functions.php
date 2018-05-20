@@ -1252,10 +1252,11 @@ function verify_plan($array_plan, $id_plan)
 
 function verify_template($array_template, $id_template)
 {
-  $r = 0;
+  $r['verify'] = 0;
   for ($i=0; $i < count($array_template) ; $i++) {
     if ($array_template[$i]['id'] == $id_template ) {
-      $r = 1;
+      $r['verify'] = 1;
+      $r['path_zip'] = $array_template[$i]['path_zip'];
       break;
     }
   }
