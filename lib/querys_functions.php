@@ -1256,6 +1256,8 @@ function update_buy_apps($id,$transaction,$duration_plan)
 
 function verify_plan($array_plan, $id_plan)
 {
+  var_dump($array_plan);
+  var_dump($id_plan);
   $r['verify'] = 0;
   for ($i=0; $i < count($array_plan) ; $i++) {
     if ($array_plan[$i]['id'] == $id_plan ) {
