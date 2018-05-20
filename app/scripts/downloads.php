@@ -54,4 +54,6 @@ if ((int)$_GET["is_app"] == 0) {
   $filepath = verify_template($templates['templates'], $id_template)["path_zip"];
   var_dump($filepath);
   sendFile($filepath,0);
+  header("Location: ../history-transaction");
+  exit;
 }
