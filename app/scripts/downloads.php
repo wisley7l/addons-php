@@ -21,3 +21,4 @@ if ($_SESSION['login'] == false) { // if not connected
   //header("Location: ../#ERRORLOGIN");
   exit;
 }
+var_dump($_GET);
