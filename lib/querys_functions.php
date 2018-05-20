@@ -1255,6 +1255,7 @@ function verify_template($array_template, $id_template)
     if ($array_template[$i]['id'] == $id_template ) {
       $r['verify'] = 1;
       $r['path_zip'] = $array_template[$i]['path_zip'];
+      $r['path_img'] = $array_template[$i]['path_img'];
       break;
     }
   }
