@@ -1087,39 +1087,39 @@ function sendFile($filepath,$is_app)
    }
 }
 
+// function insert_history_transaction($id_partner, $id_store, $id_app, $id_theme,
+//   $price, $transaction_code, $notes, $description, $date_transaction)
+// {
+//   $partner_id = (int) $id_partner;
+//   $store_id = (int) $id_store;
+//   $app_id = (int) $id_app;
+//   $theme_id = (int) $id_theme;
+//   $payment_value = (int) $price;// obs
+//
+//   $conn = $GLOBALS['conn']; // get varible global conn
+//
+//   $query =  "INSERT INTO historic_transaction (partner_id, store_id,theme_id,
+//      transaction_code,notes, description, payment_value) VALUES ($partner_id,
+//        $store_id, $theme_id,'$transaction_code','$notes','$description',$payment_value);";
+//   //*/
+//   //*
+//   // query search app and theme for index page
+//   if (!mysqli_query($conn, $query)) {
+//     echo PHP_EOL;
+//     echo "ERROR insert history";
+//     echo PHP_EOL;
+//     echo mysqli_error($conn);
+//     // // error INSERT // redirect
+//     // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
+//     // exit();
+//   }
+//   $id_buy = (int) mysqli_insert_id($conn);
+//   echo $id_buy;
+//   echo PHP_EOL;
+//   return $id_buy;
+// }
+
 function insert_history_transaction($id_partner, $id_store, $id_app, $id_theme,
-  $price, $transaction_code, $notes, $description, $date_transaction)
-{
-  $partner_id = (int) $id_partner;
-  $store_id = (int) $id_store;
-  $app_id = (int) $id_app;
-  $theme_id = (int) $id_theme;
-  $payment_value = (int) $price;// obs
-
-  $conn = $GLOBALS['conn']; // get varible global conn
-
-  $query =  "INSERT INTO historic_transaction (partner_id, store_id,theme_id,
-     transaction_code,notes, description, payment_value) VALUES ($partner_id,
-       $store_id, $theme_id,'$transaction_code','$notes','$description',$payment_value);";
-  //*/
-  //*
-  // query search app and theme for index page
-  if (!mysqli_query($conn, $query)) {
-    echo PHP_EOL;
-    echo "ERROR insert history";
-    echo PHP_EOL;
-    echo mysqli_error($conn);
-    // // error INSERT // redirect
-    // header("Location: ../dashboard-uploaditem#ERRORInsertApp");
-    // exit();
-  }
-  $id_buy = (int) mysqli_insert_id($conn);
-  echo $id_buy;
-  echo PHP_EOL;
-  return $id_buy;
-}
-
-function insert_history_transaction_2($id_partner, $id_store, $id_app, $id_theme,
   $price, $transaction_code, $notes, $description, $date_transaction)
 {
   $partner_id = (int) $id_partner;

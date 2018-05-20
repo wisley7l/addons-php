@@ -68,7 +68,7 @@ if (empty($_POST)) {
     }
 
     $id_transaction = insert_history_transaction ($id_partner, $id_store, NULL,
-      $id_app, $price, $transaction_code, 'notes', 'description', NULL);
+      $id_app, $price, $transaction_code, '-', '-', NULL);
     echo PHP_EOL;
     echo $id_transaction;
     echo PHP_EOL;
@@ -107,7 +107,7 @@ elseif ($is_app == 1) {
     echo mysqli_error($conn);
   }
 
-  $id_transaction = insert_history_transaction_2 ($id_partner, $id_store,$id_app,
+  $id_transaction = insert_history_transaction ($id_partner, $id_store,$id_app,
    NULL,$price, $transaction_code, '-', '-', NULL);
   echo PHP_EOL;
   echo $id_transaction;
