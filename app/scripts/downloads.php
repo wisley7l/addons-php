@@ -43,7 +43,12 @@ if ((int)$_GET["is_app"] == 0) {
     }
     // free result set
     mysqli_free_result($result);
+  }else {
+    echo "errorrrrrr";
+    echo PHP_EOL;
+    echo mysqli_error($conn);
   }
+
   echo "string";
   var_dump($templates);
 }
