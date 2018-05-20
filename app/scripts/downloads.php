@@ -51,6 +51,6 @@ if ((int)$_GET["is_app"] == 0) {
 
   var_dump($id_template);
   var_dump($templates);
-  $t = verify_template($templates, $id_template);
+  $t = verify_template($templates['templates'], $id_template);
   var_dump($t);
 }
