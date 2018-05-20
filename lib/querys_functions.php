@@ -1070,8 +1070,8 @@ function get_apps_car($id)
 
 function sendFile($filepath,$is_app)
 {
-  // Define o tempo máximo de execução em 0 para as conexões lentas
-   set_time_limit(0);
+  
+   // set_time_limit(0);
    // Process download
    if(file_exists($filepath)) {
      header('Content-Description: File Transfer');
