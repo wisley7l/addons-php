@@ -107,7 +107,7 @@ if(empty($_POST)) { // not exist post
          // print erro module_type
          // redirect dashboard-uploaditem?error=module_type
          //echo "erro module_type";
-         //header("Location: ../dashboard-uploaditem#ERRORModule");
+         header("Location: ../dashboard-uploaditem#ERRORModule");
          exit;
        }
        // echo $module_type;

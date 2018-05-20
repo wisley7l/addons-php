@@ -1079,7 +1079,7 @@ function sendFile($path_file,$is_app)
   // Define o tempo máximo de execução em 0 para as conexões lentas
    set_time_limit(0);
    // Arqui você faz as validações e/ou pega os dados do banco de dados
-   $file_name = explode(Addons\PATH_DATA . $path, $sim)[1];; // nome do arquivo que será enviado p/ download
+   $file_name = explode(Addons\PATH_DATA . $path, $sim)[1]; // nome do arquivo que será enviado p/ download
    // $path_file = '/pasta/do/arquivo/'.$aquivoNome; // caminho absoluto do arquivo
    // Verifica se o arquivo não existe
    if (!file_exists($path_file)) {
