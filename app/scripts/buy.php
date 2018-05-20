@@ -116,9 +116,11 @@ elseif ($is_app == 1) {
   // query updadte buy_themes
   //query updadte partner credits
 
-  // update_partner_credits($id_partner,$price);
-  // update_buy_apps($id_buy,$id_transaction,$duration_plan);
-  // echo "SUCESS";
+  update_partner_credits($id_partner,$price);
+  update_buy_apps($id_buy,$id_transaction,$duration_plan);
+  echo "SUCESS";
+  header("Location: ../history-transaction");
+  exit();
 }
 
 
