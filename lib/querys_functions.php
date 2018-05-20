@@ -1262,6 +1262,7 @@ function verify_plan($array_plan, $id_plan)
       $r['verify'] = 1;
       $r['price'] = $array_plan[$i]['value'];
       $r['duration'] = $array_plan[$i]['duration'];
+      echo $r['duration'];
       break;
     }
   }
