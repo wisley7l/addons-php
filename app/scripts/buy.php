@@ -97,7 +97,7 @@ elseif ($is_app == 1) {
       $plans =  json_decode($row['plans_json'],true); // increment total items on profile page
     }
     $transaction_code  = 'code-' . uniqid();
-    $duration_plan = verify_plan($plans['plans'], $id_plan);
+    $duration_plan = (int)verify_plan($plans['plans'], $id_plan)['duration'];
     var_dump($duration_plan);
     // free result set
     mysqli_free_result($result);
