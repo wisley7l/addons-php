@@ -1070,8 +1070,6 @@ function get_apps_car($id)
 
 function sendFile($filepath,$is_app)
 {
-  
-   // set_time_limit(0);
    // Process download
    if(file_exists($filepath)) {
      header('Content-Description: File Transfer');
