@@ -32,7 +32,7 @@ if ((int)$_GET["is_app"] == 0) {
   $id_buy = (int)$_GET['id'];
   $query = "SELECT b.id, b.store_id, b.payment_status, b.license_type,
     b.template_id, t.json_body
-    FROM buy_theme b, theme t
+    FROM buy_theme b, themes t
     WHERE b.id = $id_buy AND b.store_id = $id_user AND b.payment_status = 1
     AND t.id = b.theme_id;";
 
