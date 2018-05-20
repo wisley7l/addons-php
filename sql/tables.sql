@@ -91,39 +91,6 @@ CREATE TABLE IF NOT EXISTS `themes_evaluations` (
   FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `buy_apps` (
-  `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `app_id` MEDIUMINT UNSIGNED NOT NULL,
-  `store_id` MEDIUMINT UNSIGNED NOT NULL,
-  `date_init` DATE NOT NULL,
-  `date_end` DATE NOT NULL,
-  `date_renovation` DATE NOT NULL,
-  `type_plan` TINYINT NOT NULL DEFAULT 0,
-  `app_value` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
-  `payment_status` TINYINT NOT NULL DEFAULT 0,
-  `plan_id` MEDIUMINT NULL,
-  `id_transaction` MEDIUMINT UNSIGNED NULL,
-  PRIMARY KEY (`id`),
-  INDEX (`app_id`, `store_id`),
-  FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (`id_transaction`) REFERENCES `historic_transaction`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
-
-CREATE TABLE IF NOT EXISTS `buy_themes` (
-  `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `theme_id` MEDIUMINT UNSIGNED NOT NULL,
-  `store_id` MEDIUMINT UNSIGNED NOT NULL,
-  `theme_value` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
-  `payment_status` TINYINT NOT NULL DEFAULT 0,
-  `license_type` TINYINT NOT NULL DEFAULT 0,
-  `id_transaction` MEDIUMINT UNSIGNED NULL,
-  `template_id` TINYINT NOT NULL DEFAULT 0,
-  PRIMARY KEY(`id`),
-  INDEX (`theme_id`, `store_id`),
-  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (`id_transaction`) REFERENCES `historic_transaction`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
-
 CREATE TABLE IF NOT EXISTS `comment_apps` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `store_id` MEDIUMINT UNSIGNED NULL,
@@ -237,6 +204,39 @@ CREATE TABLE IF NOT EXISTS `historic_withdrawal` (
   PRIMARY KEY (`id`),
   INDEX (`partner_id`),
   FOREIGN KEY (`partner_id`) REFERENCES `partners` (`id`)
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
+
+CREATE TABLE IF NOT EXISTS `buy_apps` (
+  `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `app_id` MEDIUMINT UNSIGNED NOT NULL,
+  `store_id` MEDIUMINT UNSIGNED NOT NULL,
+  `date_init` DATE NOT NULL,
+  `date_end` DATE NOT NULL,
+  `date_renovation` DATE NOT NULL,
+  `type_plan` TINYINT NOT NULL DEFAULT 0,
+  `app_value` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
+  `payment_status` TINYINT NOT NULL DEFAULT 0,
+  `plan_id` MEDIUMINT NULL,
+  `id_transaction` MEDIUMINT UNSIGNED NULL,
+  PRIMARY KEY (`id`),
+  INDEX (`app_id`, `store_id`),
+  FOREIGN KEY (`app_id`) REFERENCES `apps`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`id_transaction`) REFERENCES `historic_transaction`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
+
+CREATE TABLE IF NOT EXISTS `buy_themes` (
+  `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `theme_id` MEDIUMINT UNSIGNED NOT NULL,
+  `store_id` MEDIUMINT UNSIGNED NOT NULL,
+  `theme_value` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
+  `payment_status` TINYINT NOT NULL DEFAULT 0,
+  `license_type` TINYINT NOT NULL DEFAULT 0,
+  `id_transaction` MEDIUMINT UNSIGNED NULL,
+  `template_id` TINYINT NOT NULL DEFAULT 0,
+  PRIMARY KEY(`id`),
+  INDEX (`theme_id`, `store_id`),
+  FOREIGN KEY (`theme_id`) REFERENCES `themes`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`id_transaction`) REFERENCES `historic_transaction`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `store` (
