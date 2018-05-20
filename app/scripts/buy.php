@@ -99,7 +99,7 @@ elseif ($is_app == 1) {
     $transaction_code  = 'code-' . uniqid();
     $duration_plan = (int) verify_plan($plans['plans'], $id_plan);
     echo "s:";
-    var_dump($duration_plan);
+    var_dump($plans['plans']);
     // free result set
     mysqli_free_result($result);
   }else {
