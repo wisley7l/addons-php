@@ -54,3 +54,6 @@ echo PHP_EOL;
 $sha256 = hash_hmac('sha256',$paylod,Addons\SSO_SECRET);
 echo $sha256;
 echo PHP_EOL;
+// https://admin.e-com.plus/session/sso/v1/market
+header("Location: https://admin.e-com.plus/session/sso/v1/market?sso=$url_paylod&sig=$sha256");
+// exit();
