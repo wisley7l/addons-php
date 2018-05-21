@@ -45,3 +45,6 @@ echo PHP_EOL;
 $str_nonce = "nonce=" . $nonce;
 echo $str_nonce;
 echo PHP_EOL;
+$paylod = base64_encode($str_nonce);
+echo $paylod;
+echo PHP_EOL;
