@@ -19,8 +19,7 @@ function send_mailjet($subject,$text,$msg)
     $data['Recipients'][] = array('Email' => 'tiatenas7l@gmail.com');
   // }
 
-  echo PHP_EOL;
-
+  echo "send";
   echo PHP_EOL;
   var_dump($data);
   echo PHP_EOL;
