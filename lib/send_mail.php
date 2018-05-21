@@ -1,7 +1,7 @@
 <?php
 function send_mailjet($subject,$text,$msg)
 {
-
+  echo "send";
   // Mailjet API
   $data = array(
     'FromEmail' => 'noreply@e-com.club',
@@ -19,7 +19,7 @@ function send_mailjet($subject,$text,$msg)
     $data['Recipients'][] = array('Email' => 'tiatenas7l@gmail.com');
   // }
 
-  echo "send";
+
   echo PHP_EOL;
   var_dump($data);
   echo PHP_EOL;
