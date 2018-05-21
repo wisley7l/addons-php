@@ -25,7 +25,7 @@ if ($_SESSION['login'] == false OR $_SESSION['is_store'] == 0) { // if not conne
 // $_SESSION['is_store']
 $id_user = (int) $_SESSION['user_id'];
 
-var_dump($_GET);
+// var_dump($_GET);
 
 if ((int)$_GET["is_app"] == 0) {
   $conn = $GLOBALS['conn']; // get varible global conn
@@ -56,18 +56,18 @@ if ((int)$_GET["is_app"] == 0) {
 
   // // Process download
   if(file_exists($filepath)) {
-    // header('Content-Description: File Transfer');
-    // header('Content-Type: application/octet-stream');
-    // header('Content-Disposition: attachment; filename="'.basename($filepath).'"');
-    // header('Expires: 0');
-    // header('Cache-Control: must-revalidate');
-    // header('Pragma: public');
-    // header('Content-Length: ' . filesize($filepath));
-    // flush(); // Flush system output buffer
+    header('Content-Description: File Transfer');
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename="'.basename($filepath).'"');
+    header('Expires: 0');
+    header('Cache-Control: must-revalidate');
+    header('Pragma: public');
+    header('Content-Length: ' . filesize($filepath));
+    flush(); // Flush system output buffer
     readfile($filepath);
-    // exit;
+    exit();
   }
   // sendFile($filepath,0);
   // header("Location: ../history-transaction");
-  // exit;
+  // exit();
 }
