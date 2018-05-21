@@ -56,8 +56,8 @@ if ((int)$_GET["is_app"] == 0) {
 
   // // Process download
   if(file_exists($filepath)) {
-    header('Content-Description: File Transfer');
-    header('Content-Type: application/octet-stream');
+    // header('Content-Description: File Transfer');
+    // header('Content-Type: application/octet-stream');
     header('Content-Disposition: attachment; filename="'.basename($filepath).'"');
     header('Expires: 0');
     header('Cache-Control: must-revalidate');
