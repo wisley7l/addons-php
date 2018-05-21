@@ -5,6 +5,7 @@
 //session
 
 //createSession($id,$email,$name,$credits,$image,$is_store)
+/*
 $conn = connect_db();
 $id_store = (int) 1;
 
@@ -37,3 +38,6 @@ if ($id == NULL OR $id == '' ) {
   createSession($id,'NO-Email','SHOPMAN-TEST',$credit,NULL,1);
 }
 //*/
+
+$nonce = uniqid(rand(), true);
+echo $nonce;

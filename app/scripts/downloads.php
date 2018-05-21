@@ -51,7 +51,7 @@ if ((int)$_GET["is_app"] == 0) {
 
   var_dump($id_template);
   var_dump($templates);
-  $filepath = verify_template($templates['templates'], $id_template)["path_img"];
+  $filepath = verify_template($templates['templates'], $id_template)["path_zip"];
   var_dump($filepath);
 
   // // Process download
