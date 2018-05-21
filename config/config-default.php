@@ -25,6 +25,9 @@ const MKTP_TITLE = 'E-Com Plus Addons';
 const USER_MAILJET = 'USER_MAILJET';
 const PWD_MAILJET = 'PSWD_MAILJET';
 
+// constants for sso secret
+const SSO_SECRET = 'ecomplus_addons';
+
 switch ($_SERVER['PATH_LANG']) {
   case 'en_us':
     define('Addons\MKTP_SUBTITLE', 'Ecommerce apps and themes marketplace');
