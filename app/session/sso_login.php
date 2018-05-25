@@ -8,5 +8,6 @@ echo PHP_EOL;
 echo $sso;
 echo PHP_EOL;
 echo $sso_decode;
-$q = parse_str($sso_decode);
+parse_str($sso_decode,$q);
+echo PHP_EOL;
 var_dump($q);
