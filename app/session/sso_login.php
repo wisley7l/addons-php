@@ -7,6 +7,7 @@ $sso_decode = base64_decode($sso);
 // echo $sso;
 // echo PHP_EOL;
 // echo $sso_decode;
+setcookie ( "nonce");
 parse_str($sso_decode,$query);
 // echo PHP_EOL;
 // var_dump($q);
