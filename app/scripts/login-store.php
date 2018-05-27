@@ -41,8 +41,8 @@ if ($id == NULL OR $id == '' ) {
 //*
 $nonce = uniqid(rand(), true);
 setcookie("nonce", $nonce);
-echo PHP_EOL;
-echo $_COOKIE['nonce'];
+// echo PHP_EOL;
+// echo $_COOKIE['nonce'];
 // echo $nonce;
 // echo PHP_EOL;
 $str_nonce = "nonce=" . $nonce;
@@ -58,6 +58,6 @@ $sha256 = hash_hmac('sha256',$paylod,Addons\SSO_SECRET);
 // echo $sha256;
 // echo PHP_EOL;
 // https://admin.e-com.plus/session/sso/v1/market
-// header("Location: https://admin.e-com.plus/session/sso/v1/market?sso=$url_paylod&sig=$sha256");
+header("Location: https://admin.e-com.plus/session/sso/v1/market?sso=$url_paylod&sig=$sha256");
 // exit();
 //*/
