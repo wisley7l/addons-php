@@ -40,7 +40,7 @@ if ($id == NULL OR $id == '' ) {
 //*/
 //*
 $nonce = uniqid(rand(), true);
-setcookie("nonce", $nonce);
+$_COOKIE['nonce'] = $nonce;
 // echo PHP_EOL;
 // echo $_COOKIE['nonce'];
 // echo $nonce;
