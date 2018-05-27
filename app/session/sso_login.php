@@ -14,7 +14,7 @@ if ($_COOKIE['nonce'] != $query['nonce']) {
   exit();
 }
 // echo PHP_EOL;
-// var_dump($q);
+var_dump($query);
 // ["nonce"]=>
 //   string(33) "19266332085b0613fb1cb788.76724176"
 //   ["name"]=>
@@ -71,9 +71,9 @@ if ($id == NULL OR $id == '' ) {
     exit();
   }
   else {
-      createSession($id_store,$query['email'],$query['name'],0,NULL,1);
+      // createSession($id_store,$query['email'],$query['name'],0,NULL,1);
   }
 }else {
-  createSession($id,$query['email'],$query['name'],$credit,NULL,1);
+  // createSession($id,$query['email'],$query['name'],$credit,NULL,1);
 }
 //*/
