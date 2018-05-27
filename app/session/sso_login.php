@@ -37,6 +37,11 @@ echo PHP_EOL;
 echo $_COOKIE['nonce'];
 echo PHP_EOL;
 echo $query['nonce'];
+echo PHP_EOL;
+echo $query['email'];
+echo PHP_EOL;
+echo $query['name'];
+
 
 // get infomations in client
 // consult the database if the user already exists, if there is information and
