@@ -40,9 +40,9 @@ if ($id == NULL OR $id == '' ) {
 //*/
 //*
 $nonce = uniqid(rand(), true);
-$_COOKIE['nonce'] = $nonce;
 echo PHP_EOL;
-echo $_COOKIE['nonce'];
+echo Addons/PATH_APP;
+// echo $_COOKIE['nonce'];
 // echo $nonce;
 // echo PHP_EOL;
 $str_nonce = "nonce=" . $nonce;

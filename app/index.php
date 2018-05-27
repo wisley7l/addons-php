@@ -2,7 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 // get dictionary
 $dictionary = get_dictionary();
-setcookie("nonce", "test");
+// setcookie("nonce", "test");
 // variable to check the user login, because some options are only allowed for online users
 // check if there was a login attempt and treats error and success attempts
 /*
