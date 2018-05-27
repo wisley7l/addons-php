@@ -40,9 +40,7 @@ if ($id == NULL OR $id == '' ) {
 //*/
 //*
 $nonce = uniqid(rand(), true);
-// setcookie("nonce", $nonce);
-setcookie("nonce", $nonce,time()+3600,
-Addons\PATH_APP, "www.market.e-com.plus/session/sso_login",1);
+setcookie("nonce", $nonce);
 // echo PHP_EOL;
 // echo $_COOKIE['nonce'];
 // echo $nonce;
