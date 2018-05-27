@@ -41,9 +41,11 @@ if ($id == NULL OR $id == '' ) {
 //*
 $nonce = uniqid(rand(), true);
 echo PHP_EOL;
-echo Addons\PATH_APP;
-setcookie("nonce", $nonce);
-// echo $_COOKIE['nonce'];
+echo $_COOKIE['nonce'];
+$_COOKIE['nonce'] = $nonce;
+echo PHP_EOL;
+echo $_COOKIE['nonce'];
+
 // echo $nonce;
 // echo PHP_EOL;
 $str_nonce = "nonce=" . $nonce;
