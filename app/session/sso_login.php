@@ -31,5 +31,5 @@ parse_str($sso_decode,$query);
 //   string(4) "true"
 echo PHP_EOL;
 echo $_COOKIE['nonce'];
-// echo PHP_EOL;
-// echo $query['nonce'];
+echo PHP_EOL;
+echo $query['nonce'];
