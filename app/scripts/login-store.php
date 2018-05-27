@@ -46,7 +46,7 @@ $nonce = uniqid(rand(), true);
 // $_COOKIE['nonce'] = $nonce;
 // echo PHP_EOL;
 // echo $_COOKIE['nonce'];
-setcookie ( "nonce", $nonce, 0 , "../" , "www.market.e-com.plus");
+setcookie ( "nonce", $nonce, 0 , "../");
 // echo $nonce;
 // echo PHP_EOL;
 $str_nonce = "nonce=" . $nonce;
