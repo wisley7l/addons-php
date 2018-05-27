@@ -43,7 +43,7 @@ $nonce = uniqid(rand(), true);
 echo PHP_EOL;
 echo Addons\PATH_APP;
 setcookie("nonce", $nonce,
-time()+3600, Addons\PATH_APP, "www.market.e-com.plus",1);
+time()+3600, Addons\PATH_APP, "www.market.e-com.plus");
 // echo $_COOKIE['nonce'];
 // echo $nonce;
 // echo PHP_EOL;
@@ -60,6 +60,6 @@ $sha256 = hash_hmac('sha256',$paylod,Addons\SSO_SECRET);
 // echo $sha256;
 // echo PHP_EOL;
 // https://admin.e-com.plus/session/sso/v1/market
-// header("Location: https://admin.e-com.plus/session/sso/v1/market?sso=$url_paylod&sig=$sha256");
+header("Location: https://admin.e-com.plus/session/sso/v1/market?sso=$url_paylod&sig=$sha256");
 // exit();
 //*/
