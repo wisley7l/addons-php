@@ -42,6 +42,8 @@ if ($id == NULL OR $id == '' ) {
 $nonce = uniqid(rand(), true);
 echo PHP_EOL;
 echo Addons\PATH_APP;
+setcookie("nonce", $nonce,
+time()+3600, Addons\PATH_APP, "www.market.e-com.plus",1);
 // echo $_COOKIE['nonce'];
 // echo $nonce;
 // echo PHP_EOL;
