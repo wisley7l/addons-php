@@ -9,6 +9,10 @@ $sso_decode = base64_decode($sso);
 // echo $sso_decode;
 setcookie ( "nonce");
 parse_str($sso_decode,$query);
+if ($_COOKIE['nonce'] != $query['nonce']) {
+  header("Location: ../#errorLogin");
+  exit();
+}
 // echo PHP_EOL;
 // var_dump($q);
 // ["nonce"]=>
