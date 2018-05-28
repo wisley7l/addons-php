@@ -119,3 +119,18 @@ $('select#price_filter').on("change",function(ev){
    "&category=" + category_filter + "&name=" + name_search;
 
 });
+
+$('select#category_filter').on("change",function(ev){
+  let category_filter = $(this).val(),
+      price_filter = $('select#price_filter').val(),
+      name_search = $('input#search_products').val(),
+      type_page = $('input#type_page').val();
+
+  console.log(price_filter);
+  console.log(category_filter);
+  console.log(name_search);
+  console.log(type_page);
+  window.location.href = "/apps-page?type=" + type_page + "&filter=" + price_filter +
+   "&category=" + category_filter + "&name=" + name_search;
+
+});
