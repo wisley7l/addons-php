@@ -53,7 +53,8 @@ if ($_COOKIE['nonce'] != $query_s['nonce']) {
 $conn = connect_db();
 $id_store = (int) $query_s['external_id'];
 
-$query = "SELECT store_id, credits FROM store  WHERE id = $id_store LIMIT 1;";
+
+$query = "SELECT store_id, credits FROM store  WHERE store_id = $id_store LIMIT 1;";
 
 
 if ($result = mysqli_query(  $conn, $query )) {
