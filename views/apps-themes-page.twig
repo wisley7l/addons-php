@@ -36,7 +36,7 @@
 				<h4>{{dictionary.word_items_found}} ({{info_page.number_found}})</h4>
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
-						<select name="price_filter" id="price_filter" onchange="location = this.value;">
+						<select name="price_filter" id="price_filter" >>
 							{% for category in all_category %}
 							{% set selected = '' %}
 							{% if category.id == info_page.search_id %}
@@ -54,7 +54,7 @@
 				</form>
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
-						<select name="price_filter" id="price_filter" onchange="location = this.value;">
+						<select name="price_filter" id="price_filter">
 							<option value="{{info_page.page}}&filter=all&name={{info_page.search}}" {{filter.all}}>All</option>
 							<option value="{{info_page.page}}&filter=free&name={{info_page.search}}" {{filter.free}}>Free</option>
 						</select>
