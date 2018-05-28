@@ -145,8 +145,8 @@ $( ".search-form" ).submit(function( event ) {
   console.log(category_filter);
   console.log(name_search);
   console.log(type_page);
-  // window.location.href = "/apps-page?type=" + type_page + "&filter=" + price_filter +
-  //  "&category=" + category_filter + "&name=" + name_search;
-  alert( "Handler for .submit() called." );
+  window.location.href = "/apps-page?type=" + type_page + "&filter=" + price_filter +
+   "&category=" + category_filter + "&name=" + name_search;
+  // alert( "Handler for .submit() called." );
   event.preventDefault();
 });
