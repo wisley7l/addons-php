@@ -106,7 +106,9 @@ $("#addons-download").click(function(event) {
 });
 
 $('select#price_filter').on("change",function(ev){
-  var linkEnviar = $(this).val();
-  console.log(linkEnviar);
+  let price_filter = $(this).val(),
+      category_filter = $('select#category_filter').val();
+  console.log(price_filter);
+  console.log(category_filter);
 
 });
