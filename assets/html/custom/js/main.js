@@ -104,3 +104,9 @@ $("#addons-download").click(function(event) {
   $("#addons-id-buy").val(id);
   $("#addons-downlod-file").submit();
 });
+
+$('select#price_filter').on("change",function(ev){
+  var linkEnviar = $(this).val();
+  console.log(linkEnviar);
+
+});
