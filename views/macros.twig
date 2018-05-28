@@ -934,7 +934,7 @@
   </div>
 {% endmacro %}
 <!-- macro to mount the main menu -->
-{% macro menu_main(dictionary,app_category,theme_category) %}
+{% macro menu_main(dictionary,app_category,theme_category,info_page) %}
   {% import 'macros.twig' as macro_main %}
   <div class="main-menu-wrap">
   <div class="menu-bar">
@@ -1064,7 +1064,7 @@
   <img src="../images/logo.png" alt="logo">
 {% endmacro %}
 <!-- macro image logo -->
-{% macro all_header(login,dictionary,user,app_category,theme_category) %}
+{% macro all_header(login,dictionary,user,app_category,theme_category,info_page) %}
   {% import 'macros.twig' as macro_main %}
   	<!-- HEADER -->
   	<div class="header-wrap">
@@ -1113,7 +1113,7 @@
   	<!-- /SIDE MENU -->
 
   	<!-- MAIN MENU -->
-  	{{macro_main.menu_main(dictionary,app_category,theme_category)}}
+  	{{macro_main.menu_main(dictionary,app_category,theme_category,info_page)}}
   	<!-- /MAIN MENU -->
 {% endmacro %}
 <!-- macro user quickview main -->
