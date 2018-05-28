@@ -115,6 +115,6 @@ $('select#price_filter').on("change",function(ev){
   console.log(category_filter);
   console.log(name_search);
   console.log(type_page);
-  window.location.href = "/";
+  window.location.href = "/apps_page";
 
 });
