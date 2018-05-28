@@ -115,11 +115,6 @@ function createSession($id,$email,$name,$credits,$image,$is_store)
     $image = 'https://www.ocf.berkeley.edu/~dblab/blog/wp-content/uploads/2012/01/icon-profile.png';
   }
 
-  echo "$name";
-  
-
-
-
   if ($is_store == false) {
     $id_session = 'partner-'.$id;
   }else {
@@ -140,8 +135,8 @@ function createSession($id,$email,$name,$credits,$image,$is_store)
   //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
   }
   else {
-    // header("Location: ../#sucesslogin");
-    // exit;
+    header("Location: ../#sucesslogin");
+    exit();
   }
 }
 
