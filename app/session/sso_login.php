@@ -8,8 +8,8 @@ $sso_decode = base64_decode($sso);
 // echo PHP_EOL;
 // echo $sso_decode;
 setcookie ( "nonce");
-parse_str($sso_decode,$query);
-if ($_COOKIE['nonce'] != $query['nonce']) {
+parse_str($sso_decode,$query_s);
+if ($_COOKIE['nonce'] != $query_s['nonce']) {
   header("Location: ../#errorLogin");
   exit();
 }
@@ -51,7 +51,7 @@ if ($_COOKIE['nonce'] != $query['nonce']) {
 //createSession($id,$email,$name,$credits,$image,$is_store)
 // /*
 $conn = connect_db();
-$id_store = (int) $query['external_id'];
+$id_store = (int) $query_s['external_id'];
 
 $query = "SELECT store_id, credits FROM store  WHERE id = $id_store LIMIT 1;";
 
@@ -76,9 +76,9 @@ if ($id == NULL OR $id == '' ) {
     exit();
   }
   else {
-      createSession($id_store,$query['email'],"teste",0,NULL,1);
+      createSession($id_store,$query_s['email'],"teste",0,NULL,1);
   }
 }else {
-  createSession($id,$query['email'],"teste2",$credit,NULL,1);
+  createSession($id,$query_s['email'],"teste2",$credit,NULL,1);
 }
 //*/
