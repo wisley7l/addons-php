@@ -76,7 +76,7 @@ if ($id == NULL OR $id == '' ) {
     exit();
   }
   else {
-      createSession($id_store,$query['email'],$query['name'],0,NULL,1);
+      createSession($id_store,$query['email'],"teste",0,NULL,1);
   }
 }else {
   createSession($id,$query['email'],"teste",$credit,NULL,1);
