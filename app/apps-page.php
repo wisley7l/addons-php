@@ -122,7 +122,7 @@ if ($_GET['type'] == 'apps') {
 }elseif ($_GET['type'] == 'themes') {
   $title_page = $dictionary['word_themes_store'];
   $_category = $theme_category;
-  if (!empty($_GET['category']) OR ((int)$_GET['category'] == 0) ) {
+  if (!empty($_GET['category']) OR ((int)$_GET['category'] != 0) ) {
     $id_category = (int) $_GET['category'];
     $title_page = $theme_category[$id_category]['name'];
     // search item by caategory and free
