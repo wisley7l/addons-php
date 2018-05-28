@@ -107,8 +107,10 @@ $("#addons-download").click(function(event) {
 
 $('select#price_filter').on("change",function(ev){
   let price_filter = $(this).val(),
-      category_filter = $('select#category_filter').val();
+      category_filter = $('select#category_filter').val(),
+      name_search = $('input#search_products').val();
   console.log(price_filter);
   console.log(category_filter);
+  console.log(name_search);
 
 });
