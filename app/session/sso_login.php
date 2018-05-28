@@ -77,9 +77,9 @@ if ($id == NULL OR $id == '' ) {
     exit();
   }
   else {
-      createSession($id_store,$query_s['email'],"teste",0,NULL,1);
+      createSession($id_store,$query_s['email'],$query_s['name'],0,NULL,1);
   }
 }else {
-  createSession($id,$query_s['email'],"teste2",$credit,NULL,1);
+  createSession($id,$query_s['email'],$query_s['name'],$credit,NULL,1);
 }
 //*/
