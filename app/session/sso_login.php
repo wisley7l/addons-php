@@ -51,7 +51,7 @@ if ($_COOKIE['nonce'] != $query['nonce']) {
 //createSession($id,$email,$name,$credits,$image,$is_store)
 // /*
 $conn = connect_db();
-$id_store = $query['external_id'];
+$id_store = (int) $query['external_id'];
 
 $query = "SELECT store_id, credits FROM store  WHERE id = $id_store LIMIT 1;";
 
@@ -79,6 +79,6 @@ if ($id == NULL OR $id == '' ) {
       createSession($id_store,$query['email'],"teste",0,NULL,1);
   }
 }else {
-  createSession($id,$query['email'],"teste",$credit,NULL,1);
+  createSession($id,$query['email'],"teste2",$credit,NULL,1);
 }
 //*/
