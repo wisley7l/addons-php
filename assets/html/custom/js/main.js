@@ -134,3 +134,7 @@ $('select#category_filter').on("change",function(ev){
    "&category=" + category_filter + "&name=" + name_search;
 
 });
+$( ".search-form" ).submit(function( event ) {
+  alert( "Handler for .submit() called." );
+  event.preventDefault();
+});
