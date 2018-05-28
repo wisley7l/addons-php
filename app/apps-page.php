@@ -121,16 +121,15 @@ if ($_GET['type'] == 'apps') {
 
 }elseif ($_GET['type'] == 'themes') {
   $title_page = $dictionary['word_themes_store'];
-  $_category = $theme_category;
-  $name_item = $_GET['name'];
-  if (!empty($_GET['category']) OR ((int)$_GET['category'] != 0) ) {
+  $_category = $app_category;
+  if (!empty($_GET['category'])) {
     $id_category = (int) $_GET['category'];
-    $title_page = $theme_category[$id_category]['name'];
+    $title_page = $app_category[$id_category]['name'];
     // search item by caategory and free
     if ($_GET['filter'] == 'free') {
       if (!empty($_GET['name'])) {
         // search item by category and freee and name
-
+        $name_item = $_GET['name'];
         $apps = search_themes_free_name_category(12,$name_item,$id_category);
         $number_found = count($apps);
       }else {
@@ -156,20 +155,24 @@ if ($_GET['type'] == 'apps') {
       $number_found = count($apps);
     }
   }else {
-    if ($_GET['filter'] == 'free') {
+    if ($_GET['filter'] == 'free' ) {
+      echo empty($_GET['filter']);
       if (!empty($_GET['name'])) {
         // search item  and freee and name
-        $apps = search_themes_free_name(12,$search);
+        $name_item = $_GET['name'];
+        $apps = search_themes_free_name(12,$name_item);
         $number_found = count($apps);
       }else {
           // search item and free
           $apps = search_all_themes_free(12);
           $number_found = count($apps);
       }
-    }elseif (!empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
+    }elseif (empty($_GET['filter']) OR  $_GET['filter'] == 'all') {
+
       if (!empty($_GET['name'])) {
         // search item and name
-        $apps = search_themes_all_name($limit,$search);
+        $name_item = $_GET['name'];
+        $apps = search_themes_all_name(12,$name_item);
         $number_found = count($apps);
       }else {
         // search item  all
@@ -177,12 +180,12 @@ if ($_GET['type'] == 'apps') {
         $number_found = count($apps);
       }
     }else {
+      echo "error";
       // search item  all
       $apps = search_all_themes(12);
       $number_found = count($apps);
     }
   }
-
 }
 
 
