@@ -14,7 +14,7 @@ if ($_COOKIE['nonce'] != $query['nonce']) {
   exit();
 }
 // echo PHP_EOL;
-var_dump($query);
+// var_dump($query);
 // ["nonce"]=>
 //   string(33) "19266332085b0613fb1cb788.76724176"
 //   ["name"]=>
@@ -33,14 +33,14 @@ var_dump($query);
 //   string(1) "1"
 //   ["require_activation"]=>
 //   string(4) "true"
-echo PHP_EOL;
-echo $_COOKIE['nonce'];
-echo PHP_EOL;
-echo $query['nonce'];
-echo PHP_EOL;
-echo $query['email'];
-echo PHP_EOL;
-echo $query['name'];
+// echo PHP_EOL;
+// echo $_COOKIE['nonce'];
+// echo PHP_EOL;
+// echo $query['nonce'];
+// echo PHP_EOL;
+// echo $query['email'];
+// echo PHP_EOL;
+// echo $query['name'];
 
 
 // get infomations in client
