@@ -46,7 +46,6 @@ if (!empty($_GET['category'])) {
 }
 
 $page = 'apps-page?type=' . $_GET['type'] . $category;
-$type = $_GET['type'];
 
 // redirect search page
 if (!empty($_GET['term'])) {
@@ -213,7 +212,6 @@ $info_page = array(
   'number_found' => $number_found,
   'page' => $page,
   'search' => $name_item,
-  'type' => $type
 );
 
 // obs: Search all categories in db
