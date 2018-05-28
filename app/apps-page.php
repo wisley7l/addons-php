@@ -122,6 +122,7 @@ if ($_GET['type'] == 'apps') {
 }elseif ($_GET['type'] == 'themes') {
   $title_page = $dictionary['word_themes_store'];
   $_category = $theme_category;
+  $name_item = $_GET['name'];
   if (!empty($_GET['category']) OR ((int)$_GET['category'] != 0) ) {
     $id_category = (int) $_GET['category'];
     $title_page = $theme_category[$id_category]['name'];
@@ -129,7 +130,7 @@ if ($_GET['type'] == 'apps') {
     if ($_GET['filter'] == 'free') {
       if (!empty($_GET['name'])) {
         // search item by category and freee and name
-        $name_item = $_GET['name'];
+
         $apps = search_themes_free_name_category(12,$name_item,$id_category);
         $number_found = count($apps);
       }else {
