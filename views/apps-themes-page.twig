@@ -42,7 +42,7 @@
 							{% if category.id == info_page.search_id %}
 								{% set selected = 'selected' %}
 							{% endif %}
-							<option value="{{category.page}}" {{ selected }}>{{category.name}}</option>
+							<option value="{{category.id}}" {{ selected }}>{{category.name}}</option>
             {% endfor %}
 						</select>
 						<!-- SVG ARROW -->
