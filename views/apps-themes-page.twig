@@ -55,8 +55,15 @@
 				<form id="shop_filter_form" name="shop_filter_form">
 					<label for="price_filter" class="select-block">
 						<select name="price_filter" id="price_filter">
-							<option value="all">All</option>
+							{% if filter == 'all' %}
+							<option value="all" selected >All</option>
 							<option value="free">Free</option>
+							{% else %}
+							<option value="all" >All</option>
+							<option value="free" selected >Free</option>
+							{% endif %}
+
+
 						</select>
 						<!-- SVG ARROW -->
 						<svg class="svg-arrow">

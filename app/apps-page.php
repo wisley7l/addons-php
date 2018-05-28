@@ -26,18 +26,12 @@ if (isset($_GET['logout'])){
   exit;
 }
 // varible select filter
-$filter = array('all' => 'selected',
- 'free' => '');
-// filter categories and price
-if ($_GET['filter'] == 'free') {
-  $filter['all'] = '';
-  $filter['free'] = 'selected';
-  $_filter = '&filter=free';
-}elseif ($_GET['filter'] == 'all') {
-  $_filter = '&filter=all';
-} else{
-  $_filter = '';
+if ($_GET['filter'] == '') {
+  $filter = 'all';
+}else {
+  $filter = $_GET['filter'];
 }
+
 
 if (!empty($_GET['category'])) {
   $category = '&category=' . $_GET['category'];
@@ -213,7 +207,7 @@ $info_page = array(
   'number_found' => $number_found,
   'page' => $page,
   'search' => $name_item,
-  'type' => $type
+  'type' => $type,
 );
 
 // obs: Search all categories in db
