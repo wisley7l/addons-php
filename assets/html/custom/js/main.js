@@ -115,6 +115,7 @@ $('select#price_filter').on("change",function(ev){
   console.log(category_filter);
   console.log(name_search);
   console.log(type_page);
-  window.location.href = "/apps-page?type=apps";
+  window.location.href = "/apps-page?type=" + type_page + "&filter=" + price_filter +
+   "&category=" + category_filter + "&name=" + name_search;
 
 });
