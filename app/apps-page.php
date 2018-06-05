@@ -5,6 +5,7 @@ $name_item; // variable save term search
 // test all category  // Perform db query to obtain this information
 $app_category = get_categories_app();
 $theme_category = get_categories_theme();
+$get_type = get_type();
 
 //(init) * Required on all pages *
 // close writing session, if it exists and intal session
@@ -189,6 +190,8 @@ elseif ($_GET['type'] == 'themes') {
 else {
   echo 'SIM';
   $name_item = $_GET['name'];
+  $_category = $get_type;
+
 }
 
 

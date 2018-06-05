@@ -161,6 +161,22 @@ array('id' => 15,
 //*/
 );
 
+
+$apps_themes = array(
+    array('id' => 'ALL' ,
+     'name' => '',
+     'page' => ''
+  ),
+    array('id' => 'apps' ,
+     'name' => '',
+     'page' => ''
+  ),
+  array('id' => 'themes' ,
+   'name' => '',
+   'page' => ''
+  )
+);
+
 // FUNCTIONS
 
 function get_categories_app()
@@ -172,5 +188,12 @@ function get_categories_app()
 function get_categories_theme()
 {
   $categories = $GLOBALS['categories_themes'];
+  return $categories;
+}
+
+
+function get_type()
+{
+  $categories = $GLOBALS['apps_themes'];
   return $categories;
 }
