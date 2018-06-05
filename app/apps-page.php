@@ -194,7 +194,8 @@ else {
   $_category = $get_type;
   if ($_GET['filter'] == 'free' ) {
   }else {
-    $apps = search_all_themes(12);    
+    $apps = search_all_themes(12);
+    $apps = array_merge(search_all_apps(12));
   }
 
 }
