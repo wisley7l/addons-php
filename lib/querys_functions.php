@@ -1262,12 +1262,12 @@ function verify_template($array_template, $id_template)
   return $r;
 }
 
-function treatImages($path)
+function treatImages($value)
 {
   $value = Addons\PATH_DATA . '/teste/z';
-  // echo Addons\PATH_DATA;
   $delete =  strlen ( Addons\PATH_DATA );
-  $real = substr($value, $delete);
+  $real = '/fig' . substr($value, $delete);
+
   echo PHP_EOL;
   echo $value;
   echo PHP_EOL;
