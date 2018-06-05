@@ -190,11 +190,12 @@ elseif ($_GET['type'] == 'themes') {
 else {
   // echo 'SIM';
   $name_item = $_GET['name'];
-  // $id_category = (int) $_GET['category'];
   $id_category  = 1;
-
   $_category = $get_type;
-  // var_dump($_category);
+  if ($_GET['filter'] == 'free' ) {
+  }else {
+    $apps = search_all_themes(12);    
+  }
 
 }
 
