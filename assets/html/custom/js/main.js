@@ -116,7 +116,7 @@ $('select#price_filter').on("change",function(ev){
   console.log(name_search);
   console.log(type_page);
 
-  if (category_filter == 'ALL') {
+  if (category_filter == 'undefined') {
     category_filter = undefined;
     price_filter = 'all'
   }else if (category_filter == 'apps') {
@@ -143,9 +143,9 @@ $('select#category_filter').on("change",function(ev){
   console.log(name_search);
   console.log(type_page);
 
-  if (category_filter == 'ALL') {
+  if (category_filter == 'undefined') {
     category_filter = undefined;
-    price_filter = 'all'
+    price_filter = 'all';
   }else if (category_filter == 'apps') {
     category_filter = 0;
     type_page = 'apps';
@@ -170,9 +170,9 @@ $( ".search-form" ).submit(function( event ) {
   console.log(name_search);
   console.log(type_page);
 
-  if (category_filter == 'ALL') {
+  if (category_filter == 'undefined') {
     category_filter = undefined;
-    price_filter = 'all'
+    price_filter = 'all';
   }else if (category_filter == 'apps') {
     category_filter = 0;
     type_page = 'apps';
