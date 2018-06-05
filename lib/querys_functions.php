@@ -1264,8 +1264,15 @@ function verify_template($array_template, $id_template)
 
 function treatImages($path)
 {
-  echo strlen ( Addons\PATH_DATA );
-  // $real = substr($value, 0, $part); // value without the cents
+  $value = Addons\PATH_DATA . "\teste\z";
+  echo Addons\PATH_DATA;
+  $delete =  strlen ( Addons\PATH_DATA );
+  $real = substr($value, $delete);
+  echo PHP_EOL;
+  echo $value;
+  echo PHP_EOL;
+  echo $real;
+  echo PHP_EOL;
 }
 
 /*
