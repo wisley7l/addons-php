@@ -189,6 +189,7 @@ elseif ($_GET['type'] == 'themes') {
 }
 else {
   // echo 'SIM';
+  $title_page = 'Search Page';
   $name_item = $_GET['name'];
   $id_category  = 1;
   $_category = $get_type;
