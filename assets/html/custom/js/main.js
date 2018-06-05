@@ -150,8 +150,10 @@ $( ".search-form" ).submit(function( event ) {
     category_filter = undefined;
   }else if (category_filter == 'apps') {
     category_filter = undefined;
+    type_page = 'apps';
   }else if (category_filter == 'themes') {
     category_filter = undefined;
+    type_page = 'themes';
   }
 
 

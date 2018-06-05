@@ -164,15 +164,15 @@ array('id' => 15,
 
 $apps_themes = array(
     array('id' => 'ALL' ,
-     'name' => 'TYPE',
+     'name' => 'TYPE ',
      'page' => ''
   ),
     array('id' => 'apps' ,
-     'name' => 'Type' .  $dictionary['word_app'],
+     'name' => 'Type ' .  $dictionary['word_app'],
      'page' => ''
   ),
   array('id' => 'themes' ,
-   'name' => 'Type' . $dictionary['word_theme'],
+   'name' => 'Type ' . $dictionary['word_theme'],
    'page' => ''
   )
 );
