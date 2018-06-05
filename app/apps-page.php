@@ -196,9 +196,11 @@ else {
   if ($_GET['filter'] == 'free' ) {
     $apps = search_all_themes_free(12);
     $apps = array_merge($apps,search_all_apps_free(12));
+    $number_found = count($apps);
   }else {
     $apps = search_all_themes(12);
     $apps = array_merge($apps,search_all_apps(12));
+    $number_found = count($apps);
   }
 
 }
