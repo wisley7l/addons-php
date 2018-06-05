@@ -99,7 +99,7 @@ function search_all_apps($limit)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_plan_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 1);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
 
@@ -128,7 +128,7 @@ function search_all_apps_free($limit)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_plan_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 1);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
 
@@ -159,7 +159,7 @@ function search_apps_free_name($limit,$search)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_plan_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 1);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
 
@@ -190,7 +190,7 @@ function search_apps_all_name($limit,$search)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_plan_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 1);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
 
@@ -221,7 +221,7 @@ function search_all_themes($limit)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_license_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 0);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 0);
       array_push($themes, $item); // add item in array
     }
 
@@ -250,7 +250,7 @@ function search_all_themes_free($limit)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_license_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 0);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 0);
       array_push($themes, $item); // add item in array
     }
 
@@ -280,7 +280,7 @@ function search_themes_free_name($limit,$search)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_license_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 0);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 0);
       array_push($themes, $item); // add item in array
     }
 
@@ -310,7 +310,7 @@ function search_themes_all_name($limit,$search)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_license_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 0);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 0);
       array_push($themes, $item); // add item in array
     }
 
@@ -342,7 +342,7 @@ function search_apps_category($limit,$category)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_plan_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 1);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
 
@@ -374,7 +374,7 @@ function search_apps_free_category($limit,$category)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_plan_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 1);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
 
@@ -406,7 +406,7 @@ function search_apps_free_name_category($limit,$search,$category)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_plan_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 1);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
 
@@ -438,7 +438,7 @@ function search_apps_name_category($limit,$search,$category)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_plan_basic']),
-        $row['p_ID'], $row['path_image'], $dictionary, 1);
+        $row['p_ID'], treatImages($row['path_image']), $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
 
@@ -471,7 +471,7 @@ function search_themes_category($limit,$category)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_license_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 0);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 0);
       array_push($themes, $item); // add item in array
     }
 
@@ -502,7 +502,7 @@ function search_themes_free_category($limit,$category)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_license_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 0);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 0);
       array_push($themes, $item); // add item in array
     }
 
@@ -567,7 +567,7 @@ function search_themes_name_category($limit,$search,$category)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_license_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 0);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 0);
       array_push($themes, $item); // add item in array
     }
 
@@ -598,7 +598,7 @@ function search_themes_partner($partner)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_license_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 0);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 0);
       array_push($themes, $item); // add item in array
     }
 
@@ -628,7 +628,7 @@ function search_apps_partner($partner)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = get_app_theme($row['id'], $row['partner_id'], $row['title'],
         $row['thumbnail'], treatNumber($row['value_plan_basic']),
-        $row['p_id'], $row['path_image'], $dictionary, 1);
+        $row['p_id'], treatImages($row['path_image']), $dictionary, 1);
       array_push($apps, $item); // add item in array
     }
 
@@ -651,7 +651,7 @@ function search_partner_id($partner)
     if ($result = mysqli_query(  $conn, $query )) {
       // fetch associative array
       while ($row = mysqli_fetch_assoc($result)) {
-        $partner = getInfoUser($row['id'],$row['member_since'],$row['path_image'],
+        $partner = getInfoUser($row['id'],$row['member_since'],treatImages($row['path_image']),
         $row['profile_json']); // increment total items on profile page
       }
       // free result set
@@ -887,7 +887,7 @@ function getImagesApp($id)
     while ($row = mysqli_fetch_assoc($result)) {
       $item = array(
       'id' => $row['id'],
-      'path_img' => $row['path_image']
+      'path_img' => treatImages($row['path_image'])
       );
       // var_dump($item);
       array_push($images, $item);
@@ -1264,15 +1264,10 @@ function verify_template($array_template, $id_template)
 
 function treatImages($value)
 {
-  $value = Addons\PATH_DATA . '/teste/z';
+  // $value = Addons\PATH_DATA . '/teste/z';
   $delete =  strlen ( Addons\PATH_DATA );
-  $real = '/fig' . substr($value, $delete);
+  return '/fig' . substr($value, $delete);
 
-  echo PHP_EOL;
-  echo $value;
-  echo PHP_EOL;
-  echo $real;
-  echo PHP_EOL;
 }
 
 /*
