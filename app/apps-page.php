@@ -117,9 +117,8 @@ if ($_GET['type'] == 'apps') {
       $number_found = count($apps);
     }
   }
-
-
-}elseif ($_GET['type'] == 'themes') {
+}
+elseif ($_GET['type'] == 'themes') {
   $title_page = $dictionary['word_themes_store'];
   $_category = $app_category;
   if (!empty($_GET['category'])) {
@@ -186,6 +185,9 @@ if ($_GET['type'] == 'apps') {
       $number_found = count($apps);
     }
   }
+}
+else {
+  echo 'SIM';
 }
 
 
