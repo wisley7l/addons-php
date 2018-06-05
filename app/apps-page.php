@@ -191,11 +191,7 @@ else {
   // echo 'SIM';
   $name_item = $_GET['name'];
   // $id_category = (int) $_GET['category'];
-  if ( $_GET['category'] == 'ALL ') {
-    $id_category  = 0;
-  }else {
-    $id_category = 1;
-  }
+  $id_category = 0;
   $_category = $get_type;
   // var_dump($_category);
 
