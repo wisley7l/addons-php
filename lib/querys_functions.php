@@ -1262,6 +1262,12 @@ function verify_template($array_template, $id_template)
   return $r;
 }
 
+function treatImages($path)
+{
+  echo strlen ( Addons\PATH_DATA );
+  // $real = substr($value, 0, $part); // value without the cents
+}
+
 /*
 In the index page search the highlights of themes and app.
 */
