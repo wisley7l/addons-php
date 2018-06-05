@@ -188,6 +188,7 @@ elseif ($_GET['type'] == 'themes') {
 }
 else {
   echo 'SIM';
+  $name_item = $_GET['name'];
 }
 
 
