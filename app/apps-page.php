@@ -191,6 +191,7 @@ else {
   echo 'SIM';
   $name_item = $_GET['name'];
   $_category = $get_type;
+  var_dump($_category);
 
 }
 
