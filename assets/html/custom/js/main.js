@@ -170,7 +170,7 @@ $( ".search-form" ).submit(function( event ) {
   console.log(name_search);
   console.log(type_page);
 
-  if (category_filter == 'undefined') {
+  if (category_filter == undefined) {
     category_filter = undefined;
     price_filter = 'all';
   }else if (category_filter == 'apps') {
