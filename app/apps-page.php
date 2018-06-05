@@ -188,10 +188,16 @@ elseif ($_GET['type'] == 'themes') {
   }
 }
 else {
-  echo 'SIM';
+  // echo 'SIM';
   $name_item = $_GET['name'];
+  // $id_category = (int) $_GET['category'];
+  if ( $_GET['category'] == 'ALL ') {
+    $id_category  = 0;
+  }else {
+    $id_category = 1;
+  }
   $_category = $get_type;
-  var_dump($_category);
+  // var_dump($_category);
 
 }
 
