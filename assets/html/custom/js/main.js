@@ -116,9 +116,12 @@ $('select#price_filter').on("change",function(ev){
   console.log(name_search);
   console.log(type_page);
 
-  if (category_filter == 'undefined') {
+  if (price_filter == undefined) {
+    price_filter = 'all';
+  }
+
+  if (category_filter == undefined ||  category_filter == 'ALL' ) {
     category_filter = undefined;
-    price_filter = 'all'
   }else if (category_filter == 'apps') {
     category_filter = 0;
     type_page = 'apps';
@@ -143,9 +146,12 @@ $('select#category_filter').on("change",function(ev){
   console.log(name_search);
   console.log(type_page);
 
-  if (category_filter == 'undefined') {
-    category_filter = undefined;
+  if (price_filter == undefined) {
     price_filter = 'all';
+  }
+
+  if (category_filter == undefined ||  category_filter == 'ALL' ) {
+    category_filter = undefined;
   }else if (category_filter == 'apps') {
     category_filter = 0;
     type_page = 'apps';
@@ -170,9 +176,12 @@ $( ".search-form" ).submit(function( event ) {
   console.log(name_search);
   console.log(type_page);
 
-  if (category_filter == undefined) {
-    category_filter = undefined;
+  if (price_filter == undefined) {
     price_filter = 'all';
+  }
+
+  if (category_filter == undefined ||  category_filter == 'ALL' ) {
+    category_filter = undefined;
   }else if (category_filter == 'apps') {
     category_filter = 0;
     type_page = 'apps';
