@@ -1264,8 +1264,8 @@ function verify_template($array_template, $id_template)
 
 function treatImages($path)
 {
-  $value = Addons\PATH_DATA . "\teste\z";
-  echo Addons\PATH_DATA;
+  $value = Addons\PATH_DATA . '\teste\z';
+  // echo Addons\PATH_DATA;
   $delete =  strlen ( Addons\PATH_DATA );
   $real = substr($value, $delete);
   echo PHP_EOL;
