@@ -115,6 +115,18 @@ $('select#price_filter').on("change",function(ev){
   console.log(category_filter);
   console.log(name_search);
   console.log(type_page);
+
+  if (category_filter == 'ALL') {
+    category_filter = undefined;
+    price_filter = 'all'
+  }else if (category_filter == 'apps') {
+    category_filter = 0;
+    type_page = 'apps';
+  }else if (category_filter == 'themes') {
+    category_filter = 0;
+    type_page = 'themes';
+  }
+
   window.location.href = "/apps-page?type=" + type_page + "&filter=" + price_filter +
    "&category=" + category_filter + "&name=" + name_search;
 
@@ -130,6 +142,18 @@ $('select#category_filter').on("change",function(ev){
   console.log(category_filter);
   console.log(name_search);
   console.log(type_page);
+
+  if (category_filter == 'ALL') {
+    category_filter = undefined;
+    price_filter = 'all'
+  }else if (category_filter == 'apps') {
+    category_filter = 0;
+    type_page = 'apps';
+  }else if (category_filter == 'themes') {
+    category_filter = 0;
+    type_page = 'themes';
+  }
+
   window.location.href = "/apps-page?type=" + type_page + "&filter=" + price_filter +
    "&category=" + category_filter + "&name=" + name_search;
 
@@ -148,15 +172,14 @@ $( ".search-form" ).submit(function( event ) {
 
   if (category_filter == 'ALL') {
     category_filter = undefined;
+    price_filter = 'all'
   }else if (category_filter == 'apps') {
-    category_filter = undefined;
+    category_filter = 0;
     type_page = 'apps';
   }else if (category_filter == 'themes') {
-    category_filter = undefined;
+    category_filter = 0;
     type_page = 'themes';
   }
-
-
 
   window.location.href = "/apps-page?type=" + type_page + "&filter=" + price_filter +
    "&category=" + category_filter + "&name=" + name_search;
