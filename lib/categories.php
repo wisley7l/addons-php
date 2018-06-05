@@ -168,11 +168,11 @@ $apps_themes = array(
      'page' => ''
   ),
     array('id' => 'apps' ,
-     'name' => $dictionary['word_apps'],
+     'name' => $dictionary['word_app'],
      'page' => ''
   ),
   array('id' => 'themes' ,
-   'name' => $dictionary['word_themes'],
+   'name' => $dictionary['word_theme'],
    'page' => ''
   )
 );
