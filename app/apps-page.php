@@ -188,11 +188,17 @@ elseif ($_GET['type'] == 'themes') {
   }
 }
 else {
-  // echo 'SIM';
+  echo 'SIM';
   $title_page = 'Search Page';
   $name_item = $_GET['name'];
   $id_category  = 1;
   $_category = $get_type;
+  if (!empty($_GET['name'])) {
+
+    echo "N";
+  }else {
+    echo "s";
+  }
   if ($_GET['filter'] == 'free' ) {
     $apps = search_all_themes_free(12);
     $apps = array_merge($apps,search_all_apps_free(12));
