@@ -97,7 +97,7 @@ elseif ($is_app == 1) {
       $plans =  json_decode($row['plans_json'],true); // increment total items on profile page
     }
     $transaction_code  = 'code-' . uniqid();
-    $duration_plan = (int)verify_plan($plans['plans'], $id_plan)['duration'];
+    $duration_plan = (int) 1;
     var_dump($duration_plan);
     // free result set
     mysqli_free_result($result);
@@ -175,7 +175,7 @@ elseif ($is_app == 1) {
       exit();
     }
     // cria buy plan
-    $date_duration = (int)$v['duration'];
+    $date_duration = (int) 1;
     $day_add = (int)($date_duration/2);
     $date_init = time ();
     $date_end = $date_init + ($date_duration*30*24*60*60) + ($day_add*24*60*60);
