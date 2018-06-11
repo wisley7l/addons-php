@@ -188,26 +188,35 @@ elseif ($_GET['type'] == 'themes') {
   }
 }
 else {
-  echo 'SIM';
+  // echo 'SIM';
   $title_page = 'Search Page';
   $name_item = $_GET['name'];
   $id_category  = 1;
   $_category = $get_type;
   if (!empty($_GET['name'])) {
+    // echo "N";
+    if ($_GET['filter'] == 'free' ) {
+      $apps = search_themes_free_name(12,$name_item);
+      $apps = array_merge($apps,search_apps_free_name(12,$name_item));
+      $number_found = count($apps);
+    }else {
+      $apps = search_themes_all_name(12,$name_item);
+      $apps = array_merge($apps,search_apps_all_name(12,$name_item));
+      $number_found = count($apps);
+    }
+  }else {
+    // echo "s";
+    if ($_GET['filter'] == 'free' ) {
+      $apps = search_all_themes_free(12);
+      $apps = array_merge($apps,search_all_apps_free(12));
+      $number_found = count($apps);
+    }else {
+      $apps = search_all_themes(12);
+      $apps = array_merge($apps,search_all_apps(12));
+      $number_found = count($apps);
+    }
+  }
 
-    echo "N";
-  }else {
-    echo "s";
-  }
-  if ($_GET['filter'] == 'free' ) {
-    $apps = search_all_themes_free(12);
-    $apps = array_merge($apps,search_all_apps_free(12));
-    $number_found = count($apps);
-  }else {
-    $apps = search_all_themes(12);
-    $apps = array_merge($apps,search_all_apps(12));
-    $number_found = count($apps);
-  }
 
 }
 
