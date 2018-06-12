@@ -146,6 +146,7 @@ if(empty($_POST)) { // not exist post
        $tem_img = send_file($_FILES,'img'. $i,1,$dist_img);
        array_push($img, $tem_img);
      }
+     $thumbnail = send_file($_FILES,'img0',1,$dist_img);
      $zip = send_file($_FILES,'tem1',0,$dist_zip);
      // add zip in the  body_json if exists
      if ($module_type == '') {
@@ -166,9 +167,9 @@ if(empty($_POST)) { // not exist post
 
 
      // /*
-     $query =  "INSERT INTO `apps` (`title`, `slug`,`partner_id`, `description`, `json_body`,`version`, `type`,`module`,
+     $query =  "INSERT INTO `apps` (`title`, `slug`,`thumbnail`,`partner_id`, `description`, `json_body`,`version`, `type`,`module`,
      `script_uri`,`github_repository`,`authentication`, `website`, `link_video`, `plans_json`, `value_plan_basic`, `active` )
-     VALUES ('$name','$slug',$id_partner,'$description','$body_json','$numversion','$type_app','$module_type',
+     VALUES ('$name','$slug','$thumbnail',$id_partner,'$description','$body_json','$numversion','$type_app','$module_type',
        '$scripturl','$github',$authentication,'$website','$linkvideo','$plans_json',$plan_basic,$active);";
        // TODO:
        // thumbnail in insert
