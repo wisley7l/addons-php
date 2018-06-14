@@ -41,13 +41,11 @@ if (isset($_GET['id']) AND isset($_GET['app'])){
     );
     $plans = $_plans['plans'];
     $plans[0]['checked'] = 'checked';
-    $plans[0]['desc'] = $plans[0]['desc']. "duration: " .
-    $plans[0]['duration'] . " month(s)";
+    $plans[0]['desc'] = $plans[0]['desc'];
 
     for ($i=1; $i < $_plans['total_plans'] ; $i++) {
       $plans[$i]['checked'] = '';
-      $plans[$i]['desc'] = $plans[$i]['desc']. "duration : " .
-      $plans[$i]['duration'] . "month(s)";
+      $plans[$i]['desc'] = $plans[$i]['desc'];
     }
 
     $json = json_decode($item['json_body'],true);
