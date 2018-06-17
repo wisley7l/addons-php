@@ -242,10 +242,10 @@ if(empty($_POST)) { // not exist post
      // // sendFile ();
      $subject = 'Sending a module-type application';
      $text = '';
-     $msg = "Hello \n" .
-     "A module-type application was sent to the marketplace server.\n " .
-     "App ID: $id_app \n" .
-     "Partner ID: $id_partner\n";
+     $msg = "<p>Hello!</p>" .
+     "<p> A module-type application was sent to the marketplace server. </p> " .
+     "<p> App ID: $id_app </p>" .
+     "<p> Partner ID: $id_partner </p>";
      // send_mailjet($subject,$text,$msg,$recipients);
 
    }
