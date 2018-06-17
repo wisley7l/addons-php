@@ -1,5 +1,5 @@
 <?php
-function send_mailjet($subject,$text,$msg)
+function send_mailjet($subject,$text,$msg,$recipients)
 {
   echo "send";
   // Mailjet API
@@ -16,7 +16,7 @@ function send_mailjet($subject,$text,$msg)
   }
   //
   // for ($i = 0; $i < count($mailJet); $i++) {
-    $data['Recipients'][] = array('Email' => 'tiatenas7l@gmail.com');
+    $data['Recipients'][] = array('Email' => $recipients);
   // }
 
 

@@ -1,4 +1,5 @@
 <?php
+$recipients = 'tiatenas7l@gmail.com';
 // type app
 $app_type = array(
   array('id' => 1 ,' name' =>  'dashboard'),
@@ -234,6 +235,19 @@ if(empty($_POST)) { // not exist post
          header("Location: ../dashboard-uploaditem#ERRORInsertCategory");
          exit();
        }
+   }
+
+   if ($type_app == 3 ) {
+     // $id_app
+     // // sendFile ();
+     $subject = 'Sending a module-type application';
+     $text = '';
+     $msg = "Hello \n" .
+     "A module-type application was sent to the marketplace server.\n " .
+     "App ID: $id_app \n" .
+     "Partner ID: $id_partner\n";
+     // send_mailjet($subject,$text,$msg,$recipients);
+
    }
 
    header("Location: ../dashboard-uploaditem#SUCESSInsert");
