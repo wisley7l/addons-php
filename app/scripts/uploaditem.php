@@ -158,7 +158,7 @@ if(empty($_POST)) { // not exist post
        $body_json = json_decode($body_json,true);
        $body_json['zip'] = $zip;
        $body_json = json_encode($body_json,JSON_UNESCAPED_UNICODE);
-       if ($zip != -1 || $zip != -2 || $zip != -3) {
+       if ($zip == -1 || $zip == -2 || $zip == -3) {
          // error save
          echo 'error ZIP:' . $zip;
          exit();
@@ -277,7 +277,8 @@ if(empty($_POST)) { // not exist post
        $img = send_file($_FILES,'img' . $i,1,$dist_img);
        $zip = send_file($_FILES,'tem' . $i,0,$dist_zip);
 
-       if ($img != -1 AND $zip != -1) {
+       if (($img != -1 AND $img != -2 AND $img != -3  ) AND
+            ($zip != -1 AND $zip != -1 AND $zip != -3)) {
          $templates = array('id' => $i,
           'path_zip' => $zip,
           'path_img' => $img
@@ -287,8 +288,8 @@ if(empty($_POST)) { // not exist post
        }else {
          // TODO:
          // error
-         echo "error ZIP";
-         header("Location: ../dashboard-uploaditem#ERRORthemeZIP");
+         echo "error ZIP : " . $zip . " img: " . $img;
+         header("Location: ../dashboard-uploaditem#ERRORzip");
          exit();
        }
      }
