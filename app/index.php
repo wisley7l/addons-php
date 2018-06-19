@@ -77,8 +77,6 @@ if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
   //OBS: when you are ready to enable these functions below.
   $apps = search_all_apps(24); // return a maximum of 25 apps in the search
   $themes = search_all_themes(24); // return a maximum of 25 themes in the search
-}
-
 
 // necessary variables for information
 // number of partners and stores, and total apps and themes
