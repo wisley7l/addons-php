@@ -252,7 +252,7 @@ if(empty($_POST)) { // not exist post
 
    }
 
-   // header("Location: ../dashboard-uploaditem#SUCESSInsert");
+   header("Location: ../dashboard-uploaditem#SUCESSInsert");
    exit();
      //*/
 

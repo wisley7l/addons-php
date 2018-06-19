@@ -1,7 +1,6 @@
 <?php
 function send_mailjet($subject,$text,$msg,$recipients)
 {
-  echo "send";
   // Mailjet API
   $data = array(
     'FromEmail' => 'noreply@e-com.club',

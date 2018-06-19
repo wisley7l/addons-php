@@ -10,5 +10,3 @@ $msg = "<p>Hello!</p>" .
 "<p> App ID: $id_app </p>" .
 "<p> Partner ID: $id_partner </p>";
 send_mailjet($subject,$text,$msg,$recipients);
-
-// treatImages('a');
