@@ -158,10 +158,10 @@ if(empty($_POST)) { // not exist post
        $body_json = json_decode($body_json,true);
        $body_json['zip'] = $zip;
        $body_json = json_encode($body_json,JSON_UNESCAPED_UNICODE);
-       if ($zip != -1 ) {
+       if ($zip != -1 || $zip != -2 || $zip != -3) {
          // error save
-         echo 'error ZIP';
-         exit;
+         echo 'error ZIP:' . $zip;
+         exit();
        }
 
      }

@@ -56,10 +56,10 @@ function send_file($file,$title,$type,$dist)
               return -1;
       }
       else
-          return -1;
+          return -2;
   }
   else
-      return -1;
+      return -3;
 }
 
 function getUserAPI($email)
