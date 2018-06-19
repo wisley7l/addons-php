@@ -61,22 +61,9 @@ if (isset($_GET['category_name']) AND isset($_GET['category_name'])){
   //  category_name=&categories=0
 }
 
-  // only test
-  // test apps  // Perform db query to obtain this information
-  // query apps in db
-  //$item2 = getAppThemeTest(1000,1,$dictionary,1);
-  // query apps in db
-  //$apps = array();
-  // add element in array
-  //array_push($apps, $item2);
-  // test themes // Perform db query to obtain this information
-  //$item = getAppThemeTest(1111,1,$dictionary,0);
-  //$themes = array();
-  // add element in array
-  //array_push($themes, $item);
-  //OBS: when you are ready to enable these functions below.
-  $apps = search_all_apps(24); // return a maximum of 25 apps in the search
-  $themes = search_all_themes(24); // return a maximum of 25 themes in the search
+//OBS: when you are ready to enable these functions below.
+$apps = search_all_apps(24); // return a maximum of 25 apps in the search
+$themes = search_all_themes(24); // return a maximum of 25 themes in the search
 
 // necessary variables for information
 // number of partners and stores, and total apps and themes
