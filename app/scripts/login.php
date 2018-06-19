@@ -37,7 +37,7 @@ else {
     // fetch associative array
     while ($row = mysqli_fetch_assoc($result)) {
       $id = $row['id'];
-      $image = $row['path_image'];
+      $image = treatImages($row['path_image']);
       $credits = treatNumber($row['credit']);
       $pass_hash = $row['password_hash'];
     }
