@@ -30,22 +30,6 @@ if (isset($_GET['logout'])){
 }
 //(end) * Required on all pages *
 // search  bar
-if (isset($_GET['term']) and isset($_GET['x']) ){
-  // fix search menu
-  header("Location: ?term=" . $_GET['term']);
-  exit;
-}
-else if (isset($_GET['term']) ){
-  if (empty($_GET['term'])) {
-    print '<h2 style= "text-align:center; color:blue">' . $dictionary['word_search_empty'] . '</h2>';
-  }else {
-    // search app and theme with term
-    // redirect for search page with parameters
-    header("Location: search-page?term=" . $_GET['term']);
-    exit;
-  }
-}
-
 // if user is already logged in, redirects to error page
 if ($_SESSION['login'] == true) {
   header("Location: error-page" );
