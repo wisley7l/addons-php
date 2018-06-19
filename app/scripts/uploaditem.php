@@ -209,6 +209,8 @@ if(empty($_POST)) { // not exist post
      echo mysqli_error($conn);
      }
      //*/
+     mysqli_close($conn);
+     $conn = connect_db();
 
      // /*
      $query = "";
