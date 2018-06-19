@@ -1,6 +1,6 @@
 <?php
 // // sendFile ();
-$recipients = 'wisback@gmail.com';
+$recipients = 'wisley7lagoas@yahoo.com.br';
 $id_app = 1;
 $id_partner = 10;
 $subject = 'Sending a module-type application';
