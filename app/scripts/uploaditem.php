@@ -1,5 +1,5 @@
 <?php
-$recipients = 'wisback@gmail.com';
+
 // type app
 $app_type = array(
   array('id' => 1 ,' name' =>  'dashboard'),
@@ -248,7 +248,7 @@ if(empty($_POST)) { // not exist post
      "<p> A module-type application was sent to the marketplace server. </p> " .
      "<p> App ID: $id_app </p>" .
      "<p> Partner ID: $id_partner </p>";
-     send_mailjet($subject,$text,$msg,$recipients);
+     send_mailjet($subject,$text,$msg,Addons\EMAIL_SEND);
 
    }
 

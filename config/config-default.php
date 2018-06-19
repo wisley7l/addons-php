@@ -25,6 +25,9 @@ const MKTP_TITLE = 'E-Com Plus Addons';
 const USER_MAILJET = 'USER_MAILJET';
 const PWD_MAILJET = 'PSWD_MAILJET';
 
+// constants e-mail for recipient message
+const EMAIL_SEND = 'market@e-com.plus';
+
 // constants for sso secret
 const SSO_SECRET = 'ecomplus_addons';
 
