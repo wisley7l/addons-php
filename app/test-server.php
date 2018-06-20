@@ -25,4 +25,5 @@ $response_body = curl_exec($ch);
 // all done, close cURL
 curl_close($ch);
 $json = json_decode($response_body, true);
-var_dump($json);
+echo $response_body;
+// var_dump($json);
