@@ -1,6 +1,7 @@
 <?php
+echo Addons\EMAIL_SEND;
 // // sendFile ();
-$recipients = 'wisley7lagoas@yahoo.com.br';
+$recipients = Addons\EMAIL_SEND;
 $id_app = 1;
 $id_partner = 10;
 $subject = 'Sending a module-type application';
