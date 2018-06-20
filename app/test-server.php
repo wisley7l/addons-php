@@ -24,5 +24,5 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $output = curl_exec($ch);
 // all done, close cURL
 curl_close($ch);
-$json = json_decode($response_body, true);
-var_dump($json);
+// $json = json_decode($response_body, true);
+var_dump($output);
