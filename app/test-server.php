@@ -1,6 +1,6 @@
 <?php
 // // sendFile ();
-$recipients = 'wisley7l@yahoo.com.br';
+$recipients = 'wisley7lagoas@yahoo.com.br';
 // $id_app = 1;
 // $id_partner = 10;
 // $subject = 'Sending a module-type application';
@@ -21,8 +21,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
   'Content-Type: application/json'
 ));
-$output = curl_exec($ch);
+$response_body = curl_exec($ch);
 // all done, close cURL
 curl_close($ch);
-// $json = json_decode($response_body, true);
-var_dump($output);
+$json = json_decode($response_body, true);
+var_dump($json);
