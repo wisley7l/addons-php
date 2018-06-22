@@ -36,8 +36,6 @@
 		<div class="section">
 			<!-- SIDEBAR -->
 			<div class="sidebar right">
-
-
 				<!-- SIDEBAR ITEM -->
 				<div class="sidebar-item">
 					{% if info_page.app == 0 %}
@@ -45,13 +43,11 @@
 					{% else %}
 					<h6 style="text-align: center;">Web site</h6>
 					{% endif %}
-					<hr class="line-separator">
+					<hr class="line-separator"> </hr>
 					<a href="{{app_info.website}}"><h6 style="text-align: center;">{{app_info.website}}</h6></a>
 					<div class="clearfix"></div>
 				</div>
 				<!-- /SIDEBAR ITEM -->
-
-
 
         <!-- SIDEBAR ITEM -->
         {% if info_page.app == 0 %}
@@ -64,15 +60,14 @@
         {% endif %}
 				<!-- /SIDEBAR ITEM -->
 
-
         <!-- SIDEBAR ITEM -->
 				<div class="sidebar-item" id="item-page">
 					<p class="price large" id="coin"><span id="coin">{{dictionary.coin}}$</span></p>
-					<hr class="line-separator">
+					<hr class="line-separator"> </hr>
 					<form id="aux_form" name="aux_form"></form>
 					{% for plan in plans %}
 					<!-- CHECKBOX -->
-					<input type="radio" id="{{plan.id}}" name="{{plan.id}}" form="aux_form" {{plan.checked}} class="checkbox-plan">
+					<input type="radio" id="{{plan.id}}" name="{{plan.id}}" form="aux_form" {{plan.checked}} class="checkbox-plan" />
 					<label class="b-label linked-check" for="{{plan.id}}">
 						<span class="checkbox primary"><span></span></span>
 						{{plan.name}}
@@ -141,7 +136,7 @@
 			<div class="content left" id="addons-items">
       				<!-- POST -->
 				<article class="post">
-{#
+{# 1
 					{% if info_page.app == 1 %}
 					<!-- POST IMAGE -->
 					{{macro_item.image_main(image_main,info_page)}}
@@ -159,9 +154,9 @@
 							{% endif %}
 						{% endfor %}
 					{% endif %}
-					#}
+#}
 					{# themes not outher images #}
-					{#
+{#
 					{% if info_page.app == 1 %}
 
 					<!-- POST IMAGE SLIDES -->
