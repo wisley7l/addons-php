@@ -166,17 +166,18 @@
 					{% endif %}
 
 					<h3 style="text-align: left;">Video </h3>
-					{% if app_info.video == '' %}
-					if
-					{% else %}
-						else
-					{% endif %}
+
 					<hr class="line-separator" />
+					{% if app_info.video == '' %}
+					
+					{% else %}
 					<div class="post-content">
 						<iframe width="560" height="315" src="{{app_info.video}}"
 						frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 						</iframe>
 					</div>
+					{% endif %}
+
 					<hr class="line-separator">
 
 					<!-- POST CONTENT -->
