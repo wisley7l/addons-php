@@ -24,89 +24,89 @@ if (isset($_GET['logout'])){
 //(end) * Required on all pages *
 
 if (isset($_GET['id']) AND isset($_GET['app'])){
-  // if ( $_GET['app'] == 1) {
-  //   $app = 1;
-  //   //search item in app
-  //   $id_app = (int) $_GET['id'];
-  //   $item = search_app_id($id_app);
-  //   $_plans = json_decode($item['plans_json'],true);
-  //   // var_dump($item);
-  //   // var_dump($_plans);
-  //
-  //   $app_info = array('id' => $id_app,
-  //     'name' => $item['title'],
-  //     'description' => $item['description'] ,
-  //     'video' => $item['link_video'],
-  //     'website' => $item['website'],
-  //   );
-  //   $plans = $_plans['plans'];
-  //   $plans[0]['checked'] = 'checked';
-  //   $plans[0]['desc'] = $plans[0]['desc'];
-  //
-  //   for ($i=1; $i < $_plans['total_plans'] ; $i++) {
-  //     $plans[$i]['checked'] = '';
-  //     $plans[$i]['desc'] = $plans[$i]['desc'];
-  //   }
-  //
-  //   $json = json_decode($item['json_body'],true);
-  //   $faqs = $json['faqs']['faqs'];
-  //
-  //   //images app
-  //   $array_images = getImagesApp($id_app);
-  //   $image_main = $array_images[0];
-  //
-  // }
-  // else if ($_GET['app'] == 0){
-  //   $id_app = (int) $_GET['id'];
-  //   $app = 0;
-  //   //search item in themes
-  //   $item = search_theme_id($id_app);
-  //   // var_dump($item);
-  //
-  //   $app_info = array('id' => $id_app,
-  //     'name' => $item['title'],
-  //     'description' => $item['description'],
-  //     'video' => $item['link_video'],
-  //     'website' => $item['link_docomentation'],
-  //   );
-  //
-  //   $faqs = array();
-  //   $json = json_decode($item['json_body'],true);
-  //
-  //   $faqs = $json['faqs']['faqs'];
-  //   $_templates = $json['templates'];
-  //   $array_images = $_templates['templates'];
-  //   $image_main = $array_images[0];
-  //
-  //   $plans = array();
-  //
-  //     $planBasic = array('id' => 1,
-  //       'name' => 'Basic',
-  //       'value' => treatNumber($item['value_license_basic']),
-  //       'desc' => $json['plans']['plans'][0]['desc'],
-  //       'checked' => 'checked',
-  //     );
-  //     array_push($plans, $planBasic);
-  //
-  //     if ($item['value_license_extend'] != 0) {
-  //       $planExtend = array('id' => 2,
-  //         'name' => 'Extend',
-  //         'value' => treatNumber($item['value_license_extend']),
-  //         'desc' => $json['plans']['plans'][1]['desc'],
-  //         'checked' => '',
-  //       );
-  //       array_push($plans, $planExtend);
-  //     }
-  //
-  // }
-  // else {
-  //   // redirect page error or information error
-  //   echo "error";
-  // }
-  //
-  // //images theme (not implemted)
-  // //$array_images = getImagesTheme();
-  // //$image_main = $array_images[0];
+  if ( $_GET['app'] == 1) {
+    $app = 1;
+    //search item in app
+    $id_app = (int) $_GET['id'];
+    $item = search_app_id($id_app);
+    $_plans = json_decode($item['plans_json'],true);
+    // var_dump($item);
+    // var_dump($_plans);
+
+    $app_info = array('id' => $id_app,
+      'name' => $item['title'],
+      'description' => $item['description'] ,
+      'video' => $item['link_video'],
+      'website' => $item['website'],
+    );
+    $plans = $_plans['plans'];
+    $plans[0]['checked'] = 'checked';
+    $plans[0]['desc'] = $plans[0]['desc'];
+
+    for ($i=1; $i < $_plans['total_plans'] ; $i++) {
+      $plans[$i]['checked'] = '';
+      $plans[$i]['desc'] = $plans[$i]['desc'];
+    }
+
+    $json = json_decode($item['json_body'],true);
+    $faqs = $json['faqs']['faqs'];
+
+    //images app
+    $array_images = getImagesApp($id_app);
+    $image_main = $array_images[0];
+
+  }
+  else if ($_GET['app'] == 0){
+    $id_app = (int) $_GET['id'];
+    $app = 0;
+    //search item in themes
+    $item = search_theme_id($id_app);
+    // var_dump($item);
+
+    $app_info = array('id' => $id_app,
+      'name' => $item['title'],
+      'description' => $item['description'],
+      'video' => $item['link_video'],
+      'website' => $item['link_docomentation'],
+    );
+
+    $faqs = array();
+    $json = json_decode($item['json_body'],true);
+
+    $faqs = $json['faqs']['faqs'];
+    $_templates = $json['templates'];
+    $array_images = $_templates['templates'];
+    $image_main = $array_images[0];
+
+    $plans = array();
+
+      $planBasic = array('id' => 1,
+        'name' => 'Basic',
+        'value' => treatNumber($item['value_license_basic']),
+        'desc' => $json['plans']['plans'][0]['desc'],
+        'checked' => 'checked',
+      );
+      array_push($plans, $planBasic);
+
+      if ($item['value_license_extend'] != 0) {
+        $planExtend = array('id' => 2,
+          'name' => 'Extend',
+          'value' => treatNumber($item['value_license_extend']),
+          'desc' => $json['plans']['plans'][1]['desc'],
+          'checked' => '',
+        );
+        array_push($plans, $planExtend);
+      }
+
+  }
+  else {
+    // redirect page error or information error
+    echo "error";
+  }
+
+  //images theme (not implemted)
+  //$array_images = getImagesTheme();
+  //$image_main = $array_images[0];
 }
 else {
   // redirect page error
