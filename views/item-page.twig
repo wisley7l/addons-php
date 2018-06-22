@@ -165,7 +165,11 @@
 					<!-- /POST IMAGE SLIDES -->
 					{% endif %}
 
-					<h3 style="text-align: left;">Video {{app_info.video}}</h3>
+					<h3 style="text-align: left;">Video </h3>
+					{% if app_info.video == '' %}
+					{% else %}
+						else
+					{% endif %}
 					<hr class="line-separator" />
 					<div class="post-content">
 						<iframe width="560" height="315" src="{{app_info.video}}"
