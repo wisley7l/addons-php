@@ -149,8 +149,8 @@ $theme_category = get_categories_theme();
 // intial twig and send varibles for template
 $loader = new Twig_Loader_Filesystem(Addons\PATH_APP . '/views');
 $twig = new Twig_Environment($loader);
-// echo $twig->render('item-page.twig', array(
-echo $twig->render('page-test.twig', array(
+echo $twig->render('item-page.twig', array(
+// echo $twig->render('page-test.twig', array(
   'dictionary' => $dictionary,
   'login' => $_SESSION['login'],
   'info_footer' => $info_footer,
