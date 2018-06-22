@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +5,10 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel="stylesheet" href="css/vendor/simple-line-icons.css">
 	<link rel="stylesheet" href="css/vendor/tooltipster.css">
-	<link rel="stylesheet" href="css/vendor/jquery.range.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!-- favicon -->
 	<link rel="icon" href="favicon.ico">
-	<title>Emerald Dragon | Products</title>
+	<title>Emerald Dragon | Item Page V1</title>
 </head>
 <body>
 
@@ -1116,10 +1114,10 @@
 	<!-- /MAIN MENU -->
 
 	<!-- SECTION HEADLINE -->
-	<div class="section-headline-wrap v2">
+	<div class="section-headline-wrap">
 		<div class="section-headline">
-			<h2>Products</h2>
-			<p>Home<span class="separator">/</span><span class="current-section">Products</span></p>
+			<h2>Westeros HTML Custom Clothing Store</h2>
+			<p>Home<span class="separator">/</span>Web Design<span class="separator">/</span><span class="current-section">HTML Templates</span></p>
 		</div>
 	</div>
 	<!-- /SECTION HEADLINE -->
@@ -1127,56 +1125,183 @@
 	<!-- SECTION -->
 	<div class="section-wrap">
 		<div class="section">
-			<!-- CONTENT -->
-			<div class="content">
-				<!-- HEADLINE -->
-				<div class="headline tertiary">
-					<h4>12.580 Products Found</h4>
-					<!-- VIEW SELECTORS -->
-					<div class="view-selectors">
-						<a href="products.html" class="view-selector grid active"></a>
-						<a href="products-listview.html" class="view-selector list"></a>
-					</div>
-					<!-- /VIEW SELECTORS -->
-					<form id="shop_filter_form" name="shop_filter_form">
-						<label for="price_filter" class="select-block">
-							<select name="price_filter" id="price_filter">
-								<option value="0">Price (High to Low)</option>
-								<option value="1">Price (Low to High)</option>
-							</select>
-							<!-- SVG ARROW -->
-							<svg class="svg-arrow">
-								<use xlink:href="#svg-arrow"></use>
-							</svg>
-							<!-- /SVG ARROW -->
-						</label>
-						<label for="itemspp_filter" class="select-block">
-							<select name="itemspp_filter" id="itemspp_filter">
-								<option value="0">12 Items Per Page</option>
-								<option value="1">6 Items Per Page</option>
-							</select>
-							<!-- SVG ARROW -->
-							<svg class="svg-arrow">
-								<use xlink:href="#svg-arrow"></use>
-							</svg>
-							<!-- /SVG ARROW -->
-						</label>
-					</form>
+			<!-- SIDEBAR -->
+			<div class="sidebar right">
+				<!-- SIDEBAR ITEM -->
+				<div class="sidebar-item">
+					<p class="price large"><span>$</span>28.00</p>
+					<hr class="line-separator">
+					<form id="aux_form" name="aux_form"></form>
+
+					<!-- CHECKBOX -->
+					<input type="radio" id="regular-license" name="regular-license" form="aux_form" checked>
+					<label class="b-label linked-check" for="regular-license">
+						<span class="checkbox primary"><span></span></span>
+						Regular License
+					</label>
+					<!-- /CHECKBOX -->
+					<p class="license-text" data-license="regular-license" style="display: block;">Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod tempor cididunt ut labore.</p>
+
+					<!-- CHECKBOX -->
+					<input type="radio" id="extended-license" name="extended-license" form="aux_form">
+					<label class="b-label linked-check" for="extended-license">
+						<span class="checkbox primary"><span></span></span>
+						Extended License
+					</label>
+					<!-- /CHECKBOX -->
+					<p class="license-text" data-license="extended-license">Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod tempor cididunt ut labore.</p>
+					<a href="#" class="button mid dark spaced"><span class="primary">Purchase Now!</span></a>
+					<a href="#" class="button mid primary half">Add to Cart</a>
+					<a href="#" class="button mid secondary wicon half"><span class="icon-heart"></span>652</a>
 					<div class="clearfix"></div>
 				</div>
-				<!-- /HEADLINE -->
+				<!-- /SIDEBAR ITEM -->
 
-				<!-- PRODUCT SHOWCASE -->
-				<div class="product-showcase">
+				<!-- SIDEBAR ITEM -->
+				<div class="sidebar-item author-bio">
+					<h4>Product Author</h4>
+					<hr class="line-separator">
+					<!-- USER AVATAR -->
+					<a href="user-profile.html" class="user-avatar-wrap medium">
+						<figure class="user-avatar medium">
+							<img src="images/avatars/avatar_09.jpg" alt="">
+						</figure>
+					</a>
+					<!-- /USER AVATAR -->
+					<p class="text-header">Odin_Design</p>
+					<p class="text-oneline">Super Samurai Developers<br>Los Angeles, Usa</p>
+					<!-- SHARE LINKS -->
+					<ul class="share-links">
+						<li><a href="#" class="fb"></a></li>
+						<li><a href="#" class="twt"></a></li>
+						<li><a href="#" class="db"></a></li>
+					</ul>
+					<!-- /SHARE LINKS -->
+					<a href="#" class="button mid dark spaced">Go to <span class="primary">Profile Page</span></a>
+					<a href="#" class="button mid dark-light">Send a Private Message</a>
+				</div>
+				<!-- /SIDEBAR ITEM -->
+
+				<!-- SIDEBAR ITEM -->
+				<div class="sidebar-item product-info">
+					<h4>Product Information</h4>
+					<hr class="line-separator">
+					<!-- INFORMATION LAYOUT -->
+					<div class="information-layout">
+						<!-- INFORMATION LAYOUT ITEM -->
+						<div class="information-layout-item">
+							<p class="text-header">Sales:</p>
+							<p>22</p>
+						</div>
+						<!-- /INFORMATION LAYOUT ITEM -->
+
+						<!-- INFORMATION LAYOUT ITEM -->
+						<div class="information-layout-item">
+							<p class="text-header">Upload Date:</p>
+							<p>August 18th, 2015</p>
+						</div>
+						<!-- /INFORMATION LAYOUT ITEM -->
+
+						<!-- INFORMATION LAYOUT ITEM -->
+						<div class="information-layout-item">
+							<p class="text-header">Files Included:</p>
+							<p>PSD, AI<br>JPEG, PNG</p>
+						</div>
+						<!-- /INFORMATION LAYOUT ITEM -->
+
+						<!-- INFORMATION LAYOUT ITEM -->
+						<div class="information-layout-item">
+							<p class="text-header">Requirements:</p>
+							<p>CS6 or Lower</p>
+						</div>
+						<!-- /INFORMATION LAYOUT ITEM -->
+
+						<!-- INFORMATION LAYOUT ITEM -->
+						<div class="information-layout-item">
+							<p class="text-header">Dimensions:</p>
+							<p>4500x2800 Px</p>
+						</div>
+						<!-- /INFORMATION LAYOUT ITEM -->
+
+						<!-- INFORMATION LAYOUT ITEM -->
+						<div class="information-layout-item">
+							<p class="tags primary"><a href="#">photoshop</a>, <a href="#">flat</a>, <a href="#">icon</a>, <a href="#">devices</a>, <a href="#">mobile</a>, <a href="#">vector</a>, <a href="#">coffee</a>, <a href="#">scene</a>, <a href="#">hero</a>, <a href="#">image</a>, <a href="#">maker</a>, <a href="#">set</a>, <a href="#">tablet</a>, <a href="#">laptop</a>, <a href="#">mockup</a></p>
+						</div>
+						<!-- /INFORMATION LAYOUT ITEM -->
+					</div>
+					<!-- INFORMATION LAYOUT -->
+				</div>
+				<!-- /SIDEBAR ITEM -->
+
+				<!-- SIDEBAR ITEM -->
+				<div class="sidebar-item author-reputation full">
+					<h4>Author's Reputation</h4>
+					<hr class="line-separator">
+					<!-- PIE CHART -->
+					<div class="pie-chart pie-chart1">
+						<p class="text-header percent">86<span>%</span></p>
+						<p class="text-header percent-info">Recommended</p>
+						<!-- RATING -->
+						<ul class="rating">
+							<li class="rating-item">
+								<!-- SVG STAR -->
+								<svg class="svg-star">
+									<use xlink:href="#svg-star"></use>
+								</svg>
+								<!-- /SVG STAR -->
+							</li>
+							<li class="rating-item">
+								<!-- SVG STAR -->
+								<svg class="svg-star">
+									<use xlink:href="#svg-star"></use>
+								</svg>
+								<!-- /SVG STAR -->
+							</li>
+							<li class="rating-item">
+								<!-- SVG STAR -->
+								<svg class="svg-star">
+									<use xlink:href="#svg-star"></use>
+								</svg>
+								<!-- /SVG STAR -->
+							</li>
+							<li class="rating-item">
+								<!-- SVG STAR -->
+								<svg class="svg-star">
+									<use xlink:href="#svg-star"></use>
+								</svg>
+								<!-- /SVG STAR -->
+							</li>
+							<li class="rating-item empty">
+								<!-- SVG STAR -->
+								<svg class="svg-star">
+									<use xlink:href="#svg-star"></use>
+								</svg>
+								<!-- /SVG STAR -->
+							</li>
+						</ul>
+						<!-- /RATING -->
+					</div>
+					<!-- /PIE CHART -->
+					<a href="#" class="button mid dark-light">Read all the Customer Reviews</a>
+				</div>
+				<!-- /SIDEBAR ITEM -->
+
+				<!-- SIDEBAR ITEM -->
+				<div class="sidebar-item author-items">
+					<h4>More Author's Items</h4>
 					<!-- PRODUCT LIST -->
-					<div class="product-list grid column3-4-wrap">
+					<div class="product-list grid column4-wrap">
 						<!-- PRODUCT ITEM -->
 						<div class="product-item column">
+							<!-- PIN -->
+							<span class="pin featured">Featured</span>
+							<!-- /PIN -->
+
 							<!-- PRODUCT PREVIEW ACTIONS -->
 							<div class="product-preview-actions">
 								<!-- PRODUCT PREVIEW IMAGE -->
 								<figure class="product-preview-image">
-									<img src="images/items/joystick_m.jpg" alt="product-image">
+									<img src="images/items/flat_m.jpg" alt="product-image">
 								</figure>
 								<!-- /PRODUCT PREVIEW IMAGE -->
 
@@ -1184,12 +1309,12 @@
 								<div class="preview-actions">
 									<!-- PREVIEW ACTION -->
 									<div class="preview-action">
-										<a href="product-page.html">
+										<a href="item-v1.html">
 											<div class="circle tiny primary">
 												<span class="icon-tag"></span>
 											</div>
 										</a>
-										<a href="product-page.html">
+										<a href="item-v1.html">
 											<p>Go to Item</p>
 										</a>
 									</div>
@@ -1214,14 +1339,14 @@
 
 							<!-- PRODUCT INFO -->
 							<div class="product-info">
-								<a href="product-page.html">
-									<p class="text-header">PX4 Crimson Joystick (Used)</p>
+								<a href="item-v1.html">
+									<p class="text-header">Flatland - Hero Image Composer</p>
 								</a>
 								<p class="product-description">Lorem ipsum dolor sit urarde...</p>
-								<a href="products.html">
-									<p class="category tertiary">Accesories</p>
+								<a href="shop-gridview-v1.html">
+									<p class="category primary">Hero Images</p>
 								</a>
-								<p class="price"><span>$</span>24</p>
+								<p class="price"><span>$</span>12</p>
 							</div>
 							<!-- /PRODUCT INFO -->
 							<hr class="line-separator">
@@ -1230,11 +1355,11 @@
 							<div class="user-rating">
 								<a href="author-profile.html">
 									<figure class="user-avatar small">
-										<img src="images/avatars/avatar_17.jpg" alt="user-avatar">
+										<img src="images/avatars/avatar_09.jpg" alt="user-avatar">
 									</figure>
 								</a>
 								<a href="author-profile.html">
-									<p class="text-header tiny">Kratos Cave</p>
+									<p class="text-header tiny">Odin_Design</p>
 								</a>
 								<ul class="rating tooltip" title="Author's Reputation">
 									<li class="rating-item">
@@ -1258,14 +1383,14 @@
 										</svg>
 										<!-- /SVG STAR -->
 									</li>
-									<li class="rating-item empty">
+									<li class="rating-item">
 										<!-- SVG STAR -->
 										<svg class="svg-star">
 											<use xlink:href="#svg-star"></use>
 										</svg>
 										<!-- /SVG STAR -->
 									</li>
-									<li class="rating-item empty">
+									<li class="rating-item">
 										<!-- SVG STAR -->
 										<svg class="svg-star">
 											<use xlink:href="#svg-star"></use>
@@ -1284,7 +1409,7 @@
 							<div class="product-preview-actions">
 								<!-- PRODUCT PREVIEW IMAGE -->
 								<figure class="product-preview-image">
-									<img src="images/items/tablet_m.jpg" alt="product-image">
+									<img src="images/items/pixel_m.jpg" alt="product-image">
 								</figure>
 								<!-- /PRODUCT PREVIEW IMAGE -->
 
@@ -1292,12 +1417,12 @@
 								<div class="preview-actions">
 									<!-- PREVIEW ACTION -->
 									<div class="preview-action">
-										<a href="product-page.html">
+										<a href="item-v1.html">
 											<div class="circle tiny primary">
 												<span class="icon-tag"></span>
 											</div>
 										</a>
-										<a href="product-page.html">
+										<a href="item-v1.html">
 											<p>Go to Item</p>
 										</a>
 									</div>
@@ -1322,14 +1447,14 @@
 
 							<!-- PRODUCT INFO -->
 							<div class="product-info">
-								<a href="product-page.html">
-									<p class="text-header">Axcom Drawing Tablet (New)</p>
+								<a href="item-v1.html">
+									<p class="text-header">Pixel Diamond Gaming Shop</p>
 								</a>
 								<p class="product-description">Lorem ipsum dolor sit urarde...</p>
-								<a href="products.html">
-									<p class="category tertiary">Tablets</p>
+								<a href="shop-gridview-v1.html">
+									<p class="category primary">Shopify</p>
 								</a>
-								<p class="price"><span>$</span>380</p>
+								<p class="price"><span>$</span>86</p>
 							</div>
 							<!-- /PRODUCT INFO -->
 							<hr class="line-separator">
@@ -1338,11 +1463,11 @@
 							<div class="user-rating">
 								<a href="author-profile.html">
 									<figure class="user-avatar small">
-										<img src="images/avatars/avatar_16.jpg" alt="user-avatar">
+										<img src="images/avatars/avatar_06.jpg" alt="user-avatar">
 									</figure>
 								</a>
 								<a href="author-profile.html">
-									<p class="text-header tiny">Erika Thompson</p>
+									<p class="text-header tiny">Sarah-Imaginarium</p>
 								</a>
 								<ul class="rating tooltip" title="Author's Reputation">
 									<li class="rating-item">
@@ -1387,168 +1512,848 @@
 						<!-- /PRODUCT ITEM -->
 					</div>
 					<!-- /PRODUCT LIST -->
-				</div>
-				<!-- /PRODUCT SHOWCASE -->
-
-				<div class="clearfix"></div>
-
-				<!-- PAGER -->
-				<div class="pager tertiary">
-					<div class="pager-item"><p>1</p></div>
-					<div class="pager-item active"><p>2</p></div>
-					<div class="pager-item"><p>3</p></div>
-					<div class="pager-item"><p>...</p></div>
-					<div class="pager-item"><p>17</p></div>
-				</div>
-				<!-- /PAGER -->
-			</div>
-			<!-- CONTENT -->
-
-			<!-- SIDEBAR -->
-			<div class="sidebar">
-				<!-- DROPDOWN -->
-				<ul class="dropdown hover-effect tertiary">
-					<li class="dropdown-item">
-						<a href="#">Digital Graphics</a>
-					</li>
-					<li class="dropdown-item active">
-						<a href="#">Illustration</a>
-					</li>
-					<li class="dropdown-item">
-						<a href="#">Web Design</a>
-					</li>
-					<li class="dropdown-item">
-						<a href="#">Stock Photography</a>
-					</li>
-					<li class="dropdown-item">
-						<a href="#">Code and Plugins</a>
-					</li>
-				</ul>
-				<!-- /DROPDOWN -->
-
-				<!-- SIDEBAR ITEM -->
-				<div class="sidebar-item">
-					<h4>Filter Products</h4>
-					<hr class="line-separator">
-					<form id="shop_search_form" name="shop_search_form">
-						<!-- CHECKBOX -->
-						<input type="checkbox" id="filter1" name="filter1" checked>
-						<label for="filter1">
-							<span class="checkbox tertiary"><span></span></span>
-							Cartoon Characters
-							<span class="quantity">350</span>
-						</label>
-						<!-- /CHECKBOX -->
-
-						<!-- CHECKBOX -->
-						<input type="checkbox" id="filter2" name="filter2" checked>
-						<label for="filter2">
-							<span class="checkbox tertiary"><span></span></span>
-							Flat Vector
-							<span class="quantity">68</span>
-						</label>
-						<!-- /CHECKBOX -->
-
-						<!-- CHECKBOX -->
-						<input type="checkbox" id="filter3" name="filter3" checked>
-						<label for="filter3">
-							<span class="checkbox tertiary"><span></span></span>
-							People
-							<span class="quantity">350</span>
-						</label>
-						<!-- /CHECKBOX -->
-
-						<!-- CHECKBOX -->
-						<input type="checkbox" id="filter4" name="filter4">
-						<label for="filter4">
-							<span class="checkbox tertiary"><span></span></span>
-							Animals
-							<span class="quantity">68</span>
-						</label>
-						<!-- /CHECKBOX -->
-
-						<!-- CHECKBOX -->
-						<input type="checkbox" id="filter5" name="filter5">
-						<label for="filter5">
-							<span class="checkbox tertiary"><span></span></span>
-							Objects
-							<span class="quantity">350</span>
-						</label>
-						<!-- /CHECKBOX -->
-
-						<!-- CHECKBOX -->
-						<input type="checkbox" id="filter6" name="filter6" checked>
-						<label for="filter6">
-							<span class="checkbox tertiary"><span></span></span>
-							Backgrounds
-							<span class="quantity">68</span>
-						</label>
-						<!-- /CHECKBOX -->
-					</form>
-				</div>
-				<!-- /SIDEBAR ITEM -->
-
-				<!-- SIDEBAR ITEM -->
-				<div class="sidebar-item">
-					<h4>File Types</h4>
-					<hr class="line-separator">
-					<!-- CHECKBOX -->
-					<input type="checkbox" id="ft1" name="ft1" form="shop_search_form">
-					<label for="ft1">
-						<span class="checkbox tertiary"><span></span></span>
-						Photoshop PSD
-						<span class="quantity">72</span>
-					</label>
-					<!-- /CHECKBOX -->
-
-					<!-- CHECKBOX -->
-					<input type="checkbox" id="ft2" name="ft2" form="shop_search_form" checked>
-					<label for="ft2">
-						<span class="checkbox tertiary"><span></span></span>
-						Illustrator AI
-						<span class="quantity">254</span>
-					</label>
-					<!-- /CHECKBOX -->
-
-					<!-- CHECKBOX -->
-					<input type="checkbox" id="ft3" name="ft3" form="shop_search_form" checked>
-					<label for="ft3">
-						<span class="checkbox tertiary"><span></span></span>
-						EPS
-						<span class="quantity">138</span>
-					</label>
-					<!-- /CHECKBOX -->
-
-					<!-- CHECKBOX -->
-					<input type="checkbox" id="ft4" name="ft4" form="shop_search_form" checked>
-					<label for="ft4">
-						<span class="checkbox tertiary"><span></span></span>
-						SVG
-						<span class="quantity">96</span>
-					</label>
-					<!-- /CHECKBOX -->
-
-					<!-- CHECKBOX -->
-					<input type="checkbox" id="ft5" name="ft5" form="shop_search_form">
-					<label for="ft5">
-						<span class="checkbox tertiary"><span></span></span>
-						InDesign INDD
-						<span class="quantity">102</span>
-					</label>
-					<!-- /CHECKBOX -->
-				</div>
-				<!-- /SIDEBAR ITEM -->
-
-				<!-- SIDEBAR ITEM -->
-				<div class="sidebar-item range-feature">
-					<h4>Price Range</h4>
-					<hr class="line-separator spaced">
-					<input type="hidden" class="price-range-slider tertiary" value="500" form="shop_search_form">
-					<button form="shop_search_form" class="button mid tertiary">Update your Search</button>
+					<div class="clearfix"></div>
 				</div>
 				<!-- /SIDEBAR ITEM -->
 			</div>
 			<!-- /SIDEBAR -->
+
+			<!-- CONTENT -->
+			<div class="content left">
+				<!-- POST -->
+				<article class="post">
+					<!-- POST IMAGE -->
+					<div class="post-image">
+						<figure class="product-preview-image large liquid">
+							<img src="images/items/westeroshtml_b01.jpg" alt="">
+						</figure>
+						<!-- SLIDE CONTROLS -->
+						<div class="slide-control-wrap">
+							<div class="slide-control rounded left">
+								<!-- SVG ARROW -->
+								<svg class="svg-arrow">
+									<use xlink:href="#svg-arrow"></use>
+								</svg>
+								<!-- /SVG ARROW -->
+							</div>
+
+							<div class="slide-control rounded right">
+								<!-- SVG ARROW -->
+								<svg class="svg-arrow">
+									<use xlink:href="#svg-arrow"></use>
+								</svg>
+								<!-- /SVG ARROW -->
+							</div>
+						</div>
+						<!-- /SLIDE CONTROLS -->
+						<a href="#" class="button mid primary">Go to Live Demo</a>
+					</div>
+					<!-- /POST IMAGE -->
+
+					<!-- POST IMAGE SLIDES -->
+					<div class="post-image-slides">
+						<!-- IMAGE SLIDES WRAP -->
+						<div class="image-slides-wrap full">
+							<!-- IMAGE SLIDES -->
+							<div class="image-slides" data-slide-visible-full="8"
+													  data-slide-visible-small="2"
+													  data-slide-count="9">
+								<!-- IMAGE SLIDE -->
+								<div class="image-slide selected">
+									<div class="overlay"></div>
+									<figure class="product-preview-image thumbnail liquid">
+										<img src="images/items/westeroshtml_b01.jpg" alt="">
+									</figure>
+								</div>
+								<!-- /IMAGE SLIDE -->
+
+								<!-- IMAGE SLIDE -->
+								<div class="image-slide">
+									<div class="overlay"></div>
+									<figure class="product-preview-image thumbnail liquid">
+										<img src="images/items/westeroshtml_b02.jpg" alt="">
+									</figure>
+								</div>
+								<!-- /IMAGE SLIDE -->
+
+								<!-- IMAGE SLIDE -->
+								<div class="image-slide">
+									<div class="overlay"></div>
+									<figure class="product-preview-image thumbnail liquid">
+										<img src="images/items/westeroshtml_b03.jpg" alt="">
+									</figure>
+								</div>
+								<!-- /IMAGE SLIDE -->
+
+								<!-- IMAGE SLIDE -->
+								<div class="image-slide">
+									<div class="overlay"></div>
+									<figure class="product-preview-image thumbnail liquid">
+										<img src="images/items/westeroshtml_b04.jpg" alt="">
+									</figure>
+								</div>
+								<!-- /IMAGE SLIDE -->
+
+								<!-- IMAGE SLIDE -->
+								<div class="image-slide">
+									<div class="overlay"></div>
+									<figure class="product-preview-image thumbnail liquid">
+										<img src="images/items/westeroshtml_b05.jpg" alt="">
+									</figure>
+								</div>
+								<!-- /IMAGE SLIDE -->
+
+								<!-- IMAGE SLIDE -->
+								<div class="image-slide">
+									<div class="overlay"></div>
+									<figure class="product-preview-image thumbnail liquid">
+										<img src="images/items/westeroshtml_b06.jpg" alt="">
+									</figure>
+								</div>
+								<!-- /IMAGE SLIDE -->
+
+								<!-- IMAGE SLIDE -->
+								<div class="image-slide">
+									<div class="overlay"></div>
+									<figure class="product-preview-image thumbnail liquid">
+										<img src="images/items/westeroshtml_b07.jpg" alt="">
+									</figure>
+								</div>
+								<!-- /IMAGE SLIDE -->
+
+								<!-- IMAGE SLIDE -->
+								<div class="image-slide">
+									<div class="overlay"></div>
+									<figure class="product-preview-image thumbnail liquid">
+										<img src="images/items/westeroshtml_b08.jpg" alt="">
+									</figure>
+								</div>
+								<!-- /IMAGE SLIDE -->
+
+								<!-- IMAGE SLIDE -->
+								<div class="image-slide">
+									<div class="overlay"></div>
+									<figure class="product-preview-image thumbnail liquid">
+										<img src="images/items/westeroshtml_b09.jpg" alt="">
+									</figure>
+								</div>
+								<!-- /IMAGE SLIDE -->
+							</div>
+							<!-- IMAGE SLIDES -->
+						</div>
+						<!-- IMAGE SLIDES WRAP -->
+					</div>
+					<!-- /POST IMAGE SLIDES -->
+
+					<hr class="line-separator">
+
+					<!-- POST CONTENT -->
+					<div class="post-content">
+						<!-- POST PARAGRAPH -->
+						<div class="post-paragraph">
+							<h3 class="post-title">The Pack Contains:</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<!-- /POST PARAGRAPH -->
+
+						<!-- POST PARAGRAPH -->
+						<div class="post-paragraph">
+							<h3 class="post-title small">Westeros HTML Instructions</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<!-- /POST PARAGRAPH -->
+
+						<!-- POST PARAGRAPH -->
+						<div class="post-paragraph half">
+							<h3 class="post-title small">List Items (Unordered)</h3>
+							<!-- POST ITEM LIST -->
+							<ul class="post-item-list">
+								<li>
+									<!-- SVG CHECK -->
+									<svg class="svg-check bullet-icon">
+										<use xlink:href="#svg-check"></use>
+									</svg>
+									<!-- /SVG CHECK -->
+									<p>Lorem ipsum dolor sit amet</p>
+								</li>
+								<li>
+									<!-- SVG CHECK -->
+									<svg class="svg-check bullet-icon">
+										<use xlink:href="#svg-check"></use>
+									</svg>
+									<!-- /SVG CHECK -->
+									<p>Nostrud Exertation</p>
+								</li>
+								<li>
+									<!-- SVG CHECK -->
+									<svg class="svg-check bullet-icon">
+										<use xlink:href="#svg-check"></use>
+									</svg>
+									<!-- /SVG CHECK -->
+									<p>Laborum: Lorem ipsum dolor sit </p>
+								</li>
+								<li>
+									<!-- SVG CHECK -->
+									<svg class="svg-check bullet-icon">
+										<use xlink:href="#svg-check"></use>
+									</svg>
+									<!-- /SVG CHECK -->
+									<p>Lorem ipsum dolor sit amet</p>
+								</li>
+								<li>
+									<!-- SVG CHECK -->
+									<svg class="svg-check bullet-icon">
+										<use xlink:href="#svg-check"></use>
+									</svg>
+									<!-- /SVG CHECK -->
+									<p>Nostrud Exertation</p>
+								</li>
+							</ul>
+							<!-- POST ITEM LIST -->
+						</div>
+						<!-- /POST PARAGRAPH -->
+
+						<!-- POST PARAGRAPH -->
+						<div class="post-paragraph half">
+							<h3 class="post-title small">List Items (Ordered)</h3>
+							<!-- POST ITEM LIST -->
+							<ul class="post-item-list">
+								<li>
+									<p class="bullet-icon">1-</p>
+									<p>Lorem ipsum dolor sit amet</p>
+								</li>
+								<li>
+									<p class="bullet-icon">2-</p>
+									<p>Nostrud Exertation</p>
+								</li>
+								<li>
+									<p class="bullet-icon">3-</p>
+									<p>Laborum: Lorem ipsum dolor sit </p>
+								</li>
+								<li>
+									<p class="bullet-icon">4-</p>
+									<p>Lorem ipsum dolor sit amet</p>
+								</li>
+								<li>
+									<p class="bullet-icon">5-</p>
+									<p>Nostrud Exertation</p>
+								</li>
+							</ul>
+							<!-- POST ITEM LIST -->
+						</div>
+						<!-- /POST PARAGRAPH -->
+
+						<div class="clearfix"></div>
+					</div>
+					<!-- /POST CONTENT -->
+
+					<hr class="line-separator">
+
+					<!-- SHARE -->
+					<div class="share-links-wrap">
+						<p class="text-header small">Share this:</p>
+						<!-- SHARE LINKS -->
+						<ul class="share-links hoverable">
+							<li><a href="#" class="fb"></a></li>
+							<li><a href="#" class="twt"></a></li>
+							<li><a href="#" class="db"></a></li>
+							<li><a href="#" class="rss"></a></li>
+							<li><a href="#" class="gplus"></a></li>
+						</ul>
+						<!-- /SHARE LINKS -->
+					</div>
+					<!-- /SHARE -->
+				</article>
+				<!-- /POST -->
+
+				<!-- POST TAB -->
+				<div class="post-tab">
+					<!-- TAB HEADER -->
+					<div class="tab-header primary">
+						<!-- TAB ITEM -->
+						<div class="tab-item selected">
+							<p class="text-header">Comments (35)</p>
+						</div>
+						<!-- /TAB ITEM -->
+
+						<!-- TAB ITEM -->
+						<div class="tab-item">
+							<p class="text-header">Buyers Corner</p>
+						</div>
+						<!-- /TAB ITEM -->
+
+						<!-- TAB ITEM -->
+						<div class="tab-item">
+							<p class="text-header">Item FAQs</p>
+						</div>
+						<!-- /TAB ITEM -->
+					</div>
+					<!-- /TAB HEADER -->
+
+					<!-- TAB CONTENT -->
+					<div class="tab-content void">
+						<!-- COMMENTS -->
+						<div class="comment-list">
+							<!-- COMMENT -->
+							<div class="comment-wrap">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_06.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+								<div class="comment">
+									<p class="text-header">View as Customer</p>
+									<!-- PIN -->
+									<span class="pin greyed">Purchased</span>
+									<!-- /PIN -->
+									<p class="timestamp">5 Hours Ago</p>
+									<a href="#" class="report">Report</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnada. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+								</div>
+							</div>
+							<!-- /COMMENT -->
+
+							<!-- LINE SEPARATOR -->
+							<hr class="line-separator">
+							<!-- /LINE SEPARATOR -->
+
+							<!-- COMMENT -->
+							<div class="comment-wrap">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_11.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+								<div class="comment">
+									<p class="text-header">View as Author (Reply Option)</p>
+									<p class="timestamp">8 Hours Ago</p>
+									<a href="#" class="report">Report</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnada. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+								</div>
+							</div>
+							<!-- /COMMENT -->
+
+							<!-- COMMENT REPLY -->
+							<div class="comment-wrap comment-reply">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_09.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+
+								<!-- COMMENT REPLY FORM -->
+								<form class="comment-reply-form">
+									<textarea name="treply1" placeholder="Write your comment here..."></textarea>
+									<!-- CHECKBOX -->
+									<input type="checkbox" id="notif1" name="notif1" checked>
+									<label for="notif1">
+										<span class="checkbox primary"><span></span></span>
+										Receive email notifications
+									</label>
+									<!-- /CHECKBOX -->
+									<button class="button primary">Post Comment</button>
+								</form>
+								<!-- /COMMENT REPLY FORM -->
+							</div>
+							<!-- /COMMENT REPLY -->
+
+							<!-- LINE SEPARATOR -->
+							<hr class="line-separator">
+							<!-- /LINE SEPARATOR -->
+
+							<!-- COMMENT -->
+							<div class="comment-wrap">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_12.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+								<div class="comment">
+									<p class="text-header">View as Author (Replies)</p>
+									<p class="timestamp">10 Hours Ago</p>
+									<a href="#" class="report">Report</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnada. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+								</div>
+
+								<!-- COMMENT -->
+								<div class="comment-wrap">
+									<!-- USER AVATAR -->
+									<a href="user-profile.html">
+										<figure class="user-avatar medium">
+											<img src="images/avatars/avatar_09.jpg" alt="">
+										</figure>
+									</a>
+									<!-- /USER AVATAR -->
+									<div class="comment">
+										<p class="text-header">Odin_Design</p>
+										<!-- PIN -->
+										<span class="pin">Author</span>
+										<!-- /PIN -->
+										<p class="timestamp">2 Hours Ago</p>
+										<a href="#" class="report">Report</a>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnada. Ut enim ad minim veniam, quis nostrud exercitation</p>
+									</div>
+								</div>
+								<!-- /COMMENT -->
+
+								<!-- COMMENT -->
+								<div class="comment-wrap">
+									<!-- USER AVATAR -->
+									<a href="user-profile.html">
+										<figure class="user-avatar medium">
+											<img src="images/avatars/avatar_12.jpg" alt="">
+										</figure>
+									</a>
+									<!-- /USER AVATAR -->
+									<div class="comment">
+										<p class="text-header">Customer Reply</p>
+										<p class="timestamp">2 Hours Ago</p>
+										<a href="#" class="report">Report</a>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnada. Ut enim ad minim veniam onsectetur elit</p>
+									</div>
+								</div>
+								<!-- /COMMENT -->
+
+								<!-- COMMENT REPLY -->
+								<div class="comment-wrap comment-reply">
+									<!-- USER AVATAR -->
+									<a href="user-profile.html">
+										<figure class="user-avatar medium">
+											<img src="images/avatars/avatar_09.jpg" alt="">
+										</figure>
+									</a>
+									<!-- /USER AVATAR -->
+
+									<!-- COMMENT REPLY FORM -->
+									<form class="comment-reply-form">
+										<textarea name="treply2" placeholder="Write your comment here..."></textarea>
+										<!-- CHECKBOX -->
+										<input type="checkbox" id="notif2" name="notif2" checked>
+										<label for="notif2">
+											<span class="checkbox primary"><span></span></span>
+											Receive email notifications
+										</label>
+										<!-- /CHECKBOX -->
+										<button class="button primary">Post Comment</button>
+									</form>
+									<!-- /COMMENT REPLY FORM -->
+								</div>
+								<!-- /COMMENT REPLY -->
+							</div>
+							<!-- /COMMENT -->
+
+							<!-- LINE SEPARATOR -->
+							<hr class="line-separator">
+							<!-- /LINE SEPARATOR -->
+
+							<!-- COMMENT -->
+							<div class="comment-wrap">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_03.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+								<div class="comment">
+									<p class="text-header">View as Customer</p>
+									<p class="timestamp">6 Days Ago</p>
+									<a href="#" class="report">Report</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnada. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+								</div>
+							</div>
+							<!-- /COMMENT -->
+
+							<!-- LINE SEPARATOR -->
+							<hr class="line-separator">
+							<!-- /LINE SEPARATOR -->
+
+							<!-- PAGER -->
+							<div class="pager primary">
+								<div class="pager-item"><p>1</p></div>
+								<div class="pager-item active"><p>2</p></div>
+								<div class="pager-item"><p>3</p></div>
+								<div class="pager-item"><p>...</p></div>
+								<div class="pager-item"><p>17</p></div>
+							</div>
+							<!-- /PAGER -->
+
+							<div class="clearfix"></div>
+
+							<!-- LINE SEPARATOR -->
+							<hr class="line-separator">
+							<!-- /LINE SEPARATOR -->
+
+							<h3>Leave a Comment</h3>
+
+							<!-- COMMENT REPLY -->
+							<div class="comment-wrap comment-reply">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_09.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+
+								<!-- COMMENT REPLY FORM -->
+								<form class="comment-reply-form">
+									<textarea name="treply1" placeholder="Write your comment here..."></textarea>
+									<button class="button primary">Post Comment</button>
+								</form>
+								<!-- /COMMENT REPLY FORM -->
+							</div>
+							<!-- /COMMENT REPLY -->
+						</div>
+						<!-- /COMMENTS -->
+					</div>
+					<!-- /TAB CONTENT -->
+
+					<!-- TAB CONTENT -->
+					<div class="tab-content void">
+						<!-- COMMENTS -->
+						<div class="comment-list">
+							<!-- COMMENT -->
+							<div class="comment-wrap">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_02.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+								<div class="comment">
+									<p class="text-header">MeganV.</p>
+									<!-- PIN -->
+									<span class="pin greyed">Purchased</span>
+									<!-- /PIN -->
+									<p class="timestamp">5 Hours Ago</p>
+									<a href="#" class="report">Report</a>
+									<p>I’ve recently bought your theme and let me say it’s fantastic! I have a small question regarding the main files and how to install the theme. Could you help me? Thanks!</p>
+								</div>
+							</div>
+							<!-- /COMMENT -->
+
+							<!-- COMMENT REPLY -->
+							<div class="comment-wrap comment-reply">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_09.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+
+								<!-- COMMENT REPLY FORM -->
+								<form class="comment-reply-form">
+									<textarea name="treply10" placeholder="Write your comment here..."></textarea>
+									<!-- CHECKBOX -->
+									<input type="checkbox" id="notif10" name="notif10" checked>
+									<label for="notif10">
+										<span class="checkbox primary"><span></span></span>
+										Receive email notifications
+									</label>
+									<!-- /CHECKBOX -->
+									<button class="button primary">Post Comment</button>
+								</form>
+								<!-- /COMMENT REPLY FORM -->
+							</div>
+							<!-- /COMMENT REPLY -->
+
+							<!-- LINE SEPARATOR -->
+							<hr class="line-separator">
+							<!-- /LINE SEPARATOR -->
+
+							<!-- COMMENT -->
+							<div class="comment-wrap">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_19.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+								<div class="comment">
+									<p class="text-header">Cloud Templates</p>
+									<!-- PIN -->
+									<span class="pin greyed">Purchased</span>
+									<!-- /PIN -->
+									<p class="timestamp">8 Hours Ago</p>
+									<a href="#" class="report">Report</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnada. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+								</div>
+							</div>
+							<!-- /COMMENT -->
+
+							<!-- COMMENT REPLY -->
+							<div class="comment-wrap comment-reply">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_09.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+
+								<!-- COMMENT REPLY FORM -->
+								<form class="comment-reply-form">
+									<textarea name="treply20" placeholder="Write your comment here..."></textarea>
+									<!-- CHECKBOX -->
+									<input type="checkbox" id="notif20" name="notif20" checked>
+									<label for="notif20">
+										<span class="checkbox primary"><span></span></span>
+										Receive email notifications
+									</label>
+									<!-- /CHECKBOX -->
+									<button class="button primary">Post Comment</button>
+								</form>
+								<!-- /COMMENT REPLY FORM -->
+							</div>
+							<!-- /COMMENT REPLY -->
+
+							<!-- LINE SEPARATOR -->
+							<hr class="line-separator">
+							<!-- /LINE SEPARATOR -->
+
+							<!-- COMMENT -->
+							<div class="comment-wrap">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_18.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+								<div class="comment">
+									<p class="text-header">Lucy Diamond</p>
+									<!-- PIN -->
+									<span class="pin greyed">Purchased</span>
+									<!-- /PIN -->
+									<p class="timestamp">10 Hours Ago</p>
+									<a href="#" class="report">Report</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnada. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+								</div>
+
+								<!-- COMMENT -->
+								<div class="comment-wrap">
+									<!-- USER AVATAR -->
+									<a href="user-profile.html">
+										<figure class="user-avatar medium">
+											<img src="images/avatars/avatar_09.jpg" alt="">
+										</figure>
+									</a>
+									<!-- /USER AVATAR -->
+									<div class="comment">
+										<p class="text-header">Odin_Design</p>
+										<!-- PIN -->
+										<span class="pin">Author</span>
+										<!-- /PIN -->
+										<p class="timestamp">2 Hours Ago</p>
+										<a href="#" class="report">Report</a>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnada. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+									</div>
+								</div>
+								<!-- /COMMENT -->
+
+								<!-- COMMENT -->
+								<div class="comment-wrap">
+									<!-- USER AVATAR -->
+									<a href="user-profile.html">
+										<figure class="user-avatar medium">
+											<img src="images/avatars/avatar_18.jpg" alt="">
+										</figure>
+									</a>
+									<!-- /USER AVATAR -->
+									<div class="comment">
+										<p class="text-header">Lucy Diamond</p>
+										<!-- PIN -->
+										<span class="pin greyed">Purchased</span>
+										<!-- /PIN -->
+										<p class="timestamp">2 Hours Ago</p>
+										<a href="#" class="report">Report</a>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnada. Ut enim ad minim veniam onsectetur elit.</p>
+									</div>
+								</div>
+								<!-- /COMMENT -->
+
+								<!-- COMMENT REPLY -->
+								<div class="comment-wrap comment-reply">
+									<!-- USER AVATAR -->
+									<a href="user-profile.html">
+										<figure class="user-avatar medium">
+											<img src="images/avatars/avatar_09.jpg" alt="">
+										</figure>
+									</a>
+									<!-- /USER AVATAR -->
+
+									<!-- COMMENT REPLY FORM -->
+									<form class="comment-reply-form">
+										<textarea name="treply30" placeholder="Write your comment here..."></textarea>
+										<!-- CHECKBOX -->
+										<input type="checkbox" id="notif30" name="notif30" checked>
+										<label for="notif30">
+											<span class="checkbox primary"><span></span></span>
+											Receive email notifications
+										</label>
+										<!-- /CHECKBOX -->
+										<button class="button primary">Post Comment</button>
+									</form>
+									<!-- /COMMENT REPLY FORM -->
+								</div>
+								<!-- /COMMENT REPLY -->
+							</div>
+							<!-- /COMMENT -->
+
+							<!-- LINE SEPARATOR -->
+							<hr class="line-separator">
+							<!-- /LINE SEPARATOR -->
+
+							<!-- PAGER -->
+							<div class="pager primary">
+								<div class="pager-item"><p>1</p></div>
+								<div class="pager-item active"><p>2</p></div>
+								<div class="pager-item"><p>3</p></div>
+								<div class="pager-item"><p>...</p></div>
+								<div class="pager-item"><p>17</p></div>
+							</div>
+							<!-- /PAGER -->
+
+							<div class="clearfix"></div>
+
+							<!-- LINE SEPARATOR -->
+							<hr class="line-separator">
+							<!-- /LINE SEPARATOR -->
+
+							<h3>Leave a Comment</h3>
+
+							<!-- COMMENT REPLY -->
+							<div class="comment-wrap comment-reply">
+								<!-- USER AVATAR -->
+								<a href="user-profile.html">
+									<figure class="user-avatar medium">
+										<img src="images/avatars/avatar_09.jpg" alt="">
+									</figure>
+								</a>
+								<!-- /USER AVATAR -->
+
+								<!-- COMMENT REPLY FORM -->
+								<form class="comment-reply-form">
+									<textarea name="treply100" placeholder="Write your comment here..."></textarea>
+									<button class="button primary">Post Comment</button>
+								</form>
+								<!-- /COMMENT REPLY FORM -->
+							</div>
+							<!-- /COMMENT REPLY -->
+						</div>
+						<!-- /COMMENTS -->
+					</div>
+					<!-- /TAB CONTENT -->
+
+					<!-- TAB CONTENT -->
+					<div class="tab-content">
+						<!-- ITEM-FAQ -->
+						<div class="accordion item-faq primary">
+							<!-- ACCORDION ITEM -->
+							<div class="accordion-item">
+								<h6 class="accordion-item-header">Read Before Buying</h6>
+								<!-- SVG ARROW -->
+								<svg class="svg-arrow">
+									<use xlink:href="#svg-arrow"></use>
+								</svg>
+								<!-- /SVG ARROW -->
+								<div class="accordion-item-content">
+									<h4>Bidding for the First Time</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+									<h4>Winning the Auction</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+								</div>
+							</div>
+							<!-- /ACCORDION ITEM -->
+
+							<!-- ACCORDION ITEM -->
+							<div class="accordion-item">
+								<h6 class="accordion-item-header">How Does Bidding Work?</h6>
+								<!-- SVG ARROW -->
+								<svg class="svg-arrow">
+									<use xlink:href="#svg-arrow"></use>
+								</svg>
+								<!-- /SVG ARROW -->
+								<div class="accordion-item-content">
+									<h4>Bidding for the First Time</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+									<h4>Winning the Auction</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+								</div>
+							</div>
+							<!-- /ACCORDION ITEM -->
+
+							<!-- ACCORDION ITEM -->
+							<div class="accordion-item">
+								<h6 class="accordion-item-header">Our Return Policy</h6>
+								<!-- SVG ARROW -->
+								<svg class="svg-arrow">
+									<use xlink:href="#svg-arrow"></use>
+								</svg>
+								<!-- /SVG ARROW -->
+								<div class="accordion-item-content">
+									<h4>Bidding for the First Time</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+									<h4>Winning the Auction</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+								</div>
+							</div>
+							<!-- /ACCORDION ITEM -->
+
+							<!-- ACCORDION ITEM -->
+							<div class="accordion-item">
+								<h6 class="accordion-item-header">Shipping and Delivery</h6>
+								<!-- SVG ARROW -->
+								<svg class="svg-arrow">
+									<use xlink:href="#svg-arrow"></use>
+								</svg>
+								<!-- /SVG ARROW -->
+								<div class="accordion-item-content">
+									<h4>Bidding for the First Time</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+									<h4>Winning the Auction</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+								</div>
+							</div>
+							<!-- /ACCORDION ITEM -->
+
+							<!-- ACCORDION ITEM -->
+							<div class="accordion-item">
+								<h6 class="accordion-item-header">Quality Guarantee</h6>
+								<!-- SVG ARROW -->
+								<svg class="svg-arrow">
+									<use xlink:href="#svg-arrow"></use>
+								</svg>
+								<!-- /SVG ARROW -->
+								<div class="accordion-item-content">
+									<h4>Bidding for the First Time</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+									<h4>Winning the Auction</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+								</div>
+							</div>
+							<!-- /ACCORDION ITEM -->
+						</div>
+						<!-- /ITEM-FAQ -->
+					</div>
+					<!-- /TAB CONTENT -->
+				</div>
+				<!-- /POST TAB -->
+			</div>
+			<!-- CONTENT -->
 		</div>
 	</div>
 	<!-- /SECTION -->
@@ -1746,22 +2551,45 @@
 </svg>
 <!-- /SVG PLUS -->
 
+<!-- SVG CHECK -->
+<svg style="display: none;">
+	<symbol id="svg-check" viewBox="0 0 15 12" preserveAspectRatio="xMinYMin meet">
+		<polygon points="12.45,0.344 5.39,7.404 2.562,4.575 0.429,6.708 3.257,9.536 3.257,9.536
+			5.379,11.657 14.571,2.465 "/>
+	</symbol>
+</svg>
+<!-- /SVG CHECK -->
+
 <!-- jQuery -->
 <script src="js/vendor/jquery-3.1.0.min.js"></script>
-<!-- JRange -->
-<script src="js/vendor/jquery.range.min.js"></script>
 <!-- Tooltipster -->
 <script src="js/vendor/jquery.tooltipster.min.js"></script>
+<!-- ImgLiquid -->
+<script src="js/vendor/imgLiquid-min.js"></script>
+<!-- XM Tab -->
+<script src="js/vendor/jquery.xmtab.min.js"></script>
 <!-- Tweet -->
 <script src="js/vendor/twitter/jquery.tweet.min.js"></script>
 <!-- Side Menu -->
 <script src="js/side-menu.js"></script>
+<!-- Liquid -->
+<script src="js/liquid.js"></script>
+<!-- Checkbox Link -->
+<script src="js/checkbox-link.js"></script>
+<!-- Image Slides -->
+<script src="js/image-slides.js"></script>
+<!-- Post Tab -->
+<script src="js/post-tab.js"></script>
+<!-- XM Accordion -->
+<script src="js/vendor/jquery.xmaccordion.min.js"></script>
+<!-- XM Pie Chart -->
+<script src="js/vendor/jquery.xmpiechart.min.js"></script>
+<!-- Item V1 -->
+<script src="js/item-v1.js"></script>
 <!-- Tooltip -->
 <script src="js/tooltip.js"></script>
 <!-- User Quickview Dropdown -->
 <script src="js/user-board.js"></script>
-<!-- Shop -->
-<script src="js/shop3.js"></script>
 <!-- Footer -->
 <script src="js/footer.js"></script>
 </body>
