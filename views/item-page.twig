@@ -165,12 +165,13 @@
 					<!-- /POST IMAGE SLIDES -->
 					{% endif %}
 
+
+					{% if app_info.video == '' %}
+
+					{% else %}
 					<h3 style="text-align: left;">Video </h3>
 
 					<hr class="line-separator" />
-					{% if app_info.video == '' %}
-					
-					{% else %}
 					<div class="post-content">
 						<iframe width="560" height="315" src="{{app_info.video}}"
 						frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
