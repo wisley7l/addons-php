@@ -21,7 +21,7 @@ if (!empty($_POST['email'])) {
 
 $user = array(
   //'id' => $id_partner,
-  'id' => $id_partner,// test
+  'id' => 896,// test
   'name' => 'USER',
   'username' => $email
 );
