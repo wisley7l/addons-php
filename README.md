@@ -1,3 +1,6 @@
+# DEPRECATION WARNING
+Deprecated in favor of [Market](https://github.com/ecomclub/market)
+
 # addons-php
 E-Com Plus Addons marketplace implemented in PHP 7
 
@@ -27,7 +30,7 @@ Run setup file as root.
 ```bash
 sudo php -f init.php
 ```
-Install Composer 
+Install Composer
 ```bash
 cd composer/
 ```
